@@ -28,7 +28,7 @@ i18n_dir: :lang
 skip_render:
 
 # Writing
-new_post_name: :year/:id.md # File name of new posts
+new_post_name: :year/:title.md # File name of new posts
 default_layout: post
 titlecase: false # Transform title into titlecase
 external_link: true # Open external links in new tab
@@ -68,4 +68,7 @@ theme: landscape
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@github.com:deltacat/deltacat.github.io.git
+  message: "hexo deploy generated pages"
+  repo: 
+    github: git@github.com:deltacat/deltacat.github.io.git
+    #gitcafe: git@gitcafe.com:deltacat/deltacat.git
