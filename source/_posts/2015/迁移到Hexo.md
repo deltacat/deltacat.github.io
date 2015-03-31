@@ -26,9 +26,28 @@ Hexo 的原作者是一名台湾的学生。推出的目的就是为了提供更
 
 实际上也是如此，Hexo 从安装、配置、发布都非常简洁。常用的命令记住 `n g s d` 四个字母就搞定。
 
-另外，hexo 可以同步推送到多个git库，如果用 dnspod 来做实现双线解析，瞬间就可以实现境内境外双线解析镜像。这点非常爽。
+Hexo 还有一个决定性的好处，下文说。
 
-于是最后我选择了 Hexo，在代码库中建立一个独立的 hexo 分支用于存放源文件。
+总之最后我选择了 Hexo，在代码库中建立一个独立的 hexo 分支用于存放源文件。
+
+# 双线部署
+
+
+hexo 可以同步推送到多个git库，比如，在配置文件里这样写：
+
+```
+deploy:
+  type: git
+  message: "hexo deploy generated pages"
+  repo: 
+    github: <github repo url>
+    gitcafe: <gitcafe repo url> 
+```
+
+然后执行部署命令，就可以同步部署到 gitcafe 和 github。
+
+如果用 dnspod 来做实现双线解析，瞬间就可以实现境内境外双线解析镜像。这点非常爽。不过这里有个坑，参见下一节。
+
 
 # 坑
 
@@ -36,18 +55,30 @@ Hexo 的原作者是一名台湾的学生。推出的目的就是为了提供更
 
 - 首先，无论部署到GitCafe还是GitHub，都是master分支。
 	
-	gitcafe-pages, gh-pages 这样的分支是用来给Jekyll在服务端生成静态网站用的。用hexo生成网站是在本地生成后部署静态页面，这时直接部署到master即可。
+	gitcafe-pages, gh-pages 这样的分支是用来给Jekyll在服务端生成静态网站用的。
+	
+	用hexo生成网站是在本地生成后部署静态页面，这时直接部署到master即可。
 	
 - 然后，Hexo 现在最新的版本是3.0 
 	
 	config的设置项有所更改，包结构也有变化。
-	最坑的是，如果多点部署的话，会报错。看了下估计是 3.0 更新后的bug，在 github Hexo 项目上，已经有人提了 issue，看什么时候能解决吧。
+	
+	最坑的是，如果多点部署的话，会报错。看了下应该是 3.0 更新后的bug，在 github Hexo 项目上，已经有人提了[issue][link-hexo-issue-repo]，看什么时候能解决吧。
+	
 	3.0 详细的变化可以参考 [github 上的文档][link-hexo-v3].
+	
+- 迁移自 wordpress
+
+	用插件 hexo-migrator-wordpress 即可一键完成。比较郁闷的是，如果原文的标题是中文，那么这里所有的文件名都会被解析成形如 ab-cd-ef-gh-de-ty-ww-rt-as-cd-fg.md 这种形式。原因可以理解，它首先将中文进行编码，然后替换空格最终形成“slug”形式的permalink。但是看着实在很蛋疼。
+	
+还碰过其他坑，暂时记起来这么多。后面想起来或遇到新坑再更新。
+
 	
 # 写作工具
 
-当然。你可以直接在简书写，然后复制到 Hexo 源文件目录。XD
-Mac 平台，强烈推荐 “Mou”。
+当然。你可以直接在简书写，然后复制到 Hexo 源文件目录，这个跨平台。XD
+
+Mac 平台的话，强烈推荐 “Mou”。
 	
 # 最后
 
@@ -55,7 +86,9 @@ Mac 平台，强烈推荐 “Mou”。
 
 只是有一点，弄这些玩意儿，翻墙技能还是要有一点的。否则一个 npm 命令都会让你抓狂。
 
-[国际惯例，成品展示。Enjoy it!][link-my-site]
+[国际惯例，成品展示在这里。][link-my-site]
+
+Enjoy it!
 
 (题图来自 [Hexo 作者的个人主页][link-zespia]。据说可以提高点击率。XD)
 	
