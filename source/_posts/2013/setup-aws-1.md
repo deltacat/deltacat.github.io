@@ -5,15 +5,13 @@ tags: [建站, aws]
 categories: 建站心得
 ---
 
-**亚马逊 AWS 介绍**
+# 亚马逊 AWS 介绍
 
 简单来说，AWS (Amazon Web Service) 提供了一整套基础设施和服务，使“建站”这件事变得轻松愉快。
 
 你可以利用AWS构建博客主机，云存储（比如DropBox），手游数据中心，公司门户等等几乎所有你能想到的需要网络服务的场景。作为一个入门介绍，我们从 Wordpress 开始，因为 Wordpress 几乎包含了入门级站点的全部需求元素：服务器主机，PHP运行环境，数据库，前端页面等等。不得不多说一句，对于个人博客来说，如果经济性是首要考量因素，AWS 并非首选，大量专业博客虚拟主机以非常低廉的价格提供给低访问量的博客站长。AWS的入门套餐价格也远比入门级博客主机价格高许多，当然，性能和容量也大许多。在决定是否选用AWS提供服务前，有必要对自己的业务量有个初步估算。
 
 好在 AWS 对于初次注册的用户提供了为期一年的免费套餐，足以应对一个中等大小的博客站点（甚至多个）持续运行一年时间。我们就从这个免费套餐开始入门的学习。
-
-<!--more-->
 
 
 免费套餐的详细说明请参见官方介绍：
@@ -25,7 +23,7 @@ categories: 建站心得
 
 有消息称亚马逊正在计划在中国大陆部署数据中心，并有望在2013年年底前正式上线。非常令人期待啊。
 
-**第一步：注册账号**
+# 第一步：注册账号
 
 在开始前，请先准备一张双币信用卡。
 
@@ -35,18 +33,21 @@ AWS 账号就是你的 Amazon 账号 （注意，不是 amazon.cn 而是 amazon.
 
 注册过程如果有选择付费方案（定价模型），请选择“按需付费”。大意就是，用多少付多少，不用就不付。对于实验性质尝试，这种方案很合适。
 
-**第二步：创建主机**
+<!--more-->
+
+# 第二步：创建主机
 
 主机是一切服务的基础。当然，如果你不需要运行自己的程序，只需要一个数据中心，这一步也可以省掉。比如手游客户端需要的数据库，通信等的。既然我们需要一个网站，那么一个主机是必须的。
 
 亚马逊的主机有个很拉轰的名字：“亚马逊弹性云计算”（Elastic Cloud Compute, 简称 EC2）。用亚马逊自己的话说，它的优势在于：弹性，完全控制，灵活，可靠，安全，与AWS其他服务轻松配合，经济实惠，轻松入门。详细介绍参见： [EC2概述](http://aws.amazon.com/cn/ec2/)
 
 现在，我们已经有了一个AWS的账户，立刻进入AWS控制台，会看到这样的界面：
-<!--more-->[![image](http://www.catxn.net/wordpress/wp-content/uploads/2013/09/image_thumb.png "image")](http://www.catxn.net/wordpress/wp-content/uploads/2013/09/image.png)    
+
+![image](http://catxn.u.qiniudn.com/images/aws_00.png-o)
 
 进入 EC2 面板，点击 “Launch Instance”来创建第一个实例。会看到这样的对话框：
 
-[![image](http://www.catxn.net/wordpress/wp-content/uploads/2013/09/image_thumb1.png "image")](http://www.catxn.net/wordpress/wp-content/uploads/2013/09/image1.png)
+![image](http://catxn.u.qiniudn.com/images/aws_01.png-o)
 
 选则 classic wizard 进入即可。然后会进入操作系统选择界面，支持Linux和Windows系统。作为服务器，建议选择Linux系统。同时，标记星号的表示包括在免费套餐中，选择这些系统不会产生额外费用，其他的会按照标准定价收费。
 
@@ -56,13 +57,13 @@ AWS 账号就是你的 Amazon 账号 （注意，不是 amazon.cn 而是 amazon.
 
 后面两页使用默认设置即可。进入到Tags设置，这一页只是用来标识主机信息的，你可以填一个好记的名字。然后继续，进入关键的一步，生成 Key-Pair。这个 Key-Pair 是后面所有操作的基础，生成后一定要保存在一个安全的地方。页面如下，输入一个好记的名字，点击“Create &amp; Download”，下载完成后点击继续。
 
-[![image](http://www.catxn.net/wordpress/wp-content/uploads/2013/09/image_thumb2.png "image")](http://www.catxn.net/wordpress/wp-content/uploads/2013/09/image2.png)
+![image](http://catxn.u.qiniudn.com/images/aws_02.png-o)
 
 下一步，会要求设置防火墙。初始设置会有两个默认安全组，任选一个或新建一个，默认打开80（http）和22（ssh）端口确保我们可以SSH连接服务器进行管理操作，以及通过浏览器访问Web服务。安全组之后随时可以增删编辑。
 
 至此，EC2实例设置完毕，点击“Launch”，回到AWS控制台，EC2的面板会显示刚刚创建的实例，注意“状态”一栏，当它由“Pending”变为“running”后，EC2实例就正常运行，可以进行后续操作了。
 
-**第三步：绑定IP地址，绑定域名**
+# 第三步：绑定IP地址，绑定域名
 
 EC2实例默认只有私有IP和一个动态的公开IP地址/域名。如果需要使用我们自己的域名，则需要一个静态IP，并将我们的域名指向这个IP。
 
@@ -70,13 +71,13 @@ EC2实例默认只有私有IP和一个动态的公开IP地址/域名。如果需
 
 首先，进入EC2控制台，在左侧导航栏选择 Elastic IP，申请一个新的IP地址。
 
-[![image](http://www.catxn.net/wordpress/wp-content/uploads/2013/09/image_thumb3.png "image")](http://www.catxn.net/wordpress/wp-content/uploads/2013/09/image3.png)
+![image](http://catxn.u.qiniudn.com/images/aws_03.png-o)
 
 得到新的IP地址后，将它绑定到刚刚生成的EC2实例。然后将我们希望使用的域名解析到这个IP地址即可。很简单。不过需要注意的是，如果你申请了一个IP而没有使用（绑定到一个可用实例），亚马逊是会罚款的哦，它会直接出现在你的账单里。
 
 完成IP申请后，需要编辑安全组，使这个IP地址可以访问3306端口，这是为了之后我们的主机可以访问RDS实例。
 
-**第四步：创建RDS实例**
+# 第四步：创建RDS实例
 
 建网站必须有个数据库。比如wordpress。
 

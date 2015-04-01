@@ -12,6 +12,6 @@ categories: 流水账
 
 （乌镇）
 
-[![乌镇](/wordpress/wp-content/uploads/2009/12/DSCN1731_thumb.jpg "乌镇")](/wordpress/wp-content/uploads/2009/12/DSCN1731.jpg)
+![乌镇](http://catxn.u.qiniudn.com/images/wuzhen_01.jpg-o)
 
-[![乌镇](/wordpress/wp-content/uploads/2009/12/DSCN1738_thumb.jpg "乌镇")](/wordpress/wp-content/uploads/2009/12/DSCN1738.jpg)
+![乌镇](http://catxn.u.qiniudn.com/images/wuzhen_02.jpg-o)

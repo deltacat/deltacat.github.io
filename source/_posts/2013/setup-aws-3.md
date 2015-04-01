@@ -12,13 +12,11 @@ categories: 建站心得
 用SVN来部署是一个很好的选择。
 SVN 本身是一个服务，我的选择是使用 Apache 的 SVN 模块来访问，不必单独启用SVN服务。
 
-<!--more-->
-
-**第一步：确保 Apache 正确安装和配置**
+# 第一步：确保 Apache 正确安装和配置
 
 详情参见前文，这里假定 Apache 服务已正确安装，运行无误
 
-**第二步：安装 subversion**
+# 第二步：安装 subversion
 > // 安装 subversion
 > 
 > yum install subversion
@@ -30,7 +28,10 @@ SVN 本身是一个服务，我的选择是使用 Apache 的 SVN 模块来访问
 > // 检查 svn 安装
 > 
 > svn --version
-**第三步： 配置 apache 上的 subversion**
+
+<!--more-->
+
+# 第三步： 配置 apache 上的 subversion
 
 Apache 中 subversion 配置文件: /etc/httpd/conf.d/subversion.conf
 用 vi 打开该文件，找到如下被注释掉的部分，打开
@@ -49,6 +50,7 @@ Apache 中 subversion 配置文件: /etc/httpd/conf.d/subversion.conf
 > Require valid-user
 > 
 > &lt;/Location&gt;
+
 这一行：
 SVNParentPath /var/www/svn
 改成：
@@ -62,7 +64,8 @@ AuthUserFile /etc/svn-auth-conf指明了svn帐户文件是/etc/svn-auth-conf 。
 > &lt;LimitExcept GET PROPFIND OPTIONS REPORT&gt;
 > 
 > &lt;/LimitExcept&gt;
-**第四步：建立subversion帐户<!--more-->**
+
+# 第四步：建立subversion帐户
 
 subversion自己对帐户进行管理，所以要客户端要访问它必须使用subversion帐户进行登录。
 > // 创建第一个帐户
@@ -72,13 +75,16 @@ subversion自己对帐户进行管理，所以要客户端要访问它必须使�
 > // 创建更多其它帐户（注意参数）
 > 
 > htpasswd -m /etc/svn-auth-conf &lt;username2&gt;
-**第五步：建立subversion仓库**
+
+# 第五步：建立subversion仓库
 > cd /var/www/svn
 > 
 > svnadmin create repos
 > 
 > chown -R apache.apache repos
-**第六步：测试Subversion工作**
+
+
+# 第六步：测试Subversion工作
 > // 重启 apache:
 > 
 > service httpd restart
@@ -89,9 +95,10 @@ subversion自己对帐户进行管理，所以要客户端要访问它必须使�
 > --------------------------------------------------------------
 > 
 > Powered by Apache Subversion version 1.7.10 (r1485443).
+
 打开本地SVN客户端（我这里用的是tortoiseSVN），输入地址，提示用户名密码时按之前的设定输入，一切无误的话应该可以列出代码库。至此Subversion服务配置完毕
 
-**第七步：配置SVN自动部署最新代码至网站目录**
+# 第七步：配置SVN自动部署最新代码至网站目录
 
 Subversion 的钩子脚本是一种事件触发机制，当SVN系统执行到某些预定义事件时，触发一些预定义动作。其中，post-commit 事件就可用于自动部署。简单来说，在 Web 目录 checkout 特定代码库，然后设定当 svn 提交完成时，自动更新 web 目录。我们可以这样来设置 svn 库：首先建立工作分支和发布分支，工作分支稳定后，合并最新代码至发布分支（提交前核对更改），代码提交完成后，server端的post-commit脚本从发布分支自动更新web目录。
 
@@ -111,11 +118,15 @@ Subversion 的钩子脚本是一种事件触发机制，当SVN系统执行到某
 > WEB=/var/www/html/MyWeb
 > 
 > ${SVN} update ${WEB} --username &lt;username&gt; --password &lt;password&gt;
+
+
 第一行 export … 是为了避免编码错误，可根据服务器设置调整，保持和服务器编码一致即可。
 第二行是svn命令行位置
 第三行是checkout的代码库位置，需要用chown将该目录权限授予apache用户
 第四行是实际执行的命令。
 保存post-commit, chmod a+x 使其可执行。然后手工执行进行测试。如果出现保存密码的提示，则需要修改设置避免该提示出现，否则客户端提交代码会失败（因为客户端没有当提示出现选择yes/no的机会）。首先将配置文件拷贝至apache的home目录，然后修改：
+
+
 > cp -r /root/.subversion/ /var/www/
 > 
 > vi /var/www/.subversion/servers
@@ -123,11 +134,12 @@ Subversion 的钩子脚本是一种事件触发机制，当SVN系统执行到某
 > store-plaintext-passwords = no
 > 
 > store-passwords = no
+
 现在一切就绪，使用客户端工具提交代码测试，检查Web目录是否同步了更改。
 至此，配置工作完毕。
 
-**参考资料：**
+# 参考资料
 
-1\. [http://www.worldhello.net/doc/svn_hooks/svn_hooks.mm.htm](http://www.worldhello.net/doc/svn_hooks/svn_hooks.mm.htm "http://www.worldhello.net/doc/svn_hooks/svn_hooks.mm.htm")
-2\. [http://blog.csdn.net/niu_gao/article/details/7502326](http://blog.csdn.net/niu_gao/article/details/7502326 "http://blog.csdn.net/niu_gao/article/details/7502326")
-3\. [http://www.ibm.com/developerworks/cn/java/j-lo-apache-subversion/index.html](http://www.ibm.com/developerworks/cn/java/j-lo-apache-subversion/index.html "http://www.ibm.com/developerworks/cn/java/j-lo-apache-subversion/index.html")
+- [http://www.worldhello.net/doc/svn_hooks/svn_hooks.mm.htm](http://www.worldhello.net/doc/svn_hooks/svn_hooks.mm.htm "http://www.worldhello.net/doc/svn_hooks/svn_hooks.mm.htm")
+- [http://blog.csdn.net/niu_gao/article/details/7502326](http://blog.csdn.net/niu_gao/article/details/7502326 "http://blog.csdn.net/niu_gao/article/details/7502326")
+- [http://www.ibm.com/developerworks/cn/java/j-lo-apache-subversion/index.html](http://www.ibm.com/developerworks/cn/java/j-lo-apache-subversion/index.html "http://www.ibm.com/developerworks/cn/java/j-lo-apache-subversion/index.html")
