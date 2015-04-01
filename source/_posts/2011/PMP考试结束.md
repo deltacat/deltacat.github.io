@@ -1,8 +1,8 @@
 title: "PMP 考试结束"
 date: 2011-12-12 15:29:28
-tags: [管理, 项目管理, 流水账]
+tags: [管理, 项目管理, 流水账, 职业生涯]
 id: 122
-categories:  职业生涯
+categories:  流水账
 ---
 
 周末终于结束了PMP考试。

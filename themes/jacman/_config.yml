@@ -49,7 +49,7 @@ author:
   intro_line2:  "在这里，你可以看到：软件开发技术，管理心得，以及一些历史故事。"  ## the 2nd line
   weibo:      deltacat ## e.g. wuchong1014 or 2176287895 for http://weibo.com/2176287895
   weibo_verifier:  ## e.g. b3593ceb Your weibo-show widget verifier ,if you use weibo-show it is needed.
-  tsina:      ## e.g. 2176287895  Your weibo ID,It will be used in share button.
+  tsina:      1406303630 ## e.g. 2176287895  Your weibo ID,It will be used in share button.
   douban:     deltacat ## e.g. wuchong1014 or your id for https://www.douban.com/people/wuchong1014
   zhihu:      deltacat ## e.g. jark  for http://www.zhihu.com/people/jark
   email:      ## e.g. imjark@gmail.com
@@ -70,6 +70,12 @@ toc:
 
 #### Links
 links:
+  尼禄软件: http://www.nero.com
+  Jason: http://atjason.com
+  VictorFun: http://victorfun.com/
+  我在博客园: http://www.cnblogs.com/deltacat
+  我在新浪博客: http://blog.sina.com.cn/deltacatcn
+  wopus站长工具: http://tool.wopus.org
   #码农圈: https://coderq.com,一个面向程序员交流分享的新一代社区
   #主题作者: http://wuchong.me
 
@@ -101,7 +107,7 @@ cnzz_tongji:
 
 #### Miscellaneous
 ShowCustomFont: true  ## you can change custom font in `variable.styl` and `font.styl` which in the theme folder `/jacman/source/css`.
-fancybox: true        ## if you use gallery post or want use fancybox please set the value to true.
+fancybox: false        ## if you use gallery post or want use fancybox please set the value to true.
 totop: true           ## if you want to scroll to top in every post set the value to true
 
 
