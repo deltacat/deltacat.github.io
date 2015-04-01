@@ -1,9 +1,9 @@
 title: "发现一个问题，WordPress 邮件发送"
 date: 2009-12-31 18:13:51
-tags:
+tags: [流水账, 建站]
 id: 73
-categories:
-  - 建站心得
+categories: 建站心得
+
 ---
 
 Google 了下，没有找到解答。

@@ -1,6 +1,7 @@
 title: "迁移到Hexo，双线镜像"
 date: 2015-03-31 11:40:17
-tags:
+tags: [建站, hexo, github, blog]
+categories: 建站心得
 
 ---
 

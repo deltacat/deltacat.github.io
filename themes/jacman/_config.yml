@@ -12,7 +12,7 @@ menu:
 
 #### Widgets
 widgets: 
-#- category
+- category
 - tagcloud
 - links
 #- douban

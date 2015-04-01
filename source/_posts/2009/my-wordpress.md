@@ -1,6 +1,9 @@
 title: "WordPress"
 date: 2009-12-25 12:38:36
 id: 14
+tags: [建站, wordpress, 流水账]
+categories: 建站心得
+
 ---
 
 在 Wopus IDC 申请了空间，开始我的 WordPress 之旅。
@@ -8,6 +11,8 @@ id: 14
 首先是几个必要的 WordPress 设置。
 
 然后选择主题。这里我使用了 MG12 制作的 iNove 主题。
+
+<!--more-->
 
 **安装必备插件：**
 
@@ -21,10 +26,10 @@ id: 14
 
 **几个备用链接：**
 
-[启用iNove主题，并做几个小修改](http://www.quhao.cn/post/wordpress-theme-inove.html/comment-page-1)
+- [启用iNove主题，并做几个小修改](http://www.quhao.cn/post/wordpress-theme-inove.html/comment-page-1)
 
-[.htaccess 教程](http://hi.baidu.com/seobb/blog/item/97f8cf228b1bfef0d7cae2a0.html)
+- [.htaccess 教程](http://hi.baidu.com/seobb/blog/item/97f8cf228b1bfef0d7cae2a0.html)
 
-[新手建站攻略](http://www.ifunkey.com/topics/%E7%8B%AC%E7%AB%8B%E4%B9%8B%E9%81%93/%E6%96%B0%E6%89%8B%E5%BB%BA%E7%AB%99%E6%94%BB%E7%95%A5)
+- [新手建站攻略](http://www.ifunkey.com/topics/%E7%8B%AC%E7%AB%8B%E4%B9%8B%E9%81%93/%E6%96%B0%E6%89%8B%E5%BB%BA%E7%AB%99%E6%94%BB%E7%95%A5)
 
-[![双片金鱼](http://farm3.static.flickr.com/2510/4007319845_6e57aafdde.jpg)](http://www.flickr.com/photos/deltacatcn/4007319845/ "Flickr 上 deltacatcn 的 双片金鱼")
+- ![双片金鱼](http://farm3.static.flickr.com/2510/4007319845_6e57aafdde.jpg)

@@ -1,9 +1,8 @@
 title: "新年快乐"
 date: 2009-12-31 18:15:46
-tags:
+tags: [流水账]
 id: 74
-categories:
-  - 乱七八糟
+categories: 流水账
 ---
 
 今天是2009最后一天。祝大家新年快乐。

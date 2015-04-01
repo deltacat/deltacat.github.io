@@ -1,9 +1,9 @@
 title: "搬迁至 HomeZZ 主机"
 date: 2011-11-17 18:47:42
-tags:
+tags: [流水账, 建站]
 id: 116
-categories:
-  - 建站心得
+categories: 流水账
+
 ---
 
 下班后搞了俩小时。除了一些小麻烦还算顺利。

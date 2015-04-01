@@ -1,18 +1,21 @@
 title: "在 .NET 程序中启用调试信息输出"
 date: 2009-12-29 14:41:39
-tags: programming
+tags: 软件开发
 id: 26
-categories:
-  - 职业生涯
+categories: 软件开发
+
 ---
 
 我们在开发当中，有时需要添加一些调试信息，以便在脱离集成调试环境时捕捉错误。Win32 编程常用 OutputDebugString 这个函数配合 DebugView 等工具来在程序中插入调试信息。为了将调试信息写入日志，也有很多方法和第三方工具，比如著名的 log4cxx。
 
 .Net 平台下，我们只需要简单的调用 Trace 和 Debug 这两个类，即可实现大部分调试输出。
 
+<!--more-->
+
 **一、****Trace ****和**** Debug ****的异同。**
 
 Trace 与 Debug 类均位于 System.Diagnostics. 我们在使用时，只需要引入该 namespace，同时在任何需要的地方直接调用即可。最大的区别在于，Debug 类仅在 Debug 模式下编译有效，而 Trace 类在 Debug 和 Release 模式下均可工作。例如这段代码：
+
 ``` CSharp
 if (null == param1) 
 { 
@@ -30,9 +33,7 @@ Trace.TraceInformation("Trace: Application Started!"); // B
 Debug: Parameter is null!&#160; 
 Trace: Application Started! 
 
-如果在 Release 模式下编译代码并运行，使用 DebugView 观察，两个输出均无。这是因为，默认情况下，编译器为 Debug 模式添加了 “DEBUG” 和 “TRACE” 两个条件，而 Relase 模式仅有 “TRACE” 条件。这是默认设置，可以手工修改，修改位置在 Project-&gt;Properties-&gt;Build。如下图所示：
-
-![clip_image002](/wordpress/wp-content/uploads/2009/12/clip_image002.gif "clip_image002")
+如果在 Release 模式下编译代码并运行，使用 DebugView 观察，两个输出均无。这是因为，默认情况下，编译器为 Debug 模式添加了 “DEBUG” 和 “TRACE” 两个条件，而 Relase 模式仅有 “TRACE” 条件。这是默认设置，可以手工修改，修改位置在 Project-&gt;Properties-&gt;Build。
 
 既然 Trace 在 Release 模式也可以工作，为什么我们不能在 DebugView 中看到输出呢？这是因为，我们没有设置正确的 Listener。Debug 类默认输出至调试器。而 Trace 类仅在开启 DEBUG 参数模式下输出至调试器。我们可以自行制定 Trace 信息的输出，通过添加 Listener。
 
@@ -40,7 +41,9 @@ Trace: Application Started!
 
 Listerner，又称为监听器。打开 .NET 中 Debug 和 Trace 类的定义，可以看到他们都有一个集合属性 Listeners：
 
-<pre class="brush: csharp; auto-links: true; collapse: false; first-line: 1; gutter: true; html-script: false; light: false; ruler: false; smart-tabs: true; tab-size: 4; toolbar: true;">public static TraceListenerCollection Listeners { get; }</pre>
+``` CSharp
+public static TraceListenerCollection Listeners { get; }
+```
 
 这个属性用于注册监听器。实际上，无论 Debug 还是 Trace，都有一个默认的监听器。对于 Trace 来说，这个监听器是 Console，如果没有在程序中创建 Console 窗口，它的输出就是当你按下 F5 时，IDE 的 output 窗口。这在 Release 条件下仍然有效。
 
@@ -70,6 +73,6 @@ Listerner，又称为监听器。打开 .NET 中 Debug 和 Trace 类的定义，
 
 **三、参考资料：**
 
-1\. [MSDN 中的 Trace 类](http://msdn.microsoft.com/en-us/library/system.diagnostics.tracelistener.aspx)；
+- [MSDN 中的 Trace 类](http://msdn.microsoft.com/en-us/library/system.diagnostics.tracelistener.aspx)；
 
-2\. [Use of Listener in .NET Framework with C#](http://tutorial.visualstudioteamsystem.com/details.aspx?item=120)
+- [Use of Listener in .NET Framework with C#](http://tutorial.visualstudioteamsystem.com/details.aspx?item=120)

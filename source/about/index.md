@@ -14,4 +14,4 @@ comment: false
 
 公众号：
 
-[caption id="attachment_247" align="alignnone" width="258"][![公共号二维码](http://www.catxn.net/wordpress/wp-content/uploads/2014/08/qrcode_for_gh_me.jpg)](http://www.catxn.net/wordpress/wp-content/uploads/2014/08/qrcode_for_gh_me.jpg) 公共号二维码[/caption]
+![公共号二维码](/images/qrcode_for_gh_wildcat.jpg)

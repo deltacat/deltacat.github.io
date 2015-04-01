@@ -1,12 +1,13 @@
 title: "PMP 考试结束"
 date: 2011-12-12 15:29:28
-tags:
+tags: [管理, 项目管理, 流水账]
 id: 122
-categories:
-  - 职业生涯
+categories:  职业生涯
 ---
 
 周末终于结束了PMP考试。
+
+<!--more-->
 
 2011年12月10日，杭州市集锦饭店。考试服务由专业考试服务公司Thomson Prometric提供。
 

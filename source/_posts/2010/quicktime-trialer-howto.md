@@ -2,14 +2,15 @@ title: "如何下载 QuickTime 的 Trailer"
 date: 2010-02-21 13:13:10
 tags:
 id: 92
-categories:
-  - 影音动漫
-  - 生活娱乐
+categories: 影音动漫
+ 
 ---
 
 首先，进入 [http://www.apple.com/trailers/](http://www.apple.com/trailers/)，找到喜欢的 Trailer，进入播放页面。会有不同分辨率的供选择。
 
 鼠标放在相应的按钮上，右键，选择“复制链接”。于是你得到一个类似这样的链接：
+
+<!--more-->
 
 [http://movies.apple.com/movies/fox/avatar/avatar-tlrf_720p.mov](http://movies.apple.com/movies/fox/avatar/avatar-tlrf_720p.mov "http://movies.apple.com/movies/fox/avatar/avatar-tlrf_720p.mov")
 
