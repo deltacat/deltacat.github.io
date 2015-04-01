@@ -69,10 +69,31 @@ deploy:
 	最坑的是，如果多点部署的话，会报错。看了下应该是 3.0 更新后的bug，在 github Hexo 项目上，已经有人提了[issue][link-hexo-issue-repo]，看什么时候能解决吧。
 	
 	3.0 详细的变化可以参考 [github 上的文档][link-hexo-v3].
+
+	**更新**: 昨天 git deployer 更新到 0.0.4，修正了该问题。参见[作者的说明][link-hexo-isse-repo-comment].
+
+	更新方法：编辑 package.json，把 hexo-deployer-git 的版本升级到 0.0.4，然后 `npm update`.
 	
 - 迁移自 wordpress
 
 	用插件 hexo-migrator-wordpress 即可一键完成。比较郁闷的是，如果原文的标题是中文，那么这里所有的文件名都会被解析成形如 ab-cd-ef-gh-de-ty-ww-rt-as-cd-fg.md 这种形式。原因可以理解，它首先将中文进行编码，然后替换空格最终形成“slug”形式的permalink。但是看着实在很蛋疼。
+
+- 目录（categories）
+
+	hexo 支持多目录。但是……
+
+	如果你指定了多个目录，比如 `[建站心得，流水账]`，那么最后呈现出的目录列表可能是这个样子的：
+
+	```
+	建站心得5
+	流水账5
+	流水账1
+	流水账1
+	流水账1
+	...
+	```
+
+	泪奔。所以还是老老实实用单category，结合标签云好啦。
 	
 还碰过其他坑，暂时记起来这么多。后面想起来或遇到新坑再更新。
 
@@ -104,3 +125,4 @@ Enjoy it!
 [link-my-site]: http://www.catxn.net
 [link-zespia]: http://zespia.tw
 [img-girls]: http://i.minus.com/ibpxy719URHw77.jpg
+[link-hexo-isse-repo-comment]: https://github.com/hexojs/hexo/issues/1108#issuecomment-87942286
