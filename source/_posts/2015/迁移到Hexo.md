@@ -56,11 +56,11 @@ deploy:
 
 这里是一些大坑。估计如果看到Hexo的介绍后，想自己动手试试看的都会遇到。
 
-- 首先，无论部署到GitCafe还是GitHub，都是master分支。
+- 首先，部署到GitHub时，应该直接部署到master分支。部署到 gitcafe 则应部署至 gitcafe-pages 分支。
 	
 	gitcafe-pages, gh-pages 这样的分支是用来给Jekyll在服务端生成静态网站用的。
 	
-	用hexo生成网站是在本地生成后部署静态页面，这时直接部署到master即可。
+	用hexo生成网站是在本地生成后部署静态页面，这时直接部署到master即可。但是 gitcafe 的 master 分支貌似不会生成网站，必须部署至 gitcafe-pages 分支。
 	
 - 然后，Hexo 现在最新的版本是3.0 
 	
@@ -100,7 +100,7 @@ deploy:
 	
 # 写作工具
 
-当然。你可以直接在简书写，然后复制到 Hexo 源文件目录，这个跨平台。XD
+当然。你可以直接在简书写，跨平台，实时保存。XD 然后复制到 Hexo 源文件目录。
 
 Mac 平台的话，强烈推荐 “Mou”。
 	
