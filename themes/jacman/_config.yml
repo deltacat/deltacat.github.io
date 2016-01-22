@@ -12,12 +12,15 @@ menu:
 
 #### Widgets
 widgets: 
+- github-card
 - category
-- tagcloud
+- tag
 - links
-#- douban
+- douban
 - rss
-## provide seven widgets:category,tag,rss,archive,tagcloud,links,weibo,douban
+- weibo
+  ## provide eight widgets:github-card,category,tag,rss,archive,tagcloud,links,weibo
+
 
 
 #### RSS 
@@ -26,14 +29,18 @@ rss: /atom.xml ## RSS address.
 #### Image
 imglogo:
   enable: true             ## display image logo true/false.
-  src: img/author.png        ## `.svg` and `.png` are recommended,please put image into the theme folder `/jacman/source/img`.
-favicon: img/favicon.ico   ## size:32px*32px,`.ico` is recommended,please put image into the theme folder `/jacman/source/img`.     
-apple_icon: img/author.png ## size:114px*114px,please put image into the theme folder `/jacman/source/img`.
-author_img: img/author.png ## size:220px*220px.display author avatar picture.if don't want to display,please don't set this.
+  src: images/author.png        ## `.svg` and `.png` are recommended,please put image into the theme folder `/jacman/source/img`.
+favicon: images/author.png   ## size:32px*32px,`.ico` is recommended,please put image into the theme folder `/jacman/source/img`.     
+apple_icon: images/author.png ## size:114px*114px,please put image into the theme folder `/jacman/source/img`.
+author_img: images/author.png ## size:220px*220px.display author avatar picture.if don't want to display,please don't set this.
 banner_img: images/banner03.png ## size:1920px*200px+. Banner Picture
 ### Theme Color 
 theme_color:
     theme: '#2ca6cb'    ##the defaut theme color is blue
+
+# 代码高亮主题
+# available: default | night
+highlight_theme: default
 
 #### index post is expanding or not 
 index:
@@ -42,6 +49,10 @@ index:
 
 close_aside: false  #close sidebar in post page if true
 mathjax: false      #enable mathjax if true
+
+### Creative Commons License Support, see http://creativecommons.org/ 
+### you can choose: by , by-nc , by-nc-nd , by-nc-sa , by-nd , by-sa , zero
+creative_commons: none
 
 #### Author information
 author:
