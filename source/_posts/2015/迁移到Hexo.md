@@ -124,5 +124,6 @@ Enjoy it!
 [link-hexo-v3]: https://github.com/hexojs/hexo/wiki/Breaking-Changes-in-Hexo-3.0
 [link-my-site]: http://www.catxn.net
 [link-zespia]: http://zespia.tw
-[img-girls]: http://i.minus.com/ibpxy719URHw77.jpg
+[img-girls]: http://catxn.u.qiniudn.com/images/acg/zespia001.jpg-o
 [link-hexo-isse-repo-comment]: https://github.com/hexojs/hexo/issues/1108#issuecomment-87942286
+
