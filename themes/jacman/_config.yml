@@ -12,7 +12,7 @@ menu:
 
 #### Widgets
 widgets: 
-- github-card
+# - github-card
 - category
 - tag
 - links
@@ -52,7 +52,7 @@ mathjax: false      #enable mathjax if true
 
 ### Creative Commons License Support, see http://creativecommons.org/ 
 ### you can choose: by , by-nc , by-nc-nd , by-nc-sa , by-nd , by-sa , zero
-creative_commons: none
+creative_commons: by
 
 #### Author information
 author:
@@ -65,7 +65,7 @@ author:
   zhihu:      deltacat ## e.g. jark  for http://www.zhihu.com/people/jark
   email:      ## e.g. imjark@gmail.com
   twitter:    ## e.g. jarkwu for https://twitter.com/jarkwu
-  github:     ## e.g. wuchong for https://github.com/wuchong
+  github:     deltacat ## e.g. wuchong for https://github.com/wuchong
   facebook:   ## e.g. imjark for https://facebook.com/imjark
   linkedin:   ## e.g. wuchong1014 for https://www.linkedin.com/in/wuchong1014
   google_plus:    ## e.g. "111190881341800841449" for https://plus.google.com/u/0/111190881341800841449, the "" is needed!
@@ -81,9 +81,9 @@ toc:
 
 #### Links
 links:
+  宗布科技: http://www.zongbutech.com
   尼禄软件: http://www.nero.com
   Jason: http://atjason.com
-  VictorFun: http://victorfun.com/
   我在博客园: http://www.cnblogs.com/deltacat
   我在新浪博客: http://blog.sina.com.cn/deltacatcn
   wopus站长工具: http://tool.wopus.org
