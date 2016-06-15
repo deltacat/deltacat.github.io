@@ -19,6 +19,8 @@ date: 2016-06-15 09:28:42
 
 先贴代码
 
+<!--more-->
+
 ```php
 // 1. 重定向简码实现
 function my_redirect_shortcode($params) {
