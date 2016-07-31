@@ -1,0 +1,659 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>在 Amazon AWS 搭建及部署网站：（一）申请、设置 AWS 服务 | 夜猫阿罗哈</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="三角猫">
+    
+
+    
+    <meta name="description" content="亚马逊 AWS 介绍简单来说，AWS (Amazon Web Service) 提供了一整套基础设施和服务，使“建站”这件事变得轻松愉快。
+你可以利用AWS构建博客主机，云存储（比如DropBox），手游数据中心，公司门户等等几乎所有你能想到的需要网络服务的场景。作为一个入门介绍，我们从 Wordpress 开始，因为 Wordpress 几乎包含了入门级站点的全部需求元素：服务器主机，PHP运行">
+<meta property="og:type" content="article">
+<meta property="og:title" content="在 Amazon AWS 搭建及部署网站：（一）申请、设置 AWS 服务">
+<meta property="og:url" content="http://www.catxn.net/posts/2013/setup-aws-1/index.html">
+<meta property="og:site_name" content="夜猫阿罗哈">
+<meta property="og:description" content="亚马逊 AWS 介绍简单来说，AWS (Amazon Web Service) 提供了一整套基础设施和服务，使“建站”这件事变得轻松愉快。
+你可以利用AWS构建博客主机，云存储（比如DropBox），手游数据中心，公司门户等等几乎所有你能想到的需要网络服务的场景。作为一个入门介绍，我们从 Wordpress 开始，因为 Wordpress 几乎包含了入门级站点的全部需求元素：服务器主机，PHP运行">
+<meta property="og:image" content="http://catxn.u.qiniudn.com/images/aws_00.png-o">
+<meta property="og:image" content="http://catxn.u.qiniudn.com/images/aws_01.png-o">
+<meta property="og:image" content="http://catxn.u.qiniudn.com/images/aws_02.png-o">
+<meta property="og:image" content="http://catxn.u.qiniudn.com/images/aws_03.png-o">
+<meta property="og:updated_time" content="2015-04-01T12:25:34.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="在 Amazon AWS 搭建及部署网站：（一）申请、设置 AWS 服务">
+<meta name="twitter:description" content="亚马逊 AWS 介绍简单来说，AWS (Amazon Web Service) 提供了一整套基础设施和服务，使“建站”这件事变得轻松愉快。
+你可以利用AWS构建博客主机，云存储（比如DropBox），手游数据中心，公司门户等等几乎所有你能想到的需要网络服务的场景。作为一个入门介绍，我们从 Wordpress 开始，因为 Wordpress 几乎包含了入门级站点的全部需求元素：服务器主机，PHP运行">
+<meta name="twitter:image" content="http://catxn.u.qiniudn.com/images/aws_00.png-o">
+
+    
+    <link rel="alternative" href="/atom.xml" title="夜猫阿罗哈" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/images/author.png">
+    
+    
+    <link rel="apple-touch-icon" href="/images/author.png">
+    <link rel="apple-touch-icon-precomposed" href="/images/author.png">
+    
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/images/author.png" alt="夜猫阿罗哈" title="夜猫阿罗哈"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="夜猫阿罗哈">夜猫阿罗哈</a></h1>
+				<h2 class="blog-motto">暮然回首萧瑟处，也无风雨也无晴</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">Home</a></li>
+					
+						<li><a href="/archives">Archives</a></li>
+					
+						<li><a href="/about">About</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="hidden" name="q" value="site:www.catxn.net">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/posts/2013/setup-aws-1/" title="在 Amazon AWS 搭建及部署网站：（一）申请、设置 AWS 服务" itemprop="url">在 Amazon AWS 搭建及部署网站：（一）申请、设置 AWS 服务</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="三角猫" target="_blank" itemprop="author">三角猫</a>
+		
+  <p class="article-time">
+    <time datetime="2013-09-01T07:41:13.000Z" itemprop="datePublished"> 发表于 2013-09-01</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#亚马逊-AWS-介绍"><span class="toc-number">1.</span> <span class="toc-text">亚马逊 AWS 介绍</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第一步：注册账号"><span class="toc-number">2.</span> <span class="toc-text">第一步：注册账号</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第二步：创建主机"><span class="toc-number">3.</span> <span class="toc-text">第二步：创建主机</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第三步：绑定IP地址，绑定域名"><span class="toc-number">4.</span> <span class="toc-text">第三步：绑定IP地址，绑定域名</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第四步：创建RDS实例"><span class="toc-number">5.</span> <span class="toc-text">第四步：创建RDS实例</span></a></li></ol>
+		
+		</div>
+		
+		<h1 id="亚马逊-AWS-介绍"><a href="#亚马逊-AWS-介绍" class="headerlink" title="亚马逊 AWS 介绍"></a>亚马逊 AWS 介绍</h1><p>简单来说，AWS (Amazon Web Service) 提供了一整套基础设施和服务，使“建站”这件事变得轻松愉快。</p>
+<p>你可以利用AWS构建博客主机，云存储（比如DropBox），手游数据中心，公司门户等等几乎所有你能想到的需要网络服务的场景。作为一个入门介绍，我们从 Wordpress 开始，因为 Wordpress 几乎包含了入门级站点的全部需求元素：服务器主机，PHP运行环境，数据库，前端页面等等。不得不多说一句，对于个人博客来说，如果经济性是首要考量因素，AWS 并非首选，大量专业博客虚拟主机以非常低廉的价格提供给低访问量的博客站长。AWS的入门套餐价格也远比入门级博客主机价格高许多，当然，性能和容量也大许多。在决定是否选用AWS提供服务前，有必要对自己的业务量有个初步估算。</p>
+<p>好在 AWS 对于初次注册的用户提供了为期一年的免费套餐，足以应对一个中等大小的博客站点（甚至多个）持续运行一年时间。我们就从这个免费套餐开始入门的学习。</p>
+<p>免费套餐的详细说明请参见官方介绍：</p>
+<p>点击进入：<a href="http://aws.amazon.com/cn/" target="_blank" rel="external">亚马逊AWS中文主页</a><br>点击进入：<a href="https://aws.amazon.com/cn/free/" target="_blank" rel="external">亚马逊新手套餐介绍页</a></p>
+<p>另外，AWS 有遍布全球的数据中心，而且，即使你的主机设置在美洲，也可以用 CloudFront 服务来进行全球加速。不过 CloudFront 服务似乎并未包含在免费套餐中。建议在创建主机时，选择日本节点，从大陆访问的速度还算不错。</p>
+<p>有消息称亚马逊正在计划在中国大陆部署数据中心，并有望在2013年年底前正式上线。非常令人期待啊。</p>
+<h1 id="第一步：注册账号"><a href="#第一步：注册账号" class="headerlink" title="第一步：注册账号"></a>第一步：注册账号</h1><p>在开始前，请先准备一张双币信用卡。</p>
+<p>AWS 账号就是你的 Amazon 账号 （注意，不是 amazon.cn 而是 amazon.com）。若之前没有amazon账号，请直接去 <a href="http://www.amazon.com" target="_blank" rel="external">www.amazon.com</a> 注册。如果不想用AWS服务，这个账号还可以用来在美国亚马逊海涛心仪的商品。</p>
+<p>然后开通 AWS 服务：打开页面 <a href="https://aws.amazon.com/cn/free/" target="_blank" rel="external">亚马逊新手套餐</a> ，点击“免费试用”，跟随向导注册服务。所有的个人信息按照真实信息填写即可，中间会验证手机，验证信用卡。验证手机会收到一个英文电话，根据提示输入验证码，注册向导会自动继续。信用卡验证过程中会有一笔1美元左右的扣款，理论上会在最终账单中退还。注意你的信用卡必须是有效期内，在一年免费期结束后，如果继续使用，会按照选择的付费方案进行支付。如果免费期结束不想继续使用，关闭所有服务即可，不会产生任何额外费用。</p>
+<p>注册过程如果有选择付费方案（定价模型），请选择“按需付费”。大意就是，用多少付多少，不用就不付。对于实验性质尝试，这种方案很合适。</p>
+<a id="more"></a>
+<h1 id="第二步：创建主机"><a href="#第二步：创建主机" class="headerlink" title="第二步：创建主机"></a>第二步：创建主机</h1><p>主机是一切服务的基础。当然，如果你不需要运行自己的程序，只需要一个数据中心，这一步也可以省掉。比如手游客户端需要的数据库，通信等的。既然我们需要一个网站，那么一个主机是必须的。</p>
+<p>亚马逊的主机有个很拉轰的名字：“亚马逊弹性云计算”（Elastic Cloud Compute, 简称 EC2）。用亚马逊自己的话说，它的优势在于：弹性，完全控制，灵活，可靠，安全，与AWS其他服务轻松配合，经济实惠，轻松入门。详细介绍参见： <a href="http://aws.amazon.com/cn/ec2/" target="_blank" rel="external">EC2概述</a></p>
+<p>现在，我们已经有了一个AWS的账户，立刻进入AWS控制台，会看到这样的界面：</p>
+<p><img src="http://catxn.u.qiniudn.com/images/aws_00.png-o" alt="image"></p>
+<p>进入 EC2 面板，点击 “Launch Instance”来创建第一个实例。会看到这样的对话框：</p>
+<p><img src="http://catxn.u.qiniudn.com/images/aws_01.png-o" alt="image"></p>
+<p>选则 classic wizard 进入即可。然后会进入操作系统选择界面，支持Linux和Windows系统。作为服务器，建议选择Linux系统。同时，标记星号的表示包括在免费套餐中，选择这些系统不会产生额外费用，其他的会按照标准定价收费。</p>
+<p>我这里选择的是Amazon Linux AMI。AMI 预置了若干常用包，很方便。</p>
+<p>下一步会选择实例数量和类型。注意，收费方式中的一年720小时时间，是按实例分别计算的。720小时足够单实例持续运行一年，两个实例就是半年。这里作为测试，保持默认1，实例类型一定要确认是 微型(T1 Micro)，其它类型均不包括在免费方案中。</p>
+<p>后面两页使用默认设置即可。进入到Tags设置，这一页只是用来标识主机信息的，你可以填一个好记的名字。然后继续，进入关键的一步，生成 Key-Pair。这个 Key-Pair 是后面所有操作的基础，生成后一定要保存在一个安全的地方。页面如下，输入一个好记的名字，点击“Create &amp; Download”，下载完成后点击继续。</p>
+<p><img src="http://catxn.u.qiniudn.com/images/aws_02.png-o" alt="image"></p>
+<p>下一步，会要求设置防火墙。初始设置会有两个默认安全组，任选一个或新建一个，默认打开80（http）和22（ssh）端口确保我们可以SSH连接服务器进行管理操作，以及通过浏览器访问Web服务。安全组之后随时可以增删编辑。</p>
+<p>至此，EC2实例设置完毕，点击“Launch”，回到AWS控制台，EC2的面板会显示刚刚创建的实例，注意“状态”一栏，当它由“Pending”变为“running”后，EC2实例就正常运行，可以进行后续操作了。</p>
+<h1 id="第三步：绑定IP地址，绑定域名"><a href="#第三步：绑定IP地址，绑定域名" class="headerlink" title="第三步：绑定IP地址，绑定域名"></a>第三步：绑定IP地址，绑定域名</h1><p>EC2实例默认只有私有IP和一个动态的公开IP地址/域名。如果需要使用我们自己的域名，则需要一个静态IP，并将我们的域名指向这个IP。</p>
+<p>如何申请域名就不多说了。只说如何绑定。</p>
+<p>首先，进入EC2控制台，在左侧导航栏选择 Elastic IP，申请一个新的IP地址。</p>
+<p><img src="http://catxn.u.qiniudn.com/images/aws_03.png-o" alt="image"></p>
+<p>得到新的IP地址后，将它绑定到刚刚生成的EC2实例。然后将我们希望使用的域名解析到这个IP地址即可。很简单。不过需要注意的是，如果你申请了一个IP而没有使用（绑定到一个可用实例），亚马逊是会罚款的哦，它会直接出现在你的账单里。</p>
+<p>完成IP申请后，需要编辑安全组，使这个IP地址可以访问3306端口，这是为了之后我们的主机可以访问RDS实例。</p>
+<h1 id="第四步：创建RDS实例"><a href="#第四步：创建RDS实例" class="headerlink" title="第四步：创建RDS实例"></a>第四步：创建RDS实例</h1><p>建网站必须有个数据库。比如wordpress。</p>
+<p>通常php网站最常用的数据库就是MySQL。我们有两个选择，一个是直接在EC2主机安装部署一个MySQL服务，另一个是使用RDS。自行安装的好处是在业务量不大的情况下，不会产生额外费用。RDS的好处是，无需操心安装，备份，负载等问题，并且很容易扩容。</p>
+<p>我们后续两种数据库的使用都会介绍。这里既然我们已经在AWS控制台了，就先创建一个实例以备后续使用。</p>
+<p>首先，在主控面板选择 RDS 进入，点击 “Launch a DB Instance”来开始创建数据库实例。向导第一步会要求选择数据库引擎，果断选择 MySQL 进入下一步。向导第二步询问是否用于生产，标题是“Do you plan to use this database for production purposes?”，好吧，我也不知道这是什么玩意儿，不过按说明，这种类型会要求使用 Multi-AZ （多区域部署），是不包含在免费计划中的。选择“No”进入 Step 3.</p>
+<p>Step 3，许可证模型选择默认 GPL，数据库版本默认，数据库类型“DB Instance Class”选择“db.t1.micro”（微型，免费套餐），空间分配填写20G，足以应付中小型应用。然后填写实例名称，主用户名，密码等等。完成后进入下一步。</p>
+<p>Step 4，这一步比较关键，数据库名填入并记录，其他项保持默认，关键是最后一栏，安全组，选择刚刚我们在创建EC2实例时设定的安全组（打开3306端口），然后进入下一步。</p>
+<p>Step 5，备份设定。这个很简单，根据需要设置下就好了。这里设置好之后，我们就不用再操心数据库备份的事儿啦。</p>
+<p>最后又一个摘要页面，检查无误后，点击“Launch Instance”，数据库实例开始创建。这个过程比EC2实例创建的要慢，耐心等待5到10分钟直到 Status 变成绿色文字“available”。点击该实例详情，找到“Endpoint”，这个地址就是我们将来在配置数据库连接时的主机名。</p>
+<p>至此，建立一个简单网站的AWS服务创建和初始化工作全部完成，下一篇，我们将使用SSH连接来安装我们网站的一切。</p>
+  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/建站心得/">建站心得</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/建站/">建站</a><a href="/tags/aws/">aws</a>
+  </div>
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://www.catxn.net/posts/2013/setup-aws-1/" data-title="在 Amazon AWS 搭建及部署网站：（一）申请、设置 AWS 服务 | 夜猫阿罗哈" data-tsina="1406303630" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/posts/2013/setup-aws-2/" title="在 Amazon AWS 搭建及部署网站：（二）安装、配置软件，启动网站">
+  <strong>上一篇：</strong><br/>
+  <span>
+  在 Amazon AWS 搭建及部署网站：（二）安装、配置软件，启动网站</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/posts/2013/setup-aws-0/"  title="在 Amazon AWS 搭建及部署网站：序">
+ <strong>下一篇：</strong><br/> 
+ <span>在 Amazon AWS 搭建及部署网站：序
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+<section id="comments" class="comment">
+	<div class="ds-thread" data-thread-key="posts/2013/setup-aws-1/" data-title="在 Amazon AWS 搭建及部署网站：（一）申请、设置 AWS 服务" data-url="http://www.catxn.net/posts/2013/setup-aws-1/"></div>
+</section>
+
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#亚马逊-AWS-介绍"><span class="toc-number">1.</span> <span class="toc-text">亚马逊 AWS 介绍</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第一步：注册账号"><span class="toc-number">2.</span> <span class="toc-text">第一步：注册账号</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第二步：创建主机"><span class="toc-number">3.</span> <span class="toc-text">第二步：创建主机</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第三步：绑定IP地址，绑定域名"><span class="toc-number">4.</span> <span class="toc-text">第三步：绑定IP地址，绑定域名</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第四步：创建RDS实例"><span class="toc-number">5.</span> <span class="toc-text">第四步：创建RDS实例</span></a></li></ol>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">分类</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/夜猫茶舍/" title="夜猫茶舍">夜猫茶舍<sup>11</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/宗布科技/" title="宗布科技">宗布科技<sup>4</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/建站心得/" title="建站心得">建站心得<sup>15</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/影音动漫/" title="影音动漫">影音动漫<sup>5</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/流水账/" title="流水账">流水账<sup>6</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/管理微言/" title="管理微言">管理微言<sup>11</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/老猫读史/" title="老猫读史">老猫读史<sup>13</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/软件开发/" title="软件开发">软件开发<sup>5</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/建站/" title="建站">建站<sup>17</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/历史/" title="历史">历史<sup>15</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/流水账/" title="流水账">流水账<sup>14</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/阅读/" title="阅读">阅读<sup>13</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/写作/" title="写作">写作<sup>12</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/管理/" title="管理">管理<sup>11</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/项目管理/" title="项目管理">项目管理<sup>8</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/原创/" title="原创">原创<sup>6</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/软件开发/" title="软件开发">软件开发<sup>6</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/日记/" title="日记">日记<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/宗布/" title="宗布">宗布<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/创业/" title="创业">创业<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/时间管理/" title="时间管理">时间管理<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/wordpress/" title="wordpress">wordpress<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/aws/" title="aws">aws<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/影视/" title="影视">影视<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/动漫/" title="动漫">动漫<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/里程碑/" title="里程碑">里程碑<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/GTD/" title="GTD">GTD<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/春秋战国/" title="春秋战国">春秋战国<sup>3</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="http://www.zongbutech.com" target="_blank" title="宗布科技">宗布科技</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://www.nero.com" target="_blank" title="尼禄软件">尼禄软件</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://atjason.com" target="_blank" title="Jason">Jason</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://www.cnblogs.com/deltacat" target="_blank" title="我在博客园">我在博客园</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://blog.sina.com.cn/deltacatcn" target="_blank" title="我在新浪博客">我在新浪博客</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://tool.wopus.org" target="_blank" title="wopus站长工具">wopus站长工具</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  
+
+<div class="doubanshow">
+<p class="asidetitle">豆瓣秀</p>
+<div>
+<script type="text/javascript" src="http://www.douban.com/service/badge/deltacat/?show=collection&amp;n=12&amp;columns=3&amp;hidelogo=yes&amp;hideself=yes&amp;cat=book|movie" ></script>
+</div>
+</div>
+
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+  <div class="weiboshow">
+  <p class="asidetitle">新浪微博</p>
+    <iframe width="100%" height="119" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=119&fansRow=2&ptype=1&speed=0&skin=9&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=1406303630&verifier=&dpc=1"></iframe>
+</div>
+
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> 你好，我是三角猫。这里是我的个人博客，内容以原创为主。 <br/>
+			在这里，你可以看到：软件开发技术，管理心得，以及一些历史故事。</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		<a href="http://weibo.com/deltacat" target="_blank" class="icon-weibo" title="微博"></a>
+		
+		
+		<a href="https://github.com/deltacat" target="_blank" class="icon-github" title="github"></a>
+		
+		
+		
+		
+		
+		
+		<a href="https://www.douban.com/people/deltacat" target="_blank" class="icon-douban" title="豆瓣"></a>
+		
+		
+		<a href="http://www.zhihu.com/people/deltacat" target="_blank" class="icon-zhihu" title="知乎"></a>
+		
+		
+		
+	</div>
+			
+		
+				<div class="cc-license">
+          <a href="http://creativecommons.org/licenses/by/4.0" class="cc-opacity" target="_blank">
+            <img src="/img/cc-by.svg" alt="Creative Commons" />
+          </a>
+        </div>
+    
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2016 
+		
+		<a href="/about" target="_blank" title="三角猫">三角猫</a>
+		
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
+
+
+
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"deltacat"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script> 
+
+
+
+
+
+
+
+
+
+<!-- Analytics Begin -->
+
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-7388145-4', 'auto');  
+ga('send', 'pageview');
+</script>
+
+
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+  </body>
+</html>

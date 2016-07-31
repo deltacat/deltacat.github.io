@@ -1,0 +1,741 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>在阿里云建设一个企业网站 | 夜猫阿罗哈</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="三角猫">
+    
+
+    
+    <meta name="description" content="企业门户网站的设计是一个非常常见且旺盛的需求。而制作一个门户网站有非常多的方法。最近我们为几个企业用户搭建了门户网站，这里做一些简单的总结，包括一些常会遇到的问题，以便少走弯路。
+
+上篇：准备工作，主机与域名
+中篇：建站利器Wordpress
+下篇：为网站配置邮件
+
+上篇首先我们来说下基础设施的准备。
+主机的选择对于个人用户，建立一个个人网站，可以选用一些免费的博客社区，或者廉价的个人博客主机。而">
+<meta property="og:type" content="article">
+<meta property="og:title" content="在阿里云建设一个企业网站">
+<meta property="og:url" content="http://www.catxn.net/posts/2016/在阿里云建设一个企业网站/index.html">
+<meta property="og:site_name" content="夜猫阿罗哈">
+<meta property="og:description" content="企业门户网站的设计是一个非常常见且旺盛的需求。而制作一个门户网站有非常多的方法。最近我们为几个企业用户搭建了门户网站，这里做一些简单的总结，包括一些常会遇到的问题，以便少走弯路。
+
+上篇：准备工作，主机与域名
+中篇：建站利器Wordpress
+下篇：为网站配置邮件
+
+上篇首先我们来说下基础设施的准备。
+主机的选择对于个人用户，建立一个个人网站，可以选用一些免费的博客社区，或者廉价的个人博客主机。而">
+<meta property="og:updated_time" content="2016-06-15T01:45:08.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="在阿里云建设一个企业网站">
+<meta name="twitter:description" content="企业门户网站的设计是一个非常常见且旺盛的需求。而制作一个门户网站有非常多的方法。最近我们为几个企业用户搭建了门户网站，这里做一些简单的总结，包括一些常会遇到的问题，以便少走弯路。
+
+上篇：准备工作，主机与域名
+中篇：建站利器Wordpress
+下篇：为网站配置邮件
+
+上篇首先我们来说下基础设施的准备。
+主机的选择对于个人用户，建立一个个人网站，可以选用一些免费的博客社区，或者廉价的个人博客主机。而">
+
+    
+    <link rel="alternative" href="/atom.xml" title="夜猫阿罗哈" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/images/author.png">
+    
+    
+    <link rel="apple-touch-icon" href="/images/author.png">
+    <link rel="apple-touch-icon-precomposed" href="/images/author.png">
+    
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/images/author.png" alt="夜猫阿罗哈" title="夜猫阿罗哈"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="夜猫阿罗哈">夜猫阿罗哈</a></h1>
+				<h2 class="blog-motto">暮然回首萧瑟处，也无风雨也无晴</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">Home</a></li>
+					
+						<li><a href="/archives">Archives</a></li>
+					
+						<li><a href="/about">About</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="hidden" name="q" value="site:www.catxn.net">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/posts/2016/在阿里云建设一个企业网站/" title="在阿里云建设一个企业网站" itemprop="url">在阿里云建设一个企业网站</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="三角猫" target="_blank" itemprop="author">三角猫</a>
+		
+  <p class="article-time">
+    <time datetime="2016-05-15T04:00:00.000Z" itemprop="datePublished"> 发表于 2016-05-15</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#上篇"><span class="toc-number">1.</span> <span class="toc-text">上篇</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#主机的选择"><span class="toc-number">1.1.</span> <span class="toc-text">主机的选择</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#主机选择。"><span class="toc-number">1.1.1.</span> <span class="toc-text">主机选择。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#域名注册。"><span class="toc-number">1.1.2.</span> <span class="toc-text">域名注册。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#建站工具"><span class="toc-number">1.1.3.</span> <span class="toc-text">建站工具</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#下篇"><span class="toc-number">2.</span> <span class="toc-text">下篇</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#wordpress-的一些优化"><span class="toc-number">2.1.</span> <span class="toc-text">wordpress 的一些优化</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装"><span class="toc-number">2.1.1.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#美化与定制"><span class="toc-number">2.1.2.</span> <span class="toc-text">美化与定制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#域名切换"><span class="toc-number">2.1.3.</span> <span class="toc-text">域名切换</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#邮件发送设置"><span class="toc-number">2.2.</span> <span class="toc-text">邮件发送设置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#首先域名需要添加三条DNS记录："><span class="toc-number">2.2.1.</span> <span class="toc-text">首先域名需要添加三条DNS记录：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#postfix-的一些额外设置"><span class="toc-number">2.2.2.</span> <span class="toc-text">postfix 的一些额外设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#垃圾邮件助手"><span class="toc-number">2.2.3.</span> <span class="toc-text">垃圾邮件助手</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#结束语"><span class="toc-number">2.3.</span> <span class="toc-text">结束语</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考链接"><span class="toc-number">2.4.</span> <span class="toc-text">参考链接</span></a></li></ol></li></ol>
+		
+		</div>
+		
+		<p>企业门户网站的设计是一个非常常见且旺盛的需求。而制作一个门户网站有非常多的方法。最近我们为几个企业用户搭建了门户网站，这里做一些简单的总结，包括一些常会遇到的问题，以便少走弯路。</p>
+<ul>
+<li>上篇：准备工作，主机与域名</li>
+<li>中篇：建站利器Wordpress</li>
+<li>下篇：为网站配置邮件</li>
+</ul>
+<h1 id="上篇"><a href="#上篇" class="headerlink" title="上篇"></a>上篇</h1><p>首先我们来说下基础设施的准备。</p>
+<h2 id="主机的选择"><a href="#主机的选择" class="headerlink" title="主机的选择"></a>主机的选择</h2><p>对于个人用户，建立一个个人网站，可以选用一些免费的博客社区，或者廉价的个人博客主机。而企业用户考虑到通常会需要CMS系统，访问量会较大，未来有可能升级等等一系列因素，推荐使用更专业的国内服务商。</p>
+<p>在这里，我们选择阿里云。它最大的好处是提供包括域名注册、空间托管、域名备案等一系列服务，所有的需要都可以一站解决。在这一部分，我们会一步步说明如何选购一套阿里云主机。</p>
+<p>在此之前，如果没有阿里云账号，请先<a href="https://www.aliyun.com" target="_blank" rel="external">注册一个</a>。:)</p>
+<p>基础环境首先是选择主机类型，然后是域名注册、备案，最后是选择哪种建站工具/框架。</p>
+<a id="more"></a>
+<h3 id="主机选择。"><a href="#主机选择。" class="headerlink" title="主机选择。"></a>主机选择。</h3><p>阿里云主机有三种：</p>
+<ul>
+<li><a href="https://www.aliyun.com/product/ecs" target="_blank" rel="external">云服务器 ECS</a></li>
+<li><a href="https://wanwang.aliyun.com/hosting" target="_blank" rel="external">云虚拟主机</a></li>
+<li><a href="https://wanwang.aliyun.com/hosting/elastic" target="_blank" rel="external">弹性Web托管</a>(新一代云虚拟主机)</li>
+</ul>
+<p>基本上，如果运维能力不强，同时主要用于门户网站，没有太多复杂功能的话，推荐用后两种。经济实用，维护简单。<br>反之，如果具备安装、配置、管理维护系统，不仅是门户网站同时还要做深入后端开发的话，推荐使用ECS。</p>
+<h3 id="域名注册。"><a href="#域名注册。" class="headerlink" title="域名注册。"></a>域名注册。</h3><p>作为国内企业门户，ICP备案是必需要做的。所以我们推荐域名注册也采用<a href="https://wanwang.aliyun.com/domain" target="_blank" rel="external">阿里云（万网）</a>的服务，并直接用<a href="https://beian.gein.cn" target="_blank" rel="external">阿里云的代备案系统</a>进行备案。</p>
+<p>域名注册比较简单，不多说。简单列几个注意事项：</p>
+<ul>
+<li>域名注册请务必使用企业名称和营业执照注册，所有权属于企业，不要用个人身份注册；</li>
+<li>域名“实名认证”和“ICP备案”是两码事，需要分别进行。.CN 域名必需实名认证，其他域名不强制实名认证，建议都认证。</li>
+<li>无备案的网站无法上线。<strong>备案时间通常会需要15～20天，请提前准备</strong>。</li>
+</ul>
+<h3 id="建站工具"><a href="#建站工具" class="headerlink" title="建站工具"></a>建站工具</h3><p>纯静态网站非常简单，这里不讨论。作为一个企业门户，基本的内容发布管理之类的功能还是需要的。建立这样一个网站，常见这些方案：</p>
+<ol>
+<li>从头做一个</li>
+<li>基于网站框架做一个，比如 ThinkPHP, MEAN 等等</li>
+<li>基于内容管理框架定制，比如 PHPCMS, ThinkCMF</li>
+<li>使用 WordPress 定制</li>
+</ol>
+<p>上述方案由难至易，制作周期从长到短。每种方案均有适应的场景和优缺点。对于普通的企业门户类网站来说，我们推荐使用第三第四。其中 WordPress 方案代码工作量最少（几乎没有），同时有大量的插件、主题模板可供挑选，足以满足大多数场景的需求。<a href="http://www.zongbutech.com" target="_blank" rel="external">宗布科技官网</a>就是用wordpress制作。</p>
+<p>上篇先写到这里，如果你是企业的采购负责人而不是开发者，了解这些就可以了。</p>
+<p>后面我们会继续总结Wordpress的一些优化，如何在网站上应用联系表单收取客户来信等内容。</p>
+<h1 id="下篇"><a href="#下篇" class="headerlink" title="下篇"></a>下篇</h1><p>讲到这里，先说明一下本文的目的。这不是一篇教程，此类教程已经到处都是了，Wordpress官方中文文档也完全可以满足要求。这里只是针对建站流程中的一些关键点做一些说明，面向的读者也不是开发者，而是普通的有建站需求的企业用户。相信通过这些说明，能够提高一些沟通的效率。动手能力强的话，能够通过这个简单的向导自己动手搞一个网站出来，那是再好不过。</p>
+<p>在继续之前，请记住：</p>
+<p>大部分企业门户网站的需求，都可以用 Wordpress 搞定。<br>大部分企业门户网站的需求，都可以用 Wordpress 搞定。<br>大部分企业门户网站的需求，都可以用 Wordpress 搞定。</p>
+<p>重要的事情说三遍。</p>
+<p>这不是吹牛，wordpress 本身已经是一个完整的内容发布和管理系统，通过其海量的主题模板，官方及第三方插件的支撑，基本上一个独立的内容类网站需要的功能，都可以实现。</p>
+<p>什么？你说你会PHP编程，不需要Wordpress？实际上，以wordpress为基础，通过它的插件系统，完全可以将你的PHP代码做成 Wordpress 的插件来执行，避免重复开发基础框架。</p>
+<h2 id="wordpress-的一些优化"><a href="#wordpress-的一些优化" class="headerlink" title="wordpress 的一些优化"></a>wordpress 的一些优化</h2><p>Wordpress 的安装使用，这里不再赘述，有兴趣的可通过文末的参考链接进行深入学习。这里仅针对使用中的一些问题做一些提示，以及一些小技巧。</p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>首先，需要下载 Wordpress 官方安装包。国内网站需要ICP备案，并且根据工信部要求，网站首页必须放置ICP备案号。从善如流的 Wordpress 官方已经为中国用户增加了输入ICP备案的设置入口，但是请注意：<strong>目前只有从中文版官网下载的安装包才具有该功能</strong>。</p>
+<p>Wordpress 安装需要有 PHP, MySQL 支持，请确保你的主机支持并已正确安装。设置数据库建议为wordpress设立专用帐户，以及足够强度的密码。</p>
+<h3 id="美化与定制"><a href="#美化与定制" class="headerlink" title="美化与定制"></a>美化与定制</h3><p>Wordpress 强大之处在于，通过大量的官方和第三方主题，来提供多样的外观。</p>
+<p>还可以通过“子主题”的方式，在原主题上叠加或修改功能，比如将本来只有官方主题才支持的ICP备案号嵌入。同时，通过子主题的方式修改主题，原主题的升级并不会影响已有的修改。</p>
+<p>对于企业官网，推荐几个必装的插件：</p>
+<ul>
+<li>Contact Form : 反馈表单。用户可以直接在网站留言，上传文件，并发送至设定的官方邮箱</li>
+<li>Google Font Fix: 将一些对Google资源的访问重定向到国内高速镜像</li>
+<li>Magee Shortcodes: 快捷排版短码</li>
+<li>Google Analyticator: google 统计</li>
+<li>Members: 用户权限管理</li>
+</ul>
+<p><strong>这里强烈推荐 Contact Form，只需要一行代码，即可在网站任何地方嵌入一个联系表单。</strong></p>
+<h3 id="域名切换"><a href="#域名切换" class="headerlink" title="域名切换"></a>域名切换</h3><p>在网站正式上线前，我们会用一个测试域名来调整内容、版式等等。到正式上线，则需切换新域名。这个过程略复杂，但是基本可以做到无损。</p>
+<p>第一步，域名解析指向wordpress所在主机，服务主机绑定新域名<br>第二步，管理控制台-&gt;设置-&gt;wordpress地址&amp;站点地址，修改为新域名<br>第三步，wp-config.php, 增加一行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">define(&apos;RELOCATE&apos;,true);</div></pre></td></tr></table></figure>
+<p>第四步，打开数据库管理后台，替换数据库中旧域名字符串为新域名</p>
+<p>以上操作完成后，即可正常使用。</p>
+<h2 id="邮件发送设置"><a href="#邮件发送设置" class="headerlink" title="邮件发送设置"></a>邮件发送设置</h2><p>企业官网对于邮件的使用主要包括两方面：一是官网的“反馈”功能，比如收集用户信息，报名等等；二是在网站通过特定入口群发邮件。</p>
+<p>对于阿里云来说，有一个明确的问题就是ipv6。缺省状态阿里云ECS主机不支持ipv6，我们需要在设置文件中关闭ipv6，以postfix为例，将<code>inet_protocal</code>值改为ipv4：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"># Enable IPv4, and IPv6 if supported</div><div class="line"># inet_protocols = all</div><div class="line">inet_protocols = ipv4</div><div class="line"></div><div class="line">#inet_interfaces = all</div><div class="line">#inet_interfaces = $myhostname</div><div class="line">#inet_interfaces = $myhostname, localhost</div><div class="line">inet_interfaces = all</div></pre></td></tr></table></figure>
+<p>然后，为了能够发送正确解析DNS，并避免被收件服务器当作垃圾邮件，需要分别在域名解析和postfix做一些设置。</p>
+<h3 id="首先域名需要添加三条DNS记录："><a href="#首先域名需要添加三条DNS记录：" class="headerlink" title="首先域名需要添加三条DNS记录："></a>首先域名需要添加三条DNS记录：</h3><p>假设主机名设定为 admail.yourdomain.com，那么记录如下</p>
+<table>
+<thead>
+<tr>
+<th>记录</th>
+<th>记录类型</th>
+<th>记录值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>admail</td>
+<td>A</td>
+<td>&lt;主机IP地址&gt;</td>
+</tr>
+<tr>
+<td>@</td>
+<td>MX</td>
+<td>admail.yourdomain.com</td>
+</tr>
+<tr>
+<td>@</td>
+<td>TXT</td>
+<td>v=spf1 a mx ~all</td>
+</tr>
+</tbody>
+</table>
+<p>最后这条TXT的记录被称为“发件人策略框架（SPF）”记录，通过不同等级的设置，可以很有效地避免被接收邮件的服务系统判定为垃圾邮件。该系统的详细设置方法这里不多做介绍。多数情况下如果不是大量高频次群发，按照上面的形式填写已可满足要求。</p>
+<h3 id="postfix-的一些额外设置"><a href="#postfix-的一些额外设置" class="headerlink" title="postfix 的一些额外设置"></a>postfix 的一些额外设置</h3><p>这些设置对于网站上的邮件反馈表单影响不大，不过建议还是根据实际情况做调整</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">myhostname = admail.yourdomain.com</div><div class="line">mydomain = yourdomain.com</div><div class="line">myorigin = $mydomain</div><div class="line">mydestination = $myhostname, localhost.$mydomain, localhost, $mydomain</div><div class="line">home_mailbox = Maildir/</div><div class="line"># 如果邮件量大，修改数据盘位置，目录需要先手工创建</div><div class="line">mail_spool_directory = /data/mail</div></pre></td></tr></table></figure>
+<p>修改设置后需要重启邮件服务失设置生效</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ service postfix restart</div></pre></td></tr></table></figure>
+<h3 id="垃圾邮件助手"><a href="#垃圾邮件助手" class="headerlink" title="垃圾邮件助手"></a>垃圾邮件助手</h3><p>除了以上设置，如果需要群发邮件，还需要在发送频率，内容等方面注意一些问题。这方面Google有一份详细的指南可供参考：<a href="https://support.google.com/mail/answer/81126" target="_blank" rel="external">Google 群发邮件发件人指南</a></p>
+<h2 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h2><p>以上即为一个正式的企业官网建立过程所需资源的简单介绍。实际上，要一个高速稳定的网站，还需要CDN、图床等工具。这些也都可以在网站上线后逐步优化。</p>
+<p>宗布科技的官网2.0正是这样建立的。有需要可联系我们。</p>
+<blockquote>
+<p><strong>福利：</strong> 阿里云九折优惠码<br>在购买ECS、RDS、云解析、弹性Web托管等等服务时均可使用。<br>企业用户请使用 <strong><code>jhx4xx</code></strong><br>个人用户请使用 <strong><code>3v6unp</code></strong></p>
+</blockquote>
+<h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><ul>
+<li><a href="http://www.wpdaxue.com/" target="_blank" rel="external">WordPress 大学</a></li>
+<li><a href="https://www.aliyun.com/zixun/aggregation/212.html" target="_blank" rel="external">阿里云Wordpress专题</a></li>
+<li><a href="https://support.google.com/mail/answer/81126" target="_blank" rel="external">Google 群发邮件指南</a></li>
+<li><a href="http://www.cnblogs.com/dudu/archive/2012/12/12/linux-postfix-mailserver.html" target="_blank" rel="external">阿里云CentOS postfix</a></li>
+</ul>
+  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/建站心得/">建站心得</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/建站/">建站</a><a href="/tags/软件开发/">软件开发</a><a href="/tags/wordpress/">wordpress</a><a href="/tags/阿里云/">阿里云</a>
+  </div>
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://www.catxn.net/posts/2016/在阿里云建设一个企业网站/" data-title="在阿里云建设一个企业网站 | 夜猫阿罗哈" data-tsina="1406303630" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/posts/2016/wordpress-shortcode-redirect/" title="一行代码在wordpress任意页面实现重定向">
+  <strong>上一篇：</strong><br/>
+  <span>
+  一行代码在wordpress任意页面实现重定向</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/posts/2015/宗布2015总结/"  title="宗布科技2015年终总结">
+ <strong>下一篇：</strong><br/> 
+ <span>宗布科技2015年终总结
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+<section id="comments" class="comment">
+	<div class="ds-thread" data-thread-key="posts/2016/在阿里云建设一个企业网站/" data-title="在阿里云建设一个企业网站" data-url="http://www.catxn.net/posts/2016/在阿里云建设一个企业网站/"></div>
+</section>
+
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#上篇"><span class="toc-number">1.</span> <span class="toc-text">上篇</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#主机的选择"><span class="toc-number">1.1.</span> <span class="toc-text">主机的选择</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#主机选择。"><span class="toc-number">1.1.1.</span> <span class="toc-text">主机选择。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#域名注册。"><span class="toc-number">1.1.2.</span> <span class="toc-text">域名注册。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#建站工具"><span class="toc-number">1.1.3.</span> <span class="toc-text">建站工具</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#下篇"><span class="toc-number">2.</span> <span class="toc-text">下篇</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#wordpress-的一些优化"><span class="toc-number">2.1.</span> <span class="toc-text">wordpress 的一些优化</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装"><span class="toc-number">2.1.1.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#美化与定制"><span class="toc-number">2.1.2.</span> <span class="toc-text">美化与定制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#域名切换"><span class="toc-number">2.1.3.</span> <span class="toc-text">域名切换</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#邮件发送设置"><span class="toc-number">2.2.</span> <span class="toc-text">邮件发送设置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#首先域名需要添加三条DNS记录："><span class="toc-number">2.2.1.</span> <span class="toc-text">首先域名需要添加三条DNS记录：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#postfix-的一些额外设置"><span class="toc-number">2.2.2.</span> <span class="toc-text">postfix 的一些额外设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#垃圾邮件助手"><span class="toc-number">2.2.3.</span> <span class="toc-text">垃圾邮件助手</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#结束语"><span class="toc-number">2.3.</span> <span class="toc-text">结束语</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考链接"><span class="toc-number">2.4.</span> <span class="toc-text">参考链接</span></a></li></ol></li></ol>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">分类</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/夜猫茶舍/" title="夜猫茶舍">夜猫茶舍<sup>11</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/宗布科技/" title="宗布科技">宗布科技<sup>4</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/建站心得/" title="建站心得">建站心得<sup>15</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/影音动漫/" title="影音动漫">影音动漫<sup>5</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/流水账/" title="流水账">流水账<sup>6</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/管理微言/" title="管理微言">管理微言<sup>11</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/老猫读史/" title="老猫读史">老猫读史<sup>13</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/软件开发/" title="软件开发">软件开发<sup>5</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/建站/" title="建站">建站<sup>17</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/历史/" title="历史">历史<sup>15</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/流水账/" title="流水账">流水账<sup>14</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/阅读/" title="阅读">阅读<sup>13</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/写作/" title="写作">写作<sup>12</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/管理/" title="管理">管理<sup>11</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/项目管理/" title="项目管理">项目管理<sup>8</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/原创/" title="原创">原创<sup>6</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/软件开发/" title="软件开发">软件开发<sup>6</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/日记/" title="日记">日记<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/宗布/" title="宗布">宗布<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/创业/" title="创业">创业<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/时间管理/" title="时间管理">时间管理<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/wordpress/" title="wordpress">wordpress<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/aws/" title="aws">aws<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/影视/" title="影视">影视<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/动漫/" title="动漫">动漫<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/里程碑/" title="里程碑">里程碑<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/GTD/" title="GTD">GTD<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/春秋战国/" title="春秋战国">春秋战国<sup>3</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="http://www.zongbutech.com" target="_blank" title="宗布科技">宗布科技</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://www.nero.com" target="_blank" title="尼禄软件">尼禄软件</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://atjason.com" target="_blank" title="Jason">Jason</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://www.cnblogs.com/deltacat" target="_blank" title="我在博客园">我在博客园</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://blog.sina.com.cn/deltacatcn" target="_blank" title="我在新浪博客">我在新浪博客</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://tool.wopus.org" target="_blank" title="wopus站长工具">wopus站长工具</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  
+
+<div class="doubanshow">
+<p class="asidetitle">豆瓣秀</p>
+<div>
+<script type="text/javascript" src="http://www.douban.com/service/badge/deltacat/?show=collection&amp;n=12&amp;columns=3&amp;hidelogo=yes&amp;hideself=yes&amp;cat=book|movie" ></script>
+</div>
+</div>
+
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+  <div class="weiboshow">
+  <p class="asidetitle">新浪微博</p>
+    <iframe width="100%" height="119" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=119&fansRow=2&ptype=1&speed=0&skin=9&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=1406303630&verifier=&dpc=1"></iframe>
+</div>
+
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> 你好，我是三角猫。这里是我的个人博客，内容以原创为主。 <br/>
+			在这里，你可以看到：软件开发技术，管理心得，以及一些历史故事。</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		<a href="http://weibo.com/deltacat" target="_blank" class="icon-weibo" title="微博"></a>
+		
+		
+		<a href="https://github.com/deltacat" target="_blank" class="icon-github" title="github"></a>
+		
+		
+		
+		
+		
+		
+		<a href="https://www.douban.com/people/deltacat" target="_blank" class="icon-douban" title="豆瓣"></a>
+		
+		
+		<a href="http://www.zhihu.com/people/deltacat" target="_blank" class="icon-zhihu" title="知乎"></a>
+		
+		
+		
+	</div>
+			
+		
+				<div class="cc-license">
+          <a href="http://creativecommons.org/licenses/by/4.0" class="cc-opacity" target="_blank">
+            <img src="/img/cc-by.svg" alt="Creative Commons" />
+          </a>
+        </div>
+    
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2016 
+		
+		<a href="/about" target="_blank" title="三角猫">三角猫</a>
+		
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
+
+
+
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"deltacat"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script> 
+
+
+
+
+
+
+
+
+
+<!-- Analytics Begin -->
+
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-7388145-4', 'auto');  
+ga('send', 'pageview');
+</script>
+
+
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+  </body>
+</html>

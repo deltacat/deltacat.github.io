@@ -1,0 +1,681 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>Chrome 扩展 “Butterfly Sharing” 更新并开源 | 夜猫阿罗哈</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="三角猫">
+    
+
+    
+    <meta name="description" content="五年前为了自己用着方便，写了个小小的Chrome扩展：Butterfly Sharing
+名字很土，完全是顺手摸了个图标加个名字就放上去，然后就懒得改了。
+简单介绍下它的功能：
+
+缩短网址。比如你正在浏览 http://www.jianshu.com/p/2f737f8fe75f ，点一下扩展按钮，就可以变成这样： http://t.cn/RwNrNHA。用来记录和分享就容易一些。
+分享到SNS。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Chrome 扩展 “Butterfly Sharing” 更新并开源">
+<meta property="og:url" content="http://www.catxn.net/posts/2015/butterfly-sharing-opensource/index.html">
+<meta property="og:site_name" content="夜猫阿罗哈">
+<meta property="og:description" content="五年前为了自己用着方便，写了个小小的Chrome扩展：Butterfly Sharing
+名字很土，完全是顺手摸了个图标加个名字就放上去，然后就懒得改了。
+简单介绍下它的功能：
+
+缩短网址。比如你正在浏览 http://www.jianshu.com/p/2f737f8fe75f ，点一下扩展按钮，就可以变成这样： http://t.cn/RwNrNHA。用来记录和分享就容易一些。
+分享到SNS。">
+<meta property="og:updated_time" content="2015-04-02T12:07:39.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Chrome 扩展 “Butterfly Sharing” 更新并开源">
+<meta name="twitter:description" content="五年前为了自己用着方便，写了个小小的Chrome扩展：Butterfly Sharing
+名字很土，完全是顺手摸了个图标加个名字就放上去，然后就懒得改了。
+简单介绍下它的功能：
+
+缩短网址。比如你正在浏览 http://www.jianshu.com/p/2f737f8fe75f ，点一下扩展按钮，就可以变成这样： http://t.cn/RwNrNHA。用来记录和分享就容易一些。
+分享到SNS。">
+
+    
+    <link rel="alternative" href="/atom.xml" title="夜猫阿罗哈" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/images/author.png">
+    
+    
+    <link rel="apple-touch-icon" href="/images/author.png">
+    <link rel="apple-touch-icon-precomposed" href="/images/author.png">
+    
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/images/author.png" alt="夜猫阿罗哈" title="夜猫阿罗哈"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="夜猫阿罗哈">夜猫阿罗哈</a></h1>
+				<h2 class="blog-motto">暮然回首萧瑟处，也无风雨也无晴</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">Home</a></li>
+					
+						<li><a href="/archives">Archives</a></li>
+					
+						<li><a href="/about">About</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="hidden" name="q" value="site:www.catxn.net">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/posts/2015/butterfly-sharing-opensource/" title="Chrome 扩展 “Butterfly Sharing” 更新并开源" itemprop="url">Chrome 扩展 “Butterfly Sharing” 更新并开源</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="三角猫" target="_blank" itemprop="author">三角猫</a>
+		
+  <p class="article-time">
+    <time datetime="2015-02-25T03:58:00.000Z" itemprop="datePublished"> 发表于 2015-02-25</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#项目开源"><span class="toc-number">1.</span> <span class="toc-text">项目开源</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Chrome-扩展开发主要变化"><span class="toc-number">2.</span> <span class="toc-text">Chrome 扩展开发主要变化</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Manifest-更新"><span class="toc-number">2.1.</span> <span class="toc-text">Manifest 更新</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码规则更新"><span class="toc-number">2.2.</span> <span class="toc-text">代码规则更新</span></a></li></ol></li></ol>
+		
+		</div>
+		
+		<p>五年前为了自己用着方便，写了个小小的Chrome扩展：<a href="https://chrome.google.com/webstore/detail/pofanjellkmepliaagnpopjndkkdlolg" target="_blank" rel="external">Butterfly Sharing</a></p>
+<p>名字很土，完全是顺手摸了个图标加个名字就放上去，然后就懒得改了。</p>
+<p>简单介绍下它的功能：</p>
+<ul>
+<li>缩短网址。比如你正在浏览 <code>http://www.jianshu.com/p/2f737f8fe75f</code> ，点一下扩展按钮，就可以变成这样： <code>http://t.cn/RwNrNHA</code>。用来记录和分享就容易一些。</li>
+<li>分享到SNS。比如刚刚那个网址，可以直接变成 <code>初出茅庐的IT人员，怎样才能做好项目经理？ http://t.cn/RwNrNHA</code>，你可以点一下按钮就直接把这段文字分享到微博、开心网、facebook什么的，或者拷贝到邮件/聊天工具中发给朋友，因为网址简短，它不会破坏你的版面。</li>
+<li>短网址引擎可选择，现在支持 goo.gl，t.cn，等等</li>
+<li>支持二维码。这样你在电脑上看到一个很好的网页，想发到手机就很方便了。</li>
+</ul>
+<a id="more"></a>
+<h1 id="项目开源"><a href="#项目开源" class="headerlink" title="项目开源"></a>项目开源</h1><ul>
+<li>扩展发布于 <a href="https://chrome.google.com/webstore/detail/pofanjellkmepliaagnpopjndkkdlolg" target="_blank" rel="external">Chrome 应用商店</a>，兼容猎豹浏览器。</li>
+<li>代码开源，托管于 <a href="https://github.com/deltacat/butterfly-sharing" target="_blank" rel="external">GitHub</a>。</li>
+</ul>
+<p>这个扩展最初是修改自 goo.gl shortener，因为 goo.gl 需要翻墙，用起来并不总是很方便（尤其是对你要分享的朋友来说），并且当时它对国内的 SNS 支持并不完全。所以参考这个扩展自己弄了一个。</p>
+<p>时过境迁，国内外 SNS 站点都发生了很多变化，比如很好用的Google Reader彻底挂了。比如现在分享的主力从PC端转移到了移动端，所以这次加上了二维码。</p>
+<p>感觉这个小小的扩展，还有一些用武之地，于是干脆把它开源。虽然代码是门外汉水平，对初学chrome扩展开发的同学应该还是有所帮助。同时，如果有熟悉 JavaScript、CSS 的同学愿意同我一起来完善这个插件将是非常令人开心的事情。有意协作请发邮件或留言。</p>
+<h1 id="Chrome-扩展开发主要变化"><a href="#Chrome-扩展开发主要变化" class="headerlink" title="Chrome 扩展开发主要变化"></a>Chrome 扩展开发主要变化</h1><p>这个扩展自从提交到应用商店就没怎么动过。最近有时想把在电脑上浏览的网页直接转发到朋友圈，发现并没有现成的好用的扩展，于是想给之前这个扩展加上二维码的功能。本以为几句代码改改的事情，没想到一动手才发现麻烦大了：Google 在两年前强制要求所有新提交的扩展一律将manifest版本升级到2，随之而来的是一堆编码规则的变化。</p>
+<p>春节前用业余时间清理了一下代码重新发布，过完年总结下这些坑，如果有遇到同样问题的同学，可以参考下。</p>
+<h2 id="Manifest-更新"><a href="#Manifest-更新" class="headerlink" title="Manifest 更新"></a>Manifest 更新</h2><p>详细的描述参考 <a href="https://developer.chrome.com/extensions/manifestVersion" target="_blank" rel="external">Google 官方文档</a><br>主要变化如下：</p>
+<ul>
+<li>manifest_version 升级到2</li>
+</ul>
+<p>这个倒是简单，只要在manifest.json 文件中加一行：</p>
+<pre><code>&quot;manifest_version&quot;: 2
+</code></pre><ul>
+<li>background 更新</li>
+</ul>
+<p>“background_page” 失效。我们不需要一个单独的background.html来包含后台脚本。现在只需要简单地在manifest中编辑属性 “background” 即可。例如：</p>
+<pre><code>&quot;background&quot;: {
+    &quot;scripts&quot;: [
+                &quot;scripts/consts.js&quot;, 
+                &quot;scripts/preferences.js&quot;, 
+                &quot;scripts/background.js&quot;,
+                &quot;scripts/services.js&quot;
+                ],
+    &quot;persistent&quot;: false
+  }
+</code></pre><p>这个方法其实比以前省事。</p>
+<ul>
+<li>弹出页的定义</li>
+</ul>
+<p>默认的弹出页定义方式改为：</p>
+<pre><code>&quot;browser_action&quot;: {
+    &quot;default_icon&quot;: &quot;icons/butterfly-48.png&quot;,
+    &quot;default_popup&quot;: &quot;popup.html&quot;
+}
+</code></pre><h2 id="代码规则更新"><a href="#代码规则更新" class="headerlink" title="代码规则更新"></a>代码规则更新</h2><ul>
+<li>新的<a href="https://developer.chrome.com/extensions/contentSecurityPolicy" target="_blank" rel="external">内容安全策略 (CSP)</a> </li>
+</ul>
+<p>Manifest 的更新很简单。这个 CSP 才是大 BOSS。简单来说，就是不再允许 HTML 内嵌脚本，比如 onclick, onload 这些统统不能用了。所有的脚本一律要放到 JS 文件中去。</p>
+<p>所以，以前直接写在 HTML 文件中的事件处理，只能在 JS 文件中通过 DOM 操作进行。好在用 jQuery 来弄这个很方便，不过要从以前埋的坑里爬出来，只能手工一条条去改。</p>
+<pre><code>sendMessage / onMessage
+</code></pre><p>所有的 sendRequest / onRequest 一律改为 sendMessage / onMessage。用法倒是没变。</p>
+<p>嗯，差不多就这么些东西了。</p>
+  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/软件开发/">软件开发</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/软件开发/">软件开发</a><a href="/tags/chrome/">chrome</a><a href="/tags/javascript/">javascript</a>
+  </div>
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://www.catxn.net/posts/2015/butterfly-sharing-opensource/" data-title="Chrome 扩展 “Butterfly Sharing” 更新并开源 | 夜猫阿罗哈" data-tsina="1406303630" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/posts/2015/history24/" title="二十四史都是谁">
+  <strong>上一篇：</strong><br/>
+  <span>
+  二十四史都是谁</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/posts/2015/new-itpm-howto/"  title="初出茅庐的IT人员，怎样才能做好项目经理？">
+ <strong>下一篇：</strong><br/> 
+ <span>初出茅庐的IT人员，怎样才能做好项目经理？
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+<section id="comments" class="comment">
+	<div class="ds-thread" data-thread-key="posts/2015/butterfly-sharing-opensource/" data-title="Chrome 扩展 “Butterfly Sharing” 更新并开源" data-url="http://www.catxn.net/posts/2015/butterfly-sharing-opensource/"></div>
+</section>
+
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#项目开源"><span class="toc-number">1.</span> <span class="toc-text">项目开源</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Chrome-扩展开发主要变化"><span class="toc-number">2.</span> <span class="toc-text">Chrome 扩展开发主要变化</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Manifest-更新"><span class="toc-number">2.1.</span> <span class="toc-text">Manifest 更新</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码规则更新"><span class="toc-number">2.2.</span> <span class="toc-text">代码规则更新</span></a></li></ol></li></ol>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">分类</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/夜猫茶舍/" title="夜猫茶舍">夜猫茶舍<sup>11</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/宗布科技/" title="宗布科技">宗布科技<sup>4</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/建站心得/" title="建站心得">建站心得<sup>15</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/影音动漫/" title="影音动漫">影音动漫<sup>5</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/流水账/" title="流水账">流水账<sup>6</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/管理微言/" title="管理微言">管理微言<sup>11</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/老猫读史/" title="老猫读史">老猫读史<sup>13</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/软件开发/" title="软件开发">软件开发<sup>5</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/建站/" title="建站">建站<sup>17</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/历史/" title="历史">历史<sup>15</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/流水账/" title="流水账">流水账<sup>14</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/阅读/" title="阅读">阅读<sup>13</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/写作/" title="写作">写作<sup>12</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/管理/" title="管理">管理<sup>11</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/项目管理/" title="项目管理">项目管理<sup>8</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/原创/" title="原创">原创<sup>6</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/软件开发/" title="软件开发">软件开发<sup>6</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/日记/" title="日记">日记<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/宗布/" title="宗布">宗布<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/创业/" title="创业">创业<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/时间管理/" title="时间管理">时间管理<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/wordpress/" title="wordpress">wordpress<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/aws/" title="aws">aws<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/影视/" title="影视">影视<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/动漫/" title="动漫">动漫<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/里程碑/" title="里程碑">里程碑<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/GTD/" title="GTD">GTD<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/春秋战国/" title="春秋战国">春秋战国<sup>3</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="http://www.zongbutech.com" target="_blank" title="宗布科技">宗布科技</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://www.nero.com" target="_blank" title="尼禄软件">尼禄软件</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://atjason.com" target="_blank" title="Jason">Jason</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://www.cnblogs.com/deltacat" target="_blank" title="我在博客园">我在博客园</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://blog.sina.com.cn/deltacatcn" target="_blank" title="我在新浪博客">我在新浪博客</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://tool.wopus.org" target="_blank" title="wopus站长工具">wopus站长工具</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  
+
+<div class="doubanshow">
+<p class="asidetitle">豆瓣秀</p>
+<div>
+<script type="text/javascript" src="http://www.douban.com/service/badge/deltacat/?show=collection&amp;n=12&amp;columns=3&amp;hidelogo=yes&amp;hideself=yes&amp;cat=book|movie" ></script>
+</div>
+</div>
+
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+  <div class="weiboshow">
+  <p class="asidetitle">新浪微博</p>
+    <iframe width="100%" height="119" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=119&fansRow=2&ptype=1&speed=0&skin=9&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=1406303630&verifier=&dpc=1"></iframe>
+</div>
+
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> 你好，我是三角猫。这里是我的个人博客，内容以原创为主。 <br/>
+			在这里，你可以看到：软件开发技术，管理心得，以及一些历史故事。</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		<a href="http://weibo.com/deltacat" target="_blank" class="icon-weibo" title="微博"></a>
+		
+		
+		<a href="https://github.com/deltacat" target="_blank" class="icon-github" title="github"></a>
+		
+		
+		
+		
+		
+		
+		<a href="https://www.douban.com/people/deltacat" target="_blank" class="icon-douban" title="豆瓣"></a>
+		
+		
+		<a href="http://www.zhihu.com/people/deltacat" target="_blank" class="icon-zhihu" title="知乎"></a>
+		
+		
+		
+	</div>
+			
+		
+				<div class="cc-license">
+          <a href="http://creativecommons.org/licenses/by/4.0" class="cc-opacity" target="_blank">
+            <img src="/img/cc-by.svg" alt="Creative Commons" />
+          </a>
+        </div>
+    
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2016 
+		
+		<a href="/about" target="_blank" title="三角猫">三角猫</a>
+		
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
+
+
+
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"deltacat"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script> 
+
+
+
+
+
+
+
+
+
+<!-- Analytics Begin -->
+
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-7388145-4', 'auto');  
+ga('send', 'pageview');
+</script>
+
+
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+  </body>
+</html>

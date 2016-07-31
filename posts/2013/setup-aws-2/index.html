@@ -1,0 +1,666 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>在 Amazon AWS 搭建及部署网站：（二）安装、配置软件，启动网站 | 夜猫阿罗哈</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="三角猫">
+    
+
+    
+    <meta name="description" content="现在，我们已经有了一台EC2主机，具备了基本的硬件环境。下面，开始软件环境的配置。
+第一步：连接服务器后面所有的一切，都需要在SSH终端窗口操作。首先，我们需要一个SSH客户端。PuTTY是很常用的工具。这里我们选用 Bitvise SSH Client。这个软件之前叫做“Tunnelier”。软件可以在 这里下载。
+下载好后安装，在SSH这一栏填入必须的信息。主机名按实际地址填写，usernam">
+<meta property="og:type" content="article">
+<meta property="og:title" content="在 Amazon AWS 搭建及部署网站：（二）安装、配置软件，启动网站">
+<meta property="og:url" content="http://www.catxn.net/posts/2013/setup-aws-2/index.html">
+<meta property="og:site_name" content="夜猫阿罗哈">
+<meta property="og:description" content="现在，我们已经有了一台EC2主机，具备了基本的硬件环境。下面，开始软件环境的配置。
+第一步：连接服务器后面所有的一切，都需要在SSH终端窗口操作。首先，我们需要一个SSH客户端。PuTTY是很常用的工具。这里我们选用 Bitvise SSH Client。这个软件之前叫做“Tunnelier”。软件可以在 这里下载。
+下载好后安装，在SSH这一栏填入必须的信息。主机名按实际地址填写，usernam">
+<meta property="og:image" content="http://catxn.u.qiniudn.com/images/aws_04.png-o">
+<meta property="og:image" content="http://catxn.u.qiniudn.com/images/aws_05.png-o">
+<meta property="og:image" content="http://catxn.u.qiniudn.com/images/aws_06.png-o">
+<meta property="og:updated_time" content="2015-04-01T12:25:34.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="在 Amazon AWS 搭建及部署网站：（二）安装、配置软件，启动网站">
+<meta name="twitter:description" content="现在，我们已经有了一台EC2主机，具备了基本的硬件环境。下面，开始软件环境的配置。
+第一步：连接服务器后面所有的一切，都需要在SSH终端窗口操作。首先，我们需要一个SSH客户端。PuTTY是很常用的工具。这里我们选用 Bitvise SSH Client。这个软件之前叫做“Tunnelier”。软件可以在 这里下载。
+下载好后安装，在SSH这一栏填入必须的信息。主机名按实际地址填写，usernam">
+<meta name="twitter:image" content="http://catxn.u.qiniudn.com/images/aws_04.png-o">
+
+    
+    <link rel="alternative" href="/atom.xml" title="夜猫阿罗哈" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/images/author.png">
+    
+    
+    <link rel="apple-touch-icon" href="/images/author.png">
+    <link rel="apple-touch-icon-precomposed" href="/images/author.png">
+    
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/images/author.png" alt="夜猫阿罗哈" title="夜猫阿罗哈"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="夜猫阿罗哈">夜猫阿罗哈</a></h1>
+				<h2 class="blog-motto">暮然回首萧瑟处，也无风雨也无晴</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">Home</a></li>
+					
+						<li><a href="/archives">Archives</a></li>
+					
+						<li><a href="/about">About</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="hidden" name="q" value="site:www.catxn.net">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/posts/2013/setup-aws-2/" title="在 Amazon AWS 搭建及部署网站：（二）安装、配置软件，启动网站" itemprop="url">在 Amazon AWS 搭建及部署网站：（二）安装、配置软件，启动网站</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="三角猫" target="_blank" itemprop="author">三角猫</a>
+		
+  <p class="article-time">
+    <time datetime="2013-09-01T08:18:39.000Z" itemprop="datePublished"> 发表于 2013-09-01</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#第一步：连接服务器"><span class="toc-number">1.</span> <span class="toc-text">第一步：连接服务器</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第二步：安装基本服务：Apache、PHP、MySQL"><span class="toc-number">2.</span> <span class="toc-text">第二步：安装基本服务：Apache、PHP、MySQL</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第三步：安装phpMyAdmin"><span class="toc-number">3.</span> <span class="toc-text">第三步：安装phpMyAdmin</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第四步：开始第一个-Wordpress-网站"><span class="toc-number">4.</span> <span class="toc-text">第四步：开始第一个 Wordpress 网站</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第五步：虚拟主机，域名绑定，以及一点收尾工作"><span class="toc-number">5.</span> <span class="toc-text">第五步：虚拟主机，域名绑定，以及一点收尾工作</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#参考资料"><span class="toc-number">6.</span> <span class="toc-text">参考资料</span></a></li></ol>
+		
+		</div>
+		
+		<p>现在，我们已经有了一台EC2主机，具备了基本的硬件环境。下面，开始软件环境的配置。</p>
+<h1 id="第一步：连接服务器"><a href="#第一步：连接服务器" class="headerlink" title="第一步：连接服务器"></a>第一步：连接服务器</h1><p>后面所有的一切，都需要在SSH终端窗口操作。首先，我们需要一个SSH客户端。PuTTY是很常用的工具。这里我们选用 Bitvise SSH Client。这个软件之前叫做“Tunnelier”。软件可以在 <a href="http://www.bitvise.com/ssh-client-download" target="_blank" rel="external">这里下载</a>。</p>
+<p>下载好后安装，在SSH这一栏填入必须的信息。主机名按实际地址填写，username填ec2-user(EC2默认用户名)，在 User Keypaire manager 这里导入之前申请EC2过程中保存的Key Pair 文件（.pem格式）。这里Bitvise Client 的好处就体现出来了，PuTTy无法直接使用AWS格式的KeyPair文件，需要做一次转换，而Bitvise可以直接导入。导入后，选择 Initial Meth中导入的key的栏位，一般是 Slot 1，根据实际情况填写即可：</p>
+<p><img src="http://catxn.u.qiniudn.com/images/aws_04.png-o" alt="image"></p>
+<p>填写好后，点击Login，第一次回弹出一个确认窗，是否接受认证信息，点击确认，一切正常的话登陆成功后左侧导航栏会出现 “New terminal console”, “New SFTP Window”。点击 new terminal console，熟悉的Linux终端提示符就出现了。后面所有的命令行操作均在这里进行。</p>
+<p><a href="http://calebogden.com/wordpress-on-linux-in-the-amazon-cloud-with-mac" target="_blank" rel="external">这篇文章</a>中提到了如何直接以root身份登录。实际上，所有的操作均可用sudo命令来执行。如果不需要用SFTP向系统文件中上传文件，没有理由直接root登录。后面会介绍用SVN部署代码的方法，除了一些特殊情况，SFTP基本上不怎么需要了。</p>
+<a id="more"></a>
+<h1 id="第二步：安装基本服务：Apache、PHP、MySQL"><a href="#第二步：安装基本服务：Apache、PHP、MySQL" class="headerlink" title="第二步：安装基本服务：Apache、PHP、MySQL"></a>第二步：安装基本服务：Apache、PHP、MySQL</h1><p>作为一个基本Web网站，我们需要至少这三样东西：Apache，PHP以及 MySQL。实际上数据库我们将来会使用 RDS提供的MySQL实例。不过这里还是从安装本机版本逐步开始。</p>
+<p>依次输入下列指令，安装Apache，MySql，PHP 以及必备扩展库，启动服务，设置 MySQL主密码。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 安装 apache      </span></div><div class="line">yum install http       </div><div class="line"><span class="comment"># 安装 PHP 及必备支持库       </span></div><div class="line">yum install php libmcrypt libmcrypt-devel php-mcrypt php-mbstring       </div><div class="line"><span class="comment"># 安装 php-mysql 扩展       </span></div><div class="line">yum install php-mysql       </div><div class="line"><span class="comment"># 安装 mysql       </span></div><div class="line">yum install mysql       </div><div class="line">yum install mysql-server       </div><div class="line"><span class="comment"># 设置 MySQL 主密码       </span></div><div class="line">mysqladmin -u root password <span class="string">"&lt;the password&gt;"</span>      </div><div class="line"><span class="comment"># 启动服务       </span></div><div class="line">service httpd start       </div><div class="line">service mysqld start</div></pre></td></tr></table></figure>
+<p>按照提示完成安装后，在浏览器输入主机地址，这时应该会看到Apache的默认欢迎页，表示我们的基本Web服务器开始运行了。</p>
+<h1 id="第三步：安装phpMyAdmin"><a href="#第三步：安装phpMyAdmin" class="headerlink" title="第三步：安装phpMyAdmin"></a>第三步：安装phpMyAdmin</h1><p>phpMyAdmin 用来管理后台MySQL数据库。首先，我们从官方网站下载，然后解压缩。移动至Web根目录并重命名为 “phpMyAdmin”。因为刚刚下载的文件夹解压后是保护版本号等信息的。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">wget http://sourceforge.net/projects/phpmyadmin/files/latest/download      </div><div class="line">unzip download       </div><div class="line">mv &lt;unzipped folder name&gt; /var/www/html/phpMyAdmin       </div><div class="line">rm download</div></pre></td></tr></table></figure>
+<p>解压之后，删除下载的文件。<br>现在，赋予phpMyAdmin目录正确的权限。首先检查Web服务器的用户<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">egrep <span class="string">'User|Group'</span> /etc/httpd/conf/httpd.conf</div></pre></td></tr></table></figure></p>
+<p>这里会列出如下信息，默认应该是 apache，如果不是，以列出的为准。</p>
+<p>User apache<br>Group apache</p>
+<p>执行如下命令设置权限：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">useradd phpmydmin      </div><div class="line">passwd phpmyadmin       </div><div class="line"><span class="built_in">cd</span> /var/www/html       </div><div class="line">chown –R phpmyadmin.apache phpMyAdmin/</div></pre></td></tr></table></figure></p>
+<p>然后，创建配置目录并设置权限<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> phpMyAdmin      </div><div class="line">mkdir config       </div><div class="line">cp config.sample.inc.php config/config.inc.php       </div><div class="line">chown –R phpmyadmin.apache config/       </div><div class="line">chmod –R o+rw config/</div></pre></td></tr></table></figure></p>
+<p>完成后重启服务。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">service httpd restart</div></pre></td></tr></table></figure></p>
+<p>然后用浏览器打开 <code>http://&lt;host&gt;/phpmyadmin/setup</code>，管理界面就显示出来了。</p>
+<p>点击“新建主机”，输入主机名，主机地址（默认localhost），点击”认证“，选择”config“认证方式，输入数据库用户名和密码。点击保存。</p>
+<p><img src="http://catxn.u.qiniudn.com/images/aws_05.png-o" alt="image"></p>
+<p>完成后的的关键一步是，回到setup概要页后，注意要保存配置文件：</p>
+<p><img src="http://catxn.u.qiniudn.com/images/aws_06.png-o" alt="image"></p>
+<p>在这里保存后，所有的设置在真正回写到配置文件中。现在，在浏览器打开 <code>http://&lt;host&gt;/phpmyadmin</code>，登录进入数据库管理后台。如果成功的话，出于安全考虑，我们要删除配置文件和setup目录。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> /var/www/html/phpMyAdmin      </div><div class="line">mv config/config.inc.php ./       </div><div class="line">rm –rf config/       </div><div class="line">rm –rf setup/</div></pre></td></tr></table></figure>
+<p>至此，phpMyAdmin配置完成。另外，为了快速开始，我们在认证方式中选择config方式。建议采用cookie方式连接。这里暂时不多做介绍。</p>
+<h1 id="第四步：开始第一个-Wordpress-网站"><a href="#第四步：开始第一个-Wordpress-网站" class="headerlink" title="第四步：开始第一个 Wordpress 网站"></a>第四步：开始第一个 Wordpress 网站</h1><p>此类教程网上铺天盖地，这里只做简单描述。</p>
+<p>首先，下载，解压，设置权限。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> /var/www/html      </div><div class="line">wget http://wordpress.org/latest.zip       </div><div class="line">unzip latest.zip       </div><div class="line">chown –R apache.apache wordpress/       </div><div class="line">chmod –R 755 wordpress</div></pre></td></tr></table></figure>
+<p>然后，在浏览器中打开 <code>&lt;http://&lt;host&gt;/wordpress</code> 。<br>熟悉的 wordpress 初始化页面出现了。按照之前设置的数据库用户名密码填写，根据向导完成后，一个 wordpress 页面就出现在我们眼前。</p>
+<h1 id="第五步：虚拟主机，域名绑定，以及一点收尾工作"><a href="#第五步：虚拟主机，域名绑定，以及一点收尾工作" class="headerlink" title="第五步：虚拟主机，域名绑定，以及一点收尾工作"></a>第五步：虚拟主机，域名绑定，以及一点收尾工作</h1><p>对于Apache的设置，有两件事需要做。第一，出于安全性考虑，应禁用目录浏览。第二，为便于使用（或其他目的），我们需要在同一主机上host多个网站。这些工作都可以通过编辑 Apache 配置文件完成。</p>
+<p>首先，用 vi 打开 /etc/httpd/conf/httpd.conf ，找到如下段落：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">Directory</span> "/<span class="attr">var</span>/<span class="attr">www</span>/<span class="attr">html</span>"&gt;</span>  </div><div class="line">  Options Indexes FollowSymLinks  </div><div class="line"><span class="tag">&lt;/<span class="name">Directory</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>删除”Indexes“即可，就禁用了 Web 主文档目录及所有子目录的目录浏览操作。也可对特定目录做此操作。</p>
+<p>编辑虚拟主机。首先，需要找到这一行（通常在靠近结尾处）</p>
+<p><code>NameVirtualHost *:80</code></p>
+<p>解开注释。然后在末尾按需求添加段落，比如我们有一个域名 my.name.com，让它指向我们刚刚创建的wordpress站点：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">VirtualHost</span> *<span class="attr">:80</span>&gt;</span></div><div class="line">    ServerName my.name.com</div><div class="line">    DocumentRoot /var/www/html/wordpress</div><div class="line"><span class="tag">&lt;/<span class="name">VirtualHost</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>现在，保存，退出，重启 apache。在浏览器输入 my.name.com   </p>
+<p>Enjoy it!</p>
+<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><ul>
+<li><a href="http://codex.wordpress.org.cn/Installing_WordPress" title="http://codex.wordpress.org.cn/Installing_WordPress" target="_blank" rel="external">http://codex.wordpress.org.cn/Installing_WordPress</a>    </li>
+<li><a href="http://httpd.apache.org/docs/2.2/vhosts/name-based.html" title="http://httpd.apache.org/docs/2.2/vhosts/name-based.html" target="_blank" rel="external">http://httpd.apache.org/docs/2.2/vhosts/name-based.html</a>    </li>
+<li><a href="http://www.cnblogs.com/88999660/articles/1581524.html" title="http://www.cnblogs.com/88999660/articles/1581524.html" target="_blank" rel="external">http://www.cnblogs.com/88999660/articles/1581524.html</a></li>
+</ul>
+  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/建站心得/">建站心得</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/建站/">建站</a><a href="/tags/aws/">aws</a>
+  </div>
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://www.catxn.net/posts/2013/setup-aws-2/" data-title="在 Amazon AWS 搭建及部署网站：（二）安装、配置软件，启动网站 | 夜猫阿罗哈" data-tsina="1406303630" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/posts/2013/setup-aws-3/" title="在 Amazon AWS 搭建及部署网站：（三）开发及部署环境">
+  <strong>上一篇：</strong><br/>
+  <span>
+  在 Amazon AWS 搭建及部署网站：（三）开发及部署环境</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/posts/2013/setup-aws-1/"  title="在 Amazon AWS 搭建及部署网站：（一）申请、设置 AWS 服务">
+ <strong>下一篇：</strong><br/> 
+ <span>在 Amazon AWS 搭建及部署网站：（一）申请、设置 AWS 服务
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+<section id="comments" class="comment">
+	<div class="ds-thread" data-thread-key="posts/2013/setup-aws-2/" data-title="在 Amazon AWS 搭建及部署网站：（二）安装、配置软件，启动网站" data-url="http://www.catxn.net/posts/2013/setup-aws-2/"></div>
+</section>
+
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#第一步：连接服务器"><span class="toc-number">1.</span> <span class="toc-text">第一步：连接服务器</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第二步：安装基本服务：Apache、PHP、MySQL"><span class="toc-number">2.</span> <span class="toc-text">第二步：安装基本服务：Apache、PHP、MySQL</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第三步：安装phpMyAdmin"><span class="toc-number">3.</span> <span class="toc-text">第三步：安装phpMyAdmin</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第四步：开始第一个-Wordpress-网站"><span class="toc-number">4.</span> <span class="toc-text">第四步：开始第一个 Wordpress 网站</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第五步：虚拟主机，域名绑定，以及一点收尾工作"><span class="toc-number">5.</span> <span class="toc-text">第五步：虚拟主机，域名绑定，以及一点收尾工作</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#参考资料"><span class="toc-number">6.</span> <span class="toc-text">参考资料</span></a></li></ol>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">分类</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/夜猫茶舍/" title="夜猫茶舍">夜猫茶舍<sup>11</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/宗布科技/" title="宗布科技">宗布科技<sup>4</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/建站心得/" title="建站心得">建站心得<sup>15</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/影音动漫/" title="影音动漫">影音动漫<sup>5</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/流水账/" title="流水账">流水账<sup>6</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/管理微言/" title="管理微言">管理微言<sup>11</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/老猫读史/" title="老猫读史">老猫读史<sup>13</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/软件开发/" title="软件开发">软件开发<sup>5</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/建站/" title="建站">建站<sup>17</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/历史/" title="历史">历史<sup>15</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/流水账/" title="流水账">流水账<sup>14</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/阅读/" title="阅读">阅读<sup>13</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/写作/" title="写作">写作<sup>12</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/管理/" title="管理">管理<sup>11</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/项目管理/" title="项目管理">项目管理<sup>8</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/原创/" title="原创">原创<sup>6</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/软件开发/" title="软件开发">软件开发<sup>6</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/日记/" title="日记">日记<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/宗布/" title="宗布">宗布<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/创业/" title="创业">创业<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/时间管理/" title="时间管理">时间管理<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/wordpress/" title="wordpress">wordpress<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/aws/" title="aws">aws<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/影视/" title="影视">影视<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/动漫/" title="动漫">动漫<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/里程碑/" title="里程碑">里程碑<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/GTD/" title="GTD">GTD<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/春秋战国/" title="春秋战国">春秋战国<sup>3</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="http://www.zongbutech.com" target="_blank" title="宗布科技">宗布科技</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://www.nero.com" target="_blank" title="尼禄软件">尼禄软件</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://atjason.com" target="_blank" title="Jason">Jason</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://www.cnblogs.com/deltacat" target="_blank" title="我在博客园">我在博客园</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://blog.sina.com.cn/deltacatcn" target="_blank" title="我在新浪博客">我在新浪博客</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://tool.wopus.org" target="_blank" title="wopus站长工具">wopus站长工具</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  
+
+<div class="doubanshow">
+<p class="asidetitle">豆瓣秀</p>
+<div>
+<script type="text/javascript" src="http://www.douban.com/service/badge/deltacat/?show=collection&amp;n=12&amp;columns=3&amp;hidelogo=yes&amp;hideself=yes&amp;cat=book|movie" ></script>
+</div>
+</div>
+
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+  <div class="weiboshow">
+  <p class="asidetitle">新浪微博</p>
+    <iframe width="100%" height="119" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=119&fansRow=2&ptype=1&speed=0&skin=9&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=1406303630&verifier=&dpc=1"></iframe>
+</div>
+
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> 你好，我是三角猫。这里是我的个人博客，内容以原创为主。 <br/>
+			在这里，你可以看到：软件开发技术，管理心得，以及一些历史故事。</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		<a href="http://weibo.com/deltacat" target="_blank" class="icon-weibo" title="微博"></a>
+		
+		
+		<a href="https://github.com/deltacat" target="_blank" class="icon-github" title="github"></a>
+		
+		
+		
+		
+		
+		
+		<a href="https://www.douban.com/people/deltacat" target="_blank" class="icon-douban" title="豆瓣"></a>
+		
+		
+		<a href="http://www.zhihu.com/people/deltacat" target="_blank" class="icon-zhihu" title="知乎"></a>
+		
+		
+		
+	</div>
+			
+		
+				<div class="cc-license">
+          <a href="http://creativecommons.org/licenses/by/4.0" class="cc-opacity" target="_blank">
+            <img src="/img/cc-by.svg" alt="Creative Commons" />
+          </a>
+        </div>
+    
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2016 
+		
+		<a href="/about" target="_blank" title="三角猫">三角猫</a>
+		
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
+
+
+
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"deltacat"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script> 
+
+
+
+
+
+
+
+
+
+<!-- Analytics Begin -->
+
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-7388145-4', 'auto');  
+ga('send', 'pageview');
+</script>
+
+
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+  </body>
+</html>

@@ -1,0 +1,668 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>迁移到Hexo，双线镜像 | 夜猫阿罗哈</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="三角猫">
+    
+
+    
+    <meta name="description" content="一直以来都是用 wordpress。随着 WP 日渐臃肿，以及在喜欢上 Markdown 写作之后，就一直想找个能对 Markdown 支持完美的，轻量级的，并易于版本管理的博客系统。
+在这种需求下，Jekyll 落入了视线。
+Jekyll 是 GitHub 和 GitCafe 内置支持的静态网页生成引擎，可定制化程度也高。看上去对我们程序猴子这种不折腾会死的物种非常合适，但是经过一段时间的观察和">
+<meta property="og:type" content="article">
+<meta property="og:title" content="迁移到Hexo，双线镜像">
+<meta property="og:url" content="http://www.catxn.net/posts/2015/迁移到Hexo/index.html">
+<meta property="og:site_name" content="夜猫阿罗哈">
+<meta property="og:description" content="一直以来都是用 wordpress。随着 WP 日渐臃肿，以及在喜欢上 Markdown 写作之后，就一直想找个能对 Markdown 支持完美的，轻量级的，并易于版本管理的博客系统。
+在这种需求下，Jekyll 落入了视线。
+Jekyll 是 GitHub 和 GitCafe 内置支持的静态网页生成引擎，可定制化程度也高。看上去对我们程序猴子这种不折腾会死的物种非常合适，但是经过一段时间的观察和">
+<meta property="og:image" content="http://catxn.u.qiniudn.com/images/acg/zespia001.jpg-o">
+<meta property="og:updated_time" content="2016-01-24T14:36:57.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="迁移到Hexo，双线镜像">
+<meta name="twitter:description" content="一直以来都是用 wordpress。随着 WP 日渐臃肿，以及在喜欢上 Markdown 写作之后，就一直想找个能对 Markdown 支持完美的，轻量级的，并易于版本管理的博客系统。
+在这种需求下，Jekyll 落入了视线。
+Jekyll 是 GitHub 和 GitCafe 内置支持的静态网页生成引擎，可定制化程度也高。看上去对我们程序猴子这种不折腾会死的物种非常合适，但是经过一段时间的观察和">
+<meta name="twitter:image" content="http://catxn.u.qiniudn.com/images/acg/zespia001.jpg-o">
+
+    
+    <link rel="alternative" href="/atom.xml" title="夜猫阿罗哈" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/images/author.png">
+    
+    
+    <link rel="apple-touch-icon" href="/images/author.png">
+    <link rel="apple-touch-icon-precomposed" href="/images/author.png">
+    
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/images/author.png" alt="夜猫阿罗哈" title="夜猫阿罗哈"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="夜猫阿罗哈">夜猫阿罗哈</a></h1>
+				<h2 class="blog-motto">暮然回首萧瑟处，也无风雨也无晴</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">Home</a></li>
+					
+						<li><a href="/archives">Archives</a></li>
+					
+						<li><a href="/about">About</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="hidden" name="q" value="site:www.catxn.net">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/posts/2015/迁移到Hexo/" title="迁移到Hexo，双线镜像" itemprop="url">迁移到Hexo，双线镜像</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="三角猫" target="_blank" itemprop="author">三角猫</a>
+		
+  <p class="article-time">
+    <time datetime="2015-03-31T03:40:17.000Z" itemprop="datePublished"> 发表于 2015-03-31</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#选哪个"><span class="toc-number">1.</span> <span class="toc-text">选哪个</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#双线部署"><span class="toc-number">2.</span> <span class="toc-text">双线部署</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#坑"><span class="toc-number">3.</span> <span class="toc-text">坑</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#写作工具"><span class="toc-number">4.</span> <span class="toc-text">写作工具</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#最后"><span class="toc-number">5.</span> <span class="toc-text">最后</span></a></li></ol>
+		
+		</div>
+		
+		<p>一直以来都是用 wordpress。随着 WP 日渐臃肿，以及在喜欢上 Markdown 写作之后，就一直想找个能对 Markdown 支持完美的，轻量级的，并易于版本管理的博客系统。</p>
+<p>在这种需求下，Jekyll 落入了视线。</p>
+<p>Jekyll 是 GitHub 和 GitCafe 内置支持的静态网页生成引擎，可定制化程度也高。看上去对我们程序猴子这种不折腾会死的物种非常合适，但是经过一段时间的观察和分析后。感觉可能它并不是最佳选择。</p>
+<p>然后我看到了 cnfeat 这篇 <a href="http://cnfeat.com/2014/05/10/2014-05-11-how-to-build-a-blog/" target="_blank" rel="external">简明Github Pages与Hexo教程</a>。瞬间就被它吸引了。</p>
+<p><img src="http://catxn.u.qiniudn.com/images/acg/zespia001.jpg-o" alt="骗点击"></p>
+<h1 id="选哪个"><a href="#选哪个" class="headerlink" title="选哪个"></a>选哪个</h1><p>两个引擎都支持 markdown，都可以利用 git 库进行管理。最终发布的都是静态页面。这一点没什么大的差别。相对而言，Jekyll 发展较早，相对比较成熟，Hexo 是后起之秀，但是发展迅速。</p>
+<p>Jelly 是 github 的默认推荐。它的工作方式是把源文件上传至 github 的特定分支，然后 github 在发现有文件更新时，在服务端重新编译生成静态网页自动部署至 master 分支。</p>
+<p>Jekyll 的优势是发展比较成熟，因为是官方推荐，支持也比较好。看上去对程序员来说也更加优雅便于折腾。缺点是配置比较复杂，需要遵循一定的规范比如一定要放在 gh-pages 分支。因为是提交源文件在服务端生成，所以在内容发生变化到前端呈现会有一定延迟。</p>
+<p>Hexo 的原作者是一名台湾的学生。推出的目的就是为了提供更大的便利，更容易入手，更方便配置。</p>
+<p>实际上也是如此，Hexo 从安装、配置、发布都非常简洁。常用的命令记住 <code>n g s d</code> 四个字母就搞定。</p>
+<p>Hexo 还有一个决定性的好处，下文说。</p>
+<p>总之最后我选择了 Hexo，在代码库中建立一个独立的 hexo 分支用于存放源文件。</p>
+<a id="more"></a>
+<h1 id="双线部署"><a href="#双线部署" class="headerlink" title="双线部署"></a>双线部署</h1><p>hexo 可以同步推送到多个git库，比如，在配置文件里这样写：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  message: &quot;hexo deploy generated pages&quot;</div><div class="line">  repo: </div><div class="line">    github: &lt;github repo url&gt;</div><div class="line">    gitcafe: &lt;gitcafe repo url&gt;</div></pre></td></tr></table></figure>
+<p>然后执行部署命令，就可以同步部署到 gitcafe 和 github。</p>
+<p>如果用 dnspod 来做实现双线解析，瞬间就可以实现境内境外双线解析镜像。这点非常爽。不过这里有个坑，参见下一节。</p>
+<h1 id="坑"><a href="#坑" class="headerlink" title="坑"></a>坑</h1><p>这里是一些大坑。估计如果看到Hexo的介绍后，想自己动手试试看的都会遇到。</p>
+<ul>
+<li><p>首先，部署到GitHub时，应该直接部署到master分支。部署到 gitcafe 则应部署至 gitcafe-pages 分支。</p>
+<p>  gitcafe-pages, gh-pages 这样的分支是用来给Jekyll在服务端生成静态网站用的。</p>
+<p>  用hexo生成网站是在本地生成后部署静态页面，这时直接部署到master即可。但是 gitcafe 的 master 分支貌似不会生成网站，必须部署至 gitcafe-pages 分支。</p>
+</li>
+<li><p>然后，Hexo 现在最新的版本是3.0 </p>
+<p>  config的设置项有所更改，包结构也有变化。</p>
+<p>  最坑的是，如果多点部署的话，会报错。看了下应该是 3.0 更新后的bug，在 github Hexo 项目上，已经有人提了<a href="https://github.com/hexojs/hexo/issues/1108" target="_blank" rel="external">issue</a>，看什么时候能解决吧。</p>
+<p>  3.0 详细的变化可以参考 <a href="https://github.com/hexojs/hexo/wiki/Breaking-Changes-in-Hexo-3.0" target="_blank" rel="external">github 上的文档</a>.</p>
+<p>  <strong>更新</strong>: 昨天 git deployer 更新到 0.0.4，修正了该问题。参见<a href="https://github.com/hexojs/hexo/issues/1108#issuecomment-87942286" target="_blank" rel="external">作者的说明</a>.</p>
+<p>  更新方法：编辑 package.json，把 hexo-deployer-git 的版本升级到 0.0.4，然后 <code>npm update</code>.</p>
+</li>
+<li><p>迁移自 wordpress</p>
+<p>  用插件 hexo-migrator-wordpress 即可一键完成。比较郁闷的是，如果原文的标题是中文，那么这里所有的文件名都会被解析成形如 ab-cd-ef-gh-de-ty-ww-rt-as-cd-fg.md 这种形式。原因可以理解，它首先将中文进行编码，然后替换空格最终形成“slug”形式的permalink。但是看着实在很蛋疼。</p>
+</li>
+<li><p>目录（categories）</p>
+<p>  hexo 支持多目录。但是……</p>
+<p>  如果你指定了多个目录，比如 <code>[建站心得，流水账]</code>，那么最后呈现出的目录列表可能是这个样子的：</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">建站心得5</div><div class="line">流水账5</div><div class="line">流水账1</div><div class="line">流水账1</div><div class="line">流水账1</div><div class="line">...</div></pre></td></tr></table></figure>
+<p>  泪奔。所以还是老老实实用单category，结合标签云好啦。</p>
+</li>
+</ul>
+<p>还碰过其他坑，暂时记起来这么多。后面想起来或遇到新坑再更新。</p>
+<h1 id="写作工具"><a href="#写作工具" class="headerlink" title="写作工具"></a>写作工具</h1><p>当然。你可以直接在简书写，跨平台，实时保存。XD 然后复制到 Hexo 源文件目录。</p>
+<p>Mac 平台的话，强烈推荐 “Mou”。</p>
+<h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><p>详细的 Hexo 安装设置指南就不多说了。 cnfeat 的文章讲得非常详细，即使小白也能按照所列的步骤一步步搭建起自己的一个静态博客。</p>
+<p>只是有一点，弄这些玩意儿，翻墙技能还是要有一点的。否则一个 npm 命令都会让你抓狂。</p>
+<p><a href="http://www.catxn.net">国际惯例，成品展示在这里。</a></p>
+<p>Enjoy it!</p>
+<p>(题图来自 <a href="http://zespia.tw" target="_blank" rel="external">Hexo 作者的个人主页</a>。据说可以提高点击率。XD)</p>
+<!-- 链接区 -->
+  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/建站心得/">建站心得</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/建站/">建站</a><a href="/tags/hexo/">hexo</a><a href="/tags/github/">github</a><a href="/tags/blog/">blog</a>
+  </div>
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://www.catxn.net/posts/2015/迁移到Hexo/" data-title="迁移到Hexo，双线镜像 | 夜猫阿罗哈" data-tsina="1406303630" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/posts/2015/four-lords-3/" title="战国四公子（下）">
+  <strong>上一篇：</strong><br/>
+  <span>
+  战国四公子（下）</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/posts/2015/hello-world/"  title="Hello World">
+ <strong>下一篇：</strong><br/> 
+ <span>Hello World
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+<section id="comments" class="comment">
+	<div class="ds-thread" data-thread-key="posts/2015/迁移到Hexo/" data-title="迁移到Hexo，双线镜像" data-url="http://www.catxn.net/posts/2015/迁移到Hexo/"></div>
+</section>
+
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#选哪个"><span class="toc-number">1.</span> <span class="toc-text">选哪个</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#双线部署"><span class="toc-number">2.</span> <span class="toc-text">双线部署</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#坑"><span class="toc-number">3.</span> <span class="toc-text">坑</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#写作工具"><span class="toc-number">4.</span> <span class="toc-text">写作工具</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#最后"><span class="toc-number">5.</span> <span class="toc-text">最后</span></a></li></ol>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">分类</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/夜猫茶舍/" title="夜猫茶舍">夜猫茶舍<sup>11</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/宗布科技/" title="宗布科技">宗布科技<sup>4</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/建站心得/" title="建站心得">建站心得<sup>15</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/影音动漫/" title="影音动漫">影音动漫<sup>5</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/流水账/" title="流水账">流水账<sup>6</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/管理微言/" title="管理微言">管理微言<sup>11</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/老猫读史/" title="老猫读史">老猫读史<sup>13</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/软件开发/" title="软件开发">软件开发<sup>5</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/建站/" title="建站">建站<sup>17</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/历史/" title="历史">历史<sup>15</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/流水账/" title="流水账">流水账<sup>14</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/阅读/" title="阅读">阅读<sup>13</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/写作/" title="写作">写作<sup>12</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/管理/" title="管理">管理<sup>11</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/项目管理/" title="项目管理">项目管理<sup>8</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/原创/" title="原创">原创<sup>6</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/软件开发/" title="软件开发">软件开发<sup>6</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/日记/" title="日记">日记<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/宗布/" title="宗布">宗布<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/创业/" title="创业">创业<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/时间管理/" title="时间管理">时间管理<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/wordpress/" title="wordpress">wordpress<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/aws/" title="aws">aws<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/影视/" title="影视">影视<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/动漫/" title="动漫">动漫<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/里程碑/" title="里程碑">里程碑<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/GTD/" title="GTD">GTD<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/春秋战国/" title="春秋战国">春秋战国<sup>3</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="http://www.zongbutech.com" target="_blank" title="宗布科技">宗布科技</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://www.nero.com" target="_blank" title="尼禄软件">尼禄软件</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://atjason.com" target="_blank" title="Jason">Jason</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://www.cnblogs.com/deltacat" target="_blank" title="我在博客园">我在博客园</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://blog.sina.com.cn/deltacatcn" target="_blank" title="我在新浪博客">我在新浪博客</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://tool.wopus.org" target="_blank" title="wopus站长工具">wopus站长工具</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  
+
+<div class="doubanshow">
+<p class="asidetitle">豆瓣秀</p>
+<div>
+<script type="text/javascript" src="http://www.douban.com/service/badge/deltacat/?show=collection&amp;n=12&amp;columns=3&amp;hidelogo=yes&amp;hideself=yes&amp;cat=book|movie" ></script>
+</div>
+</div>
+
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+  <div class="weiboshow">
+  <p class="asidetitle">新浪微博</p>
+    <iframe width="100%" height="119" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=119&fansRow=2&ptype=1&speed=0&skin=9&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=1406303630&verifier=&dpc=1"></iframe>
+</div>
+
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> 你好，我是三角猫。这里是我的个人博客，内容以原创为主。 <br/>
+			在这里，你可以看到：软件开发技术，管理心得，以及一些历史故事。</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		<a href="http://weibo.com/deltacat" target="_blank" class="icon-weibo" title="微博"></a>
+		
+		
+		<a href="https://github.com/deltacat" target="_blank" class="icon-github" title="github"></a>
+		
+		
+		
+		
+		
+		
+		<a href="https://www.douban.com/people/deltacat" target="_blank" class="icon-douban" title="豆瓣"></a>
+		
+		
+		<a href="http://www.zhihu.com/people/deltacat" target="_blank" class="icon-zhihu" title="知乎"></a>
+		
+		
+		
+	</div>
+			
+		
+				<div class="cc-license">
+          <a href="http://creativecommons.org/licenses/by/4.0" class="cc-opacity" target="_blank">
+            <img src="/img/cc-by.svg" alt="Creative Commons" />
+          </a>
+        </div>
+    
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2016 
+		
+		<a href="/about" target="_blank" title="三角猫">三角猫</a>
+		
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
+
+
+
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"deltacat"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script> 
+
+
+
+
+
+
+
+
+
+<!-- Analytics Begin -->
+
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-7388145-4', 'auto');  
+ga('send', 'pageview');
+</script>
+
+
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+  </body>
+</html>

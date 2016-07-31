@@ -1,0 +1,692 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>在 Amazon AWS 搭建及部署网站：（三）开发及部署环境 | 夜猫阿罗哈</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="三角猫">
+    
+
+    
+    <meta name="description" content="服务器已经搭建好，网站也开始运行了。那么如何方便地部署代码呢？
+最基本的方式，就是使用 SFTP 向网站目录直接部署。这种方法的缺点是版本控制不便，在上传时也无法方便的比较代码变化。
+用SVN来部署是一个很好的选择。SVN 本身是一个服务，我的选择是使用 Apache 的 SVN 模块来访问，不必单独启用SVN服务。
+第一步：确保 Apache 正确安装和配置详情参见前文，这里假定 Apache">
+<meta property="og:type" content="article">
+<meta property="og:title" content="在 Amazon AWS 搭建及部署网站：（三）开发及部署环境">
+<meta property="og:url" content="http://www.catxn.net/posts/2013/setup-aws-3/index.html">
+<meta property="og:site_name" content="夜猫阿罗哈">
+<meta property="og:description" content="服务器已经搭建好，网站也开始运行了。那么如何方便地部署代码呢？
+最基本的方式，就是使用 SFTP 向网站目录直接部署。这种方法的缺点是版本控制不便，在上传时也无法方便的比较代码变化。
+用SVN来部署是一个很好的选择。SVN 本身是一个服务，我的选择是使用 Apache 的 SVN 模块来访问，不必单独启用SVN服务。
+第一步：确保 Apache 正确安装和配置详情参见前文，这里假定 Apache">
+<meta property="og:updated_time" content="2015-04-01T12:25:34.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="在 Amazon AWS 搭建及部署网站：（三）开发及部署环境">
+<meta name="twitter:description" content="服务器已经搭建好，网站也开始运行了。那么如何方便地部署代码呢？
+最基本的方式，就是使用 SFTP 向网站目录直接部署。这种方法的缺点是版本控制不便，在上传时也无法方便的比较代码变化。
+用SVN来部署是一个很好的选择。SVN 本身是一个服务，我的选择是使用 Apache 的 SVN 模块来访问，不必单独启用SVN服务。
+第一步：确保 Apache 正确安装和配置详情参见前文，这里假定 Apache">
+
+    
+    <link rel="alternative" href="/atom.xml" title="夜猫阿罗哈" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/images/author.png">
+    
+    
+    <link rel="apple-touch-icon" href="/images/author.png">
+    <link rel="apple-touch-icon-precomposed" href="/images/author.png">
+    
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/images/author.png" alt="夜猫阿罗哈" title="夜猫阿罗哈"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="夜猫阿罗哈">夜猫阿罗哈</a></h1>
+				<h2 class="blog-motto">暮然回首萧瑟处，也无风雨也无晴</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">Home</a></li>
+					
+						<li><a href="/archives">Archives</a></li>
+					
+						<li><a href="/about">About</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="hidden" name="q" value="site:www.catxn.net">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/posts/2013/setup-aws-3/" title="在 Amazon AWS 搭建及部署网站：（三）开发及部署环境" itemprop="url">在 Amazon AWS 搭建及部署网站：（三）开发及部署环境</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="三角猫" target="_blank" itemprop="author">三角猫</a>
+		
+  <p class="article-time">
+    <time datetime="2013-09-01T09:40:15.000Z" itemprop="datePublished"> 发表于 2013-09-01</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#第一步：确保-Apache-正确安装和配置"><span class="toc-number">1.</span> <span class="toc-text">第一步：确保 Apache 正确安装和配置</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第二步：安装-subversion"><span class="toc-number">2.</span> <span class="toc-text">第二步：安装 subversion</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第三步：-配置-apache-上的-subversion"><span class="toc-number">3.</span> <span class="toc-text">第三步： 配置 apache 上的 subversion</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第四步：建立subversion帐户"><span class="toc-number">4.</span> <span class="toc-text">第四步：建立subversion帐户</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第五步：建立subversion仓库"><span class="toc-number">5.</span> <span class="toc-text">第五步：建立subversion仓库</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第六步：测试Subversion工作"><span class="toc-number">6.</span> <span class="toc-text">第六步：测试Subversion工作</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第七步：配置SVN自动部署最新代码至网站目录"><span class="toc-number">7.</span> <span class="toc-text">第七步：配置SVN自动部署最新代码至网站目录</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#参考资料"><span class="toc-number">8.</span> <span class="toc-text">参考资料</span></a></li></ol>
+		
+		</div>
+		
+		<p>服务器已经搭建好，网站也开始运行了。那么如何方便地部署代码呢？</p>
+<p>最基本的方式，就是使用 SFTP 向网站目录直接部署。这种方法的缺点是版本控制不便，在上传时也无法方便的比较代码变化。</p>
+<p>用SVN来部署是一个很好的选择。<br>SVN 本身是一个服务，我的选择是使用 Apache 的 SVN 模块来访问，不必单独启用SVN服务。</p>
+<h1 id="第一步：确保-Apache-正确安装和配置"><a href="#第一步：确保-Apache-正确安装和配置" class="headerlink" title="第一步：确保 Apache 正确安装和配置"></a>第一步：确保 Apache 正确安装和配置</h1><p>详情参见前文，这里假定 Apache 服务已正确安装，运行无误</p>
+<h1 id="第二步：安装-subversion"><a href="#第二步：安装-subversion" class="headerlink" title="第二步：安装 subversion"></a>第二步：安装 subversion</h1><blockquote>
+<p>// 安装 subversion</p>
+<p>yum install subversion</p>
+<p>// 安装 apache subversion 模块</p>
+<p>yum install mod_dav_svn</p>
+<p>// 检查 svn 安装</p>
+<p>svn –version</p>
+</blockquote>
+<a id="more"></a>
+<h1 id="第三步：-配置-apache-上的-subversion"><a href="#第三步：-配置-apache-上的-subversion" class="headerlink" title="第三步： 配置 apache 上的 subversion"></a>第三步： 配置 apache 上的 subversion</h1><p>Apache 中 subversion 配置文件: /etc/httpd/conf.d/subversion.conf<br>用 vi 打开该文件，找到如下被注释掉的部分，打开</p>
+<blockquote>
+<p>&lt;Location /repos&gt;</p>
+<p>DAV svn</p>
+<p>SVNParentPath /var/www/svn/repos</p>
+<p>AuthType Basic</p>
+<p>AuthName “Authorizion realm”</p>
+<p>AuthUserFile /etc/svn-auth-conf</p>
+<p>Require valid-user</p>
+<p>&lt;/Location&gt;</p>
+</blockquote>
+<p>这一行：<br>SVNParentPath /var/www/svn<br>改成：<br>SVNPath /var/www/svn/repos<br>“/var/www/svn/repos”是你SVN库的存放位置，可根据情况修改。</p>
+<p>&lt;Location /repos&gt;表示在url地址是 <a href="http://&lt;hostname&gt;/repos" target="_blank" rel="external">http://&lt;hostname&gt;/repos</a> 时访问的就是库 /var/www/svn/repos 。<br>AuthUserFile /etc/svn-auth-conf指明了svn帐户文件是/etc/svn-auth-conf 。</p>
+<p>注意：在默认的 subversion.conf 文件中，以上代码段是包含在如下标签中的。这个标签表示，仅对“写”操作进行权限控制。这里的SVN服务是用于内部部署代码而不是用于开源项目，显然，应该对“读”操作做同样的限制。因此，这个标签行的注释开关应保持关闭。</p>
+<blockquote>
+<p>&lt;LimitExcept GET PROPFIND OPTIONS REPORT&gt;</p>
+<p>&lt;/LimitExcept&gt;</p>
+</blockquote>
+<h1 id="第四步：建立subversion帐户"><a href="#第四步：建立subversion帐户" class="headerlink" title="第四步：建立subversion帐户"></a>第四步：建立subversion帐户</h1><p>subversion自己对帐户进行管理，所以要客户端要访问它必须使用subversion帐户进行登录。</p>
+<blockquote>
+<p>// 创建第一个帐户</p>
+<p>htpasswd -cm /etc/svn-auth-conf &lt;username1&gt;</p>
+<p>// 创建更多其它帐户（注意参数）</p>
+<p>htpasswd -m /etc/svn-auth-conf &lt;username2&gt;</p>
+</blockquote>
+<h1 id="第五步：建立subversion仓库"><a href="#第五步：建立subversion仓库" class="headerlink" title="第五步：建立subversion仓库"></a>第五步：建立subversion仓库</h1><blockquote>
+<p>cd /var/www/svn</p>
+<p>svnadmin create repos</p>
+<p>chown -R apache.apache repos</p>
+</blockquote>
+<h1 id="第六步：测试Subversion工作"><a href="#第六步：测试Subversion工作" class="headerlink" title="第六步：测试Subversion工作"></a>第六步：测试Subversion工作</h1><blockquote>
+<p>// 重启 apache:</p>
+<p>service httpd restart<br>任何时候，改动过配置文件，均需重启服务使改变生效。<br>在浏览器中输入 <a href="http://&lt;hostname&gt;/repos" target="_blank" rel="external">http://&lt;hostname&gt;/repos</a> 应该可以看到（会提示身份验证）：<br>repos - Revision 0: /</p>
+<hr>
+<p>Powered by Apache Subversion version 1.7.10 (r1485443).</p>
+</blockquote>
+<p>打开本地SVN客户端（我这里用的是tortoiseSVN），输入地址，提示用户名密码时按之前的设定输入，一切无误的话应该可以列出代码库。至此Subversion服务配置完毕</p>
+<h1 id="第七步：配置SVN自动部署最新代码至网站目录"><a href="#第七步：配置SVN自动部署最新代码至网站目录" class="headerlink" title="第七步：配置SVN自动部署最新代码至网站目录"></a>第七步：配置SVN自动部署最新代码至网站目录</h1><p>Subversion 的钩子脚本是一种事件触发机制，当SVN系统执行到某些预定义事件时，触发一些预定义动作。其中，post-commit 事件就可用于自动部署。简单来说，在 Web 目录 checkout 特定代码库，然后设定当 svn 提交完成时，自动更新 web 目录。我们可以这样来设置 svn 库：首先建立工作分支和发布分支，工作分支稳定后，合并最新代码至发布分支（提交前核对更改），代码提交完成后，server端的post-commit脚本从发布分支自动更新web目录。</p>
+<p>具体来说，比如我们的网站目录在 /var/www/html/MyWeb, 首先，用如下命令 checkout 代码库：</p>
+<blockquote>
+<p>svn checkout &lt;repos url&gt; /var/www/html/MyWeb –username &lt;username&gt; –password &lt;password&gt;<br>然后，创建脚本<br>cd /var/www/svn/repos/hooks</p>
+<p>cp post-commit.tmpl post-commit</p>
+<p>vi post-commit<br>将 post-commit 的内容改为：<br>export LANG=en_US.UTF-8</p>
+<p>SVN=/usr/bin/svn</p>
+<p>WEB=/var/www/html/MyWeb</p>
+<p>${SVN} update ${WEB} –username &lt;username&gt; –password &lt;password&gt;</p>
+</blockquote>
+<p>第一行 export … 是为了避免编码错误，可根据服务器设置调整，保持和服务器编码一致即可。<br>第二行是svn命令行位置<br>第三行是checkout的代码库位置，需要用chown将该目录权限授予apache用户<br>第四行是实际执行的命令。<br>保存post-commit, chmod a+x 使其可执行。然后手工执行进行测试。如果出现保存密码的提示，则需要修改设置避免该提示出现，否则客户端提交代码会失败（因为客户端没有当提示出现选择yes/no的机会）。首先将配置文件拷贝至apache的home目录，然后修改：</p>
+<blockquote>
+<p>cp -r /root/.subversion/ /var/www/</p>
+<p>vi /var/www/.subversion/servers<br>修改如下字段即可：<br>store-plaintext-passwords = no</p>
+<p>store-passwords = no</p>
+</blockquote>
+<p>现在一切就绪，使用客户端工具提交代码测试，检查Web目录是否同步了更改。<br>至此，配置工作完毕。</p>
+<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><ul>
+<li><a href="http://www.worldhello.net/doc/svn_hooks/svn_hooks.mm.htm" title="http://www.worldhello.net/doc/svn_hooks/svn_hooks.mm.htm" target="_blank" rel="external">http://www.worldhello.net/doc/svn_hooks/svn_hooks.mm.htm</a></li>
+<li><a href="http://blog.csdn.net/niu_gao/article/details/7502326" title="http://blog.csdn.net/niu_gao/article/details/7502326" target="_blank" rel="external">http://blog.csdn.net/niu_gao/article/details/7502326</a></li>
+<li><a href="http://www.ibm.com/developerworks/cn/java/j-lo-apache-subversion/index.html" title="http://www.ibm.com/developerworks/cn/java/j-lo-apache-subversion/index.html" target="_blank" rel="external">http://www.ibm.com/developerworks/cn/java/j-lo-apache-subversion/index.html</a></li>
+</ul>
+  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/建站心得/">建站心得</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/建站/">建站</a><a href="/tags/aws/">aws</a>
+  </div>
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://www.catxn.net/posts/2013/setup-aws-3/" data-title="在 Amazon AWS 搭建及部署网站：（三）开发及部署环境 | 夜猫阿罗哈" data-tsina="1406303630" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/posts/2014/时间管理之吐槽/" title="时间管理之吐槽">
+  <strong>上一篇：</strong><br/>
+  <span>
+  时间管理之吐槽</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/posts/2013/setup-aws-2/"  title="在 Amazon AWS 搭建及部署网站：（二）安装、配置软件，启动网站">
+ <strong>下一篇：</strong><br/> 
+ <span>在 Amazon AWS 搭建及部署网站：（二）安装、配置软件，启动网站
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+<section id="comments" class="comment">
+	<div class="ds-thread" data-thread-key="posts/2013/setup-aws-3/" data-title="在 Amazon AWS 搭建及部署网站：（三）开发及部署环境" data-url="http://www.catxn.net/posts/2013/setup-aws-3/"></div>
+</section>
+
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#第一步：确保-Apache-正确安装和配置"><span class="toc-number">1.</span> <span class="toc-text">第一步：确保 Apache 正确安装和配置</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第二步：安装-subversion"><span class="toc-number">2.</span> <span class="toc-text">第二步：安装 subversion</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第三步：-配置-apache-上的-subversion"><span class="toc-number">3.</span> <span class="toc-text">第三步： 配置 apache 上的 subversion</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第四步：建立subversion帐户"><span class="toc-number">4.</span> <span class="toc-text">第四步：建立subversion帐户</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第五步：建立subversion仓库"><span class="toc-number">5.</span> <span class="toc-text">第五步：建立subversion仓库</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第六步：测试Subversion工作"><span class="toc-number">6.</span> <span class="toc-text">第六步：测试Subversion工作</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第七步：配置SVN自动部署最新代码至网站目录"><span class="toc-number">7.</span> <span class="toc-text">第七步：配置SVN自动部署最新代码至网站目录</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#参考资料"><span class="toc-number">8.</span> <span class="toc-text">参考资料</span></a></li></ol>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">分类</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/夜猫茶舍/" title="夜猫茶舍">夜猫茶舍<sup>11</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/宗布科技/" title="宗布科技">宗布科技<sup>4</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/建站心得/" title="建站心得">建站心得<sup>15</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/影音动漫/" title="影音动漫">影音动漫<sup>5</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/流水账/" title="流水账">流水账<sup>6</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/管理微言/" title="管理微言">管理微言<sup>11</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/老猫读史/" title="老猫读史">老猫读史<sup>13</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/软件开发/" title="软件开发">软件开发<sup>5</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/建站/" title="建站">建站<sup>17</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/历史/" title="历史">历史<sup>15</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/流水账/" title="流水账">流水账<sup>14</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/阅读/" title="阅读">阅读<sup>13</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/写作/" title="写作">写作<sup>12</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/管理/" title="管理">管理<sup>11</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/项目管理/" title="项目管理">项目管理<sup>8</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/原创/" title="原创">原创<sup>6</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/软件开发/" title="软件开发">软件开发<sup>6</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/日记/" title="日记">日记<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/宗布/" title="宗布">宗布<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/创业/" title="创业">创业<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/时间管理/" title="时间管理">时间管理<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/wordpress/" title="wordpress">wordpress<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/aws/" title="aws">aws<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/影视/" title="影视">影视<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/动漫/" title="动漫">动漫<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/里程碑/" title="里程碑">里程碑<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/GTD/" title="GTD">GTD<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/春秋战国/" title="春秋战国">春秋战国<sup>3</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="http://www.zongbutech.com" target="_blank" title="宗布科技">宗布科技</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://www.nero.com" target="_blank" title="尼禄软件">尼禄软件</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://atjason.com" target="_blank" title="Jason">Jason</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://www.cnblogs.com/deltacat" target="_blank" title="我在博客园">我在博客园</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://blog.sina.com.cn/deltacatcn" target="_blank" title="我在新浪博客">我在新浪博客</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://tool.wopus.org" target="_blank" title="wopus站长工具">wopus站长工具</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  
+
+<div class="doubanshow">
+<p class="asidetitle">豆瓣秀</p>
+<div>
+<script type="text/javascript" src="http://www.douban.com/service/badge/deltacat/?show=collection&amp;n=12&amp;columns=3&amp;hidelogo=yes&amp;hideself=yes&amp;cat=book|movie" ></script>
+</div>
+</div>
+
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+  <div class="weiboshow">
+  <p class="asidetitle">新浪微博</p>
+    <iframe width="100%" height="119" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=119&fansRow=2&ptype=1&speed=0&skin=9&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=1406303630&verifier=&dpc=1"></iframe>
+</div>
+
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> 你好，我是三角猫。这里是我的个人博客，内容以原创为主。 <br/>
+			在这里，你可以看到：软件开发技术，管理心得，以及一些历史故事。</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		<a href="http://weibo.com/deltacat" target="_blank" class="icon-weibo" title="微博"></a>
+		
+		
+		<a href="https://github.com/deltacat" target="_blank" class="icon-github" title="github"></a>
+		
+		
+		
+		
+		
+		
+		<a href="https://www.douban.com/people/deltacat" target="_blank" class="icon-douban" title="豆瓣"></a>
+		
+		
+		<a href="http://www.zhihu.com/people/deltacat" target="_blank" class="icon-zhihu" title="知乎"></a>
+		
+		
+		
+	</div>
+			
+		
+				<div class="cc-license">
+          <a href="http://creativecommons.org/licenses/by/4.0" class="cc-opacity" target="_blank">
+            <img src="/img/cc-by.svg" alt="Creative Commons" />
+          </a>
+        </div>
+    
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2016 
+		
+		<a href="/about" target="_blank" title="三角猫">三角猫</a>
+		
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
+
+
+
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"deltacat"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script> 
+
+
+
+
+
+
+
+
+
+<!-- Analytics Begin -->
+
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-7388145-4', 'auto');  
+ga('send', 'pageview');
+</script>
+
+
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+  </body>
+</html>

@@ -1,0 +1,1682 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>夜猫阿罗哈</title>
+  <subtitle>暮然回首萧瑟处，也无风雨也无晴</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://www.catxn.net/"/>
+  <updated>2016-07-25T05:58:39.000Z</updated>
+  <id>http://www.catxn.net/</id>
+  
+  <author>
+    <name>三角猫</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MacOS Nodejs 环境工具配置</title>
+    <link href="http://www.catxn.net/posts/2016/MacOS%20Nodejs%20%E7%8E%AF%E5%A2%83%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE/"/>
+    <id>http://www.catxn.net/posts/2016/MacOS Nodejs 环境工具配置/</id>
+    <published>2016-07-25T04:00:00.000Z</published>
+    <updated>2016-07-25T05:58:39.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>本文讲述从零开始安装一系列Nodejs“环境工具”的方法。<br>涉及工具：</p>
+<ul>
+<li>Homebrew</li>
+<li>iTerm2</li>
+<li>nodejs, nvm, npm</li>
+<li>zsh / oh-my-zsh</li>
+</ul>
+<a id="more"></a>
+<h2 id="Homebrew-应用安装和管理工具"><a href="#Homebrew-应用安装和管理工具" class="headerlink" title="Homebrew - 应用安装和管理工具"></a>Homebrew - 应用安装和管理工具</h2><p>首先安装软件包管理器。在 <a href="http://brew.sh/" target="_blank" rel="external">Homebrew</a> 与 Macports 之间，我们选择前者。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/usr/bin/ruby <span class="_">-e</span> <span class="string">"<span class="variable">$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)</span>"</span></div></pre></td></tr></table></figure>
+<p>在安装Homebrew之后，软件包的安装、升级均可通过执行命令行 <code>brew install &lt;package&gt;</code> 来进行，详情可参阅参数帮助。</p>
+<ul>
+<li>可选安装brew增强工具：<a href="https://caskroom.github.io/" target="_blank" rel="external">cask-room</a>, <a href="https://github.com/jimbojsb/launchrocket" target="_blank" rel="external">launchrocket</a></li>
+</ul>
+<h2 id="NVM-Nodejs-包管理工具的使用"><a href="#NVM-Nodejs-包管理工具的使用" class="headerlink" title="NVM - Nodejs 包管理工具的使用"></a>NVM - Nodejs 包管理工具的使用</h2><p>Nodejs 更新很快，加上中间 io.js 的历史，导致其版本混乱，管理一直是个问题。因此诞生了Nodejs版本管理工具，常见的为 nvm 和 n 两个工具。这里我们推荐 nvm。</p>
+<p>要注意的是，不要使用 brew 来安装 node 和 nvm。如果之前已经用 brew 安装过 node，也请先卸载再继续。</p>
+<p>nvm 脚本安装方式：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.3/install.sh | bash</div></pre></td></tr></table></figure>
+<p>nvm 的更新，按照官方的方法只能手工检查，手工更新。对此，推荐使用 oh-my-zsh 的插件 <a href="https://github.com/lukechilds/zsh-nvm" target="_blank" rel="external">zsh-nvm</a> 安装。如果采用该方式，可跳过上面的安装脚本。具体安装方法请继续往下看。</p>
+<h2 id="终端增强"><a href="#终端增强" class="headerlink" title="终端增强"></a>终端增强</h2><p>iterm2 + zsh + oh-my-zsh</p>
+<p>Mac / Linux 默认的 Shell 为 Bash。一般应用来说足够。</p>
+<p>但是我们想要更漂亮的界面，更方便管理的多窗口，更智能的自动完成，更帅的命令行等功能，可以切换为zsh并安装shell增强工具 </p>
+<p>首先用 <a href="https://iterm2.com/" target="_blank" rel="external">iTerm2</a> 替换掉难看的系统终端<br>然后安装 <a href="https://github.com/robbyrussell/oh-my-zsh/" target="_blank" rel="external">oh-my-zsh</a>，选择喜欢的颜色主题。酷炫的命令行窗口就出现了。</p>
+<p>上面说过，我们用 zsh-nvm 来管理 nvm。我们需要 <a href="https://github.com/lukechilds/zsh-nvm" target="_blank" rel="external">zsh-nvm</a>这个插件。完成上述几步，启用该插件后，我们的准备工作就完成了。</p>
+<h2 id="安装、更新-Nodejs-版本"><a href="#安装、更新-Nodejs-版本" class="headerlink" title="安装、更新 Nodejs 版本"></a>安装、更新 Nodejs 版本</h2><p>现在你可以随时使用 <code>nvm upgrade</code> 来更新 NVM。用 NVM 来安装和管理Nodejs 版本，npm 来管理 node 模块。</p>
+<p>至此，一个顺手的 Nodejs 环境准备完成。</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a href="http://brew.sh/" target="_blank" rel="external">Homebrew</a></li>
+<li><a href="https://github.com/creationix/nvm" target="_blank" rel="external">NVM</a></li>
+<li><a href="https://github.com/robbyrussell/oh-my-zsh/" target="_blank" rel="external">oh-my-zsh</a></li>
+<li><a href="https://github.com/lukechilds/zsh-nvm" target="_blank" rel="external">zsh-nvm</a></li>
+<li><a href="https://iterm2.com/" target="_blank" rel="external">iTerm2</a></li>
+<li><a href="https://caskroom.github.io/" target="_blank" rel="external">cask-room</a></li>
+<li><a href="https://github.com/jimbojsb/launchrocket" target="_blank" rel="external">launchrocket</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本文讲述从零开始安装一系列Nodejs“环境工具”的方法。&lt;br&gt;涉及工具：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Homebrew&lt;/li&gt;
+&lt;li&gt;iTerm2&lt;/li&gt;
+&lt;li&gt;nodejs, nvm, npm&lt;/li&gt;
+&lt;li&gt;zsh / oh-my-zsh&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="软件开发" scheme="http://www.catxn.net/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="软件开发" scheme="http://www.catxn.net/tags/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/"/>
+    
+      <category term="nodejs" scheme="http://www.catxn.net/tags/nodejs/"/>
+    
+      <category term="macOS" scheme="http://www.catxn.net/tags/macOS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>宗布的传说</title>
+    <link href="http://www.catxn.net/posts/2016/zongbu-legend/"/>
+    <id>http://www.catxn.net/posts/2016/zongbu-legend/</id>
+    <published>2016-06-15T04:00:00.000Z</published>
+    <updated>2016-06-15T09:06:32.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>尧乃使羿诛凿齿于畴华之野，杀九婴于凶水之上，缴大风于青丘之泽，上射十日而下杀猰貐，断修蛇于洞庭，禽封豨于桑林，万民皆喜，置尧以为天子。——《<a href="http://shiwenwang.com/guwen/huainan/2612.html" target="_blank" rel="external">淮南子·本经训</a>》</p>
+</blockquote>
+<h2 id="后羿的故事"><a href="#后羿的故事" class="headerlink" title="后羿的故事"></a>后羿的故事</h2><p>历史上有两个“后羿”，而这两位的很多事迹有重叠，出场人物包括帝尧（就是尧舜禹汤那个尧），射日的“羿”（大羿），夏朝第六任国君“后羿”，嫦娥，宓妃，河伯等等。现在这些故事相互参杂，涉及政治、阴谋、多角恋，精彩纷繁，基本是笔糊涂账。</p>
+<p>不过至少有一点目前看来明确：封神的应该是指射日的后羿（大羿）。民间传说后羿射日中的后羿，也是尧时期的大羿。</p>
+<p>看过各种版本的故事，考证，我们决定传说是这样的：</p>
+<p>羿为神射手，帝尧时代，为民除害，哪有问题去哪里，深受民众爱戴，天子欣赏。与嫦娥相知相爱。后来阴差阳错嫦娥独饮飞天神药，从此与丈夫天人两隔。</p>
+<p>羿失去了妻子，虽郁郁寡欢，仍保持活雷锋本色，继续为人民服务。一日无意中救下被河伯虐待的宓妃，并惩治了河伯。</p>
+<p>后来，天帝封羿为宗布，宓妃为洛神。</p>
+<blockquote>
+<p>羿除天下之害，死而为宗布。——《<a href="http://shiwenwang.com/guwen/huainan/2618.html" target="_blank" rel="external">淮南子·氾论训</a>》</p>
+</blockquote>
+<h2 id="宗布的传说"><a href="#宗布的传说" class="headerlink" title="宗布的传说"></a>宗布的传说</h2><p>本来应该为宗布科技成立一周年写点东西而作。实际上这会儿已经过去一个月了。</p>
+<a id="more"></a>
+<p>迟来总比不来好。过去的一年，吃过的苦头踩过的坑不足为道。关键是我们毕竟磕磕巴巴挺过去了一年。</p>
+<p>玛蒂达说，要么死，要么爱。没有中间的选项。我们在创立之初，也是秉承这样的决心：做一家公司，要么山穷水尽，要么柳暗花明。<strong>只要仍有一丝希望，绝不轻言放弃</strong>。</p>
+<p>当然，今天我们一开始满满的锐气挫去了不少，取而代之的是更加的坚韧。而无论前面是什么样的沟壑，我们都会不忘初心，一往无前。审时度势，呐喊冲锋，偃旗息鼓，曲折迂回……无论路途中采用何种战术、如何改变和调整，都只为最终的目标。永不停步，只要我们仍拥有这支团结的，骄傲的团队。</p>
+<p>那么，欢迎这次的主角上场。铛铛铛铛～</p>
+<p><img src="http://www.zongbutech.com/wp-content/uploads/2016/06/logo_new_bigeye_512_512.png" alt="logo_single_384"></p>
+<p>宗布科技新LOGO。上面说那么多，其实都只是为了让这条“宗布鱼”亮相。XD</p>
+<blockquote>
+<p>设计师设计说明: 首先是辨识度，一眼看上去映入眼帘的是简单易懂的Z。点睛一笔点活了图案，让LOGO看起来是有生命的。一点同时代指团队，面对困难也不畏艰险向前冲。图案中还暗藏一个绝壁，鱼＋绝壁，“游刃有余”。再借用女儿的话，整体像海浪，希望永远保持活力，像海一样的胸怀和力量，乘风破浪！—— 千曲@宗布科技</p>
+</blockquote>
+<p>接下来数日，我们的官网、公众号，以及相关的文案、产品上的LOGO，均将逐步替换为新LOGO，敬请期待。</p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li>淮南子</li>
+<li>宗布科技</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;尧乃使羿诛凿齿于畴华之野，杀九婴于凶水之上，缴大风于青丘之泽，上射十日而下杀猰貐，断修蛇于洞庭，禽封豨于桑林，万民皆喜，置尧以为天子。——《&lt;a href=&quot;http://shiwenwang.com/guwen/huainan/2612.html&quot;&gt;淮南子·本经训&lt;/a&gt;》&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;后羿的故事&quot;&gt;&lt;a href=&quot;#后羿的故事&quot; class=&quot;headerlink&quot; title=&quot;后羿的故事&quot;&gt;&lt;/a&gt;后羿的故事&lt;/h2&gt;&lt;p&gt;历史上有两个“后羿”，而这两位的很多事迹有重叠，出场人物包括帝尧（就是尧舜禹汤那个尧），射日的“羿”（大羿），夏朝第六任国君“后羿”，嫦娥，宓妃，河伯等等。现在这些故事相互参杂，涉及政治、阴谋、多角恋，精彩纷繁，基本是笔糊涂账。&lt;/p&gt;
+&lt;p&gt;不过至少有一点目前看来明确：封神的应该是指射日的后羿（大羿）。民间传说后羿射日中的后羿，也是尧时期的大羿。&lt;/p&gt;
+&lt;p&gt;看过各种版本的故事，考证，我们决定传说是这样的：&lt;/p&gt;
+&lt;p&gt;羿为神射手，帝尧时代，为民除害，哪有问题去哪里，深受民众爱戴，天子欣赏。与嫦娥相知相爱。后来阴差阳错嫦娥独饮飞天神药，从此与丈夫天人两隔。&lt;/p&gt;
+&lt;p&gt;羿失去了妻子，虽郁郁寡欢，仍保持活雷锋本色，继续为人民服务。一日无意中救下被河伯虐待的宓妃，并惩治了河伯。&lt;/p&gt;
+&lt;p&gt;后来，天帝封羿为宗布，宓妃为洛神。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;羿除天下之害，死而为宗布。——《&lt;a href=&quot;http://shiwenwang.com/guwen/huainan/2618.html&quot;&gt;淮南子·氾论训&lt;/a&gt;》&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;宗布的传说&quot;&gt;&lt;a href=&quot;#宗布的传说&quot; class=&quot;headerlink&quot; title=&quot;宗布的传说&quot;&gt;&lt;/a&gt;宗布的传说&lt;/h2&gt;&lt;p&gt;本来应该为宗布科技成立一周年写点东西而作。实际上这会儿已经过去一个月了。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="宗布科技" scheme="http://www.catxn.net/categories/%E5%AE%97%E5%B8%83%E7%A7%91%E6%8A%80/"/>
+    
+    
+      <category term="历史" scheme="http://www.catxn.net/tags/%E5%8E%86%E5%8F%B2/"/>
+    
+      <category term="阅读" scheme="http://www.catxn.net/tags/%E9%98%85%E8%AF%BB/"/>
+    
+      <category term="写作" scheme="http://www.catxn.net/tags/%E5%86%99%E4%BD%9C/"/>
+    
+      <category term="原创" scheme="http://www.catxn.net/tags/%E5%8E%9F%E5%88%9B/"/>
+    
+      <category term="宗布" scheme="http://www.catxn.net/tags/%E5%AE%97%E5%B8%83/"/>
+    
+      <category term="一本道" scheme="http://www.catxn.net/tags/%E4%B8%80%E6%9C%AC%E9%81%93/"/>
+    
+      <category term="传说" scheme="http://www.catxn.net/tags/%E4%BC%A0%E8%AF%B4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>一行代码在wordpress任意页面实现重定向</title>
+    <link href="http://www.catxn.net/posts/2016/wordpress-shortcode-redirect/"/>
+    <id>http://www.catxn.net/posts/2016/wordpress-shortcode-redirect/</id>
+    <published>2016-06-15T01:28:42.000Z</published>
+    <updated>2016-06-15T09:06:55.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>出于某些原因，需要将Wordpress站点的某篇文章或者某个页面临时重定向到另一个地址。<br>有现成插件可以使用，太重；当然也可以给需要转向的页面加JS代码实现，这种方法又不够方便也不够优雅。</p>
+<p>于是用简码（shortcode）来实现。用一小段代码给站点增加一个新的用于转向的简码，那么每次在需要转向的页面或文章中，只要加入这么一句话，即可轻松转向：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[my_redirect url=&quot;http://www.example.com&quot;]</div></pre></td></tr></table></figure>
+<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><p>先贴代码</p>
+<a id="more"></a>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 1. 重定向简码实现</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">my_redirect_shortcode</span><span class="params">($params)</span> </span>&#123;</div><div class="line">    <span class="comment">// 提取参数</span></div><div class="line">    extract(shortcode_atts(<span class="keyword">array</span>(</div><div class="line">	      <span class="string">'url'</span> =&gt; <span class="string">'/'</span>,</div><div class="line">	    ), $params));</div><div class="line"></div><div class="line">	 <span class="comment">// 功能实现</span></div><div class="line">    header(<span class="string">'Location: '</span>.$url);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 2. 简码注册函数</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">my_add_shortcodes</span><span class="params">()</span> </span>&#123;</div><div class="line">    add_shortcode( <span class="string">'my-redirect'</span>, <span class="string">'my_redirect_shortcode'</span> );</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 3. 在初始化时注册简码</span></div><div class="line">add_action( <span class="string">'init'</span>, <span class="string">'my_add_shortcodes'</span> );</div></pre></td></tr></table></figure>
+<p>将以上代码加入主题的functions.php即可。当然，我的做法是使用子主题，然后在子主题的functions.php中加入自定义代码以避免主题升级时丢失修改。</p>
+<h2 id="Wordpress-简码介绍"><a href="#Wordpress-简码介绍" class="headerlink" title="Wordpress 简码介绍"></a>Wordpress 简码介绍</h2><p>Wordpress 从2.5版开始引入简码功能。该功能简单说就是给一段PHP代码加上名字，然后在页面通过这个名字触发服务端代码执行。调用时的用法与BBCode非常相似。</p>
+<p>Wordpress <a href="https://codex.wordpress.org/Shortcode" target="_blank" rel="external">内置了很多有用的简码</a>，同时提供了<a href="https://codex.wordpress.org/Shortcode_API" target="_blank" rel="external">自定义简码的API</a>。</p>
+<p>上面功能的实现就是基于自定义简码API，稍作解释如下。</p>
+<p>生成一个简码三个步骤：</p>
+<ol>
+<li>实现简码功能的代码。如上面的 <code>my_redirect_shortcode</code>。这是核心。</li>
+<li>注册简码的代码。如上面的函数 <code>function my_add_shortcodes()</code>。这个函数调用WP函数 <code>add_shortcode()</code>，给一个简码函数设定一个名称</li>
+<li>WP初始化时加载注册简码。</li>
+</ol>
+<p>这里面主要是简码函数的实现。该函数接受两个参数，第一个参数是简码参数，在我们这里就是url。函数实现部分调用WP函数extract来提取参数并赋缺省值。</p>
+<p>我这里实现的只使用了一个参数，实际上简码接受第二个参数<code>$content</code>，这个参数的用法如下</p>
+<p>PHP部分</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">my_shortcode</span><span class="params">($params, $content=<span class="string">'defaut content'</span>)</span> </span>&#123;</div><div class="line">    <span class="comment">// 提取参数</span></div><div class="line">    extract(shortcode_atts(<span class="keyword">array</span>(</div><div class="line">	      <span class="string">'url'</span> =&gt; <span class="string">'/'</span>,</div><div class="line">	    ), $params));</div><div class="line">	 </div><div class="line">	 <span class="comment">// 用params干点啥</span></div><div class="line">	 <span class="comment">// ...</span></div><div class="line">	 </div><div class="line">	 <span class="comment">// 用content干点啥</span></div><div class="line">	 <span class="comment">// ...</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>页面调用</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[my_code param="param"]my_content[/my_code]</div></pre></td></tr></table></figure>
+<h2 id="简码插件推荐"><a href="#简码插件推荐" class="headerlink" title="简码插件推荐"></a>简码插件推荐</h2><p>这里推荐两个很好用的插件: </p>
+<ul>
+<li><a href="https://wordpress.org/plugins/magee-shortcodes/" target="_blank" rel="external">Magee Shortcodes</a></li>
+<li><a href="https://wordpress.org/plugins/shortcodes-ultimate/" target="_blank" rel="external">Shortcodes Ultimate</a></li>
+</ul>
+<p>前一个很多主题都依赖，基于Bootstrap提供了一组HTML5/CSS3排版的简码<br>后一个提供很多非常有用的简码，同时它还有一个强大的功能就是“自定义简码”。嗯，有它就不需要去收工编辑functions.php了。XD</p>
+<h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><ul>
+<li><a href="https://codex.wordpress.org/Category:Shortcodes" target="_blank" rel="external">Wordpress Shortcode</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;出于某些原因，需要将Wordpress站点的某篇文章或者某个页面临时重定向到另一个地址。&lt;br&gt;有现成插件可以使用，太重；当然也可以给需要转向的页面加JS代码实现，这种方法又不够方便也不够优雅。&lt;/p&gt;
+&lt;p&gt;于是用简码（shortcode）来实现。用一小段代码给站点增加一个新的用于转向的简码，那么每次在需要转向的页面或文章中，只要加入这么一句话，即可轻松转向：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;[my_redirect url=&amp;quot;http://www.example.com&amp;quot;]&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;实现&quot;&gt;&lt;a href=&quot;#实现&quot; class=&quot;headerlink&quot; title=&quot;实现&quot;&gt;&lt;/a&gt;实现&lt;/h2&gt;&lt;p&gt;先贴代码&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="建站心得" scheme="http://www.catxn.net/categories/%E5%BB%BA%E7%AB%99%E5%BF%83%E5%BE%97/"/>
+    
+    
+      <category term="建站" scheme="http://www.catxn.net/tags/%E5%BB%BA%E7%AB%99/"/>
+    
+      <category term="wordpress" scheme="http://www.catxn.net/tags/wordpress/"/>
+    
+      <category term="php" scheme="http://www.catxn.net/tags/php/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>在阿里云建设一个企业网站</title>
+    <link href="http://www.catxn.net/posts/2016/%E5%9C%A8%E9%98%BF%E9%87%8C%E4%BA%91%E5%BB%BA%E8%AE%BE%E4%B8%80%E4%B8%AA%E4%BC%81%E4%B8%9A%E7%BD%91%E7%AB%99/"/>
+    <id>http://www.catxn.net/posts/2016/在阿里云建设一个企业网站/</id>
+    <published>2016-05-15T04:00:00.000Z</published>
+    <updated>2016-06-15T01:45:08.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>企业门户网站的设计是一个非常常见且旺盛的需求。而制作一个门户网站有非常多的方法。最近我们为几个企业用户搭建了门户网站，这里做一些简单的总结，包括一些常会遇到的问题，以便少走弯路。</p>
+<ul>
+<li>上篇：准备工作，主机与域名</li>
+<li>中篇：建站利器Wordpress</li>
+<li>下篇：为网站配置邮件</li>
+</ul>
+<h1 id="上篇"><a href="#上篇" class="headerlink" title="上篇"></a>上篇</h1><p>首先我们来说下基础设施的准备。</p>
+<h2 id="主机的选择"><a href="#主机的选择" class="headerlink" title="主机的选择"></a>主机的选择</h2><p>对于个人用户，建立一个个人网站，可以选用一些免费的博客社区，或者廉价的个人博客主机。而企业用户考虑到通常会需要CMS系统，访问量会较大，未来有可能升级等等一系列因素，推荐使用更专业的国内服务商。</p>
+<p>在这里，我们选择阿里云。它最大的好处是提供包括域名注册、空间托管、域名备案等一系列服务，所有的需要都可以一站解决。在这一部分，我们会一步步说明如何选购一套阿里云主机。</p>
+<p>在此之前，如果没有阿里云账号，请先<a href="https://www.aliyun.com" target="_blank" rel="external">注册一个</a>。:)</p>
+<p>基础环境首先是选择主机类型，然后是域名注册、备案，最后是选择哪种建站工具/框架。</p>
+<a id="more"></a>
+<h3 id="主机选择。"><a href="#主机选择。" class="headerlink" title="主机选择。"></a>主机选择。</h3><p>阿里云主机有三种：</p>
+<ul>
+<li><a href="https://www.aliyun.com/product/ecs" target="_blank" rel="external">云服务器 ECS</a></li>
+<li><a href="https://wanwang.aliyun.com/hosting" target="_blank" rel="external">云虚拟主机</a></li>
+<li><a href="https://wanwang.aliyun.com/hosting/elastic" target="_blank" rel="external">弹性Web托管</a>(新一代云虚拟主机)</li>
+</ul>
+<p>基本上，如果运维能力不强，同时主要用于门户网站，没有太多复杂功能的话，推荐用后两种。经济实用，维护简单。<br>反之，如果具备安装、配置、管理维护系统，不仅是门户网站同时还要做深入后端开发的话，推荐使用ECS。</p>
+<h3 id="域名注册。"><a href="#域名注册。" class="headerlink" title="域名注册。"></a>域名注册。</h3><p>作为国内企业门户，ICP备案是必需要做的。所以我们推荐域名注册也采用<a href="https://wanwang.aliyun.com/domain" target="_blank" rel="external">阿里云（万网）</a>的服务，并直接用<a href="https://beian.gein.cn" target="_blank" rel="external">阿里云的代备案系统</a>进行备案。</p>
+<p>域名注册比较简单，不多说。简单列几个注意事项：</p>
+<ul>
+<li>域名注册请务必使用企业名称和营业执照注册，所有权属于企业，不要用个人身份注册；</li>
+<li>域名“实名认证”和“ICP备案”是两码事，需要分别进行。.CN 域名必需实名认证，其他域名不强制实名认证，建议都认证。</li>
+<li>无备案的网站无法上线。<strong>备案时间通常会需要15～20天，请提前准备</strong>。</li>
+</ul>
+<h3 id="建站工具"><a href="#建站工具" class="headerlink" title="建站工具"></a>建站工具</h3><p>纯静态网站非常简单，这里不讨论。作为一个企业门户，基本的内容发布管理之类的功能还是需要的。建立这样一个网站，常见这些方案：</p>
+<ol>
+<li>从头做一个</li>
+<li>基于网站框架做一个，比如 ThinkPHP, MEAN 等等</li>
+<li>基于内容管理框架定制，比如 PHPCMS, ThinkCMF</li>
+<li>使用 WordPress 定制</li>
+</ol>
+<p>上述方案由难至易，制作周期从长到短。每种方案均有适应的场景和优缺点。对于普通的企业门户类网站来说，我们推荐使用第三第四。其中 WordPress 方案代码工作量最少（几乎没有），同时有大量的插件、主题模板可供挑选，足以满足大多数场景的需求。<a href="http://www.zongbutech.com" target="_blank" rel="external">宗布科技官网</a>就是用wordpress制作。</p>
+<p>上篇先写到这里，如果你是企业的采购负责人而不是开发者，了解这些就可以了。</p>
+<p>后面我们会继续总结Wordpress的一些优化，如何在网站上应用联系表单收取客户来信等内容。</p>
+<h1 id="下篇"><a href="#下篇" class="headerlink" title="下篇"></a>下篇</h1><p>讲到这里，先说明一下本文的目的。这不是一篇教程，此类教程已经到处都是了，Wordpress官方中文文档也完全可以满足要求。这里只是针对建站流程中的一些关键点做一些说明，面向的读者也不是开发者，而是普通的有建站需求的企业用户。相信通过这些说明，能够提高一些沟通的效率。动手能力强的话，能够通过这个简单的向导自己动手搞一个网站出来，那是再好不过。</p>
+<p>在继续之前，请记住：</p>
+<p>大部分企业门户网站的需求，都可以用 Wordpress 搞定。<br>大部分企业门户网站的需求，都可以用 Wordpress 搞定。<br>大部分企业门户网站的需求，都可以用 Wordpress 搞定。</p>
+<p>重要的事情说三遍。</p>
+<p>这不是吹牛，wordpress 本身已经是一个完整的内容发布和管理系统，通过其海量的主题模板，官方及第三方插件的支撑，基本上一个独立的内容类网站需要的功能，都可以实现。</p>
+<p>什么？你说你会PHP编程，不需要Wordpress？实际上，以wordpress为基础，通过它的插件系统，完全可以将你的PHP代码做成 Wordpress 的插件来执行，避免重复开发基础框架。</p>
+<h2 id="wordpress-的一些优化"><a href="#wordpress-的一些优化" class="headerlink" title="wordpress 的一些优化"></a>wordpress 的一些优化</h2><p>Wordpress 的安装使用，这里不再赘述，有兴趣的可通过文末的参考链接进行深入学习。这里仅针对使用中的一些问题做一些提示，以及一些小技巧。</p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>首先，需要下载 Wordpress 官方安装包。国内网站需要ICP备案，并且根据工信部要求，网站首页必须放置ICP备案号。从善如流的 Wordpress 官方已经为中国用户增加了输入ICP备案的设置入口，但是请注意：<strong>目前只有从中文版官网下载的安装包才具有该功能</strong>。</p>
+<p>Wordpress 安装需要有 PHP, MySQL 支持，请确保你的主机支持并已正确安装。设置数据库建议为wordpress设立专用帐户，以及足够强度的密码。</p>
+<h3 id="美化与定制"><a href="#美化与定制" class="headerlink" title="美化与定制"></a>美化与定制</h3><p>Wordpress 强大之处在于，通过大量的官方和第三方主题，来提供多样的外观。</p>
+<p>还可以通过“子主题”的方式，在原主题上叠加或修改功能，比如将本来只有官方主题才支持的ICP备案号嵌入。同时，通过子主题的方式修改主题，原主题的升级并不会影响已有的修改。</p>
+<p>对于企业官网，推荐几个必装的插件：</p>
+<ul>
+<li>Contact Form : 反馈表单。用户可以直接在网站留言，上传文件，并发送至设定的官方邮箱</li>
+<li>Google Font Fix: 将一些对Google资源的访问重定向到国内高速镜像</li>
+<li>Magee Shortcodes: 快捷排版短码</li>
+<li>Google Analyticator: google 统计</li>
+<li>Members: 用户权限管理</li>
+</ul>
+<p><strong>这里强烈推荐 Contact Form，只需要一行代码，即可在网站任何地方嵌入一个联系表单。</strong></p>
+<h3 id="域名切换"><a href="#域名切换" class="headerlink" title="域名切换"></a>域名切换</h3><p>在网站正式上线前，我们会用一个测试域名来调整内容、版式等等。到正式上线，则需切换新域名。这个过程略复杂，但是基本可以做到无损。</p>
+<p>第一步，域名解析指向wordpress所在主机，服务主机绑定新域名<br>第二步，管理控制台-&gt;设置-&gt;wordpress地址&amp;站点地址，修改为新域名<br>第三步，wp-config.php, 增加一行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">define(&apos;RELOCATE&apos;,true);</div></pre></td></tr></table></figure>
+<p>第四步，打开数据库管理后台，替换数据库中旧域名字符串为新域名</p>
+<p>以上操作完成后，即可正常使用。</p>
+<h2 id="邮件发送设置"><a href="#邮件发送设置" class="headerlink" title="邮件发送设置"></a>邮件发送设置</h2><p>企业官网对于邮件的使用主要包括两方面：一是官网的“反馈”功能，比如收集用户信息，报名等等；二是在网站通过特定入口群发邮件。</p>
+<p>对于阿里云来说，有一个明确的问题就是ipv6。缺省状态阿里云ECS主机不支持ipv6，我们需要在设置文件中关闭ipv6，以postfix为例，将<code>inet_protocal</code>值改为ipv4：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"># Enable IPv4, and IPv6 if supported</div><div class="line"># inet_protocols = all</div><div class="line">inet_protocols = ipv4</div><div class="line"></div><div class="line">#inet_interfaces = all</div><div class="line">#inet_interfaces = $myhostname</div><div class="line">#inet_interfaces = $myhostname, localhost</div><div class="line">inet_interfaces = all</div></pre></td></tr></table></figure>
+<p>然后，为了能够发送正确解析DNS，并避免被收件服务器当作垃圾邮件，需要分别在域名解析和postfix做一些设置。</p>
+<h3 id="首先域名需要添加三条DNS记录："><a href="#首先域名需要添加三条DNS记录：" class="headerlink" title="首先域名需要添加三条DNS记录："></a>首先域名需要添加三条DNS记录：</h3><p>假设主机名设定为 admail.yourdomain.com，那么记录如下</p>
+<table>
+<thead>
+<tr>
+<th>记录</th>
+<th>记录类型</th>
+<th>记录值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>admail</td>
+<td>A</td>
+<td>&lt;主机IP地址&gt;</td>
+</tr>
+<tr>
+<td>@</td>
+<td>MX</td>
+<td>admail.yourdomain.com</td>
+</tr>
+<tr>
+<td>@</td>
+<td>TXT</td>
+<td>v=spf1 a mx ~all</td>
+</tr>
+</tbody>
+</table>
+<p>最后这条TXT的记录被称为“发件人策略框架（SPF）”记录，通过不同等级的设置，可以很有效地避免被接收邮件的服务系统判定为垃圾邮件。该系统的详细设置方法这里不多做介绍。多数情况下如果不是大量高频次群发，按照上面的形式填写已可满足要求。</p>
+<h3 id="postfix-的一些额外设置"><a href="#postfix-的一些额外设置" class="headerlink" title="postfix 的一些额外设置"></a>postfix 的一些额外设置</h3><p>这些设置对于网站上的邮件反馈表单影响不大，不过建议还是根据实际情况做调整</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">myhostname = admail.yourdomain.com</div><div class="line">mydomain = yourdomain.com</div><div class="line">myorigin = $mydomain</div><div class="line">mydestination = $myhostname, localhost.$mydomain, localhost, $mydomain</div><div class="line">home_mailbox = Maildir/</div><div class="line"># 如果邮件量大，修改数据盘位置，目录需要先手工创建</div><div class="line">mail_spool_directory = /data/mail</div></pre></td></tr></table></figure>
+<p>修改设置后需要重启邮件服务失设置生效</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ service postfix restart</div></pre></td></tr></table></figure>
+<h3 id="垃圾邮件助手"><a href="#垃圾邮件助手" class="headerlink" title="垃圾邮件助手"></a>垃圾邮件助手</h3><p>除了以上设置，如果需要群发邮件，还需要在发送频率，内容等方面注意一些问题。这方面Google有一份详细的指南可供参考：<a href="https://support.google.com/mail/answer/81126" target="_blank" rel="external">Google 群发邮件发件人指南</a></p>
+<h2 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h2><p>以上即为一个正式的企业官网建立过程所需资源的简单介绍。实际上，要一个高速稳定的网站，还需要CDN、图床等工具。这些也都可以在网站上线后逐步优化。</p>
+<p>宗布科技的官网2.0正是这样建立的。有需要可联系我们。</p>
+<blockquote>
+<p><strong>福利：</strong> 阿里云九折优惠码<br>在购买ECS、RDS、云解析、弹性Web托管等等服务时均可使用。<br>企业用户请使用 <strong><code>jhx4xx</code></strong><br>个人用户请使用 <strong><code>3v6unp</code></strong></p>
+</blockquote>
+<h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><ul>
+<li><a href="http://www.wpdaxue.com/" target="_blank" rel="external">WordPress 大学</a></li>
+<li><a href="https://www.aliyun.com/zixun/aggregation/212.html" target="_blank" rel="external">阿里云Wordpress专题</a></li>
+<li><a href="https://support.google.com/mail/answer/81126" target="_blank" rel="external">Google 群发邮件指南</a></li>
+<li><a href="http://www.cnblogs.com/dudu/archive/2012/12/12/linux-postfix-mailserver.html" target="_blank" rel="external">阿里云CentOS postfix</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;企业门户网站的设计是一个非常常见且旺盛的需求。而制作一个门户网站有非常多的方法。最近我们为几个企业用户搭建了门户网站，这里做一些简单的总结，包括一些常会遇到的问题，以便少走弯路。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;上篇：准备工作，主机与域名&lt;/li&gt;
+&lt;li&gt;中篇：建站利器Wordpress&lt;/li&gt;
+&lt;li&gt;下篇：为网站配置邮件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;上篇&quot;&gt;&lt;a href=&quot;#上篇&quot; class=&quot;headerlink&quot; title=&quot;上篇&quot;&gt;&lt;/a&gt;上篇&lt;/h1&gt;&lt;p&gt;首先我们来说下基础设施的准备。&lt;/p&gt;
+&lt;h2 id=&quot;主机的选择&quot;&gt;&lt;a href=&quot;#主机的选择&quot; class=&quot;headerlink&quot; title=&quot;主机的选择&quot;&gt;&lt;/a&gt;主机的选择&lt;/h2&gt;&lt;p&gt;对于个人用户，建立一个个人网站，可以选用一些免费的博客社区，或者廉价的个人博客主机。而企业用户考虑到通常会需要CMS系统，访问量会较大，未来有可能升级等等一系列因素，推荐使用更专业的国内服务商。&lt;/p&gt;
+&lt;p&gt;在这里，我们选择阿里云。它最大的好处是提供包括域名注册、空间托管、域名备案等一系列服务，所有的需要都可以一站解决。在这一部分，我们会一步步说明如何选购一套阿里云主机。&lt;/p&gt;
+&lt;p&gt;在此之前，如果没有阿里云账号，请先&lt;a href=&quot;https://www.aliyun.com&quot;&gt;注册一个&lt;/a&gt;。:)&lt;/p&gt;
+&lt;p&gt;基础环境首先是选择主机类型，然后是域名注册、备案，最后是选择哪种建站工具/框架。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="建站心得" scheme="http://www.catxn.net/categories/%E5%BB%BA%E7%AB%99%E5%BF%83%E5%BE%97/"/>
+    
+    
+      <category term="建站" scheme="http://www.catxn.net/tags/%E5%BB%BA%E7%AB%99/"/>
+    
+      <category term="软件开发" scheme="http://www.catxn.net/tags/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/"/>
+    
+      <category term="wordpress" scheme="http://www.catxn.net/tags/wordpress/"/>
+    
+      <category term="阿里云" scheme="http://www.catxn.net/tags/%E9%98%BF%E9%87%8C%E4%BA%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>宗布科技2015年终总结</title>
+    <link href="http://www.catxn.net/posts/2015/%E5%AE%97%E5%B8%832015%E6%80%BB%E7%BB%93/"/>
+    <id>http://www.catxn.net/posts/2015/宗布2015总结/</id>
+    <published>2015-12-30T15:30:00.000Z</published>
+    <updated>2016-06-15T09:07:29.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://catxn.u.qiniudn.com/images/zbu20151229.jpg-o" alt="感谢一路走来的伙伴。一无所有时你们的加入和陪伴，将铭记于心"></p>
+<p>在这个年度交替的时间，按说应该打打鸡血……不过还是算了吧。</p>
+<p>宗布科技成立已逾半年，如同大多数创业团队，这个初期并不顺利。</p>
+<p>首先是团队组建的过程。义无反顾放弃安逸的工作来支援的老伙计虽尽在不言中，招聘却是个痛苦的过程。起步阶段的创业型公司，无法开出高薪，想象的出高强度的工作，前途的不确定性，对打工者来说，明显不是一个好的选择。在这种情况下，最终居然能够组建起能够同时运作三个项目的团队，也是个奇迹，虽然这离完成形态还挺远。</p>
+<a id="more"></a>
+<p>5月到9月，所有的工作重心都在我们首个孵化的互金产品。对互联网金融的不熟悉，与合作伙伴痛苦的磨合，产品设计和策略反复的修改……说起来是几乎每个初创团队都会遇到的问题，却经常都让人有撒手不干的冲动。只有凭借莫名其妙的信念在坚持。</p>
+<p>9开始启动正式融资，却遭遇所谓的“资本寒冬”，虽然现在知道，这只是个言过其实的形容，但融资的难度的确比上半年高了许多。9月到11月，近三个月的时间，参加各种融资活动、路演、培训营、访谈刷脸，折腾一大圈下来，虽然能进入正式面谈阶段的投资人都表示十分看好，却没有打算真正掏钱出来。因为很明显，宗布的模式，并不符合投资人希望迅速膨胀获利的路数。</p>
+<p>合作业务，宗布科技采用的技术孵化/技术VC的模式，本意是扶持真正有价值的未来。但这种模式直接的后果是需要通过其他方式来维系资金。因此我们在谨慎地选择合作伙伴，给予全方位的技术支持，却很难在短期获得收入。因此，一方面业务量增长缓慢，另一方面在一定时期内都会是入不敷出的状态。当然我们一方面在坚持技术孵化的路线，另一方面也在调整一些操作细节来适当增加收入。</p>
+<p>团队方面。宗布科技的伙伴现在大体分两种，一种是跟我一样的老家伙，除了呕心沥血加班干活，还要背负家庭责任，各种纷乱的家务事。另一种是初出茅庐的新人，年轻的肩膀直接承担了重要的任务，一边拼命跟上进度，一边奋力学习成长。即使已经在有意识地调整节奏松弛有道，仍然会担心团队压力过大。</p>
+<p>一路磕磕绊绊，团队每一个人都坚持了下来，并且还是取得了一个又一个的成就。而所有的这些不顺利，其实也都在意料之中，成长，就在这些走过的甚至有些可被称为折磨的经历中悄然进行。宗布科技的每个成员，在迈出第一步时，就知道必然会经历这样的过程，并仍将在这条布满坑洼的创业之路艰难前行。</p>
+<p>为什么要承受这些？</p>
+<p>并不是每一个创业者都能最后牛逼。但是，我们至少可以通过自己的努力，让身边的世界美好一点。宗布科技和同芯资本的愿景，是通过自身的努力加上扶持其他科技型公司，成为技术VC来推动技术发展。</p>
+<p>废话不再多说，对创业团队来说，低头做事，抬头看路。2016上半年，宗布科技首要目标就是实现盈利，第二目标是引入新的资金。伙伴们一起鼓足干劲一起努力。还是那俩字儿，别怕。</p>
+<hr>
+<p>年终总结写到这里，在孵化器群里看到了这张图：</p>
+<p><img src="http://catxn.u.qiniudn.com/images/T2NB2015.jpg-o" alt="T2发布会"></p>
+<p>这个逼装的，要给满分。</p>
+<h3 id="附：宗布科技2015大事记"><a href="#附：宗布科技2015大事记" class="headerlink" title="附：宗布科技2015大事记"></a>附：宗布科技2015大事记</h3><ul>
+<li>5月，创立</li>
+<li>6月，在聚募进行股权众筹，开投2小时内超募</li>
+<li>7月，首个产品内测上线，进入互联网金融领域</li>
+<li>8月，新项目团队组建，涉足娱乐社交</li>
+<li>10月，与“同芯资本”达成战略合作</li>
+<li>11月，神秘硬件产品立项，启动健康战略</li>
+<li>12月，与某教育集团签约，试水课外教育市场</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://catxn.u.qiniudn.com/images/zbu20151229.jpg-o&quot; alt=&quot;感谢一路走来的伙伴。一无所有时你们的加入和陪伴，将铭记于心&quot;&gt;&lt;/p&gt;
+&lt;p&gt;在这个年度交替的时间，按说应该打打鸡血……不过还是算了吧。&lt;/p&gt;
+&lt;p&gt;宗布科技成立已逾半年，如同大多数创业团队，这个初期并不顺利。&lt;/p&gt;
+&lt;p&gt;首先是团队组建的过程。义无反顾放弃安逸的工作来支援的老伙计虽尽在不言中，招聘却是个痛苦的过程。起步阶段的创业型公司，无法开出高薪，想象的出高强度的工作，前途的不确定性，对打工者来说，明显不是一个好的选择。在这种情况下，最终居然能够组建起能够同时运作三个项目的团队，也是个奇迹，虽然这离完成形态还挺远。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="宗布科技" scheme="http://www.catxn.net/categories/%E5%AE%97%E5%B8%83%E7%A7%91%E6%8A%80/"/>
+    
+    
+      <category term="原创" scheme="http://www.catxn.net/tags/%E5%8E%9F%E5%88%9B/"/>
+    
+      <category term="日记" scheme="http://www.catxn.net/tags/%E6%97%A5%E8%AE%B0/"/>
+    
+      <category term="创业" scheme="http://www.catxn.net/tags/%E5%88%9B%E4%B8%9A/"/>
+    
+      <category term="里程碑" scheme="http://www.catxn.net/tags/%E9%87%8C%E7%A8%8B%E7%A2%91/"/>
+    
+      <category term="宗布" scheme="http://www.catxn.net/tags/%E5%AE%97%E5%B8%83/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>让我们谈谈技术理想</title>
+    <link href="http://www.catxn.net/posts/2015/%E8%B0%88%E8%B0%88%E6%8A%80%E6%9C%AF%E7%90%86%E6%83%B3/"/>
+    <id>http://www.catxn.net/posts/2015/谈谈技术理想/</id>
+    <published>2015-08-23T15:30:00.000Z</published>
+    <updated>2016-06-15T06:14:01.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>今天，我们来谈一谈理想。</p>
+<h1 id="梦想存在吗？"><a href="#梦想存在吗？" class="headerlink" title="梦想存在吗？"></a>梦想存在吗？</h1><p>有位朋友曾说，大部分人的所谓梦想，无论包装的多么绚丽，其实说白了只是想多挣钱而已。</p>
+<p>好在他加了个定语“所谓”。是的，单纯的梦想一定存在，只是在这个物质化的时代，被深深地埋了起来。</p>
+<p>梦想一定是有的，而且无分高下。</p>
+<p>有的人，想成为一流的工匠；有的人，想成为聚光灯下的焦点；有的人，喜欢终生流浪。当然真的有人只是喜欢数钱到手软，这梦其实也挺好。只要是用自己的努力去获取，不伤害他人，那么无论什么样的梦，都值得被尊重。</p>
+<p>只是承载梦想往往的确需要金钱的支撑。就好比宗布，作为一家公司，赚钱这件事至关重要。可赚钱不是我们的终极目标，至少不是唯一目标，它只是为了达成目的手段。在这个前提下，需要的资金，我们会去努力获取，也会努力让投资人的付出得到应有的回报。</p>
+<p>让梦想归于本心，让金钱归于商业。梦要有，钱也要赚，平衡很重要。只是，偶尔需要问下自己，当天平开始倾斜的时候，你选择哪一边？</p>
+<p><img src="http://catxn.u.qiniudn.com/images/xlbls-jjc.jpeg-m" alt="希拉波利斯古城竞技场"></p>
+<h1 id="返璞归真"><a href="#返璞归真" class="headerlink" title="返璞归真"></a>返璞归真</h1><p>其实我今天想说的是技术理想。</p>
+<p>技术宅的理想是什么？码农的理想是什么？</p>
+<a id="more"></a>
+<p>作为一个资深技术宅，自己以及身边的很多朋友，都曾经有一个用技术改变世界的梦想。也或者只是一个简单的诉求：作为一个技术人才，能够不用操心技术之外的事情，通过专注于技术本身而升职加薪，出任CEO，赢取白富美，走上人生巅峰。</p>
+<p>我认识很多真正热爱编程的朋友，他们的追求，就是能够成为技术大牛。成为某个领域的专家，拥有属于自己的编程框架，甚至推动某种语言的发展。</p>
+<p>程序员的快乐有时很单纯，甚至很多时候他们的享乐就是得到一件给力的开发工具，比如一块不足千元的机械键盘，就足以给他持续很久的幸福感。</p>
+<p>老罗曾在锤子发布会上自我调侃，说自己其实不是工匠，只是工匠们的吉祥物。他有的只是工匠的精神，实际上做出带有浓厚工匠气质产品的，是他的一群优秀的工匠团队。无论锤子科技和锤子手机能走多远，我都非常认可“工匠精神”本身。</p>
+<p>拥有一个优秀的技术团队，让每一个成员都能愉快的工作，让大家拥有世界上最可爱的同事。这就是我的技术理想。</p>
+<p>我希望我的团队，能够醉心于技术本身，精心打磨每一款产品；全力以赴专注于自己喜欢并擅长的东西，在未来推动技术的发展。</p>
+<p>我希望我团队的每一个成员，都能仅凭自己的能力，得到富足的生活，得到他人的尊重和赞赏，拥有一群快乐的伙伴。</p>
+<p>我希望在我的团队里，你无需为生活琐事操心，无需应付办公室政治，不需要硬着头皮做自己不喜欢的事。</p>
+<p>我希望大家的理想，都可以在这里实现。</p>
+<p>我希望……</p>
+<h1 id="为伊消得人憔悴"><a href="#为伊消得人憔悴" class="headerlink" title="为伊消得人憔悴"></a>为伊消得人憔悴</h1><p>只有你真正在为内心深处的，真正属于自己的梦努力的时候，才会甘愿付出一切，无怨无悔。</p>
+<p>团队和我已经连续高强度地工作了几个月。不想吹嘘自己是铁人，踏出第一步开始到现在，不说别的，光体重就已经下降了不少，传说发际线也上移了虽然我自己还没看出来。从最初一个多月的过度兴奋到失眠，到最近半夜到家倒头便睡，也算是又跨过了一个心理时期。关键是，虽然爬出一个又一个坑，而且摆明了前面还有更多的坑和老老实实混日子就从来不需要面对的风险在等着，内心却始终充实，因为知道自己在做什么，将要做什么。</p>
+<p>虽然现在的创业圈不乏浮躁和忽悠，充斥拜金和表面文章，但是一定还有大把如我们一样的傻逼在为精心打磨技术，打磨团队，打磨产品在努力。甚至付出一切，只为寻找“活着”的感觉。</p>
+<p>我们可能无法在看得见的未来改变世界，至少我们可以凭借双手，让身边可以触摸到的事物，变得好那么一点。</p>
+<p>保持饥渴，不断前行。</p>
+<h1 id="写在后面"><a href="#写在后面" class="headerlink" title="写在后面"></a>写在后面</h1><p>一边是空有技术和壮志的技术人才，另一边却是很多有心有资源的公司缺乏靠谱的开发团队，甚至不知道怎样去寻找团队。</p>
+<p>我们就是要作一道桥梁，为企业打造优质团队，为技术人才构建理想的工作空间。于是：</p>
+<ul>
+<li>2015年5月，自筹资金，宗布科技成立；</li>
+<li>2015年6月，首次尝试融资；</li>
+<li>2015年7月，第一个孵化产品“涌金门”iOS版内测；</li>
+<li>2015年8月，“涌金门”Android版内测；第二个孵化产品“iParty”团队组建，App完成Demo、路演；</li>
+<li>即将到来的9月，抗日战争胜利70周年，宗布将正式启动新一轮融资计划……</li>
+</ul>
+<p>一步一个脚印。如同抗战，艰苦而充满激情的创业之路还很漫长。</p>
+<p>谨以此文，纪念宗布科技百天。</p>
+<h1 id="广告时间"><a href="#广告时间" class="headerlink" title="广告时间"></a>广告时间</h1><p><strong>一</strong></p>
+<blockquote>
+<p>我们正在参加第三期“36氪极速融资”，请点开链接 [<a href="http://t.cn/RLFUHKU" target="_blank" rel="external">36氪极速融资</a>] 投出宝贵的一票，或者扫描二维码立刻分享，扩散。你的支持是我们不断前行的动力。</p>
+<p><a href="http://t.cn/RLFUHKU" target="_blank" rel="external"><img src="http://s.jiathis.com/qrcode.php?url=https%3A%2F%2Frong.36kr.com%2Fm%2Fj3word.html%3Fcid%3D161176%26source%3Dweb" alt="36氪极速融资"></a><br>28号零点之前，保持！！</p>
+</blockquote>
+<p><strong>二</strong></p>
+<blockquote>
+<p>业务联系：<a href="&#x6d;&#97;&#x69;&#x6c;&#x74;&#x6f;&#58;&#x62;&#x69;&#x7a;&#64;&#x7a;&#x6f;&#110;&#x67;&#98;&#117;&#x74;&#x65;&#x63;&#104;&#46;&#99;&#x6f;&#109;">&#x62;&#x69;&#x7a;&#64;&#x7a;&#x6f;&#110;&#x67;&#98;&#117;&#x74;&#x65;&#x63;&#104;&#46;&#99;&#x6f;&#109;</a><br>求职联系：<a href="&#109;&#97;&#105;&#x6c;&#116;&#x6f;&#x3a;&#x6a;&#111;&#x62;&#64;&#x7a;&#111;&#110;&#x67;&#x62;&#x75;&#116;&#x65;&#99;&#x68;&#x2e;&#99;&#x6f;&#x6d;">&#x6a;&#111;&#x62;&#64;&#x7a;&#111;&#110;&#x67;&#x62;&#x75;&#116;&#x65;&#99;&#x68;&#x2e;&#99;&#x6f;&#x6d;</a></p>
+</blockquote>
+<p><strong>三</strong></p>
+<blockquote>
+<p>“简书”这个写作和阅读平台非常不错，推荐下载使用。进入后关注我，可以看到我过去无所事事期间写的一系列文章。看见喜欢的文字就点个赞。</p>
+</blockquote>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;今天，我们来谈一谈理想。&lt;/p&gt;
+&lt;h1 id=&quot;梦想存在吗？&quot;&gt;&lt;a href=&quot;#梦想存在吗？&quot; class=&quot;headerlink&quot; title=&quot;梦想存在吗？&quot;&gt;&lt;/a&gt;梦想存在吗？&lt;/h1&gt;&lt;p&gt;有位朋友曾说，大部分人的所谓梦想，无论包装的多么绚丽，其实说白了只是想多挣钱而已。&lt;/p&gt;
+&lt;p&gt;好在他加了个定语“所谓”。是的，单纯的梦想一定存在，只是在这个物质化的时代，被深深地埋了起来。&lt;/p&gt;
+&lt;p&gt;梦想一定是有的，而且无分高下。&lt;/p&gt;
+&lt;p&gt;有的人，想成为一流的工匠；有的人，想成为聚光灯下的焦点；有的人，喜欢终生流浪。当然真的有人只是喜欢数钱到手软，这梦其实也挺好。只要是用自己的努力去获取，不伤害他人，那么无论什么样的梦，都值得被尊重。&lt;/p&gt;
+&lt;p&gt;只是承载梦想往往的确需要金钱的支撑。就好比宗布，作为一家公司，赚钱这件事至关重要。可赚钱不是我们的终极目标，至少不是唯一目标，它只是为了达成目的手段。在这个前提下，需要的资金，我们会去努力获取，也会努力让投资人的付出得到应有的回报。&lt;/p&gt;
+&lt;p&gt;让梦想归于本心，让金钱归于商业。梦要有，钱也要赚，平衡很重要。只是，偶尔需要问下自己，当天平开始倾斜的时候，你选择哪一边？&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://catxn.u.qiniudn.com/images/xlbls-jjc.jpeg-m&quot; alt=&quot;希拉波利斯古城竞技场&quot;&gt;&lt;/p&gt;
+&lt;h1 id=&quot;返璞归真&quot;&gt;&lt;a href=&quot;#返璞归真&quot; class=&quot;headerlink&quot; title=&quot;返璞归真&quot;&gt;&lt;/a&gt;返璞归真&lt;/h1&gt;&lt;p&gt;其实我今天想说的是技术理想。&lt;/p&gt;
+&lt;p&gt;技术宅的理想是什么？码农的理想是什么？&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="宗布科技" scheme="http://www.catxn.net/categories/%E5%AE%97%E5%B8%83%E7%A7%91%E6%8A%80/"/>
+    
+    
+      <category term="原创" scheme="http://www.catxn.net/tags/%E5%8E%9F%E5%88%9B/"/>
+    
+      <category term="日记" scheme="http://www.catxn.net/tags/%E6%97%A5%E8%AE%B0/"/>
+    
+      <category term="创业" scheme="http://www.catxn.net/tags/%E5%88%9B%E4%B8%9A/"/>
+    
+      <category term="里程碑" scheme="http://www.catxn.net/tags/%E9%87%8C%E7%A8%8B%E7%A2%91/"/>
+    
+      <category term="宗布" scheme="http://www.catxn.net/tags/%E5%AE%97%E5%B8%83/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>你比想象中强大</title>
+    <link href="http://www.catxn.net/posts/2015/%E4%BD%A0%E6%AF%94%E6%83%B3%E8%B1%A1%E4%B8%AD%E5%BC%BA%E5%A4%A7/"/>
+    <id>http://www.catxn.net/posts/2015/你比想象中强大/</id>
+    <published>2015-05-20T02:00:00.000Z</published>
+    <updated>2016-06-15T06:14:14.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="写在宗布科技满月"><a href="#写在宗布科技满月" class="headerlink" title="写在宗布科技满月"></a>写在宗布科技满月</h1><p>昨天，“独角兽之光”开展了第一次沙龙活动，我们有幸成为这首场演出的主讲。</p>
+<p>沙龙中我们给在座的小伙伴们分享了几个故事，那是宗布科技三人组从玩魔兽世界开始，到一起做事，得到的一些感悟。</p>
+<p>故事分别是“爱拍迹”，“暗黑小助手”，和去年的“行者”。从三四年前的爱拍迹开始，每次做一个产品，我们都会发现一些自己欠缺的东西，于是在下一个产品中将其补足。比如在做爱拍迹时，UI是我们非常缺乏的角色，于是从暗黑小助手，我们邀请了一位资深的设计师，也因此暗黑小助手是我们玩票产品中最成功的一个。这位设计师至今仍在与我们一起工作。</p>
+<p>数一数也做了这么多东西了，有成功有失败，从这个角度，我们也算“连续创业者”了吧？XD</p>
+<a id="more"></a>
+<p>补充设计师、核心成员角色分化各司其职、增强产品能力、学习融资、体验外包，若干年来我们一步步走来，最终将作产品最需要的东西提炼为两个字：“专注”。</p>
+<p>的确，当你想做一个产品时，你会需要一个牛逼的研发团队，一个高逼格的设计师，一个超级会玩的产品经理，以及其他许多，这些都必不可少，然后最终，真正能使你将想法变成产品，最重要的仍旧是专注。</p>
+<p>这也是为什么，我们最终决定全职创业。如果没有全副身心的投入，你是无法和一样牛逼，或者更牛逼的专职团队竞争的。</p>
+<p>那么，每一个有心想创业的人，可能都会在心里嘀咕，“我准备好了吗”？</p>
+<p>这也是曾经一个多年的好友，在最后关头止步不前的关键原因。</p>
+<p>从个人情感上，我非常能够理解这位朋友的心情，毕竟，我和我这些朋友，大都已是家庭的顶梁柱，而创业这件事却充满了风险，随时可能面临闻所未闻的困难，而在最终看到曙光前的那片黑暗，的确漫长又难捱。因此我一直都对朋友们说，无论选择创业，还是为家庭的稳定和安详选择默默无闻，都不失为勇士。</p>
+<p>所以我只是想对没有负担，只是缺乏勇气的想闯一闯的朋友说，你永远不会做好万全的准备。当你真有一天觉得准备好了的时候，其实那些事做不做也都无所谓了。</p>
+<p><strong> 与其踌躇不前，不如放手一搏。</strong></p>
+<p>以我们为例，辞职以来，我们经历了许多从前甚至连想想都觉得可怕的事情。</p>
+<p>而今天，6月20日，离开宗布科技正式创立正好一个月，来看看我们做过了什么：</p>
+<ul>
+<li>公司成立，完成工商行政注册，税务登记；</li>
+<li>成为“独角兽”孵化器001号团队，兼具孵化器技术支持团队职能；</li>
+<li>从一开始只有三个初创成员，一个人当作两三个用，到现在接近十名员工；</li>
+<li>长时间连续工作，我们的第一个产品，内测版即将上线；</li>
+<li>很久没有亲自写代码，学习并掌握了新的框架和语言</li>
+<li>和一个非常有趣的创业团队“啤酒共和”相识；</li>
+<li>……</li>
+</ul>
+<p>以前在公司时，每天朝九晚五，仍然会觉得很疲劳，而现在每天工作超过十二小时，却仍觉得精力充沛。我觉得人的潜能其实是很大的，只不过大多数时候都在沉睡，一旦有了个愿意为之付出的目标，体内的小宇宙就会被不断地激发，释放源源不绝的力量。</p>
+<p>并不是每个人都需要创业，但是如果你真的有一个梦想，那么就要努力去实现它。</p>
+<p>当你走出第一步，你会发现，你远远比你以为的更强大。</p>
+<p><img src="http://catxn.u.qiniudn.com/images/i-can-do-it.jpg-o" alt="I can do it"></p>
+<h1 id="写在后面"><a href="#写在后面" class="headerlink" title="写在后面"></a>写在后面</h1><p>你看，我们原本是三个写代码的宅男，现在，我们一个是资深技术专家，一个是产品兼销售，一个非常擅长团队建设。已经构成了一个相对完整的核心。然后我们有了一些新伙伴，做一些我们不懂却必须的事情。</p>
+<p>想做，就做，不懂，就学，学不会，就找助力。</p>
+<p>首先，需要做起来，想法如果它一直留在脑子里，它就真的永远只是一个想法。</p>
+<p>所以，如果你很想走出来，但是又担心自己无法承受，那么，来一杯吧，<a href="http://beerepublic.me/" target="_blank" rel="external">别怕</a>！</p>
+<blockquote>
+<p><strong>插播广告</strong><br>业务联系：<a href="&#109;&#97;&#x69;&#x6c;&#116;&#x6f;&#x3a;&#x62;&#105;&#122;&#64;&#122;&#111;&#x6e;&#103;&#x62;&#117;&#x74;&#x65;&#x63;&#104;&#46;&#x63;&#111;&#x6d;">&#x62;&#105;&#122;&#64;&#122;&#111;&#x6e;&#103;&#x62;&#117;&#x74;&#x65;&#x63;&#104;&#46;&#x63;&#111;&#x6d;</a><br>求职联系：<a href="&#109;&#x61;&#x69;&#108;&#116;&#x6f;&#x3a;&#x6a;&#111;&#x62;&#x40;&#x7a;&#x6f;&#x6e;&#103;&#98;&#117;&#116;&#x65;&#99;&#x68;&#x2e;&#99;&#x6f;&#109;">&#x6a;&#111;&#x62;&#x40;&#x7a;&#x6f;&#x6e;&#103;&#98;&#117;&#116;&#x65;&#99;&#x68;&#x2e;&#99;&#x6f;&#109;</a></p>
+</blockquote>
+<p>（其实还有很多感悟，不过现在并没有很多时间写字，刚刚做完一个功能，正好又是个值得纪念的日子，就随手写些东西为记。）</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;写在宗布科技满月&quot;&gt;&lt;a href=&quot;#写在宗布科技满月&quot; class=&quot;headerlink&quot; title=&quot;写在宗布科技满月&quot;&gt;&lt;/a&gt;写在宗布科技满月&lt;/h1&gt;&lt;p&gt;昨天，“独角兽之光”开展了第一次沙龙活动，我们有幸成为这首场演出的主讲。&lt;/p&gt;
+&lt;p&gt;沙龙中我们给在座的小伙伴们分享了几个故事，那是宗布科技三人组从玩魔兽世界开始，到一起做事，得到的一些感悟。&lt;/p&gt;
+&lt;p&gt;故事分别是“爱拍迹”，“暗黑小助手”，和去年的“行者”。从三四年前的爱拍迹开始，每次做一个产品，我们都会发现一些自己欠缺的东西，于是在下一个产品中将其补足。比如在做爱拍迹时，UI是我们非常缺乏的角色，于是从暗黑小助手，我们邀请了一位资深的设计师，也因此暗黑小助手是我们玩票产品中最成功的一个。这位设计师至今仍在与我们一起工作。&lt;/p&gt;
+&lt;p&gt;数一数也做了这么多东西了，有成功有失败，从这个角度，我们也算“连续创业者”了吧？XD&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="宗布科技" scheme="http://www.catxn.net/categories/%E5%AE%97%E5%B8%83%E7%A7%91%E6%8A%80/"/>
+    
+    
+      <category term="原创" scheme="http://www.catxn.net/tags/%E5%8E%9F%E5%88%9B/"/>
+    
+      <category term="日记" scheme="http://www.catxn.net/tags/%E6%97%A5%E8%AE%B0/"/>
+    
+      <category term="创业" scheme="http://www.catxn.net/tags/%E5%88%9B%E4%B8%9A/"/>
+    
+      <category term="里程碑" scheme="http://www.catxn.net/tags/%E9%87%8C%E7%A8%8B%E7%A2%91/"/>
+    
+      <category term="宗布" scheme="http://www.catxn.net/tags/%E5%AE%97%E5%B8%83/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>凤凰山茶馆纪事（一）</title>
+    <link href="http://www.catxn.net/posts/2015/zbu-log-teamhouse-1/"/>
+    <id>http://www.catxn.net/posts/2015/zbu-log-teamhouse-1/</id>
+    <published>2015-05-13T03:02:17.000Z</published>
+    <updated>2016-06-15T06:13:06.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>天下风云出我辈，一入江湖岁月催。皇图霸业谈笑间，不胜人生一场醉。提剑跨骑挥鬼雨，白骨如山鸟惊飞。尘事如潮人如水，只叹江湖几人回。——《笑傲江湖》</p>
+</blockquote>
+<p>(<em>唯美食与风景不可辜负</em>)<br><img src="http://catxn.u.qiniudn.com/images/jn1535/tea-02.jpg-o" alt="唯美食与风景不可辜负"></p>
+<h1 id="茶馆"><a href="#茶馆" class="headerlink" title="茶馆"></a>茶馆</h1><p>西子湖畔，万松岭下，有一个幽静的茶馆。</p>
+<p>每天往来的，有金牌投资人，有互联网大佬，有资深金融投资专家，有创业者，有名校教授，有畅销书作者，当然还有更多在金融、互联网、投资、电商大潮中奋力拼搏的年轻人。</p>
+<p>这里，是“江南1535”。</p>
+<p>这个茶馆，运作着一些靠谱或不靠谱的互联网产品，力图解决生活中遇到的投资、生活服务、财产管理等等问题。每一个项目，在将来，都可能是又一个行业的标杆。当然，也有可能一一倒下。</p>
+<p>不过，江湖不正是如此？如今的互联网正是一个江湖，各路高手纵横天下，大小门派腥风血雨，或为争夺武林霸主，或为占据一片方寸，看天边云卷云舒。</p>
+<p>在这个茶馆运作的产品焦点是互联网金融和生活服务，它们包括配资么，大账户，聚募众筹，聚付宝等等。我们需要大量人才。你是大牛，我们欢迎，也许你就是我们未来的CTO；你是新人，没有关系，只要是可造之才，我们有在技术领域浸淫十数年的专家手把手教。只要你有一腔热忱和不怕跌倒的心。</p>
+<p>如果这里就是你正在寻找的地方，请联系我，一起制造梦想：</p>
+<blockquote>
+<p><strong> 坐标：杭州。 </strong><br>简历投递：<br><a href="&#109;&#x61;&#105;&#108;&#116;&#x6f;&#x3a;&#x6a;&#x6f;&#98;&#x40;&#x7a;&#98;&#117;&#x2e;&#x69;&#x6d;">&#x6a;&#x6f;&#98;&#x40;&#x7a;&#98;&#117;&#x2e;&#x69;&#x6d;</a><br><a href="&#x6d;&#97;&#x69;&#x6c;&#x74;&#x6f;&#58;&#x6a;&#111;&#x62;&#64;&#x7a;&#111;&#110;&#x67;&#98;&#117;&#116;&#x65;&#99;&#104;&#46;&#99;&#x6f;&#109;">&#x6a;&#111;&#x62;&#64;&#x7a;&#111;&#110;&#x67;&#98;&#117;&#116;&#x65;&#99;&#104;&#46;&#99;&#x6f;&#109;</a></p>
+</blockquote>
+<a id="more"></a>
+<h1 id="公司及产品介绍"><a href="#公司及产品介绍" class="headerlink" title="公司及产品介绍"></a>公司及产品介绍</h1><p>茶馆团队之一，掌升财金融以及宗布科技联合招聘。</p>
+<p>掌升财金融，融合了投资银行、私募基金、私人银行业务，实现一站式主动财富管理的创新型互联网金融公司。宗布科技，依托高新区重点扶持的独角兽孵化器，为孵化项目提供产品设计、视觉设计、技术开发、流程优化等等服务。我们的核心团队成员均是来自知名IT或金融企业的经验丰富金融、产品、技术专家。在我们这里，你可以接触到最新的互联网技术、产业发展方向，可以与来自各个角色的专家深入畅谈，可以选择你最喜欢的领域深入发展。</p>
+<p>旗下主打产品“掌升财大账户”是一个互联网理财平台，致力于打造中国互联网金融市场正在意义上的“网络私人银行”。基于用户的个性化需求提供专属的理财服务。凭借丰富的行业资源及互联网优势，整合“基金、券商、信托、银行理财、P2P、各类公募私募产品”等上下游金融机构业务，实现一站式“安全、便捷、更高收益”的在线财富管理服务。</p>
+<h1 id="人才需求"><a href="#人才需求" class="headerlink" title="人才需求"></a>人才需求</h1><p>我们需要各个岗位的人才。包括：iOS开发，Android开发，前端开发，交互设计师，产品经理，产品助理等等。</p>
+<p>团队精神、学习能力是最基础的要求。下面列出一些大致的方向。当然，如果你自信足够牛，如果你可以展示你的实力，下面这些关键字完全可以无视。</p>
+<ul>
+<li>iOS 开发</li>
+</ul>
+<p>关键字：MacOS, iOS, Pods, ObjC<br>加分关键字：Swift，App Store 应用，GitHub</p>
+<ul>
+<li>Android 开发</li>
+</ul>
+<p>关键字：Java，Android Studio，Eclipse<br>加分关键字：应用市场已发布应用，GitHub</p>
+<ul>
+<li>前端开发</li>
+</ul>
+<p>关键字：HTML5, CSS3, JavaScript, AngularJS, Bootstrap<br>加分关键字：NodeJS, PHP, SASS, LESS, Gulp, PhotoShop, GitHub，作品</p>
+<ul>
+<li>Windows 开发</li>
+</ul>
+<p>关键字：C++, C#, .Net<br>加分关键字：WPF, WCF, MFC, VSTS, Git</p>
+<ul>
+<li>设计师</li>
+</ul>
+<p>关键字：艺术、设计、用户体验、情感、心理、互联网<br>加分关键字：作品</p>
+<h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><p>我们提供足够有竞争力的待遇，我们当然可以直接支付足够丰厚的薪水，你也可以选择工资加期权。福利待遇，五险一金，工作利器什么的都是标配，而我们能够提供别处没有的风景。</p>
+<p>我们是全新的公司，因此在各方面你都会有足够的选择权。甚至，规则也可以由你来制定。</p>
+<p>约吗？</p>
+<blockquote>
+<p><a href="&#x6d;&#x61;&#105;&#x6c;&#116;&#x6f;&#58;&#x6a;&#x6f;&#x62;&#64;&#122;&#98;&#x75;&#x2e;&#105;&#109;">&#x6a;&#x6f;&#x62;&#64;&#122;&#98;&#x75;&#x2e;&#105;&#109;</a><br><a href="&#x6d;&#97;&#105;&#108;&#116;&#111;&#x3a;&#x6a;&#x6f;&#98;&#64;&#x7a;&#111;&#110;&#103;&#x62;&#117;&#x74;&#101;&#99;&#104;&#x2e;&#x63;&#111;&#109;">&#x6a;&#x6f;&#98;&#64;&#x7a;&#111;&#110;&#103;&#x62;&#117;&#x74;&#101;&#99;&#104;&#x2e;&#x63;&#111;&#109;</a></p>
+</blockquote>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;天下风云出我辈，一入江湖岁月催。皇图霸业谈笑间，不胜人生一场醉。提剑跨骑挥鬼雨，白骨如山鸟惊飞。尘事如潮人如水，只叹江湖几人回。——《笑傲江湖》&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;(&lt;em&gt;唯美食与风景不可辜负&lt;/em&gt;)&lt;br&gt;&lt;img src=&quot;http://catxn.u.qiniudn.com/images/jn1535/tea-02.jpg-o&quot; alt=&quot;唯美食与风景不可辜负&quot;&gt;&lt;/p&gt;
+&lt;h1 id=&quot;茶馆&quot;&gt;&lt;a href=&quot;#茶馆&quot; class=&quot;headerlink&quot; title=&quot;茶馆&quot;&gt;&lt;/a&gt;茶馆&lt;/h1&gt;&lt;p&gt;西子湖畔，万松岭下，有一个幽静的茶馆。&lt;/p&gt;
+&lt;p&gt;每天往来的，有金牌投资人，有互联网大佬，有资深金融投资专家，有创业者，有名校教授，有畅销书作者，当然还有更多在金融、互联网、投资、电商大潮中奋力拼搏的年轻人。&lt;/p&gt;
+&lt;p&gt;这里，是“江南1535”。&lt;/p&gt;
+&lt;p&gt;这个茶馆，运作着一些靠谱或不靠谱的互联网产品，力图解决生活中遇到的投资、生活服务、财产管理等等问题。每一个项目，在将来，都可能是又一个行业的标杆。当然，也有可能一一倒下。&lt;/p&gt;
+&lt;p&gt;不过，江湖不正是如此？如今的互联网正是一个江湖，各路高手纵横天下，大小门派腥风血雨，或为争夺武林霸主，或为占据一片方寸，看天边云卷云舒。&lt;/p&gt;
+&lt;p&gt;在这个茶馆运作的产品焦点是互联网金融和生活服务，它们包括配资么，大账户，聚募众筹，聚付宝等等。我们需要大量人才。你是大牛，我们欢迎，也许你就是我们未来的CTO；你是新人，没有关系，只要是可造之才，我们有在技术领域浸淫十数年的专家手把手教。只要你有一腔热忱和不怕跌倒的心。&lt;/p&gt;
+&lt;p&gt;如果这里就是你正在寻找的地方，请联系我，一起制造梦想：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt; 坐标：杭州。 &lt;/strong&gt;&lt;br&gt;简历投递：&lt;br&gt;&lt;a href=&quot;&amp;#109;&amp;#x61;&amp;#105;&amp;#108;&amp;#116;&amp;#x6f;&amp;#x3a;&amp;#x6a;&amp;#x6f;&amp;#98;&amp;#x40;&amp;#x7a;&amp;#98;&amp;#117;&amp;#x2e;&amp;#x69;&amp;#x6d;&quot;&gt;&amp;#x6a;&amp;#x6f;&amp;#98;&amp;#x40;&amp;#x7a;&amp;#98;&amp;#117;&amp;#x2e;&amp;#x69;&amp;#x6d;&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;&amp;#x6d;&amp;#97;&amp;#x69;&amp;#x6c;&amp;#x74;&amp;#x6f;&amp;#58;&amp;#x6a;&amp;#111;&amp;#x62;&amp;#64;&amp;#x7a;&amp;#111;&amp;#110;&amp;#x67;&amp;#98;&amp;#117;&amp;#116;&amp;#x65;&amp;#99;&amp;#104;&amp;#46;&amp;#99;&amp;#x6f;&amp;#109;&quot;&gt;&amp;#x6a;&amp;#111;&amp;#x62;&amp;#64;&amp;#x7a;&amp;#111;&amp;#110;&amp;#x67;&amp;#98;&amp;#117;&amp;#116;&amp;#x65;&amp;#99;&amp;#104;&amp;#46;&amp;#99;&amp;#x6f;&amp;#109;&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="夜猫茶舍" scheme="http://www.catxn.net/categories/%E5%A4%9C%E7%8C%AB%E8%8C%B6%E8%88%8D/"/>
+    
+    
+      <category term="原创" scheme="http://www.catxn.net/tags/%E5%8E%9F%E5%88%9B/"/>
+    
+      <category term="日记" scheme="http://www.catxn.net/tags/%E6%97%A5%E8%AE%B0/"/>
+    
+      <category term="创业" scheme="http://www.catxn.net/tags/%E5%88%9B%E4%B8%9A/"/>
+    
+      <category term="招聘" scheme="http://www.catxn.net/tags/%E6%8B%9B%E8%81%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>老夫聊发少年狂</title>
+    <link href="http://www.catxn.net/posts/2015/%E8%80%81%E5%A4%AB%E8%81%8A%E5%8F%91%E5%B0%91%E5%B9%B4%E7%8B%82/"/>
+    <id>http://www.catxn.net/posts/2015/老夫聊发少年狂/</id>
+    <published>2015-05-06T02:30:00.000Z</published>
+    <updated>2016-06-15T06:14:33.000Z</updated>
+    
+    <content type="html"><![CDATA[<!-- 
+（微信转发用）我知道，这一天你已经等了很久了，那么现在，我要正式宣布啦。要说的话都在帖子里，欢迎收看，欢迎转发，内容不多不耗流量：
+预计发布顺序：
+个人博客，简书，微信朋友圈
+
+实际发生时间：
+外包接单：2015年3月（掌生财）
+考虑创业：2015年4月（与枫惠接触后）
+发辞职意向邮件：2015年4月28日（Chris）
+正式宣布辞职：2015年5月6日（Amber部门会议，交接开始）
+-->
+<blockquote>
+<p>葡萄美酒夜光杯，欲饮琵琶马上催<br>醉卧沙场君莫笑，古来征战几人回</p>
+</blockquote>
+<h1 id="启航"><a href="#启航" class="headerlink" title="启航"></a>启航</h1><p>最近一个月，我所有的博客、简书的写作、公众号、参与的翻译项目等等都处于半停顿的状态，和朋友们也疏于联络。原因很简单，我几乎全部的业余时间，都用在了又一件傻逼的事情上：创业。</p>
+<p>在与合作多年的上司友好的谈话之后，今天我正式提交了辞呈。接下来，将全力投入新产品的开发、新公司的注册以及新团队的组建。自己蛰伏很久的精力，正在以出乎我意料的速度苏醒。</p>
+<p>若干年前脱下军装，与几个朋友一起南下，没有经验，没有人脉，砸光手里的积蓄，朋友们一一离去后，口袋里揣着点吃饭的零钱，徘徊于深圳的街道。那时身边只有女友相伴，不离不弃。</p>
+<p>后来辗转到了杭州，从零开始，养家糊口，曾经以为人生也就这样了。却在不知不觉间慢慢地有了新的老的朋友，生活逐渐脱离窘迫。多年的学习和工作，积累下技术、管理、团队的经验，多多少少也有了些人脉。</p>
+<p>审视内心，虽然棱角磨平了不少，幸而天生爱折腾的那个我还在。也许，是时候打点行装再次上路了。</p>
+<p>于是，经过年少时锋芒毕露的不知天高地厚，经过多年为生计只知低头搬砖，经过几乎失去做梦能力的低谷……在一个适时出现的机会前，早生华发的我，将再度杨帆启航。</p>
+<a id="more"></a>
+<p>有些激流，可以想象，有的风浪，无法预料。但是，再不出海，就真的老了。世界那么大，咱再去转转吧。</p>
+<p>感谢曾一起工作的伙伴，感谢我爱的和爱我的人，谢谢你们长长路上的陪伴。前方的路，我们还会一起走下去。</p>
+<p>愿若干年后，我们终于可以吟出这样的词句：</p>
+<blockquote>
+<p>莫听穿林打叶声，何妨吟啸且徐行。<br>竹杖芒鞋轻胜马。谁怕！一蓑烟雨任平生。<br>料峭春风吹酒醒，微冷，山头斜照却相迎。<br>回首向来萧瑟处。归去，也无风雨也无晴。</p>
+</blockquote>
+<p>今日，立夏。生如夏花。<br><!-- 使生如夏花之绚烂，死如秋叶之静美 --></p>
+<p><img src="http://catxn.u.qiniudn.com/images/acg/onepiece_hat01.jpg-o" alt=""></p>
+<h1 id="煽情结束，广告时间"><a href="#煽情结束，广告时间" class="headerlink" title="煽情结束，广告时间"></a>煽情结束，广告时间</h1><ul>
+<li>初创公司，风口，众筹，金融，期权，这些吸引眼球的名词，有；</li>
+<li>办公在山中茶馆，坐拥良辰美景，日日俊男美女相伴，都有；</li>
+<li>背靠成熟创投平台，谈笑有鸿儒，往来无白丁，全都有。</li>
+</ul>
+<p>你来不来？</p>
+<p>如果你最近想换工作，如果你不甘于就这样泯然众生，如果你愿意和我一起为沉寂了多年的梦想再一次打拼，无惧伤痕……请联系我。</p>
+<blockquote>
+<p>互联网金融众筹、投资项目，诚邀各路英才：优美的工作环境，紧张刺激同时轻松愉快，与自然风光陪伴的开放协作，充满可能的发展方向，闲时一壶清茶与小伙伴谈谈人生。这些，是否是你想要的？</p>
+</blockquote>
+<p>如果你认识我，可用任何你知道的方式跟我联系，或携手创业，或只是一起喝茶聊天；</p>
+<p>如果你是新朋友，请直接发送简历到我的邮箱。茫茫人海，相识就是缘分：</p>
+<blockquote>
+<p><strong>坐标：杭州</strong><br><a href="&#x6d;&#x61;&#105;&#108;&#116;&#x6f;&#x3a;&#x6a;&#111;&#x62;&#64;&#122;&#98;&#117;&#x2e;&#x69;&#109;">&#x6a;&#111;&#x62;&#64;&#122;&#98;&#117;&#x2e;&#x69;&#109;</a><br><a href="&#x6d;&#97;&#x69;&#x6c;&#x74;&#111;&#58;&#x6a;&#111;&#x62;&#64;&#122;&#111;&#110;&#103;&#x62;&#117;&#116;&#101;&#99;&#x68;&#x2e;&#99;&#x6f;&#109;">&#x6a;&#111;&#x62;&#64;&#122;&#111;&#110;&#103;&#x62;&#117;&#116;&#101;&#99;&#x68;&#x2e;&#99;&#x6f;&#109;</a></p>
+</blockquote>
+<p>来吧少年，同去。</p>
+<h1 id="写给简书的朋友"><a href="#写给简书的朋友" class="headerlink" title="写给简书的朋友"></a>写给简书的朋友</h1><p>在简书零敲碎打堆了些贻笑大方的文字，却也得到几位朋友的抬爱。后面估计会忙一阵子，无法再像以前那样基本每周一篇。</p>
+<p>不过，我一定会回来的。XD</p>
+<!-- 掌生财公司介绍
+杭州掌生财信息科技有限公司创办于2014年。已经得到顶级投资机构的天使融资。公司核心团队来自it、游戏、电商、金融等行业，拥有丰富的传统金融行业和移动互联网产品研发、运营经验及各类金融资源。
+
+我们的产品致力于打造中国最专业的账户管理、投资理财、助理服务等目前中高财富人群急需的服务。不仅提供一般的记账等日常服务，更是结合国内外投资市场的特点，推出特色投资品供用户选择。私人助理服务更是打造一对一直接全方位、无死角服务，直击用户痛点，开辟一片蓝海市场。
+-->
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;!-- 
+（微信转发用）我知道，这一天你已经等了很久了，那么现在，我要正式宣布啦。要说的话都在帖子里，欢迎收看，欢迎转发，内容不多不耗流量：
+预计发布顺序：
+个人博客，简书，微信朋友圈
+
+实际发生时间：
+外包接单：2015年3月（掌生财）
+考虑创业：2015年4月（与枫惠接触后）
+发辞职意向邮件：2015年4月28日（Chris）
+正式宣布辞职：2015年5月6日（Amber部门会议，交接开始）
+--&gt;
+&lt;blockquote&gt;
+&lt;p&gt;葡萄美酒夜光杯，欲饮琵琶马上催&lt;br&gt;醉卧沙场君莫笑，古来征战几人回&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;启航&quot;&gt;&lt;a href=&quot;#启航&quot; class=&quot;headerlink&quot; title=&quot;启航&quot;&gt;&lt;/a&gt;启航&lt;/h1&gt;&lt;p&gt;最近一个月，我所有的博客、简书的写作、公众号、参与的翻译项目等等都处于半停顿的状态，和朋友们也疏于联络。原因很简单，我几乎全部的业余时间，都用在了又一件傻逼的事情上：创业。&lt;/p&gt;
+&lt;p&gt;在与合作多年的上司友好的谈话之后，今天我正式提交了辞呈。接下来，将全力投入新产品的开发、新公司的注册以及新团队的组建。自己蛰伏很久的精力，正在以出乎我意料的速度苏醒。&lt;/p&gt;
+&lt;p&gt;若干年前脱下军装，与几个朋友一起南下，没有经验，没有人脉，砸光手里的积蓄，朋友们一一离去后，口袋里揣着点吃饭的零钱，徘徊于深圳的街道。那时身边只有女友相伴，不离不弃。&lt;/p&gt;
+&lt;p&gt;后来辗转到了杭州，从零开始，养家糊口，曾经以为人生也就这样了。却在不知不觉间慢慢地有了新的老的朋友，生活逐渐脱离窘迫。多年的学习和工作，积累下技术、管理、团队的经验，多多少少也有了些人脉。&lt;/p&gt;
+&lt;p&gt;审视内心，虽然棱角磨平了不少，幸而天生爱折腾的那个我还在。也许，是时候打点行装再次上路了。&lt;/p&gt;
+&lt;p&gt;于是，经过年少时锋芒毕露的不知天高地厚，经过多年为生计只知低头搬砖，经过几乎失去做梦能力的低谷……在一个适时出现的机会前，早生华发的我，将再度杨帆启航。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="夜猫茶舍" scheme="http://www.catxn.net/categories/%E5%A4%9C%E7%8C%AB%E8%8C%B6%E8%88%8D/"/>
+    
+    
+      <category term="原创" scheme="http://www.catxn.net/tags/%E5%8E%9F%E5%88%9B/"/>
+    
+      <category term="日记" scheme="http://www.catxn.net/tags/%E6%97%A5%E8%AE%B0/"/>
+    
+      <category term="创业" scheme="http://www.catxn.net/tags/%E5%88%9B%E4%B8%9A/"/>
+    
+      <category term="里程碑" scheme="http://www.catxn.net/tags/%E9%87%8C%E7%A8%8B%E7%A2%91/"/>
+    
+      <category term="宗布" scheme="http://www.catxn.net/tags/%E5%AE%97%E5%B8%83/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>冠夫姓，婚嫁，与传统家庭观念的丧失</title>
+    <link href="http://www.catxn.net/posts/2015/some-talk-about-family/"/>
+    <id>http://www.catxn.net/posts/2015/some-talk-about-family/</id>
+    <published>2015-04-05T02:31:28.000Z</published>
+    <updated>2016-06-15T09:07:57.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>为什么在即使在现代文明很发达的欧美，婚后改姓也是很平常的事情？</p>
+</blockquote>
+<h1 id="关于改姓的对话"><a href="#关于改姓的对话" class="headerlink" title="关于改姓的对话"></a>关于改姓的对话</h1><p>这是一个对话场景。部分真实，部分虚构加工。</p>
+<a id="more"></a>
+<p>A: 刚跟这边的同事聊到德国的中国同事嫁人改姓的事情。讨论很好笑。</p>
+<p>C: 搞笑吗？很多国家婚后都改的。中国居然不改才是怪事。</p>
+<p>A：恩，不改也挺好</p>
+<p>C：改了好</p>
+<p>A：不改好</p>
+<p>C：改了更有一家人的感觉嘛。冠夫姓是一件多么温暖的事情呀。甜蜜。</p>
+<p>A：所以嘛，跟丈人丈母娘也是一家人，干嘛不是男的改女家姓，一家人也很温暖啊。</p>
+<p>C：男的改也行啊，我个人没意见。户主是谁就是谁的姓。人家就可是说 Mr. and Mrs Smith，多体面。放中国，你只好这么介绍。袁先生和王夫人……以前可以这样：郭大侠贤伉俪，多好。</p>
+<p>A：挺好啊。本来就是两个独立的个体嘛，干嘛非扭和到一起呢。</p>
+<p>C：结婚本来不就是扭到一起？要不然咋说“强扭的瓜不甜”。不管强不强，反正都是要扭的。</p>
+<p>A：晕，不跟你讨论这个，知道你是改姓的FANS。</p>
+<p>C：认为结婚了还是独立个体的，显然已经被某些思想洗脑到了无可救药的程度了，哈哈哈哈。</p>
+<p>A：这个跟洗脑没关系。</p>
+<p>C：这个问题咱争论过无数次了。</p>
+<p>A：为啥不是独立的呢？</p>
+<p>C：本来就不是独立的。结婚就是两个人从灵魂到肉体的结合。认为结婚了还是独立个体的这种思想才是罪恶的。当初这种思想，灌输给人民，是在特定历史时期为乐某些目的。而这这正是摧毁家庭、家族文化的罪恶之一。为啥说现在中国人家庭观念淡漠呢？</p>
+<p>A：好像没有课本上教育过结婚跟独立的关系。</p>
+<p>C：那是潜移默化的教育啊。我们的思想政治工作能力是天下无敌的。计划生育，半边天，等等，这些口号，都是在做摧毁家庭文化这件事情。</p>
+<p>A：家庭观念淡薄的往往是男人。</p>
+<p>C：你结婚了就改姓，你看男人还淡薄不。</p>
+<p>A：哈</p>
+<p>C：妇女被给予了一个虚假的“独立”假象，实际上要承受更多辛苦。而男人被剥夺了家长的权利，心态失去平衡的结果就是逐渐忽视家庭。</p>
+<p>A：连娃都替他生了，男人还外遇，以为改个姓，他就不外遇。。。。</p>
+<p>C：这不是某一件事的结果，而是整个思想文化系统带来的恶果。改姓只是一方面。另外，刚刚你说是独立的个体，这会儿又说“娃都替他生了”，难道不矛盾吗？孩子是自己的，是父亲的，还是两个人的？</p>
+<p>A：……家长的权利好像不是靠剥夺的，就像尊敬这个东西一样</p>
+<p>C：其实就是剥夺的啦。没有人需要为家庭负责，每个人都是独立的个体。因为：</p>
+<p>从某种角度来说，</p>
+<blockquote>
+<p><strong>中国现在不再有传统意义上的家庭和家族</strong></p>
+</blockquote>
+<h1 id="国学教育"><a href="#国学教育" class="headerlink" title="国学教育"></a>国学教育</h1><p>最近，在中小学开始掀起一股所谓“家风家训”活动，被当作作业来完成。</p>
+<p>在没有传统家庭、家族概念支撑的背景下，这只能是个形式主义的笑话。</p>
+<p>没有家族文化的真正传承，每一代所处的政治、经济、社会都在飞速的变化，这样的环境下，怎么会有能够传递几代的家风家训？为了完成作业任务编造出来的家风家训又有何用？</p>
+<p>于此同时开展的国学教育，一方面在抛弃，一方面在学习，所谓批判的学习，有选择的吸收。对于学生来说，又怎么去体会这些文化传统的正面意义在何处。</p>
+<h1 id="讨论"><a href="#讨论" class="headerlink" title="讨论"></a>讨论</h1><p>这个话题下面应该可以再展开展开。不过脑子里的东西似乎无法自成章法。先搁这儿吧。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;为什么在即使在现代文明很发达的欧美，婚后改姓也是很平常的事情？&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;关于改姓的对话&quot;&gt;&lt;a href=&quot;#关于改姓的对话&quot; class=&quot;headerlink&quot; title=&quot;关于改姓的对话&quot;&gt;&lt;/a&gt;关于改姓的对话&lt;/h1&gt;&lt;p&gt;这是一个对话场景。部分真实，部分虚构加工。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="夜猫茶舍" scheme="http://www.catxn.net/categories/%E5%A4%9C%E7%8C%AB%E8%8C%B6%E8%88%8D/"/>
+    
+    
+      <category term="教育" scheme="http://www.catxn.net/tags/%E6%95%99%E8%82%B2/"/>
+    
+      <category term="家庭" scheme="http://www.catxn.net/tags/%E5%AE%B6%E5%BA%AD/"/>
+    
+      <category term="文化" scheme="http://www.catxn.net/tags/%E6%96%87%E5%8C%96/"/>
+    
+      <category term="国学" scheme="http://www.catxn.net/tags/%E5%9B%BD%E5%AD%A6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>国士无双（一）</title>
+    <link href="http://www.catxn.net/posts/2015/%E5%9B%BD%E5%A3%AB%E6%97%A0%E5%8F%8C%EF%BC%88%E4%B8%80%EF%BC%89/"/>
+    <id>http://www.catxn.net/posts/2015/国士无双（一）/</id>
+    <published>2015-04-05T02:00:00.000Z</published>
+    <updated>2015-06-20T08:33:32.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>上尝从容与信言诸将能否，各有差。上问曰：“如我，能将几何？”信曰：“陛下不过能将十万。”上曰：“于君何如？”曰：“臣多多益善耳。”上笑曰：“多多益善，何为为我禽？”信曰：“陛下不能将兵，而善将将，此乃信之所以为陛下禽也。且陛下所谓天授，非人力也。”——《史记·淮阴侯列传》</p>
+</blockquote>
+<p>汉初三杰：张良、萧何、韩信。</p>
+<p>韩信留下了许多精彩战例的同时，民间也有韩信阴戾量小，不择手段的传闻。作为大汉开国名将，关于他的很多故事都已经妇孺皆知，对韩信功绩真实性的争论也比比皆是，作为历史门外汉，写他的故事风险还是蛮大的。读者轻拍。</p>
+<p>先从最为大家熟知的故事说起。</p>
+<a id="more"></a>
+<h1 id="诸将易得，国士无双"><a href="#诸将易得，国士无双" class="headerlink" title="诸将易得，国士无双"></a>诸将易得，国士无双</h1><p>韩信初至汉营，跟在项羽军中一样，做个底层军官每天吃吃闲饭。刘邦这会儿正离开咸阳，带着几个散兵游勇灰溜溜入蜀去作汉王。</p>
+<p>这是一支松散的小规模部队。也正因为当时汉军规模不大，即使中低层的军官也常有机会见到管理核心，于是韩信得以与重量级人物夏侯婴、萧何等人交流。</p>
+<p>某次，军中有人犯事儿，韩信被牵连（连坐）。涉案人员杀了一堆，轮到韩信时，韩信鼻孔朝天开始跟夏侯婴放厥词：“上不欲就天下乎？何为斩壮士！”（汉王不是要争天下吗？为什么要杀壮士！）</p>
+<p>夏侯婴大奇，又看着这小子气宇轩昂，就去跟韩信搭话。几句聊下来，感觉韩信是有点本事的，就给刘邦推荐，升官做了主管粮草的都尉。</p>
+<p>都尉这个职位在当时其实已不算小，大略估计了下，其职阶应该跟现在的校官类似。不过韩信明显认为自己的能耐远远不止于此。所以，没过多久，在入蜀的路上就跑了。</p>
+<p>读书时我看到这里很怀疑。当时的天下，一是项羽，二是刘邦，其他诸侯根本不成气候。如果韩信想成就自己的抱负，必须有一个足够大的平台。从项羽那边跳槽到汉王这边就是这样的原因。从汉王这边再跑，能去哪呢？</p>
+<p>有两种可能，一种是这一段其实只是传说，另一种可能，就是韩信故作姿态。我比较倾向相信后者，因为此时韩信已经跟夏侯婴，萧何等人打过数次交道，而萧何一直对韩信评价甚高。以萧何爱才如命一心为汉王的性格，听到韩信逃走的消息一定会有所作为。否则，在难于上青天的蜀道之上，作为文官的萧何，大晚上的怎么能追上已经跑远了的韩信？这只能解释为，韩信故意能被追上。</p>
+<p>听说萧何也跑了，刘邦顿时大惊。萧何当时是汉军丞相，刘邦的左膀右臂。丞相跑路，不光是人才损失，对军心的撼动也是无法估量的。这可是要玩完的节奏。</p>
+<p>结果不到两天，萧何就回来了。又喜又怒的高祖见到萧何就开始撒娇：你跑了，人家可怎么办？</p>
+<p>萧何解释说我不是跑路，是去追跑路的人。刘邦就好奇追什么人，得知是韩信后刘邦破口大骂，这入蜀之路逃跑的人不计其数，其中不乏高级将领，一个也不见你追。韩信何德何能，搞的你都来不及吱一声就亲自连夜去追？</p>
+<p>这时，萧何讲出这句千古名言：</p>
+<p><strong>“诸将易得耳。至如信者，国士无双。”</strong></p>
+<p>萧何跟刘邦说，王上如果觉得做汉王就满足了，韩信用不用也没关系。如果要争天下，韩信就是不可或缺的人才。而韩信，如果能好好使用，就会留在汉营，否则，他还是会离开的。</p>
+<p>那让他做个将军。萧何答，做普通将军，韩信也还是要走的。刘邦又说，那就封他做大将军，统领三军！萧何这才说，那想必是极好的。</p>
+<p>于是刘邦安排修建高台，挑选吉日，沐浴斋戒，行全套礼节，郑重拜将。</p>
+<p>汉王要拜将，那些跟随刘邦出生入死多年的将领都非常高兴，纷纷讨论会是谁被拜为大将。也有不少人沾沾自喜，想来将印非我莫属。而当天，上台领奖的居然是没什么功绩的新人，大家全都惊呆了。</p>
+<p>自此，汉大将军韩信，率领汉军纵横天下，为高祖打下大汉数百年基业。</p>
+<h1 id="小知识"><a href="#小知识" class="headerlink" title="小知识"></a>小知识</h1><p>拜将坛遗址，在现在陕西汉中市市区东南。中学时常常和同学在那里玩耍，两个不算太高的土台，周围是大片的空地，一派肃杀的气氛。而现在再去，早已被围墙包围，还要收取门票。原来的土台也用汉白玉重新装修，台前竖起了韩信和张良的石像。因为纯属骗钱工程，两座石像的造型看上去十分喜感。而古迹在四面围墙和各种商业设施的环绕下，早已不见其庄严霸气了。</p>
+<p>（待续）</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;上尝从容与信言诸将能否，各有差。上问曰：“如我，能将几何？”信曰：“陛下不过能将十万。”上曰：“于君何如？”曰：“臣多多益善耳。”上笑曰：“多多益善，何为为我禽？”信曰：“陛下不能将兵，而善将将，此乃信之所以为陛下禽也。且陛下所谓天授，非人力也。”——《史记·淮阴侯列传》&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;汉初三杰：张良、萧何、韩信。&lt;/p&gt;
+&lt;p&gt;韩信留下了许多精彩战例的同时，民间也有韩信阴戾量小，不择手段的传闻。作为大汉开国名将，关于他的很多故事都已经妇孺皆知，对韩信功绩真实性的争论也比比皆是，作为历史门外汉，写他的故事风险还是蛮大的。读者轻拍。&lt;/p&gt;
+&lt;p&gt;先从最为大家熟知的故事说起。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="老猫读史" scheme="http://www.catxn.net/categories/%E8%80%81%E7%8C%AB%E8%AF%BB%E5%8F%B2/"/>
+    
+    
+      <category term="历史" scheme="http://www.catxn.net/tags/%E5%8E%86%E5%8F%B2/"/>
+    
+      <category term="阅读" scheme="http://www.catxn.net/tags/%E9%98%85%E8%AF%BB/"/>
+    
+      <category term="韩信" scheme="http://www.catxn.net/tags/%E9%9F%A9%E4%BF%A1/"/>
+    
+      <category term="写作" scheme="http://www.catxn.net/tags/%E5%86%99%E4%BD%9C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>战国四公子（下）</title>
+    <link href="http://www.catxn.net/posts/2015/four-lords-3/"/>
+    <id>http://www.catxn.net/posts/2015/four-lords-3/</id>
+    <published>2015-04-02T06:48:42.000Z</published>
+    <updated>2016-06-11T00:59:36.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="孟尝君："><a href="#孟尝君：" class="headerlink" title="孟尝君："></a>孟尝君：</h1><blockquote>
+<p>太史公曰：吾尝过薛，其俗闾里率多暴桀子弟，与邹、鲁殊。问其故，曰孟尝君招致天下任侠，奸人入薛中盖六万余家矣。”世之传孟尝君好客自喜，名不虚矣。</p>
+</blockquote>
+<p>孟尝君田文，是齐国宰相田婴的庶子。以贤能之名为天下所闻，曾持秦、齐、魏三国相印。这么个大人物，却在刚出生时就被认为不吉利，要被父亲扔掉。</p>
+<p>农历五月初五，端午节，现在是个热闹欢腾的节日。在中国古代却被认为与不详、邪恶有关，东汉《论衡》甚至说“讳举正月、五月子；以正月、五月子杀父与母，不得举也”。</p>
+<p>田文就出生在这一天。父亲得知后万分厌恶，要求其母速速扔掉。母亲却偷偷把他抚养长大。成年后以机警的言谈和过人的眼光获得父亲的赏识，直至最后作为太子继承了田婴的封爵。为了出人头地，更是广泛招揽“宾客及亡人有罪者”并“舍业厚遇之”。</p>
+<p>门下号称食客三千，有人认为正是孟尝君引领了战国时期王公贵族养食客的风气。</p>
+<p>孟尝君以贤能善辩，礼贤下士闻名。太史公却以“好客自喜”来评价他，认为他所做的这些，不过是为自己打算而已。</p>
+<a id="more"></a>
+<h2 id="鸡鸣狗盗"><a href="#鸡鸣狗盗" class="headerlink" title="鸡鸣狗盗"></a>鸡鸣狗盗</h2><p>秦昭王听说孟尝君贤能，两次邀请孟尝君入秦。第一次，苏代用木偶泥人的比喻劝止。</p>
+<p>第二次是齐湣王二十五年，齐王正好也有事，就派孟尝君出使秦国。秦昭王高高兴兴让孟尝君做秦国的宰相。没多久，就有人跟秦王说，田文是齐国人，在我朝为官，必定吃里扒外。于是秦昭王就把孟尝君关了起来打算杀掉。</p>
+<p>孟尝君派人找秦王的一名宠妾帮忙，宠妾说想要件白狐皮大衣。孟尝君入秦之时，曾献给秦王一件这样的狐皮大衣，估计当时宠妾也在场，只因多看了一眼，就再也放不下了。可这件大衣是孟尝君收藏的至宝，价值千金，举世无双。虽然孟尝君要活命，不在乎花钱，可是一模一样的大衣可是拿不出来了。</p>
+<blockquote>
+<p>最下坐有能为狗盗者，曰：“臣能得狐白裘。”乃夜为狗，以入秦宫臧中，取所献狐白裘至，以献秦王幸姬。幸姬为言昭王，昭王释孟尝君。孟尝君得出，即驰去，更封传，变名姓以出关。——《史记·孟尝君列传》</p>
+</blockquote>
+<p>秦王听了枕头风，放了孟尝君不久就后悔，派人再去捉拿孟尝君。此时孟尝君一行已经连夜抱头鼠窜跑到函谷关。当时秦国法令，鸡叫之前不准打开关门。田文急得团团转，因为他也知道枕头风这种东西，很快就没用了，万一再被抓回去，恐怕人头难保。这时门客中有个口技了得的人物，学了周扒皮的本事，在关下学鸡叫，引得周围民居的公鸡纷纷打鸣，守关的官兵这才开门放他们离去。</p>
+<blockquote>
+<p>客之居下坐者有能为鸡鸣，而鸡齐鸣，遂发传出。出如食顷，秦追果至关，已后孟尝君出，乃还。始孟尝君列此二人于宾客，宾客尽羞之，及孟尝君有秦难，卒此二人拔之。自是之后，客皆服。——《史记·孟尝君列传》</p>
+</blockquote>
+<p>联想到平原君使楚，为了挑选二十名随员费劲心机，孟尝君出使当时最强大的秦国，为什么会带上这二位市井之人令人费解。虽然最后成为救命稻草，可如果说孟尝君早已料到这个结果，也未免太有先见之明了。</p>
+<p>只能解释为，孟尝君三千食客，充斥着这类人吧。这里没有小看劳动人民的意思，不过要考虑当时的时代背景。</p>
+<h2 id="狡兔三窟"><a href="#狡兔三窟" class="headerlink" title="狡兔三窟"></a>狡兔三窟</h2><p>这故事里保护着若干成语：狡兔三窟，焚券市义，高枕无忧。</p>
+<p>狡兔三窟，意思是兔子窝有三个洞，这样就可避免被堵死在窝里。</p>
+<p>给孟尝君挖兔子洞的这位冯驩<code>音欢，也作谖，音宣</code>，就是那个没事儿坐台阶上跟长剑唠叨没有肉吃啊，没有鱼翅啊，没钱养家啊的主。</p>
+<p>他给孟尝君挖的第一窟，就是通过烧掉田文放出去的各种借据债券，收买封地的人心。不过这第一洞级数还不算高，之前有位舍人魏子也干过。</p>
+<blockquote>
+<p>孟尝君相齐，其舍人魏子为孟尝君收邑入，三反而不致一入。孟尝君问之，对曰：“有贤者，窃假与之，以故不致入。”孟尝君怒而退魏子。居数年，人或毁孟尝君于齐愍王曰：“孟尝君将为乱。”及田甲劫愍王，愍王意疑孟尝君，孟尝君乃奔。魏子所与粟贤者闻之，乃上书言孟尝君不作乱，请以身为盟，遂自刭宫门以明孟尝君。愍王乃惊，而踪迹验问，孟尝君果无反谋，乃复召孟尝君。</p>
+</blockquote>
+<p>魏子只是没收回钱，冯驩做事比较绝，直接把一车借据当众烧掉了。无论魏子还是冯驩，让孟尝君蒙受巨大经济损失，起初孟尝君都是很不爽的。直到后来被免职，回乡时百姓夹道欢迎，才明白两位的良苦用心。</p>
+<p>冯驩这还不算完，继续挖洞。先是说动魏王重金礼聘孟尝君为相，唬得齐王赶紧派人登门道歉，请回孟尝君；然后又请大王把齐国的宗庙设在孟尝君的封地薛。这下孟尝君可真是高枕无忧了。</p>
+<blockquote>
+<p>冯谖曰：“狡兔有三窟，仅得免其死耳。今君有一窟，未得高枕而卧也。请为君复凿二窟。”孟尝君予车五十乘，金五百斤，西游于梁，谓惠王曰：“齐放其大臣孟尝君于诸侯，诸侯先迎之者富而兵强。”于是，梁王虚上位，以故相为上将军；遣使者，黄金千斤、车百乘，往聘孟尝君。冯谖先驱，诫孟尝君曰：“千金，重币也；百乘，显使也。齐其闻之矣。”梁使三反，孟尝君图辞不往也。</p>
+<p>齐王闻之，君臣恐惧，遣太傅赍黄金千斤，文车二驷，服剑一，封书谢孟尝君曰：“寡人不祥，被于宗庙之祟，沉于谄谀之臣，开罪于君，寡人不足为也，愿君顾先王之宗庙，姑反国统万人乎！”冯谖诫孟尝君曰：“愿请先王之祭器，立宗庙于薛。”庙成，还报孟尝君曰：“三窟已就，君姑高枕为乐矣。”</p>
+<p>孟尝君为相数十年，无纤介之祸者，冯谖之计也。</p>
+<p>——战国策·齐策</p>
+</blockquote>
+<h2 id="好客自喜"><a href="#好客自喜" class="headerlink" title="好客自喜"></a>好客自喜</h2><p>田文作为齐国贵族，王亲国戚，却历任三国之相。单这一点，也许并不能说他没有节操。可是从秦国返齐在赵国停留时，仅因有人嘲笑，便杀掉几乎一县的百姓，就足以说明他的好客、礼贤下士不过只是笼络能够为己所用的人才而已，寻常百姓的死活根本不放在眼里。</p>
+<blockquote>
+<p>世皆称孟尝君能得士，士以故归之，而卒赖其力以脱于虎豹之秦。呜乎，孟尝君特鸡鸣狗盗之雄耳，岂足以言得士！不然，擅齐之强，得一士焉，宜可以南面而制秦，尚何取鸡鸣狗盗之力哉？夫鸡鸣狗盗之出其门，此士之所以不至也。——王安石·《读孟尝君传》</p>
+</blockquote>
+<p>物以类聚，人以群分。王安石认为，孟尝君不过是鸡鸣狗盗之徒，门下根本没有眼光高远的真正的“士”。招揽的门客，无非是些能够帮助田文左右逢源，高枕无忧的谋士而已。实际上也的确如此，无论魏子、冯驩，出谋划策的都是帮助孟尝君树立个人威望，如何在强国林立的环境下，利用国际政治巩固自己的地位。虽然我个人非常欣赏冯驩。</p>
+<p>孟尝君可说是名标准的政客。不过，在当时的环境下，所谓的王公贵族，翩翩公子，也没有几个是真正心系天下的吧。</p>
+<blockquote>
+<p>后齐湣王灭宋，益骄，欲去孟尝君。孟尝君恐，乃如魏。魏昭王以为相，西合于秦、赵，与燕共伐破齐。齐愍王亡在莒，遂死焉。齐襄王立，而孟尝君中立于诸侯，无所属。齐襄王新立，畏孟尝君，与连和，复亲薛公。文卒，谥为孟尝君。诸子争立，而齐魏共灭薛。孟尝绝嗣无后也。——《史记·孟尝君列传》</p>
+</blockquote>
+<h1 id="写在后面"><a href="#写在后面" class="headerlink" title="写在后面"></a>写在后面</h1><p>四公子所处年代，正是战国纵横家最活跃的时期。广义的说，这四位分别在各朝为相，周旋于各国上层。所以广义上他们也是纵横家的代表，而他们门下的门客、友人，诸如毛遂，冯驩，公孙龙，苏代等人也是各显其能，于政治舞台斡旋，留下各种精彩的故事。</p>
+<p>关于合纵连横，且待下回分解。</p>
+<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><ul>
+<li>史记·孟尝君列传第十五</li>
+<li>史记·平原君列传虞卿列传第十六</li>
+<li>史记·魏公子列传第十七</li>
+<li>史记·春申君列传第十八</li>
+<li><a href="http://www.guoxue.com/book/zhanguoce/0011.htm" target="_blank" rel="external">战国策·齐四·齐人有冯谖者</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;孟尝君：&quot;&gt;&lt;a href=&quot;#孟尝君：&quot; class=&quot;headerlink&quot; title=&quot;孟尝君：&quot;&gt;&lt;/a&gt;孟尝君：&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;太史公曰：吾尝过薛，其俗闾里率多暴桀子弟，与邹、鲁殊。问其故，曰孟尝君招致天下任侠，奸人入薛中盖六万余家矣。”世之传孟尝君好客自喜，名不虚矣。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;孟尝君田文，是齐国宰相田婴的庶子。以贤能之名为天下所闻，曾持秦、齐、魏三国相印。这么个大人物，却在刚出生时就被认为不吉利，要被父亲扔掉。&lt;/p&gt;
+&lt;p&gt;农历五月初五，端午节，现在是个热闹欢腾的节日。在中国古代却被认为与不详、邪恶有关，东汉《论衡》甚至说“讳举正月、五月子；以正月、五月子杀父与母，不得举也”。&lt;/p&gt;
+&lt;p&gt;田文就出生在这一天。父亲得知后万分厌恶，要求其母速速扔掉。母亲却偷偷把他抚养长大。成年后以机警的言谈和过人的眼光获得父亲的赏识，直至最后作为太子继承了田婴的封爵。为了出人头地，更是广泛招揽“宾客及亡人有罪者”并“舍业厚遇之”。&lt;/p&gt;
+&lt;p&gt;门下号称食客三千，有人认为正是孟尝君引领了战国时期王公贵族养食客的风气。&lt;/p&gt;
+&lt;p&gt;孟尝君以贤能善辩，礼贤下士闻名。太史公却以“好客自喜”来评价他，认为他所做的这些，不过是为自己打算而已。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="老猫读史" scheme="http://www.catxn.net/categories/%E8%80%81%E7%8C%AB%E8%AF%BB%E5%8F%B2/"/>
+    
+    
+      <category term="历史" scheme="http://www.catxn.net/tags/%E5%8E%86%E5%8F%B2/"/>
+    
+      <category term="春秋战国" scheme="http://www.catxn.net/tags/%E6%98%A5%E7%A7%8B%E6%88%98%E5%9B%BD/"/>
+    
+      <category term="四公子" scheme="http://www.catxn.net/tags/%E5%9B%9B%E5%85%AC%E5%AD%90/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>迁移到Hexo，双线镜像</title>
+    <link href="http://www.catxn.net/posts/2015/%E8%BF%81%E7%A7%BB%E5%88%B0Hexo/"/>
+    <id>http://www.catxn.net/posts/2015/迁移到Hexo/</id>
+    <published>2015-03-31T03:40:17.000Z</published>
+    <updated>2016-01-24T14:36:57.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>一直以来都是用 wordpress。随着 WP 日渐臃肿，以及在喜欢上 Markdown 写作之后，就一直想找个能对 Markdown 支持完美的，轻量级的，并易于版本管理的博客系统。</p>
+<p>在这种需求下，Jekyll 落入了视线。</p>
+<p>Jekyll 是 GitHub 和 GitCafe 内置支持的静态网页生成引擎，可定制化程度也高。看上去对我们程序猴子这种不折腾会死的物种非常合适，但是经过一段时间的观察和分析后。感觉可能它并不是最佳选择。</p>
+<p>然后我看到了 cnfeat 这篇 <a href="http://cnfeat.com/2014/05/10/2014-05-11-how-to-build-a-blog/" target="_blank" rel="external">简明Github Pages与Hexo教程</a>。瞬间就被它吸引了。</p>
+<p><img src="http://catxn.u.qiniudn.com/images/acg/zespia001.jpg-o" alt="骗点击"></p>
+<h1 id="选哪个"><a href="#选哪个" class="headerlink" title="选哪个"></a>选哪个</h1><p>两个引擎都支持 markdown，都可以利用 git 库进行管理。最终发布的都是静态页面。这一点没什么大的差别。相对而言，Jekyll 发展较早，相对比较成熟，Hexo 是后起之秀，但是发展迅速。</p>
+<p>Jelly 是 github 的默认推荐。它的工作方式是把源文件上传至 github 的特定分支，然后 github 在发现有文件更新时，在服务端重新编译生成静态网页自动部署至 master 分支。</p>
+<p>Jekyll 的优势是发展比较成熟，因为是官方推荐，支持也比较好。看上去对程序员来说也更加优雅便于折腾。缺点是配置比较复杂，需要遵循一定的规范比如一定要放在 gh-pages 分支。因为是提交源文件在服务端生成，所以在内容发生变化到前端呈现会有一定延迟。</p>
+<p>Hexo 的原作者是一名台湾的学生。推出的目的就是为了提供更大的便利，更容易入手，更方便配置。</p>
+<p>实际上也是如此，Hexo 从安装、配置、发布都非常简洁。常用的命令记住 <code>n g s d</code> 四个字母就搞定。</p>
+<p>Hexo 还有一个决定性的好处，下文说。</p>
+<p>总之最后我选择了 Hexo，在代码库中建立一个独立的 hexo 分支用于存放源文件。</p>
+<a id="more"></a>
+<h1 id="双线部署"><a href="#双线部署" class="headerlink" title="双线部署"></a>双线部署</h1><p>hexo 可以同步推送到多个git库，比如，在配置文件里这样写：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  message: &quot;hexo deploy generated pages&quot;</div><div class="line">  repo: </div><div class="line">    github: &lt;github repo url&gt;</div><div class="line">    gitcafe: &lt;gitcafe repo url&gt;</div></pre></td></tr></table></figure>
+<p>然后执行部署命令，就可以同步部署到 gitcafe 和 github。</p>
+<p>如果用 dnspod 来做实现双线解析，瞬间就可以实现境内境外双线解析镜像。这点非常爽。不过这里有个坑，参见下一节。</p>
+<h1 id="坑"><a href="#坑" class="headerlink" title="坑"></a>坑</h1><p>这里是一些大坑。估计如果看到Hexo的介绍后，想自己动手试试看的都会遇到。</p>
+<ul>
+<li><p>首先，部署到GitHub时，应该直接部署到master分支。部署到 gitcafe 则应部署至 gitcafe-pages 分支。</p>
+<p>  gitcafe-pages, gh-pages 这样的分支是用来给Jekyll在服务端生成静态网站用的。</p>
+<p>  用hexo生成网站是在本地生成后部署静态页面，这时直接部署到master即可。但是 gitcafe 的 master 分支貌似不会生成网站，必须部署至 gitcafe-pages 分支。</p>
+</li>
+<li><p>然后，Hexo 现在最新的版本是3.0 </p>
+<p>  config的设置项有所更改，包结构也有变化。</p>
+<p>  最坑的是，如果多点部署的话，会报错。看了下应该是 3.0 更新后的bug，在 github Hexo 项目上，已经有人提了<a href="https://github.com/hexojs/hexo/issues/1108" target="_blank" rel="external">issue</a>，看什么时候能解决吧。</p>
+<p>  3.0 详细的变化可以参考 <a href="https://github.com/hexojs/hexo/wiki/Breaking-Changes-in-Hexo-3.0" target="_blank" rel="external">github 上的文档</a>.</p>
+<p>  <strong>更新</strong>: 昨天 git deployer 更新到 0.0.4，修正了该问题。参见<a href="https://github.com/hexojs/hexo/issues/1108#issuecomment-87942286" target="_blank" rel="external">作者的说明</a>.</p>
+<p>  更新方法：编辑 package.json，把 hexo-deployer-git 的版本升级到 0.0.4，然后 <code>npm update</code>.</p>
+</li>
+<li><p>迁移自 wordpress</p>
+<p>  用插件 hexo-migrator-wordpress 即可一键完成。比较郁闷的是，如果原文的标题是中文，那么这里所有的文件名都会被解析成形如 ab-cd-ef-gh-de-ty-ww-rt-as-cd-fg.md 这种形式。原因可以理解，它首先将中文进行编码，然后替换空格最终形成“slug”形式的permalink。但是看着实在很蛋疼。</p>
+</li>
+<li><p>目录（categories）</p>
+<p>  hexo 支持多目录。但是……</p>
+<p>  如果你指定了多个目录，比如 <code>[建站心得，流水账]</code>，那么最后呈现出的目录列表可能是这个样子的：</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">建站心得5</div><div class="line">流水账5</div><div class="line">流水账1</div><div class="line">流水账1</div><div class="line">流水账1</div><div class="line">...</div></pre></td></tr></table></figure>
+<p>  泪奔。所以还是老老实实用单category，结合标签云好啦。</p>
+</li>
+</ul>
+<p>还碰过其他坑，暂时记起来这么多。后面想起来或遇到新坑再更新。</p>
+<h1 id="写作工具"><a href="#写作工具" class="headerlink" title="写作工具"></a>写作工具</h1><p>当然。你可以直接在简书写，跨平台，实时保存。XD 然后复制到 Hexo 源文件目录。</p>
+<p>Mac 平台的话，强烈推荐 “Mou”。</p>
+<h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><p>详细的 Hexo 安装设置指南就不多说了。 cnfeat 的文章讲得非常详细，即使小白也能按照所列的步骤一步步搭建起自己的一个静态博客。</p>
+<p>只是有一点，弄这些玩意儿，翻墙技能还是要有一点的。否则一个 npm 命令都会让你抓狂。</p>
+<p><a href="http://www.catxn.net">国际惯例，成品展示在这里。</a></p>
+<p>Enjoy it!</p>
+<p>(题图来自 <a href="http://zespia.tw" target="_blank" rel="external">Hexo 作者的个人主页</a>。据说可以提高点击率。XD)</p>
+<!-- 链接区 -->
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;一直以来都是用 wordpress。随着 WP 日渐臃肿，以及在喜欢上 Markdown 写作之后，就一直想找个能对 Markdown 支持完美的，轻量级的，并易于版本管理的博客系统。&lt;/p&gt;
+&lt;p&gt;在这种需求下，Jekyll 落入了视线。&lt;/p&gt;
+&lt;p&gt;Jekyll 是 GitHub 和 GitCafe 内置支持的静态网页生成引擎，可定制化程度也高。看上去对我们程序猴子这种不折腾会死的物种非常合适，但是经过一段时间的观察和分析后。感觉可能它并不是最佳选择。&lt;/p&gt;
+&lt;p&gt;然后我看到了 cnfeat 这篇 &lt;a href=&quot;http://cnfeat.com/2014/05/10/2014-05-11-how-to-build-a-blog/&quot;&gt;简明Github Pages与Hexo教程&lt;/a&gt;。瞬间就被它吸引了。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://catxn.u.qiniudn.com/images/acg/zespia001.jpg-o&quot; alt=&quot;骗点击&quot;&gt;&lt;/p&gt;
+&lt;h1 id=&quot;选哪个&quot;&gt;&lt;a href=&quot;#选哪个&quot; class=&quot;headerlink&quot; title=&quot;选哪个&quot;&gt;&lt;/a&gt;选哪个&lt;/h1&gt;&lt;p&gt;两个引擎都支持 markdown，都可以利用 git 库进行管理。最终发布的都是静态页面。这一点没什么大的差别。相对而言，Jekyll 发展较早，相对比较成熟，Hexo 是后起之秀，但是发展迅速。&lt;/p&gt;
+&lt;p&gt;Jelly 是 github 的默认推荐。它的工作方式是把源文件上传至 github 的特定分支，然后 github 在发现有文件更新时，在服务端重新编译生成静态网页自动部署至 master 分支。&lt;/p&gt;
+&lt;p&gt;Jekyll 的优势是发展比较成熟，因为是官方推荐，支持也比较好。看上去对程序员来说也更加优雅便于折腾。缺点是配置比较复杂，需要遵循一定的规范比如一定要放在 gh-pages 分支。因为是提交源文件在服务端生成，所以在内容发生变化到前端呈现会有一定延迟。&lt;/p&gt;
+&lt;p&gt;Hexo 的原作者是一名台湾的学生。推出的目的就是为了提供更大的便利，更容易入手，更方便配置。&lt;/p&gt;
+&lt;p&gt;实际上也是如此，Hexo 从安装、配置、发布都非常简洁。常用的命令记住 &lt;code&gt;n g s d&lt;/code&gt; 四个字母就搞定。&lt;/p&gt;
+&lt;p&gt;Hexo 还有一个决定性的好处，下文说。&lt;/p&gt;
+&lt;p&gt;总之最后我选择了 Hexo，在代码库中建立一个独立的 hexo 分支用于存放源文件。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="建站心得" scheme="http://www.catxn.net/categories/%E5%BB%BA%E7%AB%99%E5%BF%83%E5%BE%97/"/>
+    
+    
+      <category term="建站" scheme="http://www.catxn.net/tags/%E5%BB%BA%E7%AB%99/"/>
+    
+      <category term="hexo" scheme="http://www.catxn.net/tags/hexo/"/>
+    
+      <category term="github" scheme="http://www.catxn.net/tags/github/"/>
+    
+      <category term="blog" scheme="http://www.catxn.net/tags/blog/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://www.catxn.net/posts/2015/hello-world/"/>
+    <id>http://www.catxn.net/posts/2015/hello-world/</id>
+    <published>2015-03-31T00:00:00.000Z</published>
+    <updated>2015-04-01T12:25:34.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Welcome to &lt;a href=&quot;http://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;http://hexo.io
+    
+    </summary>
+    
+      <category term="建站心得" scheme="http://www.catxn.net/categories/%E5%BB%BA%E7%AB%99%E5%BF%83%E5%BE%97/"/>
+    
+    
+      <category term="建站" scheme="http://www.catxn.net/tags/%E5%BB%BA%E7%AB%99/"/>
+    
+      <category term="hexo" scheme="http://www.catxn.net/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>战国四公子（中）</title>
+    <link href="http://www.catxn.net/posts/2015/four-lords-2/"/>
+    <id>http://www.catxn.net/posts/2015/four-lords-2/</id>
+    <published>2015-03-23T06:31:00.000Z</published>
+    <updated>2015-04-06T13:43:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="平原君"><a href="#平原君" class="headerlink" title="平原君"></a>平原君</h1><p>令平原君名留青史的，还是邯郸围城这档子事。魏无忌不惜铤而走险窃取兵符，驱使门人击杀大将也要去救的，正是当时赵胜率军死守的邯郸。</p>
+<p>秦赵长平战后，秦国一路打到赵国都城邯郸，围城三年，百姓几乎易子而食。平原君一方面散尽家财，率军数千顽强抵抗，一方面分别向当时尚有实力对抗秦国的楚、魏求援。</p>
+<p>赵胜是魏无忌的姐夫，一方面，唇亡齿寒，魏国救赵其实是非救不可，再加上这层裙带关系，无忌岂有不肝脑涂地之理。信陵君这边前面已经讲过，不再多说。楚国那边就很有意思。</p>
+<p>楚国在一鸣惊人的楚庄王之后，一直都是糊里糊涂，并且后宫对朝政的干预也是乱七八糟。当时的楚国，国力尚存，又在不久前被白起打得找不着北，若不是春申君，考烈王恐怕是要老死在秦国。好不容易靠春申君说服秦王罢兵，签了合约，想着能安安稳稳躲在一边过日子，这会儿实在是不想参合山东的事儿。</p>
+<p>最终促成联楚国抗秦的，是平原君门下一个门客。</p>
+<a id="more"></a>
+<p>##毛遂自荐</p>
+<p>平原君要从门下三千食客中选二十人同去楚国订立盟约。起初挺自负：“使文能取胜，则善矣。文不能取胜，则歃血於华屋之下，必得定从而还。士不外索，取於食客门下足矣”。大概赵胜是处女，挑来挑去只挑到十九人，凑不足二十就没有办法出行。正愁得没有办法，一名门客自告奋勇要求加入，这个人就是毛遂。</p>
+<p>赵胜认为，人但凡有点本事的，就像针尖放在布袋中一样，总会漏出头来扎手。毛遂在他家三年居然从未听过，就有些瞧不起。毛遂笑道，那是没试过，今天我就是来请求放进去看看，一试之下，必定<strong>脱颖而出</strong>。</p>
+<p>将信将疑的平原君想着好歹能凑个数，就带了毛遂上路。</p>
+<p>到了楚国，平原君一早上殿与楚王议事，直到中午没有任何进展。毛遂拎着剑就闯到殿上，直逼楚王十步之内，先威胁楚王说你人再多，我在这么近的情况下要干掉你也是分分钟的事儿。吓得楚王只好战战兢兢地听他讲道理。</p>
+<p>毛遂说，过去商汤，文王都是一点点地盘就能王霸天下，跟人多少一点关系都没有。而今天楚国雄兵百万，本就具备霸王的先天条件。结果被个小小的白起带几万人反复羞辱，你有脸见楚国先王吗？这个盟约表面上是为山东五国，其实楚国才是最大获益者。另外，我老大就在这里，你凭啥训斥我？</p>
+<p>楚王听了毛遂老师的教诲，不明觉厉。就答应了盟约，毛遂趁热打铁，把那十九名食客也都召集上殿，与平原君，楚王等人一起于殿上歃血，这盟约就成了。之后，楚考烈王派春申君，率军救赵。平原君坚守三年，终于等来魏赵两国援军，解了邯郸之围。</p>
+<blockquote>
+<p>平原君已定从而归，归至於赵，曰：“胜不敢复相士。胜相士多者千人，寡者百数，自以为不失天下之士，今乃於毛先生而失之也。毛先生一至楚，而使赵重於九鼎大吕。毛先生<strong>以三寸之舌，彊於百万之师</strong>。胜不敢复相士。”遂以为上客。</p>
+</blockquote>
+<h2 id="从谏如流还是利令智昏"><a href="#从谏如流还是利令智昏" class="headerlink" title="从谏如流还是利令智昏"></a>从谏如流还是利令智昏</h2><p>前面说到坚守邯郸，结盟解围，平原君着实给赵国立了大功。</p>
+<p>可是，出来混总归要还的。平原君散尽家财，舍命护国，其实也算为自己还债。因为，搞得赵国在长平损失四十万大军，乃至围困邯郸险些亡国的，可以说正是他赵胜。</p>
+<p>事情由韩国而起。前262年，白起伐韩，攻克野王，孤立了上党郡。韩王割城求和，派冯亭去接管上党执行割地事宜。</p>
+<p>冯亭却另有打算，先忽悠了上党的官吏，然后跑去赵国，要把上党送给赵国，意图拉拢赵国一起抗秦。平阳君赵豹跟赵孝成王说，这是韩国的嫁祸之计。上党已是秦国囊中之物，我们接受的话，秦国必然要打我们。接受上党无异于引火上身。孝成王听了有些犹豫，就跑去问平原君。赵胜沉吟半响，说，十七座城啊，咱收了吧。</p>
+<p>于是有了两年后的长平之战。</p>
+<p>看平原君的故事，充满了各种矛盾之处。包括他的从谏如流，其实给人的感觉也是左右摇摆。一个人说这样，一个人说那样，听了后来者的话就立刻把前面人的劝谏忘得一干二净。信任公孙龙，因公孙龙之策拒受战功，却又因邹衍论道，把公孙龙晾一边去了。</p>
+<p>不过可能也是能够正视自己能力有限，所以特别注重人才的发现和笼络。至于接受上党引火上身一事，是否当时对韩国见死不救就是好事呢？这也很难说，毕竟，秦国本来的打算就是把山东五国一个一个收拾掉的。</p>
+<blockquote>
+<p>太史公曰：平原君，翩翩浊世之佳公子也，然未睹大体。鄙语曰“利令智昏”，平原君贪冯亭邪说，使赵陷长平兵四十馀万众，邯郸几亡。翩翩公子，天下奇器。笑姬从戮，义士增气。兵解李同，盟定毛遂。</p>
+</blockquote>
+<p>孝成王十五年，平原君去世，算是善终。大约三十多年后，秦灭赵，平原君后嗣断绝。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;平原君&quot;&gt;&lt;a href=&quot;#平原君&quot; class=&quot;headerlink&quot; title=&quot;平原君&quot;&gt;&lt;/a&gt;平原君&lt;/h1&gt;&lt;p&gt;令平原君名留青史的，还是邯郸围城这档子事。魏无忌不惜铤而走险窃取兵符，驱使门人击杀大将也要去救的，正是当时赵胜率军死守的邯郸。&lt;/p&gt;
+&lt;p&gt;秦赵长平战后，秦国一路打到赵国都城邯郸，围城三年，百姓几乎易子而食。平原君一方面散尽家财，率军数千顽强抵抗，一方面分别向当时尚有实力对抗秦国的楚、魏求援。&lt;/p&gt;
+&lt;p&gt;赵胜是魏无忌的姐夫，一方面，唇亡齿寒，魏国救赵其实是非救不可，再加上这层裙带关系，无忌岂有不肝脑涂地之理。信陵君这边前面已经讲过，不再多说。楚国那边就很有意思。&lt;/p&gt;
+&lt;p&gt;楚国在一鸣惊人的楚庄王之后，一直都是糊里糊涂，并且后宫对朝政的干预也是乱七八糟。当时的楚国，国力尚存，又在不久前被白起打得找不着北，若不是春申君，考烈王恐怕是要老死在秦国。好不容易靠春申君说服秦王罢兵，签了合约，想着能安安稳稳躲在一边过日子，这会儿实在是不想参合山东的事儿。&lt;/p&gt;
+&lt;p&gt;最终促成联楚国抗秦的，是平原君门下一个门客。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="老猫读史" scheme="http://www.catxn.net/categories/%E8%80%81%E7%8C%AB%E8%AF%BB%E5%8F%B2/"/>
+    
+    
+      <category term="历史" scheme="http://www.catxn.net/tags/%E5%8E%86%E5%8F%B2/"/>
+    
+      <category term="春秋战国" scheme="http://www.catxn.net/tags/%E6%98%A5%E7%A7%8B%E6%88%98%E5%9B%BD/"/>
+    
+      <category term="四公子" scheme="http://www.catxn.net/tags/%E5%9B%9B%E5%85%AC%E5%AD%90/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>小议“流氓推广”</title>
+    <link href="http://www.catxn.net/posts/2015/talk-about-rogue-promotion/"/>
+    <id>http://www.catxn.net/posts/2015/talk-about-rogue-promotion/</id>
+    <published>2015-03-22T14:15:00.000Z</published>
+    <updated>2015-04-02T12:07:39.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>你装了一个软件，安装完成的确认页默认勾选了一堆选项，可能你也搞不懂那些都什么玩意儿，既然是默认选中的，那么放着不管也没事的吧？</p>
+<p>你推荐给妈妈一个软件，老太太什么也不懂，反正儿子给推荐的，那就装呗，儿子说，那个“下一步”按钮一直按一直按就安好了。</p>
+<p>你装了个手机App，哇好酷炫。咦，这边有个巨大的按钮说点下去就有惊喜。</p>
+<p>你装了个“安全管家”，它说你手机有风险，需要启用高级功能。这厂商一直挺靠谱的，那就再继续信他一回。</p>
+<p>……</p>
+<p>上面这些事司空见惯对吧，然后你猜怎么着？</p>
+<p>没错，你的PC，你的手机，很快被一堆压根用不着甚至根本不知道是什么的东西充斥。然后这些莫名其妙的东西还继续倍增更多莫名其妙的东西，清理、卸载，过不多久它们就又卷土重来而且更加顽固，甚至那些所谓的卫士，在干掉坏东西后，自己再给你装上一些。</p>
+<p>只有Windows电脑时，我们管这些玩意儿叫流氓软件。</p>
+<p>现在，它们摇身一变，改头换面，卷土重来。</p>
+<a id="more"></a>
+<h1 id="什么是流氓推广？"><a href="#什么是流氓推广？" class="headerlink" title="什么是流氓推广？"></a>什么是流氓推广？</h1><p>首先阐明立场，我完全同意“没事儿就挥舞道德大棒来评判他人的，很令人厌恶”。没人有资格站在所谓道德制高点去批评<strong>他人</strong>，道德更应用来自律而不是律他。</p>
+<p>但是，<strong>任何人都有权用道德来评论一家公司</strong>。</p>
+<p>上面这些行为，都是为了自己或友商的产品的营销推广行为。作为需要盈利的公司，想通过各种方式赚钱完全可以理解。作为用着廉价甚至免费的产品的我们，只要厂商做得不太过分，我们都可以忍。但能容忍并不表示天经地义。</p>
+<p>比如Windows上软件安装完毕时默认勾选安装的其他软件，无论是否能取消勾选，都是想尽可能提高这些软件被安装的概率。可是“默认勾选”和“默认不勾选”，一个小小的差别，厂商的动机和用户的感受却是天壤之别。</p>
+<p>尤其对懒得仔细看安装提示，或者对电脑一知半解的人，尤其是上了年纪，对IT产品不懂甚至有些敬畏的我们的父母、爷爷奶奶，如果默认是勾选的，基本上大多数时候就“被主动”同意安装了。</p>
+<p>作为一名程序猴子，本来不想就这个话题发表负面意见。</p>
+<p>原因是，国内软件市场，尤其是现在的一些互联网软件市场，不这么耍流氓的话，很多软件公司实在很难生存。这些公司都在想方设法强奸用户来获得效益。区别是，有的很粗暴，由的在强奸时会设法让你不觉得在被强奸，或者甚至觉得被奸的很舒服。</p>
+<p>有实力的公司，比如BAT这种吨位的，甚至会有专门的团队研究，如何排布这些安装选项的出现，能提高其被安装的概率。</p>
+<p>最近用过的某个手机App，一级页面有个不大不小的按钮，很难不注意到，按钮的提示给人的感觉是程序内部某个功能。点下去，居然就静悄悄地后台下载安装了一个八竿子打不着的App，作为深度用户，这么容易就着了道，我……只好醉了。</p>
+<p>在此种大环境下，去批评谁流氓谁更流氓，本身就有点耍流氓。很多人应该听过这几年曾经流传过的一句话，原话懒得查了，大意是：拼竞争力就是拼底线。没有节操的人，最后才能成功。</p>
+<p>在这种指导思想影响下，软件行业的此种“流氓行为”，实在已经成为行业的职业病。作为一名软件从业者，我是深深感到我们自己这个行业的道德底线，在利益面前，毫无疑问正在不断降低。</p>
+<p>不光是捆绑行为。产品本身的设计也是如此。比如层出不穷的约炮类，主播类软件。无一不在想法设法打擦边球。无它，利益使然。</p>
+<p>软件公司该不该有道德？当然应该。你不是一个个人，你是一家公司，你端出来菜是给别人吃的。</p>
+<p>用户有没有权力指责软件耍流氓？当然有。</p>
+<p>免费用户是不是用户？用户就是用户，无论我用的是免费软件还是付费软件。当然，盗版不算。</p>
+<h1 id="为什么很多人不认为这种推广方式是耍流氓"><a href="#为什么很多人不认为这种推广方式是耍流氓" class="headerlink" title="为什么很多人不认为这种推广方式是耍流氓"></a>为什么很多人不认为这种推广方式是耍流氓</h1><p>这本来是一篇知乎问答。在原题下回答后最后演变为骂战。过去挺久的事，可最近深感手机上的无节操推广也愈演愈烈，不吐不快。于是在原回答基础上整理修改，贴这儿。</p>
+<p>之所以会引发口水仗，是因为居然有不少人认为这些捆绑行为是天经地义的。立论主要有三点：</p>
+<ol>
+<li>给了你取消的方式，又不是没有选择。</li>
+<li>软件免费给你用，不放点广告，放点第三方软件怎么盈利？</li>
+<li>不花钱用产品，就不要唧唧歪歪了。</li>
+</ol>
+<p>最后一条最无语，免费用户就不是用户了么？</p>
+<p>“流氓软件”的定义从来都不明确。而免费软件的生存，若不靠捆绑销售，很多时候很难。比如搜索引擎的广告。比如视频网站的广告。</p>
+<p>有人说，“现在怎么对‘流氓’的阈值”如此低。其实事实正好相反。因为默认捆绑几乎已经成了行业惯例，所以现在连“默认选中”竟然已经被有些人认为不是流氓了。</p>
+<p>曾经，软件安装时，只要出现有第三方捆绑的其他软件的，无论是否有勾选，无论是否能卸载，都是会被骂成流氓的。</p>
+<p>捆绑软件最初的演变：起初，强制安装。后来迫于压力，变成了提供是否安装的选项，那时，有默认选择，也有默认不选择。后来，似乎又有压力，变成了大部分主流软件默认不选择。再到现在，压力减小，又全都变成默认选择了。</p>
+<p>是否“默认安装”，这在软件公司和用户之间，一直在进进退退地博弈。现在的做法，是软件业的无奈之举。</p>
+<p>一个应用程序，这些事儿只要做得不是太过分，基本上用户都默默接受。毕竟，软件免费给你用，软件公司要设法生存。大家互相理解就好。我想用免费或廉价的软件，开发商想获取收入，所以插入广告，弹出第三方软件下载链接，那就这样吧。</p>
+<p>但是，如果因此就认为这是天经地义，那么无论开发者还是消费者，底线都会被不断拉低。</p>
+<p>数年前，我国的消费软件市场，还是一个盗版为王的时代。而现在，除了大量免费正版软件的出现，用户也已经逐渐开始习惯，为自己需要的软件付费。整个市场的正版付费意识，正在向健康的方向发展。一款好用的产品，用户现在是愿意花钱的。</p>
+<p>我们应该期待这么一天的出现：用户拥有轻松的自主权，开发者可以通过收费得到应有的收入，开发者、设计者、运营者能够不需要为盈利操心，而可以只关注于产品本身，把精力放在提供的功能上，而不是用大量的精力来设计广告嵌入，第三方软件下载等等。</p>
+<p>其实，我完全理解反方的观点，因为这与立场相关。其实我也并不是纯粹的用户，实际上更应该站在运营一方的立场来支持这样的推广方式。</p>
+<p>所以，其实并不想指责，只是希望我们“知道”。</p>
+<h1 id="那么，怎么判断流氓软件？"><a href="#那么，怎么判断流氓软件？" class="headerlink" title="那么，怎么判断流氓软件？"></a>那么，怎么判断流氓软件？</h1><p>再说一次：<strong>一种行为是不是流氓，受众能否容忍这种行为，这是两回事。能忍受/能接受，不代表它就正确。</strong></p>
+<p>举个例子：</p>
+<p>大街上摸一把老婆的屁股，老婆会说“滚”。<br>摸一把路上遇到的美女，美女大概会报警。<br>我摸摸办公室暗恋我的女同事（有么），女同事大概会羞红了脸跑开。<br>如果不是我，换吴彦祖来，台下的女粉大概会哭喊“再来一次”吧？但是这就不是耍流氓了吗？</p>
+<p>有这么句话：“幸福就是有人对你耍流氓”么？嗯……我也不知道为什么要把这句放这儿。</p>
+<p>总结下我个人对“流氓软件”的定义：</p>
+<blockquote>
+<ol>
+<li>是否有用户预期之外的行为</li>
+<li>该行为是否会对用户产生不同程度的负面影响</li>
+<li>该行为开发方是否可以“主动”避免；或该行为是否是开发商主动加入的。（这一条是为了区分Bug和流氓）</li>
+</ol>
+</blockquote>
+<p>以上三个条件全都满足，我才认为有“流氓”行为，流氓行为的程度，另外再讨论。这三点放在这里，也是为了给自己和所有的从业者提醒，如果不是非做不可，上面这三条应该是尽力避免的。从正面的角度来说，这就叫“用户体验”。</p>
+<p>我的话说完了。</p>
+<hr>
+<p>好吧，这篇放这里其实是来骗赞的，所以：<br>如果你是一名普通用户，跟我一样很讨厌软件干一些你并不想要的莫名其妙的事情，请在下面点赞；<br>如果你是一名开发者，跟我一样希望能将精力放在如何改进技术，如何做出真正有价值的特性，而不是花费大量时间研究如何推广如何盈利，请在下面点赞；<br>如果你是一名市场或者运营，嗯……就当刚刚这篇文字从来没有出现过好了。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;你装了一个软件，安装完成的确认页默认勾选了一堆选项，可能你也搞不懂那些都什么玩意儿，既然是默认选中的，那么放着不管也没事的吧？&lt;/p&gt;
+&lt;p&gt;你推荐给妈妈一个软件，老太太什么也不懂，反正儿子给推荐的，那就装呗，儿子说，那个“下一步”按钮一直按一直按就安好了。&lt;/p&gt;
+&lt;p&gt;你装了个手机App，哇好酷炫。咦，这边有个巨大的按钮说点下去就有惊喜。&lt;/p&gt;
+&lt;p&gt;你装了个“安全管家”，它说你手机有风险，需要启用高级功能。这厂商一直挺靠谱的，那就再继续信他一回。&lt;/p&gt;
+&lt;p&gt;……&lt;/p&gt;
+&lt;p&gt;上面这些事司空见惯对吧，然后你猜怎么着？&lt;/p&gt;
+&lt;p&gt;没错，你的PC，你的手机，很快被一堆压根用不着甚至根本不知道是什么的东西充斥。然后这些莫名其妙的东西还继续倍增更多莫名其妙的东西，清理、卸载，过不多久它们就又卷土重来而且更加顽固，甚至那些所谓的卫士，在干掉坏东西后，自己再给你装上一些。&lt;/p&gt;
+&lt;p&gt;只有Windows电脑时，我们管这些玩意儿叫流氓软件。&lt;/p&gt;
+&lt;p&gt;现在，它们摇身一变，改头换面，卷土重来。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="夜猫茶舍" scheme="http://www.catxn.net/categories/%E5%A4%9C%E7%8C%AB%E8%8C%B6%E8%88%8D/"/>
+    
+    
+      <category term="流氓" scheme="http://www.catxn.net/tags/%E6%B5%81%E6%B0%93/"/>
+    
+      <category term="运营" scheme="http://www.catxn.net/tags/%E8%BF%90%E8%90%A5/"/>
+    
+      <category term="推广" scheme="http://www.catxn.net/tags/%E6%8E%A8%E5%B9%BF/"/>
+    
+      <category term="流氓软件" scheme="http://www.catxn.net/tags/%E6%B5%81%E6%B0%93%E8%BD%AF%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>项目计划时间与实际开发时间不符怎么办</title>
+    <link href="http://www.catxn.net/posts/2015/howto-handle-plan-actual-time/"/>
+    <id>http://www.catxn.net/posts/2015/howto-handle-plan-actual-time/</id>
+    <published>2015-03-10T02:37:00.000Z</published>
+    <updated>2015-04-02T12:07:39.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>本文原发于<a href="http://www.zhihu.com/question/23940150" target="_blank" rel="external">知乎问答</a>。此处略作修改。</p>
+</blockquote>
+<p>有人问，项目经理如何处理项目计划时间与实际开发时间不符的问题？答曰，实际工作中，项目计划时间几乎必然少于实际需要时间，不然大家为什么会加班呢？项目经理最主要的工作之一不就是处理时间、资源的冲突么？</p>
+<p>相信这个世界上会存在可以被说服接受“三个月时间不够”的老板。然而现实是，大多数情况下，老板会说，小刘，这个项目我三个月之后就要，你看着办。</p>
+<p><strong> 不要试图硬碰硬地去推翻最后期限 </strong></p>
+<p>要么做，要么滚。老板不是在考察你的能力，而是，老板将他面临的最后期限，分解后将其中一部分任务交给你。你说你做还是不做？</p>
+<p>Ready？GO！</p>
+<a id="more"></a>
+<p>首先，按照通常的项目管理方法，分解工作包，列出关键路径，进行详细估算、风险预测。给出最可能的完成时间预测。呈交客户（老板）。</p>
+<p>这一步完成后，很有可能会发现，实际预估时间与客户预期交付时间的差距，也许并没有最初想象的那么大，在这种情况下，做好风险控制，早期压缩进度（各种赶工，各种追加资源），后期确保质量，尽量保证如期交付。</p>
+<p>与此同时，开始动员团队。关于这里很重要的一点是，你必须了解你的团队，你的团队在关键时刻，能够准确配合你的意图行动。这是团队建设的问题，就不在这个问题下展开了。有兴趣可参阅：《<a href="http://www.jianshu.com/p/7293d74917f6" target="_blank" rel="external">如何打造理想团队</a>》。</p>
+<p>如果详细估算与期望交付时间仍有较大差异，与客户共同商讨，重新定义时间边界。用数据尝试与客户沟通，说明强行压缩进度可能会引入的风险及性价比。尝试推迟交付时间。如果在经过充分沟通后客户仍坚持原计划交付时间，进入讨论交付范围。尝试缩短关键路径，为功能点划分优先级，收缩范围，尝试阶段性交付。</p>
+<p>一般来说，到这一步，如果已经拿出了非常令人信服的数据来说明，在预期交付时间之前，完全交付全部功能点是不可行的，客户通常会理解，并将更关注主要功能点。我们只要保证主要功能完成，并如期交付使用即可。</p>
+<p>然后，在真正开始工作前，明确责任。取得足够授权以便调动资源。</p>
+<p>重要的是，在整个工程生命期中与boss保持良好的沟通，不断修正进度计划，不断从客户处取得反馈。有时候老板在最后期限到来之前，对交付功能的希望，早已经变了很多了。而对于互联网产品来说，需求和对交付的预期，实际上是在不断快速变化的。</p>
+<p><strong> 与其重度计划，不如立即行动 </strong></p>
+<p>软件项目延迟的比例其实不低，但因项目延迟而自杀或是辞职的项目经理却是少之又少。真正需要项目经理承担责任的，是最后交付的东西已经挑战了客户的容忍程度。根据自己的专业眼光和经验，判断出是否真的一定会延迟或部分交付，那么努力去理解客户的底线，去理解客户的真实需求，并据此调整工作的优先级队列。</p>
+<p>总之，先行动（计划也是行动的一部分），尽自己最大努力去做。再拿有分量的东西给老板看。一旦接受了任务，你就开始了作战，你的目标只有取得胜利，用一切能想到的方法，动用一切可动用的资源来达到目标。</p>
+<p>开个脑洞……</p>
+<blockquote>
+<p>团长：刘参谋，带一个班，凌晨两点前炸掉大桥，阻止敌方机械化部队进入战场。</p>
+<p>刘参谋：不行啊团长，召集爆破专家需要一小时，准备炸药一小时，找到桥梁关键点安装炸药需要一小时，我们总共需要4小时才能完成爆破任务，现在离2点还有不到3小时，能不能把时间推迟一小时？此外，这几天阴雨连绵，炸药受潮，很可能blabla……</p>
+<p>团长：卧槽，和尚，把刘参拖出去给我毙了~</p>
+</blockquote>
+<p>再来一遍：<strong>不要试图硬碰硬地去推翻老板给你的最后期限。</strong></p>
+<p>简单总结一下，其实就几个关键：</p>
+<ol>
+<li>有效沟通</li>
+<li>合理估算，与客户一起商讨，定义产品范围和时间边界</li>
+<li>尝试推迟交付时间，同时采取措施压缩进度</li>
+<li>取得有效授权，迅速动员团队</li>
+<li>快速迭代，全程保持各方有效沟通</li>
+</ol>
+<p>后面就是项目的执行阶段。作为项目经理，拿出看家本事来吧。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;本文原发于&lt;a href=&quot;http://www.zhihu.com/question/23940150&quot;&gt;知乎问答&lt;/a&gt;。此处略作修改。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;有人问，项目经理如何处理项目计划时间与实际开发时间不符的问题？答曰，实际工作中，项目计划时间几乎必然少于实际需要时间，不然大家为什么会加班呢？项目经理最主要的工作之一不就是处理时间、资源的冲突么？&lt;/p&gt;
+&lt;p&gt;相信这个世界上会存在可以被说服接受“三个月时间不够”的老板。然而现实是，大多数情况下，老板会说，小刘，这个项目我三个月之后就要，你看着办。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt; 不要试图硬碰硬地去推翻最后期限 &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;要么做，要么滚。老板不是在考察你的能力，而是，老板将他面临的最后期限，分解后将其中一部分任务交给你。你说你做还是不做？&lt;/p&gt;
+&lt;p&gt;Ready？GO！&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="管理微言" scheme="http://www.catxn.net/categories/%E7%AE%A1%E7%90%86%E5%BE%AE%E8%A8%80/"/>
+    
+    
+      <category term="管理" scheme="http://www.catxn.net/tags/%E7%AE%A1%E7%90%86/"/>
+    
+      <category term="时间管理" scheme="http://www.catxn.net/tags/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86/"/>
+    
+      <category term="项目管理" scheme="http://www.catxn.net/tags/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>战国四公子（上）</title>
+    <link href="http://www.catxn.net/posts/2015/four-lords-1/"/>
+    <id>http://www.catxn.net/posts/2015/four-lords-1/</id>
+    <published>2015-03-08T03:27:00.000Z</published>
+    <updated>2015-04-06T13:40:25.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>今天来八一八战国四公子，他们是：信陵君魏无忌，孟尝君田文，平原君赵胜，春申君黄歇。</p>
+<p>这几个人其实并非完全处于同一时代。说到时代，先得弄清楚战国的时间界定。一般从定义上来说，战国时期指<strong>前</strong>475年到前221年这段历史时期。</p>
+<p>221年是秦统一天下的时间，作为结束时间没有太大争议。但是作为春秋战国分界的几个代表性历史事件并没有发生在475年。它们分别是：田氏代齐（481年），三家分晋（458年），周天子承认韩赵魏（403年），周天子承认田齐（386年）。之所以将475年作为分界，只是为了记述方便，以周元王元年为记。</p>
+<p>信陵君出生年不明，除此外，几个人的情况大体是这个样子：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>所属</th>
+<th style="text-align:right">生卒</th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>信陵君</td>
+<td>魏国</td>
+<td style="text-align:right">???-前243</td>
+<td></td>
+<td></td>
+<td>+</td>
+<td>+</td>
+<td>+</td>
+<td>+</td>
+<td>+</td>
+<td>+</td>
+<td>+</td>
+<td>+</td>
+</tr>
+<tr>
+<td>孟尝君</td>
+<td>齐国</td>
+<td style="text-align:right">前344-前279</td>
+<td>+</td>
+<td>+</td>
+<td>+</td>
+<td>+</td>
+<td>+</td>
+<td>+</td>
+<td>+</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>平原君</td>
+<td>赵国</td>
+<td style="text-align:right">前308-前251</td>
+<td></td>
+<td></td>
+<td></td>
+<td>+</td>
+<td>+</td>
+<td>+</td>
+<td>+</td>
+<td>+</td>
+<td>+</td>
+<td></td>
+</tr>
+<tr>
+<td>春申君</td>
+<td>楚国</td>
+<td style="text-align:right">前314-前238</td>
+<td></td>
+<td></td>
+<td></td>
+<td>+</td>
+<td>+</td>
+<td>+</td>
+<td>+</td>
+<td>+</td>
+<td>+</td>
+<td>+</td>
+</tr>
+</tbody>
+</table>
+<p>从上表看出，孟尝君活跃年代稍早，其他三公子真正在政治上有交集的，大约应该有40年左右的时间。在这期间，秦国正是昭襄王在位时期。秦昭襄王为秦国奠定了扎实的基础，再经三世，由嬴政一统天下。</p>
+<p>下面挨个介绍下他们四位。</p>
+<a id="more"></a>
+<h1 id="春申君"><a href="#春申君" class="headerlink" title="春申君"></a>春申君</h1><p>春申君黄歇，楚国江夏（湖北省东部）人。为人好酒色，在平均年龄不到40的春秋战国时代，却能活到76岁的高寿，其实挺令人羡慕。魔都人民有这样的祖先想必很满意。</p>
+<p>前272年，秦昭襄王派大军犯楚，楚王连都城都挪了还是扛不住，于是派遣黄歇出使秦国求和。黄歇凭其出众的口才，成功说服秦王阻止白起出征，使楚国免于灭顶之灾。</p>
+<p>休兵后楚国遣黄歇和太子熊完入秦作为人质。顷襄王病重，秦昭襄王不肯放太子回楚国。黄歇让太子乔装为车夫，随使臣逃走。估计太子已经走远，才独自去见秦王。秦王大怒，要黄歇自杀，在范雎的劝说下才保住性命并释放回国。</p>
+<p>太子熊完即位后的考烈王元年（前262年），任命黄歇为令尹，封春申君，赐淮北十二县。</p>
+<p>令尹是当时楚国最高官职，相当于战国时期其他诸侯国的“相”。楚国令尹由外姓人担任的，史上也就吴起，黄歇，李园几个人。可见其受器重的程度。一方面，黄歇的确在秦楚之争中表现出了过人的胆识、智慧和口才，另一方面，这也是考烈王的报恩之举。</p>
+<p>春申君一生为楚国鞠躬尽瘁，权倾朝野，名望甚高。元朝大学士许衡甚至评价他为战国四公子之首。春申君死后一百多年，司马迁参观春申君的故城遗址，仍被其规模震撼，可见其在世时的荣华。</p>
+<p>关于他的事迹，早先写过篇故事，详细描述了晚年春申君是如何因好色而被小人所害的。有兴趣的读者可移步《<a href="http://www.jianshu.com/p/f9e7513a471b" target="_blank" rel="external">李园乱楚</a>》。</p>
+<h1 id="信陵君"><a href="#信陵君" class="headerlink" title="信陵君"></a>信陵君</h1><p>魏公子无忌，是魏昭王的小儿子、魏安厘王的异母弟弟。昭王去世后，安厘王即位，封公子为信陵君。 </p>
+<p>四公子均以礼贤下士和贤德闻名天下，信陵君自然不会例外。可惜国君安厘王嫉贤妒能，不能重用。当时秦国如狼似虎，意在东方，韩赵魏本应齐心合力抗击秦国，却也是各怀鬼胎。 </p>
+<p>长平战后，秦国围攻赵国都城邯郸，赵国向魏国求救，魏国大将晋鄙十万大军却在魏王授意下按兵不动。平原君赵胜找到魏无忌，希望能帮忙说服魏王出兵。可惜魏王畏惧秦国，始终不肯。无奈的魏公子只好带领门客家兵，打算以死相搏。 </p>
+<p>此时，之前礼贤下士的成果终于显现。老人侯赢献策，可求魏王的宠妃如姬偷出魏王的兵符。信陵君有恩于如姬，顺利盗得兵符。公子无忌携力士朱亥同赴大营，击杀晋鄙，发晋鄙十万大军，终于解了赵国之围。赵国免于灭国，秦国则无法继续攻打魏国，国家安危自然化解，同时也因此巩固了魏国在山东诸国的威望。 </p>
+<p>这便是历史上著名的窃符救赵的故事。 </p>
+<p>表面上，魏无忌欺骗国君，击杀大将，实属重罪。然而，当正常的劝谏无法达成目的时，为了国家存亡的大义，不惜以身犯险，甚至出逃赵国，却可当得起“行大义不拘小节”。窃符救赵这件事，对当时战略环境影响巨大。信陵君以国家利益为重、个人生死荣辱为轻，太史公也借汉高祖的事迹，对信陵君的“贤”给予了极高评价。 </p>
+<p>信陵君礼贤下士，急人之困，政治上具备清醒的战略眼光，军事上两次大破秦军，并有《魏公子兵法》流传后世。可惜却始终受到魏安厘王猜忌而无法委以重任。其成功之处显而易见，尤其在发现和任用人才方面，当为后世楷模。</p>
+<p>信陵君失意的重要原因，个人认为，是没有清醒认识到国君嫉贤妒能的本性，锋芒太露。在这方面，后世另一位贤臣张良，则可作为楷模。 </p>
+<p>晚年的信陵君沉溺酒色，前243年郁郁而终。十八年后，秦灭魏。</p>
+<!-- links -->
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;今天来八一八战国四公子，他们是：信陵君魏无忌，孟尝君田文，平原君赵胜，春申君黄歇。&lt;/p&gt;
+&lt;p&gt;这几个人其实并非完全处于同一时代。说到时代，先得弄清楚战国的时间界定。一般从定义上来说，战国时期指&lt;strong&gt;前&lt;/strong&gt;475年到前221年这段历史时期。&lt;/p&gt;
+&lt;p&gt;221年是秦统一天下的时间，作为结束时间没有太大争议。但是作为春秋战国分界的几个代表性历史事件并没有发生在475年。它们分别是：田氏代齐（481年），三家分晋（458年），周天子承认韩赵魏（403年），周天子承认田齐（386年）。之所以将475年作为分界，只是为了记述方便，以周元王元年为记。&lt;/p&gt;
+&lt;p&gt;信陵君出生年不明，除此外，几个人的情况大体是这个样子：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;所属&lt;/th&gt;
+&lt;th style=&quot;text-align:right&quot;&gt;生卒&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;信陵君&lt;/td&gt;
+&lt;td&gt;魏国&lt;/td&gt;
+&lt;td style=&quot;text-align:right&quot;&gt;???-前243&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;+&lt;/td&gt;
+&lt;td&gt;+&lt;/td&gt;
+&lt;td&gt;+&lt;/td&gt;
+&lt;td&gt;+&lt;/td&gt;
+&lt;td&gt;+&lt;/td&gt;
+&lt;td&gt;+&lt;/td&gt;
+&lt;td&gt;+&lt;/td&gt;
+&lt;td&gt;+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;孟尝君&lt;/td&gt;
+&lt;td&gt;齐国&lt;/td&gt;
+&lt;td style=&quot;text-align:right&quot;&gt;前344-前279&lt;/td&gt;
+&lt;td&gt;+&lt;/td&gt;
+&lt;td&gt;+&lt;/td&gt;
+&lt;td&gt;+&lt;/td&gt;
+&lt;td&gt;+&lt;/td&gt;
+&lt;td&gt;+&lt;/td&gt;
+&lt;td&gt;+&lt;/td&gt;
+&lt;td&gt;+&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;平原君&lt;/td&gt;
+&lt;td&gt;赵国&lt;/td&gt;
+&lt;td style=&quot;text-align:right&quot;&gt;前308-前251&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;+&lt;/td&gt;
+&lt;td&gt;+&lt;/td&gt;
+&lt;td&gt;+&lt;/td&gt;
+&lt;td&gt;+&lt;/td&gt;
+&lt;td&gt;+&lt;/td&gt;
+&lt;td&gt;+&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;春申君&lt;/td&gt;
+&lt;td&gt;楚国&lt;/td&gt;
+&lt;td style=&quot;text-align:right&quot;&gt;前314-前238&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;+&lt;/td&gt;
+&lt;td&gt;+&lt;/td&gt;
+&lt;td&gt;+&lt;/td&gt;
+&lt;td&gt;+&lt;/td&gt;
+&lt;td&gt;+&lt;/td&gt;
+&lt;td&gt;+&lt;/td&gt;
+&lt;td&gt;+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;从上表看出，孟尝君活跃年代稍早，其他三公子真正在政治上有交集的，大约应该有40年左右的时间。在这期间，秦国正是昭襄王在位时期。秦昭襄王为秦国奠定了扎实的基础，再经三世，由嬴政一统天下。&lt;/p&gt;
+&lt;p&gt;下面挨个介绍下他们四位。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="老猫读史" scheme="http://www.catxn.net/categories/%E8%80%81%E7%8C%AB%E8%AF%BB%E5%8F%B2/"/>
+    
+    
+      <category term="历史" scheme="http://www.catxn.net/tags/%E5%8E%86%E5%8F%B2/"/>
+    
+      <category term="春秋战国" scheme="http://www.catxn.net/tags/%E6%98%A5%E7%A7%8B%E6%88%98%E5%9B%BD/"/>
+    
+      <category term="四公子" scheme="http://www.catxn.net/tags/%E5%9B%9B%E5%85%AC%E5%AD%90/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>三皇五帝（三）：孝敬父母的楷模</title>
+    <link href="http://www.catxn.net/posts/2015/%E4%B8%89%E7%9A%87%E4%BA%94%E5%B8%9D%EF%BC%88%E4%B8%89%EF%BC%89%EF%BC%9A%E5%AD%9D%E6%95%AC%E7%88%B6%E6%AF%8D%E7%9A%84%E6%A5%B7%E6%A8%A1/"/>
+    <id>http://www.catxn.net/posts/2015/三皇五帝（三）：孝敬父母的楷模/</id>
+    <published>2015-03-06T13:12:52.000Z</published>
+    <updated>2015-04-02T12:07:39.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>昔瞽瞍有子曰舜，舜之事瞽瞍，欲使之未尝不在于侧，索而杀之，未尝可得，小棰则待过，大杖则逃走，故瞽瞍不犯不父之罪，而舜不失烝烝之孝。——孔子家语</p>
+</blockquote>
+<p>据说过去私塾教授小朋友要认识的第一个字就是“孝”。</p>
+<p>中国文化传统非常推崇“孝”。而民间谈到孝顺，最常被提起的典籍便是二十四孝。在这些感天动地的故事中，很有些令人不寒而栗的部分，比如郭巨埋儿奉母。</p>
+<p>这个故事有几个不同版本，大意都差不多：晋代的郭巨，本来家里还算有钱，在他父亲死后，他把大多数财产都给了弟弟，家境就逐渐变得贫寒起来。郭家有个不到三岁的幼子（也有说是婴儿），郭巨的老母亲非常疼爱，常常省下自己的食物给孙子吃。郭巨跟妻子说，这样不行啊，有违孝道。咱们得把儿子埋了，好专心奉养母亲。于是就在后院树下挖坑。</p>
+<p>为了专心孝敬父母，竟然要把年幼的儿子活埋……实在太吓人了。春秋时期，有次宋被楚围城，城中百姓“易子而食”，这样的惨剧活生生的出现，也跟这种极端的孝顺思想有关。</p>
+<p>三纲五常发展到杀妻食子还理所当然的地步，当然必须要被粉碎。也是由于有这种思想的存在，甚至导致不少现代人看到“孝”字就退避三尺，难怪会有“父母皆祸害”这样的小组出现。</p>
+<p>那么，尽孝到底应不应该？应该的话，怎么做才合适？其实，在还没有被各种迂腐的思想侵袭的上古时代，早有圣贤给我们做了榜样。</p>
+<a id="more"></a>
+<p>虞舜，名重华<code>意双瞳，据说是因为天生有两个瞳孔</code>。<br>黄帝的第八世孙，是帝颛顼之子穷蝉的直系后人。不过从穷蝉开始直到舜这一支就一直都是平民。</p>
+<p>舜本身是一位孝子。而对于五典“父义，母慈，兄友，弟恭，子孝”，《尚书》中说舜“慎徽”，明确地说明了舜帝对礼法忠孝恭谨慎重的态度。不过他推崇和身体力行地尽孝的方式却充满了生活智慧，值得我们学习。</p>
+<p>舜的父亲叫瞽叟，瞽的意思是瞎眼，叟就是老头。于是这个名字的意思是瞎眼的老头。这里很有意思，不晓得这名字是说他眼盲还是心盲，不过从后续的记载来看，这多半是史官在骂他瞎了眼。</p>
+<blockquote>
+<p>舜父瞽叟盲，而舜母死，瞽叟更娶妻而生象，象傲。瞽叟爱后妻子，常欲杀舜，舜避逃；及有小过，则受罪。舜事父及后母与弟，日以笃谨，匪有解。……舜父瞽叟顽，母嚚，弟象傲，皆欲杀舜。舜顺适不失子道，兄弟孝慈。欲杀，不可得；即求，尝在侧。——史记·五帝本纪</p>
+</blockquote>
+<p>舜生母去世很早。父亲续弦给他娶了个后妈，后妈生了个弟弟叫象，太史公说，舜的父亲瞽叟顽劣愚蠢，继母刁蛮跋扈，弟弟桀骜不驯。而父亲大概是被续弦的妻子迷得神魂颠倒，跟老婆和小儿子三个人串通一气，处心积虑地要除掉舜这个眼中钉。</p>
+<p>继母等人的阴谋，没能在聪明的舜身上得逞。同时，在防范家人阴谋的同时，舜仍然克尽孝道，把爹妈伺候得妥妥贴贴，对兄弟也是和颜悦色。他的方针是“欲杀，不可得；即求，尝在侧。”。需要我，呼之即来，想杀我，没门。</p>
+<p>这不光需要有强大的内心，还得有非凡的手段。《审死官》中，包龙星的父亲告诉不成器的儿子，做贪官要奸，做清官要比贪官更奸，就是这个道理。舜的这种行事作风和能力，被四岳推崇，并打动了帝尧，以两个女儿为赌注来测试他是否有经略天下的能力。</p>
+<p>《五帝本纪》中，记载了瞽叟等人数次阴谋杀害虞舜。</p>
+<p>其中一次，是火烧谷仓。</p>
+<p>这谷仓哪里来的呢？上一篇在讲帝尧考验舜时，先嫁给他两个女儿，舜把两位妻子调教得恪守妇道、孝道，虽然出身矜贵，对待邻里也是平易近人，当然这跟尧对女儿的教育也有莫大关系。然后帝尧安排舜在历山耕作，历山的居民便相互谦让，不因田地纠纷而冲突。舜到雷泽<code>古大泽名，中华文化中具有神圣地位</code>渔猎，渔猎的人也是互谦互让不再因居所之争反目；在黄河河滨制陶，这一带出产的陶器就都质量上乘，无偷工减料。</p>
+<p>总之，只要舜在，民风就会随之高尚起来，如果他做生意，就会带动所在的整个市场欣欣向荣健康发展。舜工作生活的地方，一年就会陆陆续续有新的居民入住，形成村落，两三年后甚至会具有小城市的规模。甚至还有有传说，舜在劳作时，山里的飞鸟走兽都会来帮他犁地、除草。在帝尧眼里，舜的这些表现已经初步展示了他的贤能。于是赐给他各种华美的衣物用品，上等的乐器，还给了他谷仓，牛羊等等诸多赏赐，然后打算做进一步考察。</p>
+<p>放在我们普通家庭，做父亲的，显然会因为有这样的儿子而骄傲。可是舜的奇葩父亲和家人，却妒火中烧，更加想杀了他然后霸占他的财产，还有女人。</p>
+<p>舜在拿到赏赐之后，按他的行事风格，应该也是拿来孝敬父母，跟弟弟共享的。不过这些人并不满足，有了这些后，他们反而更加想独占这些财产。于是某天，瞽叟打发儿子修葺谷仓。等舜爬上去后，瞽叟就撤了梯子，在下面纵火。</p>
+<p>不知道上古时代的谷仓具体是什么样子，不过去过农村的人都知道，我国农村传统上的谷仓，大体是圆柱形，上层是个倒圆锥，土木结构，内部存放干草、粮食，屋顶以厚厚的茅草覆盖。首先，在谷仓顶上，没有梯子之类的工具是很难下来的，然后，这东西极易燃烧。因为是天子所赐，这个谷仓规模应该不小，高度不会低，也更好烧。</p>
+<p>所以瞽叟是打好算盘要烧死儿子的。结果，舜拿着两只斗笠穿在胳膊上当作翅膀，就那么呼扇着跳下来，安然无恙，还没等父亲和弟弟反应过来，就逃得无影无踪。这一手，虽然没有伊卡洛斯那么帅，但是显然效果也不错。</p>
+<p>放火不成，瞽叟与象母子改变了策略，打算活埋。就找个借口，召舜回来打井。</p>
+<p>对于父母的需要，舜仍然是召之即来，二话不说就动手。这次，瞽叟跟象等舜挖得深了，就开始往井中填土要把舜堵死在井里。他们想，上天难不倒你，入地你总躲不掉吧。</p>
+<p>一伙人认定这次舜必死无疑，父子儿子美滋滋地开始分财产。象说这主意是我出的，我来分，大哥娶了尧的两个女儿，归我，那张高级古琴也归我，其他财产牛羊稻谷，孝敬父亲母亲大人。这么看起来，象好像也是个孝子。于是，象跑去舜的居所，大大咧咧往堂上一座，架上舜的琴，边弹边唱，乐不可支。</p>
+<p>忽然舜不知道从哪突然冒出来了。舜这次没有躲起来，大概是担心家里两位如花似玉的妻子被弟弟欺负。所以在事发后立刻就回到家里。原来，舜刚刚下井，就在井壁挖了一条通道，到瞽叟和象落井下石时，就从旁边的通道跑掉了。</p>
+<p>象就如见了鬼一样，慌乱中忙说，大哥啊，我好想你，以为你死了，现在正悲痛难忍，睹物思人，弹琴解郁。舜也不揭穿，仍然很淡然，说：“真是好兄弟啊”。然后跟没事儿似的，一如既往侍奉父母，兄友弟恭。</p>
+<p>可以看到，舜对待家人，一直都是全力帮助，尽其所能，只要父亲有需要，就总是能找到他。但是另一方面，舜对危险的嗅觉也十分敏感，总是能预知亲人的不轨图谋，虽然召之即来，但是来了之后，都给自己留下了退路，没人上房还要拿俩斗笠，也没人打井一开始就先在旁边挖个逃生通道吧。在做好防范措施后，敢不忘孝心，屡蹈险地。</p>
+<p>于是在这几件事后，尧就正式安排舜进入政坛，全方位考察和培养这位未来的接班人。</p>
+<h1 id="孝子无惧，善心不愚。"><a href="#孝子无惧，善心不愚。" class="headerlink" title="孝子无惧，善心不愚。"></a>孝子无惧，善心不愚。</h1><p>《孔子家语》中记载，曾子<code>名参(cān)，字子舆。孔子高徒。</code>干农活儿时误伤了作物的根茎，父亲抄起大棒就打。曾子不躲不闪，直到被打昏在地里，很久后才苏醒。曾子“欣然而起”，跟父亲说：“父亲打得好，教训的是！”。然后回到屋里，操琴唱歌，以便父亲听到后知道自己身体无碍。</p>
+<p>孔子知道此事后大怒，宣称不再见他。曾子认为自己尽孝无罪，找人去问孔子。孔子说，昔日虞舜至孝，任何时候父母需要时总在身侧，但当父亲想杀他时却找他不到。小小的责打自然该恭敬承受，大棒来了就得逃走。这样既能成全孝道，又避免父亲犯下杀子的罪名。现在你父亲大棒打来险些打死你，万一真把你打死了，你就是陷父亲于不义，乃是大大的不孝。</p>
+<p>曾子恍然大悟，登门向夫子请罪。</p>
+<p>读过一些儒家著作之后发现，孔老夫子其实一点都不迂腐。他实际上是个爱生活，爱吃肉，爱和平的理想主义者。之所以我们会认为儒家是迂腐的代名词，实在是后世的腐儒败坏了老先生真正的思想。</p>
+<p>亲慈子孝，中国人对家庭的憧憬，莫过于此。慈、孝相辅相成，既不能对子女溺爱，也不要对父母愚孝。上古的先人，早已给我们留下样板。但是迂腐的文人或别有用心者，却把孝行极端化到恐怖的境地。要如何去做，我们应该有辩证的判断，而不是全盘接受或全盘否定。</p>
+<p>面对数千年积累的传统文化，是把它当作宝库还是垃圾堆，全在我们自己。</p>
+<blockquote>
+<p>舜年二十以孝闻，年三十尧举之，年五十摄行天子事，年五十八尧崩，年六十一代尧践帝位。践帝位三十九年，南巡狩，崩于苍梧之野。葬于江南九疑，是为零陵。舜之践帝位，载天子旗，往朝父瞽叟，夔夔唯谨，如子道。封弟象为诸侯。舜子商均亦不肖，舜乃豫荐禹于天。十七年而崩。三年丧毕，禹亦乃让舜子，如舜让尧子。诸侯归之，然后禹践天子位。尧子丹朱，舜子商均，皆有疆土，以奉先祀。服其服，礼乐如之。以客见天子，天子弗臣，示不敢专也。</p>
+</blockquote>
+<h1 id="附言"><a href="#附言" class="headerlink" title="附言"></a>附言</h1><p>《二十四孝》第一个故事“孝感动天”，讲的就是虞舜的故事。所以我这篇其实不是读史，是在读孝么？</p>
+<p>百善孝为先，论心不论迹。这个时代，像我一样常年在外，对父母无法随侍在侧的人，也只好拿这句话聊以自慰吧。</p>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ul>
+<li>史记·五帝本纪</li>
+<li>尚书·舜典</li>
+<li>孔子家语</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;昔瞽瞍有子曰舜，舜之事瞽瞍，欲使之未尝不在于侧，索而杀之，未尝可得，小棰则待过，大杖则逃走，故瞽瞍不犯不父之罪，而舜不失烝烝之孝。——孔子家语&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;据说过去私塾教授小朋友要认识的第一个字就是“孝”。&lt;/p&gt;
+&lt;p&gt;中国文化传统非常推崇“孝”。而民间谈到孝顺，最常被提起的典籍便是二十四孝。在这些感天动地的故事中，很有些令人不寒而栗的部分，比如郭巨埋儿奉母。&lt;/p&gt;
+&lt;p&gt;这个故事有几个不同版本，大意都差不多：晋代的郭巨，本来家里还算有钱，在他父亲死后，他把大多数财产都给了弟弟，家境就逐渐变得贫寒起来。郭家有个不到三岁的幼子（也有说是婴儿），郭巨的老母亲非常疼爱，常常省下自己的食物给孙子吃。郭巨跟妻子说，这样不行啊，有违孝道。咱们得把儿子埋了，好专心奉养母亲。于是就在后院树下挖坑。&lt;/p&gt;
+&lt;p&gt;为了专心孝敬父母，竟然要把年幼的儿子活埋……实在太吓人了。春秋时期，有次宋被楚围城，城中百姓“易子而食”，这样的惨剧活生生的出现，也跟这种极端的孝顺思想有关。&lt;/p&gt;
+&lt;p&gt;三纲五常发展到杀妻食子还理所当然的地步，当然必须要被粉碎。也是由于有这种思想的存在，甚至导致不少现代人看到“孝”字就退避三尺，难怪会有“父母皆祸害”这样的小组出现。&lt;/p&gt;
+&lt;p&gt;那么，尽孝到底应不应该？应该的话，怎么做才合适？其实，在还没有被各种迂腐的思想侵袭的上古时代，早有圣贤给我们做了榜样。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="老猫读史" scheme="http://www.catxn.net/categories/%E8%80%81%E7%8C%AB%E8%AF%BB%E5%8F%B2/"/>
+    
+    
+      <category term="历史" scheme="http://www.catxn.net/tags/%E5%8E%86%E5%8F%B2/"/>
+    
+      <category term="阅读" scheme="http://www.catxn.net/tags/%E9%98%85%E8%AF%BB/"/>
+    
+      <category term="写作" scheme="http://www.catxn.net/tags/%E5%86%99%E4%BD%9C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>互联网并不创造价值</title>
+    <link href="http://www.catxn.net/posts/2015/internet-does-not-produce/"/>
+    <id>http://www.catxn.net/posts/2015/internet-does-not-produce/</id>
+    <published>2015-03-06T09:21:00.000Z</published>
+    <updated>2015-04-02T12:07:39.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>互联网的本质是媒体，是渠道，是工具。他是内容的载体，而不是内容的生产者。标题本身表述的是这个意思，没有哗众取宠的意思。</p>
+<p>不过我这里要说的不是互联网本身，而是“互联网模式”/“互联网思维”。</p>
+<p>互联网思维本身是一个含混的概念。关于它的定义，有很多讨论和阐述，也有一些专门的书籍。我在这里并非想对它进行准确的定义和分析，只是想片面地说一些自己的想法，或者说，吐槽。</p>
+<p>大约从2013年起，创业公司开始言必称“互联网思维”，然后在2014年愈演愈烈。好像你办公司没有践行互联网思维就不好意思跟人家说话。可是互联网思维到底是个什么东西，他的价值到底在哪里？</p>
+<p>2014年，较多地接触了一些创业的朋友，参加过一些各种各样的投资见面会，仰视过各种意气风发、成竹在胸的创业带头人。大家在谈到互联网思维时，无一不是把它奉为信条。用户黏度、日活、流量变现，这些名词随时都挂在嘴边。对用户心理的把握和挖掘，对传播效应和速度的追求几乎就是全部。</p>
+<p>可是，这种思维模式解决了用户的什么真实需求？创造了什么价值？真正的价值，是否是“互联网思维”创造的？</p>
+<a id="more"></a>
+<p>我觉得不是。互联网模式本身并不创造任何价值。它的核心，是传播、互动、营销，它的核心价值就是传播模式，然后靠流量转化带来收入。</p>
+<p>最近几年的创业公司如雨后春笋，踏踏实实做产品的却凤毛麟角。这里面很大一部分，一上马就是奔着融资、变现去的。产品本身同质化也很严重。产品选型和方向，关注的是当前或预测的“风口”，用户的眼球的方向。社交火了，大家都上社交，母婴火了，都上母婴，互联网金融火了，都上金融。而做出来的产品，真正能够成为伟大的能有几个呢？乔布斯那句“改变世界”，也沦为每个创业公司画出的蛋糕上的裱花，必定挂在每一则招聘广告上。</p>
+<p>是的，这样的所谓的互联网模式，只是吸引眼球，满足投资人利益的模式而已。在这种思考方式的指导下，“生产创造”只是个口号。</p>
+<p>去璞存真，产品设计的原则，应该首先是解决用户的问题，而不是如何快速传播和盈利。</p>
+<p>有没有觉得，炒概念，口碑传播，靠用户量取胜这种模式，跟传销很像？是的，这种互联网模式的核心就是营销。而所有的营销，包括销售、直销、传销以及运营，其思考模式其实都是要把握用户心理来达到商业上的目的。比如经典案例，把和尚卖给梳子。</p>
+<p>从信息爆炸，到App爆炸，用户的真实需求，根本不必这么多。</p>
+<p>在传统产业，很多默默无闻的企业，甚至作坊，包括一些很小众的用户产品。只要找准定位，可以持续上百年。你产品做的好，只要适当的推广，就会有人花钱去买。比如电饭煲，比如马桶圈。</p>
+<p>互联网模式还有一个标签是免费。而免费模式，几乎注定了无论是生产者还是消费者，都无法做一名安静的美男子，简简单单地去生产或使用需要的工具。原因是，<strong>免费的东西最昂贵</strong>。</p>
+<p>比如网络游戏。以脑白金为代表的免费网游带给用户和整个网游生态的是什么，大家都知道。互联网的免费模式，在让用户付出更高昂的代价的同时，也几乎注定让小众的需求不断被无视。</p>
+<p>说到用户需求。不断发掘和创造用户的需求，也是互联网思维的一部分。可是，这不是什么新鲜玩意儿，对用户需求的发掘，老福特就说过：如果你问你的顾客需要什么，他会说他想要一架最快的马车。</p>
+<p>而不断搜集分析用户的使用习惯和信息来提升用户体验，这根本在几十年前就是工业设计领域默认的行为模式。</p>
+<p>这样一层层外衣剥下来，互联网思维似乎就只剩下炒作概念了。</p>
+<p>并不是想否定互联网思维。做好一个产品，当然需要考虑盈利，要考虑营销，考虑设计，考虑用户体验等等。我想说的是，所有的设计，最终都要为解决问题服务。现在缺的不是营销，而是踏踏实实地做事。</p>
+<p>互联网思维是手段，而不是目的。这里的思路其实很简单，就是互联网本身是媒体，是手段，是为价值的传播服务。它可以提升价值，但不是价值本身。</p>
+<p>先扯到这儿吧。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;互联网的本质是媒体，是渠道，是工具。他是内容的载体，而不是内容的生产者。标题本身表述的是这个意思，没有哗众取宠的意思。&lt;/p&gt;
+&lt;p&gt;不过我这里要说的不是互联网本身，而是“互联网模式”/“互联网思维”。&lt;/p&gt;
+&lt;p&gt;互联网思维本身是一个含混的概念。关于它的定义，有很多讨论和阐述，也有一些专门的书籍。我在这里并非想对它进行准确的定义和分析，只是想片面地说一些自己的想法，或者说，吐槽。&lt;/p&gt;
+&lt;p&gt;大约从2013年起，创业公司开始言必称“互联网思维”，然后在2014年愈演愈烈。好像你办公司没有践行互联网思维就不好意思跟人家说话。可是互联网思维到底是个什么东西，他的价值到底在哪里？&lt;/p&gt;
+&lt;p&gt;2014年，较多地接触了一些创业的朋友，参加过一些各种各样的投资见面会，仰视过各种意气风发、成竹在胸的创业带头人。大家在谈到互联网思维时，无一不是把它奉为信条。用户黏度、日活、流量变现，这些名词随时都挂在嘴边。对用户心理的把握和挖掘，对传播效应和速度的追求几乎就是全部。&lt;/p&gt;
+&lt;p&gt;可是，这种思维模式解决了用户的什么真实需求？创造了什么价值？真正的价值，是否是“互联网思维”创造的？&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="夜猫茶舍" scheme="http://www.catxn.net/categories/%E5%A4%9C%E7%8C%AB%E8%8C%B6%E8%88%8D/"/>
+    
+    
+      <category term="互联网" scheme="http://www.catxn.net/tags/%E4%BA%92%E8%81%94%E7%BD%91/"/>
+    
+      <category term="杂谈" scheme="http://www.catxn.net/tags/%E6%9D%82%E8%B0%88/"/>
+    
+  </entry>
+  
+</feed>

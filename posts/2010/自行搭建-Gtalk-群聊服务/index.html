@@ -1,0 +1,712 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>自行搭建 Gtalk 群聊服务 | 夜猫阿罗哈</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="三角猫">
+    
+
+    
+    <meta name="description" content="GTalk 的群聊一直是一个软肋，虽然在线版（GMail内置）和Lab版支持，但是毕竟不方便，而且有很多的限制。于是就有了很多群聊服务的出现。常见的服务有 Chatterous, Partychapp 等。使用都很方便，注册帐号就行了。
+如果想更多得控制，或者担心聊天信息泄漏给第三方，还可以自行搭建聊天群组机器人。最常见的就是 Conference Bot 这个机器人了。网上也有很多资料。
+出于种">
+<meta property="og:type" content="article">
+<meta property="og:title" content="自行搭建 Gtalk 群聊服务">
+<meta property="og:url" content="http://www.catxn.net/posts/2010/自行搭建-Gtalk-群聊服务/index.html">
+<meta property="og:site_name" content="夜猫阿罗哈">
+<meta property="og:description" content="GTalk 的群聊一直是一个软肋，虽然在线版（GMail内置）和Lab版支持，但是毕竟不方便，而且有很多的限制。于是就有了很多群聊服务的出现。常见的服务有 Chatterous, Partychapp 等。使用都很方便，注册帐号就行了。
+如果想更多得控制，或者担心聊天信息泄漏给第三方，还可以自行搭建聊天群组机器人。最常见的就是 Conference Bot 这个机器人了。网上也有很多资料。
+出于种">
+<meta property="og:updated_time" content="2015-04-01T12:25:34.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="自行搭建 Gtalk 群聊服务">
+<meta name="twitter:description" content="GTalk 的群聊一直是一个软肋，虽然在线版（GMail内置）和Lab版支持，但是毕竟不方便，而且有很多的限制。于是就有了很多群聊服务的出现。常见的服务有 Chatterous, Partychapp 等。使用都很方便，注册帐号就行了。
+如果想更多得控制，或者担心聊天信息泄漏给第三方，还可以自行搭建聊天群组机器人。最常见的就是 Conference Bot 这个机器人了。网上也有很多资料。
+出于种">
+
+    
+    <link rel="alternative" href="/atom.xml" title="夜猫阿罗哈" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/images/author.png">
+    
+    
+    <link rel="apple-touch-icon" href="/images/author.png">
+    <link rel="apple-touch-icon-precomposed" href="/images/author.png">
+    
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/images/author.png" alt="夜猫阿罗哈" title="夜猫阿罗哈"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="夜猫阿罗哈">夜猫阿罗哈</a></h1>
+				<h2 class="blog-motto">暮然回首萧瑟处，也无风雨也无晴</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">Home</a></li>
+					
+						<li><a href="/archives">Archives</a></li>
+					
+						<li><a href="/about">About</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="hidden" name="q" value="site:www.catxn.net">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/posts/2010/自行搭建-Gtalk-群聊服务/" title="自行搭建 Gtalk 群聊服务" itemprop="url">自行搭建 Gtalk 群聊服务</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="三角猫" target="_blank" itemprop="author">三角猫</a>
+		
+  <p class="article-time">
+    <time datetime="2010-11-25T08:38:26.000Z" itemprop="datePublished"> 发表于 2010-11-25</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			
+		
+		</div>
+		
+		<p>GTalk 的群聊一直是一个软肋，虽然在线版（GMail内置）和Lab版支持，但是毕竟不方便，而且有很多的限制。于是就有了很多群聊服务的出现。常见的服务有 <a href="http://www.chatterous.com" target="_blank" rel="external">Chatterous</a>, <a href="http://partychapp.appspot.com/" target="_blank" rel="external">Partychapp</a> 等。使用都很方便，注册帐号就行了。</p>
+<p>如果想更多得控制，或者担心聊天信息泄漏给第三方，还可以自行搭建聊天群组机器人。最常见的就是 Conference Bot 这个机器人了。网上也有很多资料。</p>
+<p>出于种种原因，ConfBot 我这里使用一直有问题。最近Chatterous总是抽风，于是重新兴起自建机器人的念头。经过搜索，发现一个方案，使用 GTalkGroups + GAE. GAE 是全天候服务的，解决了服务器问题。GTalkGroups 本身也比 Confernce Bot 简单。</p>
+<p>下面是我的步骤。</p>
+<a id="more"></a>
+<p>1. 下载工具及程序：<a href="http://code.google.com/appengine/downloads.html" target="_blank" rel="external">GAE SDK</a>，<a href="http://www.python.org/" target="_blank" rel="external">Python</a>, <a href="http://gtalkgroups.googlecode.com/" target="_blank" rel="external">GTalkGroups</a></p>
+<p>2. 安装 Python, 安装 GAE。这一步参考第一步中 GAE SDK 下载资源中的文档。</p>
+<p>3. 创建 GAE Application。参考 GAE 文档。记下这一步创建的 App ID 备用。</p>
+<p>4. 修改 GTalkGroups 脚本中的必要字段：</p>
+<blockquote>
+<p>app.yaml 中，第一行的APPID修改为自己的。</p>
+<p>app.yaml 中，url:/chatbridge 值改为随机字串。比如 url:/chatbridge123456</p>
+<p>m2ggg_config 中，root_gmail 的值修改为你自己的邮箱，这个邮箱将成为管理员</p>
+<p>m2ggg_config 中，protect_key1,protect_key2. 改成两个随机数字串.<br>5. 上传应用，进入后台检查服务状态。如果你所在的网络是内部网，比如公司，学校，那么需要设置环境变量，将你使用的代理设置给 GAE SDK。具体到 Windows 环境就是如下两个命令：<br>C:\&gt;set HTTP_PROXY=<a href="http://xxx.xxx.xx.xxx:&lt;port&amp;gt" target="_blank" rel="external">http://xxx.xxx.xx.xxx:&lt;port&amp;gt</a>;</p>
+<p>C:\&gt;set HTTPS_PROXY=<a href="https://xxx.xxx.xx.xxx:&lt;port&amp;gt" target="_blank" rel="external">https://xxx.xxx.xx.xxx:&lt;port&amp;gt</a>;<br>6. 上传完成后，进入GAE后台，进入Datastore Indexes 一栏，检查服务状态，全部为 Serving 就可以使用了。我看到的文档说可能要等数小时，实际上我这边几乎实时完成。</p>
+</blockquote>
+<p>7. 需要用户在GTalk中添加你的机器人的ID为聊天好友： &lt;appid&gt;@appspot.com 。然后管理员使用 //add 或 //allok 命令通过申请。到此位置就可以开始使用了。作为管理员，你需要第一个加入，输入 //add, //admin 来加入自己作为第一个用户并提升为管理员。 <!--more--></p>
+<p><strong>附：GTalkGroups 机器人命令：</strong></p>
+<blockquote>
+<p>UserCmd (普通用户指令)</p>
+<p>//online</p>
+<p>用途：显示在线人员名单</p>
+<p>//nick</p>
+<p>用途：设置昵称</p>
+<p>示例：//nick 你好</p>
+<p>说明：如果群里有其他人使用相同昵称则该昵称不能设置</p>
+<p>//setid</p>
+<p>用途：设置FID</p>
+<p>示例：//setid hello</p>
+<p>说明：如果群里有其他人使用相同FID则该昵称不能设置。FID只能设置一次，重设无效。</p>
+<p>//block</p>
+<p>用途：屏蔽某人的消息</p>
+<p>示例：//block hello</p>
+<p>说明：后面所跟的参数为FID。上面示例所的执行结果是屏蔽了FID为hello的用户的消息。</p>
+<p>//unblock</p>
+<p>用途：取消屏蔽某人的消息</p>
+<p>示例：//unblock hello</p>
+<p>说明：后面所跟的参数为FID。上面示例所的执行结果是取消屏蔽FID为hello的用户的消息。</p>
+<p>//m</p>
+<p>用途：给某人发送私密消息</p>
+<p>示例：//m hello helloworld</p>
+<p>说明：后面所跟的参数为FID和内容。上面示例所的执行结果是把私密消息helloworld发送到FID为hello的这个用户。发送成功会显示OK的。目前不能发送消息给形如@<strong><em>||</em></strong> 这样的外连接用户。</p>
+<p>//showinfo</p>
+<p>用途：显示某人的基本信息</p>
+<p>示例：//showinfo hello</p>
+<p>说明：后面所跟的参数为FID。上面示例所的执行结果是输出FID为hello的用户的基本资料。</p>
+<p>//stop</p>
+<p>用途：马上停止接收群内消息，直到若干秒后恢复</p>
+<p>示例：//stop 3600</p>
+<p>说明：后面所跟的参数为秒数。上面示例所的执行结果是在一小时（3600秒）内不接收群内消息。如果重复输入此命令，时间不会叠加，以最后的一次执行为准。如果执行//stop -1，则取消屏蔽，马上显示消息。</p>
+<p>//continue</p>
+<p>用途：停止屏蔽群内消息，作用等同于//stop -1</p>
+<p>//help</p>
+<p>用途：输出帮助内容——指令的简单说明。</p>
+<p>AdminCmd（管理员指令）</p>
+<p>//whois</p>
+<p>用途：查看某人消息</p>
+<p>示例：//whois hello</p>
+<p>说明：参数必须为FID。使用whois可以获取用户的电邮，以供后面的其他指令作为参数用。</p>
+<p>//blacklist</p>
+<p>用途：将某人加入群黑名单</p>
+<p>示例：//blacklist somebody.you.want.to.disable@gmail.com</p>
+<p>说明：参数为用户email</p>
+<p>//pass</p>
+<p>用途：把某人从黑名单上移除</p>
+<p>示例：//pass remove.from.blacklist@gmail.com</p>
+<p>说明：参数为用户email</p>
+<p>//admin</p>
+<p>用途：设置某人为管理员</p>
+<p>示例：//admin admin.of.group@gmail.com</p>
+<p>说明：参数为用户email</p>
+<p>//unadmin</p>
+<p>用途：解除某人的管理员身份</p>
+<p>示例：//unadmin not.a.admin.of.group@gmail.com</p>
+<p>说明：参数为用户email</p>
+<p>//add</p>
+<p>用途：增加一个成员</p>
+<p>示例：//add new.member@gmail.com</p>
+<p>说明：填写email，若email为已有成员，则执行指令后用户资料会被重新初始化。</p>
+<p>//addrouterecv</p>
+<p>用途：创建HTTP消息接收通道。</p>
+<p>示例：//addrouterecv mychannel2 hello.mypassword2 mychannel1</p>
+<p>说明：后跟3个参数，分别是名字、密码和回路禁止。示例的执行结果是：创建一个外挂消息接收点，名字叫mychannel2，密码是hello.mypassword2，收到的消息不用重新转发给mychannel1</p>
+<p>//addroutesend</p>
+<p>用途：创建HTTP消息发送通道</p>
+<p>示例：//addroutesend mychannel1 hello.mypassword1 <a href="http://some.of.mychannel1.some.appspot.program" target="_blank" rel="external">http://some.of.mychannel1.some.appspot.program</a></p>
+<p>说明：后跟3个参数，分别是名字、密码和接收消息的地址。示例的执行结果是：建一个外挂消息发送器，名字叫mychannel1，密码是 hello.mypassword1，消息发送到<a href="http://some.of.mychannel1.some.appspot.program上。若在服务器http://some.of.mychannel1.some.appspot.program创建同样的名字和密码（mychannel1和" target="_blank" rel="external">http://some.of.mychannel1.some.appspot.program上。若在服务器http://some.of.mychannel1.some.appspot.program创建同样的名字和密码（mychannel1和</a> hello.mypassword1）的接收点，并禁止回路mychannel2，则对方会收到此聊天群发出的消息，并且不回送。</p>
+<p>//allok</p>
+<p>用途：通过所有没有进入群的用户</p>
+<p>//listuser</p>
+<p>保留，原意是提供用户列表，但是GAE后台能显示，所以没有加上<br><strong>参考资料：</strong></p>
+</blockquote>
+<p>1. <a href="http://hi.baidu.com/democratleo/blog/item/fd594623451dcbfed7cae24a.html" target="_blank" rel="external">Gtalk群的使用</a></p>
+<p>2. <a href="http://io43.com/io43.GtalkGroup/cmds/" target="_blank" rel="external">命令列表</a></p>
+<p>3. <a href="http://code.google.com/appengine/downloads.html" target="_blank" rel="external">Google Application Engine Resource.</a></p>
+  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/建站心得/">建站心得</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/建站/">建站</a>
+  </div>
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://www.catxn.net/posts/2010/自行搭建-Gtalk-群聊服务/" data-title="自行搭建 Gtalk 群聊服务 | 夜猫阿罗哈" data-tsina="1406303630" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/posts/2011/搬迁至-HomeZZ-主机/" title="搬迁至 HomeZZ 主机">
+  <strong>上一篇：</strong><br/>
+  <span>
+  搬迁至 HomeZZ 主机</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/posts/2010/时间管理小记/"  title="时间管理小记">
+ <strong>下一篇：</strong><br/> 
+ <span>时间管理小记
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+<section id="comments" class="comment">
+	<div class="ds-thread" data-thread-key="posts/2010/自行搭建-Gtalk-群聊服务/" data-title="自行搭建 Gtalk 群聊服务" data-url="http://www.catxn.net/posts/2010/自行搭建-Gtalk-群聊服务/"></div>
+</section>
+
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ 
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">分类</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/夜猫茶舍/" title="夜猫茶舍">夜猫茶舍<sup>11</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/宗布科技/" title="宗布科技">宗布科技<sup>4</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/建站心得/" title="建站心得">建站心得<sup>15</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/影音动漫/" title="影音动漫">影音动漫<sup>5</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/流水账/" title="流水账">流水账<sup>6</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/管理微言/" title="管理微言">管理微言<sup>11</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/老猫读史/" title="老猫读史">老猫读史<sup>13</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/软件开发/" title="软件开发">软件开发<sup>5</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/建站/" title="建站">建站<sup>17</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/历史/" title="历史">历史<sup>15</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/流水账/" title="流水账">流水账<sup>14</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/阅读/" title="阅读">阅读<sup>13</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/写作/" title="写作">写作<sup>12</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/管理/" title="管理">管理<sup>11</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/项目管理/" title="项目管理">项目管理<sup>8</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/原创/" title="原创">原创<sup>6</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/软件开发/" title="软件开发">软件开发<sup>6</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/日记/" title="日记">日记<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/宗布/" title="宗布">宗布<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/创业/" title="创业">创业<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/时间管理/" title="时间管理">时间管理<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/wordpress/" title="wordpress">wordpress<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/aws/" title="aws">aws<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/影视/" title="影视">影视<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/动漫/" title="动漫">动漫<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/里程碑/" title="里程碑">里程碑<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/GTD/" title="GTD">GTD<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/春秋战国/" title="春秋战国">春秋战国<sup>3</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="http://www.zongbutech.com" target="_blank" title="宗布科技">宗布科技</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://www.nero.com" target="_blank" title="尼禄软件">尼禄软件</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://atjason.com" target="_blank" title="Jason">Jason</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://www.cnblogs.com/deltacat" target="_blank" title="我在博客园">我在博客园</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://blog.sina.com.cn/deltacatcn" target="_blank" title="我在新浪博客">我在新浪博客</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://tool.wopus.org" target="_blank" title="wopus站长工具">wopus站长工具</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  
+
+<div class="doubanshow">
+<p class="asidetitle">豆瓣秀</p>
+<div>
+<script type="text/javascript" src="http://www.douban.com/service/badge/deltacat/?show=collection&amp;n=12&amp;columns=3&amp;hidelogo=yes&amp;hideself=yes&amp;cat=book|movie" ></script>
+</div>
+</div>
+
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+  <div class="weiboshow">
+  <p class="asidetitle">新浪微博</p>
+    <iframe width="100%" height="119" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=119&fansRow=2&ptype=1&speed=0&skin=9&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=1406303630&verifier=&dpc=1"></iframe>
+</div>
+
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> 你好，我是三角猫。这里是我的个人博客，内容以原创为主。 <br/>
+			在这里，你可以看到：软件开发技术，管理心得，以及一些历史故事。</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		<a href="http://weibo.com/deltacat" target="_blank" class="icon-weibo" title="微博"></a>
+		
+		
+		<a href="https://github.com/deltacat" target="_blank" class="icon-github" title="github"></a>
+		
+		
+		
+		
+		
+		
+		<a href="https://www.douban.com/people/deltacat" target="_blank" class="icon-douban" title="豆瓣"></a>
+		
+		
+		<a href="http://www.zhihu.com/people/deltacat" target="_blank" class="icon-zhihu" title="知乎"></a>
+		
+		
+		
+	</div>
+			
+		
+				<div class="cc-license">
+          <a href="http://creativecommons.org/licenses/by/4.0" class="cc-opacity" target="_blank">
+            <img src="/img/cc-by.svg" alt="Creative Commons" />
+          </a>
+        </div>
+    
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2016 
+		
+		<a href="/about" target="_blank" title="三角猫">三角猫</a>
+		
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
+
+
+
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"deltacat"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script> 
+
+
+
+
+
+
+
+
+
+<!-- Analytics Begin -->
+
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-7388145-4', 'auto');  
+ga('send', 'pageview');
+</script>
+
+
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+  </body>
+</html>
