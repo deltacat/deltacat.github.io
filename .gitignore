@@ -7,3 +7,5 @@ public/
 .deploy*/
 *.swp
 source/_posts/.MWebMetaData
+themes
+!_config.yml

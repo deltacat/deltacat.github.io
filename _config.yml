@@ -7,8 +7,8 @@ title: 夜猫阿罗哈
 subtitle: 暮然回首萧瑟处，也无风雨也无晴
 description: 三角猫的个人博客。内容包括软件开发技术，项目管理，以及历史故事
 author: 三角猫
-language: zh-CN
-timezone:
+language: zh-Hans
+timezone: 
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
@@ -62,7 +62,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: http://hexo.io/plugins/
 ## Themes: http://hexo.io/themes/
-theme: jacman
+theme: next
 stylus:
   compress: true
 
