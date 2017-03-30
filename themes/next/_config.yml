@@ -3,7 +3,7 @@
 # ---------------------------------------------------------------
 
 # Put your favicon.ico into `hexo-site/source/` directory.
-favicon: /favicon.ico
+favicon: images/author.png # /favicon.ico
 
 # Set default keywords (Use a comma to separate)
 keywords: "catxn, 三角猫, deltacat, 宗布, Hexo, NexT"
@@ -64,8 +64,6 @@ menu_icons:
   commonweal: heartbeat
 
 
-
-
 # ---------------------------------------------------------------
 # Scheme Settings
 # ---------------------------------------------------------------
@@ -88,19 +86,19 @@ font:
   enable: true
 
   # Uri of fonts host. E.g. //fonts.googleapis.com (Default)
-  host:
+  host: # //fonts.useso.com
 
   # Global font settings used on <body> element.
   global:
     # external: true will load this font family from host.
     external: true
-    family: Lato
+    family: Monda
 
   # Font settings for Headlines (h1, h2, h3, h4, h5, h6)
   # Fallback to `global` font settings.
   headings:
     external: true
-    family:
+    family: Roboto Slab
 
   # Font settings for posts
   # Fallback to `global` font settings.
@@ -176,7 +174,7 @@ toc:
 # Creative Commons 4.0 International License.
 # http://creativecommons.org/
 # Available: by | by-nc | by-nc-nd | by-nc-sa | by-nd | by-sa | zero
-#creative_commons: by-nc-sa
+creative_commons: by-nc-sa
 #creative_commons:
 
 
@@ -207,11 +205,19 @@ sidebar:
 
 
 # Blog rolls
-#links_title: Links
-#links_layout: block
-#links_layout: inline
-#links:
+links_title: 友情链接
+# links_layout: block
+links_layout: inline
+links:
   #Title: http://example.com/
+  宗布科技: http://www.zongbutech.com
+  同芯资本: http://www.tongxinvc.com
+  尼禄软件: http://www.nero.com
+  Jason: http://atjason.com
+  # 我在博客园: http://www.cnblogs.com/deltacat
+  # 我在新浪博客: http://blog.sina.com.cn/deltacatcn
+  wopus站长工具: http://tool.wopus.org
+
 
 
 # ---------------------------------------------------------------
@@ -245,10 +251,10 @@ post_wordcount:
   min2read: false
 
 # Wechat Subscriber
-#wechat_subscriber:
-  #enabled: true
-  #qcode: /path/to/your/wechatqcode ex. /uploads/wechat-qcode.jpg
-  #description: ex. subscribe to my blog by scanning my public wechat account
+wechat_subscriber:
+  enabled: true
+  qcode: /images/qrcode_for_gh_wildcat.jpg
+  description: 扫码关注我的公众号，不定期原创推送
 
 # Declare license on posts
 post_copyright:
@@ -329,11 +335,11 @@ changyan:
 # Available value:
 #    button | slide
 # Warning: Baidu Share does not support https.
-#baidushare:
-##  type: button
+# baidushare: true
+## type: button
 
 # Share
-#jiathis:
+#jiathis: true
 # Warning: JiaThis does not support https.
 #add_this_id:
 
@@ -345,7 +351,7 @@ changyan:
 #google_site_verification:
 
 # Google Analytics
-#google_analytics:
+google_analytics: UA-7388145-4
 
 # Yandex Webmaster tools verification setting
 # See: https://webmaster.yandex.ru/
@@ -468,6 +474,12 @@ local_search:
 # Usage: {% exturl text url "title" %}
 # Alias: {% extlink text url "title" %}
 exturl: false
+
+# -------------- Added by me ---
+#reward_comment: 坚持原创技术分享，您的支持将鼓励我继续创作！
+#wechatpay: /path/to/wechat-reward-image
+# alipay: /path/to/alipay-reward-image
+
 
 
 #! ---------------------------------------------------------------
