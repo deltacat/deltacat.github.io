@@ -13,7 +13,7 @@ categories: 建站心得
 
 下载好后安装，在SSH这一栏填入必须的信息。主机名按实际地址填写，username填ec2-user(EC2默认用户名)，在 User Keypaire manager 这里导入之前申请EC2过程中保存的Key Pair 文件（.pem格式）。这里Bitvise Client 的好处就体现出来了，PuTTy无法直接使用AWS格式的KeyPair文件，需要做一次转换，而Bitvise可以直接导入。导入后，选择 Initial Meth中导入的key的栏位，一般是 Slot 1，根据实际情况填写即可：
 
-![image](http://catxn.u.qiniudn.com/images/aws_04.png-o)
+![image](http://static.catxn.zongbutech.com/images/aws_04.png-o)
 
 填写好后，点击Login，第一次回弹出一个确认窗，是否接受认证信息，点击确认，一切正常的话登陆成功后左侧导航栏会出现 “New terminal console”, “New SFTP Window”。点击 new terminal console，熟悉的Linux终端提示符就出现了。后面所有的命令行操作均在这里进行。
 
@@ -94,11 +94,11 @@ service httpd restart
 
 点击“新建主机”，输入主机名，主机地址（默认localhost），点击”认证“，选择”config“认证方式，输入数据库用户名和密码。点击保存。
 
-![image](http://catxn.u.qiniudn.com/images/aws_05.png-o)
+![image](http://static.catxn.zongbutech.com/images/aws_05.png-o)
 
 完成后的的关键一步是，回到setup概要页后，注意要保存配置文件：
 
-![image](http://catxn.u.qiniudn.com/images/aws_06.png-o)
+![image](http://static.catxn.zongbutech.com/images/aws_06.png-o)
 
 在这里保存后，所有的设置在真正回写到配置文件中。现在，在浏览器打开 `http://<host>/phpmyadmin`，登录进入数据库管理后台。如果成功的话，出于安全考虑，我们要删除配置文件和setup目录。
 

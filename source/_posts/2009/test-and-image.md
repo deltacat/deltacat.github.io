@@ -12,6 +12,6 @@ categories: 流水账
 
 （乌镇）
 
-![乌镇](http://catxn.u.qiniudn.com/images/wuzhen_01.jpg-o)
+![乌镇](http://static.catxn.zongbutech.com/images/wuzhen_01.jpg-o)
 
-![乌镇](http://catxn.u.qiniudn.com/images/wuzhen_02.jpg-o)
+![乌镇](http://static.catxn.zongbutech.com/images/wuzhen_02.jpg-o)

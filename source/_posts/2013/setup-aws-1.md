@@ -43,11 +43,11 @@ AWS 账号就是你的 Amazon 账号 （注意，不是 amazon.cn 而是 amazon.
 
 现在，我们已经有了一个AWS的账户，立刻进入AWS控制台，会看到这样的界面：
 
-![image](http://catxn.u.qiniudn.com/images/aws_00.png-o)
+![image](http://static.catxn.zongbutech.com/images/aws_00.png-o)
 
 进入 EC2 面板，点击 “Launch Instance”来创建第一个实例。会看到这样的对话框：
 
-![image](http://catxn.u.qiniudn.com/images/aws_01.png-o)
+![image](http://static.catxn.zongbutech.com/images/aws_01.png-o)
 
 选则 classic wizard 进入即可。然后会进入操作系统选择界面，支持Linux和Windows系统。作为服务器，建议选择Linux系统。同时，标记星号的表示包括在免费套餐中，选择这些系统不会产生额外费用，其他的会按照标准定价收费。
 
@@ -57,7 +57,7 @@ AWS 账号就是你的 Amazon 账号 （注意，不是 amazon.cn 而是 amazon.
 
 后面两页使用默认设置即可。进入到Tags设置，这一页只是用来标识主机信息的，你可以填一个好记的名字。然后继续，进入关键的一步，生成 Key-Pair。这个 Key-Pair 是后面所有操作的基础，生成后一定要保存在一个安全的地方。页面如下，输入一个好记的名字，点击“Create &amp; Download”，下载完成后点击继续。
 
-![image](http://catxn.u.qiniudn.com/images/aws_02.png-o)
+![image](http://static.catxn.zongbutech.com/images/aws_02.png-o)
 
 下一步，会要求设置防火墙。初始设置会有两个默认安全组，任选一个或新建一个，默认打开80（http）和22（ssh）端口确保我们可以SSH连接服务器进行管理操作，以及通过浏览器访问Web服务。安全组之后随时可以增删编辑。
 
@@ -71,7 +71,7 @@ EC2实例默认只有私有IP和一个动态的公开IP地址/域名。如果需
 
 首先，进入EC2控制台，在左侧导航栏选择 Elastic IP，申请一个新的IP地址。
 
-![image](http://catxn.u.qiniudn.com/images/aws_03.png-o)
+![image](http://static.catxn.zongbutech.com/images/aws_03.png-o)
 
 得到新的IP地址后，将它绑定到刚刚生成的EC2实例。然后将我们希望使用的域名解析到这个IP地址即可。很简单。不过需要注意的是，如果你申请了一个IP而没有使用（绑定到一个可用实例），亚马逊是会罚款的哦，它会直接出现在你的账单里。
 
