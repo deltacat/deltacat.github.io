@@ -103,16 +103,16 @@
 <meta property="og:site_name" content="夜猫阿罗哈">
 <meta property="og:description" content="亚马逊 AWS 介绍简单来说，AWS (Amazon Web Service) 提供了一整套基础设施和服务，使“建站”这件事变得轻松愉快。
 你可以利用AWS构建博客主机，云存储（比如DropBox），手游数据中心，公司门户等等几乎所有你能想到的需要网络服务的场景。作为一个入门介绍，我们从 Wordpress 开始，因为 Wordpress 几乎包含了入门级站点的全部需求元素：服务器主机，PHP运行">
-<meta property="og:image" content="http://catxn.u.qiniudn.com/images/aws_00.png-o">
-<meta property="og:image" content="http://catxn.u.qiniudn.com/images/aws_01.png-o">
-<meta property="og:image" content="http://catxn.u.qiniudn.com/images/aws_02.png-o">
-<meta property="og:image" content="http://catxn.u.qiniudn.com/images/aws_03.png-o">
-<meta property="og:updated_time" content="2015-04-01T12:25:34.000Z">
+<meta property="og:image" content="http://static.catxn.zongbutech.com/images/aws_00.png-o">
+<meta property="og:image" content="http://static.catxn.zongbutech.com/images/aws_01.png-o">
+<meta property="og:image" content="http://static.catxn.zongbutech.com/images/aws_02.png-o">
+<meta property="og:image" content="http://static.catxn.zongbutech.com/images/aws_03.png-o">
+<meta property="og:updated_time" content="2019-03-03T11:34:29.106Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="在 Amazon AWS 搭建及部署网站：（一）申请、设置 AWS 服务">
 <meta name="twitter:description" content="亚马逊 AWS 介绍简单来说，AWS (Amazon Web Service) 提供了一整套基础设施和服务，使“建站”这件事变得轻松愉快。
 你可以利用AWS构建博客主机，云存储（比如DropBox），手游数据中心，公司门户等等几乎所有你能想到的需要网络服务的场景。作为一个入门介绍，我们从 Wordpress 开始，因为 Wordpress 几乎包含了入门级站点的全部需求元素：服务器主机，PHP运行">
-<meta name="twitter:image" content="http://catxn.u.qiniudn.com/images/aws_00.png-o">
+<meta name="twitter:image" content="http://static.catxn.zongbutech.com/images/aws_00.png-o">
 
 
 
@@ -413,20 +413,20 @@
 <h1 id="第二步：创建主机"><a href="#第二步：创建主机" class="headerlink" title="第二步：创建主机"></a>第二步：创建主机</h1><p>主机是一切服务的基础。当然，如果你不需要运行自己的程序，只需要一个数据中心，这一步也可以省掉。比如手游客户端需要的数据库，通信等的。既然我们需要一个网站，那么一个主机是必须的。</p>
 <p>亚马逊的主机有个很拉轰的名字：“亚马逊弹性云计算”（Elastic Cloud Compute, 简称 EC2）。用亚马逊自己的话说，它的优势在于：弹性，完全控制，灵活，可靠，安全，与AWS其他服务轻松配合，经济实惠，轻松入门。详细介绍参见： <a href="http://aws.amazon.com/cn/ec2/" target="_blank" rel="external">EC2概述</a></p>
 <p>现在，我们已经有了一个AWS的账户，立刻进入AWS控制台，会看到这样的界面：</p>
-<p><img src="http://catxn.u.qiniudn.com/images/aws_00.png-o" alt="image"></p>
+<p><img src="http://static.catxn.zongbutech.com/images/aws_00.png-o" alt="image"></p>
 <p>进入 EC2 面板，点击 “Launch Instance”来创建第一个实例。会看到这样的对话框：</p>
-<p><img src="http://catxn.u.qiniudn.com/images/aws_01.png-o" alt="image"></p>
+<p><img src="http://static.catxn.zongbutech.com/images/aws_01.png-o" alt="image"></p>
 <p>选则 classic wizard 进入即可。然后会进入操作系统选择界面，支持Linux和Windows系统。作为服务器，建议选择Linux系统。同时，标记星号的表示包括在免费套餐中，选择这些系统不会产生额外费用，其他的会按照标准定价收费。</p>
 <p>我这里选择的是Amazon Linux AMI。AMI 预置了若干常用包，很方便。</p>
 <p>下一步会选择实例数量和类型。注意，收费方式中的一年720小时时间，是按实例分别计算的。720小时足够单实例持续运行一年，两个实例就是半年。这里作为测试，保持默认1，实例类型一定要确认是 微型(T1 Micro)，其它类型均不包括在免费方案中。</p>
 <p>后面两页使用默认设置即可。进入到Tags设置，这一页只是用来标识主机信息的，你可以填一个好记的名字。然后继续，进入关键的一步，生成 Key-Pair。这个 Key-Pair 是后面所有操作的基础，生成后一定要保存在一个安全的地方。页面如下，输入一个好记的名字，点击“Create &amp; Download”，下载完成后点击继续。</p>
-<p><img src="http://catxn.u.qiniudn.com/images/aws_02.png-o" alt="image"></p>
+<p><img src="http://static.catxn.zongbutech.com/images/aws_02.png-o" alt="image"></p>
 <p>下一步，会要求设置防火墙。初始设置会有两个默认安全组，任选一个或新建一个，默认打开80（http）和22（ssh）端口确保我们可以SSH连接服务器进行管理操作，以及通过浏览器访问Web服务。安全组之后随时可以增删编辑。</p>
 <p>至此，EC2实例设置完毕，点击“Launch”，回到AWS控制台，EC2的面板会显示刚刚创建的实例，注意“状态”一栏，当它由“Pending”变为“running”后，EC2实例就正常运行，可以进行后续操作了。</p>
 <h1 id="第三步：绑定IP地址，绑定域名"><a href="#第三步：绑定IP地址，绑定域名" class="headerlink" title="第三步：绑定IP地址，绑定域名"></a>第三步：绑定IP地址，绑定域名</h1><p>EC2实例默认只有私有IP和一个动态的公开IP地址/域名。如果需要使用我们自己的域名，则需要一个静态IP，并将我们的域名指向这个IP。</p>
 <p>如何申请域名就不多说了。只说如何绑定。</p>
 <p>首先，进入EC2控制台，在左侧导航栏选择 Elastic IP，申请一个新的IP地址。</p>
-<p><img src="http://catxn.u.qiniudn.com/images/aws_03.png-o" alt="image"></p>
+<p><img src="http://static.catxn.zongbutech.com/images/aws_03.png-o" alt="image"></p>
 <p>得到新的IP地址后，将它绑定到刚刚生成的EC2实例。然后将我们希望使用的域名解析到这个IP地址即可。很简单。不过需要注意的是，如果你申请了一个IP而没有使用（绑定到一个可用实例），亚马逊是会罚款的哦，它会直接出现在你的账单里。</p>
 <p>完成IP申请后，需要编辑安全组，使这个IP地址可以访问3306端口，这是为了之后我们的主机可以访问RDS实例。</p>
 <h1 id="第四步：创建RDS实例"><a href="#第四步：创建RDS实例" class="headerlink" title="第四步：创建RDS实例"></a>第四步：创建RDS实例</h1><p>建网站必须有个数据库。比如wordpress。</p>
@@ -573,7 +573,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">74</span>
+                <span class="site-state-item-count">73</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>

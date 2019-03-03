@@ -105,16 +105,16 @@
 <meta property="og:description" content="现在，我们已经有了一台EC2主机，具备了基本的硬件环境。下面，开始软件环境的配置。
 第一步：连接服务器后面所有的一切，都需要在SSH终端窗口操作。首先，我们需要一个SSH客户端。PuTTY是很常用的工具。这里我们选用 Bitvise SSH Client。这个软件之前叫做“Tunnelier”。软件可以在 这里下载。
 下载好后安装，在SSH这一栏填入必须的信息。主机名按实际地址填写，usernam">
-<meta property="og:image" content="http://catxn.u.qiniudn.com/images/aws_04.png-o">
-<meta property="og:image" content="http://catxn.u.qiniudn.com/images/aws_05.png-o">
-<meta property="og:image" content="http://catxn.u.qiniudn.com/images/aws_06.png-o">
-<meta property="og:updated_time" content="2015-04-01T12:25:34.000Z">
+<meta property="og:image" content="http://static.catxn.zongbutech.com/images/aws_04.png-o">
+<meta property="og:image" content="http://static.catxn.zongbutech.com/images/aws_05.png-o">
+<meta property="og:image" content="http://static.catxn.zongbutech.com/images/aws_06.png-o">
+<meta property="og:updated_time" content="2019-03-03T11:34:29.106Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="在 Amazon AWS 搭建及部署网站：（二）安装、配置软件，启动网站">
 <meta name="twitter:description" content="现在，我们已经有了一台EC2主机，具备了基本的硬件环境。下面，开始软件环境的配置。
 第一步：连接服务器后面所有的一切，都需要在SSH终端窗口操作。首先，我们需要一个SSH客户端。PuTTY是很常用的工具。这里我们选用 Bitvise SSH Client。这个软件之前叫做“Tunnelier”。软件可以在 这里下载。
 下载好后安装，在SSH这一栏填入必须的信息。主机名按实际地址填写，usernam">
-<meta name="twitter:image" content="http://catxn.u.qiniudn.com/images/aws_04.png-o">
+<meta name="twitter:image" content="http://static.catxn.zongbutech.com/images/aws_04.png-o">
 
 
 
@@ -403,7 +403,7 @@
         <p>现在，我们已经有了一台EC2主机，具备了基本的硬件环境。下面，开始软件环境的配置。</p>
 <h1 id="第一步：连接服务器"><a href="#第一步：连接服务器" class="headerlink" title="第一步：连接服务器"></a>第一步：连接服务器</h1><p>后面所有的一切，都需要在SSH终端窗口操作。首先，我们需要一个SSH客户端。PuTTY是很常用的工具。这里我们选用 Bitvise SSH Client。这个软件之前叫做“Tunnelier”。软件可以在 <a href="http://www.bitvise.com/ssh-client-download" target="_blank" rel="external">这里下载</a>。</p>
 <p>下载好后安装，在SSH这一栏填入必须的信息。主机名按实际地址填写，username填ec2-user(EC2默认用户名)，在 User Keypaire manager 这里导入之前申请EC2过程中保存的Key Pair 文件（.pem格式）。这里Bitvise Client 的好处就体现出来了，PuTTy无法直接使用AWS格式的KeyPair文件，需要做一次转换，而Bitvise可以直接导入。导入后，选择 Initial Meth中导入的key的栏位，一般是 Slot 1，根据实际情况填写即可：</p>
-<p><img src="http://catxn.u.qiniudn.com/images/aws_04.png-o" alt="image"></p>
+<p><img src="http://static.catxn.zongbutech.com/images/aws_04.png-o" alt="image"></p>
 <p>填写好后，点击Login，第一次回弹出一个确认窗，是否接受认证信息，点击确认，一切正常的话登陆成功后左侧导航栏会出现 “New terminal console”, “New SFTP Window”。点击 new terminal console，熟悉的Linux终端提示符就出现了。后面所有的命令行操作均在这里进行。</p>
 <p><a href="http://calebogden.com/wordpress-on-linux-in-the-amazon-cloud-with-mac" target="_blank" rel="external">这篇文章</a>中提到了如何直接以root身份登录。实际上，所有的操作均可用sudo命令来执行。如果不需要用SFTP向系统文件中上传文件，没有理由直接root登录。后面会介绍用SVN部署代码的方法，除了一些特殊情况，SFTP基本上不怎么需要了。</p>
 <a id="more"></a>
@@ -421,9 +421,9 @@
 <p>完成后重启服务。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">service httpd restart</div></pre></td></tr></table></figure></p>
 <p>然后用浏览器打开 <code>http://&lt;host&gt;/phpmyadmin/setup</code>，管理界面就显示出来了。</p>
 <p>点击“新建主机”，输入主机名，主机地址（默认localhost），点击”认证“，选择”config“认证方式，输入数据库用户名和密码。点击保存。</p>
-<p><img src="http://catxn.u.qiniudn.com/images/aws_05.png-o" alt="image"></p>
+<p><img src="http://static.catxn.zongbutech.com/images/aws_05.png-o" alt="image"></p>
 <p>完成后的的关键一步是，回到setup概要页后，注意要保存配置文件：</p>
-<p><img src="http://catxn.u.qiniudn.com/images/aws_06.png-o" alt="image"></p>
+<p><img src="http://static.catxn.zongbutech.com/images/aws_06.png-o" alt="image"></p>
 <p>在这里保存后，所有的设置在真正回写到配置文件中。现在，在浏览器打开 <code>http://&lt;host&gt;/phpmyadmin</code>，登录进入数据库管理后台。如果成功的话，出于安全考虑，我们要删除配置文件和setup目录。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> /var/www/html/phpMyAdmin      </div><div class="line">mv config/config.inc.php ./       </div><div class="line">rm –rf config/       </div><div class="line">rm –rf setup/</div></pre></td></tr></table></figure>
 <p>至此，phpMyAdmin配置完成。另外，为了快速开始，我们在认证方式中选择config方式。建议采用cookie方式连接。这里暂时不多做介绍。</p>
@@ -580,7 +580,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">74</span>
+                <span class="site-state-item-count">73</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>

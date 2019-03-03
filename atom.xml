@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.catxn.net/"/>
-  <updated>2017-04-10T15:07:20.000Z</updated>
+  <updated>2017-03-29T07:27:11.000Z</updated>
   <id>http://www.catxn.net/</id>
   
   <author>
@@ -14,25 +14,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title></title>
-    <link href="http://www.catxn.net/posts/2017/macos-cleanup/"/>
-    <id>http://www.catxn.net/posts/2017/macos-cleanup/</id>
-    <published>2017-04-10T14:59:48.000Z</published>
-    <updated>2017-04-10T15:07:20.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="macOS-系统清理"><a href="#macOS-系统清理" class="headerlink" title="macOS 系统清理"></a>macOS 系统清理</h1><h2 id="OmniDiskSweeper"><a href="#OmniDiskSweeper" class="headerlink" title="OmniDiskSweeper"></a>OmniDiskSweeper</h2><h2 id="HomeBrew"><a href="#HomeBrew" class="headerlink" title="HomeBrew"></a>HomeBrew</h2><h2 id="XCode"><a href="#XCode" class="headerlink" title="XCode"></a>XCode</h2><p><a href="https://segmentfault.com/a/1190000004353419" target="_blank" rel="external">https://segmentfault.com/a/1190000004353419</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;macOS-系统清理&quot;&gt;&lt;a href=&quot;#macOS-系统清理&quot; class=&quot;headerlink&quot; title=&quot;macOS 系统清理&quot;&gt;&lt;/a&gt;macOS 系统清理&lt;/h1&gt;&lt;h2 id=&quot;OmniDiskSweeper&quot;&gt;&lt;a href=&quot;#OmniDi
-    
-    </summary>
-    
-    
-  </entry>
   
   <entry>
     <title>新主题：Next</title>
@@ -65,17 +46,17 @@
     <link href="http://www.catxn.net/posts/2016/steve-vs-skeleton/"/>
     <id>http://www.catxn.net/posts/2016/steve-vs-skeleton/</id>
     <published>2016-08-18T13:00:00.000Z</published>
-    <updated>2016-08-18T13:22:54.000Z</updated>
+    <updated>2019-03-03T11:34:29.112Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="http://catxn.u.qiniudn.com/images/WechatIMG-cover.jpeg-s" alt="WechatIMG-cover"></p>
+    <content type="html"><![CDATA[<p><img src="http://static.catxn.zongbutech.com/images/WechatIMG-cover.jpeg-s" alt="WechatIMG-cover"></p>
 <p>小盆友学完编程后，拿《我的世界》积木块给大家讲了个故事。请往下看：</p>
 <a id="more"></a>
-<p><img src="http://catxn.u.qiniudn.com/images/WechatIMG142.jpeg-s" alt="WechatIMG142"><br><img src="http://catxn.u.qiniudn.com/images/WechatIMG143.jpeg-s" alt="WechatIMG143"><br><img src="http://catxn.u.qiniudn.com/images/WechatIMG144.jpeg-s" alt="WechatIMG144"><br><img src="http://catxn.u.qiniudn.com/images/WechatIMG145.jpeg-s" alt="WechatIMG145"><br><img src="http://catxn.u.qiniudn.com/images/WechatIMG146.jpeg-s" alt="WechatIMG146"><br><img src="http://catxn.u.qiniudn.com/images/WechatIMG147.jpeg-s" alt="WechatIMG147"><br><img src="http://catxn.u.qiniudn.com/images/WechatIMG148.jpeg-s" alt="WechatIMG148"><br><img src="http://catxn.u.qiniudn.com/images/WechatIMG149.jpeg-s" alt="WechatIMG149"></p>
+<p><img src="http://static.catxn.zongbutech.com/images/WechatIMG142.jpeg-s" alt="WechatIMG142"><br><img src="http://static.catxn.zongbutech.com/images/WechatIMG143.jpeg-s" alt="WechatIMG143"><br><img src="http://static.catxn.zongbutech.com/images/WechatIMG144.jpeg-s" alt="WechatIMG144"><br><img src="http://static.catxn.zongbutech.com/images/WechatIMG145.jpeg-s" alt="WechatIMG145"><br><img src="http://static.catxn.zongbutech.com/images/WechatIMG146.jpeg-s" alt="WechatIMG146"><br><img src="http://static.catxn.zongbutech.com/images/WechatIMG147.jpeg-s" alt="WechatIMG147"><br><img src="http://static.catxn.zongbutech.com/images/WechatIMG148.jpeg-s" alt="WechatIMG148"><br><img src="http://static.catxn.zongbutech.com/images/WechatIMG149.jpeg-s" alt="WechatIMG149"></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;http://catxn.u.qiniudn.com/images/WechatIMG-cover.jpeg-s&quot; alt=&quot;WechatIMG-cover&quot;&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;img src=&quot;http://static.catxn.zongbutech.com/images/WechatIMG-cover.jpeg-s&quot; alt=&quot;WechatIMG-cover&quot;&gt;&lt;/p&gt;
 &lt;p&gt;小盆友学完编程后，拿《我的世界》积木块给大家讲了个故事。请往下看：&lt;/p&gt;
     
     </summary>
@@ -429,9 +410,9 @@
       <category term="建站心得" scheme="http://www.catxn.net/categories/%E5%BB%BA%E7%AB%99%E5%BF%83%E5%BE%97/"/>
     
     
-      <category term="建站" scheme="http://www.catxn.net/tags/%E5%BB%BA%E7%AB%99/"/>
-    
       <category term="软件开发" scheme="http://www.catxn.net/tags/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/"/>
+    
+      <category term="建站" scheme="http://www.catxn.net/tags/%E5%BB%BA%E7%AB%99/"/>
     
       <category term="wordpress" scheme="http://www.catxn.net/tags/wordpress/"/>
     
@@ -444,9 +425,9 @@
     <link href="http://www.catxn.net/posts/2015/%E5%AE%97%E5%B8%832015%E6%80%BB%E7%BB%93/"/>
     <id>http://www.catxn.net/posts/2015/宗布2015总结/</id>
     <published>2015-12-30T15:30:00.000Z</published>
-    <updated>2016-06-15T09:07:29.000Z</updated>
+    <updated>2019-03-03T11:34:29.105Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="http://catxn.u.qiniudn.com/images/zbu20151229.jpg-o" alt="感谢一路走来的伙伴。一无所有时你们的加入和陪伴，将铭记于心"></p>
+    <content type="html"><![CDATA[<p><img src="http://static.catxn.zongbutech.com/images/zbu20151229.jpg-o" alt="感谢一路走来的伙伴。一无所有时你们的加入和陪伴，将铭记于心"></p>
 <p>在这个年度交替的时间，按说应该打打鸡血……不过还是算了吧。</p>
 <p>宗布科技成立已逾半年，如同大多数创业团队，这个初期并不顺利。</p>
 <p>首先是团队组建的过程。义无反顾放弃安逸的工作来支援的老伙计虽尽在不言中，招聘却是个痛苦的过程。起步阶段的创业型公司，无法开出高薪，想象的出高强度的工作，前途的不确定性，对打工者来说，明显不是一个好的选择。在这种情况下，最终居然能够组建起能够同时运作三个项目的团队，也是个奇迹，虽然这离完成形态还挺远。</p>
@@ -461,7 +442,7 @@
 <p>废话不再多说，对创业团队来说，低头做事，抬头看路。2016上半年，宗布科技首要目标就是实现盈利，第二目标是引入新的资金。伙伴们一起鼓足干劲一起努力。还是那俩字儿，别怕。</p>
 <hr>
 <p>年终总结写到这里，在孵化器群里看到了这张图：</p>
-<p><img src="http://catxn.u.qiniudn.com/images/T2NB2015.jpg-o" alt="T2发布会"></p>
+<p><img src="http://static.catxn.zongbutech.com/images/T2NB2015.jpg-o" alt="T2发布会"></p>
 <p>这个逼装的，要给满分。</p>
 <h3 id="附：宗布科技2015大事记"><a href="#附：宗布科技2015大事记" class="headerlink" title="附：宗布科技2015大事记"></a>附：宗布科技2015大事记</h3><ul>
 <li>5月，创立</li>
@@ -476,7 +457,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;http://catxn.u.qiniudn.com/images/zbu20151229.jpg-o&quot; alt=&quot;感谢一路走来的伙伴。一无所有时你们的加入和陪伴，将铭记于心&quot;&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;img src=&quot;http://static.catxn.zongbutech.com/images/zbu20151229.jpg-o&quot; alt=&quot;感谢一路走来的伙伴。一无所有时你们的加入和陪伴，将铭记于心&quot;&gt;&lt;/p&gt;
 &lt;p&gt;在这个年度交替的时间，按说应该打打鸡血……不过还是算了吧。&lt;/p&gt;
 &lt;p&gt;宗布科技成立已逾半年，如同大多数创业团队，这个初期并不顺利。&lt;/p&gt;
 &lt;p&gt;首先是团队组建的过程。义无反顾放弃安逸的工作来支援的老伙计虽尽在不言中，招聘却是个痛苦的过程。起步阶段的创业型公司，无法开出高薪，想象的出高强度的工作，前途的不确定性，对打工者来说，明显不是一个好的选择。在这种情况下，最终居然能够组建起能够同时运作三个项目的团队，也是个奇迹，虽然这离完成形态还挺远。&lt;/p&gt;
@@ -503,7 +484,7 @@
     <link href="http://www.catxn.net/posts/2015/%E8%B0%88%E8%B0%88%E6%8A%80%E6%9C%AF%E7%90%86%E6%83%B3/"/>
     <id>http://www.catxn.net/posts/2015/谈谈技术理想/</id>
     <published>2015-08-23T15:30:00.000Z</published>
-    <updated>2016-06-15T06:14:01.000Z</updated>
+    <updated>2019-03-03T11:34:29.106Z</updated>
     
     <content type="html"><![CDATA[<p>今天，我们来谈一谈理想。</p>
 <h1 id="梦想存在吗？"><a href="#梦想存在吗？" class="headerlink" title="梦想存在吗？"></a>梦想存在吗？</h1><p>有位朋友曾说，大部分人的所谓梦想，无论包装的多么绚丽，其实说白了只是想多挣钱而已。</p>
@@ -512,7 +493,7 @@
 <p>有的人，想成为一流的工匠；有的人，想成为聚光灯下的焦点；有的人，喜欢终生流浪。当然真的有人只是喜欢数钱到手软，这梦其实也挺好。只要是用自己的努力去获取，不伤害他人，那么无论什么样的梦，都值得被尊重。</p>
 <p>只是承载梦想往往的确需要金钱的支撑。就好比宗布，作为一家公司，赚钱这件事至关重要。可赚钱不是我们的终极目标，至少不是唯一目标，它只是为了达成目的手段。在这个前提下，需要的资金，我们会去努力获取，也会努力让投资人的付出得到应有的回报。</p>
 <p>让梦想归于本心，让金钱归于商业。梦要有，钱也要赚，平衡很重要。只是，偶尔需要问下自己，当天平开始倾斜的时候，你选择哪一边？</p>
-<p><img src="http://catxn.u.qiniudn.com/images/xlbls-jjc.jpeg-m" alt="希拉波利斯古城竞技场"></p>
+<p><img src="http://static.catxn.zongbutech.com/images/xlbls-jjc.jpeg-m" alt="希拉波利斯古城竞技场"></p>
 <h1 id="返璞归真"><a href="#返璞归真" class="headerlink" title="返璞归真"></a>返璞归真</h1><p>其实我今天想说的是技术理想。</p>
 <p>技术宅的理想是什么？码农的理想是什么？</p>
 <a id="more"></a>
@@ -549,7 +530,7 @@
 </blockquote>
 <p><strong>二</strong></p>
 <blockquote>
-<p>业务联系：<a href="&#x6d;&#97;&#105;&#108;&#x74;&#x6f;&#x3a;&#98;&#105;&#122;&#x40;&#x7a;&#111;&#110;&#103;&#98;&#x75;&#x74;&#101;&#99;&#x68;&#x2e;&#99;&#111;&#109;">&#98;&#105;&#122;&#x40;&#x7a;&#111;&#110;&#103;&#98;&#x75;&#x74;&#101;&#99;&#x68;&#x2e;&#99;&#111;&#109;</a><br>求职联系：<a href="&#x6d;&#97;&#x69;&#108;&#x74;&#111;&#58;&#x6a;&#111;&#x62;&#64;&#x7a;&#x6f;&#x6e;&#103;&#98;&#117;&#x74;&#101;&#99;&#x68;&#46;&#99;&#x6f;&#x6d;">&#x6a;&#111;&#x62;&#64;&#x7a;&#x6f;&#x6e;&#103;&#98;&#117;&#x74;&#101;&#99;&#x68;&#46;&#99;&#x6f;&#x6d;</a></p>
+<p>业务联系：<a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#58;&#x62;&#x69;&#122;&#x40;&#x7a;&#111;&#x6e;&#x67;&#98;&#117;&#x74;&#x65;&#99;&#x68;&#46;&#99;&#111;&#109;">&#x62;&#x69;&#122;&#x40;&#x7a;&#111;&#x6e;&#x67;&#98;&#117;&#x74;&#x65;&#99;&#x68;&#46;&#99;&#111;&#109;</a><br>求职联系：<a href="&#x6d;&#97;&#x69;&#108;&#116;&#x6f;&#x3a;&#x6a;&#x6f;&#98;&#64;&#122;&#111;&#110;&#x67;&#98;&#x75;&#x74;&#x65;&#x63;&#104;&#46;&#x63;&#111;&#109;">&#x6a;&#x6f;&#98;&#64;&#122;&#111;&#110;&#x67;&#98;&#x75;&#x74;&#x65;&#x63;&#104;&#46;&#x63;&#111;&#109;</a></p>
 </blockquote>
 <p><strong>三</strong></p>
 <blockquote>
@@ -566,7 +547,7 @@
 &lt;p&gt;有的人，想成为一流的工匠；有的人，想成为聚光灯下的焦点；有的人，喜欢终生流浪。当然真的有人只是喜欢数钱到手软，这梦其实也挺好。只要是用自己的努力去获取，不伤害他人，那么无论什么样的梦，都值得被尊重。&lt;/p&gt;
 &lt;p&gt;只是承载梦想往往的确需要金钱的支撑。就好比宗布，作为一家公司，赚钱这件事至关重要。可赚钱不是我们的终极目标，至少不是唯一目标，它只是为了达成目的手段。在这个前提下，需要的资金，我们会去努力获取，也会努力让投资人的付出得到应有的回报。&lt;/p&gt;
 &lt;p&gt;让梦想归于本心，让金钱归于商业。梦要有，钱也要赚，平衡很重要。只是，偶尔需要问下自己，当天平开始倾斜的时候，你选择哪一边？&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://catxn.u.qiniudn.com/images/xlbls-jjc.jpeg-m&quot; alt=&quot;希拉波利斯古城竞技场&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://static.catxn.zongbutech.com/images/xlbls-jjc.jpeg-m&quot; alt=&quot;希拉波利斯古城竞技场&quot;&gt;&lt;/p&gt;
 &lt;h1 id=&quot;返璞归真&quot;&gt;&lt;a href=&quot;#返璞归真&quot; class=&quot;headerlink&quot; title=&quot;返璞归真&quot;&gt;&lt;/a&gt;返璞归真&lt;/h1&gt;&lt;p&gt;其实我今天想说的是技术理想。&lt;/p&gt;
 &lt;p&gt;技术宅的理想是什么？码农的理想是什么？&lt;/p&gt;
     
@@ -592,7 +573,7 @@
     <link href="http://www.catxn.net/posts/2015/%E4%BD%A0%E6%AF%94%E6%83%B3%E8%B1%A1%E4%B8%AD%E5%BC%BA%E5%A4%A7/"/>
     <id>http://www.catxn.net/posts/2015/你比想象中强大/</id>
     <published>2015-05-20T02:00:00.000Z</published>
-    <updated>2016-06-15T06:14:14.000Z</updated>
+    <updated>2019-03-03T11:34:29.105Z</updated>
     
     <content type="html"><![CDATA[<h1 id="写在宗布科技满月"><a href="#写在宗布科技满月" class="headerlink" title="写在宗布科技满月"></a>写在宗布科技满月</h1><p>昨天，“独角兽之光”开展了第一次沙龙活动，我们有幸成为这首场演出的主讲。</p>
 <p>沙龙中我们给在座的小伙伴们分享了几个故事，那是宗布科技三人组从玩魔兽世界开始，到一起做事，得到的一些感悟。</p>
@@ -621,13 +602,13 @@
 <p>以前在公司时，每天朝九晚五，仍然会觉得很疲劳，而现在每天工作超过十二小时，却仍觉得精力充沛。我觉得人的潜能其实是很大的，只不过大多数时候都在沉睡，一旦有了个愿意为之付出的目标，体内的小宇宙就会被不断地激发，释放源源不绝的力量。</p>
 <p>并不是每个人都需要创业，但是如果你真的有一个梦想，那么就要努力去实现它。</p>
 <p>当你走出第一步，你会发现，你远远比你以为的更强大。</p>
-<p><img src="http://catxn.u.qiniudn.com/images/i-can-do-it.jpg-o" alt="I can do it"></p>
+<p><img src="http://static.catxn.zongbutech.com/images/i-can-do-it.jpg-o" alt="I can do it"></p>
 <h1 id="写在后面"><a href="#写在后面" class="headerlink" title="写在后面"></a>写在后面</h1><p>你看，我们原本是三个写代码的宅男，现在，我们一个是资深技术专家，一个是产品兼销售，一个非常擅长团队建设。已经构成了一个相对完整的核心。然后我们有了一些新伙伴，做一些我们不懂却必须的事情。</p>
 <p>想做，就做，不懂，就学，学不会，就找助力。</p>
 <p>首先，需要做起来，想法如果它一直留在脑子里，它就真的永远只是一个想法。</p>
 <p>所以，如果你很想走出来，但是又担心自己无法承受，那么，来一杯吧，<a href="http://beerepublic.me/" target="_blank" rel="external">别怕</a>！</p>
 <blockquote>
-<p><strong>插播广告</strong><br>业务联系：<a href="&#109;&#x61;&#x69;&#108;&#116;&#x6f;&#58;&#x62;&#x69;&#122;&#x40;&#x7a;&#111;&#x6e;&#103;&#98;&#117;&#x74;&#x65;&#99;&#104;&#46;&#99;&#111;&#109;">&#x62;&#x69;&#122;&#x40;&#x7a;&#111;&#x6e;&#103;&#98;&#117;&#x74;&#x65;&#99;&#104;&#46;&#99;&#111;&#109;</a><br>求职联系：<a href="&#x6d;&#97;&#x69;&#108;&#x74;&#111;&#x3a;&#106;&#x6f;&#98;&#x40;&#x7a;&#x6f;&#110;&#x67;&#98;&#x75;&#116;&#x65;&#x63;&#104;&#x2e;&#x63;&#111;&#109;">&#106;&#x6f;&#98;&#x40;&#x7a;&#x6f;&#110;&#x67;&#98;&#x75;&#116;&#x65;&#x63;&#104;&#x2e;&#x63;&#111;&#109;</a></p>
+<p><strong>插播广告</strong><br>业务联系：<a href="&#109;&#97;&#105;&#x6c;&#116;&#111;&#58;&#98;&#x69;&#x7a;&#64;&#x7a;&#x6f;&#x6e;&#x67;&#x62;&#x75;&#116;&#101;&#99;&#x68;&#x2e;&#99;&#111;&#109;">&#98;&#x69;&#x7a;&#64;&#x7a;&#x6f;&#x6e;&#x67;&#x62;&#x75;&#116;&#101;&#99;&#x68;&#x2e;&#99;&#111;&#109;</a><br>求职联系：<a href="&#x6d;&#x61;&#x69;&#108;&#x74;&#111;&#58;&#106;&#111;&#98;&#x40;&#x7a;&#x6f;&#x6e;&#103;&#98;&#x75;&#116;&#x65;&#x63;&#104;&#x2e;&#x63;&#x6f;&#x6d;">&#106;&#111;&#98;&#x40;&#x7a;&#x6f;&#x6e;&#103;&#98;&#x75;&#116;&#x65;&#x63;&#104;&#x2e;&#x63;&#x6f;&#x6d;</a></p>
 </blockquote>
 <p>（其实还有很多感悟，不过现在并没有很多时间写字，刚刚做完一个功能，正好又是个值得纪念的日子，就随手写些东西为记。）</p>
 ]]></content>
@@ -661,12 +642,12 @@
     <link href="http://www.catxn.net/posts/2015/zbu-log-teamhouse-1/"/>
     <id>http://www.catxn.net/posts/2015/zbu-log-teamhouse-1/</id>
     <published>2015-05-13T03:02:17.000Z</published>
-    <updated>2016-06-15T06:13:06.000Z</updated>
+    <updated>2019-03-03T11:34:29.108Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>天下风云出我辈，一入江湖岁月催。皇图霸业谈笑间，不胜人生一场醉。提剑跨骑挥鬼雨，白骨如山鸟惊飞。尘事如潮人如水，只叹江湖几人回。——《笑傲江湖》</p>
 </blockquote>
-<p>(<em>唯美食与风景不可辜负</em>)<br><img src="http://catxn.u.qiniudn.com/images/jn1535/tea-02.jpg-o" alt="唯美食与风景不可辜负"></p>
+<p>(<em>唯美食与风景不可辜负</em>)<br><img src="http://static.catxn.zongbutech.com/images/jn1535/tea-02.jpg-o" alt="唯美食与风景不可辜负"></p>
 <h1 id="茶馆"><a href="#茶馆" class="headerlink" title="茶馆"></a>茶馆</h1><p>西子湖畔，万松岭下，有一个幽静的茶馆。</p>
 <p>每天往来的，有金牌投资人，有互联网大佬，有资深金融投资专家，有创业者，有名校教授，有畅销书作者，当然还有更多在金融、互联网、投资、电商大潮中奋力拼搏的年轻人。</p>
 <p>这里，是“江南1535”。</p>
@@ -675,7 +656,7 @@
 <p>在这个茶馆运作的产品焦点是互联网金融和生活服务，它们包括配资么，大账户，聚募众筹，聚付宝等等。我们需要大量人才。你是大牛，我们欢迎，也许你就是我们未来的CTO；你是新人，没有关系，只要是可造之才，我们有在技术领域浸淫十数年的专家手把手教。只要你有一腔热忱和不怕跌倒的心。</p>
 <p>如果这里就是你正在寻找的地方，请联系我，一起制造梦想：</p>
 <blockquote>
-<p><strong> 坐标：杭州。 </strong><br>简历投递：<br><a href="&#x6d;&#97;&#105;&#108;&#x74;&#x6f;&#x3a;&#x6a;&#x6f;&#98;&#64;&#x7a;&#98;&#x75;&#x2e;&#x69;&#109;">&#x6a;&#x6f;&#98;&#64;&#x7a;&#98;&#x75;&#x2e;&#x69;&#109;</a><br><a href="&#x6d;&#97;&#105;&#108;&#116;&#111;&#x3a;&#x6a;&#111;&#x62;&#64;&#x7a;&#x6f;&#x6e;&#x67;&#x62;&#x75;&#x74;&#x65;&#x63;&#x68;&#x2e;&#x63;&#111;&#x6d;">&#x6a;&#111;&#x62;&#64;&#x7a;&#x6f;&#x6e;&#x67;&#x62;&#x75;&#x74;&#x65;&#x63;&#x68;&#x2e;&#x63;&#111;&#x6d;</a></p>
+<p><strong> 坐标：杭州。 </strong><br>简历投递：<br><a href="&#109;&#x61;&#105;&#108;&#x74;&#111;&#x3a;&#x6a;&#x6f;&#x62;&#64;&#x7a;&#x62;&#x75;&#46;&#x69;&#x6d;">&#x6a;&#x6f;&#x62;&#64;&#x7a;&#x62;&#x75;&#46;&#x69;&#x6d;</a><br><a href="&#x6d;&#x61;&#x69;&#108;&#116;&#111;&#x3a;&#106;&#x6f;&#x62;&#64;&#122;&#x6f;&#x6e;&#x67;&#x62;&#x75;&#116;&#x65;&#99;&#104;&#46;&#99;&#x6f;&#x6d;">&#106;&#x6f;&#x62;&#64;&#122;&#x6f;&#x6e;&#x67;&#x62;&#x75;&#116;&#x65;&#99;&#104;&#46;&#99;&#x6f;&#x6d;</a></p>
 </blockquote>
 <a id="more"></a>
 <h1 id="公司及产品介绍"><a href="#公司及产品介绍" class="headerlink" title="公司及产品介绍"></a>公司及产品介绍</h1><p>茶馆团队之一，掌升财金融以及宗布科技联合招聘。</p>
@@ -707,7 +688,7 @@
 <p>我们是全新的公司，因此在各方面你都会有足够的选择权。甚至，规则也可以由你来制定。</p>
 <p>约吗？</p>
 <blockquote>
-<p><a href="&#x6d;&#97;&#105;&#x6c;&#116;&#x6f;&#x3a;&#x6a;&#111;&#x62;&#x40;&#122;&#98;&#x75;&#x2e;&#x69;&#x6d;">&#x6a;&#111;&#x62;&#x40;&#122;&#98;&#x75;&#x2e;&#x69;&#x6d;</a><br><a href="&#x6d;&#x61;&#x69;&#x6c;&#116;&#x6f;&#x3a;&#106;&#111;&#98;&#64;&#122;&#x6f;&#110;&#103;&#x62;&#117;&#116;&#101;&#x63;&#104;&#46;&#x63;&#111;&#109;">&#106;&#111;&#98;&#64;&#122;&#x6f;&#110;&#103;&#x62;&#117;&#116;&#101;&#x63;&#104;&#46;&#x63;&#111;&#109;</a></p>
+<p><a href="&#109;&#97;&#x69;&#108;&#x74;&#111;&#58;&#106;&#x6f;&#98;&#x40;&#122;&#x62;&#117;&#x2e;&#105;&#x6d;">&#106;&#x6f;&#98;&#x40;&#122;&#x62;&#117;&#x2e;&#105;&#x6d;</a><br><a href="&#109;&#x61;&#x69;&#x6c;&#x74;&#111;&#58;&#106;&#x6f;&#x62;&#64;&#x7a;&#111;&#110;&#103;&#98;&#x75;&#x74;&#x65;&#99;&#104;&#x2e;&#99;&#111;&#109;">&#106;&#x6f;&#x62;&#64;&#x7a;&#111;&#110;&#103;&#98;&#x75;&#x74;&#x65;&#99;&#104;&#x2e;&#99;&#111;&#109;</a></p>
 </blockquote>
 ]]></content>
     
@@ -716,7 +697,7 @@
       &lt;blockquote&gt;
 &lt;p&gt;天下风云出我辈，一入江湖岁月催。皇图霸业谈笑间，不胜人生一场醉。提剑跨骑挥鬼雨，白骨如山鸟惊飞。尘事如潮人如水，只叹江湖几人回。——《笑傲江湖》&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;(&lt;em&gt;唯美食与风景不可辜负&lt;/em&gt;)&lt;br&gt;&lt;img src=&quot;http://catxn.u.qiniudn.com/images/jn1535/tea-02.jpg-o&quot; alt=&quot;唯美食与风景不可辜负&quot;&gt;&lt;/p&gt;
+&lt;p&gt;(&lt;em&gt;唯美食与风景不可辜负&lt;/em&gt;)&lt;br&gt;&lt;img src=&quot;http://static.catxn.zongbutech.com/images/jn1535/tea-02.jpg-o&quot; alt=&quot;唯美食与风景不可辜负&quot;&gt;&lt;/p&gt;
 &lt;h1 id=&quot;茶馆&quot;&gt;&lt;a href=&quot;#茶馆&quot; class=&quot;headerlink&quot; title=&quot;茶馆&quot;&gt;&lt;/a&gt;茶馆&lt;/h1&gt;&lt;p&gt;西子湖畔，万松岭下，有一个幽静的茶馆。&lt;/p&gt;
 &lt;p&gt;每天往来的，有金牌投资人，有互联网大佬，有资深金融投资专家，有创业者，有名校教授，有畅销书作者，当然还有更多在金融、互联网、投资、电商大潮中奋力拼搏的年轻人。&lt;/p&gt;
 &lt;p&gt;这里，是“江南1535”。&lt;/p&gt;
@@ -725,7 +706,7 @@
 &lt;p&gt;在这个茶馆运作的产品焦点是互联网金融和生活服务，它们包括配资么，大账户，聚募众筹，聚付宝等等。我们需要大量人才。你是大牛，我们欢迎，也许你就是我们未来的CTO；你是新人，没有关系，只要是可造之才，我们有在技术领域浸淫十数年的专家手把手教。只要你有一腔热忱和不怕跌倒的心。&lt;/p&gt;
 &lt;p&gt;如果这里就是你正在寻找的地方，请联系我，一起制造梦想：&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt; 坐标：杭州。 &lt;/strong&gt;&lt;br&gt;简历投递：&lt;br&gt;&lt;a href=&quot;&amp;#x6d;&amp;#97;&amp;#105;&amp;#108;&amp;#x74;&amp;#x6f;&amp;#x3a;&amp;#x6a;&amp;#x6f;&amp;#98;&amp;#64;&amp;#x7a;&amp;#98;&amp;#x75;&amp;#x2e;&amp;#x69;&amp;#109;&quot;&gt;&amp;#x6a;&amp;#x6f;&amp;#98;&amp;#64;&amp;#x7a;&amp;#98;&amp;#x75;&amp;#x2e;&amp;#x69;&amp;#109;&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;&amp;#x6d;&amp;#97;&amp;#105;&amp;#108;&amp;#116;&amp;#111;&amp;#x3a;&amp;#x6a;&amp;#111;&amp;#x62;&amp;#64;&amp;#x7a;&amp;#x6f;&amp;#x6e;&amp;#x67;&amp;#x62;&amp;#x75;&amp;#x74;&amp;#x65;&amp;#x63;&amp;#x68;&amp;#x2e;&amp;#x63;&amp;#111;&amp;#x6d;&quot;&gt;&amp;#x6a;&amp;#111;&amp;#x62;&amp;#64;&amp;#x7a;&amp;#x6f;&amp;#x6e;&amp;#x67;&amp;#x62;&amp;#x75;&amp;#x74;&amp;#x65;&amp;#x63;&amp;#x68;&amp;#x2e;&amp;#x63;&amp;#111;&amp;#x6d;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt; 坐标：杭州。 &lt;/strong&gt;&lt;br&gt;简历投递：&lt;br&gt;&lt;a href=&quot;&amp;#109;&amp;#x61;&amp;#105;&amp;#108;&amp;#x74;&amp;#111;&amp;#x3a;&amp;#x6a;&amp;#x6f;&amp;#x62;&amp;#64;&amp;#x7a;&amp;#x62;&amp;#x75;&amp;#46;&amp;#x69;&amp;#x6d;&quot;&gt;&amp;#x6a;&amp;#x6f;&amp;#x62;&amp;#64;&amp;#x7a;&amp;#x62;&amp;#x75;&amp;#46;&amp;#x69;&amp;#x6d;&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;&amp;#x6d;&amp;#x61;&amp;#x69;&amp;#108;&amp;#116;&amp;#111;&amp;#x3a;&amp;#106;&amp;#x6f;&amp;#x62;&amp;#64;&amp;#122;&amp;#x6f;&amp;#x6e;&amp;#x67;&amp;#x62;&amp;#x75;&amp;#116;&amp;#x65;&amp;#99;&amp;#104;&amp;#46;&amp;#99;&amp;#x6f;&amp;#x6d;&quot;&gt;&amp;#106;&amp;#x6f;&amp;#x62;&amp;#64;&amp;#122;&amp;#x6f;&amp;#x6e;&amp;#x67;&amp;#x62;&amp;#x75;&amp;#116;&amp;#x65;&amp;#99;&amp;#104;&amp;#46;&amp;#99;&amp;#x6f;&amp;#x6d;&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
     
     </summary>
@@ -748,7 +729,7 @@
     <link href="http://www.catxn.net/posts/2015/%E8%80%81%E5%A4%AB%E8%81%8A%E5%8F%91%E5%B0%91%E5%B9%B4%E7%8B%82/"/>
     <id>http://www.catxn.net/posts/2015/老夫聊发少年狂/</id>
     <published>2015-05-06T02:30:00.000Z</published>
-    <updated>2016-06-15T06:14:33.000Z</updated>
+    <updated>2019-03-03T11:34:29.111Z</updated>
     
     <content type="html"><![CDATA[<!-- 
 （微信转发用）我知道，这一天你已经等了很久了，那么现在，我要正式宣布啦。要说的话都在帖子里，欢迎收看，欢迎转发，内容不多不耗流量：
@@ -778,7 +759,7 @@
 <p>莫听穿林打叶声，何妨吟啸且徐行。<br>竹杖芒鞋轻胜马。谁怕！一蓑烟雨任平生。<br>料峭春风吹酒醒，微冷，山头斜照却相迎。<br>回首向来萧瑟处。归去，也无风雨也无晴。</p>
 </blockquote>
 <p>今日，立夏。生如夏花。<br><!-- 使生如夏花之绚烂，死如秋叶之静美 --></p>
-<p><img src="http://catxn.u.qiniudn.com/images/acg/onepiece_hat01.jpg-o" alt=""></p>
+<p><img src="http://static.catxn.zongbutech.com/images/acg/onepiece_hat01.jpg-o" alt=""></p>
 <h1 id="煽情结束，广告时间"><a href="#煽情结束，广告时间" class="headerlink" title="煽情结束，广告时间"></a>煽情结束，广告时间</h1><ul>
 <li>初创公司，风口，众筹，金融，期权，这些吸引眼球的名词，有；</li>
 <li>办公在山中茶馆，坐拥良辰美景，日日俊男美女相伴，都有；</li>
@@ -792,7 +773,7 @@
 <p>如果你认识我，可用任何你知道的方式跟我联系，或携手创业，或只是一起喝茶聊天；</p>
 <p>如果你是新朋友，请直接发送简历到我的邮箱。茫茫人海，相识就是缘分：</p>
 <blockquote>
-<p><strong>坐标：杭州</strong><br><a href="&#x6d;&#x61;&#x69;&#108;&#116;&#111;&#x3a;&#106;&#111;&#x62;&#x40;&#122;&#x62;&#x75;&#46;&#x69;&#x6d;">&#106;&#111;&#x62;&#x40;&#122;&#x62;&#x75;&#46;&#x69;&#x6d;</a><br><a href="&#x6d;&#97;&#x69;&#x6c;&#x74;&#111;&#58;&#x6a;&#x6f;&#98;&#x40;&#122;&#x6f;&#x6e;&#x67;&#98;&#117;&#116;&#101;&#x63;&#x68;&#x2e;&#99;&#x6f;&#x6d;">&#x6a;&#x6f;&#98;&#x40;&#122;&#x6f;&#x6e;&#x67;&#98;&#117;&#116;&#101;&#x63;&#x68;&#x2e;&#99;&#x6f;&#x6d;</a></p>
+<p><strong>坐标：杭州</strong><br><a href="&#x6d;&#x61;&#x69;&#108;&#116;&#x6f;&#58;&#x6a;&#x6f;&#x62;&#x40;&#x7a;&#x62;&#117;&#46;&#105;&#x6d;">&#x6a;&#x6f;&#x62;&#x40;&#x7a;&#x62;&#117;&#46;&#105;&#x6d;</a><br><a href="&#x6d;&#97;&#x69;&#x6c;&#x74;&#111;&#58;&#106;&#x6f;&#x62;&#x40;&#x7a;&#x6f;&#110;&#103;&#98;&#117;&#116;&#x65;&#99;&#x68;&#x2e;&#99;&#x6f;&#x6d;">&#106;&#x6f;&#x62;&#x40;&#x7a;&#x6f;&#110;&#103;&#98;&#117;&#116;&#x65;&#99;&#x68;&#x2e;&#99;&#x6f;&#x6d;</a></p>
 </blockquote>
 <p>来吧少年，同去。</p>
 <h1 id="写给简书的朋友"><a href="#写给简书的朋友" class="headerlink" title="写给简书的朋友"></a>写给简书的朋友</h1><p>在简书零敲碎打堆了些贻笑大方的文字，却也得到几位朋友的抬爱。后面估计会忙一阵子，无法再像以前那样基本每周一篇。</p>
@@ -1066,13 +1047,13 @@
     <link href="http://www.catxn.net/posts/2015/%E8%BF%81%E7%A7%BB%E5%88%B0Hexo/"/>
     <id>http://www.catxn.net/posts/2015/迁移到Hexo/</id>
     <published>2015-03-31T03:40:17.000Z</published>
-    <updated>2016-01-24T14:36:57.000Z</updated>
+    <updated>2019-03-03T11:34:29.105Z</updated>
     
     <content type="html"><![CDATA[<p>一直以来都是用 wordpress。随着 WP 日渐臃肿，以及在喜欢上 Markdown 写作之后，就一直想找个能对 Markdown 支持完美的，轻量级的，并易于版本管理的博客系统。</p>
 <p>在这种需求下，Jekyll 落入了视线。</p>
 <p>Jekyll 是 GitHub 和 GitCafe 内置支持的静态网页生成引擎，可定制化程度也高。看上去对我们程序猴子这种不折腾会死的物种非常合适，但是经过一段时间的观察和分析后。感觉可能它并不是最佳选择。</p>
 <p>然后我看到了 cnfeat 这篇 <a href="http://cnfeat.com/2014/05/10/2014-05-11-how-to-build-a-blog/" target="_blank" rel="external">简明Github Pages与Hexo教程</a>。瞬间就被它吸引了。</p>
-<p><img src="http://catxn.u.qiniudn.com/images/acg/zespia001.jpg-o" alt="骗点击"></p>
+<p><img src="http://static.catxn.zongbutech.com/images/acg/zespia001.jpg-o" alt="骗点击"></p>
 <h1 id="选哪个"><a href="#选哪个" class="headerlink" title="选哪个"></a>选哪个</h1><p>两个引擎都支持 markdown，都可以利用 git 库进行管理。最终发布的都是静态页面。这一点没什么大的差别。相对而言，Jekyll 发展较早，相对比较成熟，Hexo 是后起之秀，但是发展迅速。</p>
 <p>Jelly 是 github 的默认推荐。它的工作方式是把源文件上传至 github 的特定分支，然后 github 在发现有文件更新时，在服务端重新编译生成静态网页自动部署至 master 分支。</p>
 <p>Jekyll 的优势是发展比较成熟，因为是官方推荐，支持也比较好。看上去对程序员来说也更加优雅便于折腾。缺点是配置比较复杂，需要遵循一定的规范比如一定要放在 gh-pages 分支。因为是提交源文件在服务端生成，所以在内容发生变化到前端呈现会有一定延迟。</p>
@@ -1125,7 +1106,7 @@
 &lt;p&gt;在这种需求下，Jekyll 落入了视线。&lt;/p&gt;
 &lt;p&gt;Jekyll 是 GitHub 和 GitCafe 内置支持的静态网页生成引擎，可定制化程度也高。看上去对我们程序猴子这种不折腾会死的物种非常合适，但是经过一段时间的观察和分析后。感觉可能它并不是最佳选择。&lt;/p&gt;
 &lt;p&gt;然后我看到了 cnfeat 这篇 &lt;a href=&quot;http://cnfeat.com/2014/05/10/2014-05-11-how-to-build-a-blog/&quot;&gt;简明Github Pages与Hexo教程&lt;/a&gt;。瞬间就被它吸引了。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://catxn.u.qiniudn.com/images/acg/zespia001.jpg-o&quot; alt=&quot;骗点击&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://static.catxn.zongbutech.com/images/acg/zespia001.jpg-o&quot; alt=&quot;骗点击&quot;&gt;&lt;/p&gt;
 &lt;h1 id=&quot;选哪个&quot;&gt;&lt;a href=&quot;#选哪个&quot; class=&quot;headerlink&quot; title=&quot;选哪个&quot;&gt;&lt;/a&gt;选哪个&lt;/h1&gt;&lt;p&gt;两个引擎都支持 markdown，都可以利用 git 库进行管理。最终发布的都是静态页面。这一点没什么大的差别。相对而言，Jekyll 发展较早，相对比较成熟，Hexo 是后起之秀，但是发展迅速。&lt;/p&gt;
 &lt;p&gt;Jelly 是 github 的默认推荐。它的工作方式是把源文件上传至 github 的特定分支，然后 github 在发现有文件更新时，在服务端重新编译生成静态网页自动部署至 master 分支。&lt;/p&gt;
 &lt;p&gt;Jekyll 的优势是发展比较成熟，因为是官方推荐，支持也比较好。看上去对程序员来说也更加优雅便于折腾。缺点是配置比较复杂，需要遵循一定的规范比如一定要放在 gh-pages 分支。因为是提交源文件在服务端生成，所以在内容发生变化到前端呈现会有一定延迟。&lt;/p&gt;
@@ -1400,6 +1381,223 @@
       <category term="时间管理" scheme="http://www.catxn.net/tags/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86/"/>
     
       <category term="项目管理" scheme="http://www.catxn.net/tags/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>战国四公子（上）</title>
+    <link href="http://www.catxn.net/posts/2015/four-lords-1/"/>
+    <id>http://www.catxn.net/posts/2015/four-lords-1/</id>
+    <published>2015-03-08T03:27:00.000Z</published>
+    <updated>2015-04-06T13:40:25.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>今天来八一八战国四公子，他们是：信陵君魏无忌，孟尝君田文，平原君赵胜，春申君黄歇。</p>
+<p>这几个人其实并非完全处于同一时代。说到时代，先得弄清楚战国的时间界定。一般从定义上来说，战国时期指<strong>前</strong>475年到前221年这段历史时期。</p>
+<p>221年是秦统一天下的时间，作为结束时间没有太大争议。但是作为春秋战国分界的几个代表性历史事件并没有发生在475年。它们分别是：田氏代齐（481年），三家分晋（458年），周天子承认韩赵魏（403年），周天子承认田齐（386年）。之所以将475年作为分界，只是为了记述方便，以周元王元年为记。</p>
+<p>信陵君出生年不明，除此外，几个人的情况大体是这个样子：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>所属</th>
+<th style="text-align:right">生卒</th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>信陵君</td>
+<td>魏国</td>
+<td style="text-align:right">???-前243</td>
+<td></td>
+<td></td>
+<td>+</td>
+<td>+</td>
+<td>+</td>
+<td>+</td>
+<td>+</td>
+<td>+</td>
+<td>+</td>
+<td>+</td>
+</tr>
+<tr>
+<td>孟尝君</td>
+<td>齐国</td>
+<td style="text-align:right">前344-前279</td>
+<td>+</td>
+<td>+</td>
+<td>+</td>
+<td>+</td>
+<td>+</td>
+<td>+</td>
+<td>+</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>平原君</td>
+<td>赵国</td>
+<td style="text-align:right">前308-前251</td>
+<td></td>
+<td></td>
+<td></td>
+<td>+</td>
+<td>+</td>
+<td>+</td>
+<td>+</td>
+<td>+</td>
+<td>+</td>
+<td></td>
+</tr>
+<tr>
+<td>春申君</td>
+<td>楚国</td>
+<td style="text-align:right">前314-前238</td>
+<td></td>
+<td></td>
+<td></td>
+<td>+</td>
+<td>+</td>
+<td>+</td>
+<td>+</td>
+<td>+</td>
+<td>+</td>
+<td>+</td>
+</tr>
+</tbody>
+</table>
+<p>从上表看出，孟尝君活跃年代稍早，其他三公子真正在政治上有交集的，大约应该有40年左右的时间。在这期间，秦国正是昭襄王在位时期。秦昭襄王为秦国奠定了扎实的基础，再经三世，由嬴政一统天下。</p>
+<p>下面挨个介绍下他们四位。</p>
+<a id="more"></a>
+<h1 id="春申君"><a href="#春申君" class="headerlink" title="春申君"></a>春申君</h1><p>春申君黄歇，楚国江夏（湖北省东部）人。为人好酒色，在平均年龄不到40的春秋战国时代，却能活到76岁的高寿，其实挺令人羡慕。魔都人民有这样的祖先想必很满意。</p>
+<p>前272年，秦昭襄王派大军犯楚，楚王连都城都挪了还是扛不住，于是派遣黄歇出使秦国求和。黄歇凭其出众的口才，成功说服秦王阻止白起出征，使楚国免于灭顶之灾。</p>
+<p>休兵后楚国遣黄歇和太子熊完入秦作为人质。顷襄王病重，秦昭襄王不肯放太子回楚国。黄歇让太子乔装为车夫，随使臣逃走。估计太子已经走远，才独自去见秦王。秦王大怒，要黄歇自杀，在范雎的劝说下才保住性命并释放回国。</p>
+<p>太子熊完即位后的考烈王元年（前262年），任命黄歇为令尹，封春申君，赐淮北十二县。</p>
+<p>令尹是当时楚国最高官职，相当于战国时期其他诸侯国的“相”。楚国令尹由外姓人担任的，史上也就吴起，黄歇，李园几个人。可见其受器重的程度。一方面，黄歇的确在秦楚之争中表现出了过人的胆识、智慧和口才，另一方面，这也是考烈王的报恩之举。</p>
+<p>春申君一生为楚国鞠躬尽瘁，权倾朝野，名望甚高。元朝大学士许衡甚至评价他为战国四公子之首。春申君死后一百多年，司马迁参观春申君的故城遗址，仍被其规模震撼，可见其在世时的荣华。</p>
+<p>关于他的事迹，早先写过篇故事，详细描述了晚年春申君是如何因好色而被小人所害的。有兴趣的读者可移步《<a href="http://www.jianshu.com/p/f9e7513a471b" target="_blank" rel="external">李园乱楚</a>》。</p>
+<h1 id="信陵君"><a href="#信陵君" class="headerlink" title="信陵君"></a>信陵君</h1><p>魏公子无忌，是魏昭王的小儿子、魏安厘王的异母弟弟。昭王去世后，安厘王即位，封公子为信陵君。 </p>
+<p>四公子均以礼贤下士和贤德闻名天下，信陵君自然不会例外。可惜国君安厘王嫉贤妒能，不能重用。当时秦国如狼似虎，意在东方，韩赵魏本应齐心合力抗击秦国，却也是各怀鬼胎。 </p>
+<p>长平战后，秦国围攻赵国都城邯郸，赵国向魏国求救，魏国大将晋鄙十万大军却在魏王授意下按兵不动。平原君赵胜找到魏无忌，希望能帮忙说服魏王出兵。可惜魏王畏惧秦国，始终不肯。无奈的魏公子只好带领门客家兵，打算以死相搏。 </p>
+<p>此时，之前礼贤下士的成果终于显现。老人侯赢献策，可求魏王的宠妃如姬偷出魏王的兵符。信陵君有恩于如姬，顺利盗得兵符。公子无忌携力士朱亥同赴大营，击杀晋鄙，发晋鄙十万大军，终于解了赵国之围。赵国免于灭国，秦国则无法继续攻打魏国，国家安危自然化解，同时也因此巩固了魏国在山东诸国的威望。 </p>
+<p>这便是历史上著名的窃符救赵的故事。 </p>
+<p>表面上，魏无忌欺骗国君，击杀大将，实属重罪。然而，当正常的劝谏无法达成目的时，为了国家存亡的大义，不惜以身犯险，甚至出逃赵国，却可当得起“行大义不拘小节”。窃符救赵这件事，对当时战略环境影响巨大。信陵君以国家利益为重、个人生死荣辱为轻，太史公也借汉高祖的事迹，对信陵君的“贤”给予了极高评价。 </p>
+<p>信陵君礼贤下士，急人之困，政治上具备清醒的战略眼光，军事上两次大破秦军，并有《魏公子兵法》流传后世。可惜却始终受到魏安厘王猜忌而无法委以重任。其成功之处显而易见，尤其在发现和任用人才方面，当为后世楷模。</p>
+<p>信陵君失意的重要原因，个人认为，是没有清醒认识到国君嫉贤妒能的本性，锋芒太露。在这方面，后世另一位贤臣张良，则可作为楷模。 </p>
+<p>晚年的信陵君沉溺酒色，前243年郁郁而终。十八年后，秦灭魏。</p>
+<!-- links -->
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;今天来八一八战国四公子，他们是：信陵君魏无忌，孟尝君田文，平原君赵胜，春申君黄歇。&lt;/p&gt;
+&lt;p&gt;这几个人其实并非完全处于同一时代。说到时代，先得弄清楚战国的时间界定。一般从定义上来说，战国时期指&lt;strong&gt;前&lt;/strong&gt;475年到前221年这段历史时期。&lt;/p&gt;
+&lt;p&gt;221年是秦统一天下的时间，作为结束时间没有太大争议。但是作为春秋战国分界的几个代表性历史事件并没有发生在475年。它们分别是：田氏代齐（481年），三家分晋（458年），周天子承认韩赵魏（403年），周天子承认田齐（386年）。之所以将475年作为分界，只是为了记述方便，以周元王元年为记。&lt;/p&gt;
+&lt;p&gt;信陵君出生年不明，除此外，几个人的情况大体是这个样子：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;所属&lt;/th&gt;
+&lt;th style=&quot;text-align:right&quot;&gt;生卒&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;信陵君&lt;/td&gt;
+&lt;td&gt;魏国&lt;/td&gt;
+&lt;td style=&quot;text-align:right&quot;&gt;???-前243&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;+&lt;/td&gt;
+&lt;td&gt;+&lt;/td&gt;
+&lt;td&gt;+&lt;/td&gt;
+&lt;td&gt;+&lt;/td&gt;
+&lt;td&gt;+&lt;/td&gt;
+&lt;td&gt;+&lt;/td&gt;
+&lt;td&gt;+&lt;/td&gt;
+&lt;td&gt;+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;孟尝君&lt;/td&gt;
+&lt;td&gt;齐国&lt;/td&gt;
+&lt;td style=&quot;text-align:right&quot;&gt;前344-前279&lt;/td&gt;
+&lt;td&gt;+&lt;/td&gt;
+&lt;td&gt;+&lt;/td&gt;
+&lt;td&gt;+&lt;/td&gt;
+&lt;td&gt;+&lt;/td&gt;
+&lt;td&gt;+&lt;/td&gt;
+&lt;td&gt;+&lt;/td&gt;
+&lt;td&gt;+&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;平原君&lt;/td&gt;
+&lt;td&gt;赵国&lt;/td&gt;
+&lt;td style=&quot;text-align:right&quot;&gt;前308-前251&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;+&lt;/td&gt;
+&lt;td&gt;+&lt;/td&gt;
+&lt;td&gt;+&lt;/td&gt;
+&lt;td&gt;+&lt;/td&gt;
+&lt;td&gt;+&lt;/td&gt;
+&lt;td&gt;+&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;春申君&lt;/td&gt;
+&lt;td&gt;楚国&lt;/td&gt;
+&lt;td style=&quot;text-align:right&quot;&gt;前314-前238&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;+&lt;/td&gt;
+&lt;td&gt;+&lt;/td&gt;
+&lt;td&gt;+&lt;/td&gt;
+&lt;td&gt;+&lt;/td&gt;
+&lt;td&gt;+&lt;/td&gt;
+&lt;td&gt;+&lt;/td&gt;
+&lt;td&gt;+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;从上表看出，孟尝君活跃年代稍早，其他三公子真正在政治上有交集的，大约应该有40年左右的时间。在这期间，秦国正是昭襄王在位时期。秦昭襄王为秦国奠定了扎实的基础，再经三世，由嬴政一统天下。&lt;/p&gt;
+&lt;p&gt;下面挨个介绍下他们四位。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="老猫读史" scheme="http://www.catxn.net/categories/%E8%80%81%E7%8C%AB%E8%AF%BB%E5%8F%B2/"/>
+    
+    
+      <category term="历史" scheme="http://www.catxn.net/tags/%E5%8E%86%E5%8F%B2/"/>
+    
+      <category term="春秋战国" scheme="http://www.catxn.net/tags/%E6%98%A5%E7%A7%8B%E6%88%98%E5%9B%BD/"/>
+    
+      <category term="四公子" scheme="http://www.catxn.net/tags/%E5%9B%9B%E5%85%AC%E5%AD%90/"/>
     
   </entry>
   
