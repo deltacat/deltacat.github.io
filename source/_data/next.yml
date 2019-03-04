@@ -1,0 +1,341 @@
+# ---------------------------------------------------------------
+# Theme Core Configuration Settings
+# ---------------------------------------------------------------
+
+# If false, merge configs from `_data/next.yml` into default configuration (rewrite).
+# If true, will fully override default configuration by options from `_data/next.yml` (override). Only for NexT settings.
+# And if true, all config from default NexT `_config.yml` must be copied into `next.yml`. Use if you know what you are doing.
+# Useful if you want to comment some options from NexT `_config.yml` by `next.yml` without editing default config.
+override: false
+
+favicon:
+  small: images/author.png
+  medium: images/author.png
+  apple_touch_icon: images/author.png
+  safari_pinned_tab: images/author.png
+
+footer:
+  # Specify the date when the site was setup.
+  # If not defined, current year will be used.
+  #since: 2015
+
+  # Icon between year and copyright info.
+  icon:
+    # Icon name in fontawesome, see: https://fontawesome.com/v4.7.0/icons/
+    # `heart` is recommended with animation in red (#ff0000).
+    name: heart
+    # If you want to animate the icon, set it to true.
+    animated: true
+    # Change the color of icon, using Hex Code.
+    color: "#ff0000"
+
+  # If not defined, `author` from Hexo main config will be used.
+  copyright:
+  # -------------------------------------------------------------
+  powered:
+    # Hexo link (Powered by Hexo).
+    enable: true
+    # Version info of Hexo after Hexo link (vX.X.X).
+    version: true
+
+  theme:
+    # Theme & scheme info link (Theme - NexT.scheme).
+    enable: true
+    # Version info of NexT after scheme info (vX.X.X).
+    version: true
+  # -------------------------------------------------------------
+  # Beian icp information for Chinese users. In China, every legal website should have a beian icp in website footer.
+  # http://www.miitbeian.gov.cn
+  beian:
+    enable: false
+    icp:
+
+  # -------------------------------------------------------------
+  # Any custom text can be defined here.
+  #custom_text: Hosted by <a href="https://pages.coding.me" class="theme-link" rel="noopener" target="_blank">Coding Pages</a>
+
+# Creative Commons 4.0 International License.
+# See: https://creativecommons.org/share-your-work/licensing-types-examples
+# Available values of license: by | by-nc | by-nc-nd | by-nc-sa | by-nd | by-sa | zero
+# You can set a language value if you prefer a translated version of CC license.
+# CC licenses are available in 39 languages, where you can find the specific and correct abbreviation you need.
+# Valid values of language: deed.zh, deed.fr, deed.de , etc.
+creative_commons:
+  license: by-nc-nd
+  sidebar: false
+  post: true
+  language: deed.zh
+
+
+# ---------------------------------------------------------------
+# SEO Settings
+# ---------------------------------------------------------------
+
+# Canonical, set a canonical link tag in your hexo, you could use it for your SEO of blog.
+# See: https://support.google.com/webmasters/answer/139066
+# Tips: Before you open this tag, remember set up your URL in hexo _config.yml (e.g. url: http://yourdomain.com)
+canonical: true
+
+# Change headers hierarchy on site-subtitle (will be main site description) and on all post / page titles for better SEO-optimization.
+seo: true
+
+# If true, will add site-subtitle to index page, added in main hexo config.
+# subtitle: Subtitle
+index_with_subtitle: true
+
+# Automatically add external URL with BASE64 encrypt & decrypt.
+exturl: false
+
+
+# ---------------------------------------------------------------
+# Menu Settings
+# ---------------------------------------------------------------
+
+# When running the site in a subdirectory (e.g. domain.tld/blog), remove the leading slash from link value (/archives -> archives).
+# Usage: `Key: /link/ || icon`
+# Key is the name of menu item. If the translation for this item is available, the translated text will be loaded, otherwise the Key name will be used. Key is case-senstive.
+# Value before `||` delimeter is the target link.
+# Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, question icon will be loaded.
+# External url should start with http:// or https://
+menu:
+  home: / || home
+  about: /about/ || user
+  tags: /tags/ || tags
+  categories: /categories/ || th
+  archives: /archives/ || archive
+  #schedule: /schedule/ || calendar
+  #sitemap: /sitemap.xml || sitemap
+  #commonweal: /404/ || heartbeat
+
+# Enable/Disable menu icons / item badges.
+menu_settings:
+  icons: true
+  badges: true
+
+
+# ---------------------------------------------------------------
+# Scheme Settings
+# ---------------------------------------------------------------
+
+# Schemes
+# scheme: Muse
+#scheme: Mist
+scheme: Pisces
+#scheme: Gemini
+
+
+# ---------------------------------------------------------------
+# Sidebar Settings
+# ---------------------------------------------------------------
+
+# Posts / Categories / Tags in sidebar.
+site_state: true
+
+# Social Links
+# Usage: `Key: permalink || icon`
+# Key is the link label showing to end users.
+# Value before `||` delimeter is the target permalink.
+# Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, globe icon will be loaded.
+social:
+  GitHub: https://github.com/deltacat || github
+  #E-Mail: mailto:yourname@gmail.com || envelope
+  Weibo: http://weibo.com/deltacat || weibo
+  #Google: https://plus.google.com/yourname || google
+  #Twitter: https://twitter.com/yourname || twitter
+  #FB Page: https://www.facebook.com/yourname || facebook
+  #VK Group: https://vk.com/yourname || vk
+  #StackOverflow: https://stackoverflow.com/yourname || stack-overflow
+  #YouTube: https://youtube.com/yourname || youtube
+  #Instagram: https://instagram.com/yourname || instagram
+  #Skype: skype:yourname?call|chat || skype
+  简书: http://www.jianshu.com/u/HS379k || edit
+  知乎: http://www.zhihu.com/people/deltacat || question-circle
+
+social_icons:
+  enable: true
+  icons_only: false
+  transition: false
+
+# Follow me on GitHub banner in right-top corner.
+# Usage: `permalink || title`
+# Value before `||` delimeter is the target permalink.
+# Value after `||` delimeter is the title and aria-label name.
+#github_banner: https://github.com/yourname || Follow me on GitHub
+
+# Blog rolls
+links_icon: link
+links_title: 友情链接
+# links_layout: block
+links_layout: inline
+links:
+  宗布科技: http://www.zongbutech.com
+  同芯资本: http://www.tongxinvc.com
+  尼禄软件: http://www.nero.com
+  Jason: http://atjason.com
+  # 我在博客园: http://www.cnblogs.com/deltacat
+  # 我在新浪博客: http://blog.sina.com.cn/deltacatcn
+  # wopus站长工具: http://tool.wopus.org
+
+
+# Sidebar Avatar
+avatar:
+  # In theme directory (source/images): /images/avatar.gif
+  # In site directory (source/uploads): /uploads/avatar.gif
+  # You can also use other linking images.
+  url: /images/author.png
+  # If true, the avatar would be dispalyed in circle.
+  rounded: true
+  # The value of opacity should be choose from 0 to 1 to set the opacity of the avatar.
+  opacity: 1
+  # If true, the avatar would be rotated with the cursor.
+  rotated: true
+
+# Table Of Contents in the Sidebar
+toc:
+  enable: true
+  # Automatically add list number to toc.
+  number: true
+  # If true, all words will placed on next lines if header width longer then sidebar width.
+  wrap: false
+  # Maximum heading depth of generated toc. You can set it in one post through `toc_max_depth` in Front Matter.
+  max_depth: 6
+
+# Wechat Subscriber
+wechat_subscriber:
+  enabled: true
+  qcode: /images/qrcode_for_gh_wildcat.jpg 
+  description: 扫码关注我的公众号，不定期原创推送
+
+# Reward
+# If true, reward would be displayed in every article by default.
+# You can show or hide reward in a specific article throuth `reward: true | false` in Front Matter.
+reward:
+  enable: false
+  #comment: Donate comment here
+  #wechatpay: /images/wechatpay.jpg
+  #alipay: /images/alipay.jpg
+  #bitcoin: /images/bitcoin.jpg
+
+
+# ---------------------------------------------------------------
+# Misc Theme Settings
+# ---------------------------------------------------------------
+
+# Disable Baidu tranformation on mobile devices.
+disable_baidu_tranformation: false
+
+# Reduce padding / margin indents on devices with narrow width.
+mobile_layout_economy: false
+
+# Android Chrome header panel color ($brand-bg / $headband-bg => $black-deep).
+android_chrome_color: "#222"
+
+# Custom Logo
+# Do not support Scheme Mist currently.
+# Options:
+#   enabled: If true, will enable custom logo
+#   image: Images's url, e.g. /uploads/custom-logo.jpg
+custom_logo:
+  enabled: false
+  image:
+
+# Code Highlight theme
+# Available values: normal | night | night eighties | night blue | night bright
+# https://github.com/chriskempson/tomorrow-theme
+highlight_theme: normal
+
+# Enable "cheers" for archive page.
+cheers_enabled: true
+
+
+# ---------------------------------------------------------------
+# Font Settings. Introduced in NexT v5.0.1.
+# Find fonts on Google Fonts (https://www.google.com/fonts)
+# All fonts set here will have the following styles:
+#   light, light italic, normal, normal italic, bold, bold italic
+# Be aware that setting too much fonts will cause site running slowly
+# ---------------------------------------------------------------
+# To avoid space between header and sidebar in scheme Pisces / Gemini, Web Safe fonts are recommended for `global` (and `logo`):
+# Arial | Tahoma | Helvetica | Times New Roman | Courier New | Verdana | Georgia | Palatino | Garamond | Comic Sans MS | Trebuchet MS
+# ---------------------------------------------------------------
+font:
+  enable: true
+
+  # Uri of fonts host, e.g. //fonts.googleapis.com (Default).
+  host: //fonts.useso.com
+
+  # Font options:
+  # `external: true` will load this font family from `host` above.
+  # `family: Times New Roman`. Without any quotes.
+  # `size: xx`. Use `px` as unit.
+
+  # Global font settings used for all elements in <body>.
+  global:
+    external: true
+    family: Monda
+    size:
+
+  # Font settings for Headlines (H1, H2, H3, H4, H5, H6).
+  # Fallback to `global` font settings.
+  headings:
+    external: true
+    family: Roboto Slab
+    size:
+
+  # Font settings for posts.
+  # Fallback to `global` font settings.
+  posts:
+    external: true
+    family:
+
+  # Font settings for Logo.
+  # Fallback to `global` font settings.
+  logo:
+    external: true
+    family:
+    size:
+
+  # Font settings for <code> and code blocks.
+  codes:
+    external: true
+    family:
+    size:
+
+# ---------------------------------------------------------------
+# Tags Settings
+# ---------------------------------------------------------------
+
+# See: https://theme-next.org/docs/tag-plugins/
+# Note tag (bs-callout)
+note:
+  # Note tag style values:
+  #  - simple    bs-callout old alert style. Default.
+  #  - modern    bs-callout new (v2-v3) alert style.
+  #  - flat      flat callout style with background, like on Mozilla or StackOverflow.
+  #  - disabled  disable all CSS styles import of note tag.
+  style: simple
+  icons: false
+  border_radius: 3
+  # Offset lighter of background in % for modern and flat styles (modern: -12 | 12; flat: -18 | 6).
+  # Offset also applied to label tag variables. This option can work with disabled note tag.
+  light_bg_offset: 0
+
+# Label tag
+label: true
+
+# Tabs tag
+tabs:
+  enable: true
+  transition:
+    tabs: false
+    labels: true
+  border_radius: 0
+
+# ---------------------------------------------------------------
+# Third Party Services Settings
+# ---------------------------------------------------------------
+
+# Google Analytics
+google_analytics:
+  tracking_id: UA-7388145-4
+  localhost_ignored: true
