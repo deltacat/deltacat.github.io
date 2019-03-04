@@ -1,20 +1,25 @@
-<!doctype html>
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
 
 
 
   
 
 
-<html class="theme-next pisces use-motion" lang="zh-Hans">
+<html class="theme-next pisces use-motion" lang="zh-CN">
 <head>
   <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222"/>
 
 
 
@@ -30,9 +35,10 @@
 
 
 
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
 
 
 
@@ -64,7 +70,7 @@
   
     
     
-    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="//fonts.useso.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext"/>
   
 
 
@@ -72,53 +78,40 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2"/>
 
-<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="catxn, 三角猫, deltacat, 宗布, Hexo, NexT" />
+<link rel="stylesheet" href="/css/main.css?v=7.0.1"/>
 
 
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/author.png?v=7.0.1">
 
 
-
-  <link rel="alternate" href="/atom.xml" title="夜猫阿罗哈" type="application/atom+xml" />
-
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/author.png?v=7.0.1">
 
 
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/author.png?v=7.0.1">
 
-  <link rel="shortcut icon" type="image/x-icon" href="/images/author.png?v=5.1.0" />
+
+  <link rel="mask-icon" href="/images/author.png?v=7.0.1" color="#222">
 
 
 
 
 
 
-<meta name="description" content="三角猫的个人博客。内容包括软件开发技术，项目管理，以及历史故事">
-<meta property="og:type" content="website">
-<meta property="og:title" content="夜猫阿罗哈">
-<meta property="og:url" content="http://www.catxn.net/page/5/index.html">
-<meta property="og:site_name" content="夜猫阿罗哈">
-<meta property="og:description" content="三角猫的个人博客。内容包括软件开发技术，项目管理，以及历史故事">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="夜猫阿罗哈">
-<meta name="twitter:description" content="三角猫的个人博客。内容包括软件开发技术，项目管理，以及历史故事">
 
-
-
-<script type="text/javascript" id="hexo.configurations">
+<script id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
     scheme: 'Pisces',
-    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
-    fancybox: true,
-    motion: true,
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
+    version: '7.0.1',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false,"dimmer":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     algolia: {
       applicationID: '',
       apiKey: '',
@@ -130,32 +123,54 @@
 </script>
 
 
-
-  <link rel="canonical" href="http://www.catxn.net/page/5/"/>
-
-
-
-
-
-  <title> 夜猫阿罗哈 </title>
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
-
   
 
 
 
 
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-7388145-4', 'auto');
-  ga('send', 'pageview');
+  <meta name="description" content="个人博客。内容包括软件开发技术，项目管理，以及历史故事">
+<meta property="og:type" content="website">
+<meta property="og:title" content="夜猫阿罗哈">
+<meta property="og:url" content="http://www.catxn.net/page/5/index.html">
+<meta property="og:site_name" content="夜猫阿罗哈">
+<meta property="og:description" content="个人博客。内容包括软件开发技术，项目管理，以及历史故事">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="夜猫阿罗哈">
+<meta name="twitter:description" content="个人博客。内容包括软件开发技术，项目管理，以及历史故事">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="夜猫阿罗哈" type="application/atom+xml"/>
+
+
+
+
+  <link rel="canonical" href="http://www.catxn.net/page/5/"/>
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
 </script>
 
+  <title>夜猫阿罗哈 – 暮然回首萧瑟处，也无风雨也无晴</title>
+  
+
+
+
+
+  <script async src="//www.googletagmanager.com/gtag/js?id=[object Object]"></script>
+  <script>
+    var host = window.location.hostname;
+    if (host !== "localhost" || !true) {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-7388145-4');
+    }
+  </script>
 
 
 
@@ -165,6 +180,34 @@
 
 
 
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -172,29 +215,31 @@
   
 
   <div class="container sidebar-position-left 
-   page-home 
- ">
+  page-home">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
+  <div class="site-meta">
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">夜猫阿罗哈</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
+    
       
-        <p class="site-subtitle">暮然回首萧瑟处，也无风雨也无晴</p>
+        <h1 class="site-subtitle" itemprop="description">暮然回首萧瑟处，也无风雨也无晴</h1>
       
+    
+    
   </div>
 
   <div class="site-nav-toggle">
-    <button>
+    <button aria-label="切换导航栏">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -202,65 +247,113 @@
   </div>
 </div>
 
-<nav class="site-nav">
-  
 
+
+<nav class="site-nav">
   
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-categories">
-          <a href="/categories" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            分类
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            关于
-          </a>
-        </li>
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
       
+    
+
+    
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br/>首页</a>
+
+  </li>
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
       
+    
+
+    
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>归档<span class="badge">73</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br/>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签<span class="badge">70</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类<span class="badge">8</span></a>
+
+  </li>
 
       
+      
     </ul>
+  
+
   
 
   
@@ -268,12 +361,23 @@
 
 
 
- </div>
+  
+
+
+
+</div>
     </header>
+
+    
+
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
+            
+
+          
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
@@ -286,17 +390,23 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://www.catxn.net/posts/2014/管理-开发人员在没有开发项目的时候如何安排/">
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.catxn.net/posts/2014/管理-开发人员在没有开发项目的时候如何安排/"/>
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="三角猫">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/author.png">
+      <meta itemprop="name" content="猫老师"/>
+      <meta itemprop="description" content="个人博客。内容包括软件开发技术，项目管理，以及历史故事"/>
+      <meta itemprop="image" content="/images/author.png"/>
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="夜猫阿罗哈">
+      <meta itemprop="name" content="夜猫阿罗哈"/>
     </span>
 
     
@@ -304,21 +414,22 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/posts/2014/管理-开发人员在没有开发项目的时候如何安排/" itemprop="url">
-                  开发人员在没有开发项目的时候如何安排
-                </a>
+                
+                <a href="/posts/2014/管理-开发人员在没有开发项目的时候如何安排/" class="post-title-link" itemprop="url">开发人员在没有开发项目的时候如何安排</a>
               
             
-          </h1>
+          </h2>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -326,18 +437,35 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2014-08-09T15:56:18+08:00">
-                2014-08-09
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2014-08-09 15:56:18" itemprop="dateCreated datePublished" datetime="2014-08-09T15:56:18+08:00">2014-08-09</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2015-04-01 20:25:34" itemprop="dateModified" datetime="2015-04-01T20:25:34+08:00">2015-04-01</time>
+              
             
           </span>
 
           
-            <span class="post-category" >
+            <span class="post-category">
             
               <span class="post-meta-divider">|</span>
             
@@ -348,11 +476,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/管理微言/" itemprop="url" rel="index">
-                    <span itemprop="name">管理微言</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/管理微言/" itemprop="url" rel="index"><span itemprop="name">管理微言</span></a></span>
 
                 
                 
@@ -361,6 +485,7 @@
           
 
           
+            
             
           
 
@@ -377,7 +502,9 @@
       </header>
     
 
-
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
@@ -417,17 +544,20 @@
       
     </div>
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
+    
+    
 
-    <div>
+    
+
+    
       
-    </div>
+    
+    
+
+    
 
     <footer class="post-footer">
       
@@ -441,6 +571,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -453,17 +587,23 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://www.catxn.net/posts/2014/时间管理之吐槽/">
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.catxn.net/posts/2014/时间管理之吐槽/"/>
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="三角猫">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/author.png">
+      <meta itemprop="name" content="猫老师"/>
+      <meta itemprop="description" content="个人博客。内容包括软件开发技术，项目管理，以及历史故事"/>
+      <meta itemprop="image" content="/images/author.png"/>
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="夜猫阿罗哈">
+      <meta itemprop="name" content="夜猫阿罗哈"/>
     </span>
 
     
@@ -471,21 +611,22 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/posts/2014/时间管理之吐槽/" itemprop="url">
-                  时间管理之吐槽
-                </a>
+                
+                <a href="/posts/2014/时间管理之吐槽/" class="post-title-link" itemprop="url">时间管理之吐槽</a>
               
             
-          </h1>
+          </h2>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -493,18 +634,35 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2014-06-10T13:05:02+08:00">
-                2014-06-10
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2014-06-10 13:05:02" itemprop="dateCreated datePublished" datetime="2014-06-10T13:05:02+08:00">2014-06-10</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2015-04-01 20:25:34" itemprop="dateModified" datetime="2015-04-01T20:25:34+08:00">2015-04-01</time>
+              
             
           </span>
 
           
-            <span class="post-category" >
+            <span class="post-category">
             
               <span class="post-meta-divider">|</span>
             
@@ -515,11 +673,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/管理微言/" itemprop="url" rel="index">
-                    <span itemprop="name">管理微言</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/管理微言/" itemprop="url" rel="index"><span itemprop="name">管理微言</span></a></span>
 
                 
                 
@@ -528,6 +682,7 @@
           
 
           
+            
             
           
 
@@ -544,7 +699,9 @@
       </header>
     
 
-
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
@@ -556,27 +713,32 @@
 <p>好吧，也许时间管理方法在一定程度上真的对拖延症有一些作用，不过时间管理绝对不是为了拖延症而诞生的。很多没有拖延症的人，也因为没有具备良好的时间管理方法，而被大堆的事务搞得焦头烂额。</p>
 <p><strong>那么，时间管理是什么？能做什么？</strong><br>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/posts/2014/时间管理之吐槽/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/posts/2014/时间管理之吐槽/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
           <!--/noindex-->
         
       
     </div>
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
+    
+    
 
-    <div>
+    
+
+    
       
-    </div>
+    
+    
+
+    
 
     <footer class="post-footer">
       
@@ -590,6 +752,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -602,17 +768,23 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://www.catxn.net/posts/2013/setup-aws-3/">
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.catxn.net/posts/2013/setup-aws-3/"/>
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="三角猫">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/author.png">
+      <meta itemprop="name" content="猫老师"/>
+      <meta itemprop="description" content="个人博客。内容包括软件开发技术，项目管理，以及历史故事"/>
+      <meta itemprop="image" content="/images/author.png"/>
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="夜猫阿罗哈">
+      <meta itemprop="name" content="夜猫阿罗哈"/>
     </span>
 
     
@@ -620,21 +792,22 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/posts/2013/setup-aws-3/" itemprop="url">
-                  在 Amazon AWS 搭建及部署网站：（三）开发及部署环境
-                </a>
+                
+                <a href="/posts/2013/setup-aws-3/" class="post-title-link" itemprop="url">在 Amazon AWS 搭建及部署网站：（三）开发及部署环境</a>
               
             
-          </h1>
+          </h2>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -642,18 +815,35 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2013-09-01T17:40:15+08:00">
-                2013-09-01
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2013-09-01 17:40:15" itemprop="dateCreated datePublished" datetime="2013-09-01T17:40:15+08:00">2013-09-01</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2015-04-01 20:25:34" itemprop="dateModified" datetime="2015-04-01T20:25:34+08:00">2015-04-01</time>
+              
             
           </span>
 
           
-            <span class="post-category" >
+            <span class="post-category">
             
               <span class="post-meta-divider">|</span>
             
@@ -664,11 +854,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/建站心得/" itemprop="url" rel="index">
-                    <span itemprop="name">建站心得</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/建站心得/" itemprop="url" rel="index"><span itemprop="name">建站心得</span></a></span>
 
                 
                 
@@ -677,6 +863,7 @@
           
 
           
+            
             
           
 
@@ -693,7 +880,9 @@
       </header>
     
 
-
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
@@ -714,27 +903,32 @@
 <p>svn –version</p>
 </blockquote>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/posts/2013/setup-aws-3/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/posts/2013/setup-aws-3/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
           <!--/noindex-->
         
       
     </div>
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
+    
+    
 
-    <div>
+    
+
+    
       
-    </div>
+    
+    
+
+    
 
     <footer class="post-footer">
       
@@ -748,6 +942,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -760,17 +958,23 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://www.catxn.net/posts/2013/setup-aws-2/">
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.catxn.net/posts/2013/setup-aws-2/"/>
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="三角猫">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/author.png">
+      <meta itemprop="name" content="猫老师"/>
+      <meta itemprop="description" content="个人博客。内容包括软件开发技术，项目管理，以及历史故事"/>
+      <meta itemprop="image" content="/images/author.png"/>
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="夜猫阿罗哈">
+      <meta itemprop="name" content="夜猫阿罗哈"/>
     </span>
 
     
@@ -778,21 +982,22 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/posts/2013/setup-aws-2/" itemprop="url">
-                  在 Amazon AWS 搭建及部署网站：（二）安装、配置软件，启动网站
-                </a>
+                
+                <a href="/posts/2013/setup-aws-2/" class="post-title-link" itemprop="url">在 Amazon AWS 搭建及部署网站：（二）安装、配置软件，启动网站</a>
               
             
-          </h1>
+          </h2>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -800,18 +1005,35 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2013-09-01T16:18:39+08:00">
-                2013-09-01
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2013-09-01 16:18:39" itemprop="dateCreated datePublished" datetime="2013-09-01T16:18:39+08:00">2013-09-01</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-03-03 19:34:29" itemprop="dateModified" datetime="2019-03-03T19:34:29+08:00">2019-03-03</time>
+              
             
           </span>
 
           
-            <span class="post-category" >
+            <span class="post-category">
             
               <span class="post-meta-divider">|</span>
             
@@ -822,11 +1044,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/建站心得/" itemprop="url" rel="index">
-                    <span itemprop="name">建站心得</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/建站心得/" itemprop="url" rel="index"><span itemprop="name">建站心得</span></a></span>
 
                 
                 
@@ -835,6 +1053,7 @@
           
 
           
+            
             
           
 
@@ -851,7 +1070,9 @@
       </header>
     
 
-
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
@@ -866,27 +1087,32 @@
 <p>填写好后，点击Login，第一次回弹出一个确认窗，是否接受认证信息，点击确认，一切正常的话登陆成功后左侧导航栏会出现 “New terminal console”, “New SFTP Window”。点击 new terminal console，熟悉的Linux终端提示符就出现了。后面所有的命令行操作均在这里进行。</p>
 <p><a href="http://calebogden.com/wordpress-on-linux-in-the-amazon-cloud-with-mac">这篇文章</a>中提到了如何直接以root身份登录。实际上，所有的操作均可用sudo命令来执行。如果不需要用SFTP向系统文件中上传文件，没有理由直接root登录。后面会介绍用SVN部署代码的方法，除了一些特殊情况，SFTP基本上不怎么需要了。</p>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/posts/2013/setup-aws-2/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/posts/2013/setup-aws-2/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
           <!--/noindex-->
         
       
     </div>
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
+    
+    
 
-    <div>
+    
+
+    
       
-    </div>
+    
+    
+
+    
 
     <footer class="post-footer">
       
@@ -900,6 +1126,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -912,17 +1142,23 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://www.catxn.net/posts/2013/setup-aws-1/">
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.catxn.net/posts/2013/setup-aws-1/"/>
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="三角猫">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/author.png">
+      <meta itemprop="name" content="猫老师"/>
+      <meta itemprop="description" content="个人博客。内容包括软件开发技术，项目管理，以及历史故事"/>
+      <meta itemprop="image" content="/images/author.png"/>
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="夜猫阿罗哈">
+      <meta itemprop="name" content="夜猫阿罗哈"/>
     </span>
 
     
@@ -930,21 +1166,22 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/posts/2013/setup-aws-1/" itemprop="url">
-                  在 Amazon AWS 搭建及部署网站：（一）申请、设置 AWS 服务
-                </a>
+                
+                <a href="/posts/2013/setup-aws-1/" class="post-title-link" itemprop="url">在 Amazon AWS 搭建及部署网站：（一）申请、设置 AWS 服务</a>
               
             
-          </h1>
+          </h2>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -952,18 +1189,35 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2013-09-01T15:41:13+08:00">
-                2013-09-01
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2013-09-01 15:41:13" itemprop="dateCreated datePublished" datetime="2013-09-01T15:41:13+08:00">2013-09-01</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-03-03 19:34:29" itemprop="dateModified" datetime="2019-03-03T19:34:29+08:00">2019-03-03</time>
+              
             
           </span>
 
           
-            <span class="post-category" >
+            <span class="post-category">
             
               <span class="post-meta-divider">|</span>
             
@@ -974,11 +1228,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/建站心得/" itemprop="url" rel="index">
-                    <span itemprop="name">建站心得</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/建站心得/" itemprop="url" rel="index"><span itemprop="name">建站心得</span></a></span>
 
                 
                 
@@ -987,6 +1237,7 @@
           
 
           
+            
             
           
 
@@ -1003,7 +1254,9 @@
       </header>
     
 
-
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
@@ -1023,27 +1276,32 @@
 <p>然后开通 AWS 服务：打开页面 <a href="https://aws.amazon.com/cn/free/">亚马逊新手套餐</a> ，点击“免费试用”，跟随向导注册服务。所有的个人信息按照真实信息填写即可，中间会验证手机，验证信用卡。验证手机会收到一个英文电话，根据提示输入验证码，注册向导会自动继续。信用卡验证过程中会有一笔1美元左右的扣款，理论上会在最终账单中退还。注意你的信用卡必须是有效期内，在一年免费期结束后，如果继续使用，会按照选择的付费方案进行支付。如果免费期结束不想继续使用，关闭所有服务即可，不会产生任何额外费用。</p>
 <p>注册过程如果有选择付费方案（定价模型），请选择“按需付费”。大意就是，用多少付多少，不用就不付。对于实验性质尝试，这种方案很合适。</p>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/posts/2013/setup-aws-1/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/posts/2013/setup-aws-1/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
           <!--/noindex-->
         
       
     </div>
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
+    
+    
 
-    <div>
+    
+
+    
       
-    </div>
+    
+    
+
+    
 
     <footer class="post-footer">
       
@@ -1057,6 +1315,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -1069,17 +1331,23 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://www.catxn.net/posts/2013/setup-aws-0/">
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.catxn.net/posts/2013/setup-aws-0/"/>
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="三角猫">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/author.png">
+      <meta itemprop="name" content="猫老师"/>
+      <meta itemprop="description" content="个人博客。内容包括软件开发技术，项目管理，以及历史故事"/>
+      <meta itemprop="image" content="/images/author.png"/>
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="夜猫阿罗哈">
+      <meta itemprop="name" content="夜猫阿罗哈"/>
     </span>
 
     
@@ -1087,21 +1355,22 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/posts/2013/setup-aws-0/" itemprop="url">
-                  在 Amazon AWS 搭建及部署网站：序
-                </a>
+                
+                <a href="/posts/2013/setup-aws-0/" class="post-title-link" itemprop="url">在 Amazon AWS 搭建及部署网站：序</a>
               
             
-          </h1>
+          </h2>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -1109,18 +1378,35 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2013-08-30T13:36:45+08:00">
-                2013-08-30
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2013-08-30 13:36:45" itemprop="dateCreated datePublished" datetime="2013-08-30T13:36:45+08:00">2013-08-30</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2015-04-01 20:25:34" itemprop="dateModified" datetime="2015-04-01T20:25:34+08:00">2015-04-01</time>
+              
             
           </span>
 
           
-            <span class="post-category" >
+            <span class="post-category">
             
               <span class="post-meta-divider">|</span>
             
@@ -1131,11 +1417,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/建站心得/" itemprop="url" rel="index">
-                    <span itemprop="name">建站心得</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/建站心得/" itemprop="url" rel="index"><span itemprop="name">建站心得</span></a></span>
 
                 
                 
@@ -1144,6 +1426,7 @@
           
 
           
+            
             
           
 
@@ -1160,7 +1443,9 @@
       </header>
     
 
-
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
@@ -1171,27 +1456,32 @@
           <p>最近玩了把 AWS，实现了服务器的创建、PHP+MySql运行环境、代码部署等。一方面，后面的项目会反复重复这个流程，需要一份手册，另一方面，也给自己一个记录。于是把整个过程和要点整理一下，发到自己的博客。</p>
 <p>主要用到的服务、技术、术语先列个清单：</p>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/posts/2013/setup-aws-0/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/posts/2013/setup-aws-0/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
           <!--/noindex-->
         
       
     </div>
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
+    
+    
 
-    <div>
+    
+
+    
       
-    </div>
+    
+    
+
+    
 
     <footer class="post-footer">
       
@@ -1205,6 +1495,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -1217,17 +1511,23 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://www.catxn.net/posts/2013/读史-读史：侠客行，聂政/">
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.catxn.net/posts/2013/读史-读史：侠客行，聂政/"/>
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="三角猫">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/author.png">
+      <meta itemprop="name" content="猫老师"/>
+      <meta itemprop="description" content="个人博客。内容包括软件开发技术，项目管理，以及历史故事"/>
+      <meta itemprop="image" content="/images/author.png"/>
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="夜猫阿罗哈">
+      <meta itemprop="name" content="夜猫阿罗哈"/>
     </span>
 
     
@@ -1235,21 +1535,22 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/posts/2013/读史-读史：侠客行，聂政/" itemprop="url">
-                  读史：侠客行，聂政
-                </a>
+                
+                <a href="/posts/2013/读史-读史：侠客行，聂政/" class="post-title-link" itemprop="url">读史：侠客行，聂政</a>
               
             
-          </h1>
+          </h2>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -1257,18 +1558,35 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2013-08-10T11:19:54+08:00">
-                2013-08-10
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2013-08-10 11:19:54" itemprop="dateCreated datePublished" datetime="2013-08-10T11:19:54+08:00">2013-08-10</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2015-04-01 20:25:34" itemprop="dateModified" datetime="2015-04-01T20:25:34+08:00">2015-04-01</time>
+              
             
           </span>
 
           
-            <span class="post-category" >
+            <span class="post-category">
             
               <span class="post-meta-divider">|</span>
             
@@ -1279,11 +1597,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/老猫读史/" itemprop="url" rel="index">
-                    <span itemprop="name">老猫读史</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/老猫读史/" itemprop="url" rel="index"><span itemprop="name">老猫读史</span></a></span>
 
                 
                 
@@ -1292,6 +1606,7 @@
           
 
           
+            
             
           
 
@@ -1308,7 +1623,9 @@
       </header>
     
 
-
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
@@ -1324,27 +1641,32 @@
 <p>严仲子路过齐国，听人说有个牛人叫聂政的。这里很不解，不是默默无闻在杀猪么，怎么会让人知道呢？此处先不追究。总之，严仲子不知怎么判断，聂政就是能替他报仇的，于是三顾茅庐，又是恭维又是送钱的。聂政深以为知己，从那时就暗暗决心要以死以报。不过老母还在世，当先尽孝。严仲子虽然不爽，不过也不能表现得不痛快。孝心最大，你不爽人家孝心，还怎么以大义相托？</p>
 <p>聂政母亲百年之后。“既已葬，除服。”，去找严仲子，说之前不答应，是因为老母尚在，现在母亲去世，服丧已毕，可以以身相报。严仲子要差遣武士随行，聂政此处的表现绝非山野村夫。他跟严仲子讲，韩国离这里不远，跑去刺杀人家相国，相国又是国君的亲戚，当秘密从事，人越少越好。于是一个人就去了。太史公写到这里，用一句话言简意赅概括了整个刺杀过程。我所喜欢的“仗剑直入”也出自此处。</p>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/posts/2013/读史-读史：侠客行，聂政/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/posts/2013/读史-读史：侠客行，聂政/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
           <!--/noindex-->
         
       
     </div>
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
+    
+    
 
-    <div>
+    
+
+    
       
-    </div>
+    
+    
+
+    
 
     <footer class="post-footer">
       
@@ -1358,6 +1680,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -1370,17 +1696,23 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://www.catxn.net/posts/2011/几篇学习WPF的必读文章/">
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.catxn.net/posts/2011/几篇学习WPF的必读文章/"/>
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="三角猫">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/author.png">
+      <meta itemprop="name" content="猫老师"/>
+      <meta itemprop="description" content="个人博客。内容包括软件开发技术，项目管理，以及历史故事"/>
+      <meta itemprop="image" content="/images/author.png"/>
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="夜猫阿罗哈">
+      <meta itemprop="name" content="夜猫阿罗哈"/>
     </span>
 
     
@@ -1388,21 +1720,22 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/posts/2011/几篇学习WPF的必读文章/" itemprop="url">
-                  几篇学习WPF的必读文章
-                </a>
+                
+                <a href="/posts/2011/几篇学习WPF的必读文章/" class="post-title-link" itemprop="url">几篇学习WPF的必读文章</a>
               
             
-          </h1>
+          </h2>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -1410,18 +1743,35 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2011-12-12T17:35:31+08:00">
-                2011-12-12
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2011-12-12 17:35:31" itemprop="dateCreated datePublished" datetime="2011-12-12T17:35:31+08:00">2011-12-12</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2015-04-01 20:25:34" itemprop="dateModified" datetime="2015-04-01T20:25:34+08:00">2015-04-01</time>
+              
             
           </span>
 
           
-            <span class="post-category" >
+            <span class="post-category">
             
               <span class="post-meta-divider">|</span>
             
@@ -1432,11 +1782,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/软件开发/" itemprop="url" rel="index">
-                    <span itemprop="name">软件开发</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/软件开发/" itemprop="url" rel="index"><span itemprop="name">软件开发</span></a></span>
 
                 
                 
@@ -1445,6 +1791,7 @@
           
 
           
+            
             
           
 
@@ -1461,7 +1808,9 @@
       </header>
     
 
-
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
@@ -1471,27 +1820,32 @@
         
           <p>这几天在培训新人，从以前的笔记中找了几篇文章让她看。顺便在这里也记录一下。<br>有空要做一下系统性的整理，弄个教程啥的，这样再有新人就省事了。</p>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/posts/2011/几篇学习WPF的必读文章/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/posts/2011/几篇学习WPF的必读文章/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
           <!--/noindex-->
         
       
     </div>
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
+    
+    
 
-    <div>
+    
+
+    
       
-    </div>
+    
+    
+
+    
 
     <footer class="post-footer">
       
@@ -1505,6 +1859,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -1517,17 +1875,23 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://www.catxn.net/posts/2011/管理-九大知识领域和五大过程组/">
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.catxn.net/posts/2011/管理-九大知识领域和五大过程组/"/>
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="三角猫">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/author.png">
+      <meta itemprop="name" content="猫老师"/>
+      <meta itemprop="description" content="个人博客。内容包括软件开发技术，项目管理，以及历史故事"/>
+      <meta itemprop="image" content="/images/author.png"/>
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="夜猫阿罗哈">
+      <meta itemprop="name" content="夜猫阿罗哈"/>
     </span>
 
     
@@ -1535,21 +1899,22 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/posts/2011/管理-九大知识领域和五大过程组/" itemprop="url">
-                  九大知识领域和五大过程组
-                </a>
+                
+                <a href="/posts/2011/管理-九大知识领域和五大过程组/" class="post-title-link" itemprop="url">九大知识领域和五大过程组</a>
               
             
-          </h1>
+          </h2>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -1557,18 +1922,35 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2011-12-12T16:47:54+08:00">
-                2011-12-12
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2011-12-12 16:47:54" itemprop="dateCreated datePublished" datetime="2011-12-12T16:47:54+08:00">2011-12-12</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2016-06-06 20:14:12" itemprop="dateModified" datetime="2016-06-06T20:14:12+08:00">2016-06-06</time>
+              
             
           </span>
 
           
-            <span class="post-category" >
+            <span class="post-category">
             
               <span class="post-meta-divider">|</span>
             
@@ -1579,11 +1961,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/管理微言/" itemprop="url" rel="index">
-                    <span itemprop="name">管理微言</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/管理微言/" itemprop="url" rel="index"><span itemprop="name">管理微言</span></a></span>
 
                 
                 
@@ -1592,6 +1970,7 @@
           
 
           
+            
             
           
 
@@ -1608,7 +1987,9 @@
       </header>
     
 
-
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
@@ -1618,27 +1999,32 @@
         
           <p>为便于记忆，制作了一份表格，用于对照九大知识领域和五大过程组。<br>第一列是输入输出，第二列是过程组到知识领域的映射。</p>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/posts/2011/管理-九大知识领域和五大过程组/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/posts/2011/管理-九大知识领域和五大过程组/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
           <!--/noindex-->
         
       
     </div>
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
+    
+    
 
-    <div>
+    
+
+    
       
-    </div>
+    
+    
+
+    
 
     <footer class="post-footer">
       
@@ -1652,6 +2038,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -1664,17 +2054,23 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://www.catxn.net/posts/2011/PMP考试结束/">
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.catxn.net/posts/2011/PMP考试结束/"/>
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="三角猫">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/author.png">
+      <meta itemprop="name" content="猫老师"/>
+      <meta itemprop="description" content="个人博客。内容包括软件开发技术，项目管理，以及历史故事"/>
+      <meta itemprop="image" content="/images/author.png"/>
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="夜猫阿罗哈">
+      <meta itemprop="name" content="夜猫阿罗哈"/>
     </span>
 
     
@@ -1682,21 +2078,22 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/posts/2011/PMP考试结束/" itemprop="url">
-                  PMP 考试结束
-                </a>
+                
+                <a href="/posts/2011/PMP考试结束/" class="post-title-link" itemprop="url">PMP 考试结束</a>
               
             
-          </h1>
+          </h2>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -1704,18 +2101,35 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2011-12-12T15:29:28+08:00">
-                2011-12-12
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2011-12-12 15:29:28" itemprop="dateCreated datePublished" datetime="2011-12-12T15:29:28+08:00">2011-12-12</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-03-03 19:34:29" itemprop="dateModified" datetime="2019-03-03T19:34:29+08:00">2019-03-03</time>
+              
             
           </span>
 
           
-            <span class="post-category" >
+            <span class="post-category">
             
               <span class="post-meta-divider">|</span>
             
@@ -1726,11 +2140,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/流水账/" itemprop="url" rel="index">
-                    <span itemprop="name">流水账</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/流水账/" itemprop="url" rel="index"><span itemprop="name">流水账</span></a></span>
 
                 
                 
@@ -1739,6 +2149,7 @@
           
 
           
+            
             
           
 
@@ -1755,7 +2166,9 @@
       </header>
     
 
-
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
@@ -1765,27 +2178,32 @@
         
           <p>周末终于结束了PMP考试。</p>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/posts/2011/PMP考试结束/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/posts/2011/PMP考试结束/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
           <!--/noindex-->
         
       
     </div>
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
+    
+    
 
-    <div>
+    
+
+    
       
-    </div>
+    
+    
+
+    
 
     <footer class="post-footer">
       
@@ -1799,6 +2217,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -1807,15 +2229,12 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/6/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/6/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
 
           </div>
-          
-
-
           
 
         </div>
@@ -1837,157 +2256,320 @@
 
       
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="/images/author.png"
-               alt="三角猫" />
-          <p class="site-author-name" itemprop="name">三角猫</p>
-           
-              <p class="site-description motion-element" itemprop="description">三角猫的个人博客。内容包括软件开发技术，项目管理，以及历史故事</p>
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/author.png"
+                alt="猫老师"/>
+            
+              <p class="site-author-name" itemprop="name">猫老师</p>
+              <div class="site-description motion-element" itemprop="description">个人博客。内容包括软件开发技术，项目管理，以及历史故事</div>
+          </div>
+
           
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">73</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">67</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/deltacat" title="GitHub &rarr; https://github.com/deltacat" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="http://weibo.com/deltacat" title="Weibo &rarr; http://weibo.com/deltacat" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="http://www.jianshu.com/u/HS379k" title="简书 &rarr; http://www.jianshu.com/u/HS379k" rel="noopener" target="_blank"><i class="fa fa-fw fa-edit"></i>简书</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="http://www.zhihu.com/people/deltacat" title="知乎 &rarr; http://www.zhihu.com/people/deltacat" rel="noopener" target="_blank"><i class="fa fa-fw fa-question-circle"></i>知乎</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友情链接
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.zongbutech.com" title="http://www.zongbutech.com" rel="noopener" target="_blank">宗布科技</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.tongxinvc.com" title="http://www.tongxinvc.com" rel="noopener" target="_blank">同芯资本</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.nero.com" title="http://www.nero.com" rel="noopener" target="_blank">尼禄软件</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://atjason.com" title="http://atjason.com" rel="noopener" target="_blank">Jason</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+            
+          
+          
+
         </div>
-        <nav class="site-state motion-element">
-
-          
-            <div class="site-state-item site-state-posts">
-              <a href="/archives">
-                <span class="site-state-item-count">73</span>
-                <span class="site-state-item-name">日志</span>
-              </a>
-            </div>
-          
-
-          
-            
-            
-            <div class="site-state-item site-state-categories">
-              <a href="/categories/index.html">
-                <span class="site-state-item-count">8</span>
-                <span class="site-state-item-name">分类</span>
-              </a>
-            </div>
-          
-
-          
-            
-            
-            <div class="site-state-item site-state-tags">
-              <a href="/tags/index.html">
-                <span class="site-state-item-count">70</span>
-                <span class="site-state-item-name">标签</span>
-              </a>
-            </div>
-          
-
-        </nav>
-
-        
-          <div class="feed-link motion-element">
-            <a href="/atom.xml" rel="alternate">
-              <i class="fa fa-rss"></i>
-              RSS
-            </a>
-          </div>
-        
-
-        <div class="links-of-author motion-element">
-          
-            
-              <span class="links-of-author-item">
-                <a href="http://www.jianshu.com/u/HS379k" target="_blank" title="简书">
-                  
-                    <i class="fa fa-fw fa-globe"></i>
-                  
-                  简书
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="https://github.com/deltacat" target="_blank" title="GitHub">
-                  
-                    <i class="fa fa-fw fa-github"></i>
-                  
-                  GitHub
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="http://weibo.com/deltacat" target="_blank" title="微博">
-                  
-                    <i class="fa fa-fw fa-weibo"></i>
-                  
-                  微博
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="http://douban.com/people/deltacat" target="_blank" title="豆瓣">
-                  
-                    <i class="fa fa-fw fa-globe"></i>
-                  
-                  豆瓣
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="http://www.zhihu.com/people/deltacat" target="_blank" title="知乎">
-                  
-                    <i class="fa fa-fw fa-globe"></i>
-                  
-                  知乎
-                </a>
-              </span>
-            
-          
-        </div>
-
-        
-        
-          <div class="cc-license motion-element" itemprop="license">
-            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
-              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
-            </a>
-          </div>
-        
-
-        
-        
-          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
-            <div class="links-of-blogroll-title">
-              <i class="fa  fa-fw fa-globe"></i>
-              友情链接
-            </div>
-            <ul class="links-of-blogroll-list">
-              
-                <li class="links-of-blogroll-item">
-                  <a href="http://www.zongbutech.com" title="宗布科技" target="_blank">宗布科技</a>
-                </li>
-              
-                <li class="links-of-blogroll-item">
-                  <a href="http://www.tongxinvc.com" title="同芯资本" target="_blank">同芯资本</a>
-                </li>
-              
-                <li class="links-of-blogroll-item">
-                  <a href="http://www.nero.com" title="尼禄软件" target="_blank">尼禄软件</a>
-                </li>
-              
-                <li class="links-of-blogroll-item">
-                  <a href="http://atjason.com" title="Jason" target="_blank">Jason</a>
-                </li>
-              
-                <li class="links-of-blogroll-item">
-                  <a href="http://tool.wopus.org" title="wopus站长工具" target="_blank">wopus站长工具</a>
-                </li>
-              
-            </ul>
-          </div>
-        
-
-        
-
-
-      </section>
+      </div>
 
       
 
@@ -1995,6 +2577,7 @@
 
     </div>
   </aside>
+  
 
 
         
@@ -2003,30 +2586,39 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy;  2009 - 
-  <span itemprop="copyrightYear">2019</span>
-  <span class="with-love">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">三角猫</span>
+  <span class="author" itemprop="copyrightHolder">猫老师</span>
+
+  
+
+  
 </div>
 
 
-<div class="powered-by">
-  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
-</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.2.2</div>
 
-<div class="theme-info">
-  主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Pisces
-  </a>
-</div>
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.0.1</div>
+
+
 
 
         
+
+
+
+
+
+
+
 
         
       </div>
@@ -2039,11 +2631,16 @@
       </div>
     
 
+    
+
+    
+
+    
   </div>
 
   
 
-<script type="text/javascript">
+<script>
   if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
     window.Promise = null;
   }
@@ -2057,86 +2654,13 @@
 
 
 
-  
 
 
 
 
 
 
-  
-  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
 
-  
-  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
-
-
-
-  
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
-
-
-
-  
-
-
-  
-
-
-
-
-	
-
-
-
-
-
-  
-    
-    <script>
-      var cloudTieConfig = {
-        url: document.location.href, 
-        sourceId: "",
-        productKey: "6fbea43cdd99462aac26795cf3b4c5f4",
-        target: "cloud-tie-wrapper"
-      };
-    </script>
-    <script src="https://img1.ws.126.net/f2e/tie/yun/sdk/loader.js"></script>
-  
 
 
 
@@ -2148,10 +2672,69 @@
 
 
   
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=7.0.1"></script>
+
+  <script src="/js/src/motion.js?v=7.0.1"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/src/affix.js?v=7.0.1"></script>
+
+  <script src="/js/src/schemes/pisces.js?v=7.0.1"></script>
+
+
+
+  
+
+  
+
+
+  <script src="/js/src/next-boot.js?v=7.0.1"></script>
+
+
+  
+  
+
+
+
+  
 
 
 
 
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
 
   
 
