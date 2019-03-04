@@ -5,11 +5,11 @@
 # Site
 title: 夜猫阿罗哈
 subtitle: 暮然回首萧瑟处，也无风雨也无晴
-description: 个人博客。内容包括软件开发技术，项目管理，以及历史故事
+description: 猫老师的个人博客：少儿编程，K12 STEAM 教育，软件开发，项目管理，历史故事等
 author: 猫老师
 language: zh-CN
 timezone: 
-keywords: 猫老师少儿编程,少儿编程,编程,K12,STEAM,STEM,JavaScript,NodeJs,历史
+keywords: 猫老师少儿编程,少儿编程,编程,K12,STEAM,STEM,JavaScript,NodeJs,历史,PMP
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
