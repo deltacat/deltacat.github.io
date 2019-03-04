@@ -203,8 +203,11 @@ toc:
 # Wechat Subscriber
 wechat_subscriber:
   enabled: true
-  qcode: /images/qrcode_for_gh_wildcat.jpg 
-  description: 扫码关注我的公众号，不定期原创推送
+  # qcode: /images/qrcode_for_gh_wildcat.jpg 
+  # description: 扫码关注我的公众号，不定期原创推送
+  # qcode: /images/qrcode_mls_banner.png
+  qcode: /images/qrcode_for_gh_maols.jpg
+  description: 扫码关注，获取少儿编程最新资讯
 
 # Reward
 # If true, reward would be displayed in every article by default.
