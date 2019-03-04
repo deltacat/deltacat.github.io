@@ -9,6 +9,7 @@ description: 个人博客。内容包括软件开发技术，项目管理，以�
 author: 猫老师
 language: zh-CN
 timezone: 
+keywords: 猫老师少儿编程,少儿编程,编程,K12,STEAM,STEM,JavaScript,NodeJs,历史
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
@@ -43,7 +44,7 @@ highlight:
   tab_replace:
 
 # Category & Tag
-default_category: uncategorized
+default_category: 杂项
 category_map:
 tag_map:
 
@@ -65,6 +66,13 @@ pagination_dir: page
 theme: next
 stylus:
   compress: true
+
+# SEO
+
+sitemap:
+  path: sitemap.xml
+baidusitemap:
+  path: baidusitemap.xml
 
 # plugins: 
 # - hexo-generator-feed
