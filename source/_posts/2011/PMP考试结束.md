@@ -1,8 +1,7 @@
 title: "PMP 考试结束"
 date: 2011-12-12 15:29:28
 tags: [管理, 项目管理, 流水账, 职业生涯]
-id: 122
-categories:  流水账
+
 ---
 
 周末终于结束了PMP考试。
@@ -24,3 +23,4 @@ categories:  流水账
 [![IT项目管理](http://static.catxn.zongbutech.com/images/book_it_pm_6.jpg-o)](http://www.amazon.cn/IT%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86-%E5%87%AF%E8%A5%BF%C2%B7%E6%96%BD%E7%93%A6%E5%B0%94%E8%B4%9D/dp/B004HW7ZEQ/)接下来，2月之前的任务，完整阅读 Kathy Schwalbe 的《IT项目管理》。这本书比PMBOK看起来有意思多了。读的时候再做做笔记吧。
 
 对于在IT行业做项目管理的同学来说，这本书很值得一读，推荐。
+
