@@ -15,11 +15,11 @@
 
 
 <html class="theme-next pisces use-motion" lang="zh-CN">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
-<meta name="theme-color" content="#222"/>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
 
 
 
@@ -70,7 +70,7 @@
   
     
     
-    <link rel="stylesheet" href="//fonts.useso.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext"/>
+    <link rel="stylesheet" href="//fonts.useso.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext">
   
 
 
@@ -78,9 +78,9 @@
 
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2"/>
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
 
-<link rel="stylesheet" href="/css/main.css?v=7.0.1"/>
+<link rel="stylesheet" href="/css/main.css?v=7.0.1">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/author.png?v=7.0.1">
@@ -128,31 +128,27 @@
 
 
 
-  <meta name="description" content="出于某些原因，需要将Wordpress站点的某篇文章或者某个页面临时重定向到另一个地址。有现成插件可以使用，太重；当然也可以给需要转向的页面加JS代码实现，这种方法又不够方便也不够优雅。
-于是用简码（shortcode）来实现。用一小段代码给站点增加一个新的用于转向的简码，那么每次在需要转向的页面或文章中，只要加入这么一句话，即可轻松转向：
-1[my_redirect url=&amp;quot;http">
+  <meta name="description" content="出于某些原因，需要将Wordpress站点的某篇文章或者某个页面临时重定向到另一个地址。有现成插件可以使用，太重；当然也可以给需要转向的页面加JS代码实现，这种方法又不够方便也不够优雅。 于是用简码（shortcode）来实现。用一小段代码给站点增加一个新的用于转向的简码，那么每次在需要转向的页面或文章中，只要加入这么一句话，即可轻松转向： 1[my_redirect url=&amp;quot;http">
+<meta name="keywords" content="建站,wordpress,php">
 <meta property="og:type" content="article">
 <meta property="og:title" content="一行代码在wordpress任意页面实现重定向">
 <meta property="og:url" content="http://www.catxn.net/posts/2016/wordpress-shortcode-redirect/index.html">
 <meta property="og:site_name" content="夜猫阿罗哈">
-<meta property="og:description" content="出于某些原因，需要将Wordpress站点的某篇文章或者某个页面临时重定向到另一个地址。有现成插件可以使用，太重；当然也可以给需要转向的页面加JS代码实现，这种方法又不够方便也不够优雅。
-于是用简码（shortcode）来实现。用一小段代码给站点增加一个新的用于转向的简码，那么每次在需要转向的页面或文章中，只要加入这么一句话，即可轻松转向：
-1[my_redirect url=&amp;quot;http">
+<meta property="og:description" content="出于某些原因，需要将Wordpress站点的某篇文章或者某个页面临时重定向到另一个地址。有现成插件可以使用，太重；当然也可以给需要转向的页面加JS代码实现，这种方法又不够方便也不够优雅。 于是用简码（shortcode）来实现。用一小段代码给站点增加一个新的用于转向的简码，那么每次在需要转向的页面或文章中，只要加入这么一句话，即可轻松转向： 1[my_redirect url=&amp;quot;http">
+<meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2016-06-15T09:06:55.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="一行代码在wordpress任意页面实现重定向">
-<meta name="twitter:description" content="出于某些原因，需要将Wordpress站点的某篇文章或者某个页面临时重定向到另一个地址。有现成插件可以使用，太重；当然也可以给需要转向的页面加JS代码实现，这种方法又不够方便也不够优雅。
-于是用简码（shortcode）来实现。用一小段代码给站点增加一个新的用于转向的简码，那么每次在需要转向的页面或文章中，只要加入这么一句话，即可轻松转向：
-1[my_redirect url=&amp;quot;http">
+<meta name="twitter:description" content="出于某些原因，需要将Wordpress站点的某篇文章或者某个页面临时重定向到另一个地址。有现成插件可以使用，太重；当然也可以给需要转向的页面加JS代码实现，这种方法又不够方便也不够优雅。 于是用简码（shortcode）来实现。用一小段代码给站点增加一个新的用于转向的简码，那么每次在需要转向的页面或文章中，只要加入这么一句话，即可轻松转向： 1[my_redirect url=&amp;quot;http">
 
 
 
-  <link rel="alternate" href="/atom.xml" title="夜猫阿罗哈" type="application/atom+xml"/>
+  <link rel="alternate" href="/atom.xml" title="夜猫阿罗哈" type="application/atom+xml">
 
 
 
 
-  <link rel="canonical" href="http://www.catxn.net/posts/2016/wordpress-shortcode-redirect/"/>
+  <link rel="canonical" href="http://www.catxn.net/posts/2016/wordpress-shortcode-redirect/">
 
 
 
@@ -275,7 +271,7 @@
       
     
 
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br/>首页</a>
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
 
   </li>
         
@@ -294,7 +290,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>归档<span class="badge">73</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">75</span></a>
 
   </li>
         
@@ -313,7 +309,7 @@
       
     
 
-    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br/>关于</a>
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
 
   </li>
         
@@ -332,7 +328,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签<span class="badge">70</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">72</span></a>
 
   </li>
         
@@ -351,7 +347,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类<span class="badge">8</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">8</span></a>
 
   </li>
 
@@ -403,16 +399,16 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.catxn.net/posts/2016/wordpress-shortcode-redirect/"/>
+    <link itemprop="mainEntityOfPage" href="http://www.catxn.net/posts/2016/wordpress-shortcode-redirect/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="猫老师"/>
-      <meta itemprop="description" content="个人博客。内容包括软件开发技术，项目管理，以及历史故事"/>
-      <meta itemprop="image" content="/images/author.png"/>
+      <meta itemprop="name" content="猫老师">
+      <meta itemprop="description" content="个人博客。内容包括软件开发技术，项目管理，以及历史故事">
+      <meta itemprop="image" content="/images/author.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="夜猫阿罗哈"/>
+      <meta itemprop="name" content="夜猫阿罗哈">
     </span>
 
     
@@ -505,13 +501,13 @@
       
         <p>出于某些原因，需要将Wordpress站点的某篇文章或者某个页面临时重定向到另一个地址。<br>有现成插件可以使用，太重；当然也可以给需要转向的页面加JS代码实现，这种方法又不够方便也不够优雅。</p>
 <p>于是用简码（shortcode）来实现。用一小段代码给站点增加一个新的用于转向的简码，那么每次在需要转向的页面或文章中，只要加入这么一句话，即可轻松转向：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[my_redirect url=&quot;http://www.example.com&quot;]</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[my_redirect url=&quot;http://www.example.com&quot;]</span><br></pre></td></tr></table></figure>
 <h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><p>先贴代码</p>
 <a id="more"></a>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 1. 重定向简码实现</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">my_redirect_shortcode</span><span class="params">($params)</span> </span>&#123;</div><div class="line">    <span class="comment">// 提取参数</span></div><div class="line">    extract(shortcode_atts(<span class="keyword">array</span>(</div><div class="line">	      <span class="string">'url'</span> =&gt; <span class="string">'/'</span>,</div><div class="line">	    ), $params));</div><div class="line"></div><div class="line">	 <span class="comment">// 功能实现</span></div><div class="line">    header(<span class="string">'Location: '</span>.$url);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 2. 简码注册函数</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">my_add_shortcodes</span><span class="params">()</span> </span>&#123;</div><div class="line">    add_shortcode( <span class="string">'my-redirect'</span>, <span class="string">'my_redirect_shortcode'</span> );</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 3. 在初始化时注册简码</span></div><div class="line">add_action( <span class="string">'init'</span>, <span class="string">'my_add_shortcodes'</span> );</div></pre></td></tr></table></figure>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1. 重定向简码实现</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">my_redirect_shortcode</span><span class="params">($params)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 提取参数</span></span><br><span class="line">    extract(shortcode_atts(<span class="keyword">array</span>(</span><br><span class="line">	      <span class="string">'url'</span> =&gt; <span class="string">'/'</span>,</span><br><span class="line">	    ), $params));</span><br><span class="line"></span><br><span class="line">	 <span class="comment">// 功能实现</span></span><br><span class="line">    header(<span class="string">'Location: '</span>.$url);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 2. 简码注册函数</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">my_add_shortcodes</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    add_shortcode( <span class="string">'my-redirect'</span>, <span class="string">'my_redirect_shortcode'</span> );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 3. 在初始化时注册简码</span></span><br><span class="line">add_action( <span class="string">'init'</span>, <span class="string">'my_add_shortcodes'</span> );</span><br></pre></td></tr></table></figure>
 <p>将以上代码加入主题的functions.php即可。当然，我的做法是使用子主题，然后在子主题的functions.php中加入自定义代码以避免主题升级时丢失修改。</p>
 <h2 id="Wordpress-简码介绍"><a href="#Wordpress-简码介绍" class="headerlink" title="Wordpress 简码介绍"></a>Wordpress 简码介绍</h2><p>Wordpress 从2.5版开始引入简码功能。该功能简单说就是给一段PHP代码加上名字，然后在页面通过这个名字触发服务端代码执行。调用时的用法与BBCode非常相似。</p>
-<p>Wordpress <a href="https://codex.wordpress.org/Shortcode" target="_blank" rel="external">内置了很多有用的简码</a>，同时提供了<a href="https://codex.wordpress.org/Shortcode_API" target="_blank" rel="external">自定义简码的API</a>。</p>
+<p>Wordpress <a href="https://codex.wordpress.org/Shortcode" target="_blank" rel="noopener">内置了很多有用的简码</a>，同时提供了<a href="https://codex.wordpress.org/Shortcode_API" target="_blank" rel="noopener">自定义简码的API</a>。</p>
 <p>上面功能的实现就是基于自定义简码API，稍作解释如下。</p>
 <p>生成一个简码三个步骤：</p>
 <ol>
@@ -522,17 +518,17 @@
 <p>这里面主要是简码函数的实现。该函数接受两个参数，第一个参数是简码参数，在我们这里就是url。函数实现部分调用WP函数extract来提取参数并赋缺省值。</p>
 <p>我这里实现的只使用了一个参数，实际上简码接受第二个参数<code>$content</code>，这个参数的用法如下</p>
 <p>PHP部分</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">my_shortcode</span><span class="params">($params, $content=<span class="string">'defaut content'</span>)</span> </span>&#123;</div><div class="line">    <span class="comment">// 提取参数</span></div><div class="line">    extract(shortcode_atts(<span class="keyword">array</span>(</div><div class="line">	      <span class="string">'url'</span> =&gt; <span class="string">'/'</span>,</div><div class="line">	    ), $params));</div><div class="line">	 </div><div class="line">	 <span class="comment">// 用params干点啥</span></div><div class="line">	 <span class="comment">// ...</span></div><div class="line">	 </div><div class="line">	 <span class="comment">// 用content干点啥</span></div><div class="line">	 <span class="comment">// ...</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">my_shortcode</span><span class="params">($params, $content=<span class="string">'defaut content'</span>)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 提取参数</span></span><br><span class="line">    extract(shortcode_atts(<span class="keyword">array</span>(</span><br><span class="line">	      <span class="string">'url'</span> =&gt; <span class="string">'/'</span>,</span><br><span class="line">	    ), $params));</span><br><span class="line">	 </span><br><span class="line">	 <span class="comment">// 用params干点啥</span></span><br><span class="line">	 <span class="comment">// ...</span></span><br><span class="line">	 </span><br><span class="line">	 <span class="comment">// 用content干点啥</span></span><br><span class="line">	 <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>页面调用</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[my_code param="param"]my_content[/my_code]</div></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[my_code param="param"]my_content[/my_code]</span><br></pre></td></tr></table></figure>
 <h2 id="简码插件推荐"><a href="#简码插件推荐" class="headerlink" title="简码插件推荐"></a>简码插件推荐</h2><p>这里推荐两个很好用的插件: </p>
 <ul>
-<li><a href="https://wordpress.org/plugins/magee-shortcodes/" target="_blank" rel="external">Magee Shortcodes</a></li>
-<li><a href="https://wordpress.org/plugins/shortcodes-ultimate/" target="_blank" rel="external">Shortcodes Ultimate</a></li>
+<li><a href="https://wordpress.org/plugins/magee-shortcodes/" target="_blank" rel="noopener">Magee Shortcodes</a></li>
+<li><a href="https://wordpress.org/plugins/shortcodes-ultimate/" target="_blank" rel="noopener">Shortcodes Ultimate</a></li>
 </ul>
 <p>前一个很多主题都依赖，基于Bootstrap提供了一组HTML5/CSS3排版的简码<br>后一个提供很多非常有用的简码，同时它还有一个强大的功能就是“自定义简码”。嗯，有它就不需要去收工编辑functions.php了。XD</p>
 <h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><ul>
-<li><a href="https://codex.wordpress.org/Category:Shortcodes" target="_blank" rel="external">Wordpress Shortcode</a></li>
+<li><a href="https://codex.wordpress.org/Category:Shortcodes" target="_blank" rel="noopener">Wordpress Shortcode</a></li>
 </ul>
 
       
@@ -547,7 +543,7 @@
     
       <div>
         <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center;">
-  <img id="wechat_subscriber_qcode" src="/images/qrcode_for_gh_wildcat.jpg" alt="猫老师 wechat" style="width: 200px; max-width: 100%;"/>
+  <img id="wechat_subscriber_qcode" src="/images/qrcode_for_gh_wildcat.jpg" alt="猫老师 wechat" style="width: 200px; max-width: 100%;">
   <div>扫码关注我的公众号，不定期原创推送</div>
 </div>
 
@@ -676,9 +672,7 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image"
-                src="/images/author.png"
-                alt="猫老师"/>
+              <img class="site-author-image" itemprop="image" src="/images/author.png" alt="猫老师">
             
               <p class="site-author-name" itemprop="name">猫老师</p>
               <div class="site-description motion-element" itemprop="description">个人博客。内容包括软件开发技术，项目管理，以及历史故事</div>
@@ -691,7 +685,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">73</span>
+                    <span class="site-state-item-count">75</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -881,7 +875,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">67</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">69</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1031,7 +1029,7 @@
 </div>
 
 
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.2.2</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
 
 
 

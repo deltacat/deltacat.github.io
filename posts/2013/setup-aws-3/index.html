@@ -15,11 +15,11 @@
 
 
 <html class="theme-next pisces use-motion" lang="zh-CN">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
-<meta name="theme-color" content="#222"/>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
 
 
 
@@ -70,7 +70,7 @@
   
     
     
-    <link rel="stylesheet" href="//fonts.useso.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext"/>
+    <link rel="stylesheet" href="//fonts.useso.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext">
   
 
 
@@ -78,9 +78,9 @@
 
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2"/>
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
 
-<link rel="stylesheet" href="/css/main.css?v=7.0.1"/>
+<link rel="stylesheet" href="/css/main.css?v=7.0.1">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/author.png?v=7.0.1">
@@ -128,34 +128,27 @@
 
 
 
-  <meta name="description" content="服务器已经搭建好，网站也开始运行了。那么如何方便地部署代码呢？
-最基本的方式，就是使用 SFTP 向网站目录直接部署。这种方法的缺点是版本控制不便，在上传时也无法方便的比较代码变化。
-用SVN来部署是一个很好的选择。SVN 本身是一个服务，我的选择是使用 Apache 的 SVN 模块来访问，不必单独启用SVN服务。
-第一步：确保 Apache 正确安装和配置详情参见前文，这里假定 Apache">
+  <meta name="description" content="服务器已经搭建好，网站也开始运行了。那么如何方便地部署代码呢？ 最基本的方式，就是使用 SFTP 向网站目录直接部署。这种方法的缺点是版本控制不便，在上传时也无法方便的比较代码变化。 用SVN来部署是一个很好的选择。SVN 本身是一个服务，我的选择是使用 Apache 的 SVN 模块来访问，不必单独启用SVN服务。 第一步：确保 Apache 正确安装和配置详情参见前文，这里假定 Apache">
+<meta name="keywords" content="建站,aws">
 <meta property="og:type" content="article">
 <meta property="og:title" content="在 Amazon AWS 搭建及部署网站：（三）开发及部署环境">
 <meta property="og:url" content="http://www.catxn.net/posts/2013/setup-aws-3/index.html">
 <meta property="og:site_name" content="夜猫阿罗哈">
-<meta property="og:description" content="服务器已经搭建好，网站也开始运行了。那么如何方便地部署代码呢？
-最基本的方式，就是使用 SFTP 向网站目录直接部署。这种方法的缺点是版本控制不便，在上传时也无法方便的比较代码变化。
-用SVN来部署是一个很好的选择。SVN 本身是一个服务，我的选择是使用 Apache 的 SVN 模块来访问，不必单独启用SVN服务。
-第一步：确保 Apache 正确安装和配置详情参见前文，这里假定 Apache">
+<meta property="og:description" content="服务器已经搭建好，网站也开始运行了。那么如何方便地部署代码呢？ 最基本的方式，就是使用 SFTP 向网站目录直接部署。这种方法的缺点是版本控制不便，在上传时也无法方便的比较代码变化。 用SVN来部署是一个很好的选择。SVN 本身是一个服务，我的选择是使用 Apache 的 SVN 模块来访问，不必单独启用SVN服务。 第一步：确保 Apache 正确安装和配置详情参见前文，这里假定 Apache">
+<meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2015-04-01T12:25:34.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="在 Amazon AWS 搭建及部署网站：（三）开发及部署环境">
-<meta name="twitter:description" content="服务器已经搭建好，网站也开始运行了。那么如何方便地部署代码呢？
-最基本的方式，就是使用 SFTP 向网站目录直接部署。这种方法的缺点是版本控制不便，在上传时也无法方便的比较代码变化。
-用SVN来部署是一个很好的选择。SVN 本身是一个服务，我的选择是使用 Apache 的 SVN 模块来访问，不必单独启用SVN服务。
-第一步：确保 Apache 正确安装和配置详情参见前文，这里假定 Apache">
+<meta name="twitter:description" content="服务器已经搭建好，网站也开始运行了。那么如何方便地部署代码呢？ 最基本的方式，就是使用 SFTP 向网站目录直接部署。这种方法的缺点是版本控制不便，在上传时也无法方便的比较代码变化。 用SVN来部署是一个很好的选择。SVN 本身是一个服务，我的选择是使用 Apache 的 SVN 模块来访问，不必单独启用SVN服务。 第一步：确保 Apache 正确安装和配置详情参见前文，这里假定 Apache">
 
 
 
-  <link rel="alternate" href="/atom.xml" title="夜猫阿罗哈" type="application/atom+xml"/>
+  <link rel="alternate" href="/atom.xml" title="夜猫阿罗哈" type="application/atom+xml">
 
 
 
 
-  <link rel="canonical" href="http://www.catxn.net/posts/2013/setup-aws-3/"/>
+  <link rel="canonical" href="http://www.catxn.net/posts/2013/setup-aws-3/">
 
 
 
@@ -278,7 +271,7 @@
       
     
 
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br/>首页</a>
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
 
   </li>
         
@@ -297,7 +290,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>归档<span class="badge">73</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">75</span></a>
 
   </li>
         
@@ -316,7 +309,7 @@
       
     
 
-    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br/>关于</a>
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
 
   </li>
         
@@ -335,7 +328,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签<span class="badge">70</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">72</span></a>
 
   </li>
         
@@ -354,7 +347,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类<span class="badge">8</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">8</span></a>
 
   </li>
 
@@ -406,16 +399,16 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.catxn.net/posts/2013/setup-aws-3/"/>
+    <link itemprop="mainEntityOfPage" href="http://www.catxn.net/posts/2013/setup-aws-3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="猫老师"/>
-      <meta itemprop="description" content="个人博客。内容包括软件开发技术，项目管理，以及历史故事"/>
-      <meta itemprop="image" content="/images/author.png"/>
+      <meta itemprop="name" content="猫老师">
+      <meta itemprop="description" content="个人博客。内容包括软件开发技术，项目管理，以及历史故事">
+      <meta itemprop="image" content="/images/author.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="夜猫阿罗哈"/>
+      <meta itemprop="name" content="夜猫阿罗哈">
     </span>
 
     
@@ -543,7 +536,7 @@
 <p>&lt;/Location&gt;</p>
 </blockquote>
 <p>这一行：<br>SVNParentPath /var/www/svn<br>改成：<br>SVNPath /var/www/svn/repos<br>“/var/www/svn/repos”是你SVN库的存放位置，可根据情况修改。</p>
-<p>&lt;Location /repos&gt;表示在url地址是 <a href="http://&lt;hostname&gt;/repos" target="_blank" rel="external">http://&lt;hostname&gt;/repos</a> 时访问的就是库 /var/www/svn/repos 。<br>AuthUserFile /etc/svn-auth-conf指明了svn帐户文件是/etc/svn-auth-conf 。</p>
+<p>&lt;Location /repos&gt;表示在url地址是 http://&lt;hostname&gt;/repos 时访问的就是库 /var/www/svn/repos 。<br>AuthUserFile /etc/svn-auth-conf指明了svn帐户文件是/etc/svn-auth-conf 。</p>
 <p>注意：在默认的 subversion.conf 文件中，以上代码段是包含在如下标签中的。这个标签表示，仅对“写”操作进行权限控制。这里的SVN服务是用于内部部署代码而不是用于开源项目，显然，应该对“读”操作做同样的限制。因此，这个标签行的注释开关应保持关闭。</p>
 <blockquote>
 <p>&lt;LimitExcept GET PROPFIND OPTIONS REPORT&gt;</p>
@@ -563,7 +556,7 @@
 </blockquote>
 <h1 id="第六步：测试Subversion工作"><a href="#第六步：测试Subversion工作" class="headerlink" title="第六步：测试Subversion工作"></a>第六步：测试Subversion工作</h1><blockquote>
 <p>// 重启 apache:</p>
-<p>service httpd restart<br>任何时候，改动过配置文件，均需重启服务使改变生效。<br>在浏览器中输入 <a href="http://&lt;hostname&gt;/repos" target="_blank" rel="external">http://&lt;hostname&gt;/repos</a> 应该可以看到（会提示身份验证）：<br>repos - Revision 0: /</p>
+<p>service httpd restart<br>任何时候，改动过配置文件，均需重启服务使改变生效。<br>在浏览器中输入 http://&lt;hostname&gt;/repos 应该可以看到（会提示身份验证）：<br>repos - Revision 0: /</p>
 <hr>
 <p>Powered by Apache Subversion version 1.7.10 (r1485443).</p>
 </blockquote>
@@ -586,9 +579,9 @@
 </blockquote>
 <p>现在一切就绪，使用客户端工具提交代码测试，检查Web目录是否同步了更改。<br>至此，配置工作完毕。</p>
 <h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><ul>
-<li><a href="http://www.worldhello.net/doc/svn_hooks/svn_hooks.mm.htm" title="http://www.worldhello.net/doc/svn_hooks/svn_hooks.mm.htm" target="_blank" rel="external">http://www.worldhello.net/doc/svn_hooks/svn_hooks.mm.htm</a></li>
-<li><a href="http://blog.csdn.net/niu_gao/article/details/7502326" title="http://blog.csdn.net/niu_gao/article/details/7502326" target="_blank" rel="external">http://blog.csdn.net/niu_gao/article/details/7502326</a></li>
-<li><a href="http://www.ibm.com/developerworks/cn/java/j-lo-apache-subversion/index.html" title="http://www.ibm.com/developerworks/cn/java/j-lo-apache-subversion/index.html" target="_blank" rel="external">http://www.ibm.com/developerworks/cn/java/j-lo-apache-subversion/index.html</a></li>
+<li><a href="http://www.worldhello.net/doc/svn_hooks/svn_hooks.mm.htm" title="http://www.worldhello.net/doc/svn_hooks/svn_hooks.mm.htm" target="_blank" rel="noopener">http://www.worldhello.net/doc/svn_hooks/svn_hooks.mm.htm</a></li>
+<li><a href="http://blog.csdn.net/niu_gao/article/details/7502326" title="http://blog.csdn.net/niu_gao/article/details/7502326" target="_blank" rel="noopener">http://blog.csdn.net/niu_gao/article/details/7502326</a></li>
+<li><a href="http://www.ibm.com/developerworks/cn/java/j-lo-apache-subversion/index.html" title="http://www.ibm.com/developerworks/cn/java/j-lo-apache-subversion/index.html" target="_blank" rel="noopener">http://www.ibm.com/developerworks/cn/java/j-lo-apache-subversion/index.html</a></li>
 </ul>
 
       
@@ -603,7 +596,7 @@
     
       <div>
         <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center;">
-  <img id="wechat_subscriber_qcode" src="/images/qrcode_for_gh_wildcat.jpg" alt="猫老师 wechat" style="width: 200px; max-width: 100%;"/>
+  <img id="wechat_subscriber_qcode" src="/images/qrcode_for_gh_wildcat.jpg" alt="猫老师 wechat" style="width: 200px; max-width: 100%;">
   <div>扫码关注我的公众号，不定期原创推送</div>
 </div>
 
@@ -730,9 +723,7 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image"
-                src="/images/author.png"
-                alt="猫老师"/>
+              <img class="site-author-image" itemprop="image" src="/images/author.png" alt="猫老师">
             
               <p class="site-author-name" itemprop="name">猫老师</p>
               <div class="site-description motion-element" itemprop="description">个人博客。内容包括软件开发技术，项目管理，以及历史故事</div>
@@ -745,7 +736,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">73</span>
+                    <span class="site-state-item-count">75</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -935,7 +926,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">67</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">69</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1085,7 +1080,7 @@
 </div>
 
 
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.2.2</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
 
 
 

@@ -15,11 +15,11 @@
 
 
 <html class="theme-next pisces use-motion" lang="zh-CN">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
-<meta name="theme-color" content="#222"/>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
 
 
 
@@ -70,7 +70,7 @@
   
     
     
-    <link rel="stylesheet" href="//fonts.useso.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext"/>
+    <link rel="stylesheet" href="//fonts.useso.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext">
   
 
 
@@ -78,9 +78,9 @@
 
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2"/>
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
 
-<link rel="stylesheet" href="/css/main.css?v=7.0.1"/>
+<link rel="stylesheet" href="/css/main.css?v=7.0.1">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/author.png?v=7.0.1">
@@ -128,14 +128,14 @@
 
 
 
-  <meta name="description" content="亚马逊 AWS 介绍简单来说，AWS (Amazon Web Service) 提供了一整套基础设施和服务，使“建站”这件事变得轻松愉快。
-你可以利用AWS构建博客主机，云存储（比如DropBox），手游数据中心，公司门户等等几乎所有你能想到的需要网络服务的场景。作为一个入门介绍，我们从 Wordpress 开始，因为 Wordpress 几乎包含了入门级站点的全部需求元素：服务器主机，PHP运行">
+  <meta name="description" content="亚马逊 AWS 介绍简单来说，AWS (Amazon Web Service) 提供了一整套基础设施和服务，使“建站”这件事变得轻松愉快。 你可以利用AWS构建博客主机，云存储（比如DropBox），手游数据中心，公司门户等等几乎所有你能想到的需要网络服务的场景。作为一个入门介绍，我们从 Wordpress 开始，因为 Wordpress 几乎包含了入门级站点的全部需求元素：服务器主机，PHP运行">
+<meta name="keywords" content="建站,aws">
 <meta property="og:type" content="article">
 <meta property="og:title" content="在 Amazon AWS 搭建及部署网站：（一）申请、设置 AWS 服务">
 <meta property="og:url" content="http://www.catxn.net/posts/2013/setup-aws-1/index.html">
 <meta property="og:site_name" content="夜猫阿罗哈">
-<meta property="og:description" content="亚马逊 AWS 介绍简单来说，AWS (Amazon Web Service) 提供了一整套基础设施和服务，使“建站”这件事变得轻松愉快。
-你可以利用AWS构建博客主机，云存储（比如DropBox），手游数据中心，公司门户等等几乎所有你能想到的需要网络服务的场景。作为一个入门介绍，我们从 Wordpress 开始，因为 Wordpress 几乎包含了入门级站点的全部需求元素：服务器主机，PHP运行">
+<meta property="og:description" content="亚马逊 AWS 介绍简单来说，AWS (Amazon Web Service) 提供了一整套基础设施和服务，使“建站”这件事变得轻松愉快。 你可以利用AWS构建博客主机，云存储（比如DropBox），手游数据中心，公司门户等等几乎所有你能想到的需要网络服务的场景。作为一个入门介绍，我们从 Wordpress 开始，因为 Wordpress 几乎包含了入门级站点的全部需求元素：服务器主机，PHP运行">
+<meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://static.catxn.zongbutech.com/images/aws_00.png-o">
 <meta property="og:image" content="http://static.catxn.zongbutech.com/images/aws_01.png-o">
 <meta property="og:image" content="http://static.catxn.zongbutech.com/images/aws_02.png-o">
@@ -143,18 +143,17 @@
 <meta property="og:updated_time" content="2019-03-03T11:34:29.106Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="在 Amazon AWS 搭建及部署网站：（一）申请、设置 AWS 服务">
-<meta name="twitter:description" content="亚马逊 AWS 介绍简单来说，AWS (Amazon Web Service) 提供了一整套基础设施和服务，使“建站”这件事变得轻松愉快。
-你可以利用AWS构建博客主机，云存储（比如DropBox），手游数据中心，公司门户等等几乎所有你能想到的需要网络服务的场景。作为一个入门介绍，我们从 Wordpress 开始，因为 Wordpress 几乎包含了入门级站点的全部需求元素：服务器主机，PHP运行">
+<meta name="twitter:description" content="亚马逊 AWS 介绍简单来说，AWS (Amazon Web Service) 提供了一整套基础设施和服务，使“建站”这件事变得轻松愉快。 你可以利用AWS构建博客主机，云存储（比如DropBox），手游数据中心，公司门户等等几乎所有你能想到的需要网络服务的场景。作为一个入门介绍，我们从 Wordpress 开始，因为 Wordpress 几乎包含了入门级站点的全部需求元素：服务器主机，PHP运行">
 <meta name="twitter:image" content="http://static.catxn.zongbutech.com/images/aws_00.png-o">
 
 
 
-  <link rel="alternate" href="/atom.xml" title="夜猫阿罗哈" type="application/atom+xml"/>
+  <link rel="alternate" href="/atom.xml" title="夜猫阿罗哈" type="application/atom+xml">
 
 
 
 
-  <link rel="canonical" href="http://www.catxn.net/posts/2013/setup-aws-1/"/>
+  <link rel="canonical" href="http://www.catxn.net/posts/2013/setup-aws-1/">
 
 
 
@@ -277,7 +276,7 @@
       
     
 
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br/>首页</a>
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
 
   </li>
         
@@ -296,7 +295,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>归档<span class="badge">73</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">75</span></a>
 
   </li>
         
@@ -315,7 +314,7 @@
       
     
 
-    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br/>关于</a>
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
 
   </li>
         
@@ -334,7 +333,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签<span class="badge">70</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">72</span></a>
 
   </li>
         
@@ -353,7 +352,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类<span class="badge">8</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">8</span></a>
 
   </li>
 
@@ -405,16 +404,16 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.catxn.net/posts/2013/setup-aws-1/"/>
+    <link itemprop="mainEntityOfPage" href="http://www.catxn.net/posts/2013/setup-aws-1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="猫老师"/>
-      <meta itemprop="description" content="个人博客。内容包括软件开发技术，项目管理，以及历史故事"/>
-      <meta itemprop="image" content="/images/author.png"/>
+      <meta itemprop="name" content="猫老师">
+      <meta itemprop="description" content="个人博客。内容包括软件开发技术，项目管理，以及历史故事">
+      <meta itemprop="image" content="/images/author.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="夜猫阿罗哈"/>
+      <meta itemprop="name" content="夜猫阿罗哈">
     </span>
 
     
@@ -521,16 +520,16 @@
 <p>你可以利用AWS构建博客主机，云存储（比如DropBox），手游数据中心，公司门户等等几乎所有你能想到的需要网络服务的场景。作为一个入门介绍，我们从 Wordpress 开始，因为 Wordpress 几乎包含了入门级站点的全部需求元素：服务器主机，PHP运行环境，数据库，前端页面等等。不得不多说一句，对于个人博客来说，如果经济性是首要考量因素，AWS 并非首选，大量专业博客虚拟主机以非常低廉的价格提供给低访问量的博客站长。AWS的入门套餐价格也远比入门级博客主机价格高许多，当然，性能和容量也大许多。在决定是否选用AWS提供服务前，有必要对自己的业务量有个初步估算。</p>
 <p>好在 AWS 对于初次注册的用户提供了为期一年的免费套餐，足以应对一个中等大小的博客站点（甚至多个）持续运行一年时间。我们就从这个免费套餐开始入门的学习。</p>
 <p>免费套餐的详细说明请参见官方介绍：</p>
-<p>点击进入：<a href="http://aws.amazon.com/cn/" target="_blank" rel="external">亚马逊AWS中文主页</a><br>点击进入：<a href="https://aws.amazon.com/cn/free/" target="_blank" rel="external">亚马逊新手套餐介绍页</a></p>
+<p>点击进入：<a href="http://aws.amazon.com/cn/" target="_blank" rel="noopener">亚马逊AWS中文主页</a><br>点击进入：<a href="https://aws.amazon.com/cn/free/" target="_blank" rel="noopener">亚马逊新手套餐介绍页</a></p>
 <p>另外，AWS 有遍布全球的数据中心，而且，即使你的主机设置在美洲，也可以用 CloudFront 服务来进行全球加速。不过 CloudFront 服务似乎并未包含在免费套餐中。建议在创建主机时，选择日本节点，从大陆访问的速度还算不错。</p>
 <p>有消息称亚马逊正在计划在中国大陆部署数据中心，并有望在2013年年底前正式上线。非常令人期待啊。</p>
 <h1 id="第一步：注册账号"><a href="#第一步：注册账号" class="headerlink" title="第一步：注册账号"></a>第一步：注册账号</h1><p>在开始前，请先准备一张双币信用卡。</p>
-<p>AWS 账号就是你的 Amazon 账号 （注意，不是 amazon.cn 而是 amazon.com）。若之前没有amazon账号，请直接去 <a href="http://www.amazon.com" target="_blank" rel="external">www.amazon.com</a> 注册。如果不想用AWS服务，这个账号还可以用来在美国亚马逊海涛心仪的商品。</p>
-<p>然后开通 AWS 服务：打开页面 <a href="https://aws.amazon.com/cn/free/" target="_blank" rel="external">亚马逊新手套餐</a> ，点击“免费试用”，跟随向导注册服务。所有的个人信息按照真实信息填写即可，中间会验证手机，验证信用卡。验证手机会收到一个英文电话，根据提示输入验证码，注册向导会自动继续。信用卡验证过程中会有一笔1美元左右的扣款，理论上会在最终账单中退还。注意你的信用卡必须是有效期内，在一年免费期结束后，如果继续使用，会按照选择的付费方案进行支付。如果免费期结束不想继续使用，关闭所有服务即可，不会产生任何额外费用。</p>
+<p>AWS 账号就是你的 Amazon 账号 （注意，不是 amazon.cn 而是 amazon.com）。若之前没有amazon账号，请直接去 <a href="http://www.amazon.com" target="_blank" rel="noopener">www.amazon.com</a> 注册。如果不想用AWS服务，这个账号还可以用来在美国亚马逊海涛心仪的商品。</p>
+<p>然后开通 AWS 服务：打开页面 <a href="https://aws.amazon.com/cn/free/" target="_blank" rel="noopener">亚马逊新手套餐</a> ，点击“免费试用”，跟随向导注册服务。所有的个人信息按照真实信息填写即可，中间会验证手机，验证信用卡。验证手机会收到一个英文电话，根据提示输入验证码，注册向导会自动继续。信用卡验证过程中会有一笔1美元左右的扣款，理论上会在最终账单中退还。注意你的信用卡必须是有效期内，在一年免费期结束后，如果继续使用，会按照选择的付费方案进行支付。如果免费期结束不想继续使用，关闭所有服务即可，不会产生任何额外费用。</p>
 <p>注册过程如果有选择付费方案（定价模型），请选择“按需付费”。大意就是，用多少付多少，不用就不付。对于实验性质尝试，这种方案很合适。</p>
 <a id="more"></a>
 <h1 id="第二步：创建主机"><a href="#第二步：创建主机" class="headerlink" title="第二步：创建主机"></a>第二步：创建主机</h1><p>主机是一切服务的基础。当然，如果你不需要运行自己的程序，只需要一个数据中心，这一步也可以省掉。比如手游客户端需要的数据库，通信等的。既然我们需要一个网站，那么一个主机是必须的。</p>
-<p>亚马逊的主机有个很拉轰的名字：“亚马逊弹性云计算”（Elastic Cloud Compute, 简称 EC2）。用亚马逊自己的话说，它的优势在于：弹性，完全控制，灵活，可靠，安全，与AWS其他服务轻松配合，经济实惠，轻松入门。详细介绍参见： <a href="http://aws.amazon.com/cn/ec2/" target="_blank" rel="external">EC2概述</a></p>
+<p>亚马逊的主机有个很拉轰的名字：“亚马逊弹性云计算”（Elastic Cloud Compute, 简称 EC2）。用亚马逊自己的话说，它的优势在于：弹性，完全控制，灵活，可靠，安全，与AWS其他服务轻松配合，经济实惠，轻松入门。详细介绍参见： <a href="http://aws.amazon.com/cn/ec2/" target="_blank" rel="noopener">EC2概述</a></p>
 <p>现在，我们已经有了一个AWS的账户，立刻进入AWS控制台，会看到这样的界面：</p>
 <p><img src="http://static.catxn.zongbutech.com/images/aws_00.png-o" alt="image"></p>
 <p>进入 EC2 面板，点击 “Launch Instance”来创建第一个实例。会看到这样的对话框：</p>
@@ -570,7 +569,7 @@
     
       <div>
         <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center;">
-  <img id="wechat_subscriber_qcode" src="/images/qrcode_for_gh_wildcat.jpg" alt="猫老师 wechat" style="width: 200px; max-width: 100%;"/>
+  <img id="wechat_subscriber_qcode" src="/images/qrcode_for_gh_wildcat.jpg" alt="猫老师 wechat" style="width: 200px; max-width: 100%;">
   <div>扫码关注我的公众号，不定期原创推送</div>
 </div>
 
@@ -697,9 +696,7 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image"
-                src="/images/author.png"
-                alt="猫老师"/>
+              <img class="site-author-image" itemprop="image" src="/images/author.png" alt="猫老师">
             
               <p class="site-author-name" itemprop="name">猫老师</p>
               <div class="site-description motion-element" itemprop="description">个人博客。内容包括软件开发技术，项目管理，以及历史故事</div>
@@ -712,7 +709,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">73</span>
+                    <span class="site-state-item-count">75</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -902,7 +899,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">67</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">69</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1052,7 +1053,7 @@
 </div>
 
 
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.2.2</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
 
 
 
