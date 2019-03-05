@@ -1,0 +1,1231 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link rel="stylesheet" href="//fonts.useso.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext">
+  
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.0.1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/author.png?v=7.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/author.png?v=7.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/author.png?v=7.0.1">
+
+
+  <link rel="mask-icon" href="/images/author.png?v=7.0.1" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '7.0.1',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false,"dimmer":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="什么是 Python？如果你百度一下，它会告诉你，python 是一种计算机程序设计语言。 什么是计算机呢？ 信息时代，计算机无处不在。以我们生活中所见为例，平时用的台式电脑，笔记本电脑就是计算机，平板电脑、手机也是计算机，喜欢游戏的同学，家里或许有 PS4、XBOX，其实也都是计算机。 简单来说，计算机系统由“硬件”和“软件”构成 键盘、显示器、游戏手柄、声音输出设备等等，属于计算机的“硬件”。">
+<meta name="keywords" content="猫老师少儿编程,少儿编程,编程,K12,STEAM,STEM,Python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PYTHON 是个什么东西">
+<meta property="og:url" content="http://www.catxn.net/posts/2019/PYTHON是个什么东西/index.html">
+<meta property="og:site_name" content="夜猫阿罗哈">
+<meta property="og:description" content="什么是 Python？如果你百度一下，它会告诉你，python 是一种计算机程序设计语言。 什么是计算机呢？ 信息时代，计算机无处不在。以我们生活中所见为例，平时用的台式电脑，笔记本电脑就是计算机，平板电脑、手机也是计算机，喜欢游戏的同学，家里或许有 PS4、XBOX，其实也都是计算机。 简单来说，计算机系统由“硬件”和“软件”构成 键盘、显示器、游戏手柄、声音输出设备等等，属于计算机的“硬件”。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://static.catxn.zongbutech.com/images/15470214394969.jpg-s">
+<meta property="og:image" content="http://static.catxn.zongbutech.com/images/15470204262277.jpg-s">
+<meta property="og:image" content="http://static.catxn.zongbutech.com/images/15469184280488.jpg-m">
+<meta property="og:image" content="http://static.catxn.zongbutech.com/images/15470244967222.jpg-s">
+<meta property="og:updated_time" content="2019-03-05T06:52:26.928Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="PYTHON 是个什么东西">
+<meta name="twitter:description" content="什么是 Python？如果你百度一下，它会告诉你，python 是一种计算机程序设计语言。 什么是计算机呢？ 信息时代，计算机无处不在。以我们生活中所见为例，平时用的台式电脑，笔记本电脑就是计算机，平板电脑、手机也是计算机，喜欢游戏的同学，家里或许有 PS4、XBOX，其实也都是计算机。 简单来说，计算机系统由“硬件”和“软件”构成 键盘、显示器、游戏手柄、声音输出设备等等，属于计算机的“硬件”。">
+<meta name="twitter:image" content="http://static.catxn.zongbutech.com/images/15470214394969.jpg-s">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="夜猫阿罗哈" type="application/atom+xml">
+
+
+
+
+  <link rel="canonical" href="http://www.catxn.net/posts/2019/PYTHON是个什么东西/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>PYTHON 是个什么东西 | 夜猫阿罗哈</title>
+  
+
+
+
+
+  <script async src="//www.googletagmanager.com/gtag/js?id=[object Object]"></script>
+  <script>
+    var host = window.location.hostname;
+    if (host !== "localhost" || !true) {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-7388145-4');
+    }
+  </script>
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">夜猫阿罗哈</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <h1 class="site-subtitle" itemprop="description">暮然回首萧瑟处，也无风雨也无晴</h1>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">78</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">73</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">8</span></a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.catxn.net/posts/2019/PYTHON是个什么东西/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="猫老师">
+      <meta itemprop="description" content="猫老师的个人博客：少儿编程，K12 STEAM 教育，软件开发，项目管理，历史故事等">
+      <meta itemprop="image" content="/images/author.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="夜猫阿罗哈">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">PYTHON 是个什么东西
+
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-01-12 09:00:00" itemprop="dateCreated datePublished" datetime="2019-01-12T09:00:00+08:00">2019-01-12</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-03-05 14:52:26" itemprop="dateModified" datetime="2019-03-05T14:52:26+08:00">2019-03-05</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/少儿编程/" itemprop="url" rel="index"><span itemprop="name">少儿编程</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="什么是-Python？"><a href="#什么是-Python？" class="headerlink" title="什么是 Python？"></a>什么是 Python？</h2><p>如果你百度一下，它会告诉你，python 是一种<strong>计算机程序设计语言</strong>。</p>
+<p>什么是计算机呢？</p>
+<p>信息时代，计算机无处不在。以我们生活中所见为例，平时用的台式电脑，笔记本电脑就是计算机，平板电脑、手机也是计算机，喜欢游戏的同学，家里或许有 PS4、XBOX，其实也都是计算机。</p>
+<p>简单来说，计算机系统由<strong>“硬件”</strong>和<strong>“软件”</strong>构成</p>
+<p>键盘、显示器、游戏手柄、声音输出设备等等，属于计算机的<strong>“硬件”</strong>。而<strong>“软件”</strong>，就是运行在计算机上的程序，用来让计算机的硬件执行特定的功能，比如呈现画面、播放音乐、通过输入设备（如键盘、游戏手柄）控制虚拟的角色做出各种动作。</p>
+<p>程序设计语言，就是人类用来跟计算机沟通，编写可以执行的程序的一种特殊的“语言”。跟平时我们谈天说地时讲的话一样，有单词、句子、语法规范。不同的国家、人种，说不一样的话比如中文、英语、日语、法语。计算机的世界，也因时代、用途等因素，诞生了各种各样的语言。</p>
+<p>PYTHON，就是其中的一种。</p>
+<a id="more"></a>
+<h2 id="Python-的起源"><a href="#Python-的起源" class="headerlink" title="Python 的起源"></a>Python 的起源</h2><p>1989 年，在荷兰的阿姆斯特丹，吉多·范罗苏姆（Guido van Rossum）为了打发圣诞节的无趣，决心开发一个新的脚本解释程序，并于 1991 年发布了第一个 Python 的发行版本。</p>
+<p>打开英汉字典，你会发现 python 是“大蟒蛇”的意思。会不会有点吓到呢？</p>
+<p><img src="http://static.catxn.zongbutech.com/images/15470214394969.jpg-s" alt></p>
+<p>不过其实它的名字并不是来自这种神秘的动物。之所以命名为 Python，是因为吉多非常喜欢一套英国电视喜剧《蒙提.派森的飞行马戏团》（Monty Python’s Flying Circus）。</p>
+<p>Python 目前有两个版本：Python 2 和 Python 3。它们在某些地方有一些微妙的差异，而这些差异导致了 Python 3 并不能完全兼容 Python 2。</p>
+<p>官方将于 2020 年停止对 Python 2 的支持，但由于种种原因，Python 2 仍然在很多地方使用。如果你已经是专业的程序员，那么可能会遇到如何选择版本的问题，并需要了解两个版本的差异。但是对于学生来说，完全不必考虑这些，直接选用最新版本的 Python 3 就好。</p>
+<h2 id="Python-的优点"><a href="#Python-的优点" class="headerlink" title="Python 的优点"></a>Python 的优点</h2><p>目前世界上有几百种编程语言。</p>
+<p>2019年1月，Python 再度摘得桂冠，成为2018年的“年度编程语言”。</p>
+<p>在全球著名编程语言榜单 TIOBE 呈现的数据看来，PYTHON 的热度逐年上升。现在，Python 已成功进入被 JAVA，C，C++ 三大语言长期霸占的编程语言第一梯队，甩开其后的语言一大截。</p>
+<p>Python 在数据处理、AI、脚本编写等领域均排名第一，在 Web 编程和科学计算领域处于领先地位。</p>
+<p>它也是被大学计算机课程教授最多的语言。近年，中国的高考，也在逐渐增加 Python 的考试内容和范围。</p>
+<p>究竟是什么因素让 Python 具有如此生命力？</p>
+<p><img src="http://static.catxn.zongbutech.com/images/15470204262277.jpg-s" alt></p>
+<p>官网是这样“吹嘘”的：</p>
+<blockquote>
+<p>Python：<br>非常强大……而且很快；<br>和其它（编程语言）良好协同；<br>可在任何地方运行；<br>非常友好，易于学习；<br>开放；</p>
+</blockquote>
+<p>Python 的设计哲学是<strong>“优雅、明确、简单”</strong>。Python 开发者坚持“用一种方法，最好是只有一种方法来做一件事”。因此，它和拥有明显个人风格的其他语言很不一样。</p>
+<p>基于上述设计哲学，Python 具有了简洁、易读的特性；<br>同时它是一种高级语言，开发者可以只考虑应用逻辑而无需关注具体的底层实现；<br>它通过语法特性强制使用规范的代码风格；<br>并且 Python 是开源和免费的。</p>
+<p>所有这些，正是初学者能够轻松、准确、不受干扰地学习编程所需要的。</p>
+<p>此外，作为一种工作语言，Python 还具备可移植性、可嵌入性、可扩展性以及用于解决各种场景下不同问题的丰富扩展库。</p>
+<h2 id="Python-能做什么"><a href="#Python-能做什么" class="headerlink" title="Python 能做什么"></a>Python 能做什么</h2><p>由于 Python 的可扩展和可移植性，它几乎可以用于任何场合任何领域，例如：</p>
+<ul>
+<li>科学计算和数据统计</li>
+<li>教育教学</li>
+<li>用户界面开发</li>
+<li>桌面软件开发</li>
+<li>游戏开发</li>
+<li>Web网站开发</li>
+<li>后端开发</li>
+<li>维护脚本编写</li>
+<li>……</li>
+</ul>
+<p>当然，它仍有所专长。作为人工智能时代最流行的语言，目前 Python 最能大展身手的主要有四大方向：网络应用后端开发、数据处理和爬虫、人工智能机器学习、以及科学计算。</p>
+<h2 id="Python-的学习路径"><a href="#Python-的学习路径" class="headerlink" title="Python 的学习路径"></a>Python 的学习路径</h2><p>如同足球篮球、舞蹈绘画一样，<strong>越是高级的乐趣，就越需要扎实的基础和长期的学习</strong>。</p>
+<p>编程也是一样。同学们如果有学过 Scratch 或 Python 的初级课程，会发现，要学会简单的程序编写，甚至做个小游戏，是非常简单的事情。</p>
+<p>但是，如果想做个能让很多人玩得入迷的炫酷游戏，又或者想做一个强大的网络爬虫，就会发现，会涉及很多知识。</p>
+<p>猫老师做了一个知识路线图。这张图非常粗略，缺少很多细节，只是用于大致的描绘知识体系的概况。在这里，学习 Python 有三个阶梯：基础语法、高级特性和实际应用。</p>
+<p>python 入门课程，大致覆盖了基础语法部分，也对编程有了最初、最直观的认识。</p>
+<p>高级特性部分，则学习更多的编程技巧。我们在中级课程，会学到这里的部分内容。基本上，大多数同学学到这个程度就已经足够，而且是真的很了不起。这个阶段的知识，已经足以做一些像模像样的小游戏、小工具，并为将来有可能进行的深入学习打下基础。</p>
+<p>第三个阶段，应用方向。能到达这个阶段的同学，一定都是学霸吧。:-D<br>几乎没有人能够学完这个阶段的所有内容，即使是职业的程序员。通常我们只需要选择自己感兴趣的领域，针对性的学习就好。</p>
+<p><img src="http://static.catxn.zongbutech.com/images/15469184280488.jpg-m" alt></p>
+<p>其实，在学习完第二阶段之后，除了应用方向之外，还有一个竞赛方向可以选择，我们到时候再说。</p>
+<h2 id="猫老师的-Python-课程"><a href="#猫老师的-Python-课程" class="headerlink" title="猫老师的 Python 课程"></a>猫老师的 Python 课程</h2><p>猫老师少儿编程，最新推出《趣味 Python 编程》课程。该课程定位为中级。推荐小学五年级至高中阶段的同学学习。</p>
+<p>已经学过基于“极客战记”的初级课程的同学，可以无缝对接该课程。零基础，低年级的同学，可以选择从其他课程开始，比如 Scratch 和 《游戏式 PYTHON 编程入门》。</p>
+<h2 id="如何开始下载安装"><a href="#如何开始下载安装" class="headerlink" title="如何开始下载安装"></a>如何开始下载安装</h2><p>《趣味Python编程·中级》介绍了如何下载。</p>
+<p>对电脑比较熟悉的同学，可以直接至官网下载。为了方便大家，猫老师也在百度盘放了最新版本的安装包：<a href="https://pan.baidu.com/s/1jZzVUH-Wb1APbkoPTe3Scw" target="_blank" rel="noopener">https://pan.baidu.com/s/1jZzVUH-Wb1APbkoPTe3Scw</a> 提取码: b91m </p>
+<p>或扫码直接通过百度云小程序下载、</p>
+<p><img src="http://static.catxn.zongbutech.com/images/15470244967222.jpg-s" alt></p>
+<p>Python 的基础开发环境对系统需求并不高。大部分同学家里现有的电脑，无论是苹果系统还是 Windows 系统均可。只要下载相应的安装包安装即可。</p>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>好啦，现在同学们已经了解了Python 是什么，让我们立刻开始跟猫老师快乐地学习吧！</p>
+<blockquote>
+<p>Beautiful is better than ugly.<br>Simple is better than complex.<br>– Tim Peters</p>
+</blockquote>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+      <div>
+        <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center;">
+  <img id="wechat_subscriber_qcode" src="/images/qrcode_for_gh_maols.jpg" alt="猫老师 wechat" style="width: 200px; max-width: 100%;">
+  <div>扫码关注，获取少儿编程最新资讯</div>
+</div>
+
+      </div>
+    
+
+    
+      
+    
+    
+
+    
+      <div>
+        
+
+
+
+
+  
+
+
+
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>猫老师</li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    
+    <a href="http://www.catxn.net/posts/2019/PYTHON是个什么东西/" title="PYTHON 是个什么东西">http://www.catxn.net/posts/2019/PYTHON是个什么东西/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-ND</a> 许可协议。转载请注明出处！</li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/少儿编程/" rel="tag"># 少儿编程</a>
+          
+            <a href="/tags/STEAM/" rel="tag"># STEAM</a>
+          
+            <a href="/tags/Python/" rel="tag"># Python</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/posts/2019/写给青少年的网页爬虫学习指南/" rel="next" title="写给青少年的网页爬虫学习指南">
+                <i class="fa fa-chevron-left"></i> 写给青少年的网页爬虫学习指南
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/author.png" alt="猫老师">
+            
+              <p class="site-author-name" itemprop="name">猫老师</p>
+              <div class="site-description motion-element" itemprop="description">猫老师的个人博客：少儿编程，K12 STEAM 教育，软件开发，项目管理，历史故事等</div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">78</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">70</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/deltacat" title="GitHub &rarr; https://github.com/deltacat" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="http://weibo.com/deltacat" title="Weibo &rarr; http://weibo.com/deltacat" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="http://www.jianshu.com/u/HS379k" title="简书 &rarr; http://www.jianshu.com/u/HS379k" rel="noopener" target="_blank"><i class="fa fa-fw fa-edit"></i>简书</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="http://www.zhihu.com/people/deltacat" title="知乎 &rarr; http://www.zhihu.com/people/deltacat" rel="noopener" target="_blank"><i class="fa fa-fw fa-question-circle"></i>知乎</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友情链接
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.zongbutech.com" title="http://www.zongbutech.com" rel="noopener" target="_blank">宗布科技</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.tongxinvc.com" title="http://www.tongxinvc.com" rel="noopener" target="_blank">同芯资本</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.nero.com" title="http://www.nero.com" rel="noopener" target="_blank">尼禄软件</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://atjason.com" title="http://atjason.com" rel="noopener" target="_blank">Jason</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是-Python？"><span class="nav-number">1.</span> <span class="nav-text">什么是 Python？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Python-的起源"><span class="nav-number">2.</span> <span class="nav-text">Python 的起源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Python-的优点"><span class="nav-number">3.</span> <span class="nav-text">Python 的优点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Python-能做什么"><span class="nav-number">4.</span> <span class="nav-text">Python 能做什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Python-的学习路径"><span class="nav-number">5.</span> <span class="nav-text">Python 的学习路径</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#猫老师的-Python-课程"><span class="nav-number">6.</span> <span class="nav-text">猫老师的 Python 课程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何开始下载安装"><span class="nav-number">7.</span> <span class="nav-text">如何开始下载安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#小结"><span class="nav-number">8.</span> <span class="nav-text">小结</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">猫老师</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.0.1</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=7.0.1"></script>
+
+  <script src="/js/src/motion.js?v=7.0.1"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/src/affix.js?v=7.0.1"></script>
+
+  <script src="/js/src/schemes/pisces.js?v=7.0.1"></script>
+
+
+
+  
+  <script src="/js/src/scrollspy.js?v=7.0.1"></script>
+<script src="/js/src/post-details.js?v=7.0.1"></script>
+
+
+
+  
+
+
+  <script src="/js/src/next-boot.js?v=7.0.1"></script>
+
+
+  
+  
+
+
+  
+
+
+  
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

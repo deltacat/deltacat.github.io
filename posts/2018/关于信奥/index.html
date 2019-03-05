@@ -1,0 +1,1233 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link rel="stylesheet" href="//fonts.useso.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext">
+  
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.0.1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/author.png?v=7.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/author.png?v=7.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/author.png?v=7.0.1">
+
+
+  <link rel="mask-icon" href="/images/author.png?v=7.0.1" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '7.0.1',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false,"dimmer":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="信息学奥赛，是五大学科奥林匹克（数学、物理、化学、生物和信息学）之一。 关于信奥，我们最常听到的应该是 NOIP 这个缩写。全称“全国青少年信息学奥林匹克联赛（National Olympiad in Informatics in Provinces）”，也是整个系列中，门槛最低的一个。要想进入信息奥林匹克的世界，这是第一个关卡。 NOIP介绍 NOIP 由中国计算机学会统一组织，每年在同一时间不">
+<meta name="keywords" content="猫老师少儿编程,少儿编程,编程,K12,STEAM,STEM,NOIP">
+<meta property="og:type" content="article">
+<meta property="og:title" content="什么是信息学奥赛（NOIP）">
+<meta property="og:url" content="http://www.catxn.net/posts/2018/关于信奥/index.html">
+<meta property="og:site_name" content="夜猫阿罗哈">
+<meta property="og:description" content="信息学奥赛，是五大学科奥林匹克（数学、物理、化学、生物和信息学）之一。 关于信奥，我们最常听到的应该是 NOIP 这个缩写。全称“全国青少年信息学奥林匹克联赛（National Olympiad in Informatics in Provinces）”，也是整个系列中，门槛最低的一个。要想进入信息奥林匹克的世界，这是第一个关卡。 NOIP介绍 NOIP 由中国计算机学会统一组织，每年在同一时间不">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tKfTcly1g0rwl2nslpj30p0325qpm.jpg">
+<meta property="og:updated_time" content="2019-03-05T06:32:46.839Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="什么是信息学奥赛（NOIP）">
+<meta name="twitter:description" content="信息学奥赛，是五大学科奥林匹克（数学、物理、化学、生物和信息学）之一。 关于信奥，我们最常听到的应该是 NOIP 这个缩写。全称“全国青少年信息学奥林匹克联赛（National Olympiad in Informatics in Provinces）”，也是整个系列中，门槛最低的一个。要想进入信息奥林匹克的世界，这是第一个关卡。 NOIP介绍 NOIP 由中国计算机学会统一组织，每年在同一时间不">
+<meta name="twitter:image" content="https://ws4.sinaimg.cn/large/006tKfTcly1g0rwl2nslpj30p0325qpm.jpg">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="夜猫阿罗哈" type="application/atom+xml">
+
+
+
+
+  <link rel="canonical" href="http://www.catxn.net/posts/2018/关于信奥/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>什么是信息学奥赛（NOIP） | 夜猫阿罗哈</title>
+  
+
+
+
+
+  <script async src="//www.googletagmanager.com/gtag/js?id=[object Object]"></script>
+  <script>
+    var host = window.location.hostname;
+    if (host !== "localhost" || !true) {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-7388145-4');
+    }
+  </script>
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">夜猫阿罗哈</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <h1 class="site-subtitle" itemprop="description">暮然回首萧瑟处，也无风雨也无晴</h1>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">78</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">73</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">8</span></a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.catxn.net/posts/2018/关于信奥/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="猫老师">
+      <meta itemprop="description" content="猫老师的个人博客：少儿编程，K12 STEAM 教育，软件开发，项目管理，历史故事等">
+      <meta itemprop="image" content="/images/author.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="夜猫阿罗哈">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">什么是信息学奥赛（NOIP）
+
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-11-05 09:00:00" itemprop="dateCreated datePublished" datetime="2018-11-05T09:00:00+08:00">2018-11-05</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-03-05 14:32:46" itemprop="dateModified" datetime="2019-03-05T14:32:46+08:00">2019-03-05</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/少儿编程/" itemprop="url" rel="index"><span itemprop="name">少儿编程</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>信息学奥赛，是五大学科奥林匹克（数学、物理、化学、生物和信息学）之一。</p>
+<p>关于信奥，我们最常听到的应该是 NOIP 这个缩写。全称“全国青少年信息学奥林匹克联赛（National Olympiad in Informatics in Provinces）”，也是整个系列中，门槛最低的一个。要想进入信息奥林匹克的世界，这是第一个关卡。</p>
+<h2 id="NOIP"><a href="#NOIP" class="headerlink" title="NOIP"></a>NOIP</h2><p><strong>介绍</strong></p>
+<p>NOIP 由中国计算机学会统一组织，每年在同一时间不同地点以省或市划分赛区分别组织比赛，全国统一试卷。初中、高中或中专的在校学生均可报名参加，根据难度分普及组和提高组两个组别，分别面向初中和高中。每个组别均分为初赛和复赛两个阶段，初赛为笔试，复赛为上机考试。</p>
+<p>初赛主要考察基础知识，形式为笔试。主要目标是考察学生对计算机科学知识掌握的广度以及编程基本能力。</p>
+<p>初赛达到一定分数线的选手才可以参加复赛。复赛为程序设计，需要上机调试。主要考察学生的分析理解、数学抽象、实际的编程能力和编程技巧、想象力和创造力等等综合实践能力。各赛区奖项在复试的优胜者中产生。</p>
+<p>比赛使用的语言，最早是采用 Basic，已于2005年取消。目前执行的是C/C++/Pascal。2022年部分取消 C，全部取消 Pascal。C++将成为主要语言。</p>
+<a id="more"></a>
+<p><strong>比赛时间</strong></p>
+<p>通常初赛和复赛分别在10月和11月进行。例如2018年的比赛时间为：</p>
+<pre><code>1. 初赛（提高组、普及组）：
+
+    2018年10月13日（周六），14:30-16:30；
+
+2. 复赛：
+
+    一试：2018年11月10日（周六），提高组8:30-12:00，普及组14:30-18:00；
+
+    二试：2018年11月11日（周日），提高组8:30-12:00。
+</code></pre><p><strong>报名方式</strong></p>
+<p>NOIP 一般由学校组织报名。初赛是不接受个人报名的，可以咨询本校的信息学老师，或者所在培训机构的老师咨询。</p>
+<p>报名时间（2018为例）：<br>初赛传统邮件报名截止日期：2018年10月 9日<br>复赛网上注册报名截止日期：2018年10月31日</p>
+<h2 id="NOI-系列赛"><a href="#NOI-系列赛" class="headerlink" title="NOI 系列赛"></a>NOI 系列赛</h2><p>NOIP 直接对接 NOI（National Olympiad in Informatics，全国青少年信息学奥林匹克竞赛）。</p>
+<p>下面对这个系列的竞赛简单介绍一下全貌</p>
+<h3 id="NOIP-全国青少年信息学奥林匹克联赛"><a href="#NOIP-全国青少年信息学奥林匹克联赛" class="headerlink" title="NOIP - 全国青少年信息学奥林匹克联赛"></a>NOIP - 全国青少年信息学奥林匹克联赛</h3><p>见前文</p>
+<h3 id="NOI-全国青少年信息学奥林匹克"><a href="#NOI-全国青少年信息学奥林匹克" class="headerlink" title="NOI - 全国青少年信息学奥林匹克"></a>NOI - 全国青少年信息学奥林匹克</h3><p>NOI（National Olympiad in Informatics，全国青少年信息学奥林匹克竞赛）是全国最高水平的大赛，在全国范围（包括港澳）以代表队为单位参加。每年，各省选拔产生5名选手（其中一名是女选手），由中国计算机学会在计算机普及较好的城市组织进行比赛。全国的选手会集中在同一城市比赛，正式比赛分两次考试，两天考完。</p>
+<p>这一竞赛同时记个人成绩和团体总分。</p>
+<h3 id="夏令营"><a href="#夏令营" class="headerlink" title="夏令营"></a>夏令营</h3><p>全国青少年信息学奥林匹克（NOI）夏令营，为 NOI 比赛的扩大赛。同样具有中国计算机学会颁发的成绩证明。国内多数大学均承认其成绩，与NOI正式选手一视同仁。</p>
+<h3 id="冬令营"><a href="#冬令营" class="headerlink" title="冬令营"></a>冬令营</h3><p>自1995年起。每年在寒假期间开展为期一周的培训活动，包括授课、讲座、讨论、测试等。参加冬令营的营员分正式营员和非正式营员。NOI 名列前茅的选手和指导教师为正式营员，非正式营员限量自愿报名参加。在冬令营授课的是著名大学的资深教授及已获得国际金牌学生的指导教师。</p>
+<p>冬令营是中国国家队的第一轮选拔，从营员中选出名列前茅的作为中国国家队候选队员。</p>
+<h3 id="CTSC-选拔赛"><a href="#CTSC-选拔赛" class="headerlink" title="CTSC - 选拔赛"></a>CTSC - 选拔赛</h3><p>CTSC(China Team Selection Competition，中国队选拔赛），指选拔参加国际信息学奥林匹克（IOI）中国代表队的竞赛。选拔赛前4名的优胜者代表中国参加国际竞赛。</p>
+<p>选拔科目包括：NOI成绩、冬令营成绩、论文和答辩、平时作业、选拔赛成绩、口试。上述项目加权产生最后成绩。</p>
+<h3 id="APIO-亚洲与太平洋地区信息学奥赛"><a href="#APIO-亚洲与太平洋地区信息学奥赛" class="headerlink" title="APIO - 亚洲与太平洋地区信息学奥赛"></a>APIO - 亚洲与太平洋地区信息学奥赛</h3><p>APIO（Asia Pacific Informatics Olympiad，亚洲与太平洋地区信息学奥赛）。2007年创建，该竞赛为区域性的网上准同步赛，是亚洲和太平洋地区每年一次的国际性赛事，旨在给青少年提供更多的赛事机会，推动亚太地区的信息学奥林匹克的发展。APIO每年5月举行，由不同的国家轮流主办。每个参赛团参赛选手上限为100名，其中成绩排在前6名的选手作为代表该参赛团的正式选手统计成绩。APIO中国赛区由中国计算机学会组织参赛，获奖比例将参照IOI。</p>
+<h3 id="IOI-国际信息学奥林匹克竞赛"><a href="#IOI-国际信息学奥林匹克竞赛" class="headerlink" title="IOI - 国际信息学奥林匹克竞赛"></a>IOI - 国际信息学奥林匹克竞赛</h3><p>IOI（International Olympiad in Informatics，国际信息学奥林匹克竞赛）。由中国计算机学会组织代表队，代表中国参加国际每年一次的IOI。中国是IOI创始国之一。IOI2000由中国主办，CCF承办。出国参赛得到中国科协和国家自然科学基金委的资助。</p>
+<p>自1989年开始，我国在NOI（网上同步赛99年开始）、NOIP、冬令营、选拔赛的基础上，组织参加国际信息学奥林匹克（IOI）竞赛。十几年中选拔75人次参加了 IOI，累计获金牌46块、银牌17块，铜牌12块。这些选手不仅在国际大赛中有好的表现，而且在现代的信息学科上也大展才华。中国已成为世界公认的信息 学奥林匹克竞赛强国，参赛选手、领队、教练曾受到江泽民、李鹏、李岚清等党和国家领导人及著名科学家的亲切接见和赞扬。</p>
+<h2 id="其它赛事"><a href="#其它赛事" class="headerlink" title="其它赛事"></a>其它赛事</h2><h3 id="ACM-系列赛"><a href="#ACM-系列赛" class="headerlink" title="ACM 系列赛"></a>ACM 系列赛</h3><p>ACM 国际大学生程序设计竞赛（ACM International Collegiate Programming Contest），简称 ACM-ICPC 或 ICPC，是由ACM（Association for Computing Machinery，国际计算机学会）主办的，一项旨在展示大学生创新能力、团队精神和在压力下编写程序、分析和解决问题能力的年度竞赛。经过近40年的发展，ACM国际大学生程序设计竞赛已经发展成为全球最具影响力的大学生程序设计竞赛。</p>
+<p>ACM 系列赛由各大洲的预赛和全球总决赛构成。由于面向大学生，我们这里不做过多探讨。另外，除了难度更大，NOI 系列赛的题型、内容接近 ACM 系列赛，可以将 NOI 的训练做为未来进入大学参加 ACM 系列赛的准备。</p>
+<h3 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h3><p>除权威的 NOI 系列外，一些组织、协会、地方政府也有各类面向中小学生的科技、创意赛事。以浙江省能为例，就有全国青少年创意编程与智能设计大赛、杭州市中小学生科技节活动中的创客大赛、信息学大赛等等。</p>
+<p>此外，还有一些以公益组织、公司团体为主体主办的各类赛事，不再一一赘述。</p>
+<h2 id="竞赛对升学的影响"><a href="#竞赛对升学的影响" class="headerlink" title="竞赛对升学的影响"></a>竞赛对升学的影响</h2><p>根据教育部的规定，2011 年以前，NOIP 的奖项不同程度的具有大学保送资格。2011年之后，保送范围大幅度收缩，目前仅全国决赛一等奖具有保送资格。但是各地招生委员会、高校自主招生可自主决定针对在 NOIP、NOI 获得优秀成绩的学生给予不同档次降分、降线的录取待遇。</p>
+<p>比如，2018年清华北大已与参与2018年信息学冬令营的部分学生签订了包括：有条件或无条件降至一本线、有条件降 60、30 分等不同档次优待。</p>
+<p>在这种前提下，不少中学对于信息学成绩优秀的学生，在自主招生择校方面，也有不同程度的好处。</p>
+<p>当然，这一点并非绝对，随着教育体制的改革，一些条件会不断发生变化。家长如果是希望竞赛对升学有帮助，还需要关注每年、所属地区的政策信息。</p>
+<h2 id="什么时候开始学？"><a href="#什么时候开始学？" class="headerlink" title="什么时候开始学？"></a>什么时候开始学？</h2><p>初一开始做比赛准备即可。当然如果小学高年级开始先做一些基础入门学习（不限语言），会对初中的比赛准备大有裨益。</p>
+<p>初中的目标是普及组一等奖。后期根据能力可以开始尝试参加提高组比赛。高一冲刺提高组一等奖，为升学创造条件。</p>
+<p>另外，理论上小学也可以参加普及组的比赛。但是实际操作（如报名、复赛名额等等）起来会比较麻烦，因此并不建议小学阶段参赛。当然，如果学生确实在这方面有天分，同时所在地区小升初会针对 NOIP优惠的话，不妨一试。</p>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>关于竞赛，猫老师还是一贯的观点：并非人人需要。出于升学的目的，可能会备受打击。还是希望对此真正有兴趣和天分的孩子，当做一项对自我的挑战来参与。</p>
+<p>出于兴趣、能力的目的，是学习<br>为了竞赛的目的，要大量的“训练”。如同出于健身目的的锻炼，可以让身体更强壮；而出于夺得奥运奖牌为目的的运动员，却往往留下伴随终生的运动伤害。</p>
+<p>最后，祝大家都能快乐的学习编程。</p>
+<p>注：</p>
+<ol>
+<li>部分资料来自 noi 官方网站：<a href="http://www.noi.cn/" target="_blank" rel="noopener">http://www.noi.cn/</a></li>
+<li>相关政策信息、比赛选拔数据等信息会有调整，以每年官方公告为准</li>
+</ol>
+<hr>
+<h2 id="2019年2月更新"><a href="#2019年2月更新" class="headerlink" title="2019年2月更新"></a>2019年2月更新</h2><p>根据 <strong>教育部办公厅关于2019年度面向中小学生的全国性竞赛活动名单的补充公示</strong>，2019年信奥取消普及组比赛，也就是将只有高中生能够参数。</p>
+<h3 id="教育部办公厅关于2019年度面向中小学生的全国性竞赛活动名单的补充公示"><a href="#教育部办公厅关于2019年度面向中小学生的全国性竞赛活动名单的补充公示" class="headerlink" title="教育部办公厅关于2019年度面向中小学生的全国性竞赛活动名单的补充公示"></a>教育部办公厅关于2019年度面向中小学生的全国性竞赛活动名单的补充公示</h3><blockquote>
+<p>根据《教育部办公厅印发&lt;关于面向中小学生的全国性竞赛活动管理办法（试行）&gt;的通知》（教基厅〔2018〕9号）精神，在经主办单位自主申报并作出“零收费”等方面承诺，组织进行资格审核和组织专家评审的基础上，经研究拟补充确定全国中学生信息学奥林匹克竞赛为2019年度面向中学生开展的全国性竞赛活动。现就相关信息予以公示，公示期为2019年2月25日至2019年3月3日。</p>
+</blockquote>
+<blockquote>
+<p>公示期内，如有异议，请以书面形式反映。以单位名义反映的须加盖本单位公章，以个人名义反映的应署真实姓名、身份证号，写明联系电话。反映情况的书面意见请于2019年3月3日之前通过信函邮寄至教育部基础教育司，逾期及匿名反映不予受理。</p>
+</blockquote>
+<blockquote>
+<p><img src="https://ws4.sinaimg.cn/large/006tKfTcly1g0rwl2nslpj30p0325qpm.jpg" alt></p>
+</blockquote>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+      <div>
+        <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center;">
+  <img id="wechat_subscriber_qcode" src="/images/qrcode_for_gh_maols.jpg" alt="猫老师 wechat" style="width: 200px; max-width: 100%;">
+  <div>扫码关注，获取少儿编程最新资讯</div>
+</div>
+
+      </div>
+    
+
+    
+      
+    
+    
+
+    
+      <div>
+        
+
+
+
+
+  
+
+
+
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>猫老师</li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    
+    <a href="http://www.catxn.net/posts/2018/关于信奥/" title="什么是信息学奥赛（NOIP）">http://www.catxn.net/posts/2018/关于信奥/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-ND</a> 许可协议。转载请注明出处！</li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/少儿编程/" rel="tag"># 少儿编程</a>
+          
+            <a href="/tags/STEAM/" rel="tag"># STEAM</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/posts/2018/少儿编程学什么/" rel="next" title="少儿编程学什么">
+                <i class="fa fa-chevron-left"></i> 少儿编程学什么
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/posts/2019/写给青少年的网页爬虫学习指南/" rel="prev" title="写给青少年的网页爬虫学习指南">
+                写给青少年的网页爬虫学习指南 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/author.png" alt="猫老师">
+            
+              <p class="site-author-name" itemprop="name">猫老师</p>
+              <div class="site-description motion-element" itemprop="description">猫老师的个人博客：少儿编程，K12 STEAM 教育，软件开发，项目管理，历史故事等</div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">78</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">70</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/deltacat" title="GitHub &rarr; https://github.com/deltacat" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="http://weibo.com/deltacat" title="Weibo &rarr; http://weibo.com/deltacat" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="http://www.jianshu.com/u/HS379k" title="简书 &rarr; http://www.jianshu.com/u/HS379k" rel="noopener" target="_blank"><i class="fa fa-fw fa-edit"></i>简书</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="http://www.zhihu.com/people/deltacat" title="知乎 &rarr; http://www.zhihu.com/people/deltacat" rel="noopener" target="_blank"><i class="fa fa-fw fa-question-circle"></i>知乎</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友情链接
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.zongbutech.com" title="http://www.zongbutech.com" rel="noopener" target="_blank">宗布科技</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.tongxinvc.com" title="http://www.tongxinvc.com" rel="noopener" target="_blank">同芯资本</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.nero.com" title="http://www.nero.com" rel="noopener" target="_blank">尼禄软件</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://atjason.com" title="http://atjason.com" rel="noopener" target="_blank">Jason</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#NOIP"><span class="nav-number">1.</span> <span class="nav-text">NOIP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NOI-系列赛"><span class="nav-number">2.</span> <span class="nav-text">NOI 系列赛</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#NOIP-全国青少年信息学奥林匹克联赛"><span class="nav-number">2.1.</span> <span class="nav-text">NOIP - 全国青少年信息学奥林匹克联赛</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NOI-全国青少年信息学奥林匹克"><span class="nav-number">2.2.</span> <span class="nav-text">NOI - 全国青少年信息学奥林匹克</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#夏令营"><span class="nav-number">2.3.</span> <span class="nav-text">夏令营</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#冬令营"><span class="nav-number">2.4.</span> <span class="nav-text">冬令营</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CTSC-选拔赛"><span class="nav-number">2.5.</span> <span class="nav-text">CTSC - 选拔赛</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#APIO-亚洲与太平洋地区信息学奥赛"><span class="nav-number">2.6.</span> <span class="nav-text">APIO - 亚洲与太平洋地区信息学奥赛</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IOI-国际信息学奥林匹克竞赛"><span class="nav-number">2.7.</span> <span class="nav-text">IOI - 国际信息学奥林匹克竞赛</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其它赛事"><span class="nav-number">3.</span> <span class="nav-text">其它赛事</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ACM-系列赛"><span class="nav-number">3.1.</span> <span class="nav-text">ACM 系列赛</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其它"><span class="nav-number">3.2.</span> <span class="nav-text">其它</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#竞赛对升学的影响"><span class="nav-number">4.</span> <span class="nav-text">竞赛对升学的影响</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#什么时候开始学？"><span class="nav-number">5.</span> <span class="nav-text">什么时候开始学？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#结语"><span class="nav-number">6.</span> <span class="nav-text">结语</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2019年2月更新"><span class="nav-number">7.</span> <span class="nav-text">2019年2月更新</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#教育部办公厅关于2019年度面向中小学生的全国性竞赛活动名单的补充公示"><span class="nav-number">7.1.</span> <span class="nav-text">教育部办公厅关于2019年度面向中小学生的全国性竞赛活动名单的补充公示</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">猫老师</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.0.1</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=7.0.1"></script>
+
+  <script src="/js/src/motion.js?v=7.0.1"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/src/affix.js?v=7.0.1"></script>
+
+  <script src="/js/src/schemes/pisces.js?v=7.0.1"></script>
+
+
+
+  
+  <script src="/js/src/scrollspy.js?v=7.0.1"></script>
+<script src="/js/src/post-details.js?v=7.0.1"></script>
+
+
+
+  
+
+
+  <script src="/js/src/next-boot.js?v=7.0.1"></script>
+
+
+  
+  
+
+
+  
+
+
+  
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

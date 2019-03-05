@@ -1,0 +1,1223 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link rel="stylesheet" href="//fonts.useso.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext">
+  
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.0.1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/author.png?v=7.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/author.png?v=7.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/author.png?v=7.0.1">
+
+
+  <link rel="mask-icon" href="/images/author.png?v=7.0.1" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '7.0.1',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false,"dimmer":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="注意，这是一篇写给青少年的入门指南。我们不会做非常深入的探讨，而是浅尝辄止，给初学者描绘一个概貌和入门指引。  缘起那一天，人们终于回想起了被爬虫所支配的恐惧 2019元旦期间，有位同学报名学习 Python，上来就问了我一个问题，“什么时候可以开始学习爬虫呢？” 老师当时就被震惊了。现在的小朋友果然不可以低估啊。要知道猫老师本猫都还没实际操作过爬虫呢。而00后10后已经在以此为目标了。我不禁想">
+<meta name="keywords" content="猫老师少儿编程,少儿编程,编程,K12,STEAM,STEM,Python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="写给青少年的网页爬虫学习指南">
+<meta property="og:url" content="http://www.catxn.net/posts/2019/写给青少年的网页爬虫学习指南/index.html">
+<meta property="og:site_name" content="夜猫阿罗哈">
+<meta property="og:description" content="注意，这是一篇写给青少年的入门指南。我们不会做非常深入的探讨，而是浅尝辄止，给初学者描绘一个概貌和入门指引。  缘起那一天，人们终于回想起了被爬虫所支配的恐惧 2019元旦期间，有位同学报名学习 Python，上来就问了我一个问题，“什么时候可以开始学习爬虫呢？” 老师当时就被震惊了。现在的小朋友果然不可以低估啊。要知道猫老师本猫都还没实际操作过爬虫呢。而00后10后已经在以此为目标了。我不禁想">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-03-05T06:46:30.309Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="写给青少年的网页爬虫学习指南">
+<meta name="twitter:description" content="注意，这是一篇写给青少年的入门指南。我们不会做非常深入的探讨，而是浅尝辄止，给初学者描绘一个概貌和入门指引。  缘起那一天，人们终于回想起了被爬虫所支配的恐惧 2019元旦期间，有位同学报名学习 Python，上来就问了我一个问题，“什么时候可以开始学习爬虫呢？” 老师当时就被震惊了。现在的小朋友果然不可以低估啊。要知道猫老师本猫都还没实际操作过爬虫呢。而00后10后已经在以此为目标了。我不禁想">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="夜猫阿罗哈" type="application/atom+xml">
+
+
+
+
+  <link rel="canonical" href="http://www.catxn.net/posts/2019/写给青少年的网页爬虫学习指南/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>写给青少年的网页爬虫学习指南 | 夜猫阿罗哈</title>
+  
+
+
+
+
+  <script async src="//www.googletagmanager.com/gtag/js?id=[object Object]"></script>
+  <script>
+    var host = window.location.hostname;
+    if (host !== "localhost" || !true) {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-7388145-4');
+    }
+  </script>
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">夜猫阿罗哈</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <h1 class="site-subtitle" itemprop="description">暮然回首萧瑟处，也无风雨也无晴</h1>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">78</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">73</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">8</span></a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.catxn.net/posts/2019/写给青少年的网页爬虫学习指南/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="猫老师">
+      <meta itemprop="description" content="猫老师的个人博客：少儿编程，K12 STEAM 教育，软件开发，项目管理，历史故事等">
+      <meta itemprop="image" content="/images/author.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="夜猫阿罗哈">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">写给青少年的网页爬虫学习指南
+
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-01-12 09:00:00" itemprop="dateCreated datePublished" datetime="2019-01-12T09:00:00+08:00">2019-01-12</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-03-05 14:46:30" itemprop="dateModified" datetime="2019-03-05T14:46:30+08:00">2019-03-05</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/少儿编程/" itemprop="url" rel="index"><span itemprop="name">少儿编程</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p>注意，这是一篇写给<strong>青少年</strong>的入门指南。<br>我们不会做非常深入的探讨，而是浅尝辄止，给初学者描绘一个概貌和入门指引。</p>
+</blockquote>
+<h2 id="缘起"><a href="#缘起" class="headerlink" title="缘起"></a>缘起</h2><p><em>那一天，人们终于回想起了被爬虫所支配的恐惧</em></p>
+<p>2019元旦期间，有位同学报名学习 Python，上来就问了我一个问题，“什么时候可以开始学习爬虫呢？”</p>
+<p>老师当时就被震惊了。现在的小朋友果然不可以低估啊。要知道猫老师本猫都还没实际操作过爬虫呢。而00后10后已经在以此为目标了。我不禁想问，这位少年，看你骨骼清奇，我这里有一本金牌黑客秘籍要不要看下？</p>
+<p>玩笑归玩笑。有明确目标的学习，效果会是出类拔萃的。虽然猫老师之前并未专门对这项技术的教学做过准备，但是只要同学有需要，我们就不会被问题难住。教学相长，为了不辜负同学们的期望，我们决定从制作一个例子开始。</p>
+<h2 id="什么是爬虫"><a href="#什么是爬虫" class="headerlink" title="什么是爬虫"></a>什么是爬虫</h2><p>网络爬虫（crawler），又被称为蜘蛛（spider）。是一种可以根据某种设定的规则自动运行，抓取互联网上的信息的程序。我们经常使用的百度、必应、谷歌这些搜索引擎，它们背后的重要支撑，就是网络爬虫。这些爬虫不知疲倦地抓取网站的信息并加以综合整理，最终成为帮助我们快速检索需要的信息的利器。</p>
+<p>从这个简单的描述，我们就可以知道，一个爬虫至少需要三个要素：</p>
+<ol>
+<li>抓取信息</li>
+<li>数据存储和整理</li>
+<li>数据呈现</li>
+</ol>
+<p>这几个方面，每一个点都可以引申更多更深入的技术，值得数十年如一日地潜心研究。我们没有办法一一介绍，这一点你只要想象一下这些搜索引擎公司，为什么能凭借这个技术成长为互联网巨头就明白了。</p>
+<p>但是作为初学者，想通过一些简单的学习，大致了解爬虫的工作原理，甚至做一些简单的爬虫应用，还是有可能的。</p>
+<a id="more"></a>
+<h2 id="爬虫的基本工作原理"><a href="#爬虫的基本工作原理" class="headerlink" title="爬虫的基本工作原理"></a>爬虫的基本工作原理</h2><p>同学们可能已经了解，互联网是通过超链接（URL）访问和相互联系的。比如新闻门户网站上就排布着大量隐藏在新闻标题背后的超链接。</p>
+<p>想象一下，整个互联网就好比是一张……啊不对，是很多很多张通过各种方式连接在一起的蜘蛛网。现在假设你是一只蜘蛛，把你放在网上，需要把所有的蛛丝都走过一遍（看一遍所有网页），要怎么做呢？</p>
+<p>首先，我们先随便从什么地方开始，爬过一根蛛丝，遇到分叉就按照某种规则选择其中一条。按照这种方式不停爬行，迟早有一天，整个网络都会被蜘蛛爬过一遍。</p>
+<p>这就是爬虫的基本工作原理，也是爬虫为什么叫爬虫（或者蜘蛛）的原因。</p>
+<p>网络爬虫跟这只蜘蛛的区别在于，爬过的地方需要有地方存储它看到的信息。通常，由于这些信息非常庞大，我们需要使用数据库来进行存储。</p>
+<p>除了这种通用的爬虫，还有一些有特定目标的爬虫，比如在网络购物时，可能会需要用到的比价网站，就是通过爬虫，抓取所有购物网站的信息，对相同商品同一时间不同网站的价格，或者历史价格进行对比和分析。</p>
+<p>所以爬虫技术也是大数据的基础之一。由此可见，如何对抓取到的数据进行存储、整理、分析和最终的呈现，也非常重要。</p>
+<h2 id="实现爬虫需要的能力、工具及学习路径"><a href="#实现爬虫需要的能力、工具及学习路径" class="headerlink" title="实现爬虫需要的能力、工具及学习路径"></a>实现爬虫需要的能力、工具及学习路径</h2><p>知道了爬虫的基本工作原理，用Python去实现它需要什么工具也就大体有些概念了。</p>
+<ul>
+<li>编程基础知识<ul>
+<li>Python 编程基础</li>
+<li>Python 网络编程</li>
+<li>Python 模块使用</li>
+<li>数据结构和算法</li>
+</ul>
+</li>
+<li>Web 开发基本知识<ul>
+<li>HTML/DOM</li>
+<li>CSS</li>
+<li>JavaScript</li>
+</ul>
+</li>
+<li>正则表达式</li>
+<li>数据库基础</li>
+<li>……</li>
+</ul>
+<p>需要指出的是 Python 并非制作爬虫的唯一选择。你其实可以用任何喜欢的语言来实现。只是现阶段用 Python 来实现爬虫非常有利。一是因为 Python 的语法简洁易懂；二是已经有很多、很好用的专为 Python 爬虫设计的第三方模块（什么是模块，我们会在 Python 中级课程中讲授）。</p>
+<p>Python 的学习路径，猫老师已经在《Python 是个什么东西？》有简单说明。有兴趣的同学可以回顾一下。简单来说就是首先学基础的语法，然后包含数据结构和算法的高级特性，接下来，针对性学习爬虫所需的具体技术和模块。</p>
+<h2 id="例子程序：最右神回复"><a href="#例子程序：最右神回复" class="headerlink" title="例子程序：最右神回复"></a>例子程序：最右神回复</h2><p>有一个知名问答网站，网友们可以在上面提出任何你想问的问题，然后就会有热心的或者内行的网友认真书写回答。</p>
+<p>在这些回答中，有一些短小精悍，回味无穷的回复，被网友们戏称“神回复”。</p>
+<p>我们这一次的例子，就以它为“下手”的目标。通过一个爬虫，来方便的汇总这些“神回复”。</p>
+<p>这个爬虫属于定向聚焦爬虫。针对特定网站，特定目的。于是我们需要找到初始页面、根据规则抓取答案、对答案进行筛选和存储、通过小程序进行前端呈现。</p>
+<p>爬虫部分，因为非常简单，我们没有使用著名的 Scrapy 库，而是用相对较轻的 requests 库来执行 url 请求，用 lxml 库及正则表达式来解析抓取到的网页，并用 pymongo 进行数据存储和整理。</p>
+<p>前端呈现，我们制作了一个微信小程序。这里又涉及了 WebApp、HTML/CSS、RestApi、Hash 等等知识。好在这不是我们的重点，你也完全可以不去考虑，仅仅在自己的个人电脑上输出数据，开心就好。</p>
+<p>当然，也许有一天我们也会开始介绍如何进行前端的实现。在这里，就先<a href="https://www.v2ex.com/t/522988" target="_blank" rel="noopener">简单地体验一下吧</a>。</p>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>这个小程序的最初版本，Jason老师和猫老师两个人花了大约两天时间，分别写出了前端（小程序）和后端（爬虫）。其中，爬虫部分的核心部分不超过一百行 Python 代码。但是，初学者仍需要从最基本的知识和概念学习，方能理解那短短几十行代码究竟干了些什么。</p>
+<p>真正实用的爬虫，还需要考虑很多问题。比如，面对大量网站海量数据，如何提高抓取的效率；如何并行处理和存储；如何避免重复抓取，同时减少遗漏；如何将抓取的信息结构化存储；如何降低存储空间并提高查询性能和效率……不要怕，科技就是在不断发现、提问、研究、解决、迭代的过程中不断进步的。我们的学习也是一样。</p>
+<p>最后，祝所有想要学习爬虫的同学都能早日实现自己的爬虫程序。<br>但是千万要注意，<strong>请合理、合法地使用爬虫，并避免大量高频访问某个网站，不然不要怪老师没有警告你会被封IP、封账号哦！</strong></p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+      <div>
+        <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center;">
+  <img id="wechat_subscriber_qcode" src="/images/qrcode_for_gh_maols.jpg" alt="猫老师 wechat" style="width: 200px; max-width: 100%;">
+  <div>扫码关注，获取少儿编程最新资讯</div>
+</div>
+
+      </div>
+    
+
+    
+      
+    
+    
+
+    
+      <div>
+        
+
+
+
+
+  
+
+
+
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>猫老师</li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    
+    <a href="http://www.catxn.net/posts/2019/写给青少年的网页爬虫学习指南/" title="写给青少年的网页爬虫学习指南">http://www.catxn.net/posts/2019/写给青少年的网页爬虫学习指南/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-ND</a> 许可协议。转载请注明出处！</li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/少儿编程/" rel="tag"># 少儿编程</a>
+          
+            <a href="/tags/STEAM/" rel="tag"># STEAM</a>
+          
+            <a href="/tags/Python/" rel="tag"># Python</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/posts/2018/关于信奥/" rel="next" title="什么是信息学奥赛（NOIP）">
+                <i class="fa fa-chevron-left"></i> 什么是信息学奥赛（NOIP）
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/posts/2019/PYTHON是个什么东西/" rel="prev" title="PYTHON 是个什么东西">
+                PYTHON 是个什么东西 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/author.png" alt="猫老师">
+            
+              <p class="site-author-name" itemprop="name">猫老师</p>
+              <div class="site-description motion-element" itemprop="description">猫老师的个人博客：少儿编程，K12 STEAM 教育，软件开发，项目管理，历史故事等</div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">78</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">70</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/deltacat" title="GitHub &rarr; https://github.com/deltacat" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="http://weibo.com/deltacat" title="Weibo &rarr; http://weibo.com/deltacat" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="http://www.jianshu.com/u/HS379k" title="简书 &rarr; http://www.jianshu.com/u/HS379k" rel="noopener" target="_blank"><i class="fa fa-fw fa-edit"></i>简书</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="http://www.zhihu.com/people/deltacat" title="知乎 &rarr; http://www.zhihu.com/people/deltacat" rel="noopener" target="_blank"><i class="fa fa-fw fa-question-circle"></i>知乎</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友情链接
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.zongbutech.com" title="http://www.zongbutech.com" rel="noopener" target="_blank">宗布科技</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.tongxinvc.com" title="http://www.tongxinvc.com" rel="noopener" target="_blank">同芯资本</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.nero.com" title="http://www.nero.com" rel="noopener" target="_blank">尼禄软件</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://atjason.com" title="http://atjason.com" rel="noopener" target="_blank">Jason</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#缘起"><span class="nav-number">1.</span> <span class="nav-text">缘起</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是爬虫"><span class="nav-number">2.</span> <span class="nav-text">什么是爬虫</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#爬虫的基本工作原理"><span class="nav-number">3.</span> <span class="nav-text">爬虫的基本工作原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现爬虫需要的能力、工具及学习路径"><span class="nav-number">4.</span> <span class="nav-text">实现爬虫需要的能力、工具及学习路径</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#例子程序：最右神回复"><span class="nav-number">5.</span> <span class="nav-text">例子程序：最右神回复</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#小结"><span class="nav-number">6.</span> <span class="nav-text">小结</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">猫老师</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.0.1</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=7.0.1"></script>
+
+  <script src="/js/src/motion.js?v=7.0.1"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/src/affix.js?v=7.0.1"></script>
+
+  <script src="/js/src/schemes/pisces.js?v=7.0.1"></script>
+
+
+
+  
+  <script src="/js/src/scrollspy.js?v=7.0.1"></script>
+<script src="/js/src/post-details.js?v=7.0.1"></script>
+
+
+
+  
+
+
+  <script src="/js/src/next-boot.js?v=7.0.1"></script>
+
+
+  
+  
+
+
+  
+
+
+  
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
