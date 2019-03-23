@@ -293,7 +293,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">80</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">81</span></a>
 
   </li>
         
@@ -490,9 +490,33 @@
           
             
             
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/posts/2015/谈谈技术理想/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/posts/2015/谈谈技术理想/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
+          
+            <span id="/posts/2015/谈谈技术理想/" class="leancloud_visitors" data-flag-title="让我们谈谈技术理想">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读次数：</span>
+              
+                <span class="leancloud-visitors-count"></span>
+            </span>
           
 
           
@@ -560,7 +584,7 @@
 </blockquote>
 <p><strong>二</strong></p>
 <blockquote>
-<p>业务联系：<a href="mailto:&#x62;&#x69;&#x7a;&#x40;&#122;&#x6f;&#110;&#x67;&#x62;&#117;&#x74;&#101;&#99;&#104;&#x2e;&#x63;&#111;&#109;" target="_blank" rel="noopener">&#x62;&#x69;&#x7a;&#x40;&#122;&#x6f;&#110;&#x67;&#x62;&#117;&#x74;&#101;&#99;&#104;&#x2e;&#x63;&#111;&#109;</a><br>求职联系：<a href="mailto:&#x6a;&#111;&#x62;&#64;&#122;&#111;&#110;&#x67;&#x62;&#x75;&#x74;&#101;&#99;&#x68;&#46;&#x63;&#111;&#109;" target="_blank" rel="noopener">&#x6a;&#111;&#x62;&#64;&#122;&#111;&#110;&#x67;&#x62;&#x75;&#x74;&#101;&#99;&#x68;&#46;&#x63;&#111;&#109;</a></p>
+<p>业务联系：<a href="mailto:&#98;&#105;&#x7a;&#x40;&#x7a;&#x6f;&#x6e;&#x67;&#x62;&#117;&#x74;&#101;&#99;&#x68;&#x2e;&#99;&#x6f;&#109;" target="_blank" rel="noopener">&#98;&#105;&#x7a;&#x40;&#x7a;&#x6f;&#x6e;&#x67;&#x62;&#117;&#x74;&#101;&#99;&#x68;&#x2e;&#99;&#x6f;&#109;</a><br>求职联系：<a href="mailto:&#x6a;&#x6f;&#x62;&#64;&#122;&#x6f;&#110;&#103;&#98;&#x75;&#116;&#101;&#x63;&#104;&#x2e;&#99;&#111;&#109;" target="_blank" rel="noopener">&#x6a;&#x6f;&#x62;&#64;&#122;&#x6f;&#110;&#103;&#98;&#x75;&#116;&#101;&#x63;&#104;&#x2e;&#99;&#111;&#109;</a></p>
 </blockquote>
 <p><strong>三</strong></p>
 <blockquote>
@@ -677,7 +701,7 @@
           
 
   
-    <div class="comments" id="gitalk-container">
+    <div class="comments" id="comments">
     </div>
 
   
@@ -729,7 +753,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">80</span>
+                    <span class="site-state-item-count">81</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1195,33 +1219,36 @@
 
   
   
-
-
   
-    
 
-<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-
-
-
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+<script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
 
 
 
-<script src="//cdn.jsdelivr.net/npm/js-md5@0.7.3/src/md5.min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
 
 <script>
-  var gitalk = new Gitalk({
-    clientID: 'bae886dd48a18792a45a',
-    clientSecret: 'fc3025c5124ca4344e81952e67cee5edac98315f',
-    repo: 'deltacat.github.io',
-    owner: '',
-    admin: ['deltacat'],
-    id: md5(location.pathname),
-    distractionFreeMode: 'true'
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
   });
-  gitalk.render('gitalk-container');
+  new Valine({
+    el: '#comments',
+    verify: true,
+    notify: false,
+    appId: 'qg2bsJ1VhqFytc82tjqmCppJ-gzGzoHsz',
+    appKey: 'ALwv2J7EkC9u4zqVhdeVcQVa',
+    placeholder: '请留下你的足迹……\n留下邮箱可显示你的 gravatar 头像',
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: true
+  });
 </script>
+
+
+
 
   
 
