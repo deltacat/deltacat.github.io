@@ -560,7 +560,7 @@
 </blockquote>
 <p><strong>二</strong></p>
 <blockquote>
-<p>业务联系：<a href="mailto:&#x62;&#x69;&#122;&#x40;&#x7a;&#x6f;&#x6e;&#103;&#x62;&#117;&#116;&#x65;&#x63;&#x68;&#x2e;&#x63;&#x6f;&#x6d;" target="_blank" rel="noopener">&#x62;&#x69;&#122;&#x40;&#x7a;&#x6f;&#x6e;&#103;&#x62;&#117;&#116;&#x65;&#x63;&#x68;&#x2e;&#x63;&#x6f;&#x6d;</a><br>求职联系：<a href="mailto:&#x6a;&#111;&#x62;&#x40;&#x7a;&#111;&#x6e;&#103;&#x62;&#x75;&#x74;&#x65;&#x63;&#104;&#x2e;&#99;&#x6f;&#x6d;" target="_blank" rel="noopener">&#x6a;&#111;&#x62;&#x40;&#x7a;&#111;&#x6e;&#103;&#x62;&#x75;&#x74;&#x65;&#x63;&#104;&#x2e;&#99;&#x6f;&#x6d;</a></p>
+<p>业务联系：<a href="mailto:&#98;&#105;&#122;&#x40;&#122;&#111;&#x6e;&#x67;&#x62;&#117;&#x74;&#x65;&#99;&#104;&#46;&#x63;&#x6f;&#109;" target="_blank" rel="noopener">&#98;&#105;&#122;&#x40;&#122;&#111;&#x6e;&#x67;&#x62;&#117;&#x74;&#x65;&#99;&#104;&#46;&#x63;&#x6f;&#109;</a><br>求职联系：<a href="mailto:&#x6a;&#x6f;&#x62;&#x40;&#x7a;&#111;&#x6e;&#x67;&#x62;&#117;&#116;&#x65;&#99;&#x68;&#46;&#x63;&#111;&#109;" target="_blank" rel="noopener">&#x6a;&#x6f;&#x62;&#x40;&#x7a;&#111;&#x6e;&#x67;&#x62;&#117;&#116;&#x65;&#99;&#x68;&#46;&#x63;&#111;&#109;</a></p>
 </blockquote>
 <p><strong>三</strong></p>
 <blockquote>
@@ -675,6 +675,10 @@
 
           </div>
           
+
+  
+    <div class="comments" id="gitalk-container">
+    </div>
 
   
 
@@ -1192,6 +1196,32 @@
   
   
 
+
+  
+    
+
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+
+
+<script src="//cdn.jsdelivr.net/npm/js-md5@0.7.3/src/md5.min.js"></script>
+
+<script>
+  var gitalk = new Gitalk({
+    clientID: 'bae886dd48a18792a45a',
+    clientSecret: 'fc3025c5124ca4344e81952e67cee5edac98315f',
+    repo: 'deltacat.github.io',
+    owner: '',
+    admin: [''],
+    id: md5(location.pathname),
+    distractionFreeMode: 'true'
+  });
+  gitalk.render('gitalk-container');
+</script>
 
   
 
