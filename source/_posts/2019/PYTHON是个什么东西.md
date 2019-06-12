@@ -35,7 +35,7 @@ PYTHON，就是其中的一种。
 
 打开英汉字典，你会发现 python 是“大蟒蛇”的意思。会不会有点吓到呢？
 
-![](http://static.catxn.zongbutech.com/images/15470214394969.jpg-s)
+![](http://static.catxn.cn/images/15470214394969.jpg-s)
 
 不过其实它的名字并不是来自这种神秘的动物。之所以命名为 Python，是因为吉多非常喜欢一套英国电视喜剧《蒙提.派森的飞行马戏团》（Monty Python's Flying Circus）。
 
@@ -57,7 +57,7 @@ Python 在数据处理、AI、脚本编写等领域均排名第一，在 Web 编
 
 究竟是什么因素让 Python 具有如此生命力？
 
-![](http://static.catxn.zongbutech.com/images/15470204262277.jpg-s)
+![](http://static.catxn.cn/images/15470204262277.jpg-s)
 
 官网是这样“吹嘘”的：
 
@@ -113,7 +113,7 @@ python 入门课程，大致覆盖了基础语法部分，也对编程有了最�
 几乎没有人能够学完这个阶段的所有内容，即使是职业的程序员。通常我们只需要选择自己感兴趣的领域，针对性的学习就好。
 
 
-![](http://static.catxn.zongbutech.com/images/15469184280488.jpg-m)
+![](http://static.catxn.cn/images/15469184280488.jpg-m)
 
 
 其实，在学习完第二阶段之后，除了应用方向之外，还有一个竞赛方向可以选择，我们到时候再说。
@@ -132,7 +132,7 @@ python 入门课程，大致覆盖了基础语法部分，也对编程有了最�
 
 或扫码直接通过百度云小程序下载、
 
-![](http://static.catxn.zongbutech.com/images/15470244967222.jpg-s)
+![](http://static.catxn.cn/images/15470244967222.jpg-s)
 
 Python 的基础开发环境对系统需求并不高。大部分同学家里现有的电脑，无论是苹果系统还是 Windows 系统均可。只要下载相应的安装包安装即可。
 

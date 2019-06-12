@@ -9,7 +9,7 @@ categories: 夜猫茶舍
 >天下风云出我辈，一入江湖岁月催。皇图霸业谈笑间，不胜人生一场醉。提剑跨骑挥鬼雨，白骨如山鸟惊飞。尘事如潮人如水，只叹江湖几人回。——《笑傲江湖》
 
 (_唯美食与风景不可辜负_)
-![唯美食与风景不可辜负](http://static.catxn.zongbutech.com/images/jn1535/tea-02.jpg-o)
+![唯美食与风景不可辜负](http://static.catxn.cn/images/jn1535/tea-02.jpg-o)
 
 # 茶馆
 

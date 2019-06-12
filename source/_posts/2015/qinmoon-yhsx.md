@@ -7,7 +7,7 @@ s: qinmoon-yhsx
 
 《秦时明月之君临天下》开播。凑热闹写写秦始皇。
 
-![秦时明月-荧惑守心](http://static.catxn.zongbutech.com/images/acg/qinmoon-yhsx-01.JPG-o)
+![秦时明月-荧惑守心](http://static.catxn.cn/images/acg/qinmoon-yhsx-01.JPG-o)
 
 
 # 三桩异象
@@ -22,7 +22,7 @@ s: qinmoon-yhsx
 
 三件怪事第一件，有火流星坠落于东郡。火流星自古便是大凶的天象。这颗流星落地为石，然后就被百姓在上面刻上“始皇帝死而地分”。始皇派人逐户查问，找不出始作俑者，一怒之下把陨石落地附近的居民杀了个干净。
 
-![秦时明月-东郡流火](http://static.catxn.zongbutech.com/images/acg/qinmoon-yhsx-02.JPG-o)
+![秦时明月-东郡流火](http://static.catxn.cn/images/acg/qinmoon-yhsx-02.JPG-o)
 
 第二件便是这“荧惑守心”。
 
@@ -56,7 +56,7 @@ s: qinmoon-yhsx
 
 最后，放一张我喜欢的姬如千泷作为结束（好吧，跑题了）：
 
-![秦时明月·姬如千泷](http://static.catxn.zongbutech.com/images/acg/qinmoon-jrql.JPG-o)
+![秦时明月·姬如千泷](http://static.catxn.cn/images/acg/qinmoon-jrql.JPG-o)
 
 # 参考资料
 

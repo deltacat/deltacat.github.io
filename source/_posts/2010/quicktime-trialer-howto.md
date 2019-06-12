@@ -30,7 +30,7 @@ categories: 影音动漫
 
 打开快车的设置页面，找到“协议”，做如下修改：
 
-![image](http://static.catxn.zongbutech.com/images/quicktime_trailer.png-o) 
+![image](http://static.catxn.cn/images/quicktime_trailer.png-o) 
 
 现在，开始下载吧。
 

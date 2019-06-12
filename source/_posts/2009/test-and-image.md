@@ -10,7 +10,7 @@ tags: [测试, 建站, 贴图]
 
 （乌镇）
 
-![乌镇](http://static.catxn.zongbutech.com/images/wuzhen_01.jpg-o)
+![乌镇](http://static.catxn.cn/images/wuzhen_01.jpg-o)
 
-![乌镇](http://static.catxn.zongbutech.com/images/wuzhen_02.jpg-o)
+![乌镇](http://static.catxn.cn/images/wuzhen_02.jpg-o)
 
