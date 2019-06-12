@@ -41,8 +41,6 @@
 
 
 
-
-
   
   
   
@@ -78,21 +76,21 @@
 
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
 
-<link rel="stylesheet" href="/css/main.css?v=7.0.1">
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/author.png?v=7.0.1">
+<link rel="stylesheet" href="/css/main.css?v=7.1.2">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/author.png?v=7.0.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/author.png?v=7.1.2">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/author.png?v=7.0.1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/author.png?v=7.1.2">
 
 
-  <link rel="mask-icon" href="/images/author.png?v=7.0.1" color="#222">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/author.png?v=7.1.2">
+
+
+  <link rel="mask-icon" href="/images/author.png?v=7.1.2" color="#222">
 
 
 
@@ -105,8 +103,10 @@
   var CONFIG = {
     root: '/',
     scheme: 'Pisces',
-    version: '7.0.1',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false,"dimmer":false},
+    version: '7.1.2',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
     fancybox: false,
     fastclick: false,
     lazyload: false,
@@ -136,15 +136,15 @@
 <meta property="og:site_name" content="夜猫阿罗哈">
 <meta property="og:description" content="什么是 Python？如果你百度一下，它会告诉你，python 是一种计算机程序设计语言。 什么是计算机呢？ 信息时代，计算机无处不在。以我们生活中所见为例，平时用的台式电脑，笔记本电脑就是计算机，平板电脑、手机也是计算机，喜欢游戏的同学，家里或许有 PS4、XBOX，其实也都是计算机。 简单来说，计算机系统由“硬件”和“软件”构成 键盘、显示器、游戏手柄、声音输出设备等等，属于计算机的“硬件”。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://static.catxn.zongbutech.com/images/15470214394969.jpg-s">
-<meta property="og:image" content="http://static.catxn.zongbutech.com/images/15470204262277.jpg-s">
-<meta property="og:image" content="http://static.catxn.zongbutech.com/images/15469184280488.jpg-m">
-<meta property="og:image" content="http://static.catxn.zongbutech.com/images/15470244967222.jpg-s">
-<meta property="og:updated_time" content="2019-03-05T06:52:26.928Z">
+<meta property="og:image" content="http://static.catxn.cn/images/15470214394969.jpg-s">
+<meta property="og:image" content="http://static.catxn.cn/images/15470204262277.jpg-s">
+<meta property="og:image" content="http://static.catxn.cn/images/15469184280488.jpg-m">
+<meta property="og:image" content="http://static.catxn.cn/images/15470244967222.jpg-s">
+<meta property="og:updated_time" content="2019-06-12T02:25:07.543Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="PYTHON 是个什么东西">
 <meta name="twitter:description" content="什么是 Python？如果你百度一下，它会告诉你，python 是一种计算机程序设计语言。 什么是计算机呢？ 信息时代，计算机无处不在。以我们生活中所见为例，平时用的台式电脑，笔记本电脑就是计算机，平板电脑、手机也是计算机，喜欢游戏的同学，家里或许有 PS4、XBOX，其实也都是计算机。 简单来说，计算机系统由“硬件”和“软件”构成 键盘、显示器、游戏手柄、声音输出设备等等，属于计算机的“硬件”。">
-<meta name="twitter:image" content="http://static.catxn.zongbutech.com/images/15470214394969.jpg-s">
+<meta name="twitter:image" content="http://static.catxn.cn/images/15470214394969.jpg-s">
 
 
 
@@ -152,7 +152,8 @@
 
 
 
-
+  
+  
   <link rel="canonical" href="http://www.catxn.net/posts/2019/PYTHON是个什么东西/">
 
 
@@ -169,7 +170,7 @@
 
 
 
-  <script async src="//www.googletagmanager.com/gtag/js?id=[object Object]"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-7388145-4"></script>
   <script>
     var host = window.location.hostname;
     if (host !== "localhost" || !true) {
@@ -464,7 +465,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-03-05 14:52:26" itemprop="dateModified" datetime="2019-03-05T14:52:26+08:00">2019-03-05</time>
+                <time title="修改时间：2019-06-12 10:25:07" itemprop="dateModified" datetime="2019-06-12T10:25:07+08:00">2019-06-12</time>
               
             
           </span>
@@ -550,7 +551,7 @@
 <a id="more"></a>
 <h2 id="Python-的起源"><a href="#Python-的起源" class="headerlink" title="Python 的起源"></a>Python 的起源</h2><p>1989 年，在荷兰的阿姆斯特丹，吉多·范罗苏姆（Guido van Rossum）为了打发圣诞节的无趣，决心开发一个新的脚本解释程序，并于 1991 年发布了第一个 Python 的发行版本。</p>
 <p>打开英汉字典，你会发现 python 是“大蟒蛇”的意思。会不会有点吓到呢？</p>
-<p><img src="http://static.catxn.zongbutech.com/images/15470214394969.jpg-s" alt></p>
+<p><img src="http://static.catxn.cn/images/15470214394969.jpg-s" alt></p>
 <p>不过其实它的名字并不是来自这种神秘的动物。之所以命名为 Python，是因为吉多非常喜欢一套英国电视喜剧《蒙提.派森的飞行马戏团》（Monty Python’s Flying Circus）。</p>
 <p>Python 目前有两个版本：Python 2 和 Python 3。它们在某些地方有一些微妙的差异，而这些差异导致了 Python 3 并不能完全兼容 Python 2。</p>
 <p>官方将于 2020 年停止对 Python 2 的支持，但由于种种原因，Python 2 仍然在很多地方使用。如果你已经是专业的程序员，那么可能会遇到如何选择版本的问题，并需要了解两个版本的差异。但是对于学生来说，完全不必考虑这些，直接选用最新版本的 Python 3 就好。</p>
@@ -560,7 +561,7 @@
 <p>Python 在数据处理、AI、脚本编写等领域均排名第一，在 Web 编程和科学计算领域处于领先地位。</p>
 <p>它也是被大学计算机课程教授最多的语言。近年，中国的高考，也在逐渐增加 Python 的考试内容和范围。</p>
 <p>究竟是什么因素让 Python 具有如此生命力？</p>
-<p><img src="http://static.catxn.zongbutech.com/images/15470204262277.jpg-s" alt></p>
+<p><img src="http://static.catxn.cn/images/15470204262277.jpg-s" alt></p>
 <p>官网是这样“吹嘘”的：</p>
 <blockquote>
 <p>Python：<br>非常强大……而且很快；<br>和其它（编程语言）良好协同；<br>可在任何地方运行；<br>非常友好，易于学习；<br>开放；</p>
@@ -589,14 +590,14 @@
 <p>python 入门课程，大致覆盖了基础语法部分，也对编程有了最初、最直观的认识。</p>
 <p>高级特性部分，则学习更多的编程技巧。我们在中级课程，会学到这里的部分内容。基本上，大多数同学学到这个程度就已经足够，而且是真的很了不起。这个阶段的知识，已经足以做一些像模像样的小游戏、小工具，并为将来有可能进行的深入学习打下基础。</p>
 <p>第三个阶段，应用方向。能到达这个阶段的同学，一定都是学霸吧。:-D<br>几乎没有人能够学完这个阶段的所有内容，即使是职业的程序员。通常我们只需要选择自己感兴趣的领域，针对性的学习就好。</p>
-<p><img src="http://static.catxn.zongbutech.com/images/15469184280488.jpg-m" alt></p>
+<p><img src="http://static.catxn.cn/images/15469184280488.jpg-m" alt></p>
 <p>其实，在学习完第二阶段之后，除了应用方向之外，还有一个竞赛方向可以选择，我们到时候再说。</p>
 <h2 id="猫老师的-Python-课程"><a href="#猫老师的-Python-课程" class="headerlink" title="猫老师的 Python 课程"></a>猫老师的 Python 课程</h2><p>猫老师少儿编程，最新推出《趣味 Python 编程》课程。该课程定位为中级。推荐小学五年级至高中阶段的同学学习。</p>
 <p>已经学过基于“极客战记”的初级课程的同学，可以无缝对接该课程。零基础，低年级的同学，可以选择从其他课程开始，比如 Scratch 和 《游戏式 PYTHON 编程入门》。</p>
 <h2 id="如何开始下载安装"><a href="#如何开始下载安装" class="headerlink" title="如何开始下载安装"></a>如何开始下载安装</h2><p>《趣味Python编程·中级》介绍了如何下载。</p>
 <p>对电脑比较熟悉的同学，可以直接至官网下载。为了方便大家，猫老师也在百度盘放了最新版本的安装包：<a href="https://pan.baidu.com/s/1jZzVUH-Wb1APbkoPTe3Scw" target="_blank" rel="noopener">https://pan.baidu.com/s/1jZzVUH-Wb1APbkoPTe3Scw</a> 提取码: b91m </p>
 <p>或扫码直接通过百度云小程序下载、</p>
-<p><img src="http://static.catxn.zongbutech.com/images/15470244967222.jpg-s" alt></p>
+<p><img src="http://static.catxn.cn/images/15470244967222.jpg-s" alt></p>
 <p>Python 的基础开发环境对系统需求并不高。大部分同学家里现有的电脑，无论是苹果系统还是 Windows 系统均可。只要下载相应的安装包安装即可。</p>
 <h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>好啦，现在同学们已经了解了Python 是什么，让我们立刻开始跟猫老师快乐地学习吧！</p>
 <blockquote>
@@ -612,14 +613,6 @@
     
     
 
-    
-      <div>
-        <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center;">
-  <img id="wechat_subscriber_qcode" src="/images/qrcode_for_gh_maols.jpg" alt="猫老师 wechat" style="width: 200px; max-width: 100%;">
-  <div>扫码关注，获取少儿编程最新资讯</div>
-</div>
-
-      </div>
     
 
     
@@ -655,6 +648,9 @@
 
     <footer class="post-footer">
       
+        
+          
+        
         <div class="post-tags">
           
             <a href="/tags/少儿编程/" rel="tag"># 少儿编程</a>
@@ -979,6 +975,8 @@
           
 
           
+
+          
             <div class="links-of-author motion-element">
               
                 <span class="links-of-author-item">
@@ -1119,7 +1117,7 @@
 
 
 
-  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.0.1</div>
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.1.2</div>
 
 
 
@@ -1185,7 +1183,7 @@
 
 
   
-  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
 
   
   <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
@@ -1197,35 +1195,40 @@
   
 
 
-  <script src="/js/src/utils.js?v=7.0.1"></script>
+  <script src="/js/utils.js?v=7.1.2"></script>
 
-  <script src="/js/src/motion.js?v=7.0.1"></script>
-
-
-
-  
-  
-
-
-  <script src="/js/src/affix.js?v=7.0.1"></script>
-
-  <script src="/js/src/schemes/pisces.js?v=7.0.1"></script>
+  <script src="/js/motion.js?v=7.1.2"></script>
 
 
 
   
-  <script src="/js/src/scrollspy.js?v=7.0.1"></script>
-<script src="/js/src/post-details.js?v=7.0.1"></script>
+  
+
+
+  <script src="/js/affix.js?v=7.1.2"></script>
+
+  <script src="/js/schemes/pisces.js?v=7.1.2"></script>
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.1.2"></script>
+<script src="/js/post-details.js?v=7.1.2"></script>
 
 
 
   
 
 
-  <script src="/js/src/next-boot.js?v=7.0.1"></script>
+  <script src="/js/next-boot.js?v=7.1.2"></script>
 
 
   
+
+  
+
+  
+
   
   
 
@@ -1251,7 +1254,8 @@
     avatar: 'mm',
     meta: guest,
     pageSize: '10' || 10,
-    visitor: true
+    visitor: true,
+    lang: '' || 'zh-cn'
   });
 </script>
 
@@ -1265,6 +1269,8 @@
 
 
 
+
+  
 
   
 

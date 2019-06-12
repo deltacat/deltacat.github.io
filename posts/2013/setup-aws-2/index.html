@@ -41,8 +41,6 @@
 
 
 
-
-
   
   
   
@@ -78,21 +76,21 @@
 
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
 
-<link rel="stylesheet" href="/css/main.css?v=7.0.1">
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/author.png?v=7.0.1">
+<link rel="stylesheet" href="/css/main.css?v=7.1.2">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/author.png?v=7.0.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/author.png?v=7.1.2">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/author.png?v=7.0.1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/author.png?v=7.1.2">
 
 
-  <link rel="mask-icon" href="/images/author.png?v=7.0.1" color="#222">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/author.png?v=7.1.2">
+
+
+  <link rel="mask-icon" href="/images/author.png?v=7.1.2" color="#222">
 
 
 
@@ -105,8 +103,10 @@
   var CONFIG = {
     root: '/',
     scheme: 'Pisces',
-    version: '7.0.1',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false,"dimmer":false},
+    version: '7.1.2',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
     fancybox: false,
     fastclick: false,
     lazyload: false,
@@ -136,14 +136,14 @@
 <meta property="og:site_name" content="夜猫阿罗哈">
 <meta property="og:description" content="现在，我们已经有了一台EC2主机，具备了基本的硬件环境。下面，开始软件环境的配置。 第一步：连接服务器后面所有的一切，都需要在SSH终端窗口操作。首先，我们需要一个SSH客户端。PuTTY是很常用的工具。这里我们选用 Bitvise SSH Client。这个软件之前叫做“Tunnelier”。软件可以在 这里下载。 下载好后安装，在SSH这一栏填入必须的信息。主机名按实际地址填写，usernam">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://static.catxn.zongbutech.com/images/aws_04.png-o">
-<meta property="og:image" content="http://static.catxn.zongbutech.com/images/aws_05.png-o">
-<meta property="og:image" content="http://static.catxn.zongbutech.com/images/aws_06.png-o">
-<meta property="og:updated_time" content="2019-03-03T11:34:29.106Z">
+<meta property="og:image" content="http://static.catxn.cn/images/aws_04.png-o">
+<meta property="og:image" content="http://static.catxn.cn/images/aws_05.png-o">
+<meta property="og:image" content="http://static.catxn.cn/images/aws_06.png-o">
+<meta property="og:updated_time" content="2019-06-12T02:25:07.351Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="在 Amazon AWS 搭建及部署网站：（二）安装、配置软件，启动网站">
 <meta name="twitter:description" content="现在，我们已经有了一台EC2主机，具备了基本的硬件环境。下面，开始软件环境的配置。 第一步：连接服务器后面所有的一切，都需要在SSH终端窗口操作。首先，我们需要一个SSH客户端。PuTTY是很常用的工具。这里我们选用 Bitvise SSH Client。这个软件之前叫做“Tunnelier”。软件可以在 这里下载。 下载好后安装，在SSH这一栏填入必须的信息。主机名按实际地址填写，usernam">
-<meta name="twitter:image" content="http://static.catxn.zongbutech.com/images/aws_04.png-o">
+<meta name="twitter:image" content="http://static.catxn.cn/images/aws_04.png-o">
 
 
 
@@ -151,7 +151,8 @@
 
 
 
-
+  
+  
   <link rel="canonical" href="http://www.catxn.net/posts/2013/setup-aws-2/">
 
 
@@ -168,7 +169,7 @@
 
 
 
-  <script async src="//www.googletagmanager.com/gtag/js?id=[object Object]"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-7388145-4"></script>
   <script>
     var host = window.location.hostname;
     if (host !== "localhost" || !true) {
@@ -463,7 +464,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-03-03 19:34:29" itemprop="dateModified" datetime="2019-03-03T19:34:29+08:00">2019-03-03</time>
+                <time title="修改时间：2019-06-12 10:25:07" itemprop="dateModified" datetime="2019-06-12T10:25:07+08:00">2019-06-12</time>
               
             
           </span>
@@ -542,7 +543,7 @@
         <p>现在，我们已经有了一台EC2主机，具备了基本的硬件环境。下面，开始软件环境的配置。</p>
 <h1 id="第一步：连接服务器"><a href="#第一步：连接服务器" class="headerlink" title="第一步：连接服务器"></a>第一步：连接服务器</h1><p>后面所有的一切，都需要在SSH终端窗口操作。首先，我们需要一个SSH客户端。PuTTY是很常用的工具。这里我们选用 Bitvise SSH Client。这个软件之前叫做“Tunnelier”。软件可以在 <a href="http://www.bitvise.com/ssh-client-download" target="_blank" rel="noopener">这里下载</a>。</p>
 <p>下载好后安装，在SSH这一栏填入必须的信息。主机名按实际地址填写，username填ec2-user(EC2默认用户名)，在 User Keypaire manager 这里导入之前申请EC2过程中保存的Key Pair 文件（.pem格式）。这里Bitvise Client 的好处就体现出来了，PuTTy无法直接使用AWS格式的KeyPair文件，需要做一次转换，而Bitvise可以直接导入。导入后，选择 Initial Meth中导入的key的栏位，一般是 Slot 1，根据实际情况填写即可：</p>
-<p><img src="http://static.catxn.zongbutech.com/images/aws_04.png-o" alt="image"></p>
+<p><img src="http://static.catxn.cn/images/aws_04.png-o" alt="image"></p>
 <p>填写好后，点击Login，第一次回弹出一个确认窗，是否接受认证信息，点击确认，一切正常的话登陆成功后左侧导航栏会出现 “New terminal console”, “New SFTP Window”。点击 new terminal console，熟悉的Linux终端提示符就出现了。后面所有的命令行操作均在这里进行。</p>
 <p><a href="http://calebogden.com/wordpress-on-linux-in-the-amazon-cloud-with-mac" target="_blank" rel="noopener">这篇文章</a>中提到了如何直接以root身份登录。实际上，所有的操作均可用sudo命令来执行。如果不需要用SFTP向系统文件中上传文件，没有理由直接root登录。后面会介绍用SVN部署代码的方法，除了一些特殊情况，SFTP基本上不怎么需要了。</p>
 <a id="more"></a>
@@ -560,9 +561,9 @@
 <p>完成后重启服务。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service httpd restart</span><br></pre></td></tr></table></figure></p>
 <p>然后用浏览器打开 <code>http://&lt;host&gt;/phpmyadmin/setup</code>，管理界面就显示出来了。</p>
 <p>点击“新建主机”，输入主机名，主机地址（默认localhost），点击”认证“，选择”config“认证方式，输入数据库用户名和密码。点击保存。</p>
-<p><img src="http://static.catxn.zongbutech.com/images/aws_05.png-o" alt="image"></p>
+<p><img src="http://static.catxn.cn/images/aws_05.png-o" alt="image"></p>
 <p>完成后的的关键一步是，回到setup概要页后，注意要保存配置文件：</p>
-<p><img src="http://static.catxn.zongbutech.com/images/aws_06.png-o" alt="image"></p>
+<p><img src="http://static.catxn.cn/images/aws_06.png-o" alt="image"></p>
 <p>在这里保存后，所有的设置在真正回写到配置文件中。现在，在浏览器打开 <code>http://&lt;host&gt;/phpmyadmin</code>，登录进入数据库管理后台。如果成功的话，出于安全考虑，我们要删除配置文件和setup目录。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /var/www/html/phpMyAdmin      </span><br><span class="line">mv config/config.inc.php ./       </span><br><span class="line">rm –rf config/       </span><br><span class="line">rm –rf setup/</span><br></pre></td></tr></table></figure>
 <p>至此，phpMyAdmin配置完成。另外，为了快速开始，我们在认证方式中选择config方式。建议采用cookie方式连接。这里暂时不多做介绍。</p>
@@ -594,14 +595,6 @@
     
     
 
-    
-      <div>
-        <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center;">
-  <img id="wechat_subscriber_qcode" src="/images/qrcode_for_gh_maols.jpg" alt="猫老师 wechat" style="width: 200px; max-width: 100%;">
-  <div>扫码关注，获取少儿编程最新资讯</div>
-</div>
-
-      </div>
     
 
     
@@ -637,6 +630,9 @@
 
     <footer class="post-footer">
       
+        
+          
+        
         <div class="post-tags">
           
             <a href="/tags/建站/" rel="tag"># 建站</a>
@@ -959,6 +955,8 @@
           
 
           
+
+          
             <div class="links-of-author motion-element">
               
                 <span class="links-of-author-item">
@@ -1099,7 +1097,7 @@
 
 
 
-  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.0.1</div>
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.1.2</div>
 
 
 
@@ -1165,7 +1163,7 @@
 
 
   
-  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
 
   
   <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
@@ -1177,35 +1175,40 @@
   
 
 
-  <script src="/js/src/utils.js?v=7.0.1"></script>
+  <script src="/js/utils.js?v=7.1.2"></script>
 
-  <script src="/js/src/motion.js?v=7.0.1"></script>
-
-
-
-  
-  
-
-
-  <script src="/js/src/affix.js?v=7.0.1"></script>
-
-  <script src="/js/src/schemes/pisces.js?v=7.0.1"></script>
+  <script src="/js/motion.js?v=7.1.2"></script>
 
 
 
   
-  <script src="/js/src/scrollspy.js?v=7.0.1"></script>
-<script src="/js/src/post-details.js?v=7.0.1"></script>
+  
+
+
+  <script src="/js/affix.js?v=7.1.2"></script>
+
+  <script src="/js/schemes/pisces.js?v=7.1.2"></script>
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.1.2"></script>
+<script src="/js/post-details.js?v=7.1.2"></script>
 
 
 
   
 
 
-  <script src="/js/src/next-boot.js?v=7.0.1"></script>
+  <script src="/js/next-boot.js?v=7.1.2"></script>
 
 
   
+
+  
+
+  
+
   
   
 
@@ -1231,7 +1234,8 @@
     avatar: 'mm',
     meta: guest,
     pageSize: '10' || 10,
-    visitor: true
+    visitor: true,
+    lang: '' || 'zh-cn'
   });
 </script>
 
@@ -1245,6 +1249,8 @@
 
 
 
+
+  
 
   
 

@@ -41,8 +41,6 @@
 
 
 
-
-
   
   
   
@@ -78,21 +76,21 @@
 
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
 
-<link rel="stylesheet" href="/css/main.css?v=7.0.1">
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/author.png?v=7.0.1">
+<link rel="stylesheet" href="/css/main.css?v=7.1.2">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/author.png?v=7.0.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/author.png?v=7.1.2">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/author.png?v=7.0.1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/author.png?v=7.1.2">
 
 
-  <link rel="mask-icon" href="/images/author.png?v=7.0.1" color="#222">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/author.png?v=7.1.2">
+
+
+  <link rel="mask-icon" href="/images/author.png?v=7.1.2" color="#222">
 
 
 
@@ -105,8 +103,10 @@
   var CONFIG = {
     root: '/',
     scheme: 'Pisces',
-    version: '7.0.1',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false,"dimmer":false},
+    version: '7.1.2',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
     fancybox: false,
     fastclick: false,
     lazyload: false,
@@ -146,7 +146,8 @@
 
 
 
-
+  
+  
   <link rel="canonical" href="http://www.catxn.net/page/3/">
 
 
@@ -163,7 +164,7 @@
 
 
 
-  <script async src="//www.googletagmanager.com/gtag/js?id=[object Object]"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-7388145-4"></script>
   <script>
     var host = window.location.hostname;
     if (host !== "localhost" || !true) {
@@ -853,7 +854,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-03-03 19:34:29" itemprop="dateModified" datetime="2019-03-03T19:34:29+08:00">2019-03-03</time>
+                <time title="修改时间：2019-06-12 10:25:07" itemprop="dateModified" datetime="2019-06-12T10:25:07+08:00">2019-06-12</time>
               
             
           </span>
@@ -921,7 +922,7 @@
 <p>在这种需求下，Jekyll 落入了视线。</p>
 <p>Jekyll 是 GitHub 和 GitCafe 内置支持的静态网页生成引擎，可定制化程度也高。看上去对我们程序猴子这种不折腾会死的物种非常合适，但是经过一段时间的观察和分析后。感觉可能它并不是最佳选择。</p>
 <p>然后我看到了 cnfeat 这篇 <a href="http://cnfeat.com/2014/05/10/2014-05-11-how-to-build-a-blog/" target="_blank" rel="noopener">简明Github Pages与Hexo教程</a>。瞬间就被它吸引了。</p>
-<p><img src="http://static.catxn.zongbutech.com/images/acg/zespia001.jpg-o" alt="骗点击"></p>
+<p><img src="http://static.catxn.cn/images/acg/zespia001.jpg-o" alt="骗点击"></p>
 <h1 id="选哪个"><a href="#选哪个" class="headerlink" title="选哪个"></a>选哪个</h1><p>两个引擎都支持 markdown，都可以利用 git 库进行管理。最终发布的都是静态页面。这一点没什么大的差别。相对而言，Jekyll 发展较早，相对比较成熟，Hexo 是后起之秀，但是发展迅速。</p>
 <p>Jelly 是 github 的默认推荐。它的工作方式是把源文件上传至 github 的特定分支，然后 github 在发现有文件更新时，在服务端重新编译生成静态网页自动部署至 master 分支。</p>
 <p>Jekyll 的优势是发展比较成熟，因为是官方推荐，支持也比较好。看上去对程序员来说也更加优雅便于折腾。缺点是配置比较复杂，需要遵循一定的规范比如一定要放在 gh-pages 分支。因为是提交源文件在服务端生成，所以在内容发生变化到前端呈现会有一定延迟。</p>
@@ -2693,6 +2694,8 @@
           
 
           
+
+          
             <div class="links-of-author motion-element">
               
                 <span class="links-of-author-item">
@@ -2816,7 +2819,7 @@
 
 
 
-  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.0.1</div>
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.1.2</div>
 
 
 
@@ -2882,7 +2885,7 @@
 
 
   
-  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
 
   
   <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
@@ -2894,31 +2897,36 @@
   
 
 
-  <script src="/js/src/utils.js?v=7.0.1"></script>
+  <script src="/js/utils.js?v=7.1.2"></script>
 
-  <script src="/js/src/motion.js?v=7.0.1"></script>
-
-
-
-  
-  
-
-
-  <script src="/js/src/affix.js?v=7.0.1"></script>
-
-  <script src="/js/src/schemes/pisces.js?v=7.0.1"></script>
+  <script src="/js/motion.js?v=7.1.2"></script>
 
 
 
   
+  
+
+
+  <script src="/js/affix.js?v=7.1.2"></script>
+
+  <script src="/js/schemes/pisces.js?v=7.1.2"></script>
+
+
+
+  
 
   
 
 
-  <script src="/js/src/next-boot.js?v=7.0.1"></script>
+  <script src="/js/next-boot.js?v=7.1.2"></script>
 
 
   
+
+  
+
+  
+
   
   
 
@@ -2944,7 +2952,8 @@
     avatar: 'mm',
     meta: guest,
     pageSize: '10' || 10,
-    visitor: true
+    visitor: true,
+    lang: '' || 'zh-cn'
   });
 </script>
 
@@ -2956,6 +2965,8 @@
 
 
 
+
+  
 
   
 
