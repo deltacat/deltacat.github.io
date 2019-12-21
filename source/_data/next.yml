@@ -75,8 +75,8 @@ footer:
   # Beian icp information for Chinese users. In China, every legal website should have a beian icp in website footer.
   # http://www.miitbeian.gov.cn
   beian:
-    enable: false
-    icp:
+    enable: true
+    icp: 浙ICP备19020493号-1
 
   # -------------------------------------------------------------
   # Any custom text can be defined here.
@@ -266,9 +266,7 @@ android_chrome_color: "#222"
 # Options:
 #   enabled: If true, will enable custom logo
 #   image: Images's url, e.g. /uploads/custom-logo.jpg
-custom_logo:
-  enabled: false
-  image:
+custom_logo: 
 
 # Code Highlight theme
 # Available values: normal | night | night eighties | night blue | night bright
@@ -293,7 +291,7 @@ font:
   enable: true
 
   # Uri of fonts host, e.g. //fonts.googleapis.com (Default).
-  host: //fonts.useso.com
+  host: https://fonts.proxy.ustclug.org
 
   # Font options:
   # `external: true` will load this font family from `host` above.

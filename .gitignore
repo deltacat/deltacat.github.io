@@ -2,10 +2,9 @@
 Thumbs.db
 db.json
 *.log
+*.swp
+.deploy_git/
+.MWebMetaData/
 node_modules/
 public/
-.deploy*/
-*.swp
-source/_posts/.MWebMetaData
-themes
-!_config.yml
+themes/
