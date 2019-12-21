@@ -4,129 +4,57 @@
 
 
 
-
-
-
-
-
-
-
-  
-
-
-<html class="theme-next pisces use-motion" lang="zh-CN">
-<head><meta name="generator" content="Hexo 3.8.0">
+<html lang="zh-CN">
+<head>
   <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/author.png?v=7.4.2">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/author.png?v=7.4.2">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/author.png?v=7.4.2">
+  <link rel="mask-icon" href="/images/author.png?v=7.4.2" color="#222">
+  <link rel="alternate" href="/atom.xml" title="夜猫阿罗哈" type="application/atom+xml">
 
+<link rel="stylesheet" href="/css/main.css?v=7.4.2">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  
-  
-
-  
-    
-    
-  
-
-  
-    
-      
-    
-
-    
-  
-
-  
-
-  
-
-  
-
-  
-    
-    
-    <link rel="stylesheet" href="//fonts.useso.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext">
-  
-
-
-
-
-
-
+<link rel="stylesheet" href="//fonts.useso.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
 
-<link rel="stylesheet" href="/css/main.css?v=7.1.2">
 
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/author.png?v=7.1.2">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/author.png?v=7.1.2">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/author.png?v=7.1.2">
-
-
-  <link rel="mask-icon" href="/images/author.png?v=7.1.2" color="#222">
-
-
-
-
-
-
-
-<script id="hexo.configurations">
+<script id="hexo-configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
     scheme: 'Pisces',
-    version: '7.1.2',
-    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
-    back2top: true,
-    back2top_sidebar: false,
+    version: '7.4.2',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
     fancybox: false,
-    fastclick: false,
+    mediumzoom: false,
     lazyload: false,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    pangu: false,
     algolia: {
-      applicationID: '',
+      appID: '',
       apiKey: '',
       indexName: '',
       hits: {"per_page":10},
       labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: '',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    },
+    sidebarPadding: 40
   };
 </script>
-
-
-  
-
-
-
 
   <meta name="description" content="猫老师的个人博客：少儿编程，K12 STEAM 教育，软件开发，项目管理，历史故事等">
 <meta name="keywords" content="猫老师少儿编程,少儿编程,编程,K12,STEAM,STEM,JavaScript,NodeJs,历史,PMP">
@@ -139,42 +67,33 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="夜猫阿罗哈">
 <meta name="twitter:description" content="猫老师的个人博客：少儿编程，K12 STEAM 教育，软件开发，项目管理，历史故事等">
-
-
-
-  <link rel="alternate" href="/atom.xml" title="夜猫阿罗哈" type="application/atom+xml">
-
-
-
-  
-  
   <link rel="canonical" href="http://www.catxn.net/tags/建站/">
 
 
-
-<script id="page.configurations">
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
+    isHome: false,
+    isPost: false,
+    isPage: false,
+    isArchive: false
   };
 </script>
 
   <title>标签: 建站 | 夜猫阿罗哈</title>
   
-
-
-
-
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-7388145-4"></script>
-  <script>
-    var host = window.location.hostname;
-    if (host !== "localhost" || !true) {
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'UA-7388145-4');
-    }
-  </script>
-
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-7388145-4"></script>
+    <script>
+      var host = window.location.hostname;
+      if (host !== "localhost" || !true) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-7388145-4');
+      }
+    </script>
+  
 
 
 
@@ -185,7 +104,6 @@
 
   <noscript>
   <style>
-  .use-motion .motion-element,
   .use-motion .brand,
   .use-motion .menu-item,
   .sidebar-inner,
@@ -194,9 +112,8 @@
   .use-motion .comments,
   .use-motion .post-header,
   .use-motion .post-body,
-  .use-motion .collection-title { opacity: initial; }
+  .use-motion .collection-header { opacity: initial; }
 
-  .use-motion .logo,
   .use-motion .site-title,
   .use-motion .site-subtitle {
     opacity: initial;
@@ -210,475 +127,522 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
-
-  
-  
-    
-  
-
-  <div class="container sidebar-position-left ">
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
   <div class="site-meta">
-    
 
-    <div class="custom-logo-site-title">
+    <div>
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">夜猫阿罗哈</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
-    
-      
         <h1 class="site-subtitle" itemprop="description">暮然回首萧瑟处，也无风雨也无晴</h1>
       
-    
-    
   </div>
 
   <div class="site-nav-toggle">
-    <button aria-label="切换导航栏">
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
   </div>
 </div>
-
 
 
 <nav class="site-nav">
   
-    <ul id="menu" class="menu">
+  <ul id="menu" class="menu">
+      
       
         
         
+        <li class="menu-item menu-item-home">
+      
+    
+      
+      
         
-          
-          <li class="menu-item menu-item-home">
-
-    
-    
-    
+      
+        
+      
+        
       
     
 
-    
-      
-    
-
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
 
   </li>
+      
+    
+      
+      
         
         
+        <li class="menu-item menu-item-archives">
+      
+    
+      
+      
         
           
-          <li class="menu-item menu-item-archives">
-
-    
-    
-    
+        
+      
+        
+      
+        
       
     
 
-    
-      
-    
-
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">81</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">81</span></a>
 
   </li>
+      
+    
+      
+      
         
         
+        <li class="menu-item menu-item-about">
+      
+    
+      
+      
+        
+      
+        
+      
+        
+      
+    
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+
+  </li>
+      
+    
+      
+      
+        
+        
+        <li class="menu-item menu-item-tags">
+      
+    
+      
+      
+        
+      
+        
+      
         
           
-          <li class="menu-item menu-item-about">
-
-    
-    
-    
+        
       
     
 
-    
-      
-    
-
-    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">75</span></a>
 
   </li>
+      
+    
+      
+      
         
         
+        <li class="menu-item menu-item-categories">
+      
+    
+      
+      
+        
+      
         
           
-          <li class="menu-item menu-item-tags menu-item-active">
-
-    
-    
-    
+        
+      
+        
       
     
 
-    
-      
-    
-
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">75</span></a>
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">8</span></a>
 
   </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-categories">
-
-    
-    
-    
       
     
+  </ul>
 
-    
-      
-    
-
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">8</span></a>
-
-  </li>
-
-      
-      
-    </ul>
-  
-
-  
-
-  
 </nav>
-
-
-
-  
-
-
-
 </div>
     </header>
 
     
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
 
 
-    <main id="main" class="main">
+    <main class="main">
       <div class="main-inner">
         <div class="content-wrap">
-          
             
 
+  
     
     
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
+  
     
     
-
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
   
 
-
-          
-          <div id="content" class="content">
+          <div class="content">
             
 
   
   
   
-  <div class="post-block tag">
-
-    <div id="posts" class="posts-collapse">
+  <div class="post-block">
+    <div class="posts-collapse">
       <div class="collection-title">
-        <h2>建站<small>标签</small>
+        <h2 class="collection-header">建站
+          <small>标签</small>
         </h2>
       </div>
 
       
-        
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+
+  
+    
+    <div class="collection-year">
+      <h2 class="collection-header">2019</h2>
+    </div>
+  
+
+  <article itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
 
-      <h3 class="post-title">
-        
-          <a class="post-title-link" href="/posts/2019/use-valine-comments/" itemprop="url">
-            
-              <span itemprop="name">启用valine评论系统</span>
-            
-          </a>
-        
-      </h3>
-
       <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-03-23T12:00:00+08:00" content="2019-03-23">
+        <time itemprop="dateCreated"
+              datetime="2019-03-23T12:00:00+08:00"
+              content="2019-03-23">
           03-23
         </time>
       </div>
 
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
       <h3 class="post-title">
         
-          <a class="post-title-link" href="/posts/2017/theme-next/" itemprop="url">
-            
-              <span itemprop="name">新主题：Next</span>
-            
+          <a class="post-title-link" href="/posts/2019/use-valine-comments/" itemprop="url">
+            <span itemprop="name">启用valine评论系统</span>
           </a>
         
       </h3>
 
+    </header>
+  </article>
+
+
+
+  
+  
+
+  
+    
+    <div class="collection-year">
+      <h2 class="collection-header">2017</h2>
+    </div>
+  
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
       <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2017-03-29T15:24:08+08:00" content="2017-03-29">
+        <time itemprop="dateCreated"
+              datetime="2017-03-29T15:24:08+08:00"
+              content="2017-03-29">
           03-29
         </time>
       </div>
 
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
       <h3 class="post-title">
         
-          <a class="post-title-link" href="/posts/2016/wordpress-shortcode-redirect/" itemprop="url">
-            
-              <span itemprop="name">一行代码在wordpress任意页面实现重定向</span>
-            
+          <a class="post-title-link" href="/posts/2017/theme-next/" itemprop="url">
+            <span itemprop="name">新主题：Next</span>
           </a>
         
       </h3>
 
+    </header>
+  </article>
+
+
+
+  
+  
+
+  
+    
+    <div class="collection-year">
+      <h2 class="collection-header">2016</h2>
+    </div>
+  
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
       <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2016-06-15T09:28:42+08:00" content="2016-06-15">
+        <time itemprop="dateCreated"
+              datetime="2016-06-15T09:28:42+08:00"
+              content="2016-06-15">
           06-15
         </time>
       </div>
 
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
       <h3 class="post-title">
         
-          <a class="post-title-link" href="/posts/2016/在阿里云建设一个企业网站/" itemprop="url">
-            
-              <span itemprop="name">在阿里云建设一个企业网站</span>
-            
+          <a class="post-title-link" href="/posts/2016/wordpress-shortcode-redirect/" itemprop="url">
+            <span itemprop="name">一行代码在wordpress任意页面实现重定向</span>
           </a>
         
       </h3>
 
+    </header>
+  </article>
+
+
+
+  
+  
+
+  
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
       <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2016-05-15T12:00:00+08:00" content="2016-05-15">
+        <time itemprop="dateCreated"
+              datetime="2016-05-15T12:00:00+08:00"
+              content="2016-05-15">
           05-15
         </time>
       </div>
 
+      <h3 class="post-title">
+        
+          <a class="post-title-link" href="/posts/2016/在阿里云建设一个企业网站/" itemprop="url">
+            <span itemprop="name">在阿里云建设一个企业网站</span>
+          </a>
+        
+      </h3>
+
     </header>
   </article>
 
 
-      
-        
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+
+  
+    
+    <div class="collection-year">
+      <h2 class="collection-header">2015</h2>
+    </div>
+  
+
+  <article itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2015-03-31T11:40:17+08:00"
+              content="2015-03-31">
+          03-31
+        </time>
+      </div>
 
       <h3 class="post-title">
         
           <a class="post-title-link" href="/posts/2015/迁移到Hexo/" itemprop="url">
-            
-              <span itemprop="name">迁移到Hexo，双线镜像</span>
-            
+            <span itemprop="name">迁移到Hexo，双线镜像</span>
           </a>
         
       </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2015-03-31T11:40:17+08:00" content="2015-03-31">
-          03-31
-        </time>
-      </div>
 
     </header>
   </article>
 
 
-      
-        
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+
+  
+
+  <article itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2015-03-31T08:00:00+08:00"
+              content="2015-03-31">
+          03-31
+        </time>
+      </div>
 
       <h3 class="post-title">
         
           <a class="post-title-link" href="/posts/2015/hello-world/" itemprop="url">
-            
-              <span itemprop="name">Hello World</span>
-            
+            <span itemprop="name">Hello World</span>
           </a>
         
       </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2015-03-31T08:00:00+08:00" content="2015-03-31">
-          03-31
-        </time>
-      </div>
 
     </header>
   </article>
 
 
-      
-        
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+
+  
+    
+    <div class="collection-year">
+      <h2 class="collection-header">2013</h2>
+    </div>
+  
+
+  <article itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2013-09-01T17:40:15+08:00"
+              content="2013-09-01">
+          09-01
+        </time>
+      </div>
 
       <h3 class="post-title">
         
           <a class="post-title-link" href="/posts/2013/setup-aws-3/" itemprop="url">
-            
-              <span itemprop="name">在 Amazon AWS 搭建及部署网站：（三）开发及部署环境</span>
-            
+            <span itemprop="name">在 Amazon AWS 搭建及部署网站：（三）开发及部署环境</span>
           </a>
         
       </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2013-09-01T17:40:15+08:00" content="2013-09-01">
-          09-01
-        </time>
-      </div>
 
     </header>
   </article>
 
 
-      
-        
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+
+  
+
+  <article itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2013-09-01T16:18:39+08:00"
+              content="2013-09-01">
+          09-01
+        </time>
+      </div>
 
       <h3 class="post-title">
         
           <a class="post-title-link" href="/posts/2013/setup-aws-2/" itemprop="url">
-            
-              <span itemprop="name">在 Amazon AWS 搭建及部署网站：（二）安装、配置软件，启动网站</span>
-            
+            <span itemprop="name">在 Amazon AWS 搭建及部署网站：（二）安装、配置软件，启动网站</span>
           </a>
         
       </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2013-09-01T16:18:39+08:00" content="2013-09-01">
-          09-01
-        </time>
-      </div>
 
     </header>
   </article>
 
 
-      
-        
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+
+  
+
+  <article itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2013-09-01T15:41:13+08:00"
+              content="2013-09-01">
+          09-01
+        </time>
+      </div>
 
       <h3 class="post-title">
         
           <a class="post-title-link" href="/posts/2013/setup-aws-1/" itemprop="url">
-            
-              <span itemprop="name">在 Amazon AWS 搭建及部署网站：（一）申请、设置 AWS 服务</span>
-            
+            <span itemprop="name">在 Amazon AWS 搭建及部署网站：（一）申请、设置 AWS 服务</span>
           </a>
         
       </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2013-09-01T15:41:13+08:00" content="2013-09-01">
-          09-01
-        </time>
-      </div>
 
     </header>
   </article>
 
 
-      
-        
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+
+  
+
+  <article itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
 
-      <h3 class="post-title">
-        
-          <a class="post-title-link" href="/posts/2013/setup-aws-0/" itemprop="url">
-            
-              <span itemprop="name">在 Amazon AWS 搭建及部署网站：序</span>
-            
-          </a>
-        
-      </h3>
-
       <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2013-08-30T13:36:45+08:00" content="2013-08-30">
+        <time itemprop="dateCreated"
+              datetime="2013-08-30T13:36:45+08:00"
+              content="2013-08-30">
           08-30
         </time>
       </div>
 
+      <h3 class="post-title">
+        
+          <a class="post-title-link" href="/posts/2013/setup-aws-0/" itemprop="url">
+            <span itemprop="name">在 Amazon AWS 搭建及部署网站：序</span>
+          </a>
+        
+      </h3>
+
     </header>
   </article>
 
 
-      
-    </div>
 
+    </div>
   </div>
   
   
@@ -691,395 +655,197 @@
 
 
 
-
           </div>
           
 
         </div>
-        
           
   
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
   </div>
 
-  <aside id="sidebar" class="sidebar">
+  <aside class="sidebar">
     <div class="sidebar-inner">
 
-      
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
 
-      
-
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
-        <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-            
-              <img class="site-author-image" itemprop="image" src="/images/author.png" alt="猫老师">
-            
-              <p class="site-author-name" itemprop="name">猫老师</p>
-              <div class="site-description motion-element" itemprop="description">猫老师的个人博客：少儿编程，K12 STEAM 教育，软件开发，项目管理，历史故事等</div>
-          </div>
-
-          
-            <nav class="site-state motion-element">
-              
-                <div class="site-state-item site-state-posts">
-                
-                  <a href="/archives/">
-                
-                    <span class="site-state-item-count">81</span>
-                    <span class="site-state-item-name">日志</span>
-                  </a>
-                </div>
-              
-
-              
-                
-                
-                <div class="site-state-item site-state-categories">
-                  
-                    
-                      <a href="/categories/">
-                    
-                  
-                    
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">8</span>
-                    <span class="site-state-item-name">分类</span>
-                  </a>
-                </div>
-              
-
-              
-                
-                
-                <div class="site-state-item site-state-tags">
-                  
-                    
-                      <a href="/tags/">
-                    
-                  
-                    
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">72</span>
-                    <span class="site-state-item-name">标签</span>
-                  </a>
-                </div>
-              
-            </nav>
-          
-
-          
-            <div class="feed-link motion-element">
-              <a href="/atom.xml" rel="alternate">
-                <i class="fa fa-rss"></i>
-                RSS
-              </a>
-            </div>
-          
-
-          
-
-          
-            <div class="links-of-author motion-element">
-              
-                <span class="links-of-author-item">
-                  
-                  
-                    
-                  
-                  
-                    
-                  
-                  <a href="https://github.com/deltacat" title="GitHub &rarr; https://github.com/deltacat" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
-                </span>
-              
-                <span class="links-of-author-item">
-                  
-                  
-                    
-                  
-                  
-                    
-                  
-                  <a href="http://weibo.com/deltacat" title="Weibo &rarr; http://weibo.com/deltacat" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
-                </span>
-              
-                <span class="links-of-author-item">
-                  
-                  
-                    
-                  
-                  
-                    
-                  
-                  <a href="http://www.jianshu.com/u/HS379k" title="简书 &rarr; http://www.jianshu.com/u/HS379k" rel="noopener" target="_blank"><i class="fa fa-fw fa-edit"></i>简书</a>
-                </span>
-              
-                <span class="links-of-author-item">
-                  
-                  
-                    
-                  
-                  
-                    
-                  
-                  <a href="http://www.zhihu.com/people/deltacat" title="知乎 &rarr; http://www.zhihu.com/people/deltacat" rel="noopener" target="_blank"><i class="fa fa-fw fa-question-circle"></i>知乎</a>
-                </span>
-              
-            </div>
-          
-
-          
-
-          
-          
-            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
-              <div class="links-of-blogroll-title">
-                <i class="fa  fa-fw fa-link"></i>
-                友情链接
-              </div>
-              <ul class="links-of-blogroll-list">
-                
-                  <li class="links-of-blogroll-item">
-                    <a href="http://www.zongbutech.com" title="http://www.zongbutech.com" rel="noopener" target="_blank">宗布科技</a>
-                  </li>
-                
-                  <li class="links-of-blogroll-item">
-                    <a href="http://www.tongxinvc.com" title="http://www.tongxinvc.com" rel="noopener" target="_blank">同芯资本</a>
-                  </li>
-                
-                  <li class="links-of-blogroll-item">
-                    <a href="http://www.nero.com" title="http://www.nero.com" rel="noopener" target="_blank">尼禄软件</a>
-                  </li>
-                
-                  <li class="links-of-blogroll-item">
-                    <a href="http://atjason.com" title="http://atjason.com" rel="noopener" target="_blank">Jason</a>
-                  </li>
-                
-              </ul>
-            </div>
-          
-
-          
-            
-          
-          
-
-        </div>
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
       </div>
+      <!--/noindex-->
 
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+      src="/images/author.png"
+      alt="猫老师">
+  <p class="site-author-name" itemprop="name">猫老师</p>
+  <div class="site-description" itemprop="description">猫老师的个人博客：少儿编程，K12 STEAM 教育，软件开发，项目管理，历史故事等</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">81</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
       
+      
+      <div class="site-state-item site-state-categories">
+        
+          
+            <a href="/categories/">
+          
+        
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">分类</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/tags/">
+          
+        
+        <span class="site-state-item-count">75</span>
+        <span class="site-state-item-name">标签</span>
+        </a>
+      </div>
+    
+  </nav>
+</div>
+  <div class="feed-link motion-element">
+    <a href="/atom.xml" rel="alternate">
+      <i class="fa fa-rss"></i>RSS
+    </a>
+  </div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://github.com/deltacat" title="GitHub &rarr; https://github.com/deltacat" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="http://weibo.com/deltacat" title="Weibo &rarr; http://weibo.com/deltacat" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="http://www.jianshu.com/u/HS379k" title="简书 &rarr; http://www.jianshu.com/u/HS379k" rel="noopener" target="_blank"><i class="fa fa-fw fa-edit"></i>简书</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="http://www.zhihu.com/people/deltacat" title="知乎 &rarr; http://www.zhihu.com/people/deltacat" rel="noopener" target="_blank"><i class="fa fa-fw fa-question-circle"></i>知乎</a>
+      </span>
+    
+  </div>
 
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title">
+      <i class="fa fa-fw fa-link"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="http://www.zongbutech.com" title="http://www.zongbutech.com" rel="noopener" target="_blank">宗布科技</a>
+        </li>
       
+        <li class="links-of-blogroll-item">
+          <a href="http://www.tongxinvc.com" title="http://www.tongxinvc.com" rel="noopener" target="_blank">同芯资本</a>
+        </li>
+      
+        <li class="links-of-blogroll-item">
+          <a href="http://www.nero.com" title="http://www.nero.com" rel="noopener" target="_blank">尼禄软件</a>
+        </li>
+      
+        <li class="links-of-blogroll-item">
+          <a href="http://atjason.com" title="http://atjason.com" rel="noopener" target="_blank">Jason</a>
+        </li>
+      
+    </ul>
+  </div>
+
+      </div>
 
     </div>
   </aside>
-  
+  <div id="sidebar-dimmer"></div>
 
 
-        
       </div>
     </main>
 
-    <footer id="footer" class="footer">
+    <footer class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
-  <span class="with-love" id="animate">
+        
+  <div class="beian"><a href="http://www.beian.miit.gov.cn" rel="noopener" target="_blank">浙ICP备19020493号-1 </a><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=" rel="noopener" target="_blank"> </a>
+  </div>
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">猫老师</span>
-
-  
-
-  
 </div>
-
-
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
-
-
-
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0
+  </div>
   <span class="post-meta-divider">|</span>
-
-
-
-  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.1.2</div>
-
-
-
+  <div class="theme-info">
+      
+    主题 – <a href="https://pisces.theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.4.2
+  </div>
 
         
+
+
+
+
 
 
 
@@ -1091,111 +857,53 @@
         
       </div>
     </footer>
-
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
-    
-
-    
-
-    
-
-    
   </div>
 
   
-
-<script>
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
-</script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  <script src="/lib/jquery/index.js?v=3.4.1"></script>
-
-  
+  <script src="/lib/anime.min.js?v=3.1.0"></script>
   <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
   <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-
-  
-
-
-  <script src="/js/utils.js?v=7.1.2"></script>
-
-  <script src="/js/motion.js?v=7.1.2"></script>
-
-
-
-  
-  
-
-
-  <script src="/js/affix.js?v=7.1.2"></script>
-
-  <script src="/js/schemes/pisces.js?v=7.1.2"></script>
+<script src="/js/utils.js?v=7.4.2"></script><script src="/js/motion.js?v=7.4.2"></script>
+<script src="/js/schemes/pisces.js?v=7.4.2"></script>
+<script src="/js/next-boot.js?v=7.4.2"></script>
 
 
 
   
 
-  
 
 
-  <script src="/js/next-boot.js?v=7.1.2"></script>
 
 
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   
 
   
 
   
-  
 
-<script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
-
-
-
-<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
 
 <script>
+NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
   var GUEST = ['nick', 'mail', 'link'];
   var guest = 'nick,mail,link';
-  guest = guest.split(',').filter(function(item) {
-    return GUEST.indexOf(item) > -1;
+  guest = guest.split(',').filter(item => {
+    return GUEST.includes(item);
   });
   new Valine({
     el: '#comments',
@@ -1203,51 +911,18 @@
     notify: false,
     appId: 'qg2bsJ1VhqFytc82tjqmCppJ-gzGzoHsz',
     appKey: 'ALwv2J7EkC9u4zqVhdeVcQVa',
-    placeholder: '请留下你的足迹……\n留下邮箱可显示你的 gravatar 头像',
+    placeholder: "请留下你的足迹……\\n留下邮箱可显示你的 gravatar 头像",
     avatar: 'mm',
     meta: guest,
     pageSize: '10' || 10,
     visitor: true,
-    lang: '' || 'zh-cn'
+    lang: '' || 'zh-cn',
+    path: location.pathname,
+    recordIP: false,
+    serverURLs: ''
   });
+}, window.Valine);
 </script>
-
-
-
-
-
-  
-
-
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
 
 </body>
 </html>

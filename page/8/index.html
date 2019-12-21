@@ -4,129 +4,57 @@
 
 
 
-
-
-
-
-
-
-
-  
-
-
-<html class="theme-next pisces use-motion" lang="zh-CN">
-<head><meta name="generator" content="Hexo 3.8.0">
+<html lang="zh-CN">
+<head>
   <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/author.png?v=7.4.2">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/author.png?v=7.4.2">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/author.png?v=7.4.2">
+  <link rel="mask-icon" href="/images/author.png?v=7.4.2" color="#222">
+  <link rel="alternate" href="/atom.xml" title="夜猫阿罗哈" type="application/atom+xml">
 
+<link rel="stylesheet" href="/css/main.css?v=7.4.2">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  
-  
-
-  
-    
-    
-  
-
-  
-    
-      
-    
-
-    
-  
-
-  
-
-  
-
-  
-
-  
-    
-    
-    <link rel="stylesheet" href="//fonts.useso.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext">
-  
-
-
-
-
-
-
+<link rel="stylesheet" href="//fonts.useso.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
 
-<link rel="stylesheet" href="/css/main.css?v=7.1.2">
 
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/author.png?v=7.1.2">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/author.png?v=7.1.2">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/author.png?v=7.1.2">
-
-
-  <link rel="mask-icon" href="/images/author.png?v=7.1.2" color="#222">
-
-
-
-
-
-
-
-<script id="hexo.configurations">
+<script id="hexo-configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
     scheme: 'Pisces',
-    version: '7.1.2',
-    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
-    back2top: true,
-    back2top_sidebar: false,
+    version: '7.4.2',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
     fancybox: false,
-    fastclick: false,
+    mediumzoom: false,
     lazyload: false,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    pangu: false,
     algolia: {
-      applicationID: '',
+      appID: '',
       apiKey: '',
       indexName: '',
       hits: {"per_page":10},
       labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: '',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    },
+    sidebarPadding: 40
   };
 </script>
-
-
-  
-
-
-
 
   <meta name="description" content="猫老师的个人博客：少儿编程，K12 STEAM 教育，软件开发，项目管理，历史故事等">
 <meta name="keywords" content="猫老师少儿编程,少儿编程,编程,K12,STEAM,STEM,JavaScript,NodeJs,历史,PMP">
@@ -139,42 +67,33 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="夜猫阿罗哈">
 <meta name="twitter:description" content="猫老师的个人博客：少儿编程，K12 STEAM 教育，软件开发，项目管理，历史故事等">
-
-
-
-  <link rel="alternate" href="/atom.xml" title="夜猫阿罗哈" type="application/atom+xml">
-
-
-
-  
-  
   <link rel="canonical" href="http://www.catxn.net/page/8/">
 
 
-
-<script id="page.configurations">
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
+    isHome: true,
+    isPost: false,
+    isPage: false,
+    isArchive: false
   };
 </script>
 
-  <title>夜猫阿罗哈 – 暮然回首萧瑟处，也无风雨也无晴</title>
+  <title>夜猫阿罗哈 - 暮然回首萧瑟处，也无风雨也无晴</title>
   
-
-
-
-
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-7388145-4"></script>
-  <script>
-    var host = window.location.hostname;
-    if (host !== "localhost" || !true) {
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'UA-7388145-4');
-    }
-  </script>
-
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-7388145-4"></script>
+    <script>
+      var host = window.location.hostname;
+      if (host !== "localhost" || !true) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-7388145-4');
+      }
+    </script>
+  
 
 
 
@@ -185,7 +104,6 @@
 
   <noscript>
   <style>
-  .use-motion .motion-element,
   .use-motion .brand,
   .use-motion .menu-item,
   .sidebar-inner,
@@ -194,9 +112,8 @@
   .use-motion .comments,
   .use-motion .post-header,
   .use-motion .post-body,
-  .use-motion .collection-title { opacity: initial; }
+  .use-motion .collection-header { opacity: initial; }
 
-  .use-motion .logo,
   .use-motion .site-title,
   .use-motion .site-subtitle {
     opacity: initial;
@@ -210,196 +127,180 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
-
-  
-  
-    
-  
-
-  <div class="container sidebar-position-left 
-  page-home">
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
   <div class="site-meta">
-    
 
-    <div class="custom-logo-site-title">
+    <div>
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">夜猫阿罗哈</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
-    
-      
         <h1 class="site-subtitle" itemprop="description">暮然回首萧瑟处，也无风雨也无晴</h1>
       
-    
-    
   </div>
 
   <div class="site-nav-toggle">
-    <button aria-label="切换导航栏">
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
   </div>
 </div>
-
 
 
 <nav class="site-nav">
   
-    <ul id="menu" class="menu">
+  <ul id="menu" class="menu">
+      
       
         
         
+        <li class="menu-item menu-item-home">
+      
+    
+      
+      
         
-          
-          <li class="menu-item menu-item-home">
-
-    
-    
-    
+      
+        
+      
+        
       
     
 
-    
-      
-    
-
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
 
   </li>
+      
+    
+      
+      
         
         
+        <li class="menu-item menu-item-archives">
+      
+    
+      
+      
         
           
-          <li class="menu-item menu-item-archives">
-
-    
-    
-    
+        
+      
+        
+      
+        
       
     
 
-    
-      
-    
-
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">81</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">81</span></a>
 
   </li>
+      
+    
+      
+      
         
         
+        <li class="menu-item menu-item-about">
+      
+    
+      
+      
+        
+      
+        
+      
+        
+      
+    
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+
+  </li>
+      
+    
+      
+      
+        
+        
+        <li class="menu-item menu-item-tags">
+      
+    
+      
+      
+        
+      
+        
+      
         
           
-          <li class="menu-item menu-item-about">
-
-    
-    
-    
+        
       
     
 
-    
-      
-    
-
-    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">75</span></a>
 
   </li>
+      
+    
+      
+      
         
         
+        <li class="menu-item menu-item-categories">
+      
+    
+      
+      
+        
+      
         
           
-          <li class="menu-item menu-item-tags">
-
-    
-    
-    
+        
+      
+        
       
     
 
-    
-      
-    
-
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">75</span></a>
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">8</span></a>
 
   </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-categories">
-
-    
-    
-    
       
     
+  </ul>
 
-    
-      
-    
-
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">8</span></a>
-
-  </li>
-
-      
-      
-    </ul>
-  
-
-  
-
-  
 </nav>
-
-
-
-  
-
-
-
 </div>
     </header>
 
     
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
 
 
-    <main id="main" class="main">
+    <main class="main">
       <div class="main-inner">
         <div class="content-wrap">
-          
             
 
-          
-          <div id="content" class="content">
+          <div class="content">
             
-  <section id="posts" class="posts-expand">
-    
-      
 
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  <div class="posts-expand">
+        
   
   
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.catxn.net/posts/2009/wordpress-sendmail-issue/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -411,75 +312,51 @@
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="夜猫阿罗哈">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/posts/2009/wordpress-sendmail-issue/" class="post-title-link" itemprop="url">发现一个问题，WordPress 邮件发送</a>
-              
+        <h2 class="post-title" itemprop="name headline">
+          
             
-          </h2>
-        
+            <a href="/posts/2009/wordpress-sendmail-issue/" class="post-title-link" itemprop="url">发现一个问题，WordPress 邮件发送</a>
+          
+        </h2>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
+              <span class="post-meta-item-text">发表于</span>
 
               
                 
               
 
               <time title="创建时间：2009-12-31 18:13:51" itemprop="dateCreated datePublished" datetime="2009-12-31T18:13:51+08:00">2009-12-31</time>
+            </span>
+          
             
 
             
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
+              <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
+                <span class="post-meta-item-text">更新于</span>
                 <time title="修改时间：2015-04-01 20:25:34" itemprop="dateModified" datetime="2015-04-01T20:25:34+08:00">2015-04-01</time>
-              
+              </span>
             
-          </span>
-
           
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
+              <span class="post-meta-item-text">分类于</span>
               
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/建站心得/" itemprop="url" rel="index"><span itemprop="name">建站心得</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/建站心得/" itemprop="url" rel="index">
+                    <span itemprop="name">建站心得</span>
+                  </a>
+                </span>
 
                 
                 
@@ -488,33 +365,19 @@
           
 
           
-            
-            
-          
-
-          
-          
-            <span id="/posts/2009/wordpress-sendmail-issue/" class="leancloud_visitors" data-flag-title="发现一个问题，WordPress 邮件发送">
-              <span class="post-meta-divider">|</span>
+            <span id="/posts/2009/wordpress-sendmail-issue/" class="post-meta-item leancloud_visitors" data-flag-title="发现一个问题，WordPress 邮件发送" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
-              
-                <span class="post-meta-item-text">阅读次数：</span>
-              
-                <span class="leancloud-visitors-count"></span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
             </span>
           
-
-          
-
-          
-
-          
+  
+  
 
         </div>
       </header>
-    
 
     
     
@@ -522,12 +385,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
-          
-            <p>Google 了下，没有找到解答。</p>
+          <p>Google 了下，没有找到解答。</p>
 <p>现象如下：</p>
 <p>本博目前使用的是 WordPress 2.9，建立于 cPanel 主机。没有使用主机的邮件系统来接收邮件。也就是说，发送到catxn.cn域的所有邮件，理论上应由我自定义的邮局接收。</p>
 <p>我的自定义邮局在其他地方工作正常。但是，如果从 Wordpress 发送邮件至 catxn.cn 的邮件帐户，无论如何都无法接收到。</p>
@@ -536,61 +394,26 @@
 <p>搞定。</p>
 <p>需要在 cPanel 面板的邮件系统中做简单设置。将对应域名的 MX 记录指向邮局的域名。 :P</p>
 
-          
         
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
-
+  
+  
+  
 
     
-      
-
-  
-
+        
   
   
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.catxn.net/posts/2009/测试Flickr/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -602,75 +425,51 @@
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="夜猫阿罗哈">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/posts/2009/测试Flickr/" class="post-title-link" itemprop="url">测试Flickr投稿</a>
-              
+        <h2 class="post-title" itemprop="name headline">
+          
             
-          </h2>
-        
+            <a href="/posts/2009/测试Flickr/" class="post-title-link" itemprop="url">测试Flickr投稿</a>
+          
+        </h2>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
+              <span class="post-meta-item-text">发表于</span>
 
               
                 
               
 
               <time title="创建时间：2009-12-31 17:24:42" itemprop="dateCreated datePublished" datetime="2009-12-31T17:24:42+08:00">2009-12-31</time>
+            </span>
+          
             
 
             
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
+              <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
+                <span class="post-meta-item-text">更新于</span>
                 <time title="修改时间：2015-04-01 20:25:34" itemprop="dateModified" datetime="2015-04-01T20:25:34+08:00">2015-04-01</time>
-              
+              </span>
             
-          </span>
-
           
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
+              <span class="post-meta-item-text">分类于</span>
               
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/建站心得/" itemprop="url" rel="index"><span itemprop="name">建站心得</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/建站心得/" itemprop="url" rel="index">
+                    <span itemprop="name">建站心得</span>
+                  </a>
+                </span>
 
                 
                 
@@ -679,33 +478,19 @@
           
 
           
-            
-            
-          
-
-          
-          
-            <span id="/posts/2009/测试Flickr/" class="leancloud_visitors" data-flag-title="测试Flickr投稿">
-              <span class="post-meta-divider">|</span>
+            <span id="/posts/2009/测试Flickr/" class="post-meta-item leancloud_visitors" data-flag-title="测试Flickr投稿" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
-              
-                <span class="post-meta-item-text">阅读次数：</span>
-              
-                <span class="leancloud-visitors-count"></span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
             </span>
           
-
-          
-
-          
-
-          
+  
+  
 
         </div>
       </header>
-    
 
     
     
@@ -713,12 +498,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
-          
-            <p><div style="float: right; margin-left: 10px; margin-bottom: 10px;"><a href="http://www.flickr.com/photos/deltacatcn/4230877530/" title="photo sharing" target="_blank" rel="noopener"><img src="http://farm3.static.flickr.com/2759/4230877530_862b741d51_m.jpg" alt></a></div></p>
+          <p><div style="float: right; margin-left: 10px; margin-bottom: 10px;"><a href="http://www.flickr.com/photos/deltacatcn/4230877530/" title="photo sharing" target="_blank" rel="noopener"><img src="http://farm3.static.flickr.com/2759/4230877530_862b741d51_m.jpg" alt></a></div></p>
 <p><span style="font-size: 0.9em; margin-top: 0px;"><br><a href="http://www.flickr.com/photos/deltacatcn/4230877530/" target="_blank" rel="noopener">水光</a></span></p>
 <p>原由 <a href="http://www.flickr.com/people/deltacatcn/" target="_blank" rel="noopener">三角猫</a> 上載<br><br>刚发现了这个功能。</p>
 <p>Flickr 可以在后台设定一个（或多个）Blog账户，输入远程投递的API地址及必须资料后，Flickr就成为了一个远程写作工具。</p>
@@ -726,61 +506,26 @@
 <p>版面也是可以在Flickr自定义。</p>
 <p>这一篇就是用这种方式投递的。 :)</p>
 
-          
         
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
-
+  
+  
+  
 
     
-      
-
-  
-
+        
   
   
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.catxn.net/posts/2009/第九届动画学院奖/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -792,75 +537,51 @@
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="夜猫阿罗哈">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/posts/2009/第九届动画学院奖/" class="post-title-link" itemprop="url">第九届动画学院奖，《打，打个大西瓜》获奖</a>
-              
+        <h2 class="post-title" itemprop="name headline">
+          
             
-          </h2>
-        
+            <a href="/posts/2009/第九届动画学院奖/" class="post-title-link" itemprop="url">第九届动画学院奖，《打，打个大西瓜》获奖</a>
+          
+        </h2>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
+              <span class="post-meta-item-text">发表于</span>
 
               
                 
               
 
               <time title="创建时间：2009-12-30 22:51:23" itemprop="dateCreated datePublished" datetime="2009-12-30T22:51:23+08:00">2009-12-30</time>
+            </span>
+          
             
 
             
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
+              <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
+                <span class="post-meta-item-text">更新于</span>
                 <time title="修改时间：2015-04-01 20:25:34" itemprop="dateModified" datetime="2015-04-01T20:25:34+08:00">2015-04-01</time>
-              
+              </span>
             
-          </span>
-
           
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
+              <span class="post-meta-item-text">分类于</span>
               
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/影音动漫/" itemprop="url" rel="index"><span itemprop="name">影音动漫</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/影音动漫/" itemprop="url" rel="index">
+                    <span itemprop="name">影音动漫</span>
+                  </a>
+                </span>
 
                 
                 
@@ -869,33 +590,19 @@
           
 
           
-            
-            
-          
-
-          
-          
-            <span id="/posts/2009/第九届动画学院奖/" class="leancloud_visitors" data-flag-title="第九届动画学院奖，《打，打个大西瓜》获奖">
-              <span class="post-meta-divider">|</span>
+            <span id="/posts/2009/第九届动画学院奖/" class="post-meta-item leancloud_visitors" data-flag-title="第九届动画学院奖，《打，打个大西瓜》获奖" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
-              
-                <span class="post-meta-item-text">阅读次数：</span>
-              
-                <span class="leancloud-visitors-count"></span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
             </span>
           
-
-          
-
-          
-
-          
+  
+  
 
         </div>
       </header>
-    
 
     
     
@@ -903,12 +610,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
-          
-            <p>数月前这部个人制作的动画短片就在互联网上传播，并被部分网友赞为国产动画神作。晚上看电视，无意中看到“爱看电影”栏目在介绍第九届动画学院奖获奖及入围作品，看到最后，竟然就是这个大西瓜。</p>
+          <p>数月前这部个人制作的动画短片就在互联网上传播，并被部分网友赞为国产动画神作。晚上看电视，无意中看到“爱看电影”栏目在介绍第九届动画学院奖获奖及入围作品，看到最后，竟然就是这个大西瓜。</p>
 <p>获奖不完全名单：<br>最佳短片奖 空缺<br>最佳导演奖 《树上的鸡》 黄建乐<br>最佳创意奖 《自画像》 于明<br>最佳视觉效果奖 《月神》 谢简远<br>最佳技术应用奖 《打，打个大西瓜》 杨宇<br>最佳新人奖 《联合作业》 王博<br>实验影像奖 《柏树山上的风》 克里斯托弗·皮拉丹<br>电影频道爱画电影奖 《打，打个大西瓜》 杨宇</p>
 <p>===</p>
 <p>让我们再次欣赏一下这部《打，打个大西瓜》</p>
@@ -920,61 +622,26 @@
 <li><a href="http://www.bjanimation.com/web/show.asp?id=315" target="_blank" rel="noopener">第九届动画学院奖介绍</a></li>
 </ul>
 
-          
         
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
-
+  
+  
+  
 
     
-      
-
-  
-
+        
   
   
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.catxn.net/posts/2009/inserting-pictures/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -986,75 +653,51 @@
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="夜猫阿罗哈">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/posts/2009/inserting-pictures/" class="post-title-link" itemprop="url">外链图床及插件</a>
-              
+        <h2 class="post-title" itemprop="name headline">
+          
             
-          </h2>
-        
+            <a href="/posts/2009/inserting-pictures/" class="post-title-link" itemprop="url">外链图床及插件</a>
+          
+        </h2>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
+              <span class="post-meta-item-text">发表于</span>
 
               
                 
               
 
               <time title="创建时间：2009-12-30 11:35:21" itemprop="dateCreated datePublished" datetime="2009-12-30T11:35:21+08:00">2009-12-30</time>
+            </span>
+          
             
 
             
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
+              <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
+                <span class="post-meta-item-text">更新于</span>
                 <time title="修改时间：2015-04-01 20:25:34" itemprop="dateModified" datetime="2015-04-01T20:25:34+08:00">2015-04-01</time>
-              
+              </span>
             
-          </span>
-
           
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
+              <span class="post-meta-item-text">分类于</span>
               
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/建站心得/" itemprop="url" rel="index"><span itemprop="name">建站心得</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/建站心得/" itemprop="url" rel="index">
+                    <span itemprop="name">建站心得</span>
+                  </a>
+                </span>
 
                 
                 
@@ -1063,33 +706,19 @@
           
 
           
-            
-            
-          
-
-          
-          
-            <span id="/posts/2009/inserting-pictures/" class="leancloud_visitors" data-flag-title="外链图床及插件">
-              <span class="post-meta-divider">|</span>
+            <span id="/posts/2009/inserting-pictures/" class="post-meta-item leancloud_visitors" data-flag-title="外链图床及插件" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
-              
-                <span class="post-meta-item-text">阅读次数：</span>
-              
-                <span class="leancloud-visitors-count"></span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
             </span>
           
-
-          
-
-          
-
-          
+  
+  
 
         </div>
       </header>
-    
 
     
     
@@ -1097,14 +726,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
           <p>关于图床，国内的空间不大放心。目前想到的一些国外服务商提供的支持外链的图床，一个是微软的 Live SkyDriver，一个是 Yahoo 的 Flickr。</p>
           <!--noindex-->
           
-            <div class="post-button text-center">
+            <div class="post-button">
               <a class="btn" href="/posts/2009/inserting-pictures/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
@@ -1116,55 +741,21 @@
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
-
+  
+  
+  
 
     
-      
-
-  
-
+        
   
   
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.catxn.net/posts/2009/debug-dot-net/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1176,75 +767,51 @@
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="夜猫阿罗哈">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/posts/2009/debug-dot-net/" class="post-title-link" itemprop="url">在 .NET 程序中启用调试信息输出</a>
-              
+        <h2 class="post-title" itemprop="name headline">
+          
             
-          </h2>
-        
+            <a href="/posts/2009/debug-dot-net/" class="post-title-link" itemprop="url">在 .NET 程序中启用调试信息输出</a>
+          
+        </h2>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
+              <span class="post-meta-item-text">发表于</span>
 
               
                 
               
 
               <time title="创建时间：2009-12-29 14:41:39" itemprop="dateCreated datePublished" datetime="2009-12-29T14:41:39+08:00">2009-12-29</time>
+            </span>
+          
             
 
             
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
+              <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
+                <span class="post-meta-item-text">更新于</span>
                 <time title="修改时间：2015-04-01 20:25:34" itemprop="dateModified" datetime="2015-04-01T20:25:34+08:00">2015-04-01</time>
-              
+              </span>
             
-          </span>
-
           
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
+              <span class="post-meta-item-text">分类于</span>
               
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/软件开发/" itemprop="url" rel="index"><span itemprop="name">软件开发</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/软件开发/" itemprop="url" rel="index">
+                    <span itemprop="name">软件开发</span>
+                  </a>
+                </span>
 
                 
                 
@@ -1253,33 +820,19 @@
           
 
           
-            
-            
-          
-
-          
-          
-            <span id="/posts/2009/debug-dot-net/" class="leancloud_visitors" data-flag-title="在 .NET 程序中启用调试信息输出">
-              <span class="post-meta-divider">|</span>
+            <span id="/posts/2009/debug-dot-net/" class="post-meta-item leancloud_visitors" data-flag-title="在 .NET 程序中启用调试信息输出" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
-              
-                <span class="post-meta-item-text">阅读次数：</span>
-              
-                <span class="leancloud-visitors-count"></span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
             </span>
           
-
-          
-
-          
-
-          
+  
+  
 
         </div>
       </header>
-    
 
     
     
@@ -1287,15 +840,11 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
           <p>我们在开发当中，有时需要添加一些调试信息，以便在脱离集成调试环境时捕捉错误。Win32 编程常用 OutputDebugString 这个函数配合 DebugView 等工具来在程序中插入调试信息。为了将调试信息写入日志，也有很多方法和第三方工具，比如著名的 log4cxx。</p>
 <p>.Net 平台下，我们只需要简单的调用 Trace 和 Debug 这两个类，即可实现大部分调试输出。</p>
           <!--noindex-->
           
-            <div class="post-button text-center">
+            <div class="post-button">
               <a class="btn" href="/posts/2009/debug-dot-net/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
@@ -1307,55 +856,21 @@
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
-
+  
+  
+  
 
     
-      
-
-  
-
+        
   
   
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.catxn.net/posts/2009/基础设施完成/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1367,92 +882,55 @@
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="夜猫阿罗哈">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/posts/2009/基础设施完成/" class="post-title-link" itemprop="url">基础设施完成</a>
-              
+        <h2 class="post-title" itemprop="name headline">
+          
             
-          </h2>
-        
+            <a href="/posts/2009/基础设施完成/" class="post-title-link" itemprop="url">基础设施完成</a>
+          
+        </h2>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
+              <span class="post-meta-item-text">发表于</span>
 
               
                 
               
 
               <time title="创建时间：2009-12-25 17:33:11" itemprop="dateCreated datePublished" datetime="2009-12-25T17:33:11+08:00">2009-12-25</time>
+            </span>
+          
             
 
             
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
+              <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
+                <span class="post-meta-item-text">更新于</span>
                 <time title="修改时间：2015-04-01 20:25:34" itemprop="dateModified" datetime="2015-04-01T20:25:34+08:00">2015-04-01</time>
-              
-            
-          </span>
-
-          
-
-          
-            
+              </span>
             
           
 
           
-          
-            <span id="/posts/2009/基础设施完成/" class="leancloud_visitors" data-flag-title="基础设施完成">
-              <span class="post-meta-divider">|</span>
+            <span id="/posts/2009/基础设施完成/" class="post-meta-item leancloud_visitors" data-flag-title="基础设施完成" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
-              
-                <span class="post-meta-item-text">阅读次数：</span>
-              
-                <span class="leancloud-visitors-count"></span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
             </span>
           
-
-          
-
-          
-
-          
+  
+  
 
         </div>
       </header>
-    
 
     
     
@@ -1460,70 +938,30 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
-          
-            <p>空间开通，wordpress 安装配置完毕。</p>
+          <p>空间开通，wordpress 安装配置完毕。</p>
 <p>测试发帖，调整设置完成。</p>
 <p>下面该考虑备案的事情了。备案啊备案，最近好像有点难。</p>
 
-          
         
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
-
+  
+  
+  
 
     
-      
-
-  
-
+        
   
   
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.catxn.net/posts/2009/my-wordpress/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1535,75 +973,51 @@
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="夜猫阿罗哈">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/posts/2009/my-wordpress/" class="post-title-link" itemprop="url">WordPress</a>
-              
+        <h2 class="post-title" itemprop="name headline">
+          
             
-          </h2>
-        
+            <a href="/posts/2009/my-wordpress/" class="post-title-link" itemprop="url">WordPress</a>
+          
+        </h2>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
+              <span class="post-meta-item-text">发表于</span>
 
               
                 
               
 
               <time title="创建时间：2009-12-25 12:38:36" itemprop="dateCreated datePublished" datetime="2009-12-25T12:38:36+08:00">2009-12-25</time>
+            </span>
+          
             
 
             
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
+              <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
+                <span class="post-meta-item-text">更新于</span>
                 <time title="修改时间：2015-04-01 20:25:34" itemprop="dateModified" datetime="2015-04-01T20:25:34+08:00">2015-04-01</time>
-              
+              </span>
             
-          </span>
-
           
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
+              <span class="post-meta-item-text">分类于</span>
               
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/建站心得/" itemprop="url" rel="index"><span itemprop="name">建站心得</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/建站心得/" itemprop="url" rel="index">
+                    <span itemprop="name">建站心得</span>
+                  </a>
+                </span>
 
                 
                 
@@ -1612,33 +1026,19 @@
           
 
           
-            
-            
-          
-
-          
-          
-            <span id="/posts/2009/my-wordpress/" class="leancloud_visitors" data-flag-title="WordPress">
-              <span class="post-meta-divider">|</span>
+            <span id="/posts/2009/my-wordpress/" class="post-meta-item leancloud_visitors" data-flag-title="WordPress" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
-              
-                <span class="post-meta-item-text">阅读次数：</span>
-              
-                <span class="leancloud-visitors-count"></span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
             </span>
           
-
-          
-
-          
-
-          
+  
+  
 
         </div>
       </header>
-    
 
     
     
@@ -1646,16 +1046,12 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
           <p>在 Wopus IDC 申请了空间，开始我的 WordPress 之旅。</p>
 <p>首先是几个必要的 WordPress 设置。</p>
 <p>然后选择主题。这里我使用了 MG12 制作的 iNove 主题。</p>
           <!--noindex-->
           
-            <div class="post-button text-center">
+            <div class="post-button">
               <a class="btn" href="/posts/2009/my-wordpress/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
@@ -1667,55 +1063,21 @@
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
-
+  
+  
+  
 
     
-      
-
-  
-
+        
   
   
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.catxn.net/posts/2009/测试代码着色/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1727,75 +1089,51 @@
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="夜猫阿罗哈">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/posts/2009/测试代码着色/" class="post-title-link" itemprop="url">测试代码着色</a>
-              
+        <h2 class="post-title" itemprop="name headline">
+          
             
-          </h2>
-        
+            <a href="/posts/2009/测试代码着色/" class="post-title-link" itemprop="url">测试代码着色</a>
+          
+        </h2>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
+              <span class="post-meta-item-text">发表于</span>
 
               
                 
               
 
               <time title="创建时间：2009-12-24 11:33:31" itemprop="dateCreated datePublished" datetime="2009-12-24T11:33:31+08:00">2009-12-24</time>
+            </span>
+          
             
 
             
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
+              <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
+                <span class="post-meta-item-text">更新于</span>
                 <time title="修改时间：2015-04-01 20:25:34" itemprop="dateModified" datetime="2015-04-01T20:25:34+08:00">2015-04-01</time>
-              
+              </span>
             
-          </span>
-
           
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
+              <span class="post-meta-item-text">分类于</span>
               
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/软件开发/" itemprop="url" rel="index"><span itemprop="name">软件开发</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/软件开发/" itemprop="url" rel="index">
+                    <span itemprop="name">软件开发</span>
+                  </a>
+                </span>
 
                 
                 
@@ -1804,33 +1142,19 @@
           
 
           
-            
-            
-          
-
-          
-          
-            <span id="/posts/2009/测试代码着色/" class="leancloud_visitors" data-flag-title="测试代码着色">
-              <span class="post-meta-divider">|</span>
+            <span id="/posts/2009/测试代码着色/" class="post-meta-item leancloud_visitors" data-flag-title="测试代码着色" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
-              
-                <span class="post-meta-item-text">阅读次数：</span>
-              
-                <span class="leancloud-visitors-count"></span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
             </span>
           
-
-          
-
-          
-
-          
+  
+  
 
         </div>
       </header>
-    
 
     
     
@@ -1838,72 +1162,32 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
-          
-            <p>安装了一个插件: <a href="http://www.lastengine.com/syntax-highlighter-wordpress-plugin/" target="_blank" rel="noopener">Syntax Highlighter Wordpress Plugin</a></p>
+          <p>安装了一个插件: <a href="http://www.lastengine.com/syntax-highlighter-wordpress-plugin/" target="_blank" rel="noopener">Syntax Highlighter Wordpress Plugin</a></p>
 <p>对于经常可能会贴代码的Blog来说，这东西必不可少。测试一下先。<br>  <pre class="brush: csharp; auto-links: true; collapse: false; first-line: 1; gutter: true; highlight: [10,11]; html-script: false; light: false; ruler: false; smart-tabs: true; tab-size: 4; toolbar: true;">namespace WpfDemo3<br>{<br>    /// &lt;summary&gt;<br>    /// Interaction logic for Window1.xaml<br>    /// &lt;/summary&gt;<br>    public partial class Window1 : Window<br>    {<br>        public Window1()<br>        {<br>            InitializeComponent();<br>            this.DataContext = new MainViewModal();<br>        }<br>    }<br>}</pre></p>
 <p>在 WP 的管理后台，插件安装页搜索“Syntax Highlighter”，即可搜到一堆相关的插件，选一个喜欢的就行。:)</p>
 <p>发现大量类似插件都是基于 <a href="http://alexgorbatchev.com" target="_blank" rel="noopener">Alex Gorbatchev</a>&#160; 的代码着色插件制作的，真牛。</p>
 <p>这个插件与 Windows Live Writer 的插件 Source Code Plug-in 配合很好。</p>
 
-          
         
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
-
+  
+  
+  
 
     
-      
-
-  
-
+        
   
   
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.catxn.net/posts/2009/test-and-image/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1915,92 +1199,55 @@
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="夜猫阿罗哈">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/posts/2009/test-and-image/" class="post-title-link" itemprop="url">测试及贴图</a>
-              
+        <h2 class="post-title" itemprop="name headline">
+          
             
-          </h2>
-        
+            <a href="/posts/2009/test-and-image/" class="post-title-link" itemprop="url">测试及贴图</a>
+          
+        </h2>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
+              <span class="post-meta-item-text">发表于</span>
 
               
                 
               
 
               <time title="创建时间：2009-12-23 21:55:43" itemprop="dateCreated datePublished" datetime="2009-12-23T21:55:43+08:00">2009-12-23</time>
+            </span>
+          
             
 
             
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
+              <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
+                <span class="post-meta-item-text">更新于</span>
                 <time title="修改时间：2019-06-12 10:25:07" itemprop="dateModified" datetime="2019-06-12T10:25:07+08:00">2019-06-12</time>
-              
-            
-          </span>
-
-          
-
-          
-            
+              </span>
             
           
 
           
-          
-            <span id="/posts/2009/test-and-image/" class="leancloud_visitors" data-flag-title="测试及贴图">
-              <span class="post-meta-divider">|</span>
+            <span id="/posts/2009/test-and-image/" class="post-meta-item leancloud_visitors" data-flag-title="测试及贴图" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
-              
-                <span class="post-meta-item-text">阅读次数：</span>
-              
-                <span class="leancloud-visitors-count"></span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
             </span>
           
-
-          
-
-          
-
-          
+  
+  
 
         </div>
       </header>
-    
 
     
     
@@ -2008,14 +1255,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
           <p>国际惯例，测试离线发布，离线贴图。</p>
           <!--noindex-->
           
-            <div class="post-button text-center">
+            <div class="post-button">
               <a class="btn" href="/posts/2009/test-and-image/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
@@ -2027,55 +1270,21 @@
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
-
+  
+  
+  
 
     
-      
-
-  
-
+        
   
   
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.catxn.net/posts/2009/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -2087,92 +1296,55 @@
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="夜猫阿罗哈">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/posts/2009/hello-world/" class="post-title-link" itemprop="url">Hello world!</a>
-              
+        <h2 class="post-title" itemprop="name headline">
+          
             
-          </h2>
-        
+            <a href="/posts/2009/hello-world/" class="post-title-link" itemprop="url">Hello world!</a>
+          
+        </h2>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
+              <span class="post-meta-item-text">发表于</span>
 
               
                 
               
 
               <time title="创建时间：2009-12-23 08:39:12" itemprop="dateCreated datePublished" datetime="2009-12-23T08:39:12+08:00">2009-12-23</time>
+            </span>
+          
             
 
             
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
+              <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
+                <span class="post-meta-item-text">更新于</span>
                 <time title="修改时间：2019-03-04 10:21:06" itemprop="dateModified" datetime="2019-03-04T10:21:06+08:00">2019-03-04</time>
-              
-            
-          </span>
-
-          
-
-          
-            
+              </span>
             
           
 
           
-          
-            <span id="/posts/2009/hello-world/" class="leancloud_visitors" data-flag-title="Hello world!">
-              <span class="post-meta-divider">|</span>
+            <span id="/posts/2009/hello-world/" class="post-meta-item leancloud_visitors" data-flag-title="Hello world!" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
-              
-                <span class="post-meta-item-text">阅读次数：</span>
-              
-                <span class="leancloud-visitors-count"></span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
             </span>
           
-
-          
-
-          
-
-          
+  
+  
 
         </div>
       </header>
-    
 
     
     
@@ -2180,54 +1352,25 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
+          <p>Welcome to WordPress. This is your first post. Edit or delete it, then start blogging!</p>
 
-      
-        
-          
-            <p>Welcome to WordPress. This is your first post. Edit or delete it, then start blogging!</p>
-
-          
         
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
-
+  
+  
+  
 
     
-  </section>
+  </div>
 
   
   <nav class="pagination">
@@ -2240,390 +1383,193 @@
           
 
         </div>
-        
           
   
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
   </div>
 
-  <aside id="sidebar" class="sidebar">
+  <aside class="sidebar">
     <div class="sidebar-inner">
 
-      
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
 
-      
-
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
-        <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-            
-              <img class="site-author-image" itemprop="image" src="/images/author.png" alt="猫老师">
-            
-              <p class="site-author-name" itemprop="name">猫老师</p>
-              <div class="site-description motion-element" itemprop="description">猫老师的个人博客：少儿编程，K12 STEAM 教育，软件开发，项目管理，历史故事等</div>
-          </div>
-
-          
-            <nav class="site-state motion-element">
-              
-                <div class="site-state-item site-state-posts">
-                
-                  <a href="/archives/">
-                
-                    <span class="site-state-item-count">81</span>
-                    <span class="site-state-item-name">日志</span>
-                  </a>
-                </div>
-              
-
-              
-                
-                
-                <div class="site-state-item site-state-categories">
-                  
-                    
-                      <a href="/categories/">
-                    
-                  
-                    
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">8</span>
-                    <span class="site-state-item-name">分类</span>
-                  </a>
-                </div>
-              
-
-              
-                
-                
-                <div class="site-state-item site-state-tags">
-                  
-                    
-                      <a href="/tags/">
-                    
-                  
-                    
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">72</span>
-                    <span class="site-state-item-name">标签</span>
-                  </a>
-                </div>
-              
-            </nav>
-          
-
-          
-            <div class="feed-link motion-element">
-              <a href="/atom.xml" rel="alternate">
-                <i class="fa fa-rss"></i>
-                RSS
-              </a>
-            </div>
-          
-
-          
-
-          
-            <div class="links-of-author motion-element">
-              
-                <span class="links-of-author-item">
-                  
-                  
-                    
-                  
-                  
-                    
-                  
-                  <a href="https://github.com/deltacat" title="GitHub &rarr; https://github.com/deltacat" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
-                </span>
-              
-                <span class="links-of-author-item">
-                  
-                  
-                    
-                  
-                  
-                    
-                  
-                  <a href="http://weibo.com/deltacat" title="Weibo &rarr; http://weibo.com/deltacat" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
-                </span>
-              
-                <span class="links-of-author-item">
-                  
-                  
-                    
-                  
-                  
-                    
-                  
-                  <a href="http://www.jianshu.com/u/HS379k" title="简书 &rarr; http://www.jianshu.com/u/HS379k" rel="noopener" target="_blank"><i class="fa fa-fw fa-edit"></i>简书</a>
-                </span>
-              
-                <span class="links-of-author-item">
-                  
-                  
-                    
-                  
-                  
-                    
-                  
-                  <a href="http://www.zhihu.com/people/deltacat" title="知乎 &rarr; http://www.zhihu.com/people/deltacat" rel="noopener" target="_blank"><i class="fa fa-fw fa-question-circle"></i>知乎</a>
-                </span>
-              
-            </div>
-          
-
-          
-
-          
-          
-            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
-              <div class="links-of-blogroll-title">
-                <i class="fa  fa-fw fa-link"></i>
-                友情链接
-              </div>
-              <ul class="links-of-blogroll-list">
-                
-                  <li class="links-of-blogroll-item">
-                    <a href="http://www.zongbutech.com" title="http://www.zongbutech.com" rel="noopener" target="_blank">宗布科技</a>
-                  </li>
-                
-                  <li class="links-of-blogroll-item">
-                    <a href="http://www.tongxinvc.com" title="http://www.tongxinvc.com" rel="noopener" target="_blank">同芯资本</a>
-                  </li>
-                
-                  <li class="links-of-blogroll-item">
-                    <a href="http://www.nero.com" title="http://www.nero.com" rel="noopener" target="_blank">尼禄软件</a>
-                  </li>
-                
-                  <li class="links-of-blogroll-item">
-                    <a href="http://atjason.com" title="http://atjason.com" rel="noopener" target="_blank">Jason</a>
-                  </li>
-                
-              </ul>
-            </div>
-          
-
-          
-            
-          
-          
-
-        </div>
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
       </div>
+      <!--/noindex-->
 
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+      src="/images/author.png"
+      alt="猫老师">
+  <p class="site-author-name" itemprop="name">猫老师</p>
+  <div class="site-description" itemprop="description">猫老师的个人博客：少儿编程，K12 STEAM 教育，软件开发，项目管理，历史故事等</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">81</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
       
+      
+      <div class="site-state-item site-state-categories">
+        
+          
+            <a href="/categories/">
+          
+        
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">分类</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/tags/">
+          
+        
+        <span class="site-state-item-count">75</span>
+        <span class="site-state-item-name">标签</span>
+        </a>
+      </div>
+    
+  </nav>
+</div>
+  <div class="feed-link motion-element">
+    <a href="/atom.xml" rel="alternate">
+      <i class="fa fa-rss"></i>RSS
+    </a>
+  </div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://github.com/deltacat" title="GitHub &rarr; https://github.com/deltacat" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="http://weibo.com/deltacat" title="Weibo &rarr; http://weibo.com/deltacat" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="http://www.jianshu.com/u/HS379k" title="简书 &rarr; http://www.jianshu.com/u/HS379k" rel="noopener" target="_blank"><i class="fa fa-fw fa-edit"></i>简书</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="http://www.zhihu.com/people/deltacat" title="知乎 &rarr; http://www.zhihu.com/people/deltacat" rel="noopener" target="_blank"><i class="fa fa-fw fa-question-circle"></i>知乎</a>
+      </span>
+    
+  </div>
 
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title">
+      <i class="fa fa-fw fa-link"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="http://www.zongbutech.com" title="http://www.zongbutech.com" rel="noopener" target="_blank">宗布科技</a>
+        </li>
       
+        <li class="links-of-blogroll-item">
+          <a href="http://www.tongxinvc.com" title="http://www.tongxinvc.com" rel="noopener" target="_blank">同芯资本</a>
+        </li>
+      
+        <li class="links-of-blogroll-item">
+          <a href="http://www.nero.com" title="http://www.nero.com" rel="noopener" target="_blank">尼禄软件</a>
+        </li>
+      
+        <li class="links-of-blogroll-item">
+          <a href="http://atjason.com" title="http://atjason.com" rel="noopener" target="_blank">Jason</a>
+        </li>
+      
+    </ul>
+  </div>
+
+      </div>
 
     </div>
   </aside>
-  
+  <div id="sidebar-dimmer"></div>
 
 
-        
       </div>
     </main>
 
-    <footer id="footer" class="footer">
+    <footer class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
-  <span class="with-love" id="animate">
+        
+  <div class="beian"><a href="http://www.beian.miit.gov.cn" rel="noopener" target="_blank">浙ICP备19020493号-1 </a><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=" rel="noopener" target="_blank"> </a>
+  </div>
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">猫老师</span>
-
-  
-
-  
 </div>
-
-
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
-
-
-
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0
+  </div>
   <span class="post-meta-divider">|</span>
-
-
-
-  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.1.2</div>
-
-
-
+  <div class="theme-info">
+      
+    主题 – <a href="https://pisces.theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.4.2
+  </div>
 
         
+
+
+
+
 
 
 
@@ -2635,111 +1581,53 @@
         
       </div>
     </footer>
-
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
-    
-
-    
-
-    
-
-    
   </div>
 
   
-
-<script>
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
-</script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  <script src="/lib/jquery/index.js?v=3.4.1"></script>
-
-  
+  <script src="/lib/anime.min.js?v=3.1.0"></script>
   <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
   <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-
-  
-
-
-  <script src="/js/utils.js?v=7.1.2"></script>
-
-  <script src="/js/motion.js?v=7.1.2"></script>
-
-
-
-  
-  
-
-
-  <script src="/js/affix.js?v=7.1.2"></script>
-
-  <script src="/js/schemes/pisces.js?v=7.1.2"></script>
+<script src="/js/utils.js?v=7.4.2"></script><script src="/js/motion.js?v=7.4.2"></script>
+<script src="/js/schemes/pisces.js?v=7.4.2"></script>
+<script src="/js/next-boot.js?v=7.4.2"></script>
 
 
 
   
 
-  
 
 
-  <script src="/js/next-boot.js?v=7.1.2"></script>
 
 
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   
 
   
 
   
-  
 
-<script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
-
-
-
-<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
 
 <script>
+NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
   var GUEST = ['nick', 'mail', 'link'];
   var guest = 'nick,mail,link';
-  guest = guest.split(',').filter(function(item) {
-    return GUEST.indexOf(item) > -1;
+  guest = guest.split(',').filter(item => {
+    return GUEST.includes(item);
   });
   new Valine({
     el: '#comments',
@@ -2747,51 +1635,18 @@
     notify: false,
     appId: 'qg2bsJ1VhqFytc82tjqmCppJ-gzGzoHsz',
     appKey: 'ALwv2J7EkC9u4zqVhdeVcQVa',
-    placeholder: '请留下你的足迹……\n留下邮箱可显示你的 gravatar 头像',
+    placeholder: "请留下你的足迹……\\n留下邮箱可显示你的 gravatar 头像",
     avatar: 'mm',
     meta: guest,
     pageSize: '10' || 10,
     visitor: true,
-    lang: '' || 'zh-cn'
+    lang: '' || 'zh-cn',
+    path: location.pathname,
+    recordIP: false,
+    serverURLs: ''
   });
+}, window.Valine);
 </script>
-
-
-
-
-
-  
-
-
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
 
 </body>
 </html>

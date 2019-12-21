@@ -4,129 +4,57 @@
 
 
 
-
-
-
-
-
-
-
-  
-
-
-<html class="theme-next pisces use-motion" lang="zh-CN">
-<head><meta name="generator" content="Hexo 3.8.0">
+<html lang="zh-CN">
+<head>
   <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/author.png?v=7.4.2">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/author.png?v=7.4.2">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/author.png?v=7.4.2">
+  <link rel="mask-icon" href="/images/author.png?v=7.4.2" color="#222">
+  <link rel="alternate" href="/atom.xml" title="夜猫阿罗哈" type="application/atom+xml">
 
+<link rel="stylesheet" href="/css/main.css?v=7.4.2">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  
-  
-
-  
-    
-    
-  
-
-  
-    
-      
-    
-
-    
-  
-
-  
-
-  
-
-  
-
-  
-    
-    
-    <link rel="stylesheet" href="//fonts.useso.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext">
-  
-
-
-
-
-
-
+<link rel="stylesheet" href="//fonts.useso.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
 
-<link rel="stylesheet" href="/css/main.css?v=7.1.2">
 
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/author.png?v=7.1.2">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/author.png?v=7.1.2">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/author.png?v=7.1.2">
-
-
-  <link rel="mask-icon" href="/images/author.png?v=7.1.2" color="#222">
-
-
-
-
-
-
-
-<script id="hexo.configurations">
+<script id="hexo-configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
     scheme: 'Pisces',
-    version: '7.1.2',
-    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
-    back2top: true,
-    back2top_sidebar: false,
+    version: '7.4.2',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
     fancybox: false,
-    fastclick: false,
+    mediumzoom: false,
     lazyload: false,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    pangu: false,
     algolia: {
-      applicationID: '',
+      appID: '',
       apiKey: '',
       indexName: '',
       hits: {"per_page":10},
       labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: '',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    },
+    sidebarPadding: 40
   };
 </script>
-
-
-  
-
-
-
 
   <meta name="description" content="猫老师的个人博客：少儿编程，K12 STEAM 教育，软件开发，项目管理，历史故事等">
 <meta name="keywords" content="猫老师少儿编程,少儿编程,编程,K12,STEAM,STEM,JavaScript,NodeJs,历史,PMP">
@@ -139,42 +67,33 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="夜猫阿罗哈">
 <meta name="twitter:description" content="猫老师的个人博客：少儿编程，K12 STEAM 教育，软件开发，项目管理，历史故事等">
-
-
-
-  <link rel="alternate" href="/atom.xml" title="夜猫阿罗哈" type="application/atom+xml">
-
-
-
-  
-  
   <link rel="canonical" href="http://www.catxn.net/page/4/">
 
 
-
-<script id="page.configurations">
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
+    isHome: true,
+    isPost: false,
+    isPage: false,
+    isArchive: false
   };
 </script>
 
-  <title>夜猫阿罗哈 – 暮然回首萧瑟处，也无风雨也无晴</title>
+  <title>夜猫阿罗哈 - 暮然回首萧瑟处，也无风雨也无晴</title>
   
-
-
-
-
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-7388145-4"></script>
-  <script>
-    var host = window.location.hostname;
-    if (host !== "localhost" || !true) {
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'UA-7388145-4');
-    }
-  </script>
-
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-7388145-4"></script>
+    <script>
+      var host = window.location.hostname;
+      if (host !== "localhost" || !true) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-7388145-4');
+      }
+    </script>
+  
 
 
 
@@ -185,7 +104,6 @@
 
   <noscript>
   <style>
-  .use-motion .motion-element,
   .use-motion .brand,
   .use-motion .menu-item,
   .sidebar-inner,
@@ -194,9 +112,8 @@
   .use-motion .comments,
   .use-motion .post-header,
   .use-motion .post-body,
-  .use-motion .collection-title { opacity: initial; }
+  .use-motion .collection-header { opacity: initial; }
 
-  .use-motion .logo,
   .use-motion .site-title,
   .use-motion .site-subtitle {
     opacity: initial;
@@ -210,196 +127,180 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
-
-  
-  
-    
-  
-
-  <div class="container sidebar-position-left 
-  page-home">
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
   <div class="site-meta">
-    
 
-    <div class="custom-logo-site-title">
+    <div>
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">夜猫阿罗哈</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
-    
-      
         <h1 class="site-subtitle" itemprop="description">暮然回首萧瑟处，也无风雨也无晴</h1>
       
-    
-    
   </div>
 
   <div class="site-nav-toggle">
-    <button aria-label="切换导航栏">
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
   </div>
 </div>
-
 
 
 <nav class="site-nav">
   
-    <ul id="menu" class="menu">
+  <ul id="menu" class="menu">
+      
       
         
         
+        <li class="menu-item menu-item-home">
+      
+    
+      
+      
         
-          
-          <li class="menu-item menu-item-home">
-
-    
-    
-    
+      
+        
+      
+        
       
     
 
-    
-      
-    
-
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
 
   </li>
+      
+    
+      
+      
         
         
+        <li class="menu-item menu-item-archives">
+      
+    
+      
+      
         
           
-          <li class="menu-item menu-item-archives">
-
-    
-    
-    
+        
+      
+        
+      
+        
       
     
 
-    
-      
-    
-
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">81</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">81</span></a>
 
   </li>
+      
+    
+      
+      
         
         
+        <li class="menu-item menu-item-about">
+      
+    
+      
+      
+        
+      
+        
+      
+        
+      
+    
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+
+  </li>
+      
+    
+      
+      
+        
+        
+        <li class="menu-item menu-item-tags">
+      
+    
+      
+      
+        
+      
+        
+      
         
           
-          <li class="menu-item menu-item-about">
-
-    
-    
-    
+        
       
     
 
-    
-      
-    
-
-    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">75</span></a>
 
   </li>
+      
+    
+      
+      
         
         
+        <li class="menu-item menu-item-categories">
+      
+    
+      
+      
+        
+      
         
           
-          <li class="menu-item menu-item-tags">
-
-    
-    
-    
+        
+      
+        
       
     
 
-    
-      
-    
-
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">75</span></a>
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">8</span></a>
 
   </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-categories">
-
-    
-    
-    
       
     
+  </ul>
 
-    
-      
-    
-
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">8</span></a>
-
-  </li>
-
-      
-      
-    </ul>
-  
-
-  
-
-  
 </nav>
-
-
-
-  
-
-
-
 </div>
     </header>
 
     
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
 
 
-    <main id="main" class="main">
+    <main class="main">
       <div class="main-inner">
         <div class="content-wrap">
-          
             
 
-          
-          <div id="content" class="content">
+          <div class="content">
             
-  <section id="posts" class="posts-expand">
-    
-      
 
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  <div class="posts-expand">
+        
   
   
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.catxn.net/posts/2015/dsl-gtd/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -411,75 +312,51 @@
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="夜猫阿罗哈">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/posts/2015/dsl-gtd/" class="post-title-link" itemprop="url">断舍离与GTD</a>
-              
+        <h2 class="post-title" itemprop="name headline">
+          
             
-          </h2>
-        
+            <a href="/posts/2015/dsl-gtd/" class="post-title-link" itemprop="url">断舍离与GTD</a>
+          
+        </h2>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
+              <span class="post-meta-item-text">发表于</span>
 
               
                 
               
 
               <time title="创建时间：2015-03-03 13:20:00" itemprop="dateCreated datePublished" datetime="2015-03-03T13:20:00+08:00">2015-03-03</time>
+            </span>
+          
             
 
             
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
+              <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
+                <span class="post-meta-item-text">更新于</span>
                 <time title="修改时间：2015-04-02 20:07:39" itemprop="dateModified" datetime="2015-04-02T20:07:39+08:00">2015-04-02</time>
-              
+              </span>
             
-          </span>
-
           
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
+              <span class="post-meta-item-text">分类于</span>
               
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/夜猫茶舍/" itemprop="url" rel="index"><span itemprop="name">夜猫茶舍</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/夜猫茶舍/" itemprop="url" rel="index">
+                    <span itemprop="name">夜猫茶舍</span>
+                  </a>
+                </span>
 
                 
                 
@@ -488,33 +365,19 @@
           
 
           
-            
-            
-          
-
-          
-          
-            <span id="/posts/2015/dsl-gtd/" class="leancloud_visitors" data-flag-title="断舍离与GTD">
-              <span class="post-meta-divider">|</span>
+            <span id="/posts/2015/dsl-gtd/" class="post-meta-item leancloud_visitors" data-flag-title="断舍离与GTD" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
-              
-                <span class="post-meta-item-text">阅读次数：</span>
-              
-                <span class="leancloud-visitors-count"></span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
             </span>
           
-
-          
-
-          
-
-          
+  
+  
 
         </div>
       </header>
-    
 
     
     
@@ -522,12 +385,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
-          
-            <p>这两天没事时翻了翻《断舍离》一书，觉得有点意思。随手记录下感想。</p>
+          <p>这两天没事时翻了翻《断舍离》一书，觉得有点意思。随手记录下感想。</p>
 <h1 id="何谓“断·舍·离”"><a href="#何谓“断·舍·离”" class="headerlink" title="何谓“断·舍·离”"></a>何谓“断·舍·离”</h1><p>“<a href="http://baike.baidu.com/subview/4865234/16810340.htm" target="_blank" rel="noopener">断舍离</a>”，来自于瑜伽中“断行，舍行，离行”的哲学。这个概念，由日本的“杂物整理咨询师”山下英子提出。</p>
 <p>断，是断绝不需要的东西<br>舍，是舍弃无用的废物<br>离，是脱离对物品的执着<br>断是从入口处做取舍，舍是在出口清理堵塞，离就是反复实践前两者来实现通畅的新陈代谢。</p>
 <p>最根本的思想是要摆脱对物品的执念，很有“空即是色，色即是空”的感觉。那些你舍不得放弃的物品，舍不得放弃的人和事，是否是你真正需要的？</p>
@@ -546,61 +404,26 @@
 <p>另外，对“断舍离”的态度，需要辩证的接受。比如它的理念中其实包含某种类似佛教的“出世”的哲学，吾等俗人，要断舍离到没朋友，还是算了吧。</p>
 <h1 id="结束"><a href="#结束" class="headerlink" title="结束"></a>结束</h1><p>以上，算读后感，也算是荐书吧。</p>
 
-          
         
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
-
+  
+  
+  
 
     
-      
-
-  
-
+        
   
   
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.catxn.net/posts/2015/history24/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -612,75 +435,51 @@
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="夜猫阿罗哈">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/posts/2015/history24/" class="post-title-link" itemprop="url">二十四史都是谁</a>
-              
+        <h2 class="post-title" itemprop="name headline">
+          
             
-          </h2>
-        
+            <a href="/posts/2015/history24/" class="post-title-link" itemprop="url">二十四史都是谁</a>
+          
+        </h2>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
+              <span class="post-meta-item-text">发表于</span>
 
               
                 
               
 
               <time title="创建时间：2015-02-26 15:12:00" itemprop="dateCreated datePublished" datetime="2015-02-26T15:12:00+08:00">2015-02-26</time>
+            </span>
+          
             
 
             
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
+              <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
+                <span class="post-meta-item-text">更新于</span>
                 <time title="修改时间：2015-04-02 20:07:39" itemprop="dateModified" datetime="2015-04-02T20:07:39+08:00">2015-04-02</time>
-              
+              </span>
             
-          </span>
-
           
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
+              <span class="post-meta-item-text">分类于</span>
               
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/老猫读史/" itemprop="url" rel="index"><span itemprop="name">老猫读史</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/老猫读史/" itemprop="url" rel="index">
+                    <span itemprop="name">老猫读史</span>
+                  </a>
+                </span>
 
                 
                 
@@ -689,33 +488,19 @@
           
 
           
-            
-            
-          
-
-          
-          
-            <span id="/posts/2015/history24/" class="leancloud_visitors" data-flag-title="二十四史都是谁">
-              <span class="post-meta-divider">|</span>
+            <span id="/posts/2015/history24/" class="post-meta-item leancloud_visitors" data-flag-title="二十四史都是谁" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
-              
-                <span class="post-meta-item-text">阅读次数：</span>
-              
-                <span class="leancloud-visitors-count"></span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
             </span>
           
-
-          
-
-          
-
-          
+  
+  
 
         </div>
       </header>
-    
 
     
     
@@ -723,10 +508,6 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
           <p>“二十四史”是学习历史最常听到的词。他们都是哪些书呢？</p>
 <p>百科上这样说：</p>
 <blockquote>
@@ -737,7 +518,7 @@
 <p>民国初年，将《新元史》或《清史稿》列入正史，称“二十五史”，如果将两部史书均列入，则又有“二十六史”的说法。</p>
           <!--noindex-->
           
-            <div class="post-button text-center">
+            <div class="post-button">
               <a class="btn" href="/posts/2015/history24/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
@@ -749,55 +530,21 @@
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
-
+  
+  
+  
 
     
-      
-
-  
-
+        
   
   
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.catxn.net/posts/2015/butterfly-sharing-opensource/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -809,75 +556,51 @@
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="夜猫阿罗哈">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/posts/2015/butterfly-sharing-opensource/" class="post-title-link" itemprop="url">Chrome 扩展 “Butterfly Sharing” 更新并开源</a>
-              
+        <h2 class="post-title" itemprop="name headline">
+          
             
-          </h2>
-        
+            <a href="/posts/2015/butterfly-sharing-opensource/" class="post-title-link" itemprop="url">Chrome 扩展 “Butterfly Sharing” 更新并开源</a>
+          
+        </h2>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
+              <span class="post-meta-item-text">发表于</span>
 
               
                 
               
 
               <time title="创建时间：2015-02-25 11:58:00" itemprop="dateCreated datePublished" datetime="2015-02-25T11:58:00+08:00">2015-02-25</time>
+            </span>
+          
             
 
             
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
+              <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
+                <span class="post-meta-item-text">更新于</span>
                 <time title="修改时间：2015-04-02 20:07:39" itemprop="dateModified" datetime="2015-04-02T20:07:39+08:00">2015-04-02</time>
-              
+              </span>
             
-          </span>
-
           
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
+              <span class="post-meta-item-text">分类于</span>
               
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/软件开发/" itemprop="url" rel="index"><span itemprop="name">软件开发</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/软件开发/" itemprop="url" rel="index">
+                    <span itemprop="name">软件开发</span>
+                  </a>
+                </span>
 
                 
                 
@@ -886,33 +609,19 @@
           
 
           
-            
-            
-          
-
-          
-          
-            <span id="/posts/2015/butterfly-sharing-opensource/" class="leancloud_visitors" data-flag-title="Chrome 扩展 “Butterfly Sharing” 更新并开源">
-              <span class="post-meta-divider">|</span>
+            <span id="/posts/2015/butterfly-sharing-opensource/" class="post-meta-item leancloud_visitors" data-flag-title="Chrome 扩展 “Butterfly Sharing” 更新并开源" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
-              
-                <span class="post-meta-item-text">阅读次数：</span>
-              
-                <span class="leancloud-visitors-count"></span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
             </span>
           
-
-          
-
-          
-
-          
+  
+  
 
         </div>
       </header>
-    
 
     
     
@@ -920,10 +629,6 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
           <p>五年前为了自己用着方便，写了个小小的Chrome扩展：<a href="https://chrome.google.com/webstore/detail/pofanjellkmepliaagnpopjndkkdlolg" target="_blank" rel="noopener">Butterfly Sharing</a></p>
 <p>名字很土，完全是顺手摸了个图标加个名字就放上去，然后就懒得改了。</p>
 <p>简单介绍下它的功能：</p>
@@ -935,7 +640,7 @@
 </ul>
           <!--noindex-->
           
-            <div class="post-button text-center">
+            <div class="post-button">
               <a class="btn" href="/posts/2015/butterfly-sharing-opensource/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
@@ -947,55 +652,21 @@
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
-
+  
+  
+  
 
     
-      
-
-  
-
+        
   
   
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.catxn.net/posts/2015/new-itpm-howto/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1007,75 +678,51 @@
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="夜猫阿罗哈">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/posts/2015/new-itpm-howto/" class="post-title-link" itemprop="url">初出茅庐的IT人员，怎样才能做好项目经理？</a>
-              
+        <h2 class="post-title" itemprop="name headline">
+          
             
-          </h2>
-        
+            <a href="/posts/2015/new-itpm-howto/" class="post-title-link" itemprop="url">初出茅庐的IT人员，怎样才能做好项目经理？</a>
+          
+        </h2>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
+              <span class="post-meta-item-text">发表于</span>
 
               
                 
               
 
               <time title="创建时间：2015-01-26 09:56:00" itemprop="dateCreated datePublished" datetime="2015-01-26T09:56:00+08:00">2015-01-26</time>
+            </span>
+          
             
 
             
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
+              <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
+                <span class="post-meta-item-text">更新于</span>
                 <time title="修改时间：2015-04-02 20:07:39" itemprop="dateModified" datetime="2015-04-02T20:07:39+08:00">2015-04-02</time>
-              
+              </span>
             
-          </span>
-
           
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
+              <span class="post-meta-item-text">分类于</span>
               
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/管理微言/" itemprop="url" rel="index"><span itemprop="name">管理微言</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/管理微言/" itemprop="url" rel="index">
+                    <span itemprop="name">管理微言</span>
+                  </a>
+                </span>
 
                 
                 
@@ -1084,33 +731,19 @@
           
 
           
-            
-            
-          
-
-          
-          
-            <span id="/posts/2015/new-itpm-howto/" class="leancloud_visitors" data-flag-title="初出茅庐的IT人员，怎样才能做好项目经理？">
-              <span class="post-meta-divider">|</span>
+            <span id="/posts/2015/new-itpm-howto/" class="post-meta-item leancloud_visitors" data-flag-title="初出茅庐的IT人员，怎样才能做好项目经理？" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
-              
-                <span class="post-meta-item-text">阅读次数：</span>
-              
-                <span class="leancloud-visitors-count"></span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
             </span>
           
-
-          
-
-          
-
-          
+  
+  
 
         </div>
       </header>
-    
 
     
     
@@ -1118,16 +751,12 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
           <p>现在的你是一张白纸。</p>
 <p>定型过早不可取，而且项目经理和产品经理都是需要一定阅历和积累才能做好的。幸运的是，环境给了你发展的机会，允许你在至少三条路上积累经验。</p>
 <p>从三个方面来说。</p>
           <!--noindex-->
           
-            <div class="post-button text-center">
+            <div class="post-button">
               <a class="btn" href="/posts/2015/new-itpm-howto/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
@@ -1139,55 +768,21 @@
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
-
+  
+  
+  
 
     
-      
-
-  
-
+        
   
   
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.catxn.net/posts/2015/三皇五帝（二）/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1199,75 +794,51 @@
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="夜猫阿罗哈">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/posts/2015/三皇五帝（二）/" class="post-title-link" itemprop="url">三皇五帝（二）</a>
-              
+        <h2 class="post-title" itemprop="name headline">
+          
             
-          </h2>
-        
+            <a href="/posts/2015/三皇五帝（二）/" class="post-title-link" itemprop="url">三皇五帝（二）</a>
+          
+        </h2>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
+              <span class="post-meta-item-text">发表于</span>
 
               
                 
               
 
               <time title="创建时间：2015-01-17 21:02:59" itemprop="dateCreated datePublished" datetime="2015-01-17T21:02:59+08:00">2015-01-17</time>
+            </span>
+          
             
 
             
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
+              <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
+                <span class="post-meta-item-text">更新于</span>
                 <time title="修改时间：2015-04-02 20:07:39" itemprop="dateModified" datetime="2015-04-02T20:07:39+08:00">2015-04-02</time>
-              
+              </span>
             
-          </span>
-
           
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
+              <span class="post-meta-item-text">分类于</span>
               
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/老猫读史/" itemprop="url" rel="index"><span itemprop="name">老猫读史</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/老猫读史/" itemprop="url" rel="index">
+                    <span itemprop="name">老猫读史</span>
+                  </a>
+                </span>
 
                 
                 
@@ -1276,33 +847,19 @@
           
 
           
-            
-            
-          
-
-          
-          
-            <span id="/posts/2015/三皇五帝（二）/" class="leancloud_visitors" data-flag-title="三皇五帝（二）">
-              <span class="post-meta-divider">|</span>
+            <span id="/posts/2015/三皇五帝（二）/" class="post-meta-item leancloud_visitors" data-flag-title="三皇五帝（二）" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
-              
-                <span class="post-meta-item-text">阅读次数：</span>
-              
-                <span class="leancloud-visitors-count"></span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
             </span>
           
-
-          
-
-          
-
-          
+  
+  
 
         </div>
       </header>
-    
 
     
     
@@ -1310,10 +867,6 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
           <blockquote>
 <p>办大事者,以多选替手为第一义。——曾国藩</p>
 </blockquote>
@@ -1324,7 +877,7 @@
 <p>帝尧在位近百年（98年）。期间制定了最早的历法，勘定了春分、夏至、秋分、冬至。设定一年366天，并设置闰月来调整历法与四季。从这个角度来说，尧是古代农耕文化飞跃的象征。</p>
           <!--noindex-->
           
-            <div class="post-button text-center">
+            <div class="post-button">
               <a class="btn" href="/posts/2015/三皇五帝（二）/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
@@ -1336,55 +889,21 @@
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
-
+  
+  
+  
 
     
-      
-
-  
-
+        
   
   
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.catxn.net/posts/2015/三皇五帝（一）/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1396,75 +915,51 @@
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="夜猫阿罗哈">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/posts/2015/三皇五帝（一）/" class="post-title-link" itemprop="url">三皇五帝（一）</a>
-              
+        <h2 class="post-title" itemprop="name headline">
+          
             
-          </h2>
-        
+            <a href="/posts/2015/三皇五帝（一）/" class="post-title-link" itemprop="url">三皇五帝（一）</a>
+          
+        </h2>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
+              <span class="post-meta-item-text">发表于</span>
 
               
                 
               
 
               <time title="创建时间：2015-01-17 21:00:25" itemprop="dateCreated datePublished" datetime="2015-01-17T21:00:25+08:00">2015-01-17</time>
+            </span>
+          
             
 
             
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
+              <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
+                <span class="post-meta-item-text">更新于</span>
                 <time title="修改时间：2015-04-02 20:07:39" itemprop="dateModified" datetime="2015-04-02T20:07:39+08:00">2015-04-02</time>
-              
+              </span>
             
-          </span>
-
           
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
+              <span class="post-meta-item-text">分类于</span>
               
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/老猫读史/" itemprop="url" rel="index"><span itemprop="name">老猫读史</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/老猫读史/" itemprop="url" rel="index">
+                    <span itemprop="name">老猫读史</span>
+                  </a>
+                </span>
 
                 
                 
@@ -1473,33 +968,19 @@
           
 
           
-            
-            
-          
-
-          
-          
-            <span id="/posts/2015/三皇五帝（一）/" class="leancloud_visitors" data-flag-title="三皇五帝（一）">
-              <span class="post-meta-divider">|</span>
+            <span id="/posts/2015/三皇五帝（一）/" class="post-meta-item leancloud_visitors" data-flag-title="三皇五帝（一）" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
-              
-                <span class="post-meta-item-text">阅读次数：</span>
-              
-                <span class="leancloud-visitors-count"></span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
             </span>
           
-
-          
-
-          
-
-          
+  
+  
 
         </div>
       </header>
-    
 
     
     
@@ -1507,10 +988,6 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
           <p>三皇五帝这个词是个中国人都耳熟能详。可他们都是谁呢？</p>
 <p>在具体到人名之前，我们先看看“皇、帝、王、霸”都什么意思。《管子·真法篇》这么定义：“明一者皇，察道者帝，通德者王，谋得兵胜者霸”。虽然近代有观点认为《管子》并非管仲所写，但是这个定义应该基本上描述了当年人们对皇、帝的定位。</p>
 <p>而秦王赵政一统天下后，认为自己是开天辟地以来独一无二的君主，王什么的已经无法彰显其伟大，于是把“皇”、“帝”合而为一，造出了一个全新的称号“皇帝”，自封“始皇帝”。</p>
@@ -1523,7 +1000,7 @@
 <p>《史记》基本是继承了《礼记》的提法，认为五帝分别是：黄帝、颛顼、帝喾、尧、舜。下文参照这种提法，从黄帝开始说。</p>
           <!--noindex-->
           
-            <div class="post-button text-center">
+            <div class="post-button">
               <a class="btn" href="/posts/2015/三皇五帝（一）/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
@@ -1535,55 +1012,21 @@
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
-
+  
+  
+  
 
     
-      
-
-  
-
+        
   
   
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.catxn.net/posts/2015/马斯洛需求层次不会告诉你/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1595,75 +1038,51 @@
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="夜猫阿罗哈">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/posts/2015/马斯洛需求层次不会告诉你/" class="post-title-link" itemprop="url">马斯洛需求层次不会告诉你</a>
-              
+        <h2 class="post-title" itemprop="name headline">
+          
             
-          </h2>
-        
+            <a href="/posts/2015/马斯洛需求层次不会告诉你/" class="post-title-link" itemprop="url">马斯洛需求层次不会告诉你</a>
+          
+        </h2>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
+              <span class="post-meta-item-text">发表于</span>
 
               
                 
               
 
               <time title="创建时间：2015-01-17 19:58:49" itemprop="dateCreated datePublished" datetime="2015-01-17T19:58:49+08:00">2015-01-17</time>
+            </span>
+          
             
 
             
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
+              <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
+                <span class="post-meta-item-text">更新于</span>
                 <time title="修改时间：2015-04-02 20:07:39" itemprop="dateModified" datetime="2015-04-02T20:07:39+08:00">2015-04-02</time>
-              
+              </span>
             
-          </span>
-
           
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
+              <span class="post-meta-item-text">分类于</span>
               
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/管理微言/" itemprop="url" rel="index"><span itemprop="name">管理微言</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/管理微言/" itemprop="url" rel="index">
+                    <span itemprop="name">管理微言</span>
+                  </a>
+                </span>
 
                 
                 
@@ -1672,33 +1091,19 @@
           
 
           
-            
-            
-          
-
-          
-          
-            <span id="/posts/2015/马斯洛需求层次不会告诉你/" class="leancloud_visitors" data-flag-title="马斯洛需求层次不会告诉你">
-              <span class="post-meta-divider">|</span>
+            <span id="/posts/2015/马斯洛需求层次不会告诉你/" class="post-meta-item leancloud_visitors" data-flag-title="马斯洛需求层次不会告诉你" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
-              
-                <span class="post-meta-item-text">阅读次数：</span>
-              
-                <span class="leancloud-visitors-count"></span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
             </span>
           
-
-          
-
-          
-
-          
+  
+  
 
         </div>
       </header>
-    
 
     
     
@@ -1706,10 +1111,6 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
           <blockquote>
 <p><strong>本译文原文由《哈佛商业评论》中文版独家授权，不得用于商业行为，转载请注明译者、出处</strong></p>
 <p>译者：三角猫（本人）</p>
@@ -1722,7 +1123,7 @@
 <p>如果你想从这些最新的科学理论成果得益，而不是抱住马斯洛需求金字塔不放，那么你就应该更多地将注意力集中在这三个更加普遍的心理需求之上：<strong><em>自主性</em></strong>，<strong><em>关联性</em></strong>和<strong><em>竞争力</em></strong>。</p>
           <!--noindex-->
           
-            <div class="post-button text-center">
+            <div class="post-button">
               <a class="btn" href="/posts/2015/马斯洛需求层次不会告诉你/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
@@ -1734,55 +1135,21 @@
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
-
+  
+  
+  
 
     
-      
-
-  
-
+        
   
   
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.catxn.net/posts/2015/writing-is-better-reading/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1794,75 +1161,51 @@
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="夜猫阿罗哈">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/posts/2015/writing-is-better-reading/" class="post-title-link" itemprop="url">写作是更好的阅读</a>
-              
+        <h2 class="post-title" itemprop="name headline">
+          
             
-          </h2>
-        
+            <a href="/posts/2015/writing-is-better-reading/" class="post-title-link" itemprop="url">写作是更好的阅读</a>
+          
+        </h2>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
+              <span class="post-meta-item-text">发表于</span>
 
               
                 
               
 
               <time title="创建时间：2015-01-13 14:10:00" itemprop="dateCreated datePublished" datetime="2015-01-13T14:10:00+08:00">2015-01-13</time>
+            </span>
+          
             
 
             
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
+              <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
+                <span class="post-meta-item-text">更新于</span>
                 <time title="修改时间：2015-04-02 20:07:39" itemprop="dateModified" datetime="2015-04-02T20:07:39+08:00">2015-04-02</time>
-              
+              </span>
             
-          </span>
-
           
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
+              <span class="post-meta-item-text">分类于</span>
               
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/夜猫茶舍/" itemprop="url" rel="index"><span itemprop="name">夜猫茶舍</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/夜猫茶舍/" itemprop="url" rel="index">
+                    <span itemprop="name">夜猫茶舍</span>
+                  </a>
+                </span>
 
                 
                 
@@ -1871,33 +1214,19 @@
           
 
           
-            
-            
-          
-
-          
-          
-            <span id="/posts/2015/writing-is-better-reading/" class="leancloud_visitors" data-flag-title="写作是更好的阅读">
-              <span class="post-meta-divider">|</span>
+            <span id="/posts/2015/writing-is-better-reading/" class="post-meta-item leancloud_visitors" data-flag-title="写作是更好的阅读" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
-              
-                <span class="post-meta-item-text">阅读次数：</span>
-              
-                <span class="leancloud-visitors-count"></span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
             </span>
           
-
-          
-
-          
-
-          
+  
+  
 
         </div>
       </header>
-    
 
     
     
@@ -1905,10 +1234,6 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
           <p>简单地读一本书的时候，很多段落只是滑过，事后不会留有任何印象。而整本书读完，也只能记得大概。如果是历史书或小说，可能隐约知道它讲了个什么故事，最多对一些精彩段落记忆深刻。而故事的整体脉络，人物关系，文字之优美，即使有印象，几天之后也就忘记了。</p>
 <p>于是我们开始做笔记。用各种圈圈点点把重点部分画下来，精彩的文字进行摘抄。到了信息时代，这种工作更加便捷，两个组合的快捷键就可以飞速完成。一天天下来，打开笔记本，似乎也积攒了一个可观的知识库。</p>
 <p>但这些知识都只是囫囵吞下去而已。</p>
@@ -1917,7 +1242,7 @@
 <p>当一篇文字完成时，呈现给读者的也许只是数百字，几分钟的阅读时间，背后却可能需要花费数日，查阅几千字的资料并反复印证，最后将这些资料浓缩在短短篇幅之中。</p>
           <!--noindex-->
           
-            <div class="post-button text-center">
+            <div class="post-button">
               <a class="btn" href="/posts/2015/writing-is-better-reading/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
@@ -1929,55 +1254,21 @@
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
-
+  
+  
+  
 
     
-      
-
-  
-
+        
   
   
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.catxn.net/posts/2015/读史开始/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1989,75 +1280,51 @@
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="夜猫阿罗哈">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/posts/2015/读史开始/" class="post-title-link" itemprop="url">读史开始</a>
-              
+        <h2 class="post-title" itemprop="name headline">
+          
             
-          </h2>
-        
+            <a href="/posts/2015/读史开始/" class="post-title-link" itemprop="url">读史开始</a>
+          
+        </h2>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
+              <span class="post-meta-item-text">发表于</span>
 
               
                 
               
 
               <time title="创建时间：2015-01-06 09:27:02" itemprop="dateCreated datePublished" datetime="2015-01-06T09:27:02+08:00">2015-01-06</time>
+            </span>
+          
             
 
             
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
+              <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
+                <span class="post-meta-item-text">更新于</span>
                 <time title="修改时间：2015-04-01 20:25:34" itemprop="dateModified" datetime="2015-04-01T20:25:34+08:00">2015-04-01</time>
-              
+              </span>
             
-          </span>
-
           
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
+              <span class="post-meta-item-text">分类于</span>
               
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/老猫读史/" itemprop="url" rel="index"><span itemprop="name">老猫读史</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/老猫读史/" itemprop="url" rel="index">
+                    <span itemprop="name">老猫读史</span>
+                  </a>
+                </span>
 
                 
                 
@@ -2066,33 +1333,19 @@
           
 
           
-            
-            
-          
-
-          
-          
-            <span id="/posts/2015/读史开始/" class="leancloud_visitors" data-flag-title="读史开始">
-              <span class="post-meta-divider">|</span>
+            <span id="/posts/2015/读史开始/" class="post-meta-item leancloud_visitors" data-flag-title="读史开始" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
-              
-                <span class="post-meta-item-text">阅读次数：</span>
-              
-                <span class="leancloud-visitors-count"></span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
             </span>
           
-
-          
-
-          
-
-          
+  
+  
 
         </div>
       </header>
-    
 
     
     
@@ -2100,12 +1353,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
-          
-            <p>这个系列的起源是某次在朋友家做客，看到一本《资治通鉴》，信手翻开，随口给小孩讲了几段。</p>
+          <p>这个系列的起源是某次在朋友家做客，看到一本《资治通鉴》，信手翻开，随口给小孩讲了几段。</p>
 <p>从朋友家返回，觉得很久没认真看书的自己，其实可以把这些书好好读一遍。于是在Coursera报了台大吕世浩老师的《史记》读书课程，随着课程的进展，学习历史的兴趣也愈加浓厚，同时萌生了把读到的东西记录下来的想法。于是就有了第一篇《<a href="http://www.jianshu.com/p/hK3BAf" target="_blank" rel="noopener">侠客行·聂政</a>》。</p>
 <p>零敲碎打写了几篇之后，大约一个月前开始打算把它认真写成一个系列，并按照简书的建议保持每周一两千字的进度。内容方面，暂时以《史记》和《资治通鉴》的记载为主，一是读书，二是练笔。想到什么就写什么，不会严格按照原书顺序。内容可能是某时期的历史知识（知识篇），某人物的故事传说（故事篇），也有可能只是照书直译。随兴所至而已。</p>
 <p>比如，战国四公子，之前已写过一篇春申君的轶事《<a href="http://www.jianshu.com/p/f9e7513a471b" target="_blank" rel="noopener">李园乱楚</a>》。之后，还会继续写四公子的时代背景、人物关系，事件脉络等等。再往后，也许会用不同的方式再写另一个系列，就叫《给孩子讲的历史故事》，以课本的顺序来写。希望能让记忆中枯燥的历史课多一些趣味。</p>
@@ -2113,61 +1361,26 @@
 <p>如果能够通过写下这些东西和朋友们“<a href="http://www.jianshu.com/p/d295990ca72e" target="_blank" rel="noopener">沙里淘金</a>”，多了解一点历史知识，也算是挺有意义的一件事。</p>
 <p>那么，我就继续把故事讲下去。</p>
 
-          
         
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
-
+  
+  
+  
 
     
-      
-
-  
-
+        
   
   
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.catxn.net/posts/2015/qinmoon-yhsx/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -2179,75 +1392,51 @@
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="夜猫阿罗哈">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/posts/2015/qinmoon-yhsx/" class="post-title-link" itemprop="url">秦时明月：荧惑守心</a>
-              
+        <h2 class="post-title" itemprop="name headline">
+          
             
-          </h2>
-        
+            <a href="/posts/2015/qinmoon-yhsx/" class="post-title-link" itemprop="url">秦时明月：荧惑守心</a>
+          
+        </h2>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
+              <span class="post-meta-item-text">发表于</span>
 
               
                 
               
 
               <time title="创建时间：2015-01-05 23:10:00" itemprop="dateCreated datePublished" datetime="2015-01-05T23:10:00+08:00">2015-01-05</time>
+            </span>
+          
             
 
             
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
+              <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
+                <span class="post-meta-item-text">更新于</span>
                 <time title="修改时间：2019-06-12 10:25:07" itemprop="dateModified" datetime="2019-06-12T10:25:07+08:00">2019-06-12</time>
-              
+              </span>
             
-          </span>
-
           
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
+              <span class="post-meta-item-text">分类于</span>
               
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/影音动漫/" itemprop="url" rel="index"><span itemprop="name">影音动漫</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/影音动漫/" itemprop="url" rel="index">
+                    <span itemprop="name">影音动漫</span>
+                  </a>
+                </span>
 
                 
                 
@@ -2256,33 +1445,19 @@
           
 
           
-            
-            
-          
-
-          
-          
-            <span id="/posts/2015/qinmoon-yhsx/" class="leancloud_visitors" data-flag-title="秦时明月：荧惑守心">
-              <span class="post-meta-divider">|</span>
+            <span id="/posts/2015/qinmoon-yhsx/" class="post-meta-item leancloud_visitors" data-flag-title="秦时明月：荧惑守心" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
-              
-                <span class="post-meta-item-text">阅读次数：</span>
-              
-                <span class="leancloud-visitors-count"></span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
             </span>
           
-
-          
-
-          
-
-          
+  
+  
 
         </div>
       </header>
-    
 
     
     
@@ -2290,10 +1465,6 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
           <p>《秦时明月之君临天下》开播。凑热闹写写秦始皇。</p>
 <p><img src="http://static.catxn.cn/images/acg/qinmoon-yhsx-01.JPG-o" alt="秦时明月-荧惑守心"></p>
 <h1 id="三桩异象"><a href="#三桩异象" class="headerlink" title="三桩异象"></a>三桩异象</h1><p>千古一帝最初是明代思想家李贽对秦始皇的评价，语自《藏书·世纪列传总目》。无论秦始皇如何残暴如何自大，千古一帝这个称号还是当得起。</p>
@@ -2305,7 +1476,7 @@
 <p>第二件便是这“荧惑守心”。</p>
           <!--noindex-->
           
-            <div class="post-button text-center">
+            <div class="post-button">
               <a class="btn" href="/posts/2015/qinmoon-yhsx/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
@@ -2317,41 +1488,18 @@
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
-
+  
+  
+  
 
     
-  </section>
+  </div>
 
   
   <nav class="pagination">
@@ -2364,390 +1512,193 @@
           
 
         </div>
-        
           
   
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
   </div>
 
-  <aside id="sidebar" class="sidebar">
+  <aside class="sidebar">
     <div class="sidebar-inner">
 
-      
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
 
-      
-
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
-        <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-            
-              <img class="site-author-image" itemprop="image" src="/images/author.png" alt="猫老师">
-            
-              <p class="site-author-name" itemprop="name">猫老师</p>
-              <div class="site-description motion-element" itemprop="description">猫老师的个人博客：少儿编程，K12 STEAM 教育，软件开发，项目管理，历史故事等</div>
-          </div>
-
-          
-            <nav class="site-state motion-element">
-              
-                <div class="site-state-item site-state-posts">
-                
-                  <a href="/archives/">
-                
-                    <span class="site-state-item-count">81</span>
-                    <span class="site-state-item-name">日志</span>
-                  </a>
-                </div>
-              
-
-              
-                
-                
-                <div class="site-state-item site-state-categories">
-                  
-                    
-                      <a href="/categories/">
-                    
-                  
-                    
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">8</span>
-                    <span class="site-state-item-name">分类</span>
-                  </a>
-                </div>
-              
-
-              
-                
-                
-                <div class="site-state-item site-state-tags">
-                  
-                    
-                      <a href="/tags/">
-                    
-                  
-                    
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">72</span>
-                    <span class="site-state-item-name">标签</span>
-                  </a>
-                </div>
-              
-            </nav>
-          
-
-          
-            <div class="feed-link motion-element">
-              <a href="/atom.xml" rel="alternate">
-                <i class="fa fa-rss"></i>
-                RSS
-              </a>
-            </div>
-          
-
-          
-
-          
-            <div class="links-of-author motion-element">
-              
-                <span class="links-of-author-item">
-                  
-                  
-                    
-                  
-                  
-                    
-                  
-                  <a href="https://github.com/deltacat" title="GitHub &rarr; https://github.com/deltacat" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
-                </span>
-              
-                <span class="links-of-author-item">
-                  
-                  
-                    
-                  
-                  
-                    
-                  
-                  <a href="http://weibo.com/deltacat" title="Weibo &rarr; http://weibo.com/deltacat" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
-                </span>
-              
-                <span class="links-of-author-item">
-                  
-                  
-                    
-                  
-                  
-                    
-                  
-                  <a href="http://www.jianshu.com/u/HS379k" title="简书 &rarr; http://www.jianshu.com/u/HS379k" rel="noopener" target="_blank"><i class="fa fa-fw fa-edit"></i>简书</a>
-                </span>
-              
-                <span class="links-of-author-item">
-                  
-                  
-                    
-                  
-                  
-                    
-                  
-                  <a href="http://www.zhihu.com/people/deltacat" title="知乎 &rarr; http://www.zhihu.com/people/deltacat" rel="noopener" target="_blank"><i class="fa fa-fw fa-question-circle"></i>知乎</a>
-                </span>
-              
-            </div>
-          
-
-          
-
-          
-          
-            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
-              <div class="links-of-blogroll-title">
-                <i class="fa  fa-fw fa-link"></i>
-                友情链接
-              </div>
-              <ul class="links-of-blogroll-list">
-                
-                  <li class="links-of-blogroll-item">
-                    <a href="http://www.zongbutech.com" title="http://www.zongbutech.com" rel="noopener" target="_blank">宗布科技</a>
-                  </li>
-                
-                  <li class="links-of-blogroll-item">
-                    <a href="http://www.tongxinvc.com" title="http://www.tongxinvc.com" rel="noopener" target="_blank">同芯资本</a>
-                  </li>
-                
-                  <li class="links-of-blogroll-item">
-                    <a href="http://www.nero.com" title="http://www.nero.com" rel="noopener" target="_blank">尼禄软件</a>
-                  </li>
-                
-                  <li class="links-of-blogroll-item">
-                    <a href="http://atjason.com" title="http://atjason.com" rel="noopener" target="_blank">Jason</a>
-                  </li>
-                
-              </ul>
-            </div>
-          
-
-          
-            
-          
-          
-
-        </div>
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
       </div>
+      <!--/noindex-->
 
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+      src="/images/author.png"
+      alt="猫老师">
+  <p class="site-author-name" itemprop="name">猫老师</p>
+  <div class="site-description" itemprop="description">猫老师的个人博客：少儿编程，K12 STEAM 教育，软件开发，项目管理，历史故事等</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">81</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
       
+      
+      <div class="site-state-item site-state-categories">
+        
+          
+            <a href="/categories/">
+          
+        
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">分类</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/tags/">
+          
+        
+        <span class="site-state-item-count">75</span>
+        <span class="site-state-item-name">标签</span>
+        </a>
+      </div>
+    
+  </nav>
+</div>
+  <div class="feed-link motion-element">
+    <a href="/atom.xml" rel="alternate">
+      <i class="fa fa-rss"></i>RSS
+    </a>
+  </div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://github.com/deltacat" title="GitHub &rarr; https://github.com/deltacat" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="http://weibo.com/deltacat" title="Weibo &rarr; http://weibo.com/deltacat" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="http://www.jianshu.com/u/HS379k" title="简书 &rarr; http://www.jianshu.com/u/HS379k" rel="noopener" target="_blank"><i class="fa fa-fw fa-edit"></i>简书</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="http://www.zhihu.com/people/deltacat" title="知乎 &rarr; http://www.zhihu.com/people/deltacat" rel="noopener" target="_blank"><i class="fa fa-fw fa-question-circle"></i>知乎</a>
+      </span>
+    
+  </div>
 
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title">
+      <i class="fa fa-fw fa-link"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="http://www.zongbutech.com" title="http://www.zongbutech.com" rel="noopener" target="_blank">宗布科技</a>
+        </li>
       
+        <li class="links-of-blogroll-item">
+          <a href="http://www.tongxinvc.com" title="http://www.tongxinvc.com" rel="noopener" target="_blank">同芯资本</a>
+        </li>
+      
+        <li class="links-of-blogroll-item">
+          <a href="http://www.nero.com" title="http://www.nero.com" rel="noopener" target="_blank">尼禄软件</a>
+        </li>
+      
+        <li class="links-of-blogroll-item">
+          <a href="http://atjason.com" title="http://atjason.com" rel="noopener" target="_blank">Jason</a>
+        </li>
+      
+    </ul>
+  </div>
+
+      </div>
 
     </div>
   </aside>
-  
+  <div id="sidebar-dimmer"></div>
 
 
-        
       </div>
     </main>
 
-    <footer id="footer" class="footer">
+    <footer class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
-  <span class="with-love" id="animate">
+        
+  <div class="beian"><a href="http://www.beian.miit.gov.cn" rel="noopener" target="_blank">浙ICP备19020493号-1 </a><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=" rel="noopener" target="_blank"> </a>
+  </div>
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">猫老师</span>
-
-  
-
-  
 </div>
-
-
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
-
-
-
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0
+  </div>
   <span class="post-meta-divider">|</span>
-
-
-
-  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.1.2</div>
-
-
-
+  <div class="theme-info">
+      
+    主题 – <a href="https://pisces.theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.4.2
+  </div>
 
         
+
+
+
+
 
 
 
@@ -2759,111 +1710,53 @@
         
       </div>
     </footer>
-
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
-    
-
-    
-
-    
-
-    
   </div>
 
   
-
-<script>
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
-</script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  <script src="/lib/jquery/index.js?v=3.4.1"></script>
-
-  
+  <script src="/lib/anime.min.js?v=3.1.0"></script>
   <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
   <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-
-  
-
-
-  <script src="/js/utils.js?v=7.1.2"></script>
-
-  <script src="/js/motion.js?v=7.1.2"></script>
-
-
-
-  
-  
-
-
-  <script src="/js/affix.js?v=7.1.2"></script>
-
-  <script src="/js/schemes/pisces.js?v=7.1.2"></script>
+<script src="/js/utils.js?v=7.4.2"></script><script src="/js/motion.js?v=7.4.2"></script>
+<script src="/js/schemes/pisces.js?v=7.4.2"></script>
+<script src="/js/next-boot.js?v=7.4.2"></script>
 
 
 
   
 
-  
 
 
-  <script src="/js/next-boot.js?v=7.1.2"></script>
 
 
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   
 
   
 
   
-  
 
-<script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
-
-
-
-<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
 
 <script>
+NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
   var GUEST = ['nick', 'mail', 'link'];
   var guest = 'nick,mail,link';
-  guest = guest.split(',').filter(function(item) {
-    return GUEST.indexOf(item) > -1;
+  guest = guest.split(',').filter(item => {
+    return GUEST.includes(item);
   });
   new Valine({
     el: '#comments',
@@ -2871,51 +1764,18 @@
     notify: false,
     appId: 'qg2bsJ1VhqFytc82tjqmCppJ-gzGzoHsz',
     appKey: 'ALwv2J7EkC9u4zqVhdeVcQVa',
-    placeholder: '请留下你的足迹……\n留下邮箱可显示你的 gravatar 头像',
+    placeholder: "请留下你的足迹……\\n留下邮箱可显示你的 gravatar 头像",
     avatar: 'mm',
     meta: guest,
     pageSize: '10' || 10,
     visitor: true,
-    lang: '' || 'zh-cn'
+    lang: '' || 'zh-cn',
+    path: location.pathname,
+    recordIP: false,
+    serverURLs: ''
   });
+}, window.Valine);
 </script>
-
-
-
-
-
-  
-
-
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
 
 </body>
 </html>
