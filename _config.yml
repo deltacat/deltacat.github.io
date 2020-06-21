@@ -84,5 +84,5 @@ deploy:
   message: "hexo deploy generated pages"
   repo: 
     github: git@github.com:deltacat/deltacat.github.io.git
-    coding: git@git.coding.net:catxn/catxn.git,coding-pages
+    # coding: git@git.coding.net:catxn/catxn.git,coding-pages
  #   gitcafe: git@gitcafe.com:deltacat/deltacat.git,gitcafe-pages

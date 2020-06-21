@@ -196,10 +196,12 @@ links_title: 友情链接
 # links_layout: block
 links_layout: inline
 links:
-  宗布科技: http://www.zongbutech.com
+  # 宗布科技: http://www.zongbutech.com
+  罗万信息: http://www.lowaniot.com
   同芯资本: http://www.tongxinvc.com
   尼禄软件: http://www.nero.com
   Jason: http://atjason.com
+  LoRa 中文资料: http://lora.catxn.net
   # 我在博客园: http://www.cnblogs.com/deltacat
   # 我在新浪博客: http://blog.sina.com.cn/deltacatcn
   # wopus站长工具: http://tool.wopus.org
