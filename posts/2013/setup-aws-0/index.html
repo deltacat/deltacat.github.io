@@ -9,7 +9,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 3.9.0">
+<meta name="generator" content="Hexo 4.2.1">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/author.png?v=7.4.2">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/author.png?v=7.4.2">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/author.png?v=7.4.2">
@@ -57,17 +57,18 @@
 </script>
 
   <meta name="description" content="最近玩了把 AWS，实现了服务器的创建、PHP+MySql运行环境、代码部署等。一方面，后面的项目会反复重复这个流程，需要一份手册，另一方面，也给自己一个记录。于是把整个过程和要点整理一下，发到自己的博客。 主要用到的服务、技术、术语先列个清单：">
-<meta name="keywords" content="建站,aws">
 <meta property="og:type" content="article">
 <meta property="og:title" content="在 Amazon AWS 搭建及部署网站：序">
 <meta property="og:url" content="http://www.catxn.net/posts/2013/setup-aws-0/index.html">
 <meta property="og:site_name" content="夜猫阿罗哈">
 <meta property="og:description" content="最近玩了把 AWS，实现了服务器的创建、PHP+MySql运行环境、代码部署等。一方面，后面的项目会反复重复这个流程，需要一份手册，另一方面，也给自己一个记录。于是把整个过程和要点整理一下，发到自己的博客。 主要用到的服务、技术、术语先列个清单：">
-<meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2015-04-01T12:25:34.000Z">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2013-08-30T05:36:45.000Z">
+<meta property="article:modified_time" content="2015-04-01T12:25:34.000Z">
+<meta property="article:author" content="猫老师">
+<meta property="article:tag" content="建站">
+<meta property="article:tag" content="aws">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="在 Amazon AWS 搭建及部署网站：序">
-<meta name="twitter:description" content="最近玩了把 AWS，实现了服务器的创建、PHP+MySql运行环境、代码部署等。一方面，后面的项目会反复重复这个流程，需要一份手册，另一方面，也给自己一个记录。于是把整个过程和要点整理一下，发到自己的博客。 主要用到的服务、技术、术语先列个清单：">
   <link rel="canonical" href="http://www.catxn.net/posts/2013/setup-aws-0/">
 
 
@@ -186,30 +187,6 @@
       
         
         
-        <li class="menu-item menu-item-archives">
-      
-    
-      
-      
-        
-          
-        
-      
-        
-      
-        
-      
-    
-
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">81</span></a>
-
-  </li>
-      
-    
-      
-      
-        
-        
         <li class="menu-item menu-item-about">
       
     
@@ -247,7 +224,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">75</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">72</span></a>
 
   </li>
       
@@ -272,6 +249,30 @@
     
 
     <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">8</span></a>
+
+  </li>
+      
+    
+      
+      
+        
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">81</span></a>
 
   </li>
       
@@ -355,7 +356,7 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/建站心得/" itemprop="url" rel="index">
+                  <a href="/categories/%E5%BB%BA%E7%AB%99%E5%BF%83%E5%BE%97/" itemprop="url" rel="index">
                     <span itemprop="name">建站心得</span>
                   </a>
                 </span>
@@ -404,6 +405,7 @@
         <p>最近玩了把 AWS，实现了服务器的创建、PHP+MySql运行环境、代码部署等。一方面，后面的项目会反复重复这个流程，需要一份手册，另一方面，也给自己一个记录。于是把整个过程和要点整理一下，发到自己的博客。</p>
 <p>主要用到的服务、技术、术语先列个清单：</p>
 <a id="more"></a>
+
 <p><strong>亚马逊服务：</strong></p>
 <ol>
 <li>EC2: 亚马逊弹性云计算（Elastic Compute Cloud）。其实就是个虚拟主机。有多种操作系统可选。本文基于Linux系统</li>
@@ -471,7 +473,7 @@
           
           <div class="post-tags">
             
-              <a href="/tags/建站/" rel="tag"># 建站</a>
+              <a href="/tags/%E5%BB%BA%E7%AB%99/" rel="tag"># 建站</a>
             
               <a href="/tags/aws/" rel="tag"># aws</a>
             
@@ -483,7 +485,7 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/posts/2013/读史-读史：侠客行，聂政/" rel="next" title="读史：侠客行，聂政">
+                <a href="/posts/2013/%E8%AF%BB%E5%8F%B2-%E8%AF%BB%E5%8F%B2%EF%BC%9A%E4%BE%A0%E5%AE%A2%E8%A1%8C%EF%BC%8C%E8%81%82%E6%94%BF/" rel="next" title="读史：侠客行，聂政">
                   <i class="fa fa-chevron-left"></i> 读史：侠客行，聂政
                 </a>
               
@@ -587,7 +589,7 @@
             <a href="/tags/">
           
         
-        <span class="site-state-item-count">75</span>
+        <span class="site-state-item-count">72</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
@@ -654,7 +656,7 @@
     </div>
     <ul class="links-of-blogroll-list">
         <li class="links-of-blogroll-item">
-          <a href="http://www.zongbutech.com" title="http://www.zongbutech.com" rel="noopener" target="_blank">宗布科技</a>
+          <a href="http://www.lowaniot.com" title="http://www.lowaniot.com" rel="noopener" target="_blank">罗万信息</a>
         </li>
       
         <li class="links-of-blogroll-item">
@@ -667,6 +669,10 @@
       
         <li class="links-of-blogroll-item">
           <a href="http://atjason.com" title="http://atjason.com" rel="noopener" target="_blank">Jason</a>
+        </li>
+      
+        <li class="links-of-blogroll-item">
+          <a href="http://lora.catxn.net" title="http://lora.catxn.net" rel="noopener" target="_blank">LoRa 中文资料</a>
         </li>
       
     </ul>
@@ -690,13 +696,13 @@
 
 <div class="copyright">
   &copy; 
-  <span itemprop="copyrightYear">2019</span>
+  <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">猫老师</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.2.1
   </div>
   <span class="post-meta-divider">|</span>
   <div class="theme-info">
@@ -726,9 +732,17 @@
   <script src="/lib/anime.min.js?v=3.1.0"></script>
   <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
   <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-<script src="/js/utils.js?v=7.4.2"></script><script src="/js/motion.js?v=7.4.2"></script>
-<script src="/js/schemes/pisces.js?v=7.4.2"></script>
-<script src="/js/next-boot.js?v=7.4.2"></script>
+
+<script src="/js/utils.js?v=7.4.2.js"></script>
+
+<script src="/js/motion.js?v=7.4.2.js"></script>
+
+
+<script src="/js/schemes/pisces.js?v=7.4.2.js"></script>
+
+
+<script src="/js/next-boot.js?v=7.4.2.js"></script>
+
 
 
 

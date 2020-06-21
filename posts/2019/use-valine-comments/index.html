@@ -9,7 +9,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 3.9.0">
+<meta name="generator" content="Hexo 4.2.1">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/author.png?v=7.4.2">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/author.png?v=7.4.2">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/author.png?v=7.4.2">
@@ -57,17 +57,18 @@
 </script>
 
   <meta name="description" content="以前用过的一些评论系统基本都挂了。 最近想重新启用。研究了几个典型的比如 gitalk，来必力，都有些不满意之处。 gitalk 主要担心安全性，毕竟 github OAuth App 给的权限过大。LiveRe 是韩国公司，不怎么放心 最终选择了 Valine，原因如下：  基于 LeanCloud，成熟 SaaS 服务，一时半会儿不大会关； 可为评论创建独立 LeanCloud 应用。数据库完">
-<meta name="keywords" content="建站,hexo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="启用valine评论系统">
 <meta property="og:url" content="http://www.catxn.net/posts/2019/use-valine-comments/index.html">
 <meta property="og:site_name" content="夜猫阿罗哈">
 <meta property="og:description" content="以前用过的一些评论系统基本都挂了。 最近想重新启用。研究了几个典型的比如 gitalk，来必力，都有些不满意之处。 gitalk 主要担心安全性，毕竟 github OAuth App 给的权限过大。LiveRe 是韩国公司，不怎么放心 最终选择了 Valine，原因如下：  基于 LeanCloud，成熟 SaaS 服务，一时半会儿不大会关； 可为评论创建独立 LeanCloud 应用。数据库完">
-<meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-03-23T03:53:21.868Z">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2019-03-23T04:00:00.000Z">
+<meta property="article:modified_time" content="2019-03-23T03:53:21.868Z">
+<meta property="article:author" content="猫老师">
+<meta property="article:tag" content="建站">
+<meta property="article:tag" content="hexo">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="启用valine评论系统">
-<meta name="twitter:description" content="以前用过的一些评论系统基本都挂了。 最近想重新启用。研究了几个典型的比如 gitalk，来必力，都有些不满意之处。 gitalk 主要担心安全性，毕竟 github OAuth App 给的权限过大。LiveRe 是韩国公司，不怎么放心 最终选择了 Valine，原因如下：  基于 LeanCloud，成熟 SaaS 服务，一时半会儿不大会关； 可为评论创建独立 LeanCloud 应用。数据库完">
   <link rel="canonical" href="http://www.catxn.net/posts/2019/use-valine-comments/">
 
 
@@ -186,30 +187,6 @@
       
         
         
-        <li class="menu-item menu-item-archives">
-      
-    
-      
-      
-        
-          
-        
-      
-        
-      
-        
-      
-    
-
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">81</span></a>
-
-  </li>
-      
-    
-      
-      
-        
-        
         <li class="menu-item menu-item-about">
       
     
@@ -247,7 +224,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">75</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">72</span></a>
 
   </li>
       
@@ -272,6 +249,30 @@
     
 
     <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">8</span></a>
+
+  </li>
+      
+    
+      
+      
+        
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">81</span></a>
 
   </li>
       
@@ -347,7 +348,7 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/建站心得/" itemprop="url" rel="index">
+                  <a href="/categories/%E5%BB%BA%E7%AB%99%E5%BF%83%E5%BE%97/" itemprop="url" rel="index">
                     <span itemprop="name">建站心得</span>
                   </a>
                 </span>
@@ -396,23 +397,25 @@
         <p>以前用过的一些评论系统基本都挂了。</p>
 <p>最近想重新启用。研究了几个典型的比如 <a href="https://gitalk.github.io" target="_blank" rel="noopener">gitalk</a>，<a href="https://www.livere.com" target="_blank" rel="noopener">来必力</a>，都有些不满意之处。</p>
 <p>gitalk 主要担心安全性，毕竟 github OAuth App 给的权限过大。<br>LiveRe 是韩国公司，不怎么放心</p>
-<p>最终选择了 <a href="https://valine.js.org" title="快速、简洁且高效的无后端评论系统" target="_blank" rel="noopener">Valine</a>，原因如下：</p>
+<p>最终选择了 <a href="https://valine.js.org" target="_blank" rel="noopener" title="快速、简洁且高效的无后端评论系统">Valine</a>，原因如下：</p>
 <ol>
 <li>基于 <a href="https://leancloud.cn" target="_blank" rel="noopener">LeanCloud</a>，成熟 SaaS 服务，一时半会儿不大会关；</li>
 <li>可为评论创建独立 LeanCloud 应用。数据库完全由自己控制并与其他数据隔离；</li>
 <li>免登陆无后端，配置简单，用户体验较好；</li>
-<li>无缝集成 <a href="https://theme-next.org" title="Theme for Hexo" target="_blank" rel="noopener">Hexo NexT 主题</a>。</li>
+<li>无缝集成 <a href="https://theme-next.org" target="_blank" rel="noopener" title="Theme for Hexo">Hexo NexT 主题</a>。</li>
 </ol>
 <a id="more"></a>
+
 <p>快速开始：</p>
 <ol>
-<li>登录/注册 <a href="https://leancloud.cn" target="_blank" rel="noopener">LeanCloud</a> 账号，创建应用</li>
-<li><p>获取 AppID，AppKey，填入 NexT 主题第三方服务 Valine 相应位置</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">valine:</span><br><span class="line">  enable: true</span><br><span class="line">  appid: xxxxxxxxxxxx # your leancloud application appid</span><br><span class="line">  appkey: xxxxxxxxxxxx # your leancloud application appkey</span><br><span class="line">  notify: false </span><br><span class="line">  verify: false </span><br><span class="line">  placeholder: Just go go</span><br><span class="line">  avatar: mm </span><br><span class="line">  guest_info: nick,mail,link </span><br><span class="line">  pageSize: 10 </span><br><span class="line">  visitor: true </span><br><span class="line">  comment_count: false</span><br></pre></td></tr></table></figure>
+<li><p>登录/注册 <a href="https://leancloud.cn" target="_blank" rel="noopener">LeanCloud</a> 账号，创建应用</p>
 </li>
+<li><p>获取 AppID，AppKey，填入 NexT 主题第三方服务 Valine 相应位置</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">valine:</span><br><span class="line">  enable: true</span><br><span class="line">  appid: xxxxxxxxxxxx # your leancloud application appid</span><br><span class="line">  appkey: xxxxxxxxxxxx # your leancloud application appkey</span><br><span class="line">  notify: false </span><br><span class="line">  verify: false </span><br><span class="line">  placeholder: Just go go</span><br><span class="line">  avatar: mm </span><br><span class="line">  guest_info: nick,mail,link </span><br><span class="line">  pageSize: 10 </span><br><span class="line">  visitor: true </span><br><span class="line">  comment_count: false</span><br></pre></td></tr></table></figure></li>
 <li><p>重新编译 hexo 文件，上传发布</p>
 </li>
-<li>LeanCloud 后台调整安全性设置比如安全域名</li>
+<li><p>LeanCloud 后台调整安全性设置比如安全域名</p>
+</li>
 </ol>
 <p>欢迎试用留言！</p>
 
@@ -448,7 +451,7 @@
           
           <div class="post-tags">
             
-              <a href="/tags/建站/" rel="tag"># 建站</a>
+              <a href="/tags/%E5%BB%BA%E7%AB%99/" rel="tag"># 建站</a>
             
               <a href="/tags/hexo/" rel="tag"># hexo</a>
             
@@ -560,7 +563,7 @@
             <a href="/tags/">
           
         
-        <span class="site-state-item-count">75</span>
+        <span class="site-state-item-count">72</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
@@ -627,7 +630,7 @@
     </div>
     <ul class="links-of-blogroll-list">
         <li class="links-of-blogroll-item">
-          <a href="http://www.zongbutech.com" title="http://www.zongbutech.com" rel="noopener" target="_blank">宗布科技</a>
+          <a href="http://www.lowaniot.com" title="http://www.lowaniot.com" rel="noopener" target="_blank">罗万信息</a>
         </li>
       
         <li class="links-of-blogroll-item">
@@ -640,6 +643,10 @@
       
         <li class="links-of-blogroll-item">
           <a href="http://atjason.com" title="http://atjason.com" rel="noopener" target="_blank">Jason</a>
+        </li>
+      
+        <li class="links-of-blogroll-item">
+          <a href="http://lora.catxn.net" title="http://lora.catxn.net" rel="noopener" target="_blank">LoRa 中文资料</a>
         </li>
       
     </ul>
@@ -663,13 +670,13 @@
 
 <div class="copyright">
   &copy; 
-  <span itemprop="copyrightYear">2019</span>
+  <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">猫老师</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.2.1
   </div>
   <span class="post-meta-divider">|</span>
   <div class="theme-info">
@@ -699,9 +706,17 @@
   <script src="/lib/anime.min.js?v=3.1.0"></script>
   <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
   <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-<script src="/js/utils.js?v=7.4.2"></script><script src="/js/motion.js?v=7.4.2"></script>
-<script src="/js/schemes/pisces.js?v=7.4.2"></script>
-<script src="/js/next-boot.js?v=7.4.2"></script>
+
+<script src="/js/utils.js?v=7.4.2.js"></script>
+
+<script src="/js/motion.js?v=7.4.2.js"></script>
+
+
+<script src="/js/schemes/pisces.js?v=7.4.2.js"></script>
+
+
+<script src="/js/next-boot.js?v=7.4.2.js"></script>
+
 
 
 

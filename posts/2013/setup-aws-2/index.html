@@ -9,7 +9,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 3.9.0">
+<meta name="generator" content="Hexo 4.2.1">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/author.png?v=7.4.2">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/author.png?v=7.4.2">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/author.png?v=7.4.2">
@@ -57,20 +57,21 @@
 </script>
 
   <meta name="description" content="现在，我们已经有了一台EC2主机，具备了基本的硬件环境。下面，开始软件环境的配置。 第一步：连接服务器后面所有的一切，都需要在SSH终端窗口操作。首先，我们需要一个SSH客户端。PuTTY是很常用的工具。这里我们选用 Bitvise SSH Client。这个软件之前叫做“Tunnelier”。软件可以在 这里下载。 下载好后安装，在SSH这一栏填入必须的信息。主机名按实际地址填写，usernam">
-<meta name="keywords" content="建站,aws">
 <meta property="og:type" content="article">
 <meta property="og:title" content="在 Amazon AWS 搭建及部署网站：（二）安装、配置软件，启动网站">
 <meta property="og:url" content="http://www.catxn.net/posts/2013/setup-aws-2/index.html">
 <meta property="og:site_name" content="夜猫阿罗哈">
 <meta property="og:description" content="现在，我们已经有了一台EC2主机，具备了基本的硬件环境。下面，开始软件环境的配置。 第一步：连接服务器后面所有的一切，都需要在SSH终端窗口操作。首先，我们需要一个SSH客户端。PuTTY是很常用的工具。这里我们选用 Bitvise SSH Client。这个软件之前叫做“Tunnelier”。软件可以在 这里下载。 下载好后安装，在SSH这一栏填入必须的信息。主机名按实际地址填写，usernam">
-<meta property="og:locale" content="zh-CN">
+<meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://static.catxn.cn/images/aws_04.png-o">
 <meta property="og:image" content="http://static.catxn.cn/images/aws_05.png-o">
 <meta property="og:image" content="http://static.catxn.cn/images/aws_06.png-o">
-<meta property="og:updated_time" content="2019-06-12T02:25:07.351Z">
+<meta property="article:published_time" content="2013-09-01T08:18:39.000Z">
+<meta property="article:modified_time" content="2019-06-12T02:25:07.351Z">
+<meta property="article:author" content="猫老师">
+<meta property="article:tag" content="建站">
+<meta property="article:tag" content="aws">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="在 Amazon AWS 搭建及部署网站：（二）安装、配置软件，启动网站">
-<meta name="twitter:description" content="现在，我们已经有了一台EC2主机，具备了基本的硬件环境。下面，开始软件环境的配置。 第一步：连接服务器后面所有的一切，都需要在SSH终端窗口操作。首先，我们需要一个SSH客户端。PuTTY是很常用的工具。这里我们选用 Bitvise SSH Client。这个软件之前叫做“Tunnelier”。软件可以在 这里下载。 下载好后安装，在SSH这一栏填入必须的信息。主机名按实际地址填写，usernam">
 <meta name="twitter:image" content="http://static.catxn.cn/images/aws_04.png-o">
   <link rel="canonical" href="http://www.catxn.net/posts/2013/setup-aws-2/">
 
@@ -190,30 +191,6 @@
       
         
         
-        <li class="menu-item menu-item-archives">
-      
-    
-      
-      
-        
-          
-        
-      
-        
-      
-        
-      
-    
-
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">81</span></a>
-
-  </li>
-      
-    
-      
-      
-        
-        
         <li class="menu-item menu-item-about">
       
     
@@ -251,7 +228,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">75</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">72</span></a>
 
   </li>
       
@@ -276,6 +253,30 @@
     
 
     <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">8</span></a>
+
+  </li>
+      
+    
+      
+      
+        
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">81</span></a>
 
   </li>
       
@@ -359,7 +360,7 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/建站心得/" itemprop="url" rel="index">
+                  <a href="/categories/%E5%BB%BA%E7%AB%99%E5%BF%83%E5%BE%97/" itemprop="url" rel="index">
                     <span itemprop="name">建站心得</span>
                   </a>
                 </span>
@@ -412,18 +413,29 @@
 <p>填写好后，点击Login，第一次回弹出一个确认窗，是否接受认证信息，点击确认，一切正常的话登陆成功后左侧导航栏会出现 “New terminal console”, “New SFTP Window”。点击 new terminal console，熟悉的Linux终端提示符就出现了。后面所有的命令行操作均在这里进行。</p>
 <p><a href="http://calebogden.com/wordpress-on-linux-in-the-amazon-cloud-with-mac" target="_blank" rel="noopener">这篇文章</a>中提到了如何直接以root身份登录。实际上，所有的操作均可用sudo命令来执行。如果不需要用SFTP向系统文件中上传文件，没有理由直接root登录。后面会介绍用SVN部署代码的方法，除了一些特殊情况，SFTP基本上不怎么需要了。</p>
 <a id="more"></a>
+
 <h1 id="第二步：安装基本服务：Apache、PHP、MySQL"><a href="#第二步：安装基本服务：Apache、PHP、MySQL" class="headerlink" title="第二步：安装基本服务：Apache、PHP、MySQL"></a>第二步：安装基本服务：Apache、PHP、MySQL</h1><p>作为一个基本Web网站，我们需要至少这三样东西：Apache，PHP以及 MySQL。实际上数据库我们将来会使用 RDS提供的MySQL实例。不过这里还是从安装本机版本逐步开始。</p>
 <p>依次输入下列指令，安装Apache，MySql，PHP 以及必备扩展库，启动服务，设置 MySQL主密码。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 安装 apache      </span></span><br><span class="line">yum install http       </span><br><span class="line"><span class="comment"># 安装 PHP 及必备支持库       </span></span><br><span class="line">yum install php libmcrypt libmcrypt-devel php-mcrypt php-mbstring       </span><br><span class="line"><span class="comment"># 安装 php-mysql 扩展       </span></span><br><span class="line">yum install php-mysql       </span><br><span class="line"><span class="comment"># 安装 mysql       </span></span><br><span class="line">yum install mysql       </span><br><span class="line">yum install mysql-server       </span><br><span class="line"><span class="comment"># 设置 MySQL 主密码       </span></span><br><span class="line">mysqladmin -u root password <span class="string">"&lt;the password&gt;"</span>      </span><br><span class="line"><span class="comment"># 启动服务       </span></span><br><span class="line">service httpd start       </span><br><span class="line">service mysqld start</span><br></pre></td></tr></table></figure>
+
 <p>按照提示完成安装后，在浏览器输入主机地址，这时应该会看到Apache的默认欢迎页，表示我们的基本Web服务器开始运行了。</p>
 <h1 id="第三步：安装phpMyAdmin"><a href="#第三步：安装phpMyAdmin" class="headerlink" title="第三步：安装phpMyAdmin"></a>第三步：安装phpMyAdmin</h1><p>phpMyAdmin 用来管理后台MySQL数据库。首先，我们从官方网站下载，然后解压缩。移动至Web根目录并重命名为 “phpMyAdmin”。因为刚刚下载的文件夹解压后是保护版本号等信息的。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">wget http://sourceforge.net/projects/phpmyadmin/files/latest/download      </span><br><span class="line">unzip download       </span><br><span class="line">mv &lt;unzipped folder name&gt; /var/www/html/phpMyAdmin       </span><br><span class="line">rm download</span><br></pre></td></tr></table></figure>
-<p>解压之后，删除下载的文件。<br>现在，赋予phpMyAdmin目录正确的权限。首先检查Web服务器的用户<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">egrep <span class="string">'User|Group'</span> /etc/httpd/conf/httpd.conf</span><br></pre></td></tr></table></figure></p>
+
+<p>解压之后，删除下载的文件。<br>现在，赋予phpMyAdmin目录正确的权限。首先检查Web服务器的用户</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">egrep <span class="string">'User|Group'</span> /etc/httpd/conf/httpd.conf</span><br></pre></td></tr></table></figure>
+
 <p>这里会列出如下信息，默认应该是 apache，如果不是，以列出的为准。</p>
 <p>User apache<br>Group apache</p>
-<p>执行如下命令设置权限：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">useradd phpmydmin      </span><br><span class="line">passwd phpmyadmin       </span><br><span class="line"><span class="built_in">cd</span> /var/www/html       </span><br><span class="line">chown –R phpmyadmin.apache phpMyAdmin/</span><br></pre></td></tr></table></figure></p>
-<p>然后，创建配置目录并设置权限<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> phpMyAdmin      </span><br><span class="line">mkdir config       </span><br><span class="line">cp config.sample.inc.php config/config.inc.php       </span><br><span class="line">chown –R phpmyadmin.apache config/       </span><br><span class="line">chmod –R o+rw config/</span><br></pre></td></tr></table></figure></p>
-<p>完成后重启服务。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service httpd restart</span><br></pre></td></tr></table></figure></p>
+<p>执行如下命令设置权限：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">useradd phpmydmin      </span><br><span class="line">passwd phpmyadmin       </span><br><span class="line"><span class="built_in">cd</span> /var/www/html       </span><br><span class="line">chown –R phpmyadmin.apache phpMyAdmin/</span><br></pre></td></tr></table></figure>
+
+<p>然后，创建配置目录并设置权限</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> phpMyAdmin      </span><br><span class="line">mkdir config       </span><br><span class="line">cp config.sample.inc.php config/config.inc.php       </span><br><span class="line">chown –R phpmyadmin.apache config/       </span><br><span class="line">chmod –R o+rw config/</span><br></pre></td></tr></table></figure>
+
+<p>完成后重启服务。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service httpd restart</span><br></pre></td></tr></table></figure>
+
 <p>然后用浏览器打开 <code>http://&lt;host&gt;/phpmyadmin/setup</code>，管理界面就显示出来了。</p>
 <p>点击“新建主机”，输入主机名，主机地址（默认localhost），点击”认证“，选择”config“认证方式，输入数据库用户名和密码。点击保存。</p>
 <p><img src="http://static.catxn.cn/images/aws_05.png-o" alt="image"></p>
@@ -431,24 +443,29 @@
 <p><img src="http://static.catxn.cn/images/aws_06.png-o" alt="image"></p>
 <p>在这里保存后，所有的设置在真正回写到配置文件中。现在，在浏览器打开 <code>http://&lt;host&gt;/phpmyadmin</code>，登录进入数据库管理后台。如果成功的话，出于安全考虑，我们要删除配置文件和setup目录。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /var/www/html/phpMyAdmin      </span><br><span class="line">mv config/config.inc.php ./       </span><br><span class="line">rm –rf config/       </span><br><span class="line">rm –rf setup/</span><br></pre></td></tr></table></figure>
+
 <p>至此，phpMyAdmin配置完成。另外，为了快速开始，我们在认证方式中选择config方式。建议采用cookie方式连接。这里暂时不多做介绍。</p>
 <h1 id="第四步：开始第一个-Wordpress-网站"><a href="#第四步：开始第一个-Wordpress-网站" class="headerlink" title="第四步：开始第一个 Wordpress 网站"></a>第四步：开始第一个 Wordpress 网站</h1><p>此类教程网上铺天盖地，这里只做简单描述。</p>
 <p>首先，下载，解压，设置权限。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /var/www/html      </span><br><span class="line">wget http://wordpress.org/latest.zip       </span><br><span class="line">unzip latest.zip       </span><br><span class="line">chown –R apache.apache wordpress/       </span><br><span class="line">chmod –R 755 wordpress</span><br></pre></td></tr></table></figure>
+
 <p>然后，在浏览器中打开 <code>&lt;http://&lt;host&gt;/wordpress</code> 。<br>熟悉的 wordpress 初始化页面出现了。按照之前设置的数据库用户名密码填写，根据向导完成后，一个 wordpress 页面就出现在我们眼前。</p>
 <h1 id="第五步：虚拟主机，域名绑定，以及一点收尾工作"><a href="#第五步：虚拟主机，域名绑定，以及一点收尾工作" class="headerlink" title="第五步：虚拟主机，域名绑定，以及一点收尾工作"></a>第五步：虚拟主机，域名绑定，以及一点收尾工作</h1><p>对于Apache的设置，有两件事需要做。第一，出于安全性考虑，应禁用目录浏览。第二，为便于使用（或其他目的），我们需要在同一主机上host多个网站。这些工作都可以通过编辑 Apache 配置文件完成。</p>
-<p>首先，用 vi 打开 /etc/httpd/conf/httpd.conf ，找到如下段落：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Directory</span> "/<span class="attr">var</span>/<span class="attr">www</span>/<span class="attr">html</span>"&gt;</span>  </span><br><span class="line">  Options Indexes FollowSymLinks  </span><br><span class="line"><span class="tag">&lt;/<span class="name">Directory</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>首先，用 vi 打开 /etc/httpd/conf/httpd.conf ，找到如下段落：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Directory</span> "/<span class="attr">var</span>/<span class="attr">www</span>/<span class="attr">html</span>"&gt;</span>  </span><br><span class="line">  Options Indexes FollowSymLinks  </span><br><span class="line"><span class="tag">&lt;/<span class="name">Directory</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
 <p>删除”Indexes“即可，就禁用了 Web 主文档目录及所有子目录的目录浏览操作。也可对特定目录做此操作。</p>
 <p>编辑虚拟主机。首先，需要找到这一行（通常在靠近结尾处）</p>
 <p><code>NameVirtualHost *:80</code></p>
 <p>解开注释。然后在末尾按需求添加段落，比如我们有一个域名 my.name.com，让它指向我们刚刚创建的wordpress站点：</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">VirtualHost</span> *<span class="attr">:80</span>&gt;</span></span><br><span class="line">    ServerName my.name.com</span><br><span class="line">    DocumentRoot /var/www/html/wordpress</span><br><span class="line"><span class="tag">&lt;/<span class="name">VirtualHost</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
 <p>现在，保存，退出，重启 apache。在浏览器输入 my.name.com   </p>
 <p>Enjoy it!</p>
 <h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><ul>
-<li><a href="http://codex.wordpress.org.cn/Installing_WordPress" title="http://codex.wordpress.org.cn/Installing_WordPress" target="_blank" rel="noopener">http://codex.wordpress.org.cn/Installing_WordPress</a>    </li>
-<li><a href="http://httpd.apache.org/docs/2.2/vhosts/name-based.html" title="http://httpd.apache.org/docs/2.2/vhosts/name-based.html" target="_blank" rel="noopener">http://httpd.apache.org/docs/2.2/vhosts/name-based.html</a>    </li>
-<li><a href="http://www.cnblogs.com/88999660/articles/1581524.html" title="http://www.cnblogs.com/88999660/articles/1581524.html" target="_blank" rel="noopener">http://www.cnblogs.com/88999660/articles/1581524.html</a></li>
+<li><a href="http://codex.wordpress.org.cn/Installing_WordPress" target="_blank" rel="noopener" title="http://codex.wordpress.org.cn/Installing_WordPress">http://codex.wordpress.org.cn/Installing_WordPress</a>    </li>
+<li><a href="http://httpd.apache.org/docs/2.2/vhosts/name-based.html" target="_blank" rel="noopener" title="http://httpd.apache.org/docs/2.2/vhosts/name-based.html">http://httpd.apache.org/docs/2.2/vhosts/name-based.html</a>    </li>
+<li><a href="http://www.cnblogs.com/88999660/articles/1581524.html" target="_blank" rel="noopener" title="http://www.cnblogs.com/88999660/articles/1581524.html">http://www.cnblogs.com/88999660/articles/1581524.html</a></li>
 </ul>
 
     </div>
@@ -483,7 +500,7 @@
           
           <div class="post-tags">
             
-              <a href="/tags/建站/" rel="tag"># 建站</a>
+              <a href="/tags/%E5%BB%BA%E7%AB%99/" rel="tag"># 建站</a>
             
               <a href="/tags/aws/" rel="tag"># aws</a>
             
@@ -601,7 +618,7 @@
             <a href="/tags/">
           
         
-        <span class="site-state-item-count">75</span>
+        <span class="site-state-item-count">72</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
@@ -668,7 +685,7 @@
     </div>
     <ul class="links-of-blogroll-list">
         <li class="links-of-blogroll-item">
-          <a href="http://www.zongbutech.com" title="http://www.zongbutech.com" rel="noopener" target="_blank">宗布科技</a>
+          <a href="http://www.lowaniot.com" title="http://www.lowaniot.com" rel="noopener" target="_blank">罗万信息</a>
         </li>
       
         <li class="links-of-blogroll-item">
@@ -681,6 +698,10 @@
       
         <li class="links-of-blogroll-item">
           <a href="http://atjason.com" title="http://atjason.com" rel="noopener" target="_blank">Jason</a>
+        </li>
+      
+        <li class="links-of-blogroll-item">
+          <a href="http://lora.catxn.net" title="http://lora.catxn.net" rel="noopener" target="_blank">LoRa 中文资料</a>
         </li>
       
     </ul>
@@ -704,13 +725,13 @@
 
 <div class="copyright">
   &copy; 
-  <span itemprop="copyrightYear">2019</span>
+  <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">猫老师</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.2.1
   </div>
   <span class="post-meta-divider">|</span>
   <div class="theme-info">
@@ -740,9 +761,17 @@
   <script src="/lib/anime.min.js?v=3.1.0"></script>
   <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
   <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-<script src="/js/utils.js?v=7.4.2"></script><script src="/js/motion.js?v=7.4.2"></script>
-<script src="/js/schemes/pisces.js?v=7.4.2"></script>
-<script src="/js/next-boot.js?v=7.4.2"></script>
+
+<script src="/js/utils.js?v=7.4.2.js"></script>
+
+<script src="/js/motion.js?v=7.4.2.js"></script>
+
+
+<script src="/js/schemes/pisces.js?v=7.4.2.js"></script>
+
+
+<script src="/js/next-boot.js?v=7.4.2.js"></script>
+
 
 
 

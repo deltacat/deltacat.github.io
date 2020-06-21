@@ -9,7 +9,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 3.9.0">
+<meta name="generator" content="Hexo 4.2.1">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/author.png?v=7.4.2">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/author.png?v=7.4.2">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/author.png?v=7.4.2">
@@ -57,17 +57,18 @@
 </script>
 
   <meta name="description" content="服务器已经搭建好，网站也开始运行了。那么如何方便地部署代码呢？ 最基本的方式，就是使用 SFTP 向网站目录直接部署。这种方法的缺点是版本控制不便，在上传时也无法方便的比较代码变化。 用SVN来部署是一个很好的选择。SVN 本身是一个服务，我的选择是使用 Apache 的 SVN 模块来访问，不必单独启用SVN服务。 第一步：确保 Apache 正确安装和配置详情参见前文，这里假定 Apache">
-<meta name="keywords" content="建站,aws">
 <meta property="og:type" content="article">
 <meta property="og:title" content="在 Amazon AWS 搭建及部署网站：（三）开发及部署环境">
 <meta property="og:url" content="http://www.catxn.net/posts/2013/setup-aws-3/index.html">
 <meta property="og:site_name" content="夜猫阿罗哈">
 <meta property="og:description" content="服务器已经搭建好，网站也开始运行了。那么如何方便地部署代码呢？ 最基本的方式，就是使用 SFTP 向网站目录直接部署。这种方法的缺点是版本控制不便，在上传时也无法方便的比较代码变化。 用SVN来部署是一个很好的选择。SVN 本身是一个服务，我的选择是使用 Apache 的 SVN 模块来访问，不必单独启用SVN服务。 第一步：确保 Apache 正确安装和配置详情参见前文，这里假定 Apache">
-<meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2015-04-01T12:25:34.000Z">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2013-09-01T09:40:15.000Z">
+<meta property="article:modified_time" content="2015-04-01T12:25:34.000Z">
+<meta property="article:author" content="猫老师">
+<meta property="article:tag" content="建站">
+<meta property="article:tag" content="aws">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="在 Amazon AWS 搭建及部署网站：（三）开发及部署环境">
-<meta name="twitter:description" content="服务器已经搭建好，网站也开始运行了。那么如何方便地部署代码呢？ 最基本的方式，就是使用 SFTP 向网站目录直接部署。这种方法的缺点是版本控制不便，在上传时也无法方便的比较代码变化。 用SVN来部署是一个很好的选择。SVN 本身是一个服务，我的选择是使用 Apache 的 SVN 模块来访问，不必单独启用SVN服务。 第一步：确保 Apache 正确安装和配置详情参见前文，这里假定 Apache">
   <link rel="canonical" href="http://www.catxn.net/posts/2013/setup-aws-3/">
 
 
@@ -186,30 +187,6 @@
       
         
         
-        <li class="menu-item menu-item-archives">
-      
-    
-      
-      
-        
-          
-        
-      
-        
-      
-        
-      
-    
-
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">81</span></a>
-
-  </li>
-      
-    
-      
-      
-        
-        
         <li class="menu-item menu-item-about">
       
     
@@ -247,7 +224,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">75</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">72</span></a>
 
   </li>
       
@@ -272,6 +249,30 @@
     
 
     <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">8</span></a>
+
+  </li>
+      
+    
+      
+      
+        
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">81</span></a>
 
   </li>
       
@@ -355,7 +356,7 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/建站心得/" itemprop="url" rel="index">
+                  <a href="/categories/%E5%BB%BA%E7%AB%99%E5%BF%83%E5%BE%97/" itemprop="url" rel="index">
                     <span itemprop="name">建站心得</span>
                   </a>
                 </span>
@@ -414,6 +415,7 @@
 <p>svn –version</p>
 </blockquote>
 <a id="more"></a>
+
 <h1 id="第三步：-配置-apache-上的-subversion"><a href="#第三步：-配置-apache-上的-subversion" class="headerlink" title="第三步： 配置 apache 上的 subversion"></a>第三步： 配置 apache 上的 subversion</h1><p>Apache 中 subversion 配置文件: /etc/httpd/conf.d/subversion.conf<br>用 vi 打开该文件，找到如下被注释掉的部分，打开</p>
 <blockquote>
 <p>&lt;Location /repos&gt;</p>
@@ -469,9 +471,9 @@
 </blockquote>
 <p>现在一切就绪，使用客户端工具提交代码测试，检查Web目录是否同步了更改。<br>至此，配置工作完毕。</p>
 <h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><ul>
-<li><a href="http://www.worldhello.net/doc/svn_hooks/svn_hooks.mm.htm" title="http://www.worldhello.net/doc/svn_hooks/svn_hooks.mm.htm" target="_blank" rel="noopener">http://www.worldhello.net/doc/svn_hooks/svn_hooks.mm.htm</a></li>
-<li><a href="http://blog.csdn.net/niu_gao/article/details/7502326" title="http://blog.csdn.net/niu_gao/article/details/7502326" target="_blank" rel="noopener">http://blog.csdn.net/niu_gao/article/details/7502326</a></li>
-<li><a href="http://www.ibm.com/developerworks/cn/java/j-lo-apache-subversion/index.html" title="http://www.ibm.com/developerworks/cn/java/j-lo-apache-subversion/index.html" target="_blank" rel="noopener">http://www.ibm.com/developerworks/cn/java/j-lo-apache-subversion/index.html</a></li>
+<li><a href="http://www.worldhello.net/doc/svn_hooks/svn_hooks.mm.htm" target="_blank" rel="noopener" title="http://www.worldhello.net/doc/svn_hooks/svn_hooks.mm.htm">http://www.worldhello.net/doc/svn_hooks/svn_hooks.mm.htm</a></li>
+<li><a href="http://blog.csdn.net/niu_gao/article/details/7502326" target="_blank" rel="noopener" title="http://blog.csdn.net/niu_gao/article/details/7502326">http://blog.csdn.net/niu_gao/article/details/7502326</a></li>
+<li><a href="http://www.ibm.com/developerworks/cn/java/j-lo-apache-subversion/index.html" target="_blank" rel="noopener" title="http://www.ibm.com/developerworks/cn/java/j-lo-apache-subversion/index.html">http://www.ibm.com/developerworks/cn/java/j-lo-apache-subversion/index.html</a></li>
 </ul>
 
     </div>
@@ -506,7 +508,7 @@
           
           <div class="post-tags">
             
-              <a href="/tags/建站/" rel="tag"># 建站</a>
+              <a href="/tags/%E5%BB%BA%E7%AB%99/" rel="tag"># 建站</a>
             
               <a href="/tags/aws/" rel="tag"># aws</a>
             
@@ -528,7 +530,7 @@
 
             <div class="post-nav-prev post-nav-item">
               
-                <a href="/posts/2014/时间管理之吐槽/" rel="prev" title="时间管理之吐槽">
+                <a href="/posts/2014/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86%E4%B9%8B%E5%90%90%E6%A7%BD/" rel="prev" title="时间管理之吐槽">
                   时间管理之吐槽 <i class="fa fa-chevron-right"></i>
                 </a>
               
@@ -624,7 +626,7 @@
             <a href="/tags/">
           
         
-        <span class="site-state-item-count">75</span>
+        <span class="site-state-item-count">72</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
@@ -691,7 +693,7 @@
     </div>
     <ul class="links-of-blogroll-list">
         <li class="links-of-blogroll-item">
-          <a href="http://www.zongbutech.com" title="http://www.zongbutech.com" rel="noopener" target="_blank">宗布科技</a>
+          <a href="http://www.lowaniot.com" title="http://www.lowaniot.com" rel="noopener" target="_blank">罗万信息</a>
         </li>
       
         <li class="links-of-blogroll-item">
@@ -704,6 +706,10 @@
       
         <li class="links-of-blogroll-item">
           <a href="http://atjason.com" title="http://atjason.com" rel="noopener" target="_blank">Jason</a>
+        </li>
+      
+        <li class="links-of-blogroll-item">
+          <a href="http://lora.catxn.net" title="http://lora.catxn.net" rel="noopener" target="_blank">LoRa 中文资料</a>
         </li>
       
     </ul>
@@ -727,13 +733,13 @@
 
 <div class="copyright">
   &copy; 
-  <span itemprop="copyrightYear">2019</span>
+  <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">猫老师</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.2.1
   </div>
   <span class="post-meta-divider">|</span>
   <div class="theme-info">
@@ -763,9 +769,17 @@
   <script src="/lib/anime.min.js?v=3.1.0"></script>
   <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
   <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-<script src="/js/utils.js?v=7.4.2"></script><script src="/js/motion.js?v=7.4.2"></script>
-<script src="/js/schemes/pisces.js?v=7.4.2"></script>
-<script src="/js/next-boot.js?v=7.4.2"></script>
+
+<script src="/js/utils.js?v=7.4.2.js"></script>
+
+<script src="/js/motion.js?v=7.4.2.js"></script>
+
+
+<script src="/js/schemes/pisces.js?v=7.4.2.js"></script>
+
+
+<script src="/js/next-boot.js?v=7.4.2.js"></script>
+
 
 
 
