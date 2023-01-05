@@ -1,0 +1,1378 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/author.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/author.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/author.png">
+  <link rel="mask-icon" href="/images/author.png" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.proxy.ustclug.org/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"www.catxn.net","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="猫老师的个人博客：少儿编程，K12 STEAM 教育，软件开发，项目管理，历史故事等">
+<meta property="og:type" content="website">
+<meta property="og:title" content="夜猫阿罗哈">
+<meta property="og:url" content="http://www.catxn.net/index.html">
+<meta property="og:site_name" content="夜猫阿罗哈">
+<meta property="og:description" content="猫老师的个人博客：少儿编程，K12 STEAM 教育，软件开发，项目管理，历史故事等">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="猫老师">
+<meta property="article:tag" content="猫老师少儿编程,少儿编程,编程,K12,STEAM,STEM,JavaScript,NodeJs,历史,PMP,物联网,IoT">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://www.catxn.net/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>夜猫阿罗哈 - 暮然回首萧瑟处，也无风雨也无晴</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-7388145-4"></script>
+    <script>
+      if (CONFIG.hostname === location.hostname) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-7388145-4');
+      }
+    </script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="夜猫阿罗哈" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">夜猫阿罗哈</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">暮然回首萧瑟处，也无风雨也无晴</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="archive fa-fw"></i>归档<span class="badge">82</span></a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="tags fa-fw"></i>标签<span class="badge">75</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="th fa-fw"></i>分类<span class="badge">9</span></a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content index posts-expand">
+            
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.catxn.net/posts/2019/lora-chinese-docs/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/author.png">
+      <meta itemprop="name" content="猫老师">
+      <meta itemprop="description" content="猫老师的个人博客：少儿编程，K12 STEAM 教育，软件开发，项目管理，历史故事等">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="夜猫阿罗哈">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/posts/2019/lora-chinese-docs/" class="post-title-link" itemprop="url">LoRa 中文资料汇编</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-09-28 12:00:00" itemprop="dateCreated datePublished" datetime="2019-09-28T12:00:00+08:00">2019-09-28</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-01-05 14:41:15" itemprop="dateModified" datetime="2023-01-05T14:41:15+08:00">2023-01-05</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%89%A9%E8%81%94%E7%BD%91/" itemprop="url" rel="index"><span itemprop="name">物联网</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/posts/2019/lora-chinese-docs/" class="post-meta-item leancloud_visitors" data-flag-title="LoRa 中文资料汇编" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>最近开始进入物联网领域。作为入门，翻译了 LoRa 1.1 Spec。<br>此后会逐步加入一些其它的中文资料。建了一个站作为导航：</p>
+<p><a target="_blank" rel="noopener" href="http://lora.catxn.net/">LoRa 中文资料汇编</a></p>
+<p>主要自用，当然，能帮到其他人也是很好的。</p>
+<p>翻译过程开源，欢迎参与改进。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.catxn.net/posts/2019/use-valine-comments/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/author.png">
+      <meta itemprop="name" content="猫老师">
+      <meta itemprop="description" content="猫老师的个人博客：少儿编程，K12 STEAM 教育，软件开发，项目管理，历史故事等">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="夜猫阿罗哈">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/posts/2019/use-valine-comments/" class="post-title-link" itemprop="url">启用valine评论系统</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-03-23 12:00:00" itemprop="dateCreated datePublished" datetime="2019-03-23T12:00:00+08:00">2019-03-23</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-01-05 14:41:15" itemprop="dateModified" datetime="2023-01-05T14:41:15+08:00">2023-01-05</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%BB%BA%E7%AB%99%E5%BF%83%E5%BE%97/" itemprop="url" rel="index"><span itemprop="name">建站心得</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/posts/2019/use-valine-comments/" class="post-meta-item leancloud_visitors" data-flag-title="启用valine评论系统" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>以前用过的一些评论系统基本都挂了。</p>
+<p>最近想重新启用。研究了几个典型的比如 <a target="_blank" rel="noopener" href="https://gitalk.github.io/">gitalk</a>，<a target="_blank" rel="noopener" href="https://www.livere.com/">来必力</a>，都有些不满意之处。</p>
+<p>gitalk 主要担心安全性，毕竟 github OAuth App 给的权限过大。<br>LiveRe 是韩国公司，不怎么放心</p>
+<p>最终选择了 <a target="_blank" rel="noopener" href="https://valine.js.org/" title="快速、简洁且高效的无后端评论系统">Valine</a>，原因如下：</p>
+<ol>
+<li>基于 <a target="_blank" rel="noopener" href="https://leancloud.cn/">LeanCloud</a>，成熟 SaaS 服务，一时半会儿不大会关；</li>
+<li>可为评论创建独立 LeanCloud 应用。数据库完全由自己控制并与其他数据隔离；</li>
+<li>免登陆无后端，配置简单，用户体验较好；</li>
+<li>无缝集成 <a target="_blank" rel="noopener" href="https://theme-next.org/" title="Theme for Hexo">Hexo NexT 主题</a>。</li>
+</ol>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/posts/2019/use-valine-comments/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.catxn.net/posts/2019/aifilm-2001-earth/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/author.png">
+      <meta itemprop="name" content="猫老师">
+      <meta itemprop="description" content="猫老师的个人博客：少儿编程，K12 STEAM 教育，软件开发，项目管理，历史故事等">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="夜猫阿罗哈">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/posts/2019/aifilm-2001-earth/" class="post-title-link" itemprop="url">人工智能电影系列——从2001太空漫游到流浪地球</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-02-11 09:00:00" itemprop="dateCreated datePublished" datetime="2019-02-11T09:00:00+08:00">2019-02-11</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-01-05 14:41:15" itemprop="dateModified" datetime="2023-01-05T14:41:15+08:00">2023-01-05</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%BD%B1%E9%9F%B3%E5%8A%A8%E6%BC%AB/" itemprop="url" rel="index"><span itemprop="name">影音动漫</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/posts/2019/aifilm-2001-earth/" class="post-meta-item leancloud_visitors" data-flag-title="人工智能电影系列——从2001太空漫游到流浪地球" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>《2001太空漫游》是科幻史上不可逾越的经典。《流浪地球》是现下正在热映的国产科幻，被很多影评人誉为新国产科幻的里程碑。</p>
+<p>不过这里并不是“又一篇”影评，只是聊聊影片中都有的人工智能。在《2001太空漫游中》，是HAL9000；在《WALL-E》(机器人总动员)中，是 AUTO；而《流浪地球》中，则是 MOSS。而后面两位，更是旗帜鲜明地向他们的前辈 HAL 致敬。</p>
+<h2 id="2001-太空漫游-HAL9000"><a href="#2001-太空漫游-HAL9000" class="headerlink" title="2001 太空漫游 - HAL9000"></a>2001 太空漫游 - HAL9000</h2><p><img src="http://static.catxn.cn/images/15498544203557.jpg-s" alt="2001太空漫游，1968，斯坦利·库布里克"></p>
+<p>这部影片是库布里克花了四年时间制作的充满哲学命题的鸿篇巨制。考虑到本片上映早在1968年，而人类首次登月是在1969年，如此瑰丽的太空场景和贯穿人类进化的过去未来的命题不由令人咂舌。</p>
+<p>影片开始，一块神秘的黑方碑出现在史前人类面前，带来了进化的启示。镜头快速切到2001年的太空飞船，为了寻找黑石的根源，人类开展了一项木星登陆计划。飞船上有冬眠的三名科学家，船长Dave，飞行员Frank，然后就是一部掌控船上一切的高智能电脑——“HAL9000”。</p>
+<blockquote>
+<p>“I’m sorry, Dave. I’m afraid I can’t do that.”</p>
+</blockquote>
+<p>通过片中情节可知，设计者在给HAL编程下达任务时，输入了两条完全矛盾的指令。一是不惜一切代价完成木星任务；二是在到达目的地前此行的真正目的需要保密。然而船员Frank和Dave对完成任务又非常重要，因此 HAL 必须用某种方式暗示或提示两位船员主动思考木星之行的意义。</p>
+<p>它的办法是：报告错误信息。由于HAL9000型系列电脑从不出错，因此它以为Frank和Dave会从这个奇怪的矛盾中获得提示，但二人开始怀疑HAL本身的可信度，于是HAL又给了进一步的提示，它指出“这是你们人类的错误（意指设计者强加于HAL的二律背反）”。但不幸的是，二人仍无法解读HAL的意图，反而怀疑 HAL 的可靠性并开始策划终止HAL的运行。HAL没有选择，为了完成任务，它必须除掉船员……</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/posts/2019/aifilm-2001-earth/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.catxn.net/posts/2019/FAQ-1901/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/author.png">
+      <meta itemprop="name" content="猫老师">
+      <meta itemprop="description" content="猫老师的个人博客：少儿编程，K12 STEAM 教育，软件开发，项目管理，历史故事等">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="夜猫阿罗哈">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/posts/2019/FAQ-1901/" class="post-title-link" itemprop="url">FAQ 1901</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-02-05 09:00:00" itemprop="dateCreated datePublished" datetime="2019-02-05T09:00:00+08:00">2019-02-05</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-01-05 14:41:15" itemprop="dateModified" datetime="2023-01-05T14:41:15+08:00">2023-01-05</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%B0%91%E5%84%BF%E7%BC%96%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">少儿编程</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/posts/2019/FAQ-1901/" class="post-meta-item leancloud_visitors" data-flag-title="FAQ 1901" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <blockquote>
+<p>不定期整理学生、家长和爱好者的问题，汇总问答后发布。</p>
+<ul>
+<li>本期（1901）目录：</li>
+<li>关于猫老师少儿编程的问答</li>
+<li>关于 Python 和极客战记的问答</li>
+<li>关于 Scratch 和积木式编程的问答</li>
+<li>关于健康学习</li>
+</ul>
+<p>本期部分内容来自 Scratch 官网、“极客战记”官网。<br>部分资料来自 Scratch 官网、极客战记官网等。</p>
+</blockquote>
+<h2 id="猫老师少儿编程"><a href="#猫老师少儿编程" class="headerlink" title="猫老师少儿编程"></a>猫老师少儿编程</h2><p>Q: 现在开设有哪些课程？<br>A:<br>面向低龄段：Scratch<br>面向小学高年级：极客战记（Python）<br>面向中学生：Python</p>
+<p>Q: 什么时间开始学习？<br>A: 推荐的学习年龄段：</p>
+<p>5<del>7岁：ScratchJr<br>8</del>16岁：Scratch<br>10<del>12岁：Python（极客战记）<br>12</del>18岁：Python（原生）</p>
+<p>上面列出的年龄段一般指“初次接触”编程的年龄。一旦开始学习，后续课程即可根据学生的接受度调整。<br>另外，如果不是有特定目的，学完 Scratch 后也可不急于学习新的语言，而是深入学习更多 Scratch 技巧，并利用这些技巧进行持续创作。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/posts/2019/FAQ-1901/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.catxn.net/posts/2019/PYTHON%E6%98%AF%E4%B8%AA%E4%BB%80%E4%B9%88%E4%B8%9C%E8%A5%BF/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/author.png">
+      <meta itemprop="name" content="猫老师">
+      <meta itemprop="description" content="猫老师的个人博客：少儿编程，K12 STEAM 教育，软件开发，项目管理，历史故事等">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="夜猫阿罗哈">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/posts/2019/PYTHON%E6%98%AF%E4%B8%AA%E4%BB%80%E4%B9%88%E4%B8%9C%E8%A5%BF/" class="post-title-link" itemprop="url">PYTHON 是个什么东西</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-01-12 09:00:00" itemprop="dateCreated datePublished" datetime="2019-01-12T09:00:00+08:00">2019-01-12</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-01-05 14:41:15" itemprop="dateModified" datetime="2023-01-05T14:41:15+08:00">2023-01-05</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%B0%91%E5%84%BF%E7%BC%96%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">少儿编程</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/posts/2019/PYTHON%E6%98%AF%E4%B8%AA%E4%BB%80%E4%B9%88%E4%B8%9C%E8%A5%BF/" class="post-meta-item leancloud_visitors" data-flag-title="PYTHON 是个什么东西" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="什么是-Python？"><a href="#什么是-Python？" class="headerlink" title="什么是 Python？"></a>什么是 Python？</h2><p>如果你百度一下，它会告诉你，python 是一种<strong>计算机程序设计语言</strong>。</p>
+<p>什么是计算机呢？</p>
+<p>信息时代，计算机无处不在。以我们生活中所见为例，平时用的台式电脑，笔记本电脑就是计算机，平板电脑、手机也是计算机，喜欢游戏的同学，家里或许有 PS4、XBOX，其实也都是计算机。</p>
+<p>简单来说，计算机系统由<strong>“硬件”</strong>和<strong>“软件”</strong>构成</p>
+<p>键盘、显示器、游戏手柄、声音输出设备等等，属于计算机的<strong>“硬件”</strong>。而<strong>“软件”</strong>，就是运行在计算机上的程序，用来让计算机的硬件执行特定的功能，比如呈现画面、播放音乐、通过输入设备（如键盘、游戏手柄）控制虚拟的角色做出各种动作。</p>
+<p>程序设计语言，就是人类用来跟计算机沟通，编写可以执行的程序的一种特殊的“语言”。跟平时我们谈天说地时讲的话一样，有单词、句子、语法规范。不同的国家、人种，说不一样的话比如中文、英语、日语、法语。计算机的世界，也因时代、用途等因素，诞生了各种各样的语言。</p>
+<p>PYTHON，就是其中的一种。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/posts/2019/PYTHON%E6%98%AF%E4%B8%AA%E4%BB%80%E4%B9%88%E4%B8%9C%E8%A5%BF/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.catxn.net/posts/2019/%E5%86%99%E7%BB%99%E9%9D%92%E5%B0%91%E5%B9%B4%E7%9A%84%E7%BD%91%E9%A1%B5%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0%E6%8C%87%E5%8D%97/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/author.png">
+      <meta itemprop="name" content="猫老师">
+      <meta itemprop="description" content="猫老师的个人博客：少儿编程，K12 STEAM 教育，软件开发，项目管理，历史故事等">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="夜猫阿罗哈">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/posts/2019/%E5%86%99%E7%BB%99%E9%9D%92%E5%B0%91%E5%B9%B4%E7%9A%84%E7%BD%91%E9%A1%B5%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0%E6%8C%87%E5%8D%97/" class="post-title-link" itemprop="url">写给青少年的网页爬虫学习指南</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-01-12 09:00:00" itemprop="dateCreated datePublished" datetime="2019-01-12T09:00:00+08:00">2019-01-12</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-01-05 14:41:15" itemprop="dateModified" datetime="2023-01-05T14:41:15+08:00">2023-01-05</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%B0%91%E5%84%BF%E7%BC%96%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">少儿编程</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/posts/2019/%E5%86%99%E7%BB%99%E9%9D%92%E5%B0%91%E5%B9%B4%E7%9A%84%E7%BD%91%E9%A1%B5%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0%E6%8C%87%E5%8D%97/" class="post-meta-item leancloud_visitors" data-flag-title="写给青少年的网页爬虫学习指南" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <blockquote>
+<p>注意，这是一篇写给<strong>青少年</strong>的入门指南。<br>我们不会做非常深入的探讨，而是浅尝辄止，给初学者描绘一个概貌和入门指引。</p>
+</blockquote>
+<h2 id="缘起"><a href="#缘起" class="headerlink" title="缘起"></a>缘起</h2><p><em>那一天，人们终于回想起了被爬虫所支配的恐惧</em></p>
+<p>2019元旦期间，有位同学报名学习 Python，上来就问了我一个问题，“什么时候可以开始学习爬虫呢？”</p>
+<p>老师当时就被震惊了。现在的小朋友果然不可以低估啊。要知道猫老师本猫都还没实际操作过爬虫呢。而00后10后已经在以此为目标了。我不禁想问，这位少年，看你骨骼清奇，我这里有一本金牌黑客秘籍要不要看下？</p>
+<p>玩笑归玩笑。有明确目标的学习，效果会是出类拔萃的。虽然猫老师之前并未专门对这项技术的教学做过准备，但是只要同学有需要，我们就不会被问题难住。教学相长，为了不辜负同学们的期望，我们决定从制作一个例子开始。</p>
+<h2 id="什么是爬虫"><a href="#什么是爬虫" class="headerlink" title="什么是爬虫"></a>什么是爬虫</h2><p>网络爬虫（crawler），又被称为蜘蛛（spider）。是一种可以根据某种设定的规则自动运行，抓取互联网上的信息的程序。我们经常使用的百度、必应、谷歌这些搜索引擎，它们背后的重要支撑，就是网络爬虫。这些爬虫不知疲倦地抓取网站的信息并加以综合整理，最终成为帮助我们快速检索需要的信息的利器。</p>
+<p>从这个简单的描述，我们就可以知道，一个爬虫至少需要三个要素：</p>
+<ol>
+<li>抓取信息</li>
+<li>数据存储和整理</li>
+<li>数据呈现</li>
+</ol>
+<p>这几个方面，每一个点都可以引申更多更深入的技术，值得数十年如一日地潜心研究。我们没有办法一一介绍，这一点你只要想象一下这些搜索引擎公司，为什么能凭借这个技术成长为互联网巨头就明白了。</p>
+<p>但是作为初学者，想通过一些简单的学习，大致了解爬虫的工作原理，甚至做一些简单的爬虫应用，还是有可能的。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/posts/2019/%E5%86%99%E7%BB%99%E9%9D%92%E5%B0%91%E5%B9%B4%E7%9A%84%E7%BD%91%E9%A1%B5%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0%E6%8C%87%E5%8D%97/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.catxn.net/posts/2018/%E5%85%B3%E4%BA%8E%E4%BF%A1%E5%A5%A5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/author.png">
+      <meta itemprop="name" content="猫老师">
+      <meta itemprop="description" content="猫老师的个人博客：少儿编程，K12 STEAM 教育，软件开发，项目管理，历史故事等">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="夜猫阿罗哈">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/posts/2018/%E5%85%B3%E4%BA%8E%E4%BF%A1%E5%A5%A5/" class="post-title-link" itemprop="url">什么是信息学奥赛（NOIP）</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2018-11-05 09:00:00" itemprop="dateCreated datePublished" datetime="2018-11-05T09:00:00+08:00">2018-11-05</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-01-05 14:41:15" itemprop="dateModified" datetime="2023-01-05T14:41:15+08:00">2023-01-05</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%B0%91%E5%84%BF%E7%BC%96%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">少儿编程</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/posts/2018/%E5%85%B3%E4%BA%8E%E4%BF%A1%E5%A5%A5/" class="post-meta-item leancloud_visitors" data-flag-title="什么是信息学奥赛（NOIP）" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>信息学奥赛，是五大学科奥林匹克（数学、物理、化学、生物和信息学）之一。</p>
+<p>关于信奥，我们最常听到的应该是 NOIP 这个缩写。全称“全国青少年信息学奥林匹克联赛（National Olympiad in Informatics in Provinces）”，也是整个系列中，门槛最低的一个。要想进入信息奥林匹克的世界，这是第一个关卡。</p>
+<h2 id="NOIP"><a href="#NOIP" class="headerlink" title="NOIP"></a>NOIP</h2><p><strong>介绍</strong></p>
+<p>NOIP 由中国计算机学会统一组织，每年在同一时间不同地点以省或市划分赛区分别组织比赛，全国统一试卷。初中、高中或中专的在校学生均可报名参加，根据难度分普及组和提高组两个组别，分别面向初中和高中。每个组别均分为初赛和复赛两个阶段，初赛为笔试，复赛为上机考试。</p>
+<p>初赛主要考察基础知识，形式为笔试。主要目标是考察学生对计算机科学知识掌握的广度以及编程基本能力。</p>
+<p>初赛达到一定分数线的选手才可以参加复赛。复赛为程序设计，需要上机调试。主要考察学生的分析理解、数学抽象、实际的编程能力和编程技巧、想象力和创造力等等综合实践能力。各赛区奖项在复试的优胜者中产生。</p>
+<p>比赛使用的语言，最早是采用 Basic，已于2005年取消。目前执行的是C&#x2F;C++&#x2F;Pascal。2022年部分取消 C，全部取消 Pascal。C++将成为主要语言。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/posts/2018/%E5%85%B3%E4%BA%8E%E4%BF%A1%E5%A5%A5/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.catxn.net/posts/2018/%E5%B0%91%E5%84%BF%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%BB%80%E4%B9%88/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/author.png">
+      <meta itemprop="name" content="猫老师">
+      <meta itemprop="description" content="猫老师的个人博客：少儿编程，K12 STEAM 教育，软件开发，项目管理，历史故事等">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="夜猫阿罗哈">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/posts/2018/%E5%B0%91%E5%84%BF%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%BB%80%E4%B9%88/" class="post-title-link" itemprop="url">少儿编程学什么</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2018-11-03 09:00:00" itemprop="dateCreated datePublished" datetime="2018-11-03T09:00:00+08:00">2018-11-03</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-01-05 14:41:15" itemprop="dateModified" datetime="2023-01-05T14:41:15+08:00">2023-01-05</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%B0%91%E5%84%BF%E7%BC%96%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">少儿编程</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/posts/2018/%E5%B0%91%E5%84%BF%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%BB%80%E4%B9%88/" class="post-meta-item leancloud_visitors" data-flag-title="少儿编程学什么" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><img src="http://static.catxn.cn/images/15409758368145.jpg-s" alt="世界上有几百种编程语言"></p>
+<h2 id="少儿编程学什么"><a href="#少儿编程学什么" class="headerlink" title="少儿编程学什么"></a>少儿编程学什么</h2><p>少年儿童学习编程，就是为了学习编程的技术，将来做一名码农吗？</p>
+<p>可以很明确的说，不是的。出于应用和专业目的的编程培训，与儿童编程教育，有本质的不同。</p>
+<p>我们带孩子学编程，是为了：</p>
+<ul>
+<li>激发创造力、锻炼想象力</li>
+<li>培养计算思维、逻辑思维能力</li>
+<li>培养专注和细心</li>
+<li>养成探究解决问题的方法的能力和习惯</li>
+<li>掌握信息和人工智能时代的生存工具</li>
+</ul>
+<p>编程，几乎涵盖了 STEAM 教育的五大门类</p>
+<p><img src="http://static.catxn.cn/images/15409777202660.jpg-s" alt="艾瑞咨询：少儿编程教育所属范畴及理念"></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/posts/2018/%E5%B0%91%E5%84%BF%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%BB%80%E4%B9%88/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.catxn.net/posts/2018/%E6%8A%95%E8%BA%AB%E5%B0%91%E5%84%BF%E7%BC%96%E7%A8%8B%E6%95%99%E8%82%B2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/author.png">
+      <meta itemprop="name" content="猫老师">
+      <meta itemprop="description" content="猫老师的个人博客：少儿编程，K12 STEAM 教育，软件开发，项目管理，历史故事等">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="夜猫阿罗哈">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/posts/2018/%E6%8A%95%E8%BA%AB%E5%B0%91%E5%84%BF%E7%BC%96%E7%A8%8B%E6%95%99%E8%82%B2/" class="post-title-link" itemprop="url">投身少儿编程教育</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2018-10-01 09:00:00" itemprop="dateCreated datePublished" datetime="2018-10-01T09:00:00+08:00">2018-10-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-01-05 14:41:15" itemprop="dateModified" datetime="2023-01-05T14:41:15+08:00">2023-01-05</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%B0%91%E5%84%BF%E7%BC%96%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">少儿编程</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/posts/2018/%E6%8A%95%E8%BA%AB%E5%B0%91%E5%84%BF%E7%BC%96%E7%A8%8B%E6%95%99%E8%82%B2/" class="post-meta-item leancloud_visitors" data-flag-title="投身少儿编程教育" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>2017年，结束宗布科技技术外包业务。<br>2018年，投入区块链学习研究。<br>2018年秋，回想起2016年前后曾想做教育，困于当时的业务难以转身。现在倒是可以自己试试了。编程这行当，论经验不输任何人，知识面又极广，而且从来都乐于分享知识。另外又是教师家庭出身。似乎具备大部分所需条件。</p>
+<p>说干就干。先建立了公众号和显示课程。后面逐步丰富内容、课程研发体系。</p>
+<p>公众号：<a target="_blank" rel="noopener" href="http://mp.weixin.qq.com/mp/homepage?__biz=MzUxMjA1NTAzMA==&hid=2&sn=34af44667b808911db902daf44bab16f&scene=18#wechat_redirect">猫老师少儿编程 &gt;&gt;&gt;</a></p>
+<!--
+助教微信：喵小沙
+
+![](images/qrcode_for_mxs.jpg)
+-->
+
+
+<p>在线课程地址：<a target="_blank" rel="noopener" href="https://m.lizhiweike.com/liveroom2/24178239">猫老师少儿编程教室｜荔枝微课 &gt;&gt;&gt;</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.catxn.net/posts/2017/theme-next/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/author.png">
+      <meta itemprop="name" content="猫老师">
+      <meta itemprop="description" content="猫老师的个人博客：少儿编程，K12 STEAM 教育，软件开发，项目管理，历史故事等">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="夜猫阿罗哈">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/posts/2017/theme-next/" class="post-title-link" itemprop="url">新主题：Next</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2017-03-29 15:24:08" itemprop="dateCreated datePublished" datetime="2017-03-29T15:24:08+08:00">2017-03-29</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-01-05 14:41:15" itemprop="dateModified" datetime="2023-01-05T14:41:15+08:00">2023-01-05</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%BB%BA%E7%AB%99%E5%BF%83%E5%BE%97/" itemprop="url" rel="index"><span itemprop="name">建站心得</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/posts/2017/theme-next/" class="post-meta-item leancloud_visitors" data-flag-title="新主题：Next" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p> 启用新主题：NexT: <a target="_blank" rel="noopener" href="http://theme-next.iissnan.com/">http://theme-next.iissnan.com/</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+
+  
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="猫老师"
+      src="/images/author.png">
+  <p class="site-author-name" itemprop="name">猫老师</p>
+  <div class="site-description" itemprop="description">猫老师的个人博客：少儿编程，K12 STEAM 教育，软件开发，项目管理，历史故事等</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">82</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">75</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/deltacat" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;deltacat" rel="noopener" target="_blank"><i class="github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://weibo.com/deltacat" title="Weibo → http:&#x2F;&#x2F;weibo.com&#x2F;deltacat" rel="noopener" target="_blank"><i class="weibo fa-fw"></i>Weibo</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://www.jianshu.com/u/HS379k" title="简书 → http:&#x2F;&#x2F;www.jianshu.com&#x2F;u&#x2F;HS379k" rel="noopener" target="_blank"><i class="edit fa-fw"></i>简书</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://www.zhihu.com/people/deltacat" title="知乎 → http:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;deltacat" rel="noopener" target="_blank"><i class="question-circle fa-fw"></i>知乎</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://www.dartzon.com/" title="https:&#x2F;&#x2F;www.dartzon.com" rel="noopener" target="_blank">达中科技</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://www.lowaniot.com/" title="http:&#x2F;&#x2F;www.lowaniot.com" rel="noopener" target="_blank">罗万信息</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://www.tongxinvc.com/" title="http:&#x2F;&#x2F;www.tongxinvc.com" rel="noopener" target="_blank">同芯资本</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://www.nero.com/" title="http:&#x2F;&#x2F;www.nero.com" rel="noopener" target="_blank">尼禄软件</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://atjason.com/" title="http:&#x2F;&#x2F;atjason.com" rel="noopener" target="_blank">Jason</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://lora.catxn.net/" title="http:&#x2F;&#x2F;lora.catxn.net" rel="noopener" target="_blank">LoRa 中文资料</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+  <div class="beian"><a href="https://beian.miit.gov.cn/" rel="noopener" target="_blank">浙ICP备19020493号-1 </a>
+  </div>
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">猫老师</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : true,
+      notify     : false,
+      appId      : 'qg2bsJ1VhqFytc82tjqmCppJ-gzGzoHsz',
+      appKey     : 'ALwv2J7EkC9u4zqVhdeVcQVa',
+      placeholder: "请留下你的足迹……\\n留下邮箱可显示你的 gravatar 头像",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : true,
+      lang       : '' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/author.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/author.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/author.png">
+  <link rel="mask-icon" href="/images/author.png" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.proxy.ustclug.org/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"www.catxn.net","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="今天，我们来谈一谈理想。 梦想存在吗？有位朋友曾说，大部分人的所谓梦想，无论包装的多么绚丽，其实说白了只是想多挣钱而已。 好在他加了个定语“所谓”。是的，单纯的梦想一定存在，只是在这个物质化的时代，被深深地埋了起来。 梦想一定是有的，而且无分高下。 有的人，想成为一流的工匠；有的人，想成为聚光灯下的焦点；有的人，喜欢终生流浪。当然真的有人只是喜欢数钱到手软，这梦其实也挺好。只要是用自己的努力去获取">
+<meta property="og:type" content="article">
+<meta property="og:title" content="让我们谈谈技术理想">
+<meta property="og:url" content="http://www.catxn.net/posts/2015/%E8%B0%88%E8%B0%88%E6%8A%80%E6%9C%AF%E7%90%86%E6%83%B3/index.html">
+<meta property="og:site_name" content="夜猫阿罗哈">
+<meta property="og:description" content="今天，我们来谈一谈理想。 梦想存在吗？有位朋友曾说，大部分人的所谓梦想，无论包装的多么绚丽，其实说白了只是想多挣钱而已。 好在他加了个定语“所谓”。是的，单纯的梦想一定存在，只是在这个物质化的时代，被深深地埋了起来。 梦想一定是有的，而且无分高下。 有的人，想成为一流的工匠；有的人，想成为聚光灯下的焦点；有的人，喜欢终生流浪。当然真的有人只是喜欢数钱到手软，这梦其实也挺好。只要是用自己的努力去获取">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://static.catxn.cn/images/xlbls-jjc.jpeg-m">
+<meta property="og:image" content="http://s.jiathis.com/qrcode.php?url=https://rong.36kr.com/m/j3word.html?cid=161176&source=web">
+<meta property="article:published_time" content="2015-08-23T15:30:00.000Z">
+<meta property="article:modified_time" content="2023-01-05T06:41:15.211Z">
+<meta property="article:author" content="猫老师">
+<meta property="article:tag" content="原创">
+<meta property="article:tag" content="日记">
+<meta property="article:tag" content="创业">
+<meta property="article:tag" content="里程碑">
+<meta property="article:tag" content="宗布">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://static.catxn.cn/images/xlbls-jjc.jpeg-m">
+
+<link rel="canonical" href="http://www.catxn.net/posts/2015/%E8%B0%88%E8%B0%88%E6%8A%80%E6%9C%AF%E7%90%86%E6%83%B3/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>让我们谈谈技术理想 | 夜猫阿罗哈</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-7388145-4"></script>
+    <script>
+      if (CONFIG.hostname === location.hostname) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-7388145-4');
+      }
+    </script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="夜猫阿罗哈" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">夜猫阿罗哈</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">暮然回首萧瑟处，也无风雨也无晴</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="archive fa-fw"></i>归档<span class="badge">82</span></a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="tags fa-fw"></i>标签<span class="badge">75</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="th fa-fw"></i>分类<span class="badge">9</span></a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.catxn.net/posts/2015/%E8%B0%88%E8%B0%88%E6%8A%80%E6%9C%AF%E7%90%86%E6%83%B3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/author.png">
+      <meta itemprop="name" content="猫老师">
+      <meta itemprop="description" content="猫老师的个人博客：少儿编程，K12 STEAM 教育，软件开发，项目管理，历史故事等">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="夜猫阿罗哈">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          让我们谈谈技术理想
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2015-08-23 23:30:00" itemprop="dateCreated datePublished" datetime="2015-08-23T23:30:00+08:00">2015-08-23</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-01-05 14:41:15" itemprop="dateModified" datetime="2023-01-05T14:41:15+08:00">2023-01-05</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%AE%97%E5%B8%83%E7%A7%91%E6%8A%80/" itemprop="url" rel="index"><span itemprop="name">宗布科技</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/posts/2015/%E8%B0%88%E8%B0%88%E6%8A%80%E6%9C%AF%E7%90%86%E6%83%B3/" class="post-meta-item leancloud_visitors" data-flag-title="让我们谈谈技术理想" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/posts/2015/%E8%B0%88%E8%B0%88%E6%8A%80%E6%9C%AF%E7%90%86%E6%83%B3/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/posts/2015/%E8%B0%88%E8%B0%88%E6%8A%80%E6%9C%AF%E7%90%86%E6%83%B3/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>今天，我们来谈一谈理想。</p>
+<h1 id="梦想存在吗？"><a href="#梦想存在吗？" class="headerlink" title="梦想存在吗？"></a>梦想存在吗？</h1><p>有位朋友曾说，大部分人的所谓梦想，无论包装的多么绚丽，其实说白了只是想多挣钱而已。</p>
+<p>好在他加了个定语“所谓”。是的，单纯的梦想一定存在，只是在这个物质化的时代，被深深地埋了起来。</p>
+<p>梦想一定是有的，而且无分高下。</p>
+<p>有的人，想成为一流的工匠；有的人，想成为聚光灯下的焦点；有的人，喜欢终生流浪。当然真的有人只是喜欢数钱到手软，这梦其实也挺好。只要是用自己的努力去获取，不伤害他人，那么无论什么样的梦，都值得被尊重。</p>
+<p>只是承载梦想往往的确需要金钱的支撑。就好比宗布，作为一家公司，赚钱这件事至关重要。可赚钱不是我们的终极目标，至少不是唯一目标，它只是为了达成目的手段。在这个前提下，需要的资金，我们会去努力获取，也会努力让投资人的付出得到应有的回报。</p>
+<p>让梦想归于本心，让金钱归于商业。梦要有，钱也要赚，平衡很重要。只是，偶尔需要问下自己，当天平开始倾斜的时候，你选择哪一边？</p>
+<p><img src="http://static.catxn.cn/images/xlbls-jjc.jpeg-m" alt="希拉波利斯古城竞技场"></p>
+<h1 id="返璞归真"><a href="#返璞归真" class="headerlink" title="返璞归真"></a>返璞归真</h1><p>其实我今天想说的是技术理想。</p>
+<p>技术宅的理想是什么？码农的理想是什么？</p>
+<span id="more"></span>
+
+<p>作为一个资深技术宅，自己以及身边的很多朋友，都曾经有一个用技术改变世界的梦想。也或者只是一个简单的诉求：作为一个技术人才，能够不用操心技术之外的事情，通过专注于技术本身而升职加薪，出任CEO，赢取白富美，走上人生巅峰。</p>
+<p>我认识很多真正热爱编程的朋友，他们的追求，就是能够成为技术大牛。成为某个领域的专家，拥有属于自己的编程框架，甚至推动某种语言的发展。</p>
+<p>程序员的快乐有时很单纯，甚至很多时候他们的享乐就是得到一件给力的开发工具，比如一块不足千元的机械键盘，就足以给他持续很久的幸福感。</p>
+<p>老罗曾在锤子发布会上自我调侃，说自己其实不是工匠，只是工匠们的吉祥物。他有的只是工匠的精神，实际上做出带有浓厚工匠气质产品的，是他的一群优秀的工匠团队。无论锤子科技和锤子手机能走多远，我都非常认可“工匠精神”本身。</p>
+<p>拥有一个优秀的技术团队，让每一个成员都能愉快的工作，让大家拥有世界上最可爱的同事。这就是我的技术理想。</p>
+<p>我希望我的团队，能够醉心于技术本身，精心打磨每一款产品；全力以赴专注于自己喜欢并擅长的东西，在未来推动技术的发展。</p>
+<p>我希望我团队的每一个成员，都能仅凭自己的能力，得到富足的生活，得到他人的尊重和赞赏，拥有一群快乐的伙伴。</p>
+<p>我希望在我的团队里，你无需为生活琐事操心，无需应付办公室政治，不需要硬着头皮做自己不喜欢的事。</p>
+<p>我希望大家的理想，都可以在这里实现。</p>
+<p>我希望……</p>
+<h1 id="为伊消得人憔悴"><a href="#为伊消得人憔悴" class="headerlink" title="为伊消得人憔悴"></a>为伊消得人憔悴</h1><p>只有你真正在为内心深处的，真正属于自己的梦努力的时候，才会甘愿付出一切，无怨无悔。</p>
+<p>团队和我已经连续高强度地工作了几个月。不想吹嘘自己是铁人，踏出第一步开始到现在，不说别的，光体重就已经下降了不少，传说发际线也上移了虽然我自己还没看出来。从最初一个多月的过度兴奋到失眠，到最近半夜到家倒头便睡，也算是又跨过了一个心理时期。关键是，虽然爬出一个又一个坑，而且摆明了前面还有更多的坑和老老实实混日子就从来不需要面对的风险在等着，内心却始终充实，因为知道自己在做什么，将要做什么。</p>
+<p>虽然现在的创业圈不乏浮躁和忽悠，充斥拜金和表面文章，但是一定还有大把如我们一样的傻逼在为精心打磨技术，打磨团队，打磨产品在努力。甚至付出一切，只为寻找“活着”的感觉。</p>
+<p>我们可能无法在看得见的未来改变世界，至少我们可以凭借双手，让身边可以触摸到的事物，变得好那么一点。</p>
+<p>保持饥渴，不断前行。</p>
+<h1 id="写在后面"><a href="#写在后面" class="headerlink" title="写在后面"></a>写在后面</h1><p>一边是空有技术和壮志的技术人才，另一边却是很多有心有资源的公司缺乏靠谱的开发团队，甚至不知道怎样去寻找团队。</p>
+<p>我们就是要作一道桥梁，为企业打造优质团队，为技术人才构建理想的工作空间。于是：</p>
+<ul>
+<li>2015年5月，自筹资金，宗布科技成立；</li>
+<li>2015年6月，首次尝试融资；</li>
+<li>2015年7月，第一个孵化产品“涌金门”iOS版内测；</li>
+<li>2015年8月，“涌金门”Android版内测；第二个孵化产品“iParty”团队组建，App完成Demo、路演；</li>
+<li>即将到来的9月，抗日战争胜利70周年，宗布将正式启动新一轮融资计划……</li>
+</ul>
+<p>一步一个脚印。如同抗战，艰苦而充满激情的创业之路还很漫长。</p>
+<p>谨以此文，纪念宗布科技百天。</p>
+<h1 id="广告时间"><a href="#广告时间" class="headerlink" title="广告时间"></a>广告时间</h1><p><strong>一</strong></p>
+<blockquote>
+<p>我们正在参加第三期“36氪极速融资”，请点开链接 [<a target="_blank" rel="noopener" href="http://t.cn/RLFUHKU">36氪极速融资</a>] 投出宝贵的一票，或者扫描二维码立刻分享，扩散。你的支持是我们不断前行的动力。</p>
+</blockquote>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="http://t.cn/RLFUHKU"><img src="http://s.jiathis.com/qrcode.php?url=https://rong.36kr.com/m/j3word.html?cid=161176&source=web" alt="36氪极速融资"></a><br>28号零点之前，保持！！</p>
+</blockquote>
+<p><strong>二</strong></p>
+<blockquote>
+<p>业务联系：<a href="mailto:&#x62;&#x69;&#122;&#x40;&#122;&#x6f;&#110;&#103;&#x62;&#117;&#116;&#101;&#x63;&#x68;&#x2e;&#99;&#x6f;&#x6d;">&#x62;&#x69;&#122;&#x40;&#122;&#x6f;&#110;&#103;&#x62;&#117;&#116;&#101;&#x63;&#x68;&#x2e;&#99;&#x6f;&#x6d;</a><br>求职联系：<a href="mailto:&#106;&#111;&#98;&#x40;&#122;&#111;&#110;&#103;&#98;&#x75;&#116;&#101;&#99;&#104;&#x2e;&#99;&#111;&#109;">&#106;&#111;&#98;&#x40;&#122;&#111;&#110;&#103;&#98;&#x75;&#116;&#101;&#99;&#104;&#x2e;&#99;&#111;&#109;</a></p>
+</blockquote>
+<p><strong>三</strong></p>
+<blockquote>
+<p>“简书”这个写作和阅读平台非常不错，推荐下载使用。进入后关注我，可以看到我过去无所事事期间写的一系列文章。看见喜欢的文字就点个赞。</p>
+</blockquote>
+
+    </div>
+
+    
+    
+    
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>猫老师
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://www.catxn.net/posts/2015/%E8%B0%88%E8%B0%88%E6%8A%80%E6%9C%AF%E7%90%86%E6%83%B3/" title="让我们谈谈技术理想">http://www.catxn.net/posts/2015/谈谈技术理想/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-ND</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E5%8E%9F%E5%88%9B/" rel="tag"># 原创</a>
+              <a href="/tags/%E6%97%A5%E8%AE%B0/" rel="tag"># 日记</a>
+              <a href="/tags/%E5%88%9B%E4%B8%9A/" rel="tag"># 创业</a>
+              <a href="/tags/%E9%87%8C%E7%A8%8B%E7%A2%91/" rel="tag"># 里程碑</a>
+              <a href="/tags/%E5%AE%97%E5%B8%83/" rel="tag"># 宗布</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/posts/2015/%E4%BD%A0%E6%AF%94%E6%83%B3%E8%B1%A1%E4%B8%AD%E5%BC%BA%E5%A4%A7/" rel="prev" title="你比想象中强大">
+      <i class="fa fa-chevron-left"></i> 你比想象中强大
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/posts/2015/%E5%AE%97%E5%B8%832015%E6%80%BB%E7%BB%93/" rel="next" title="宗布科技2015年终总结">
+      宗布科技2015年终总结 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A2%A6%E6%83%B3%E5%AD%98%E5%9C%A8%E5%90%97%EF%BC%9F"><span class="nav-number">1.</span> <span class="nav-text">梦想存在吗？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BF%94%E7%92%9E%E5%BD%92%E7%9C%9F"><span class="nav-number">2.</span> <span class="nav-text">返璞归真</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%BA%E4%BC%8A%E6%B6%88%E5%BE%97%E4%BA%BA%E6%86%94%E6%82%B4"><span class="nav-number">3.</span> <span class="nav-text">为伊消得人憔悴</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%86%99%E5%9C%A8%E5%90%8E%E9%9D%A2"><span class="nav-number">4.</span> <span class="nav-text">写在后面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B9%BF%E5%91%8A%E6%97%B6%E9%97%B4"><span class="nav-number">5.</span> <span class="nav-text">广告时间</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="猫老师"
+      src="/images/author.png">
+  <p class="site-author-name" itemprop="name">猫老师</p>
+  <div class="site-description" itemprop="description">猫老师的个人博客：少儿编程，K12 STEAM 教育，软件开发，项目管理，历史故事等</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">82</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">75</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/deltacat" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;deltacat" rel="noopener" target="_blank"><i class="github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://weibo.com/deltacat" title="Weibo → http:&#x2F;&#x2F;weibo.com&#x2F;deltacat" rel="noopener" target="_blank"><i class="weibo fa-fw"></i>Weibo</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://www.jianshu.com/u/HS379k" title="简书 → http:&#x2F;&#x2F;www.jianshu.com&#x2F;u&#x2F;HS379k" rel="noopener" target="_blank"><i class="edit fa-fw"></i>简书</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://www.zhihu.com/people/deltacat" title="知乎 → http:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;deltacat" rel="noopener" target="_blank"><i class="question-circle fa-fw"></i>知乎</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://www.dartzon.com/" title="https:&#x2F;&#x2F;www.dartzon.com" rel="noopener" target="_blank">达中科技</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://www.lowaniot.com/" title="http:&#x2F;&#x2F;www.lowaniot.com" rel="noopener" target="_blank">罗万信息</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://www.tongxinvc.com/" title="http:&#x2F;&#x2F;www.tongxinvc.com" rel="noopener" target="_blank">同芯资本</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://www.nero.com/" title="http:&#x2F;&#x2F;www.nero.com" rel="noopener" target="_blank">尼禄软件</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://atjason.com/" title="http:&#x2F;&#x2F;atjason.com" rel="noopener" target="_blank">Jason</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://lora.catxn.net/" title="http:&#x2F;&#x2F;lora.catxn.net" rel="noopener" target="_blank">LoRa 中文资料</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+  <div class="beian"><a href="https://beian.miit.gov.cn/" rel="noopener" target="_blank">浙ICP备19020493号-1 </a>
+  </div>
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">猫老师</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : true,
+      notify     : false,
+      appId      : 'qg2bsJ1VhqFytc82tjqmCppJ-gzGzoHsz',
+      appKey     : 'ALwv2J7EkC9u4zqVhdeVcQVa',
+      placeholder: "请留下你的足迹……\\n留下邮箱可显示你的 gravatar 头像",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : true,
+      lang       : '' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+</body>
+</html>

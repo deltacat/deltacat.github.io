@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/author.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/author.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/author.png">
+  <link rel="mask-icon" href="/images/author.png" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.proxy.ustclug.org/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"www.catxn.net","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="现在，我们已经有了一台EC2主机，具备了基本的硬件环境。下面，开始软件环境的配置。 第一步：连接服务器后面所有的一切，都需要在SSH终端窗口操作。首先，我们需要一个SSH客户端。PuTTY是很常用的工具。这里我们选用 Bitvise SSH Client。这个软件之前叫做“Tunnelier”。软件可以在 这里下载。 下载好后安装，在SSH这一栏填入必须的信息。主机名按实际地址填写，usernam">
+<meta property="og:type" content="article">
+<meta property="og:title" content="在 Amazon AWS 搭建及部署网站：（二）安装、配置软件，启动网站">
+<meta property="og:url" content="http://www.catxn.net/posts/2013/setup-aws-2/index.html">
+<meta property="og:site_name" content="夜猫阿罗哈">
+<meta property="og:description" content="现在，我们已经有了一台EC2主机，具备了基本的硬件环境。下面，开始软件环境的配置。 第一步：连接服务器后面所有的一切，都需要在SSH终端窗口操作。首先，我们需要一个SSH客户端。PuTTY是很常用的工具。这里我们选用 Bitvise SSH Client。这个软件之前叫做“Tunnelier”。软件可以在 这里下载。 下载好后安装，在SSH这一栏填入必须的信息。主机名按实际地址填写，usernam">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://static.catxn.cn/images/aws_04.png-o">
+<meta property="og:image" content="http://static.catxn.cn/images/aws_05.png-o">
+<meta property="og:image" content="http://static.catxn.cn/images/aws_06.png-o">
+<meta property="article:published_time" content="2013-09-01T08:18:39.000Z">
+<meta property="article:modified_time" content="2023-01-05T06:41:15.201Z">
+<meta property="article:author" content="猫老师">
+<meta property="article:tag" content="建站">
+<meta property="article:tag" content="aws">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://static.catxn.cn/images/aws_04.png-o">
+
+<link rel="canonical" href="http://www.catxn.net/posts/2013/setup-aws-2/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>在 Amazon AWS 搭建及部署网站：（二）安装、配置软件，启动网站 | 夜猫阿罗哈</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-7388145-4"></script>
+    <script>
+      if (CONFIG.hostname === location.hostname) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-7388145-4');
+      }
+    </script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="夜猫阿罗哈" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">夜猫阿罗哈</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">暮然回首萧瑟处，也无风雨也无晴</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="archive fa-fw"></i>归档<span class="badge">82</span></a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="tags fa-fw"></i>标签<span class="badge">75</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="th fa-fw"></i>分类<span class="badge">9</span></a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.catxn.net/posts/2013/setup-aws-2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/author.png">
+      <meta itemprop="name" content="猫老师">
+      <meta itemprop="description" content="猫老师的个人博客：少儿编程，K12 STEAM 教育，软件开发，项目管理，历史故事等">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="夜猫阿罗哈">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          在 Amazon AWS 搭建及部署网站：（二）安装、配置软件，启动网站
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2013-09-01 16:18:39" itemprop="dateCreated datePublished" datetime="2013-09-01T16:18:39+08:00">2013-09-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-01-05 14:41:15" itemprop="dateModified" datetime="2023-01-05T14:41:15+08:00">2023-01-05</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%BB%BA%E7%AB%99%E5%BF%83%E5%BE%97/" itemprop="url" rel="index"><span itemprop="name">建站心得</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/posts/2013/setup-aws-2/" class="post-meta-item leancloud_visitors" data-flag-title="在 Amazon AWS 搭建及部署网站：（二）安装、配置软件，启动网站" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/posts/2013/setup-aws-2/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/posts/2013/setup-aws-2/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>现在，我们已经有了一台EC2主机，具备了基本的硬件环境。下面，开始软件环境的配置。</p>
+<h1 id="第一步：连接服务器"><a href="#第一步：连接服务器" class="headerlink" title="第一步：连接服务器"></a>第一步：连接服务器</h1><p>后面所有的一切，都需要在SSH终端窗口操作。首先，我们需要一个SSH客户端。PuTTY是很常用的工具。这里我们选用 Bitvise SSH Client。这个软件之前叫做“Tunnelier”。软件可以在 <a target="_blank" rel="noopener" href="http://www.bitvise.com/ssh-client-download">这里下载</a>。</p>
+<p>下载好后安装，在SSH这一栏填入必须的信息。主机名按实际地址填写，username填ec2-user(EC2默认用户名)，在 User Keypaire manager 这里导入之前申请EC2过程中保存的Key Pair 文件（.pem格式）。这里Bitvise Client 的好处就体现出来了，PuTTy无法直接使用AWS格式的KeyPair文件，需要做一次转换，而Bitvise可以直接导入。导入后，选择 Initial Meth中导入的key的栏位，一般是 Slot 1，根据实际情况填写即可：</p>
+<p><img src="http://static.catxn.cn/images/aws_04.png-o" alt="image"></p>
+<p>填写好后，点击Login，第一次回弹出一个确认窗，是否接受认证信息，点击确认，一切正常的话登陆成功后左侧导航栏会出现 “New terminal console”, “New SFTP Window”。点击 new terminal console，熟悉的Linux终端提示符就出现了。后面所有的命令行操作均在这里进行。</p>
+<p><a target="_blank" rel="noopener" href="http://calebogden.com/wordpress-on-linux-in-the-amazon-cloud-with-mac">这篇文章</a>中提到了如何直接以root身份登录。实际上，所有的操作均可用sudo命令来执行。如果不需要用SFTP向系统文件中上传文件，没有理由直接root登录。后面会介绍用SVN部署代码的方法，除了一些特殊情况，SFTP基本上不怎么需要了。</p>
+<span id="more"></span>
+
+<h1 id="第二步：安装基本服务：Apache、PHP、MySQL"><a href="#第二步：安装基本服务：Apache、PHP、MySQL" class="headerlink" title="第二步：安装基本服务：Apache、PHP、MySQL"></a>第二步：安装基本服务：Apache、PHP、MySQL</h1><p>作为一个基本Web网站，我们需要至少这三样东西：Apache，PHP以及 MySQL。实际上数据库我们将来会使用 RDS提供的MySQL实例。不过这里还是从安装本机版本逐步开始。</p>
+<p>依次输入下列指令，安装Apache，MySql，PHP 以及必备扩展库，启动服务，设置 MySQL主密码。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 安装 apache      </span></span><br><span class="line">yum install http       </span><br><span class="line"><span class="comment"># 安装 PHP 及必备支持库       </span></span><br><span class="line">yum install php libmcrypt libmcrypt-devel php-mcrypt php-mbstring       </span><br><span class="line"><span class="comment"># 安装 php-mysql 扩展       </span></span><br><span class="line">yum install php-mysql       </span><br><span class="line"><span class="comment"># 安装 mysql       </span></span><br><span class="line">yum install mysql       </span><br><span class="line">yum install mysql-server       </span><br><span class="line"><span class="comment"># 设置 MySQL 主密码       </span></span><br><span class="line">mysqladmin -u root password <span class="string">&quot;&lt;the password&gt;&quot;</span>      </span><br><span class="line"><span class="comment"># 启动服务       </span></span><br><span class="line">service httpd start       </span><br><span class="line">service mysqld start  </span><br></pre></td></tr></table></figure>
+
+<p>按照提示完成安装后，在浏览器输入主机地址，这时应该会看到Apache的默认欢迎页，表示我们的基本Web服务器开始运行了。</p>
+<h1 id="第三步：安装phpMyAdmin"><a href="#第三步：安装phpMyAdmin" class="headerlink" title="第三步：安装phpMyAdmin"></a>第三步：安装phpMyAdmin</h1><p>phpMyAdmin 用来管理后台MySQL数据库。首先，我们从官方网站下载，然后解压缩。移动至Web根目录并重命名为 “phpMyAdmin”。因为刚刚下载的文件夹解压后是保护版本号等信息的。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">wget http://sourceforge.net/projects/phpmyadmin/files/latest/download      </span><br><span class="line">unzip download       </span><br><span class="line"><span class="built_in">mv</span> &lt;unzipped folder name&gt; /var/www/html/phpMyAdmin       </span><br><span class="line"><span class="built_in">rm</span> download  </span><br></pre></td></tr></table></figure>
+
+<p>解压之后，删除下载的文件。<br>现在，赋予phpMyAdmin目录正确的权限。首先检查Web服务器的用户</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">egrep <span class="string">&#x27;User|Group&#x27;</span> /etc/httpd/conf/httpd.conf   </span><br></pre></td></tr></table></figure>
+
+<p>这里会列出如下信息，默认应该是 apache，如果不是，以列出的为准。</p>
+<p>User apache<br>Group apache</p>
+<p>执行如下命令设置权限：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">useradd phpmydmin      </span><br><span class="line">passwd phpmyadmin       </span><br><span class="line"><span class="built_in">cd</span> /var/www/html       </span><br><span class="line"><span class="built_in">chown</span> –R phpmyadmin.apache phpMyAdmin/  </span><br></pre></td></tr></table></figure>
+
+<p>然后，创建配置目录并设置权限</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> phpMyAdmin      </span><br><span class="line"><span class="built_in">mkdir</span> config       </span><br><span class="line"><span class="built_in">cp</span> config.sample.inc.php config/config.inc.php       </span><br><span class="line"><span class="built_in">chown</span> –R phpmyadmin.apache config/       </span><br><span class="line"><span class="built_in">chmod</span> –R o+rw config/  </span><br></pre></td></tr></table></figure>
+
+<p>完成后重启服务。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service httpd restart </span><br></pre></td></tr></table></figure>
+
+<p>然后用浏览器打开 <code>http://&lt;host&gt;/phpmyadmin/setup</code>，管理界面就显示出来了。</p>
+<p>点击“新建主机”，输入主机名，主机地址（默认localhost），点击”认证“，选择”config“认证方式，输入数据库用户名和密码。点击保存。</p>
+<p><img src="http://static.catxn.cn/images/aws_05.png-o" alt="image"></p>
+<p>完成后的的关键一步是，回到setup概要页后，注意要保存配置文件：</p>
+<p><img src="http://static.catxn.cn/images/aws_06.png-o" alt="image"></p>
+<p>在这里保存后，所有的设置在真正回写到配置文件中。现在，在浏览器打开 <code>http://&lt;host&gt;/phpmyadmin</code>，登录进入数据库管理后台。如果成功的话，出于安全考虑，我们要删除配置文件和setup目录。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /var/www/html/phpMyAdmin      </span><br><span class="line"><span class="built_in">mv</span> config/config.inc.php ./       </span><br><span class="line"><span class="built_in">rm</span> –rf config/       </span><br><span class="line"><span class="built_in">rm</span> –rf setup/  </span><br></pre></td></tr></table></figure>
+
+<p>至此，phpMyAdmin配置完成。另外，为了快速开始，我们在认证方式中选择config方式。建议采用cookie方式连接。这里暂时不多做介绍。</p>
+<h1 id="第四步：开始第一个-Wordpress-网站"><a href="#第四步：开始第一个-Wordpress-网站" class="headerlink" title="第四步：开始第一个 Wordpress 网站"></a>第四步：开始第一个 Wordpress 网站</h1><p>此类教程网上铺天盖地，这里只做简单描述。</p>
+<p>首先，下载，解压，设置权限。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /var/www/html      </span><br><span class="line">wget http://wordpress.org/latest.zip       </span><br><span class="line">unzip latest.zip       </span><br><span class="line"><span class="built_in">chown</span> –R apache.apache wordpress/       </span><br><span class="line"><span class="built_in">chmod</span> –R 755 wordpress</span><br></pre></td></tr></table></figure>
+
+<p>然后，在浏览器中打开 <code>&lt;http://&lt;host&gt;/wordpress</code> 。<br>熟悉的 wordpress 初始化页面出现了。按照之前设置的数据库用户名密码填写，根据向导完成后，一个 wordpress 页面就出现在我们眼前。</p>
+<h1 id="第五步：虚拟主机，域名绑定，以及一点收尾工作"><a href="#第五步：虚拟主机，域名绑定，以及一点收尾工作" class="headerlink" title="第五步：虚拟主机，域名绑定，以及一点收尾工作"></a>第五步：虚拟主机，域名绑定，以及一点收尾工作</h1><p>对于Apache的设置，有两件事需要做。第一，出于安全性考虑，应禁用目录浏览。第二，为便于使用（或其他目的），我们需要在同一主机上host多个网站。这些工作都可以通过编辑 Apache 配置文件完成。</p>
+<p>首先，用 vi 打开 &#x2F;etc&#x2F;httpd&#x2F;conf&#x2F;httpd.conf ，找到如下段落：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Directory</span> &quot;/<span class="attr">var</span>/<span class="attr">www</span>/<span class="attr">html</span>&quot;&gt;</span>  </span><br><span class="line">  Options Indexes FollowSymLinks  </span><br><span class="line"><span class="tag">&lt;/<span class="name">Directory</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>删除”Indexes“即可，就禁用了 Web 主文档目录及所有子目录的目录浏览操作。也可对特定目录做此操作。</p>
+<p>编辑虚拟主机。首先，需要找到这一行（通常在靠近结尾处）</p>
+<p><code>NameVirtualHost *:80</code></p>
+<p>解开注释。然后在末尾按需求添加段落，比如我们有一个域名 my.name.com，让它指向我们刚刚创建的wordpress站点：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">VirtualHost</span> *<span class="attr">:80</span>&gt;</span></span><br><span class="line">    ServerName my.name.com</span><br><span class="line">    DocumentRoot /var/www/html/wordpress</span><br><span class="line"><span class="tag">&lt;/<span class="name">VirtualHost</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>现在，保存，退出，重启 apache。在浏览器输入 my.name.com   </p>
+<p>Enjoy it!</p>
+<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><ul>
+<li><a target="_blank" rel="noopener" href="http://codex.wordpress.org.cn/Installing_WordPress" title="http://codex.wordpress.org.cn/Installing_WordPress">http://codex.wordpress.org.cn/Installing_WordPress</a>    </li>
+<li><a target="_blank" rel="noopener" href="http://httpd.apache.org/docs/2.2/vhosts/name-based.html" title="http://httpd.apache.org/docs/2.2/vhosts/name-based.html">http://httpd.apache.org/docs/2.2/vhosts/name-based.html</a>    </li>
+<li><a target="_blank" rel="noopener" href="http://www.cnblogs.com/88999660/articles/1581524.html" title="http://www.cnblogs.com/88999660/articles/1581524.html">http://www.cnblogs.com/88999660/articles/1581524.html</a></li>
+</ul>
+
+    </div>
+
+    
+    
+    
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>猫老师
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://www.catxn.net/posts/2013/setup-aws-2/" title="在 Amazon AWS 搭建及部署网站：（二）安装、配置软件，启动网站">http://www.catxn.net/posts/2013/setup-aws-2/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-ND</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E5%BB%BA%E7%AB%99/" rel="tag"># 建站</a>
+              <a href="/tags/aws/" rel="tag"># aws</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/posts/2013/setup-aws-1/" rel="prev" title="在 Amazon AWS 搭建及部署网站：（一）申请、设置 AWS 服务">
+      <i class="fa fa-chevron-left"></i> 在 Amazon AWS 搭建及部署网站：（一）申请、设置 AWS 服务
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/posts/2013/setup-aws-3/" rel="next" title="在 Amazon AWS 搭建及部署网站：（三）开发及部署环境">
+      在 Amazon AWS 搭建及部署网站：（三）开发及部署环境 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E6%AD%A5%EF%BC%9A%E8%BF%9E%E6%8E%A5%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="nav-number">1.</span> <span class="nav-text">第一步：连接服务器</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E6%AD%A5%EF%BC%9A%E5%AE%89%E8%A3%85%E5%9F%BA%E6%9C%AC%E6%9C%8D%E5%8A%A1%EF%BC%9AApache%E3%80%81PHP%E3%80%81MySQL"><span class="nav-number">2.</span> <span class="nav-text">第二步：安装基本服务：Apache、PHP、MySQL</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E6%AD%A5%EF%BC%9A%E5%AE%89%E8%A3%85phpMyAdmin"><span class="nav-number">3.</span> <span class="nav-text">第三步：安装phpMyAdmin</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E5%9B%9B%E6%AD%A5%EF%BC%9A%E5%BC%80%E5%A7%8B%E7%AC%AC%E4%B8%80%E4%B8%AA-Wordpress-%E7%BD%91%E7%AB%99"><span class="nav-number">4.</span> <span class="nav-text">第四步：开始第一个 Wordpress 网站</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%BA%94%E6%AD%A5%EF%BC%9A%E8%99%9A%E6%8B%9F%E4%B8%BB%E6%9C%BA%EF%BC%8C%E5%9F%9F%E5%90%8D%E7%BB%91%E5%AE%9A%EF%BC%8C%E4%BB%A5%E5%8F%8A%E4%B8%80%E7%82%B9%E6%94%B6%E5%B0%BE%E5%B7%A5%E4%BD%9C"><span class="nav-number">5.</span> <span class="nav-text">第五步：虚拟主机，域名绑定，以及一点收尾工作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="nav-number">6.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="猫老师"
+      src="/images/author.png">
+  <p class="site-author-name" itemprop="name">猫老师</p>
+  <div class="site-description" itemprop="description">猫老师的个人博客：少儿编程，K12 STEAM 教育，软件开发，项目管理，历史故事等</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">82</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">75</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/deltacat" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;deltacat" rel="noopener" target="_blank"><i class="github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://weibo.com/deltacat" title="Weibo → http:&#x2F;&#x2F;weibo.com&#x2F;deltacat" rel="noopener" target="_blank"><i class="weibo fa-fw"></i>Weibo</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://www.jianshu.com/u/HS379k" title="简书 → http:&#x2F;&#x2F;www.jianshu.com&#x2F;u&#x2F;HS379k" rel="noopener" target="_blank"><i class="edit fa-fw"></i>简书</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://www.zhihu.com/people/deltacat" title="知乎 → http:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;deltacat" rel="noopener" target="_blank"><i class="question-circle fa-fw"></i>知乎</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://www.dartzon.com/" title="https:&#x2F;&#x2F;www.dartzon.com" rel="noopener" target="_blank">达中科技</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://www.lowaniot.com/" title="http:&#x2F;&#x2F;www.lowaniot.com" rel="noopener" target="_blank">罗万信息</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://www.tongxinvc.com/" title="http:&#x2F;&#x2F;www.tongxinvc.com" rel="noopener" target="_blank">同芯资本</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://www.nero.com/" title="http:&#x2F;&#x2F;www.nero.com" rel="noopener" target="_blank">尼禄软件</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://atjason.com/" title="http:&#x2F;&#x2F;atjason.com" rel="noopener" target="_blank">Jason</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://lora.catxn.net/" title="http:&#x2F;&#x2F;lora.catxn.net" rel="noopener" target="_blank">LoRa 中文资料</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+  <div class="beian"><a href="https://beian.miit.gov.cn/" rel="noopener" target="_blank">浙ICP备19020493号-1 </a>
+  </div>
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">猫老师</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : true,
+      notify     : false,
+      appId      : 'qg2bsJ1VhqFytc82tjqmCppJ-gzGzoHsz',
+      appKey     : 'ALwv2J7EkC9u4zqVhdeVcQVa',
+      placeholder: "请留下你的足迹……\\n留下邮箱可显示你的 gravatar 头像",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : true,
+      lang       : '' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+</body>
+</html>

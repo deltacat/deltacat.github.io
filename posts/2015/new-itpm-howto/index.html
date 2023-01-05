@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/author.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/author.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/author.png">
+  <link rel="mask-icon" href="/images/author.png" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.proxy.ustclug.org/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"www.catxn.net","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="现在的你是一张白纸。 定型过早不可取，而且项目经理和产品经理都是需要一定阅历和积累才能做好的。幸运的是，环境给了你发展的机会，允许你在至少三条路上积累经验。 从三个方面来说。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="初出茅庐的IT人员，怎样才能做好项目经理？">
+<meta property="og:url" content="http://www.catxn.net/posts/2015/new-itpm-howto/index.html">
+<meta property="og:site_name" content="夜猫阿罗哈">
+<meta property="og:description" content="现在的你是一张白纸。 定型过早不可取，而且项目经理和产品经理都是需要一定阅历和积累才能做好的。幸运的是，环境给了你发展的机会，允许你在至少三条路上积累经验。 从三个方面来说。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2015-01-26T01:56:00.000Z">
+<meta property="article:modified_time" content="2023-01-05T06:41:15.211Z">
+<meta property="article:author" content="猫老师">
+<meta property="article:tag" content="管理">
+<meta property="article:tag" content="项目管理">
+<meta property="article:tag" content="项目经理">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://www.catxn.net/posts/2015/new-itpm-howto/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>初出茅庐的IT人员，怎样才能做好项目经理？ | 夜猫阿罗哈</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-7388145-4"></script>
+    <script>
+      if (CONFIG.hostname === location.hostname) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-7388145-4');
+      }
+    </script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="夜猫阿罗哈" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">夜猫阿罗哈</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">暮然回首萧瑟处，也无风雨也无晴</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="archive fa-fw"></i>归档<span class="badge">82</span></a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="tags fa-fw"></i>标签<span class="badge">75</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="th fa-fw"></i>分类<span class="badge">9</span></a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.catxn.net/posts/2015/new-itpm-howto/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/author.png">
+      <meta itemprop="name" content="猫老师">
+      <meta itemprop="description" content="猫老师的个人博客：少儿编程，K12 STEAM 教育，软件开发，项目管理，历史故事等">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="夜猫阿罗哈">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          初出茅庐的IT人员，怎样才能做好项目经理？
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2015-01-26 09:56:00" itemprop="dateCreated datePublished" datetime="2015-01-26T09:56:00+08:00">2015-01-26</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-01-05 14:41:15" itemprop="dateModified" datetime="2023-01-05T14:41:15+08:00">2023-01-05</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%AE%A1%E7%90%86%E5%BE%AE%E8%A8%80/" itemprop="url" rel="index"><span itemprop="name">管理微言</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/posts/2015/new-itpm-howto/" class="post-meta-item leancloud_visitors" data-flag-title="初出茅庐的IT人员，怎样才能做好项目经理？" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/posts/2015/new-itpm-howto/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/posts/2015/new-itpm-howto/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>现在的你是一张白纸。</p>
+<p>定型过早不可取，而且项目经理和产品经理都是需要一定阅历和积累才能做好的。幸运的是，环境给了你发展的机会，允许你在至少三条路上积累经验。</p>
+<p>从三个方面来说。</p>
+<span id="more"></span>
+
+<h1 id="第一，产品经理"><a href="#第一，产品经理" class="headerlink" title="第一，产品经理"></a>第一，产品经理</h1><p>公司安排你做需求。这个任务，我们可以简单地认为是产品经理方向。那么，你首先需要学习的是，如何将需求描述清楚，让开发人员理解。</p>
+<p>其次，多玩玩各种产品。不局限于你所从事的项目或行业，而应该把所有你能接触到或找到的产品都拿来玩玩，开拓眼界和思路。这是一个很长的过程，主要就是积累见识。见效慢，但却至关重要。因为，在你能准确表述需求之后，就需要去发现和设计需求，这个没有足够的知识面是做不来的。</p>
+<p>说到准确表述，除了文字和口头表达能力外，需要掌握各种原型工具的使用，需要了解用户习惯。这既然是你的本职，想必公司也给你提供了相关的培训或资源，不多说了。</p>
+<h1 id="第二，项目管理"><a href="#第二，项目管理" class="headerlink" title="第二，项目管理"></a>第二，项目管理</h1><p>虽然产品经理和项目经理是两个截然不同的方向。目前国内的软件公司，尤其是中小型公司，二者常常合二为一。或者说，即使没有合二为一，老板也常常是直接问产品经理产品的生产进度。所以，你作为产品经理（或助理），想学习如何做好项目经理，至少知道项目经理该做些什么是有必要的。</p>
+<p>先弄清楚产品经理和项目经理的方向性差别：<br>产品经理要定义的是：是什么（What）<br>项目经理要把控的事：如何做（How）</p>
+<p>从职责上来说，产品经理和项目经理往往会产生矛盾，一个，要做出足够好的产品，另一个一个，要在期限之前完成范围内定义的需求。二者对变更的态度通常是矛盾的焦点。好在现代项目管理理论为这种矛盾提出了解决方案。作为软件企业，还可以尝试敏捷方法。不过要注意避免的是从一个极端进入另一个极端。</p>
+<p>简单的入门，先需要学会画甘特图和燃尽图，学会需求范围定义（不同于需求定义）和分解。了解如何做工作量估算，寻找关键路径并做工期预测。之前有人问过产品经理如何管进度，这方面我也做过些<a target="_blank" rel="noopener" href="http://www.zhihu.com/question/20102432/answer/21174293">回答</a>。</p>
+<p>系统性学习的话，弄本PMBOK来看（最新第五版已集成了敏捷），如果能参加下PMP培训拿个证书更好（也可以考虑国产的项目管理师认证）。这些理论性的东西离实际操作虽然还有段距离，但是有这么一个理论框架做指导，你在工作中遇到问题时，就比较容易知道去什么地方寻找答案。</p>
+<h1 id="第三，技术方向"><a href="#第三，技术方向" class="headerlink" title="第三，技术方向"></a>第三，技术方向</h1><p>包括知乎在内的很多社区，对于项目经理或产品经理要不要懂产品开发中需要用到的技术都争论不休。我觉得，虽然从理论上说，项目经理和产品经理都不是开发人员，不需要深入技术，不过懂一些技术，工作效果还是好很多的。</p>
+<p>具体来说，产品经理，要懂一点。项目经理，要多懂一点。懂的这些，主要是为了便于与开发团队沟通。项目经理如果是由技术骨干来兼任的，那么就要懂几乎所有的核心技术，如果是由产品经理兼任，懂的程度只要能跟开发人员无障碍沟通就行。</p>
+<p>另外记住一点，如果你想做一些超出你岗位职责范围的事情，首先要把本职做好，才不会惹人非议。目前你的本职是做产品，那么把产品需求做好先。</p>
+<p>然后在此基础上，根据你本身的条件，三条路线都尝试一下，两三年后再来定位自己究竟该走哪条路可能答案就比较清楚了。</p>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ul>
+<li>管理的本质是人，参考另一篇：<a target="_blank" rel="noopener" href="http://www.jianshu.com/p/59d614d18805">优质管理的要素</a></li>
+<li>本文原发于我的<a target="_blank" rel="noopener" href="http://www.zhihu.com/question/27783087/answer/38095733">知乎问答</a></li>
+</ul>
+
+    </div>
+
+    
+    
+    
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>猫老师
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://www.catxn.net/posts/2015/new-itpm-howto/" title="初出茅庐的IT人员，怎样才能做好项目经理？">http://www.catxn.net/posts/2015/new-itpm-howto/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-ND</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E7%AE%A1%E7%90%86/" rel="tag"># 管理</a>
+              <a href="/tags/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/" rel="tag"># 项目管理</a>
+              <a href="/tags/%E9%A1%B9%E7%9B%AE%E7%BB%8F%E7%90%86/" rel="tag"># 项目经理</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/posts/2015/%E4%B8%89%E7%9A%87%E4%BA%94%E5%B8%9D%EF%BC%88%E4%BA%8C%EF%BC%89/" rel="prev" title="三皇五帝（二）">
+      <i class="fa fa-chevron-left"></i> 三皇五帝（二）
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/posts/2015/butterfly-sharing-opensource/" rel="next" title="Chrome 扩展 “Butterfly Sharing” 更新并开源">
+      Chrome 扩展 “Butterfly Sharing” 更新并开源 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%EF%BC%8C%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86"><span class="nav-number">1.</span> <span class="nav-text">第一，产品经理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%EF%BC%8C%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86"><span class="nav-number">2.</span> <span class="nav-text">第二，项目管理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%EF%BC%8C%E6%8A%80%E6%9C%AF%E6%96%B9%E5%90%91"><span class="nav-number">3.</span> <span class="nav-text">第三，技术方向</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83"><span class="nav-number">4.</span> <span class="nav-text">参考</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="猫老师"
+      src="/images/author.png">
+  <p class="site-author-name" itemprop="name">猫老师</p>
+  <div class="site-description" itemprop="description">猫老师的个人博客：少儿编程，K12 STEAM 教育，软件开发，项目管理，历史故事等</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">82</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">75</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/deltacat" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;deltacat" rel="noopener" target="_blank"><i class="github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://weibo.com/deltacat" title="Weibo → http:&#x2F;&#x2F;weibo.com&#x2F;deltacat" rel="noopener" target="_blank"><i class="weibo fa-fw"></i>Weibo</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://www.jianshu.com/u/HS379k" title="简书 → http:&#x2F;&#x2F;www.jianshu.com&#x2F;u&#x2F;HS379k" rel="noopener" target="_blank"><i class="edit fa-fw"></i>简书</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://www.zhihu.com/people/deltacat" title="知乎 → http:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;deltacat" rel="noopener" target="_blank"><i class="question-circle fa-fw"></i>知乎</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://www.dartzon.com/" title="https:&#x2F;&#x2F;www.dartzon.com" rel="noopener" target="_blank">达中科技</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://www.lowaniot.com/" title="http:&#x2F;&#x2F;www.lowaniot.com" rel="noopener" target="_blank">罗万信息</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://www.tongxinvc.com/" title="http:&#x2F;&#x2F;www.tongxinvc.com" rel="noopener" target="_blank">同芯资本</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://www.nero.com/" title="http:&#x2F;&#x2F;www.nero.com" rel="noopener" target="_blank">尼禄软件</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://atjason.com/" title="http:&#x2F;&#x2F;atjason.com" rel="noopener" target="_blank">Jason</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://lora.catxn.net/" title="http:&#x2F;&#x2F;lora.catxn.net" rel="noopener" target="_blank">LoRa 中文资料</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+  <div class="beian"><a href="https://beian.miit.gov.cn/" rel="noopener" target="_blank">浙ICP备19020493号-1 </a>
+  </div>
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">猫老师</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : true,
+      notify     : false,
+      appId      : 'qg2bsJ1VhqFytc82tjqmCppJ-gzGzoHsz',
+      appKey     : 'ALwv2J7EkC9u4zqVhdeVcQVa',
+      placeholder: "请留下你的足迹……\\n留下邮箱可显示你的 gravatar 头像",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : true,
+      lang       : '' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/author.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/author.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/author.png">
+  <link rel="mask-icon" href="/images/author.png" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.proxy.ustclug.org/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"www.catxn.net","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="服务器已经搭建好，网站也开始运行了。那么如何方便地部署代码呢？ 最基本的方式，就是使用 SFTP 向网站目录直接部署。这种方法的缺点是版本控制不便，在上传时也无法方便的比较代码变化。 用SVN来部署是一个很好的选择。SVN 本身是一个服务，我的选择是使用 Apache 的 SVN 模块来访问，不必单独启用SVN服务。 第一步：确保 Apache 正确安装和配置详情参见前文，这里假定 Apache">
+<meta property="og:type" content="article">
+<meta property="og:title" content="在 Amazon AWS 搭建及部署网站：（三）开发及部署环境">
+<meta property="og:url" content="http://www.catxn.net/posts/2013/setup-aws-3/index.html">
+<meta property="og:site_name" content="夜猫阿罗哈">
+<meta property="og:description" content="服务器已经搭建好，网站也开始运行了。那么如何方便地部署代码呢？ 最基本的方式，就是使用 SFTP 向网站目录直接部署。这种方法的缺点是版本控制不便，在上传时也无法方便的比较代码变化。 用SVN来部署是一个很好的选择。SVN 本身是一个服务，我的选择是使用 Apache 的 SVN 模块来访问，不必单独启用SVN服务。 第一步：确保 Apache 正确安装和配置详情参见前文，这里假定 Apache">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2013-09-01T09:40:15.000Z">
+<meta property="article:modified_time" content="2023-01-05T06:41:15.201Z">
+<meta property="article:author" content="猫老师">
+<meta property="article:tag" content="建站">
+<meta property="article:tag" content="aws">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://www.catxn.net/posts/2013/setup-aws-3/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>在 Amazon AWS 搭建及部署网站：（三）开发及部署环境 | 夜猫阿罗哈</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-7388145-4"></script>
+    <script>
+      if (CONFIG.hostname === location.hostname) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-7388145-4');
+      }
+    </script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="夜猫阿罗哈" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">夜猫阿罗哈</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">暮然回首萧瑟处，也无风雨也无晴</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="archive fa-fw"></i>归档<span class="badge">82</span></a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="tags fa-fw"></i>标签<span class="badge">75</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="th fa-fw"></i>分类<span class="badge">9</span></a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.catxn.net/posts/2013/setup-aws-3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/author.png">
+      <meta itemprop="name" content="猫老师">
+      <meta itemprop="description" content="猫老师的个人博客：少儿编程，K12 STEAM 教育，软件开发，项目管理，历史故事等">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="夜猫阿罗哈">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          在 Amazon AWS 搭建及部署网站：（三）开发及部署环境
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2013-09-01 17:40:15" itemprop="dateCreated datePublished" datetime="2013-09-01T17:40:15+08:00">2013-09-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-01-05 14:41:15" itemprop="dateModified" datetime="2023-01-05T14:41:15+08:00">2023-01-05</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%BB%BA%E7%AB%99%E5%BF%83%E5%BE%97/" itemprop="url" rel="index"><span itemprop="name">建站心得</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/posts/2013/setup-aws-3/" class="post-meta-item leancloud_visitors" data-flag-title="在 Amazon AWS 搭建及部署网站：（三）开发及部署环境" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/posts/2013/setup-aws-3/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/posts/2013/setup-aws-3/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>服务器已经搭建好，网站也开始运行了。那么如何方便地部署代码呢？</p>
+<p>最基本的方式，就是使用 SFTP 向网站目录直接部署。这种方法的缺点是版本控制不便，在上传时也无法方便的比较代码变化。</p>
+<p>用SVN来部署是一个很好的选择。<br>SVN 本身是一个服务，我的选择是使用 Apache 的 SVN 模块来访问，不必单独启用SVN服务。</p>
+<h1 id="第一步：确保-Apache-正确安装和配置"><a href="#第一步：确保-Apache-正确安装和配置" class="headerlink" title="第一步：确保 Apache 正确安装和配置"></a>第一步：确保 Apache 正确安装和配置</h1><p>详情参见前文，这里假定 Apache 服务已正确安装，运行无误</p>
+<h1 id="第二步：安装-subversion"><a href="#第二步：安装-subversion" class="headerlink" title="第二步：安装 subversion"></a>第二步：安装 subversion</h1><blockquote>
+<p>&#x2F;&#x2F; 安装 subversion</p>
+<p>yum install subversion</p>
+<p>&#x2F;&#x2F; 安装 apache subversion 模块</p>
+<p>yum install mod_dav_svn</p>
+<p>&#x2F;&#x2F; 检查 svn 安装</p>
+<p>svn –version</p>
+</blockquote>
+<span id="more"></span>
+
+<h1 id="第三步：-配置-apache-上的-subversion"><a href="#第三步：-配置-apache-上的-subversion" class="headerlink" title="第三步： 配置 apache 上的 subversion"></a>第三步： 配置 apache 上的 subversion</h1><p>Apache 中 subversion 配置文件: &#x2F;etc&#x2F;httpd&#x2F;conf.d&#x2F;subversion.conf<br>用 vi 打开该文件，找到如下被注释掉的部分，打开</p>
+<blockquote>
+<p>&lt;Location &#x2F;repos&gt;</p>
+<p>DAV svn</p>
+<p>SVNParentPath &#x2F;var&#x2F;www&#x2F;svn&#x2F;repos</p>
+<p>AuthType Basic</p>
+<p>AuthName “Authorizion realm”</p>
+<p>AuthUserFile &#x2F;etc&#x2F;svn-auth-conf</p>
+<p>Require valid-user</p>
+<p>&lt;&#x2F;Location&gt;</p>
+</blockquote>
+<p>这一行：<br>SVNParentPath &#x2F;var&#x2F;www&#x2F;svn<br>改成：<br>SVNPath &#x2F;var&#x2F;www&#x2F;svn&#x2F;repos<br>“&#x2F;var&#x2F;www&#x2F;svn&#x2F;repos”是你SVN库的存放位置，可根据情况修改。</p>
+<p>&lt;Location &#x2F;repos&gt;表示在url地址是 http:&#x2F;&#x2F;&lt;hostname&gt;&#x2F;repos 时访问的就是库 &#x2F;var&#x2F;www&#x2F;svn&#x2F;repos 。<br>AuthUserFile &#x2F;etc&#x2F;svn-auth-conf指明了svn帐户文件是&#x2F;etc&#x2F;svn-auth-conf 。</p>
+<p>注意：在默认的 subversion.conf 文件中，以上代码段是包含在如下标签中的。这个标签表示，仅对“写”操作进行权限控制。这里的SVN服务是用于内部部署代码而不是用于开源项目，显然，应该对“读”操作做同样的限制。因此，这个标签行的注释开关应保持关闭。</p>
+<blockquote>
+<p>&lt;LimitExcept GET PROPFIND OPTIONS REPORT&gt;</p>
+<p>&lt;&#x2F;LimitExcept&gt;</p>
+</blockquote>
+<h1 id="第四步：建立subversion帐户"><a href="#第四步：建立subversion帐户" class="headerlink" title="第四步：建立subversion帐户"></a>第四步：建立subversion帐户</h1><p>subversion自己对帐户进行管理，所以要客户端要访问它必须使用subversion帐户进行登录。</p>
+<blockquote>
+<p>&#x2F;&#x2F; 创建第一个帐户</p>
+<p>htpasswd -cm &#x2F;etc&#x2F;svn-auth-conf &lt;username1&gt;</p>
+<p>&#x2F;&#x2F; 创建更多其它帐户（注意参数）</p>
+<p>htpasswd -m &#x2F;etc&#x2F;svn-auth-conf &lt;username2&gt;</p>
+</blockquote>
+<h1 id="第五步：建立subversion仓库"><a href="#第五步：建立subversion仓库" class="headerlink" title="第五步：建立subversion仓库"></a>第五步：建立subversion仓库</h1><blockquote>
+<p>cd &#x2F;var&#x2F;www&#x2F;svn</p>
+<p>svnadmin create repos</p>
+<p>chown -R apache.apache repos</p>
+</blockquote>
+<h1 id="第六步：测试Subversion工作"><a href="#第六步：测试Subversion工作" class="headerlink" title="第六步：测试Subversion工作"></a>第六步：测试Subversion工作</h1><blockquote>
+<p>&#x2F;&#x2F; 重启 apache:</p>
+<p>service httpd restart<br>任何时候，改动过配置文件，均需重启服务使改变生效。<br>在浏览器中输入 http:&#x2F;&#x2F;&lt;hostname&gt;&#x2F;repos 应该可以看到（会提示身份验证）：<br>repos - Revision 0: &#x2F;</p>
+<hr>
+<p>Powered by Apache Subversion version 1.7.10 (r1485443).</p>
+</blockquote>
+<p>打开本地SVN客户端（我这里用的是tortoiseSVN），输入地址，提示用户名密码时按之前的设定输入，一切无误的话应该可以列出代码库。至此Subversion服务配置完毕</p>
+<h1 id="第七步：配置SVN自动部署最新代码至网站目录"><a href="#第七步：配置SVN自动部署最新代码至网站目录" class="headerlink" title="第七步：配置SVN自动部署最新代码至网站目录"></a>第七步：配置SVN自动部署最新代码至网站目录</h1><p>Subversion 的钩子脚本是一种事件触发机制，当SVN系统执行到某些预定义事件时，触发一些预定义动作。其中，post-commit 事件就可用于自动部署。简单来说，在 Web 目录 checkout 特定代码库，然后设定当 svn 提交完成时，自动更新 web 目录。我们可以这样来设置 svn 库：首先建立工作分支和发布分支，工作分支稳定后，合并最新代码至发布分支（提交前核对更改），代码提交完成后，server端的post-commit脚本从发布分支自动更新web目录。</p>
+<p>具体来说，比如我们的网站目录在 &#x2F;var&#x2F;www&#x2F;html&#x2F;MyWeb, 首先，用如下命令 checkout 代码库：</p>
+<blockquote>
+<p>svn checkout &lt;repos url&gt; &#x2F;var&#x2F;www&#x2F;html&#x2F;MyWeb –username &lt;username&gt; –password &lt;password&gt;<br>然后，创建脚本<br>cd &#x2F;var&#x2F;www&#x2F;svn&#x2F;repos&#x2F;hooks</p>
+<p>cp post-commit.tmpl post-commit</p>
+<p>vi post-commit<br>将 post-commit 的内容改为：<br>export LANG&#x3D;en_US.UTF-8</p>
+<p>SVN&#x3D;&#x2F;usr&#x2F;bin&#x2F;svn</p>
+<p>WEB&#x3D;&#x2F;var&#x2F;www&#x2F;html&#x2F;MyWeb</p>
+<p>${SVN} update ${WEB} –username &lt;username&gt; –password &lt;password&gt;</p>
+</blockquote>
+<p>第一行 export … 是为了避免编码错误，可根据服务器设置调整，保持和服务器编码一致即可。<br>第二行是svn命令行位置<br>第三行是checkout的代码库位置，需要用chown将该目录权限授予apache用户<br>第四行是实际执行的命令。<br>保存post-commit, chmod a+x 使其可执行。然后手工执行进行测试。如果出现保存密码的提示，则需要修改设置避免该提示出现，否则客户端提交代码会失败（因为客户端没有当提示出现选择yes&#x2F;no的机会）。首先将配置文件拷贝至apache的home目录，然后修改：</p>
+<blockquote>
+<p>cp -r &#x2F;root&#x2F;.subversion&#x2F; &#x2F;var&#x2F;www&#x2F;</p>
+<p>vi &#x2F;var&#x2F;www&#x2F;.subversion&#x2F;servers<br>修改如下字段即可：<br>store-plaintext-passwords &#x3D; no</p>
+<p>store-passwords &#x3D; no</p>
+</blockquote>
+<p>现在一切就绪，使用客户端工具提交代码测试，检查Web目录是否同步了更改。<br>至此，配置工作完毕。</p>
+<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><ul>
+<li><a target="_blank" rel="noopener" href="http://www.worldhello.net/doc/svn_hooks/svn_hooks.mm.htm" title="http://www.worldhello.net/doc/svn_hooks/svn_hooks.mm.htm">http://www.worldhello.net/doc/svn_hooks&#x2F;svn_hooks.mm.htm</a></li>
+<li><a target="_blank" rel="noopener" href="http://blog.csdn.net/niu_gao/article/details/7502326" title="http://blog.csdn.net/niu_gao/article/details/7502326">http://blog.csdn.net/niu_gao&#x2F;article&#x2F;details&#x2F;7502326</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.ibm.com/developerworks/cn/java/j-lo-apache-subversion/index.html" title="http://www.ibm.com/developerworks/cn/java/j-lo-apache-subversion/index.html">http://www.ibm.com/developerworks/cn/java/j-lo-apache-subversion/index.html</a></li>
+</ul>
+
+    </div>
+
+    
+    
+    
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>猫老师
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://www.catxn.net/posts/2013/setup-aws-3/" title="在 Amazon AWS 搭建及部署网站：（三）开发及部署环境">http://www.catxn.net/posts/2013/setup-aws-3/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-ND</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E5%BB%BA%E7%AB%99/" rel="tag"># 建站</a>
+              <a href="/tags/aws/" rel="tag"># aws</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/posts/2013/setup-aws-2/" rel="prev" title="在 Amazon AWS 搭建及部署网站：（二）安装、配置软件，启动网站">
+      <i class="fa fa-chevron-left"></i> 在 Amazon AWS 搭建及部署网站：（二）安装、配置软件，启动网站
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/posts/2014/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86%E4%B9%8B%E5%90%90%E6%A7%BD/" rel="next" title="时间管理之吐槽">
+      时间管理之吐槽 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E6%AD%A5%EF%BC%9A%E7%A1%AE%E4%BF%9D-Apache-%E6%AD%A3%E7%A1%AE%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE"><span class="nav-number">1.</span> <span class="nav-text">第一步：确保 Apache 正确安装和配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E6%AD%A5%EF%BC%9A%E5%AE%89%E8%A3%85-subversion"><span class="nav-number">2.</span> <span class="nav-text">第二步：安装 subversion</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E6%AD%A5%EF%BC%9A-%E9%85%8D%E7%BD%AE-apache-%E4%B8%8A%E7%9A%84-subversion"><span class="nav-number">3.</span> <span class="nav-text">第三步： 配置 apache 上的 subversion</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E5%9B%9B%E6%AD%A5%EF%BC%9A%E5%BB%BA%E7%AB%8Bsubversion%E5%B8%90%E6%88%B7"><span class="nav-number">4.</span> <span class="nav-text">第四步：建立subversion帐户</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%BA%94%E6%AD%A5%EF%BC%9A%E5%BB%BA%E7%AB%8Bsubversion%E4%BB%93%E5%BA%93"><span class="nav-number">5.</span> <span class="nav-text">第五步：建立subversion仓库</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E5%85%AD%E6%AD%A5%EF%BC%9A%E6%B5%8B%E8%AF%95Subversion%E5%B7%A5%E4%BD%9C"><span class="nav-number">6.</span> <span class="nav-text">第六步：测试Subversion工作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%B8%83%E6%AD%A5%EF%BC%9A%E9%85%8D%E7%BD%AESVN%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2%E6%9C%80%E6%96%B0%E4%BB%A3%E7%A0%81%E8%87%B3%E7%BD%91%E7%AB%99%E7%9B%AE%E5%BD%95"><span class="nav-number">7.</span> <span class="nav-text">第七步：配置SVN自动部署最新代码至网站目录</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="nav-number">8.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="猫老师"
+      src="/images/author.png">
+  <p class="site-author-name" itemprop="name">猫老师</p>
+  <div class="site-description" itemprop="description">猫老师的个人博客：少儿编程，K12 STEAM 教育，软件开发，项目管理，历史故事等</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">82</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">75</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/deltacat" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;deltacat" rel="noopener" target="_blank"><i class="github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://weibo.com/deltacat" title="Weibo → http:&#x2F;&#x2F;weibo.com&#x2F;deltacat" rel="noopener" target="_blank"><i class="weibo fa-fw"></i>Weibo</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://www.jianshu.com/u/HS379k" title="简书 → http:&#x2F;&#x2F;www.jianshu.com&#x2F;u&#x2F;HS379k" rel="noopener" target="_blank"><i class="edit fa-fw"></i>简书</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://www.zhihu.com/people/deltacat" title="知乎 → http:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;deltacat" rel="noopener" target="_blank"><i class="question-circle fa-fw"></i>知乎</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://www.dartzon.com/" title="https:&#x2F;&#x2F;www.dartzon.com" rel="noopener" target="_blank">达中科技</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://www.lowaniot.com/" title="http:&#x2F;&#x2F;www.lowaniot.com" rel="noopener" target="_blank">罗万信息</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://www.tongxinvc.com/" title="http:&#x2F;&#x2F;www.tongxinvc.com" rel="noopener" target="_blank">同芯资本</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://www.nero.com/" title="http:&#x2F;&#x2F;www.nero.com" rel="noopener" target="_blank">尼禄软件</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://atjason.com/" title="http:&#x2F;&#x2F;atjason.com" rel="noopener" target="_blank">Jason</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://lora.catxn.net/" title="http:&#x2F;&#x2F;lora.catxn.net" rel="noopener" target="_blank">LoRa 中文资料</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+  <div class="beian"><a href="https://beian.miit.gov.cn/" rel="noopener" target="_blank">浙ICP备19020493号-1 </a>
+  </div>
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">猫老师</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : true,
+      notify     : false,
+      appId      : 'qg2bsJ1VhqFytc82tjqmCppJ-gzGzoHsz',
+      appKey     : 'ALwv2J7EkC9u4zqVhdeVcQVa',
+      placeholder: "请留下你的足迹……\\n留下邮箱可显示你的 gravatar 头像",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : true,
+      lang       : '' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+</body>
+</html>

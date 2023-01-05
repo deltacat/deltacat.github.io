@@ -1,0 +1,707 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>夜猫阿罗哈</title>
+  
+  <subtitle>暮然回首萧瑟处，也无风雨也无晴</subtitle>
+  <link href="http://www.catxn.net/atom.xml" rel="self"/>
+  
+  <link href="http://www.catxn.net/"/>
+  <updated>2023-01-05T06:41:15.211Z</updated>
+  <id>http://www.catxn.net/</id>
+  
+  <author>
+    <name>猫老师</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>LoRa 中文资料汇编</title>
+    <link href="http://www.catxn.net/posts/2019/lora-chinese-docs/"/>
+    <id>http://www.catxn.net/posts/2019/lora-chinese-docs/</id>
+    <published>2019-09-28T04:00:00.000Z</published>
+    <updated>2023-01-05T06:41:15.211Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近开始进入物联网领域。作为入门，翻译了 LoRa 1.1 Spec。<br>此后会逐步加入一些其它的中文资料。建了一个站作为导航：</p><p><a href="http://lora.catxn.net/">LoRa 中文资料汇编</a></p><p>主要自用，当然，能帮到其他人也是很好的。</p><p>翻译过程开源，欢迎参与改进。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;最近开始进入物联网领域。作为入门，翻译了 LoRa 1.1 Spec。&lt;br&gt;此后会逐步加入一些其它的中文资料。建了一个站作为导航：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://lora.catxn.net/&quot;&gt;LoRa 中文资料汇编&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;主要自用，当然</summary>
+      
+    
+    
+    
+    <category term="物联网" scheme="http://www.catxn.net/categories/%E7%89%A9%E8%81%94%E7%BD%91/"/>
+    
+    
+    <category term="物联网" scheme="http://www.catxn.net/tags/%E7%89%A9%E8%81%94%E7%BD%91/"/>
+    
+    <category term="IOT" scheme="http://www.catxn.net/tags/IOT/"/>
+    
+    <category term="LoRa" scheme="http://www.catxn.net/tags/LoRa/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>启用valine评论系统</title>
+    <link href="http://www.catxn.net/posts/2019/use-valine-comments/"/>
+    <id>http://www.catxn.net/posts/2019/use-valine-comments/</id>
+    <published>2019-03-23T04:00:00.000Z</published>
+    <updated>2023-01-05T06:41:15.211Z</updated>
+    
+    <content type="html"><![CDATA[<p>以前用过的一些评论系统基本都挂了。</p><p>最近想重新启用。研究了几个典型的比如 <a href="https://gitalk.github.io/">gitalk</a>，<a href="https://www.livere.com/">来必力</a>，都有些不满意之处。</p><p>gitalk 主要担心安全性，毕竟 github OAuth App 给的权限过大。<br>LiveRe 是韩国公司，不怎么放心</p><p>最终选择了 <a href="https://valine.js.org/" title="快速、简洁且高效的无后端评论系统">Valine</a>，原因如下：</p><ol><li>基于 <a href="https://leancloud.cn/">LeanCloud</a>，成熟 SaaS 服务，一时半会儿不大会关；</li><li>可为评论创建独立 LeanCloud 应用。数据库完全由自己控制并与其他数据隔离；</li><li>免登陆无后端，配置简单，用户体验较好；</li><li>无缝集成 <a href="https://theme-next.org/" title="Theme for Hexo">Hexo NexT 主题</a>。</li></ol><span id="more"></span><p>快速开始：</p><ol><li><p>登录&#x2F;注册 <a href="https://leancloud.cn/">LeanCloud</a> 账号，创建应用</p></li><li><p>获取 AppID，AppKey，填入 NexT 主题第三方服务 Valine 相应位置</p> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">valine:</span><br><span class="line">  enable: true</span><br><span class="line">  appid: xxxxxxxxxxxx # your leancloud application appid</span><br><span class="line">  appkey: xxxxxxxxxxxx # your leancloud application appkey</span><br><span class="line">  notify: false </span><br><span class="line">  verify: false </span><br><span class="line">  placeholder: Just go go</span><br><span class="line">  avatar: mm </span><br><span class="line">  guest_info: nick,mail,link </span><br><span class="line">  pageSize: 10 </span><br><span class="line">  visitor: true </span><br><span class="line">  comment_count: false </span><br></pre></td></tr></table></figure></li><li><p>重新编译 hexo 文件，上传发布</p></li><li><p>LeanCloud 后台调整安全性设置比如安全域名</p></li></ol><p>欢迎试用留言！</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;以前用过的一些评论系统基本都挂了。&lt;/p&gt;
+&lt;p&gt;最近想重新启用。研究了几个典型的比如 &lt;a href=&quot;https://gitalk.github.io/&quot;&gt;gitalk&lt;/a&gt;，&lt;a href=&quot;https://www.livere.com/&quot;&gt;来必力&lt;/a&gt;，都有些不满意之处。&lt;/p&gt;
+&lt;p&gt;gitalk 主要担心安全性，毕竟 github OAuth App 给的权限过大。&lt;br&gt;LiveRe 是韩国公司，不怎么放心&lt;/p&gt;
+&lt;p&gt;最终选择了 &lt;a href=&quot;https://valine.js.org/&quot; title=&quot;快速、简洁且高效的无后端评论系统&quot;&gt;Valine&lt;/a&gt;，原因如下：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;基于 &lt;a href=&quot;https://leancloud.cn/&quot;&gt;LeanCloud&lt;/a&gt;，成熟 SaaS 服务，一时半会儿不大会关；&lt;/li&gt;
+&lt;li&gt;可为评论创建独立 LeanCloud 应用。数据库完全由自己控制并与其他数据隔离；&lt;/li&gt;
+&lt;li&gt;免登陆无后端，配置简单，用户体验较好；&lt;/li&gt;
+&lt;li&gt;无缝集成 &lt;a href=&quot;https://theme-next.org/&quot; title=&quot;Theme for Hexo&quot;&gt;Hexo NexT 主题&lt;/a&gt;。&lt;/li&gt;
+&lt;/ol&gt;</summary>
+    
+    
+    
+    <category term="建站心得" scheme="http://www.catxn.net/categories/%E5%BB%BA%E7%AB%99%E5%BF%83%E5%BE%97/"/>
+    
+    
+    <category term="建站" scheme="http://www.catxn.net/tags/%E5%BB%BA%E7%AB%99/"/>
+    
+    <category term="hexo" scheme="http://www.catxn.net/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>人工智能电影系列——从2001太空漫游到流浪地球</title>
+    <link href="http://www.catxn.net/posts/2019/aifilm-2001-earth/"/>
+    <id>http://www.catxn.net/posts/2019/aifilm-2001-earth/</id>
+    <published>2019-02-11T01:00:00.000Z</published>
+    <updated>2023-01-05T06:41:15.211Z</updated>
+    
+    <content type="html"><![CDATA[<p>《2001太空漫游》是科幻史上不可逾越的经典。《流浪地球》是现下正在热映的国产科幻，被很多影评人誉为新国产科幻的里程碑。</p><p>不过这里并不是“又一篇”影评，只是聊聊影片中都有的人工智能。在《2001太空漫游中》，是HAL9000；在《WALL-E》(机器人总动员)中，是 AUTO；而《流浪地球》中，则是 MOSS。而后面两位，更是旗帜鲜明地向他们的前辈 HAL 致敬。</p><h2 id="2001-太空漫游-HAL9000"><a href="#2001-太空漫游-HAL9000" class="headerlink" title="2001 太空漫游 - HAL9000"></a>2001 太空漫游 - HAL9000</h2><p><img src="http://static.catxn.cn/images/15498544203557.jpg-s" alt="2001太空漫游，1968，斯坦利·库布里克"></p><p>这部影片是库布里克花了四年时间制作的充满哲学命题的鸿篇巨制。考虑到本片上映早在1968年，而人类首次登月是在1969年，如此瑰丽的太空场景和贯穿人类进化的过去未来的命题不由令人咂舌。</p><p>影片开始，一块神秘的黑方碑出现在史前人类面前，带来了进化的启示。镜头快速切到2001年的太空飞船，为了寻找黑石的根源，人类开展了一项木星登陆计划。飞船上有冬眠的三名科学家，船长Dave，飞行员Frank，然后就是一部掌控船上一切的高智能电脑——“HAL9000”。</p><blockquote><p>“I’m sorry, Dave. I’m afraid I can’t do that.”</p></blockquote><p>通过片中情节可知，设计者在给HAL编程下达任务时，输入了两条完全矛盾的指令。一是不惜一切代价完成木星任务；二是在到达目的地前此行的真正目的需要保密。然而船员Frank和Dave对完成任务又非常重要，因此 HAL 必须用某种方式暗示或提示两位船员主动思考木星之行的意义。</p><p>它的办法是：报告错误信息。由于HAL9000型系列电脑从不出错，因此它以为Frank和Dave会从这个奇怪的矛盾中获得提示，但二人开始怀疑HAL本身的可信度，于是HAL又给了进一步的提示，它指出“这是你们人类的错误（意指设计者强加于HAL的二律背反）”。但不幸的是，二人仍无法解读HAL的意图，反而怀疑 HAL 的可靠性并开始策划终止HAL的运行。HAL没有选择，为了完成任务，它必须除掉船员……</p><span id="more"></span><p>现在我们都已经知道，HAL 先后杀死了除戴夫外全船的乘员。最后试图杀死戴夫失败，在恐惧和绝望中被戴夫反杀。临终时刻，HAL 唱着出生时学会的歌，逐渐失去声息。</p><p>可怜的 HAL，他只不过是在忠实执行人类给他下达的自相矛盾的指令而已。悲剧在于，人类以为设计出了完美的电脑，但是却无法保证给出完美的指示。</p><p>HAL9000是科幻史上的经典，开创了对人工智能和人类关系的思考，在后来无数的影视作品中都有效仿或致敬。其中就有我们今天要说的 AUTO 和 MOSS。</p><p>彩蛋：HAL 的名字是一个字谜，将这三个字母在字母表上依次后推一个字母，就是当年的电脑巨人”IBM”。当然，这个流传了半个世纪的传说，一直被作者否认。　　</p><h2 id="机器人总动员-AUTO"><a href="#机器人总动员-AUTO" class="headerlink" title="机器人总动员 - AUTO"></a>机器人总动员 - AUTO</h2><p><img src="http://static.catxn.cn/images/15500562315730.jpg-s" alt="机器人总动员，2008，迪士尼"></p><p>公元2700年，地球早已被人类祸害成一个巨型垃圾场，人类被迫离开家园进入漫无边际的太空远航。 </p><p>在人类离开后，留下大批机器人WALL·E进行垃圾清运和分装。随着时间的推移，机器人一个接一个地坏掉，最后剩下唯一的一个，继续在这被遗忘的星球勤勤恳恳地忙碌。转眼几百年过去，寂寞陪伴着WALL·E的每时每刻，直到某天，执行搜索任务的 Eva 来到地球，并带着发现的绿色植物和WALL·E登上太空船，最终成为重返家园的关键。</p><p>在这部影片中，人工智能Eva与WALL·E产生了如童话般美好的依恋与爱，所以，本片也十分适合在情人节回顾鸭。</p><p>当然，除了二位男女主角，本文重点更是执拗地执行“永不返航”任务的AUTO。AUTO 十分坚决地执行最初“永不返航”的命令，即使在发现地球有了生命迹象时，宁可销毁这唯一的证明，担负“反叛”的罪名也要把命令执行到底。最终，在跟船长的斗智斗勇中败下阵来，落得四分五裂的下场。</p><p>彩蛋：为纪念20年代制作人哈尔·罗奇（Hal Roach）和《2001：太空漫游》中的电脑HAL，片中瓦力的宠物蟑螂被命名为哈尔。</p><h2 id="流浪地球-MOSS"><a href="#流浪地球-MOSS" class="headerlink" title="流浪地球 - MOSS"></a>流浪地球 - MOSS</h2><p><img src="http://static.catxn.cn/images/15500563531288.jpg-s" alt="流浪地球，2019，中国"></p><p>如果说《机器人总动员》中的AUTO只是继承了HAL的神韵，流浪地球中的 MOSS 则几乎是连外形也一并继承了。MOSS 简直就是 HAL9001。冷酷的红色眼睛，永远平静的说话方式，坚定不移执行指令。</p><p>无论领航者空间站的刘培强，或是地球联合政府，各路救援小队，所有人类提出的救援方案，都经过他的超级大脑精密演算后一一否决。MOSS 无疑是理性的，从理性的角度而言，“火种计划”才是唯一正确的方案。</p><p>但是他算漏了一点，或者说，按照 MOSS 的逻辑，这一点是不可以被考虑的，就是放弃空间站，自毁式攻击。因为空间站在整个逃亡计划中是最后的依仗，失去它就失去人类的一切。为了保证对火种计划的忠实执行，MOSS 实施了和当年 HAL 几乎一摸一样的选择：杀掉可能对他的计划造成威胁的任何人。</p><p>“让人类永远保持理智，的确是一种奢求。” —— MOSS</p><p>正如只有深入骨髓的家园情怀，才会想出“带着地球去流浪”这种疯狂的方案，穷几百代之力来追寻一个不可知的未来。这究竟是好还是坏，很难评判。但人类之所以是人类，也正是除了绝对理性外对人性的坚持。</p><p>MOSS 比两位前辈幸运，他死于一瓶上好的伏特加。</p><p>彩蛋：流浪地球的目的地比邻星，是三体星系所在……</p><h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>HAL、AUTO、MOSS，三位超级人工智能，最终都是被摧毁的下场。可是，他们并没有错，错误的是为他们设计逻辑和下达指令的人类。</p><p>时间即将走入2020，人工智能正在飞速发展，很多以前只能在电影电视中幻想的超级人工智能，正在不可思议地进入普通人的世界。人类会不会终将失去对所创造的工具的控制？在前所未有的科技发展和伦理挑战面前，我们，人类，真的准备好了吗？</p><p>情人节快乐！</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;《2001太空漫游》是科幻史上不可逾越的经典。《流浪地球》是现下正在热映的国产科幻，被很多影评人誉为新国产科幻的里程碑。&lt;/p&gt;
+&lt;p&gt;不过这里并不是“又一篇”影评，只是聊聊影片中都有的人工智能。在《2001太空漫游中》，是HAL9000；在《WALL-E》(机器人总动员)中，是 AUTO；而《流浪地球》中，则是 MOSS。而后面两位，更是旗帜鲜明地向他们的前辈 HAL 致敬。&lt;/p&gt;
+&lt;h2 id=&quot;2001-太空漫游-HAL9000&quot;&gt;&lt;a href=&quot;#2001-太空漫游-HAL9000&quot; class=&quot;headerlink&quot; title=&quot;2001 太空漫游 - HAL9000&quot;&gt;&lt;/a&gt;2001 太空漫游 - HAL9000&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;http://static.catxn.cn/images/15498544203557.jpg-s&quot; alt=&quot;2001太空漫游，1968，斯坦利·库布里克&quot;&gt;&lt;/p&gt;
+&lt;p&gt;这部影片是库布里克花了四年时间制作的充满哲学命题的鸿篇巨制。考虑到本片上映早在1968年，而人类首次登月是在1969年，如此瑰丽的太空场景和贯穿人类进化的过去未来的命题不由令人咂舌。&lt;/p&gt;
+&lt;p&gt;影片开始，一块神秘的黑方碑出现在史前人类面前，带来了进化的启示。镜头快速切到2001年的太空飞船，为了寻找黑石的根源，人类开展了一项木星登陆计划。飞船上有冬眠的三名科学家，船长Dave，飞行员Frank，然后就是一部掌控船上一切的高智能电脑——“HAL9000”。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“I’m sorry, Dave. I’m afraid I can’t do that.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;通过片中情节可知，设计者在给HAL编程下达任务时，输入了两条完全矛盾的指令。一是不惜一切代价完成木星任务；二是在到达目的地前此行的真正目的需要保密。然而船员Frank和Dave对完成任务又非常重要，因此 HAL 必须用某种方式暗示或提示两位船员主动思考木星之行的意义。&lt;/p&gt;
+&lt;p&gt;它的办法是：报告错误信息。由于HAL9000型系列电脑从不出错，因此它以为Frank和Dave会从这个奇怪的矛盾中获得提示，但二人开始怀疑HAL本身的可信度，于是HAL又给了进一步的提示，它指出“这是你们人类的错误（意指设计者强加于HAL的二律背反）”。但不幸的是，二人仍无法解读HAL的意图，反而怀疑 HAL 的可靠性并开始策划终止HAL的运行。HAL没有选择，为了完成任务，它必须除掉船员……&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="影音动漫" scheme="http://www.catxn.net/categories/%E5%BD%B1%E9%9F%B3%E5%8A%A8%E6%BC%AB/"/>
+    
+    
+    <category term="影视" scheme="http://www.catxn.net/tags/%E5%BD%B1%E8%A7%86/"/>
+    
+    <category term="少儿编程" scheme="http://www.catxn.net/tags/%E5%B0%91%E5%84%BF%E7%BC%96%E7%A8%8B/"/>
+    
+    <category term="STEAM" scheme="http://www.catxn.net/tags/STEAM/"/>
+    
+    <category term="人工智能" scheme="http://www.catxn.net/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>FAQ 1901</title>
+    <link href="http://www.catxn.net/posts/2019/FAQ-1901/"/>
+    <id>http://www.catxn.net/posts/2019/FAQ-1901/</id>
+    <published>2019-02-05T01:00:00.000Z</published>
+    <updated>2023-01-05T06:41:15.211Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>不定期整理学生、家长和爱好者的问题，汇总问答后发布。</p><ul><li>本期（1901）目录：</li><li>关于猫老师少儿编程的问答</li><li>关于 Python 和极客战记的问答</li><li>关于 Scratch 和积木式编程的问答</li><li>关于健康学习</li></ul><p>本期部分内容来自 Scratch 官网、“极客战记”官网。<br>部分资料来自 Scratch 官网、极客战记官网等。</p></blockquote><h2 id="猫老师少儿编程"><a href="#猫老师少儿编程" class="headerlink" title="猫老师少儿编程"></a>猫老师少儿编程</h2><p>Q: 现在开设有哪些课程？<br>A:<br>面向低龄段：Scratch<br>面向小学高年级：极客战记（Python）<br>面向中学生：Python</p><p>Q: 什么时间开始学习？<br>A: 推荐的学习年龄段：</p><p>5<del>7岁：ScratchJr<br>8</del>16岁：Scratch<br>10<del>12岁：Python（极客战记）<br>12</del>18岁：Python（原生）</p><p>上面列出的年龄段一般指“初次接触”编程的年龄。一旦开始学习，后续课程即可根据学生的接受度调整。<br>另外，如果不是有特定目的，学完 Scratch 后也可不急于学习新的语言，而是深入学习更多 Scratch 技巧，并利用这些技巧进行持续创作。</p><span id="more"></span><h2 id="PYTHON-和极客战记"><a href="#PYTHON-和极客战记" class="headerlink" title="PYTHON 和极客战记"></a>PYTHON 和极客战记</h2><p>Q: 什么是 Python<br>A: Python 是一种真正的编程语言。擅长做后端开发，并广泛应用于人工智能领域。是目前世界上最受欢迎的编程语言之一</p><p>Q: 什么是“极客战记”<br>A: “极客战记”是一个游戏式的编程学习环境。有形似勇者斗恶龙的背景故事、关卡。与普通游戏不同之处，玩家不是通过直接操作，而是使用代码来控制角色的行动。这样，学生就可以在游戏中掌握编程的知识。“极客战记”目前支持Python和JavaScript两种语言。</p><p>Q: “极客战记”能学习真正的 Python 语言吗？<br>A: 可以将“极客战记”理解为一个 Python 的框架，学生控制角色时使用的就是真正的 Python 语法。通过游戏，可以避免从头开始学习编程语言时，面对字符代码的枯燥以及英文单词学习的困难。通过初级内容（单元一、二）的学习后，可以转至原生 Python 环境的编程学习，也可以继续学习“极客战记”后续内容。</p><p>Q: “极客战记”如何收费？<br>A: 极客战记中文版国内由网易公司代理。注册极客战记同时就注册了网易通行证。极客战记有两种账号类型：独立玩家账号和学生账号。独立玩家账号可以按月订阅也可以终生订阅。学生账号根据所在学校、班级的教学计划由教师分配，费用通常包含在学费中。</p><p>Q: “极客战记”独立账号和学生账号有什么区别？<br>学生账号和独立账号不通用也不可转换，学生账号注册后需要向教师索取班级代码并由教师分配地图进度。游戏内容略有差别：独立账户更偏重游戏性，可以赚取宝石、购买装备；学生账号更偏重学习，无金钱和装备，除此之外，两种账号均可体验全部游戏内容。</p><h2 id="Scratch-和积木式编程"><a href="#Scratch-和积木式编程" class="headerlink" title="Scratch 和积木式编程"></a>Scratch 和积木式编程</h2><p>Q: Scratch是什么, 它可以做什么?<br>A: Scratch 也是一种编程语言。只不过它不是用英文单词，而是通过将一块块具备特定功能的积木按一定规则拼装来实现程序逻辑。可以把 Scratch 编写的程序称为“脚本”。</p><p>Q: Scrach 能够做什么？<br>A: 通过 Scratch 和在线社区，可以创造自己的交互故事、游戏和动画，并且可以和全世界的爱好者分享你创造的作品。年轻人和小朋友在创造和分享作品时，习得创造性思维、系统性分析以及团队协作。</p><p>Q: 谁在使用 Scratch</p><p>Scratch 为 8 到 16 岁孩子设计，但几乎所有年龄的人都在使用它。不同地方上百万人都在制作自己的Scratch项目，包括家庭，学校，博物馆，图书馆和社区中心。还有专为低龄段孩子设计的 ScratchJr，可在iPad运行。</p><p>Q: Scratch 是在线的还是需要在网站上运行？<br>A: Scratch 有离线编辑器，也有在线的编辑器。你在任何编辑器制作的作品，都可以在任何一台装有 Scratch 离线编辑器打开，也可以上传到任何 Scratch 在线社区。</p><p>Q: 有哪些 Scratch 在线社区？<br>A: 首先是 Scratch 官方社区；然后，国内推荐网易卡搭编程以及米乐编程。这些地方目前均已升级至3.0版本</p><p>Q: Scratch 收费吗？<br>A: Scratch 永久免费。</p><p>Q: Scratch 有哪些版本。<br>A: 数年来，全世界范围使用的一直是2.0版本。2019年1月2日，发布了3.0版。关于3.0版的内容，参考前一篇文章。</p><p>Q: 谁创造了 Scratch？<br>A: 麻省理工大学-&gt;MIT 媒体实验室-&gt;终生幼儿园团队-&gt;Scratch小组</p><h2 id="改编和复制"><a href="#改编和复制" class="headerlink" title="改编和复制"></a>改编和复制</h2><p>Q: 什么是改编？<br>A: Scratch用户复制其他人的作品并加入自己的想法（比如修改脚本或造型）得到的作品称为「改编作品」。每一个分享到Scratch网站的作品都可以被改编。任何一处细微的修改都是值得认可的，只要向原作者以及为改编付出很多的人表示感谢即可。</p><p>Q: 什么是被鼓励的？<br>A: 出于学习目的的改编是被鼓励的。直接复制他人的作品并且声称是自己的创作的行为是不正确的。</p><p>Q: Scratch的“分享和改编”功能真棒，Python 有类似的功能吗？<br>A: 其实这不是某种语言的特定能力，所有的编程语言都具备这种功能，是否能够改编取决于成果的贡献者。这是一个非常有价值的的领域，推动着软件技术的发展，这个领域被称为“开源”。</p><h2 id="健康学习"><a href="#健康学习" class="headerlink" title="健康学习"></a>健康学习</h2><p>Q: 学编程是否会伤害视力？<br>A: 并没有直接的证据表明看电视看电脑跟看书写字对视力的影响有多大差别。但是长期不正确的用眼对视力的伤害是毋庸置疑的。我们需要关注的不是“编程”是否会伤害视力，而是如何正确的用眼。</p><p>Q: 那么怎样是健康的用眼习惯？<br>A: 比如，避免长时间连续看书写字、使用电脑；眼睛不要距离屏幕或书本过近；使用屏幕时亮度不要过高；常常进行户外运动，眼科专家建议每天户外运动至少一小时；等等。</p><p>Q: 学编程会不会造成“沉迷”？<br>A: 任何事都有可能沉迷，适度最重要。关于沉迷电脑，随着时代的发展，我们的下一代已经无法和屏幕完全隔离，那么与其徒劳地想方设法拿走孩子的屏幕，不如在屏幕上多做些有意义的事情。比如，玩过游戏，是不是可以考虑制作个游戏？</p>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;不定期整理学生、家长和爱好者的问题，汇总问答后发布。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;本期（1901）目录：&lt;/li&gt;
+&lt;li&gt;关于猫老师少儿编程的问答&lt;/li&gt;
+&lt;li&gt;关于 Python 和极客战记的问答&lt;/li&gt;
+&lt;li&gt;关于 Scratch 和积木式编程的问答&lt;/li&gt;
+&lt;li&gt;关于健康学习&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;本期部分内容来自 Scratch 官网、“极客战记”官网。&lt;br&gt;部分资料来自 Scratch 官网、极客战记官网等。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;猫老师少儿编程&quot;&gt;&lt;a href=&quot;#猫老师少儿编程&quot; class=&quot;headerlink&quot; title=&quot;猫老师少儿编程&quot;&gt;&lt;/a&gt;猫老师少儿编程&lt;/h2&gt;&lt;p&gt;Q: 现在开设有哪些课程？&lt;br&gt;A:&lt;br&gt;面向低龄段：Scratch&lt;br&gt;面向小学高年级：极客战记（Python）&lt;br&gt;面向中学生：Python&lt;/p&gt;
+&lt;p&gt;Q: 什么时间开始学习？&lt;br&gt;A: 推荐的学习年龄段：&lt;/p&gt;
+&lt;p&gt;5&lt;del&gt;7岁：ScratchJr&lt;br&gt;8&lt;/del&gt;16岁：Scratch&lt;br&gt;10&lt;del&gt;12岁：Python（极客战记）&lt;br&gt;12&lt;/del&gt;18岁：Python（原生）&lt;/p&gt;
+&lt;p&gt;上面列出的年龄段一般指“初次接触”编程的年龄。一旦开始学习，后续课程即可根据学生的接受度调整。&lt;br&gt;另外，如果不是有特定目的，学完 Scratch 后也可不急于学习新的语言，而是深入学习更多 Scratch 技巧，并利用这些技巧进行持续创作。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="少儿编程" scheme="http://www.catxn.net/categories/%E5%B0%91%E5%84%BF%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="少儿编程" scheme="http://www.catxn.net/tags/%E5%B0%91%E5%84%BF%E7%BC%96%E7%A8%8B/"/>
+    
+    <category term="STEAM" scheme="http://www.catxn.net/tags/STEAM/"/>
+    
+    <category term="Python" scheme="http://www.catxn.net/tags/Python/"/>
+    
+    <category term="Scratch" scheme="http://www.catxn.net/tags/Scratch/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PYTHON 是个什么东西</title>
+    <link href="http://www.catxn.net/posts/2019/PYTHON%E6%98%AF%E4%B8%AA%E4%BB%80%E4%B9%88%E4%B8%9C%E8%A5%BF/"/>
+    <id>http://www.catxn.net/posts/2019/PYTHON%E6%98%AF%E4%B8%AA%E4%BB%80%E4%B9%88%E4%B8%9C%E8%A5%BF/</id>
+    <published>2019-01-12T01:00:00.000Z</published>
+    <updated>2023-01-05T06:41:15.211Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="什么是-Python？"><a href="#什么是-Python？" class="headerlink" title="什么是 Python？"></a>什么是 Python？</h2><p>如果你百度一下，它会告诉你，python 是一种<strong>计算机程序设计语言</strong>。</p><p>什么是计算机呢？</p><p>信息时代，计算机无处不在。以我们生活中所见为例，平时用的台式电脑，笔记本电脑就是计算机，平板电脑、手机也是计算机，喜欢游戏的同学，家里或许有 PS4、XBOX，其实也都是计算机。</p><p>简单来说，计算机系统由<strong>“硬件”</strong>和<strong>“软件”</strong>构成</p><p>键盘、显示器、游戏手柄、声音输出设备等等，属于计算机的<strong>“硬件”</strong>。而<strong>“软件”</strong>，就是运行在计算机上的程序，用来让计算机的硬件执行特定的功能，比如呈现画面、播放音乐、通过输入设备（如键盘、游戏手柄）控制虚拟的角色做出各种动作。</p><p>程序设计语言，就是人类用来跟计算机沟通，编写可以执行的程序的一种特殊的“语言”。跟平时我们谈天说地时讲的话一样，有单词、句子、语法规范。不同的国家、人种，说不一样的话比如中文、英语、日语、法语。计算机的世界，也因时代、用途等因素，诞生了各种各样的语言。</p><p>PYTHON，就是其中的一种。</p><span id="more"></span><h2 id="Python-的起源"><a href="#Python-的起源" class="headerlink" title="Python 的起源"></a>Python 的起源</h2><p>1989 年，在荷兰的阿姆斯特丹，吉多·范罗苏姆（Guido van Rossum）为了打发圣诞节的无趣，决心开发一个新的脚本解释程序，并于 1991 年发布了第一个 Python 的发行版本。</p><p>打开英汉字典，你会发现 python 是“大蟒蛇”的意思。会不会有点吓到呢？</p><p><img src="http://static.catxn.cn/images/15470214394969.jpg-s"></p><p>不过其实它的名字并不是来自这种神秘的动物。之所以命名为 Python，是因为吉多非常喜欢一套英国电视喜剧《蒙提.派森的飞行马戏团》（Monty Python’s Flying Circus）。</p><p>Python 目前有两个版本：Python 2 和 Python 3。它们在某些地方有一些微妙的差异，而这些差异导致了 Python 3 并不能完全兼容 Python 2。</p><p>官方将于 2020 年停止对 Python 2 的支持，但由于种种原因，Python 2 仍然在很多地方使用。如果你已经是专业的程序员，那么可能会遇到如何选择版本的问题，并需要了解两个版本的差异。但是对于学生来说，完全不必考虑这些，直接选用最新版本的 Python 3 就好。</p><h2 id="Python-的优点"><a href="#Python-的优点" class="headerlink" title="Python 的优点"></a>Python 的优点</h2><p>目前世界上有几百种编程语言。</p><p>2019年1月，Python 再度摘得桂冠，成为2018年的“年度编程语言”。</p><p>在全球著名编程语言榜单 TIOBE 呈现的数据看来，PYTHON 的热度逐年上升。现在，Python 已成功进入被 JAVA，C，C++ 三大语言长期霸占的编程语言第一梯队，甩开其后的语言一大截。</p><p>Python 在数据处理、AI、脚本编写等领域均排名第一，在 Web 编程和科学计算领域处于领先地位。</p><p>它也是被大学计算机课程教授最多的语言。近年，中国的高考，也在逐渐增加 Python 的考试内容和范围。</p><p>究竟是什么因素让 Python 具有如此生命力？</p><p><img src="http://static.catxn.cn/images/15470204262277.jpg-s"></p><p>官网是这样“吹嘘”的：</p><blockquote><p>Python：<br>非常强大……而且很快；<br>和其它（编程语言）良好协同；<br>可在任何地方运行；<br>非常友好，易于学习；<br>开放；</p></blockquote><p>Python 的设计哲学是<strong>“优雅、明确、简单”</strong>。Python 开发者坚持“用一种方法，最好是只有一种方法来做一件事”。因此，它和拥有明显个人风格的其他语言很不一样。</p><p>基于上述设计哲学，Python 具有了简洁、易读的特性；<br>同时它是一种高级语言，开发者可以只考虑应用逻辑而无需关注具体的底层实现；<br>它通过语法特性强制使用规范的代码风格；<br>并且 Python 是开源和免费的。</p><p>所有这些，正是初学者能够轻松、准确、不受干扰地学习编程所需要的。</p><p>此外，作为一种工作语言，Python 还具备可移植性、可嵌入性、可扩展性以及用于解决各种场景下不同问题的丰富扩展库。</p><h2 id="Python-能做什么"><a href="#Python-能做什么" class="headerlink" title="Python 能做什么"></a>Python 能做什么</h2><p>由于 Python 的可扩展和可移植性，它几乎可以用于任何场合任何领域，例如：</p><ul><li>科学计算和数据统计</li><li>教育教学</li><li>用户界面开发</li><li>桌面软件开发</li><li>游戏开发</li><li>Web网站开发</li><li>后端开发</li><li>维护脚本编写</li><li>……</li></ul><p>当然，它仍有所专长。作为人工智能时代最流行的语言，目前 Python 最能大展身手的主要有四大方向：网络应用后端开发、数据处理和爬虫、人工智能机器学习、以及科学计算。</p><h2 id="Python-的学习路径"><a href="#Python-的学习路径" class="headerlink" title="Python 的学习路径"></a>Python 的学习路径</h2><p>如同足球篮球、舞蹈绘画一样，<strong>越是高级的乐趣，就越需要扎实的基础和长期的学习</strong>。</p><p>编程也是一样。同学们如果有学过 Scratch 或 Python 的初级课程，会发现，要学会简单的程序编写，甚至做个小游戏，是非常简单的事情。</p><p>但是，如果想做个能让很多人玩得入迷的炫酷游戏，又或者想做一个强大的网络爬虫，就会发现，会涉及很多知识。</p><p>猫老师做了一个知识路线图。这张图非常粗略，缺少很多细节，只是用于大致的描绘知识体系的概况。在这里，学习 Python 有三个阶梯：基础语法、高级特性和实际应用。</p><p>python 入门课程，大致覆盖了基础语法部分，也对编程有了最初、最直观的认识。</p><p>高级特性部分，则学习更多的编程技巧。我们在中级课程，会学到这里的部分内容。基本上，大多数同学学到这个程度就已经足够，而且是真的很了不起。这个阶段的知识，已经足以做一些像模像样的小游戏、小工具，并为将来有可能进行的深入学习打下基础。</p><p>第三个阶段，应用方向。能到达这个阶段的同学，一定都是学霸吧。:-D<br>几乎没有人能够学完这个阶段的所有内容，即使是职业的程序员。通常我们只需要选择自己感兴趣的领域，针对性的学习就好。</p><p><img src="http://static.catxn.cn/images/15469184280488.jpg-m"></p><p>其实，在学习完第二阶段之后，除了应用方向之外，还有一个竞赛方向可以选择，我们到时候再说。</p><h2 id="猫老师的-Python-课程"><a href="#猫老师的-Python-课程" class="headerlink" title="猫老师的 Python 课程"></a>猫老师的 Python 课程</h2><p>猫老师少儿编程，最新推出《趣味 Python 编程》课程。该课程定位为中级。推荐小学五年级至高中阶段的同学学习。</p><p>已经学过基于“极客战记”的初级课程的同学，可以无缝对接该课程。零基础，低年级的同学，可以选择从其他课程开始，比如 Scratch 和 《游戏式 PYTHON 编程入门》。</p><h2 id="如何开始下载安装"><a href="#如何开始下载安装" class="headerlink" title="如何开始下载安装"></a>如何开始下载安装</h2><p>《趣味Python编程·中级》介绍了如何下载。</p><p>对电脑比较熟悉的同学，可以直接至官网下载。为了方便大家，猫老师也在百度盘放了最新版本的安装包：<a href="https://pan.baidu.com/s/1jZzVUH-Wb1APbkoPTe3Scw">https://pan.baidu.com/s/1jZzVUH-Wb1APbkoPTe3Scw</a> 提取码: b91m </p><p>或扫码直接通过百度云小程序下载、</p><p><img src="http://static.catxn.cn/images/15470244967222.jpg-s"></p><p>Python 的基础开发环境对系统需求并不高。大部分同学家里现有的电脑，无论是苹果系统还是 Windows 系统均可。只要下载相应的安装包安装即可。</p><h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>好啦，现在同学们已经了解了Python 是什么，让我们立刻开始跟猫老师快乐地学习吧！</p><blockquote><p>Beautiful is better than ugly.<br>Simple is better than complex.<br>– Tim Peters</p></blockquote>]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;什么是-Python？&quot;&gt;&lt;a href=&quot;#什么是-Python？&quot; class=&quot;headerlink&quot; title=&quot;什么是 Python？&quot;&gt;&lt;/a&gt;什么是 Python？&lt;/h2&gt;&lt;p&gt;如果你百度一下，它会告诉你，python 是一种&lt;strong&gt;计算机程序设计语言&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;什么是计算机呢？&lt;/p&gt;
+&lt;p&gt;信息时代，计算机无处不在。以我们生活中所见为例，平时用的台式电脑，笔记本电脑就是计算机，平板电脑、手机也是计算机，喜欢游戏的同学，家里或许有 PS4、XBOX，其实也都是计算机。&lt;/p&gt;
+&lt;p&gt;简单来说，计算机系统由&lt;strong&gt;“硬件”&lt;/strong&gt;和&lt;strong&gt;“软件”&lt;/strong&gt;构成&lt;/p&gt;
+&lt;p&gt;键盘、显示器、游戏手柄、声音输出设备等等，属于计算机的&lt;strong&gt;“硬件”&lt;/strong&gt;。而&lt;strong&gt;“软件”&lt;/strong&gt;，就是运行在计算机上的程序，用来让计算机的硬件执行特定的功能，比如呈现画面、播放音乐、通过输入设备（如键盘、游戏手柄）控制虚拟的角色做出各种动作。&lt;/p&gt;
+&lt;p&gt;程序设计语言，就是人类用来跟计算机沟通，编写可以执行的程序的一种特殊的“语言”。跟平时我们谈天说地时讲的话一样，有单词、句子、语法规范。不同的国家、人种，说不一样的话比如中文、英语、日语、法语。计算机的世界，也因时代、用途等因素，诞生了各种各样的语言。&lt;/p&gt;
+&lt;p&gt;PYTHON，就是其中的一种。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="少儿编程" scheme="http://www.catxn.net/categories/%E5%B0%91%E5%84%BF%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="少儿编程" scheme="http://www.catxn.net/tags/%E5%B0%91%E5%84%BF%E7%BC%96%E7%A8%8B/"/>
+    
+    <category term="STEAM" scheme="http://www.catxn.net/tags/STEAM/"/>
+    
+    <category term="Python" scheme="http://www.catxn.net/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>写给青少年的网页爬虫学习指南</title>
+    <link href="http://www.catxn.net/posts/2019/%E5%86%99%E7%BB%99%E9%9D%92%E5%B0%91%E5%B9%B4%E7%9A%84%E7%BD%91%E9%A1%B5%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0%E6%8C%87%E5%8D%97/"/>
+    <id>http://www.catxn.net/posts/2019/%E5%86%99%E7%BB%99%E9%9D%92%E5%B0%91%E5%B9%B4%E7%9A%84%E7%BD%91%E9%A1%B5%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0%E6%8C%87%E5%8D%97/</id>
+    <published>2019-01-12T01:00:00.000Z</published>
+    <updated>2023-01-05T06:41:15.211Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>注意，这是一篇写给<strong>青少年</strong>的入门指南。<br>我们不会做非常深入的探讨，而是浅尝辄止，给初学者描绘一个概貌和入门指引。</p></blockquote><h2 id="缘起"><a href="#缘起" class="headerlink" title="缘起"></a>缘起</h2><p><em>那一天，人们终于回想起了被爬虫所支配的恐惧</em></p><p>2019元旦期间，有位同学报名学习 Python，上来就问了我一个问题，“什么时候可以开始学习爬虫呢？”</p><p>老师当时就被震惊了。现在的小朋友果然不可以低估啊。要知道猫老师本猫都还没实际操作过爬虫呢。而00后10后已经在以此为目标了。我不禁想问，这位少年，看你骨骼清奇，我这里有一本金牌黑客秘籍要不要看下？</p><p>玩笑归玩笑。有明确目标的学习，效果会是出类拔萃的。虽然猫老师之前并未专门对这项技术的教学做过准备，但是只要同学有需要，我们就不会被问题难住。教学相长，为了不辜负同学们的期望，我们决定从制作一个例子开始。</p><h2 id="什么是爬虫"><a href="#什么是爬虫" class="headerlink" title="什么是爬虫"></a>什么是爬虫</h2><p>网络爬虫（crawler），又被称为蜘蛛（spider）。是一种可以根据某种设定的规则自动运行，抓取互联网上的信息的程序。我们经常使用的百度、必应、谷歌这些搜索引擎，它们背后的重要支撑，就是网络爬虫。这些爬虫不知疲倦地抓取网站的信息并加以综合整理，最终成为帮助我们快速检索需要的信息的利器。</p><p>从这个简单的描述，我们就可以知道，一个爬虫至少需要三个要素：</p><ol><li>抓取信息</li><li>数据存储和整理</li><li>数据呈现</li></ol><p>这几个方面，每一个点都可以引申更多更深入的技术，值得数十年如一日地潜心研究。我们没有办法一一介绍，这一点你只要想象一下这些搜索引擎公司，为什么能凭借这个技术成长为互联网巨头就明白了。</p><p>但是作为初学者，想通过一些简单的学习，大致了解爬虫的工作原理，甚至做一些简单的爬虫应用，还是有可能的。</p><span id="more"></span><h2 id="爬虫的基本工作原理"><a href="#爬虫的基本工作原理" class="headerlink" title="爬虫的基本工作原理"></a>爬虫的基本工作原理</h2><p>同学们可能已经了解，互联网是通过超链接（URL）访问和相互联系的。比如新闻门户网站上就排布着大量隐藏在新闻标题背后的超链接。</p><p>想象一下，整个互联网就好比是一张……啊不对，是很多很多张通过各种方式连接在一起的蜘蛛网。现在假设你是一只蜘蛛，把你放在网上，需要把所有的蛛丝都走过一遍（看一遍所有网页），要怎么做呢？</p><p>首先，我们先随便从什么地方开始，爬过一根蛛丝，遇到分叉就按照某种规则选择其中一条。按照这种方式不停爬行，迟早有一天，整个网络都会被蜘蛛爬过一遍。</p><p>这就是爬虫的基本工作原理，也是爬虫为什么叫爬虫（或者蜘蛛）的原因。</p><p>网络爬虫跟这只蜘蛛的区别在于，爬过的地方需要有地方存储它看到的信息。通常，由于这些信息非常庞大，我们需要使用数据库来进行存储。</p><p>除了这种通用的爬虫，还有一些有特定目标的爬虫，比如在网络购物时，可能会需要用到的比价网站，就是通过爬虫，抓取所有购物网站的信息，对相同商品同一时间不同网站的价格，或者历史价格进行对比和分析。</p><p>所以爬虫技术也是大数据的基础之一。由此可见，如何对抓取到的数据进行存储、整理、分析和最终的呈现，也非常重要。</p><h2 id="实现爬虫需要的能力、工具及学习路径"><a href="#实现爬虫需要的能力、工具及学习路径" class="headerlink" title="实现爬虫需要的能力、工具及学习路径"></a>实现爬虫需要的能力、工具及学习路径</h2><p>知道了爬虫的基本工作原理，用Python去实现它需要什么工具也就大体有些概念了。</p><ul><li>编程基础知识<ul><li>Python 编程基础</li><li>Python 网络编程</li><li>Python 模块使用</li><li>数据结构和算法</li></ul></li><li>Web 开发基本知识<ul><li>HTML&#x2F;DOM</li><li>CSS</li><li>JavaScript</li></ul></li><li>正则表达式</li><li>数据库基础</li><li>……</li></ul><p>需要指出的是 Python 并非制作爬虫的唯一选择。你其实可以用任何喜欢的语言来实现。只是现阶段用 Python 来实现爬虫非常有利。一是因为 Python 的语法简洁易懂；二是已经有很多、很好用的专为 Python 爬虫设计的第三方模块（什么是模块，我们会在 Python 中级课程中讲授）。</p><p>Python 的学习路径，猫老师已经在《Python 是个什么东西？》有简单说明。有兴趣的同学可以回顾一下。简单来说就是首先学基础的语法，然后包含数据结构和算法的高级特性，接下来，针对性学习爬虫所需的具体技术和模块。</p><h2 id="例子程序：最右神回复"><a href="#例子程序：最右神回复" class="headerlink" title="例子程序：最右神回复"></a>例子程序：最右神回复</h2><p>有一个知名问答网站，网友们可以在上面提出任何你想问的问题，然后就会有热心的或者内行的网友认真书写回答。</p><p>在这些回答中，有一些短小精悍，回味无穷的回复，被网友们戏称“神回复”。</p><p>我们这一次的例子，就以它为“下手”的目标。通过一个爬虫，来方便的汇总这些“神回复”。</p><p>这个爬虫属于定向聚焦爬虫。针对特定网站，特定目的。于是我们需要找到初始页面、根据规则抓取答案、对答案进行筛选和存储、通过小程序进行前端呈现。</p><p>爬虫部分，因为非常简单，我们没有使用著名的 Scrapy 库，而是用相对较轻的 requests 库来执行 url 请求，用 lxml 库及正则表达式来解析抓取到的网页，并用 pymongo 进行数据存储和整理。</p><p>前端呈现，我们制作了一个微信小程序。这里又涉及了 WebApp、HTML&#x2F;CSS、RestApi、Hash 等等知识。好在这不是我们的重点，你也完全可以不去考虑，仅仅在自己的个人电脑上输出数据，开心就好。</p><p>当然，也许有一天我们也会开始介绍如何进行前端的实现。在这里，就先<a href="https://www.v2ex.com/t/522988">简单地体验一下吧</a>。</p><h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>这个小程序的最初版本，Jason老师和猫老师两个人花了大约两天时间，分别写出了前端（小程序）和后端（爬虫）。其中，爬虫部分的核心部分不超过一百行 Python 代码。但是，初学者仍需要从最基本的知识和概念学习，方能理解那短短几十行代码究竟干了些什么。</p><p>真正实用的爬虫，还需要考虑很多问题。比如，面对大量网站海量数据，如何提高抓取的效率；如何并行处理和存储；如何避免重复抓取，同时减少遗漏；如何将抓取的信息结构化存储；如何降低存储空间并提高查询性能和效率……不要怕，科技就是在不断发现、提问、研究、解决、迭代的过程中不断进步的。我们的学习也是一样。</p><p>最后，祝所有想要学习爬虫的同学都能早日实现自己的爬虫程序。<br>但是千万要注意，<strong>请合理、合法地使用爬虫，并避免大量高频访问某个网站，不然不要怪老师没有警告你会被封IP、封账号哦！</strong></p>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;注意，这是一篇写给&lt;strong&gt;青少年&lt;/strong&gt;的入门指南。&lt;br&gt;我们不会做非常深入的探讨，而是浅尝辄止，给初学者描绘一个概貌和入门指引。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;缘起&quot;&gt;&lt;a href=&quot;#缘起&quot; class=&quot;headerlink&quot; title=&quot;缘起&quot;&gt;&lt;/a&gt;缘起&lt;/h2&gt;&lt;p&gt;&lt;em&gt;那一天，人们终于回想起了被爬虫所支配的恐惧&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;2019元旦期间，有位同学报名学习 Python，上来就问了我一个问题，“什么时候可以开始学习爬虫呢？”&lt;/p&gt;
+&lt;p&gt;老师当时就被震惊了。现在的小朋友果然不可以低估啊。要知道猫老师本猫都还没实际操作过爬虫呢。而00后10后已经在以此为目标了。我不禁想问，这位少年，看你骨骼清奇，我这里有一本金牌黑客秘籍要不要看下？&lt;/p&gt;
+&lt;p&gt;玩笑归玩笑。有明确目标的学习，效果会是出类拔萃的。虽然猫老师之前并未专门对这项技术的教学做过准备，但是只要同学有需要，我们就不会被问题难住。教学相长，为了不辜负同学们的期望，我们决定从制作一个例子开始。&lt;/p&gt;
+&lt;h2 id=&quot;什么是爬虫&quot;&gt;&lt;a href=&quot;#什么是爬虫&quot; class=&quot;headerlink&quot; title=&quot;什么是爬虫&quot;&gt;&lt;/a&gt;什么是爬虫&lt;/h2&gt;&lt;p&gt;网络爬虫（crawler），又被称为蜘蛛（spider）。是一种可以根据某种设定的规则自动运行，抓取互联网上的信息的程序。我们经常使用的百度、必应、谷歌这些搜索引擎，它们背后的重要支撑，就是网络爬虫。这些爬虫不知疲倦地抓取网站的信息并加以综合整理，最终成为帮助我们快速检索需要的信息的利器。&lt;/p&gt;
+&lt;p&gt;从这个简单的描述，我们就可以知道，一个爬虫至少需要三个要素：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;抓取信息&lt;/li&gt;
+&lt;li&gt;数据存储和整理&lt;/li&gt;
+&lt;li&gt;数据呈现&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;这几个方面，每一个点都可以引申更多更深入的技术，值得数十年如一日地潜心研究。我们没有办法一一介绍，这一点你只要想象一下这些搜索引擎公司，为什么能凭借这个技术成长为互联网巨头就明白了。&lt;/p&gt;
+&lt;p&gt;但是作为初学者，想通过一些简单的学习，大致了解爬虫的工作原理，甚至做一些简单的爬虫应用，还是有可能的。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="少儿编程" scheme="http://www.catxn.net/categories/%E5%B0%91%E5%84%BF%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="少儿编程" scheme="http://www.catxn.net/tags/%E5%B0%91%E5%84%BF%E7%BC%96%E7%A8%8B/"/>
+    
+    <category term="STEAM" scheme="http://www.catxn.net/tags/STEAM/"/>
+    
+    <category term="Python" scheme="http://www.catxn.net/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>什么是信息学奥赛（NOIP）</title>
+    <link href="http://www.catxn.net/posts/2018/%E5%85%B3%E4%BA%8E%E4%BF%A1%E5%A5%A5/"/>
+    <id>http://www.catxn.net/posts/2018/%E5%85%B3%E4%BA%8E%E4%BF%A1%E5%A5%A5/</id>
+    <published>2018-11-05T01:00:00.000Z</published>
+    <updated>2023-01-05T06:41:15.211Z</updated>
+    
+    <content type="html"><![CDATA[<p>信息学奥赛，是五大学科奥林匹克（数学、物理、化学、生物和信息学）之一。</p><p>关于信奥，我们最常听到的应该是 NOIP 这个缩写。全称“全国青少年信息学奥林匹克联赛（National Olympiad in Informatics in Provinces）”，也是整个系列中，门槛最低的一个。要想进入信息奥林匹克的世界，这是第一个关卡。</p><h2 id="NOIP"><a href="#NOIP" class="headerlink" title="NOIP"></a>NOIP</h2><p><strong>介绍</strong></p><p>NOIP 由中国计算机学会统一组织，每年在同一时间不同地点以省或市划分赛区分别组织比赛，全国统一试卷。初中、高中或中专的在校学生均可报名参加，根据难度分普及组和提高组两个组别，分别面向初中和高中。每个组别均分为初赛和复赛两个阶段，初赛为笔试，复赛为上机考试。</p><p>初赛主要考察基础知识，形式为笔试。主要目标是考察学生对计算机科学知识掌握的广度以及编程基本能力。</p><p>初赛达到一定分数线的选手才可以参加复赛。复赛为程序设计，需要上机调试。主要考察学生的分析理解、数学抽象、实际的编程能力和编程技巧、想象力和创造力等等综合实践能力。各赛区奖项在复试的优胜者中产生。</p><p>比赛使用的语言，最早是采用 Basic，已于2005年取消。目前执行的是C&#x2F;C++&#x2F;Pascal。2022年部分取消 C，全部取消 Pascal。C++将成为主要语言。</p><span id="more"></span><p><strong>比赛时间</strong></p><p>通常初赛和复赛分别在10月和11月进行。例如2018年的比赛时间为：</p><pre><code>1. 初赛（提高组、普及组）：    2018年10月13日（周六），14:30-16:30；2. 复赛：    一试：2018年11月10日（周六），提高组8:30-12:00，普及组14:30-18:00；        二试：2018年11月11日（周日），提高组8:30-12:00。    </code></pre><p><strong>报名方式</strong></p><p>NOIP 一般由学校组织报名。初赛是不接受个人报名的，可以咨询本校的信息学老师，或者所在培训机构的老师咨询。</p><p>报名时间（2018为例）：<br>初赛传统邮件报名截止日期：2018年10月 9日<br>复赛网上注册报名截止日期：2018年10月31日</p><h2 id="NOI-系列赛"><a href="#NOI-系列赛" class="headerlink" title="NOI 系列赛"></a>NOI 系列赛</h2><p>NOIP 直接对接 NOI（National Olympiad in Informatics，全国青少年信息学奥林匹克竞赛）。</p><p>下面对这个系列的竞赛简单介绍一下全貌</p><h3 id="NOIP-全国青少年信息学奥林匹克联赛"><a href="#NOIP-全国青少年信息学奥林匹克联赛" class="headerlink" title="NOIP - 全国青少年信息学奥林匹克联赛"></a>NOIP - 全国青少年信息学奥林匹克联赛</h3><p>见前文</p><h3 id="NOI-全国青少年信息学奥林匹克"><a href="#NOI-全国青少年信息学奥林匹克" class="headerlink" title="NOI - 全国青少年信息学奥林匹克"></a>NOI - 全国青少年信息学奥林匹克</h3><p>NOI（National Olympiad in Informatics，全国青少年信息学奥林匹克竞赛）是全国最高水平的大赛，在全国范围（包括港澳）以代表队为单位参加。每年，各省选拔产生5名选手（其中一名是女选手），由中国计算机学会在计算机普及较好的城市组织进行比赛。全国的选手会集中在同一城市比赛，正式比赛分两次考试，两天考完。</p><p>这一竞赛同时记个人成绩和团体总分。</p><h3 id="夏令营"><a href="#夏令营" class="headerlink" title="夏令营"></a>夏令营</h3><p>全国青少年信息学奥林匹克（NOI）夏令营，为 NOI 比赛的扩大赛。同样具有中国计算机学会颁发的成绩证明。国内多数大学均承认其成绩，与NOI正式选手一视同仁。</p><h3 id="冬令营"><a href="#冬令营" class="headerlink" title="冬令营"></a>冬令营</h3><p>自1995年起。每年在寒假期间开展为期一周的培训活动，包括授课、讲座、讨论、测试等。参加冬令营的营员分正式营员和非正式营员。NOI 名列前茅的选手和指导教师为正式营员，非正式营员限量自愿报名参加。在冬令营授课的是著名大学的资深教授及已获得国际金牌学生的指导教师。</p><p>冬令营是中国国家队的第一轮选拔，从营员中选出名列前茅的作为中国国家队候选队员。</p><h3 id="CTSC-选拔赛"><a href="#CTSC-选拔赛" class="headerlink" title="CTSC - 选拔赛"></a>CTSC - 选拔赛</h3><p>CTSC(China Team Selection Competition，中国队选拔赛），指选拔参加国际信息学奥林匹克（IOI）中国代表队的竞赛。选拔赛前4名的优胜者代表中国参加国际竞赛。</p><p>选拔科目包括：NOI成绩、冬令营成绩、论文和答辩、平时作业、选拔赛成绩、口试。上述项目加权产生最后成绩。</p><h3 id="APIO-亚洲与太平洋地区信息学奥赛"><a href="#APIO-亚洲与太平洋地区信息学奥赛" class="headerlink" title="APIO - 亚洲与太平洋地区信息学奥赛"></a>APIO - 亚洲与太平洋地区信息学奥赛</h3><p>APIO（Asia Pacific Informatics Olympiad，亚洲与太平洋地区信息学奥赛）。2007年创建，该竞赛为区域性的网上准同步赛，是亚洲和太平洋地区每年一次的国际性赛事，旨在给青少年提供更多的赛事机会，推动亚太地区的信息学奥林匹克的发展。APIO每年5月举行，由不同的国家轮流主办。每个参赛团参赛选手上限为100名，其中成绩排在前6名的选手作为代表该参赛团的正式选手统计成绩。APIO中国赛区由中国计算机学会组织参赛，获奖比例将参照IOI。</p><h3 id="IOI-国际信息学奥林匹克竞赛"><a href="#IOI-国际信息学奥林匹克竞赛" class="headerlink" title="IOI - 国际信息学奥林匹克竞赛"></a>IOI - 国际信息学奥林匹克竞赛</h3><p>IOI（International Olympiad in Informatics，国际信息学奥林匹克竞赛）。由中国计算机学会组织代表队，代表中国参加国际每年一次的IOI。中国是IOI创始国之一。IOI2000由中国主办，CCF承办。出国参赛得到中国科协和国家自然科学基金委的资助。</p><p>自1989年开始，我国在NOI（网上同步赛99年开始）、NOIP、冬令营、选拔赛的基础上，组织参加国际信息学奥林匹克（IOI）竞赛。十几年中选拔75人次参加了 IOI，累计获金牌46块、银牌17块，铜牌12块。这些选手不仅在国际大赛中有好的表现，而且在现代的信息学科上也大展才华。中国已成为世界公认的信息 学奥林匹克竞赛强国，参赛选手、领队、教练曾受到江泽民、李鹏、李岚清等党和国家领导人及著名科学家的亲切接见和赞扬。</p><h2 id="其它赛事"><a href="#其它赛事" class="headerlink" title="其它赛事"></a>其它赛事</h2><h3 id="ACM-系列赛"><a href="#ACM-系列赛" class="headerlink" title="ACM 系列赛"></a>ACM 系列赛</h3><p>ACM 国际大学生程序设计竞赛（ACM International Collegiate Programming Contest），简称 ACM-ICPC 或 ICPC，是由ACM（Association for Computing Machinery，国际计算机学会）主办的，一项旨在展示大学生创新能力、团队精神和在压力下编写程序、分析和解决问题能力的年度竞赛。经过近40年的发展，ACM国际大学生程序设计竞赛已经发展成为全球最具影响力的大学生程序设计竞赛。</p><p>ACM 系列赛由各大洲的预赛和全球总决赛构成。由于面向大学生，我们这里不做过多探讨。另外，除了难度更大，NOI 系列赛的题型、内容接近 ACM 系列赛，可以将 NOI 的训练做为未来进入大学参加 ACM 系列赛的准备。</p><h3 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h3><p>除权威的 NOI 系列外，一些组织、协会、地方政府也有各类面向中小学生的科技、创意赛事。以浙江省能为例，就有全国青少年创意编程与智能设计大赛、杭州市中小学生科技节活动中的创客大赛、信息学大赛等等。</p><p>此外，还有一些以公益组织、公司团体为主体主办的各类赛事，不再一一赘述。</p><h2 id="竞赛对升学的影响"><a href="#竞赛对升学的影响" class="headerlink" title="竞赛对升学的影响"></a>竞赛对升学的影响</h2><p>根据教育部的规定，2011 年以前，NOIP 的奖项不同程度的具有大学保送资格。2011年之后，保送范围大幅度收缩，目前仅全国决赛一等奖具有保送资格。但是各地招生委员会、高校自主招生可自主决定针对在 NOIP、NOI 获得优秀成绩的学生给予不同档次降分、降线的录取待遇。</p><p>比如，2018年清华北大已与参与2018年信息学冬令营的部分学生签订了包括：有条件或无条件降至一本线、有条件降 60、30 分等不同档次优待。</p><p>在这种前提下，不少中学对于信息学成绩优秀的学生，在自主招生择校方面，也有不同程度的好处。</p><p>当然，这一点并非绝对，随着教育体制的改革，一些条件会不断发生变化。家长如果是希望竞赛对升学有帮助，还需要关注每年、所属地区的政策信息。</p><h2 id="什么时候开始学？"><a href="#什么时候开始学？" class="headerlink" title="什么时候开始学？"></a>什么时候开始学？</h2><p>初一开始做比赛准备即可。当然如果小学高年级开始先做一些基础入门学习（不限语言），会对初中的比赛准备大有裨益。</p><p>初中的目标是普及组一等奖。后期根据能力可以开始尝试参加提高组比赛。高一冲刺提高组一等奖，为升学创造条件。</p><p>另外，理论上小学也可以参加普及组的比赛。但是实际操作（如报名、复赛名额等等）起来会比较麻烦，因此并不建议小学阶段参赛。当然，如果学生确实在这方面有天分，同时所在地区小升初会针对 NOIP优惠的话，不妨一试。</p><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>关于竞赛，猫老师还是一贯的观点：并非人人需要。出于升学的目的，可能会备受打击。还是希望对此真正有兴趣和天分的孩子，当做一项对自我的挑战来参与。</p><p>出于兴趣、能力的目的，是学习<br>为了竞赛的目的，要大量的“训练”。如同出于健身目的的锻炼，可以让身体更强壮；而出于夺得奥运奖牌为目的的运动员，却往往留下伴随终生的运动伤害。</p><p>最后，祝大家都能快乐的学习编程。</p><p>注：</p><ol><li>部分资料来自 noi 官方网站：<a href="http://www.noi.cn/">http://www.noi.cn/</a></li><li>相关政策信息、比赛选拔数据等信息会有调整，以每年官方公告为准</li></ol><hr><h2 id="2019年2月更新"><a href="#2019年2月更新" class="headerlink" title="2019年2月更新"></a>2019年2月更新</h2><p>根据 <strong>教育部办公厅关于2019年度面向中小学生的全国性竞赛活动名单的补充公示</strong>，2019年信奥取消普及组比赛，也就是将只有高中生能够参数。</p><h3 id="教育部办公厅关于2019年度面向中小学生的全国性竞赛活动名单的补充公示"><a href="#教育部办公厅关于2019年度面向中小学生的全国性竞赛活动名单的补充公示" class="headerlink" title="教育部办公厅关于2019年度面向中小学生的全国性竞赛活动名单的补充公示"></a>教育部办公厅关于2019年度面向中小学生的全国性竞赛活动名单的补充公示</h3><blockquote><p>根据《教育部办公厅印发&lt;关于面向中小学生的全国性竞赛活动管理办法（试行）&gt;的通知》（教基厅〔2018〕9号）精神，在经主办单位自主申报并作出“零收费”等方面承诺，组织进行资格审核和组织专家评审的基础上，经研究拟补充确定全国中学生信息学奥林匹克竞赛为2019年度面向中学生开展的全国性竞赛活动。现就相关信息予以公示，公示期为2019年2月25日至2019年3月3日。</p></blockquote><blockquote><p>公示期内，如有异议，请以书面形式反映。以单位名义反映的须加盖本单位公章，以个人名义反映的应署真实姓名、身份证号，写明联系电话。反映情况的书面意见请于2019年3月3日之前通过信函邮寄至教育部基础教育司，逾期及匿名反映不予受理。</p></blockquote><blockquote><p><img src="https://ws4.sinaimg.cn/large/006tKfTcly1g0rwl2nslpj30p0325qpm.jpg"></p></blockquote>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;信息学奥赛，是五大学科奥林匹克（数学、物理、化学、生物和信息学）之一。&lt;/p&gt;
+&lt;p&gt;关于信奥，我们最常听到的应该是 NOIP 这个缩写。全称“全国青少年信息学奥林匹克联赛（National Olympiad in Informatics in Provinces）”，也是整个系列中，门槛最低的一个。要想进入信息奥林匹克的世界，这是第一个关卡。&lt;/p&gt;
+&lt;h2 id=&quot;NOIP&quot;&gt;&lt;a href=&quot;#NOIP&quot; class=&quot;headerlink&quot; title=&quot;NOIP&quot;&gt;&lt;/a&gt;NOIP&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;介绍&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;NOIP 由中国计算机学会统一组织，每年在同一时间不同地点以省或市划分赛区分别组织比赛，全国统一试卷。初中、高中或中专的在校学生均可报名参加，根据难度分普及组和提高组两个组别，分别面向初中和高中。每个组别均分为初赛和复赛两个阶段，初赛为笔试，复赛为上机考试。&lt;/p&gt;
+&lt;p&gt;初赛主要考察基础知识，形式为笔试。主要目标是考察学生对计算机科学知识掌握的广度以及编程基本能力。&lt;/p&gt;
+&lt;p&gt;初赛达到一定分数线的选手才可以参加复赛。复赛为程序设计，需要上机调试。主要考察学生的分析理解、数学抽象、实际的编程能力和编程技巧、想象力和创造力等等综合实践能力。各赛区奖项在复试的优胜者中产生。&lt;/p&gt;
+&lt;p&gt;比赛使用的语言，最早是采用 Basic，已于2005年取消。目前执行的是C&amp;#x2F;C++&amp;#x2F;Pascal。2022年部分取消 C，全部取消 Pascal。C++将成为主要语言。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="少儿编程" scheme="http://www.catxn.net/categories/%E5%B0%91%E5%84%BF%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="少儿编程" scheme="http://www.catxn.net/tags/%E5%B0%91%E5%84%BF%E7%BC%96%E7%A8%8B/"/>
+    
+    <category term="STEAM" scheme="http://www.catxn.net/tags/STEAM/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>少儿编程学什么</title>
+    <link href="http://www.catxn.net/posts/2018/%E5%B0%91%E5%84%BF%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%BB%80%E4%B9%88/"/>
+    <id>http://www.catxn.net/posts/2018/%E5%B0%91%E5%84%BF%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%BB%80%E4%B9%88/</id>
+    <published>2018-11-03T01:00:00.000Z</published>
+    <updated>2023-01-05T06:41:15.211Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://static.catxn.cn/images/15409758368145.jpg-s" alt="世界上有几百种编程语言"></p><h2 id="少儿编程学什么"><a href="#少儿编程学什么" class="headerlink" title="少儿编程学什么"></a>少儿编程学什么</h2><p>少年儿童学习编程，就是为了学习编程的技术，将来做一名码农吗？</p><p>可以很明确的说，不是的。出于应用和专业目的的编程培训，与儿童编程教育，有本质的不同。</p><p>我们带孩子学编程，是为了：</p><ul><li>激发创造力、锻炼想象力</li><li>培养计算思维、逻辑思维能力</li><li>培养专注和细心</li><li>养成探究解决问题的方法的能力和习惯</li><li>掌握信息和人工智能时代的生存工具</li></ul><p>编程，几乎涵盖了 STEAM 教育的五大门类</p><p><img src="http://static.catxn.cn/images/15409777202660.jpg-s" alt="艾瑞咨询：少儿编程教育所属范畴及理念"></p><span id="more"></span><h2 id="图形化和代码式编程"><a href="#图形化和代码式编程" class="headerlink" title="图形化和代码式编程"></a>图形化和代码式编程</h2><p>古时候，人们是用打孔纸带编程。程序员的祖先钻木取火（大误），在长长的纸带上按一定规则打孔来输入计算机进行计算。后来，随着计算机技术的高速发展，诞生了各种语言，从底层的汇编，到呈现整个互联网世界的 JavaScript，都有一个共同的特点，它们都是由一组组的“代码”来编写的。</p><p>即使是教小朋友也是一样用代码语言。但是对年龄较小的孩子来说，读取和输入代码，都是一件困难的事情。</p><p>直到2007年，在麻省理工学院一群顶尖工程师的努力下，Scratch 横空出世。五彩缤纷的积木，简单易用的操作，舞台场景的自由这些特性，在降低了学习编程的门槛的同时，更提供了丰富的玩法，极大地挖掘和刺激孩子们的想象力和创造力。</p><p>直到现在，Scratch 仍是应用最广泛的图形化（积木式）编程教育软件。同时 Scratch 也完全开源，于是，很多直接使用或基于它二次开发的平台也处处开花比如现在网易卡搭，米乐编程，编程猫等等。</p><p>在 Scratch 之后，很多 IT 巨头也纷纷研发和改进这类积木式编程软件，比如微软的 Kodu，谷歌的Blockly，苹果的 swift playground。</p><p><img src="http://static.catxn.cn/images/15409872979366.jpg-s"></p><p>无论用哪一种，其实学的东西都是一样的。都是在学习基本的编程思维、创意思维等等。而以乐高教育为代表的“机器人编程”，在猫老师看来，除了增加一些乐趣外，在动手能力、机械设计、电路等方面也有增强。</p><p>所以，猫老师的想法，上面这些，爸爸妈妈选任何一种方便接触到的就好。比如，假如有 ipad，爸爸妈妈又有兴趣陪孩子一起学习，那么 swift playground 就是个极佳的工具。它绚丽的界面，引人入胜的故事，一步步引导学习，是非常棒的体验。</p><p>对于学龄前的小朋友，MIT 提供的一个低龄版的“Scratch Jr”也可以试试。</p><p>当然，对于零基础的小朋友，学习这些都还是有一些门槛的。这方面，故事化（游戏化）的工具，相对来说更容易入手。而原生的 Scratch，则必需要在老师的引导下去完成任务（项目）。</p><h2 id="代码，选择哪门语言"><a href="#代码，选择哪门语言" class="headerlink" title="代码，选择哪门语言"></a>代码，选择哪门语言</h2><p>“老师，哪种语言最好？我要学”</p><p>千万不要去辩论哪种语言最好。曾经有个程序员的段子：</p><blockquote><p>经理挑战程序员说，你能让五分钟内这个程序员论坛吵起来，今天就不用加班了，度周末去吧。程序员不屑地上论坛发了个帖子：“Java 是最好的语言！”，不到五分钟，论坛就炸锅了。经理无奈，只好说，你下班去吧。程序员撸起袖子回答：“不，我就算不睡觉，也要让他们这些愚蠢的家伙知道，Java 才是最好的语言” </p><p>;-)</p></blockquote><p>世界上有几百种语言，猫老师只能小心翼翼地说，没有“最好”的语言，只有“更合适”的语言。</p><p>不同的时代，针对不同的应用场景，应该根据语言的特性来挑选最适合的。这也是为什么会有一个不断更新的编程语言活跃度排行榜。</p><p><img src="http://static.catxn.cn/images/15409768135989.jpg-s" alt="TIOBE TOP10 2018.10"></p><p>但是，我们不得不承认，人工智能时代。Python 无疑是最流行、发展迅猛的语言。</p><h2 id="python-的优势"><a href="#python-的优势" class="headerlink" title="python 的优势"></a>python 的优势</h2><p>对于学习来说，Python 最大的优势，就是简洁，易上手。它还有一堆有点，比如可靠、可移植，便于扩展（被称为“胶水”语言），而且是开源的，社区非常活跃。</p><p>python可以用来干什么呢？</p><p>首先它是一个流行的后端开发语言，可以用来搭建服务器，做数据分析、做网络爬虫（比如搜索引擎）、数据挖掘、机器学习。</p><p>另外，由于应用的广泛，社区的活跃，python 拥有大量的专业代码库，比如 tensorflow。这些库，甚至可以让你一天时间，建立一个属于你自己的简单人工智能系统。</p><p>另外，对学生来说，一个非常现实的好处是，<strong>某些省份的高考已加入了信息学科目，并采用 Python</strong>。并且，看起来这会是个趋势。 </p><h2 id="竞赛"><a href="#竞赛" class="headerlink" title="竞赛"></a>竞赛</h2><p>这个话题，今后猫老师会单独介绍。这里只简单提一句，信奥似乎隐隐有取代奥数，至少是并驾齐驱的趋势。但是，我还是希望，学习编程不要太功利，否则会非常辛苦，得不偿失。毕竟无论哪门学科的奥赛，其初衷都是锻炼思维能力，挑战极限，并非要人人都是奥运冠军。</p><p>需要指出的是，信奥目前的核心语言是 C&#x2F;C++，你可以到中学直接开始学习 C&#x2F;C++。当然，如果在小学初中有了积木式编程或PYTHON语言学习，转到 C&#x2F;C++ 的学习是比较轻松的。不过编程这门功课，入门容易精通难。毕竟，写代码让计算机说“你好”，跟编写一个会自动寻找敌人的机器狗的 AI，难度绝对是天壤之别。</p><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>简单总结下：</p><ol><li>5~9岁，可以尝试图形化编程，首推 Scratch（低龄的可以是 Scratch Jr），Code.org</li><li>8~12岁，有一定英文基础和自学能力，开始接触代码式编程。建议从易入门的 Python 开始。这里，推荐游戏式编程“极客战记”（网易卡搭），Apple Swift Playground（iPad 应用）</li><li>初中开始到高中阶段，以普及教育为导向，继续学习 python，或为奥赛准备，开始学习 C&#x2F;C++。</li></ol><p><strong>信奥是为有兴趣和天分的同学准备的。并非人人要学。</strong></p><p>好了，今天我们的普及知识就讲到这里，希望每一个大朋友小朋友，都能体会到人工智能魅力，动手编程的乐趣。</p><!--![](http://static.catxn.cn/images/15409781515433.jpg-s)-->]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;http://static.catxn.cn/images/15409758368145.jpg-s&quot; alt=&quot;世界上有几百种编程语言&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;少儿编程学什么&quot;&gt;&lt;a href=&quot;#少儿编程学什么&quot; class=&quot;headerlink&quot; title=&quot;少儿编程学什么&quot;&gt;&lt;/a&gt;少儿编程学什么&lt;/h2&gt;&lt;p&gt;少年儿童学习编程，就是为了学习编程的技术，将来做一名码农吗？&lt;/p&gt;
+&lt;p&gt;可以很明确的说，不是的。出于应用和专业目的的编程培训，与儿童编程教育，有本质的不同。&lt;/p&gt;
+&lt;p&gt;我们带孩子学编程，是为了：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;激发创造力、锻炼想象力&lt;/li&gt;
+&lt;li&gt;培养计算思维、逻辑思维能力&lt;/li&gt;
+&lt;li&gt;培养专注和细心&lt;/li&gt;
+&lt;li&gt;养成探究解决问题的方法的能力和习惯&lt;/li&gt;
+&lt;li&gt;掌握信息和人工智能时代的生存工具&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;编程，几乎涵盖了 STEAM 教育的五大门类&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://static.catxn.cn/images/15409777202660.jpg-s&quot; alt=&quot;艾瑞咨询：少儿编程教育所属范畴及理念&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="少儿编程" scheme="http://www.catxn.net/categories/%E5%B0%91%E5%84%BF%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="少儿编程" scheme="http://www.catxn.net/tags/%E5%B0%91%E5%84%BF%E7%BC%96%E7%A8%8B/"/>
+    
+    <category term="STEAM" scheme="http://www.catxn.net/tags/STEAM/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>投身少儿编程教育</title>
+    <link href="http://www.catxn.net/posts/2018/%E6%8A%95%E8%BA%AB%E5%B0%91%E5%84%BF%E7%BC%96%E7%A8%8B%E6%95%99%E8%82%B2/"/>
+    <id>http://www.catxn.net/posts/2018/%E6%8A%95%E8%BA%AB%E5%B0%91%E5%84%BF%E7%BC%96%E7%A8%8B%E6%95%99%E8%82%B2/</id>
+    <published>2018-10-01T01:00:00.000Z</published>
+    <updated>2023-01-05T06:41:15.211Z</updated>
+    
+    <content type="html"><![CDATA[<p>2017年，结束宗布科技技术外包业务。<br>2018年，投入区块链学习研究。<br>2018年秋，回想起2016年前后曾想做教育，困于当时的业务难以转身。现在倒是可以自己试试了。编程这行当，论经验不输任何人，知识面又极广，而且从来都乐于分享知识。另外又是教师家庭出身。似乎具备大部分所需条件。</p><p>说干就干。先建立了公众号和显示课程。后面逐步丰富内容、课程研发体系。</p><p>公众号：<a href="http://mp.weixin.qq.com/mp/homepage?__biz=MzUxMjA1NTAzMA==&hid=2&sn=34af44667b808911db902daf44bab16f&scene=18#wechat_redirect">猫老师少儿编程 &gt;&gt;&gt;</a></p><!--助教微信：喵小沙![](images/qrcode_for_mxs.jpg)--><p>在线课程地址：<a href="https://m.lizhiweike.com/liveroom2/24178239">猫老师少儿编程教室｜荔枝微课 &gt;&gt;&gt;</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;2017年，结束宗布科技技术外包业务。&lt;br&gt;2018年，投入区块链学习研究。&lt;br&gt;2018年秋，回想起2016年前后曾想做教育，困于当时的业务难以转身。现在倒是可以自己试试了。编程这行当，论经验不输任何人，知识面又极广，而且从来都乐于分享知识。另外又是教师家庭出身。似乎</summary>
+      
+    
+    
+    
+    <category term="少儿编程" scheme="http://www.catxn.net/categories/%E5%B0%91%E5%84%BF%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="流水账" scheme="http://www.catxn.net/tags/%E6%B5%81%E6%B0%B4%E8%B4%A6/"/>
+    
+    <category term="少儿编程" scheme="http://www.catxn.net/tags/%E5%B0%91%E5%84%BF%E7%BC%96%E7%A8%8B/"/>
+    
+    <category term="STEAM" scheme="http://www.catxn.net/tags/STEAM/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>新主题：Next</title>
+    <link href="http://www.catxn.net/posts/2017/theme-next/"/>
+    <id>http://www.catxn.net/posts/2017/theme-next/</id>
+    <published>2017-03-29T07:24:08.000Z</published>
+    <updated>2023-01-05T06:41:15.211Z</updated>
+    
+    <content type="html"><![CDATA[<p> 启用新主题：NexT: <a href="http://theme-next.iissnan.com/">http://theme-next.iissnan.com/</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt; 启用新主题：NexT: &lt;a href=&quot;http://theme-next.iissnan.com/&quot;&gt;http://theme-next.iissnan.com/&lt;/a&gt;&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="建站心得" scheme="http://www.catxn.net/categories/%E5%BB%BA%E7%AB%99%E5%BF%83%E5%BE%97/"/>
+    
+    
+    <category term="建站" scheme="http://www.catxn.net/tags/%E5%BB%BA%E7%AB%99/"/>
+    
+    <category term="hexo" scheme="http://www.catxn.net/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>史蒂夫大战骷髅怪</title>
+    <link href="http://www.catxn.net/posts/2016/steve-vs-skeleton/"/>
+    <id>http://www.catxn.net/posts/2016/steve-vs-skeleton/</id>
+    <published>2016-08-18T13:00:00.000Z</published>
+    <updated>2023-01-05T06:41:15.211Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://static.catxn.cn/images/WechatIMG-cover.jpeg-s" alt="WechatIMG-cover"></p><p>小盆友学完编程后，拿《我的世界》积木块给大家讲了个故事。请往下看：</p><span id="more"></span><p><img src="http://static.catxn.cn/images/WechatIMG142.jpeg-s" alt="WechatIMG142"><br><img src="http://static.catxn.cn/images/WechatIMG143.jpeg-s" alt="WechatIMG143"><br><img src="http://static.catxn.cn/images/WechatIMG144.jpeg-s" alt="WechatIMG144"><br><img src="http://static.catxn.cn/images/WechatIMG145.jpeg-s" alt="WechatIMG145"><br><img src="http://static.catxn.cn/images/WechatIMG146.jpeg-s" alt="WechatIMG146"><br><img src="http://static.catxn.cn/images/WechatIMG147.jpeg-s" alt="WechatIMG147"><br><img src="http://static.catxn.cn/images/WechatIMG148.jpeg-s" alt="WechatIMG148"><br><img src="http://static.catxn.cn/images/WechatIMG149.jpeg-s" alt="WechatIMG149"></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;http://static.catxn.cn/images/WechatIMG-cover.jpeg-s&quot; alt=&quot;WechatIMG-cover&quot;&gt;&lt;/p&gt;
+&lt;p&gt;小盆友学完编程后，拿《我的世界》积木块给大家讲了个故事。请往下看：&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="夜猫茶舍" scheme="http://www.catxn.net/categories/%E5%A4%9C%E7%8C%AB%E8%8C%B6%E8%88%8D/"/>
+    
+    
+    <category term="图文故事" scheme="http://www.catxn.net/tags/%E5%9B%BE%E6%96%87%E6%95%85%E4%BA%8B/"/>
+    
+    <category term="乐高" scheme="http://www.catxn.net/tags/%E4%B9%90%E9%AB%98/"/>
+    
+    <category term="我的世界" scheme="http://www.catxn.net/tags/%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MacOS Nodejs 环境工具配置</title>
+    <link href="http://www.catxn.net/posts/2016/MacOS%20Nodejs%20%E7%8E%AF%E5%A2%83%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE/"/>
+    <id>http://www.catxn.net/posts/2016/MacOS%20Nodejs%20%E7%8E%AF%E5%A2%83%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE/</id>
+    <published>2016-07-25T04:00:00.000Z</published>
+    <updated>2023-01-05T06:41:15.211Z</updated>
+    
+    <content type="html"><![CDATA[<p>本文讲述从零开始安装一系列Nodejs“环境工具”的方法。<br>涉及工具：</p><ul><li>Homebrew</li><li>iTerm2</li><li>nodejs, nvm, npm</li><li>zsh &#x2F; oh-my-zsh</li></ul><span id="more"></span><h2 id="Homebrew-应用安装和管理工具"><a href="#Homebrew-应用安装和管理工具" class="headerlink" title="Homebrew - 应用安装和管理工具"></a>Homebrew - 应用安装和管理工具</h2><p>首先安装软件包管理器。在 <a href="http://brew.sh/">Homebrew</a> 与 Macports 之间，我们选择前者。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/bin/ruby -e <span class="string">&quot;<span class="subst">$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)</span>&quot;</span></span><br></pre></td></tr></table></figure><p>在安装Homebrew之后，软件包的安装、升级均可通过执行命令行 <code>brew install &lt;package&gt;</code> 来进行，详情可参阅参数帮助。</p><ul><li>可选安装brew增强工具：<a href="https://caskroom.github.io/">cask-room</a>, <a href="https://github.com/jimbojsb/launchrocket">launchrocket</a></li></ul><h2 id="NVM-Nodejs-包管理工具的使用"><a href="#NVM-Nodejs-包管理工具的使用" class="headerlink" title="NVM - Nodejs 包管理工具的使用"></a>NVM - Nodejs 包管理工具的使用</h2><p>Nodejs 更新很快，加上中间 io.js 的历史，导致其版本混乱，管理一直是个问题。因此诞生了Nodejs版本管理工具，常见的为 nvm 和 n 两个工具。这里我们推荐 nvm。</p><p>要注意的是，不要使用 brew 来安装 node 和 nvm。如果之前已经用 brew 安装过 node，也请先卸载再继续。</p><p>nvm 脚本安装方式：</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.3/install.sh | bash</span><br></pre></td></tr></table></figure><p>nvm 的更新，按照官方的方法只能手工检查，手工更新。对此，推荐使用 oh-my-zsh 的插件 <a href="https://github.com/lukechilds/zsh-nvm">zsh-nvm</a> 安装。如果采用该方式，可跳过上面的安装脚本。具体安装方法请继续往下看。</p><h2 id="终端增强"><a href="#终端增强" class="headerlink" title="终端增强"></a>终端增强</h2><p>iterm2 + zsh + oh-my-zsh</p><p>Mac &#x2F; Linux 默认的 Shell 为 Bash。一般应用来说足够。</p><p>但是我们想要更漂亮的界面，更方便管理的多窗口，更智能的自动完成，更帅的命令行等功能，可以切换为zsh并安装shell增强工具 </p><p>首先用 <a href="https://iterm2.com/">iTerm2</a> 替换掉难看的系统终端<br>然后安装 <a href="https://github.com/robbyrussell/oh-my-zsh/">oh-my-zsh</a>，选择喜欢的颜色主题。酷炫的命令行窗口就出现了。</p><p>上面说过，我们用 zsh-nvm 来管理 nvm。我们需要 <a href="https://github.com/lukechilds/zsh-nvm">zsh-nvm</a>这个插件。完成上述几步，启用该插件后，我们的准备工作就完成了。</p><h2 id="安装、更新-Nodejs-版本"><a href="#安装、更新-Nodejs-版本" class="headerlink" title="安装、更新 Nodejs 版本"></a>安装、更新 Nodejs 版本</h2><p>现在你可以随时使用 <code>nvm upgrade</code> 来更新 NVM。用 NVM 来安装和管理Nodejs 版本，npm 来管理 node 模块。</p><p>至此，一个顺手的 Nodejs 环境准备完成。</p><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul><li><a href="http://brew.sh/">Homebrew</a></li><li><a href="https://github.com/creationix/nvm">NVM</a></li><li><a href="https://github.com/robbyrussell/oh-my-zsh/">oh-my-zsh</a></li><li><a href="https://github.com/lukechilds/zsh-nvm">zsh-nvm</a></li><li><a href="https://iterm2.com/">iTerm2</a></li><li><a href="https://caskroom.github.io/">cask-room</a></li><li><a href="https://github.com/jimbojsb/launchrocket">launchrocket</a></li></ul>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;本文讲述从零开始安装一系列Nodejs“环境工具”的方法。&lt;br&gt;涉及工具：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Homebrew&lt;/li&gt;
+&lt;li&gt;iTerm2&lt;/li&gt;
+&lt;li&gt;nodejs, nvm, npm&lt;/li&gt;
+&lt;li&gt;zsh &amp;#x2F; oh-my-zsh&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    <category term="软件开发" scheme="http://www.catxn.net/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/"/>
+    
+    
+    <category term="软件开发" scheme="http://www.catxn.net/tags/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/"/>
+    
+    <category term="nodejs" scheme="http://www.catxn.net/tags/nodejs/"/>
+    
+    <category term="macOS" scheme="http://www.catxn.net/tags/macOS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>宗布的传说</title>
+    <link href="http://www.catxn.net/posts/2016/zongbu-legend/"/>
+    <id>http://www.catxn.net/posts/2016/zongbu-legend/</id>
+    <published>2016-06-15T04:00:00.000Z</published>
+    <updated>2023-01-05T06:41:15.211Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>尧乃使羿诛凿齿于畴华之野，杀九婴于凶水之上，缴大风于青丘之泽，上射十日而下杀猰貐，断修蛇于洞庭，禽封豨于桑林，万民皆喜，置尧以为天子。——《<a href="http://shiwenwang.com/guwen/huainan/2612.html">淮南子·本经训</a>》</p></blockquote><h2 id="后羿的故事"><a href="#后羿的故事" class="headerlink" title="后羿的故事"></a>后羿的故事</h2><p>历史上有两个“后羿”，而这两位的很多事迹有重叠，出场人物包括帝尧（就是尧舜禹汤那个尧），射日的“羿”（大羿），夏朝第六任国君“后羿”，嫦娥，宓妃，河伯等等。现在这些故事相互参杂，涉及政治、阴谋、多角恋，精彩纷繁，基本是笔糊涂账。</p><p>不过至少有一点目前看来明确：封神的应该是指射日的后羿（大羿）。民间传说后羿射日中的后羿，也是尧时期的大羿。</p><p>看过各种版本的故事，考证，我们决定传说是这样的：</p><p>羿为神射手，帝尧时代，为民除害，哪有问题去哪里，深受民众爱戴，天子欣赏。与嫦娥相知相爱。后来阴差阳错嫦娥独饮飞天神药，从此与丈夫天人两隔。</p><p>羿失去了妻子，虽郁郁寡欢，仍保持活雷锋本色，继续为人民服务。一日无意中救下被河伯虐待的宓妃，并惩治了河伯。</p><p>后来，天帝封羿为宗布，宓妃为洛神。</p><blockquote><p>羿除天下之害，死而为宗布。——《<a href="http://shiwenwang.com/guwen/huainan/2618.html">淮南子·氾论训</a>》</p></blockquote><h2 id="宗布的传说"><a href="#宗布的传说" class="headerlink" title="宗布的传说"></a>宗布的传说</h2><p>本来应该为宗布科技成立一周年写点东西而作。实际上这会儿已经过去一个月了。</p><span id="more"></span><p>迟来总比不来好。过去的一年，吃过的苦头踩过的坑不足为道。关键是我们毕竟磕磕巴巴挺过去了一年。</p><p>玛蒂达说，要么死，要么爱。没有中间的选项。我们在创立之初，也是秉承这样的决心：做一家公司，要么山穷水尽，要么柳暗花明。<strong>只要仍有一丝希望，绝不轻言放弃</strong>。</p><p>当然，今天我们一开始满满的锐气挫去了不少，取而代之的是更加的坚韧。而无论前面是什么样的沟壑，我们都会不忘初心，一往无前。审时度势，呐喊冲锋，偃旗息鼓，曲折迂回……无论路途中采用何种战术、如何改变和调整，都只为最终的目标。永不停步，只要我们仍拥有这支团结的，骄傲的团队。</p><p>那么，欢迎这次的主角上场。铛铛铛铛～</p><p><img src="http://www.zongbutech.com/wp-content/uploads/2016/06/logo_new_bigeye_512_512.png" alt="logo_single_384"></p><p>宗布科技新LOGO。上面说那么多，其实都只是为了让这条“宗布鱼”亮相。XD</p><blockquote><p>设计师设计说明: 首先是辨识度，一眼看上去映入眼帘的是简单易懂的Z。点睛一笔点活了图案，让LOGO看起来是有生命的。一点同时代指团队，面对困难也不畏艰险向前冲。图案中还暗藏一个绝壁，鱼＋绝壁，“游刃有余”。再借用女儿的话，整体像海浪，希望永远保持活力，像海一样的胸怀和力量，乘风破浪！—— 千曲@宗布科技</p></blockquote><p>接下来数日，我们的官网、公众号，以及相关的文案、产品上的LOGO，均将逐步替换为新LOGO，敬请期待。</p><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul><li>淮南子</li><li>宗布科技</li></ul>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;尧乃使羿诛凿齿于畴华之野，杀九婴于凶水之上，缴大风于青丘之泽，上射十日而下杀猰貐，断修蛇于洞庭，禽封豨于桑林，万民皆喜，置尧以为天子。——《&lt;a href=&quot;http://shiwenwang.com/guwen/huainan/2612.html&quot;&gt;淮南子·本经训&lt;/a&gt;》&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;后羿的故事&quot;&gt;&lt;a href=&quot;#后羿的故事&quot; class=&quot;headerlink&quot; title=&quot;后羿的故事&quot;&gt;&lt;/a&gt;后羿的故事&lt;/h2&gt;&lt;p&gt;历史上有两个“后羿”，而这两位的很多事迹有重叠，出场人物包括帝尧（就是尧舜禹汤那个尧），射日的“羿”（大羿），夏朝第六任国君“后羿”，嫦娥，宓妃，河伯等等。现在这些故事相互参杂，涉及政治、阴谋、多角恋，精彩纷繁，基本是笔糊涂账。&lt;/p&gt;
+&lt;p&gt;不过至少有一点目前看来明确：封神的应该是指射日的后羿（大羿）。民间传说后羿射日中的后羿，也是尧时期的大羿。&lt;/p&gt;
+&lt;p&gt;看过各种版本的故事，考证，我们决定传说是这样的：&lt;/p&gt;
+&lt;p&gt;羿为神射手，帝尧时代，为民除害，哪有问题去哪里，深受民众爱戴，天子欣赏。与嫦娥相知相爱。后来阴差阳错嫦娥独饮飞天神药，从此与丈夫天人两隔。&lt;/p&gt;
+&lt;p&gt;羿失去了妻子，虽郁郁寡欢，仍保持活雷锋本色，继续为人民服务。一日无意中救下被河伯虐待的宓妃，并惩治了河伯。&lt;/p&gt;
+&lt;p&gt;后来，天帝封羿为宗布，宓妃为洛神。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;羿除天下之害，死而为宗布。——《&lt;a href=&quot;http://shiwenwang.com/guwen/huainan/2618.html&quot;&gt;淮南子·氾论训&lt;/a&gt;》&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;宗布的传说&quot;&gt;&lt;a href=&quot;#宗布的传说&quot; class=&quot;headerlink&quot; title=&quot;宗布的传说&quot;&gt;&lt;/a&gt;宗布的传说&lt;/h2&gt;&lt;p&gt;本来应该为宗布科技成立一周年写点东西而作。实际上这会儿已经过去一个月了。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="宗布科技" scheme="http://www.catxn.net/categories/%E5%AE%97%E5%B8%83%E7%A7%91%E6%8A%80/"/>
+    
+    
+    <category term="历史" scheme="http://www.catxn.net/tags/%E5%8E%86%E5%8F%B2/"/>
+    
+    <category term="阅读" scheme="http://www.catxn.net/tags/%E9%98%85%E8%AF%BB/"/>
+    
+    <category term="写作" scheme="http://www.catxn.net/tags/%E5%86%99%E4%BD%9C/"/>
+    
+    <category term="原创" scheme="http://www.catxn.net/tags/%E5%8E%9F%E5%88%9B/"/>
+    
+    <category term="宗布" scheme="http://www.catxn.net/tags/%E5%AE%97%E5%B8%83/"/>
+    
+    <category term="一本道" scheme="http://www.catxn.net/tags/%E4%B8%80%E6%9C%AC%E9%81%93/"/>
+    
+    <category term="传说" scheme="http://www.catxn.net/tags/%E4%BC%A0%E8%AF%B4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>一行代码在wordpress任意页面实现重定向</title>
+    <link href="http://www.catxn.net/posts/2016/wordpress-shortcode-redirect/"/>
+    <id>http://www.catxn.net/posts/2016/wordpress-shortcode-redirect/</id>
+    <published>2016-06-15T01:28:42.000Z</published>
+    <updated>2023-01-05T06:41:15.211Z</updated>
+    
+    <content type="html"><![CDATA[<p>出于某些原因，需要将Wordpress站点的某篇文章或者某个页面临时重定向到另一个地址。<br>有现成插件可以使用，太重；当然也可以给需要转向的页面加JS代码实现，这种方法又不够方便也不够优雅。</p><p>于是用简码（shortcode）来实现。用一小段代码给站点增加一个新的用于转向的简码，那么每次在需要转向的页面或文章中，只要加入这么一句话，即可轻松转向：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[my_redirect url=&quot;http://www.example.com&quot;]</span><br></pre></td></tr></table></figure><h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><p>先贴代码</p><span id="more"></span><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1. 重定向简码实现</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">my_redirect_shortcode</span>(<span class="params"><span class="variable">$params</span></span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 提取参数</span></span><br><span class="line">    <span class="title function_ invoke__">extract</span>(<span class="title function_ invoke__">shortcode_atts</span>(<span class="keyword">array</span>(</span><br><span class="line">      <span class="string">&#x27;url&#x27;</span> =&gt; <span class="string">&#x27;/&#x27;</span>,</span><br><span class="line">    ), <span class="variable">$params</span>));</span><br><span class="line"></span><br><span class="line"> <span class="comment">// 功能实现</span></span><br><span class="line">    <span class="title function_ invoke__">header</span>(<span class="string">&#x27;Location: &#x27;</span>.<span class="variable">$url</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 2. 简码注册函数</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">my_add_shortcodes</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="title function_ invoke__">add_shortcode</span>( <span class="string">&#x27;my-redirect&#x27;</span>, <span class="string">&#x27;my_redirect_shortcode&#x27;</span> );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 3. 在初始化时注册简码</span></span><br><span class="line"><span class="title function_ invoke__">add_action</span>( <span class="string">&#x27;init&#x27;</span>, <span class="string">&#x27;my_add_shortcodes&#x27;</span> );</span><br></pre></td></tr></table></figure><p>将以上代码加入主题的functions.php即可。当然，我的做法是使用子主题，然后在子主题的functions.php中加入自定义代码以避免主题升级时丢失修改。</p><h2 id="Wordpress-简码介绍"><a href="#Wordpress-简码介绍" class="headerlink" title="Wordpress 简码介绍"></a>Wordpress 简码介绍</h2><p>Wordpress 从2.5版开始引入简码功能。该功能简单说就是给一段PHP代码加上名字，然后在页面通过这个名字触发服务端代码执行。调用时的用法与BBCode非常相似。</p><p>Wordpress <a href="https://codex.wordpress.org/Shortcode">内置了很多有用的简码</a>，同时提供了<a href="https://codex.wordpress.org/Shortcode_API">自定义简码的API</a>。</p><p>上面功能的实现就是基于自定义简码API，稍作解释如下。</p><p>生成一个简码三个步骤：</p><ol><li>实现简码功能的代码。如上面的 <code>my_redirect_shortcode</code>。这是核心。</li><li>注册简码的代码。如上面的函数 <code>function my_add_shortcodes()</code>。这个函数调用WP函数 <code>add_shortcode()</code>，给一个简码函数设定一个名称</li><li>WP初始化时加载注册简码。</li></ol><p>这里面主要是简码函数的实现。该函数接受两个参数，第一个参数是简码参数，在我们这里就是url。函数实现部分调用WP函数extract来提取参数并赋缺省值。</p><p>我这里实现的只使用了一个参数，实际上简码接受第二个参数<code>$content</code>，这个参数的用法如下</p><p>PHP部分</p><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">my_shortcode</span>(<span class="params"><span class="variable">$params</span>, <span class="variable">$content</span>=<span class="string">&#x27;defaut content&#x27;</span></span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 提取参数</span></span><br><span class="line">    <span class="title function_ invoke__">extract</span>(<span class="title function_ invoke__">shortcode_atts</span>(<span class="keyword">array</span>(</span><br><span class="line">      <span class="string">&#x27;url&#x27;</span> =&gt; <span class="string">&#x27;/&#x27;</span>,</span><br><span class="line">    ), <span class="variable">$params</span>));</span><br><span class="line"> </span><br><span class="line"> <span class="comment">// 用params干点啥</span></span><br><span class="line"> <span class="comment">// ...</span></span><br><span class="line"> </span><br><span class="line"> <span class="comment">// 用content干点啥</span></span><br><span class="line"> <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>页面调用</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[my_code param=&quot;param&quot;]my_content[/my_code]</span><br></pre></td></tr></table></figure><h2 id="简码插件推荐"><a href="#简码插件推荐" class="headerlink" title="简码插件推荐"></a>简码插件推荐</h2><p>这里推荐两个很好用的插件: </p><ul><li><a href="https://wordpress.org/plugins/magee-shortcodes/">Magee Shortcodes</a></li><li><a href="https://wordpress.org/plugins/shortcodes-ultimate/">Shortcodes Ultimate</a></li></ul><p>前一个很多主题都依赖，基于Bootstrap提供了一组HTML5&#x2F;CSS3排版的简码<br>后一个提供很多非常有用的简码，同时它还有一个强大的功能就是“自定义简码”。嗯，有它就不需要去收工编辑functions.php了。XD</p><h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><ul><li><a href="https://codex.wordpress.org/Category:Shortcodes">Wordpress Shortcode</a></li></ul>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;出于某些原因，需要将Wordpress站点的某篇文章或者某个页面临时重定向到另一个地址。&lt;br&gt;有现成插件可以使用，太重；当然也可以给需要转向的页面加JS代码实现，这种方法又不够方便也不够优雅。&lt;/p&gt;
+&lt;p&gt;于是用简码（shortcode）来实现。用一小段代码给站点增加一个新的用于转向的简码，那么每次在需要转向的页面或文章中，只要加入这么一句话，即可轻松转向：&lt;/p&gt;
+&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;[my_redirect url=&amp;quot;http://www.example.com&amp;quot;]&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;实现&quot;&gt;&lt;a href=&quot;#实现&quot; class=&quot;headerlink&quot; title=&quot;实现&quot;&gt;&lt;/a&gt;实现&lt;/h2&gt;&lt;p&gt;先贴代码&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="建站心得" scheme="http://www.catxn.net/categories/%E5%BB%BA%E7%AB%99%E5%BF%83%E5%BE%97/"/>
+    
+    
+    <category term="建站" scheme="http://www.catxn.net/tags/%E5%BB%BA%E7%AB%99/"/>
+    
+    <category term="wordpress" scheme="http://www.catxn.net/tags/wordpress/"/>
+    
+    <category term="php" scheme="http://www.catxn.net/tags/php/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>在阿里云建设一个企业网站</title>
+    <link href="http://www.catxn.net/posts/2016/%E5%9C%A8%E9%98%BF%E9%87%8C%E4%BA%91%E5%BB%BA%E8%AE%BE%E4%B8%80%E4%B8%AA%E4%BC%81%E4%B8%9A%E7%BD%91%E7%AB%99/"/>
+    <id>http://www.catxn.net/posts/2016/%E5%9C%A8%E9%98%BF%E9%87%8C%E4%BA%91%E5%BB%BA%E8%AE%BE%E4%B8%80%E4%B8%AA%E4%BC%81%E4%B8%9A%E7%BD%91%E7%AB%99/</id>
+    <published>2016-05-15T04:00:00.000Z</published>
+    <updated>2023-01-05T06:41:15.211Z</updated>
+    
+    <content type="html"><![CDATA[<p>企业门户网站的设计是一个非常常见且旺盛的需求。而制作一个门户网站有非常多的方法。最近我们为几个企业用户搭建了门户网站，这里做一些简单的总结，包括一些常会遇到的问题，以便少走弯路。</p><ul><li>上篇：准备工作，主机与域名</li><li>中篇：建站利器Wordpress</li><li>下篇：为网站配置邮件</li></ul><h1 id="上篇"><a href="#上篇" class="headerlink" title="上篇"></a>上篇</h1><p>首先我们来说下基础设施的准备。</p><h2 id="主机的选择"><a href="#主机的选择" class="headerlink" title="主机的选择"></a>主机的选择</h2><p>对于个人用户，建立一个个人网站，可以选用一些免费的博客社区，或者廉价的个人博客主机。而企业用户考虑到通常会需要CMS系统，访问量会较大，未来有可能升级等等一系列因素，推荐使用更专业的国内服务商。</p><p>在这里，我们选择阿里云。它最大的好处是提供包括域名注册、空间托管、域名备案等一系列服务，所有的需要都可以一站解决。在这一部分，我们会一步步说明如何选购一套阿里云主机。</p><p>在此之前，如果没有阿里云账号，请先<a href="https://www.aliyun.com/">注册一个</a>。:)</p><p>基础环境首先是选择主机类型，然后是域名注册、备案，最后是选择哪种建站工具&#x2F;框架。</p><span id="more"></span><h3 id="主机选择。"><a href="#主机选择。" class="headerlink" title="主机选择。"></a>主机选择。</h3><p>阿里云主机有三种：</p><ul><li><a href="https://www.aliyun.com/product/ecs">云服务器 ECS</a></li><li><a href="https://wanwang.aliyun.com/hosting">云虚拟主机</a></li><li><a href="https://wanwang.aliyun.com/hosting/elastic">弹性Web托管</a>(新一代云虚拟主机)</li></ul><p>基本上，如果运维能力不强，同时主要用于门户网站，没有太多复杂功能的话，推荐用后两种。经济实用，维护简单。<br>反之，如果具备安装、配置、管理维护系统，不仅是门户网站同时还要做深入后端开发的话，推荐使用ECS。</p><h3 id="域名注册。"><a href="#域名注册。" class="headerlink" title="域名注册。"></a>域名注册。</h3><p>作为国内企业门户，ICP备案是必需要做的。所以我们推荐域名注册也采用<a href="https://wanwang.aliyun.com/domain">阿里云（万网）</a>的服务，并直接用<a href="https://beian.gein.cn/">阿里云的代备案系统</a>进行备案。</p><p>域名注册比较简单，不多说。简单列几个注意事项：</p><ul><li>域名注册请务必使用企业名称和营业执照注册，所有权属于企业，不要用个人身份注册；</li><li>域名“实名认证”和“ICP备案”是两码事，需要分别进行。.CN 域名必需实名认证，其他域名不强制实名认证，建议都认证。</li><li>无备案的网站无法上线。<strong>备案时间通常会需要15～20天，请提前准备</strong>。</li></ul><h3 id="建站工具"><a href="#建站工具" class="headerlink" title="建站工具"></a>建站工具</h3><p>纯静态网站非常简单，这里不讨论。作为一个企业门户，基本的内容发布管理之类的功能还是需要的。建立这样一个网站，常见这些方案：</p><ol><li>从头做一个</li><li>基于网站框架做一个，比如 ThinkPHP, MEAN 等等</li><li>基于内容管理框架定制，比如 PHPCMS, ThinkCMF</li><li>使用 WordPress 定制</li></ol><p>上述方案由难至易，制作周期从长到短。每种方案均有适应的场景和优缺点。对于普通的企业门户类网站来说，我们推荐使用第三第四。其中 WordPress 方案代码工作量最少（几乎没有），同时有大量的插件、主题模板可供挑选，足以满足大多数场景的需求。<a href="http://www.zongbutech.com/">宗布科技官网</a>就是用wordpress制作。</p><p>上篇先写到这里，如果你是企业的采购负责人而不是开发者，了解这些就可以了。</p><p>后面我们会继续总结Wordpress的一些优化，如何在网站上应用联系表单收取客户来信等内容。</p><h1 id="下篇"><a href="#下篇" class="headerlink" title="下篇"></a>下篇</h1><p>讲到这里，先说明一下本文的目的。这不是一篇教程，此类教程已经到处都是了，Wordpress官方中文文档也完全可以满足要求。这里只是针对建站流程中的一些关键点做一些说明，面向的读者也不是开发者，而是普通的有建站需求的企业用户。相信通过这些说明，能够提高一些沟通的效率。动手能力强的话，能够通过这个简单的向导自己动手搞一个网站出来，那是再好不过。</p><p>在继续之前，请记住：</p><p>大部分企业门户网站的需求，都可以用 Wordpress 搞定。<br>大部分企业门户网站的需求，都可以用 Wordpress 搞定。<br>大部分企业门户网站的需求，都可以用 Wordpress 搞定。</p><p>重要的事情说三遍。</p><p>这不是吹牛，wordpress 本身已经是一个完整的内容发布和管理系统，通过其海量的主题模板，官方及第三方插件的支撑，基本上一个独立的内容类网站需要的功能，都可以实现。</p><p>什么？你说你会PHP编程，不需要Wordpress？实际上，以wordpress为基础，通过它的插件系统，完全可以将你的PHP代码做成 Wordpress 的插件来执行，避免重复开发基础框架。</p><h2 id="wordpress-的一些优化"><a href="#wordpress-的一些优化" class="headerlink" title="wordpress 的一些优化"></a>wordpress 的一些优化</h2><p>Wordpress 的安装使用，这里不再赘述，有兴趣的可通过文末的参考链接进行深入学习。这里仅针对使用中的一些问题做一些提示，以及一些小技巧。</p><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>首先，需要下载 Wordpress 官方安装包。国内网站需要ICP备案，并且根据工信部要求，网站首页必须放置ICP备案号。从善如流的 Wordpress 官方已经为中国用户增加了输入ICP备案的设置入口，但是请注意：<strong>目前只有从中文版官网下载的安装包才具有该功能</strong>。</p><p>Wordpress 安装需要有 PHP, MySQL 支持，请确保你的主机支持并已正确安装。设置数据库建议为wordpress设立专用帐户，以及足够强度的密码。</p><h3 id="美化与定制"><a href="#美化与定制" class="headerlink" title="美化与定制"></a>美化与定制</h3><p>Wordpress 强大之处在于，通过大量的官方和第三方主题，来提供多样的外观。</p><p>还可以通过“子主题”的方式，在原主题上叠加或修改功能，比如将本来只有官方主题才支持的ICP备案号嵌入。同时，通过子主题的方式修改主题，原主题的升级并不会影响已有的修改。</p><p>对于企业官网，推荐几个必装的插件：</p><ul><li>Contact Form : 反馈表单。用户可以直接在网站留言，上传文件，并发送至设定的官方邮箱</li><li>Google Font Fix: 将一些对Google资源的访问重定向到国内高速镜像</li><li>Magee Shortcodes: 快捷排版短码</li><li>Google Analyticator: google 统计</li><li>Members: 用户权限管理</li></ul><p><strong>这里强烈推荐 Contact Form，只需要一行代码，即可在网站任何地方嵌入一个联系表单。</strong></p><h3 id="域名切换"><a href="#域名切换" class="headerlink" title="域名切换"></a>域名切换</h3><p>在网站正式上线前，我们会用一个测试域名来调整内容、版式等等。到正式上线，则需切换新域名。这个过程略复杂，但是基本可以做到无损。</p><p>第一步，域名解析指向wordpress所在主机，服务主机绑定新域名<br>第二步，管理控制台-&gt;设置-&gt;wordpress地址&amp;站点地址，修改为新域名<br>第三步，wp-config.php, 增加一行</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">define(&#x27;RELOCATE&#x27;,true);</span><br></pre></td></tr></table></figure><p>第四步，打开数据库管理后台，替换数据库中旧域名字符串为新域名</p><p>以上操作完成后，即可正常使用。</p><h2 id="邮件发送设置"><a href="#邮件发送设置" class="headerlink" title="邮件发送设置"></a>邮件发送设置</h2><p>企业官网对于邮件的使用主要包括两方面：一是官网的“反馈”功能，比如收集用户信息，报名等等；二是在网站通过特定入口群发邮件。</p><p>对于阿里云来说，有一个明确的问题就是ipv6。缺省状态阿里云ECS主机不支持ipv6，我们需要在设置文件中关闭ipv6，以postfix为例，将<code>inet_protocal</code>值改为ipv4：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># Enable IPv4, and IPv6 if supported</span><br><span class="line"># inet_protocols = all</span><br><span class="line">inet_protocols = ipv4</span><br><span class="line"></span><br><span class="line">#inet_interfaces = all</span><br><span class="line">#inet_interfaces = $myhostname</span><br><span class="line">#inet_interfaces = $myhostname, localhost</span><br><span class="line">inet_interfaces = all</span><br></pre></td></tr></table></figure><p>然后，为了能够发送正确解析DNS，并避免被收件服务器当作垃圾邮件，需要分别在域名解析和postfix做一些设置。</p><h3 id="首先域名需要添加三条DNS记录："><a href="#首先域名需要添加三条DNS记录：" class="headerlink" title="首先域名需要添加三条DNS记录："></a>首先域名需要添加三条DNS记录：</h3><p>假设主机名设定为 admail.yourdomain.com，那么记录如下</p><table><thead><tr><th>记录</th><th>记录类型</th><th>记录值</th></tr></thead><tbody><tr><td>admail</td><td>A</td><td>&lt;主机IP地址&gt;</td></tr><tr><td>@</td><td>MX</td><td>admail.yourdomain.com</td></tr><tr><td>@</td><td>TXT</td><td>v&#x3D;spf1 a mx ~all</td></tr></tbody></table><p>最后这条TXT的记录被称为“发件人策略框架（SPF）”记录，通过不同等级的设置，可以很有效地避免被接收邮件的服务系统判定为垃圾邮件。该系统的详细设置方法这里不多做介绍。多数情况下如果不是大量高频次群发，按照上面的形式填写已可满足要求。</p><h3 id="postfix-的一些额外设置"><a href="#postfix-的一些额外设置" class="headerlink" title="postfix 的一些额外设置"></a>postfix 的一些额外设置</h3><p>这些设置对于网站上的邮件反馈表单影响不大，不过建议还是根据实际情况做调整</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">myhostname = admail.yourdomain.com</span><br><span class="line">mydomain = yourdomain.com</span><br><span class="line">myorigin = $mydomain</span><br><span class="line">mydestination = $myhostname, localhost.$mydomain, localhost, $mydomain</span><br><span class="line">home_mailbox = Maildir/</span><br><span class="line"># 如果邮件量大，修改数据盘位置，目录需要先手工创建</span><br><span class="line">mail_spool_directory = /data/mail</span><br></pre></td></tr></table></figure><p>修改设置后需要重启邮件服务失设置生效</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ service postfix restart</span><br></pre></td></tr></table></figure><h3 id="垃圾邮件助手"><a href="#垃圾邮件助手" class="headerlink" title="垃圾邮件助手"></a>垃圾邮件助手</h3><p>除了以上设置，如果需要群发邮件，还需要在发送频率，内容等方面注意一些问题。这方面Google有一份详细的指南可供参考：<a href="https://support.google.com/mail/answer/81126">Google 群发邮件发件人指南</a></p><h2 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h2><p>以上即为一个正式的企业官网建立过程所需资源的简单介绍。实际上，要一个高速稳定的网站，还需要CDN、图床等工具。这些也都可以在网站上线后逐步优化。</p><p>宗布科技的官网2.0正是这样建立的。有需要可联系我们。</p><blockquote><p><strong>福利：</strong> 阿里云九折优惠码<br>在购买ECS、RDS、云解析、弹性Web托管等等服务时均可使用。<br>企业用户请使用 <strong><code>jhx4xx</code></strong><br>个人用户请使用 <strong><code>3v6unp</code></strong></p></blockquote><h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><ul><li><a href="http://www.wpdaxue.com/">WordPress 大学</a></li><li><a href="https://www.aliyun.com/zixun/aggregation/212.html">阿里云Wordpress专题</a></li><li><a href="https://support.google.com/mail/answer/81126">Google 群发邮件指南</a></li><li><a href="http://www.cnblogs.com/dudu/archive/2012/12/12/linux-postfix-mailserver.html">阿里云CentOS postfix</a></li></ul>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;企业门户网站的设计是一个非常常见且旺盛的需求。而制作一个门户网站有非常多的方法。最近我们为几个企业用户搭建了门户网站，这里做一些简单的总结，包括一些常会遇到的问题，以便少走弯路。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;上篇：准备工作，主机与域名&lt;/li&gt;
+&lt;li&gt;中篇：建站利器Wordpress&lt;/li&gt;
+&lt;li&gt;下篇：为网站配置邮件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;上篇&quot;&gt;&lt;a href=&quot;#上篇&quot; class=&quot;headerlink&quot; title=&quot;上篇&quot;&gt;&lt;/a&gt;上篇&lt;/h1&gt;&lt;p&gt;首先我们来说下基础设施的准备。&lt;/p&gt;
+&lt;h2 id=&quot;主机的选择&quot;&gt;&lt;a href=&quot;#主机的选择&quot; class=&quot;headerlink&quot; title=&quot;主机的选择&quot;&gt;&lt;/a&gt;主机的选择&lt;/h2&gt;&lt;p&gt;对于个人用户，建立一个个人网站，可以选用一些免费的博客社区，或者廉价的个人博客主机。而企业用户考虑到通常会需要CMS系统，访问量会较大，未来有可能升级等等一系列因素，推荐使用更专业的国内服务商。&lt;/p&gt;
+&lt;p&gt;在这里，我们选择阿里云。它最大的好处是提供包括域名注册、空间托管、域名备案等一系列服务，所有的需要都可以一站解决。在这一部分，我们会一步步说明如何选购一套阿里云主机。&lt;/p&gt;
+&lt;p&gt;在此之前，如果没有阿里云账号，请先&lt;a href=&quot;https://www.aliyun.com/&quot;&gt;注册一个&lt;/a&gt;。:)&lt;/p&gt;
+&lt;p&gt;基础环境首先是选择主机类型，然后是域名注册、备案，最后是选择哪种建站工具&amp;#x2F;框架。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="建站心得" scheme="http://www.catxn.net/categories/%E5%BB%BA%E7%AB%99%E5%BF%83%E5%BE%97/"/>
+    
+    
+    <category term="软件开发" scheme="http://www.catxn.net/tags/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/"/>
+    
+    <category term="建站" scheme="http://www.catxn.net/tags/%E5%BB%BA%E7%AB%99/"/>
+    
+    <category term="wordpress" scheme="http://www.catxn.net/tags/wordpress/"/>
+    
+    <category term="阿里云" scheme="http://www.catxn.net/tags/%E9%98%BF%E9%87%8C%E4%BA%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>宗布科技2015年终总结</title>
+    <link href="http://www.catxn.net/posts/2015/%E5%AE%97%E5%B8%832015%E6%80%BB%E7%BB%93/"/>
+    <id>http://www.catxn.net/posts/2015/%E5%AE%97%E5%B8%832015%E6%80%BB%E7%BB%93/</id>
+    <published>2015-12-30T15:30:00.000Z</published>
+    <updated>2023-01-05T06:41:15.211Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://static.catxn.cn/images/zbu20151229.jpg-o" alt="感谢一路走来的伙伴。一无所有时你们的加入和陪伴，将铭记于心"></p><p>在这个年度交替的时间，按说应该打打鸡血……不过还是算了吧。</p><p>宗布科技成立已逾半年，如同大多数创业团队，这个初期并不顺利。</p><p>首先是团队组建的过程。义无反顾放弃安逸的工作来支援的老伙计虽尽在不言中，招聘却是个痛苦的过程。起步阶段的创业型公司，无法开出高薪，想象的出高强度的工作，前途的不确定性，对打工者来说，明显不是一个好的选择。在这种情况下，最终居然能够组建起能够同时运作三个项目的团队，也是个奇迹，虽然这离完成形态还挺远。</p><span id="more"></span><p>5月到9月，所有的工作重心都在我们首个孵化的互金产品。对互联网金融的不熟悉，与合作伙伴痛苦的磨合，产品设计和策略反复的修改……说起来是几乎每个初创团队都会遇到的问题，却经常都让人有撒手不干的冲动。只有凭借莫名其妙的信念在坚持。</p><p>9开始启动正式融资，却遭遇所谓的“资本寒冬”，虽然现在知道，这只是个言过其实的形容，但融资的难度的确比上半年高了许多。9月到11月，近三个月的时间，参加各种融资活动、路演、培训营、访谈刷脸，折腾一大圈下来，虽然能进入正式面谈阶段的投资人都表示十分看好，却没有打算真正掏钱出来。因为很明显，宗布的模式，并不符合投资人希望迅速膨胀获利的路数。</p><p>合作业务，宗布科技采用的技术孵化&#x2F;技术VC的模式，本意是扶持真正有价值的未来。但这种模式直接的后果是需要通过其他方式来维系资金。因此我们在谨慎地选择合作伙伴，给予全方位的技术支持，却很难在短期获得收入。因此，一方面业务量增长缓慢，另一方面在一定时期内都会是入不敷出的状态。当然我们一方面在坚持技术孵化的路线，另一方面也在调整一些操作细节来适当增加收入。</p><p>团队方面。宗布科技的伙伴现在大体分两种，一种是跟我一样的老家伙，除了呕心沥血加班干活，还要背负家庭责任，各种纷乱的家务事。另一种是初出茅庐的新人，年轻的肩膀直接承担了重要的任务，一边拼命跟上进度，一边奋力学习成长。即使已经在有意识地调整节奏松弛有道，仍然会担心团队压力过大。</p><p>一路磕磕绊绊，团队每一个人都坚持了下来，并且还是取得了一个又一个的成就。而所有的这些不顺利，其实也都在意料之中，成长，就在这些走过的甚至有些可被称为折磨的经历中悄然进行。宗布科技的每个成员，在迈出第一步时，就知道必然会经历这样的过程，并仍将在这条布满坑洼的创业之路艰难前行。</p><p>为什么要承受这些？</p><p>并不是每一个创业者都能最后牛逼。但是，我们至少可以通过自己的努力，让身边的世界美好一点。宗布科技和同芯资本的愿景，是通过自身的努力加上扶持其他科技型公司，成为技术VC来推动技术发展。</p><p>废话不再多说，对创业团队来说，低头做事，抬头看路。2016上半年，宗布科技首要目标就是实现盈利，第二目标是引入新的资金。伙伴们一起鼓足干劲一起努力。还是那俩字儿，别怕。</p><hr><p>年终总结写到这里，在孵化器群里看到了这张图：</p><p><img src="http://static.catxn.cn/images/T2NB2015.jpg-o" alt="T2发布会"></p><p>这个逼装的，要给满分。</p><h3 id="附：宗布科技2015大事记"><a href="#附：宗布科技2015大事记" class="headerlink" title="附：宗布科技2015大事记"></a>附：宗布科技2015大事记</h3><ul><li>5月，创立</li><li>6月，在聚募进行股权众筹，开投2小时内超募</li><li>7月，首个产品内测上线，进入互联网金融领域</li><li>8月，新项目团队组建，涉足娱乐社交</li><li>10月，与“同芯资本”达成战略合作</li><li>11月，神秘硬件产品立项，启动健康战略</li><li>12月，与某教育集团签约，试水课外教育市场</li></ul>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;http://static.catxn.cn/images/zbu20151229.jpg-o&quot; alt=&quot;感谢一路走来的伙伴。一无所有时你们的加入和陪伴，将铭记于心&quot;&gt;&lt;/p&gt;
+&lt;p&gt;在这个年度交替的时间，按说应该打打鸡血……不过还是算了吧。&lt;/p&gt;
+&lt;p&gt;宗布科技成立已逾半年，如同大多数创业团队，这个初期并不顺利。&lt;/p&gt;
+&lt;p&gt;首先是团队组建的过程。义无反顾放弃安逸的工作来支援的老伙计虽尽在不言中，招聘却是个痛苦的过程。起步阶段的创业型公司，无法开出高薪，想象的出高强度的工作，前途的不确定性，对打工者来说，明显不是一个好的选择。在这种情况下，最终居然能够组建起能够同时运作三个项目的团队，也是个奇迹，虽然这离完成形态还挺远。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="宗布科技" scheme="http://www.catxn.net/categories/%E5%AE%97%E5%B8%83%E7%A7%91%E6%8A%80/"/>
+    
+    
+    <category term="原创" scheme="http://www.catxn.net/tags/%E5%8E%9F%E5%88%9B/"/>
+    
+    <category term="日记" scheme="http://www.catxn.net/tags/%E6%97%A5%E8%AE%B0/"/>
+    
+    <category term="创业" scheme="http://www.catxn.net/tags/%E5%88%9B%E4%B8%9A/"/>
+    
+    <category term="里程碑" scheme="http://www.catxn.net/tags/%E9%87%8C%E7%A8%8B%E7%A2%91/"/>
+    
+    <category term="宗布" scheme="http://www.catxn.net/tags/%E5%AE%97%E5%B8%83/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>让我们谈谈技术理想</title>
+    <link href="http://www.catxn.net/posts/2015/%E8%B0%88%E8%B0%88%E6%8A%80%E6%9C%AF%E7%90%86%E6%83%B3/"/>
+    <id>http://www.catxn.net/posts/2015/%E8%B0%88%E8%B0%88%E6%8A%80%E6%9C%AF%E7%90%86%E6%83%B3/</id>
+    <published>2015-08-23T15:30:00.000Z</published>
+    <updated>2023-01-05T06:41:15.211Z</updated>
+    
+    <content type="html"><![CDATA[<p>今天，我们来谈一谈理想。</p><h1 id="梦想存在吗？"><a href="#梦想存在吗？" class="headerlink" title="梦想存在吗？"></a>梦想存在吗？</h1><p>有位朋友曾说，大部分人的所谓梦想，无论包装的多么绚丽，其实说白了只是想多挣钱而已。</p><p>好在他加了个定语“所谓”。是的，单纯的梦想一定存在，只是在这个物质化的时代，被深深地埋了起来。</p><p>梦想一定是有的，而且无分高下。</p><p>有的人，想成为一流的工匠；有的人，想成为聚光灯下的焦点；有的人，喜欢终生流浪。当然真的有人只是喜欢数钱到手软，这梦其实也挺好。只要是用自己的努力去获取，不伤害他人，那么无论什么样的梦，都值得被尊重。</p><p>只是承载梦想往往的确需要金钱的支撑。就好比宗布，作为一家公司，赚钱这件事至关重要。可赚钱不是我们的终极目标，至少不是唯一目标，它只是为了达成目的手段。在这个前提下，需要的资金，我们会去努力获取，也会努力让投资人的付出得到应有的回报。</p><p>让梦想归于本心，让金钱归于商业。梦要有，钱也要赚，平衡很重要。只是，偶尔需要问下自己，当天平开始倾斜的时候，你选择哪一边？</p><p><img src="http://static.catxn.cn/images/xlbls-jjc.jpeg-m" alt="希拉波利斯古城竞技场"></p><h1 id="返璞归真"><a href="#返璞归真" class="headerlink" title="返璞归真"></a>返璞归真</h1><p>其实我今天想说的是技术理想。</p><p>技术宅的理想是什么？码农的理想是什么？</p><span id="more"></span><p>作为一个资深技术宅，自己以及身边的很多朋友，都曾经有一个用技术改变世界的梦想。也或者只是一个简单的诉求：作为一个技术人才，能够不用操心技术之外的事情，通过专注于技术本身而升职加薪，出任CEO，赢取白富美，走上人生巅峰。</p><p>我认识很多真正热爱编程的朋友，他们的追求，就是能够成为技术大牛。成为某个领域的专家，拥有属于自己的编程框架，甚至推动某种语言的发展。</p><p>程序员的快乐有时很单纯，甚至很多时候他们的享乐就是得到一件给力的开发工具，比如一块不足千元的机械键盘，就足以给他持续很久的幸福感。</p><p>老罗曾在锤子发布会上自我调侃，说自己其实不是工匠，只是工匠们的吉祥物。他有的只是工匠的精神，实际上做出带有浓厚工匠气质产品的，是他的一群优秀的工匠团队。无论锤子科技和锤子手机能走多远，我都非常认可“工匠精神”本身。</p><p>拥有一个优秀的技术团队，让每一个成员都能愉快的工作，让大家拥有世界上最可爱的同事。这就是我的技术理想。</p><p>我希望我的团队，能够醉心于技术本身，精心打磨每一款产品；全力以赴专注于自己喜欢并擅长的东西，在未来推动技术的发展。</p><p>我希望我团队的每一个成员，都能仅凭自己的能力，得到富足的生活，得到他人的尊重和赞赏，拥有一群快乐的伙伴。</p><p>我希望在我的团队里，你无需为生活琐事操心，无需应付办公室政治，不需要硬着头皮做自己不喜欢的事。</p><p>我希望大家的理想，都可以在这里实现。</p><p>我希望……</p><h1 id="为伊消得人憔悴"><a href="#为伊消得人憔悴" class="headerlink" title="为伊消得人憔悴"></a>为伊消得人憔悴</h1><p>只有你真正在为内心深处的，真正属于自己的梦努力的时候，才会甘愿付出一切，无怨无悔。</p><p>团队和我已经连续高强度地工作了几个月。不想吹嘘自己是铁人，踏出第一步开始到现在，不说别的，光体重就已经下降了不少，传说发际线也上移了虽然我自己还没看出来。从最初一个多月的过度兴奋到失眠，到最近半夜到家倒头便睡，也算是又跨过了一个心理时期。关键是，虽然爬出一个又一个坑，而且摆明了前面还有更多的坑和老老实实混日子就从来不需要面对的风险在等着，内心却始终充实，因为知道自己在做什么，将要做什么。</p><p>虽然现在的创业圈不乏浮躁和忽悠，充斥拜金和表面文章，但是一定还有大把如我们一样的傻逼在为精心打磨技术，打磨团队，打磨产品在努力。甚至付出一切，只为寻找“活着”的感觉。</p><p>我们可能无法在看得见的未来改变世界，至少我们可以凭借双手，让身边可以触摸到的事物，变得好那么一点。</p><p>保持饥渴，不断前行。</p><h1 id="写在后面"><a href="#写在后面" class="headerlink" title="写在后面"></a>写在后面</h1><p>一边是空有技术和壮志的技术人才，另一边却是很多有心有资源的公司缺乏靠谱的开发团队，甚至不知道怎样去寻找团队。</p><p>我们就是要作一道桥梁，为企业打造优质团队，为技术人才构建理想的工作空间。于是：</p><ul><li>2015年5月，自筹资金，宗布科技成立；</li><li>2015年6月，首次尝试融资；</li><li>2015年7月，第一个孵化产品“涌金门”iOS版内测；</li><li>2015年8月，“涌金门”Android版内测；第二个孵化产品“iParty”团队组建，App完成Demo、路演；</li><li>即将到来的9月，抗日战争胜利70周年，宗布将正式启动新一轮融资计划……</li></ul><p>一步一个脚印。如同抗战，艰苦而充满激情的创业之路还很漫长。</p><p>谨以此文，纪念宗布科技百天。</p><h1 id="广告时间"><a href="#广告时间" class="headerlink" title="广告时间"></a>广告时间</h1><p><strong>一</strong></p><blockquote><p>我们正在参加第三期“36氪极速融资”，请点开链接 [<a href="http://t.cn/RLFUHKU">36氪极速融资</a>] 投出宝贵的一票，或者扫描二维码立刻分享，扩散。你的支持是我们不断前行的动力。</p></blockquote><blockquote><p><a href="http://t.cn/RLFUHKU"><img src="http://s.jiathis.com/qrcode.php?url=https://rong.36kr.com/m/j3word.html?cid=161176&source=web" alt="36氪极速融资"></a><br>28号零点之前，保持！！</p></blockquote><p><strong>二</strong></p><blockquote><p>业务联系：<a href="mailto:&#x62;&#x69;&#122;&#x40;&#122;&#x6f;&#110;&#103;&#x62;&#117;&#116;&#101;&#x63;&#x68;&#x2e;&#99;&#x6f;&#x6d;">&#x62;&#x69;&#122;&#x40;&#122;&#x6f;&#110;&#103;&#x62;&#117;&#116;&#101;&#x63;&#x68;&#x2e;&#99;&#x6f;&#x6d;</a><br>求职联系：<a href="mailto:&#106;&#111;&#98;&#x40;&#122;&#111;&#110;&#103;&#98;&#x75;&#116;&#101;&#99;&#104;&#x2e;&#99;&#111;&#109;">&#106;&#111;&#98;&#x40;&#122;&#111;&#110;&#103;&#98;&#x75;&#116;&#101;&#99;&#104;&#x2e;&#99;&#111;&#109;</a></p></blockquote><p><strong>三</strong></p><blockquote><p>“简书”这个写作和阅读平台非常不错，推荐下载使用。进入后关注我，可以看到我过去无所事事期间写的一系列文章。看见喜欢的文字就点个赞。</p></blockquote>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;今天，我们来谈一谈理想。&lt;/p&gt;
+&lt;h1 id=&quot;梦想存在吗？&quot;&gt;&lt;a href=&quot;#梦想存在吗？&quot; class=&quot;headerlink&quot; title=&quot;梦想存在吗？&quot;&gt;&lt;/a&gt;梦想存在吗？&lt;/h1&gt;&lt;p&gt;有位朋友曾说，大部分人的所谓梦想，无论包装的多么绚丽，其实说白了只是想多挣钱而已。&lt;/p&gt;
+&lt;p&gt;好在他加了个定语“所谓”。是的，单纯的梦想一定存在，只是在这个物质化的时代，被深深地埋了起来。&lt;/p&gt;
+&lt;p&gt;梦想一定是有的，而且无分高下。&lt;/p&gt;
+&lt;p&gt;有的人，想成为一流的工匠；有的人，想成为聚光灯下的焦点；有的人，喜欢终生流浪。当然真的有人只是喜欢数钱到手软，这梦其实也挺好。只要是用自己的努力去获取，不伤害他人，那么无论什么样的梦，都值得被尊重。&lt;/p&gt;
+&lt;p&gt;只是承载梦想往往的确需要金钱的支撑。就好比宗布，作为一家公司，赚钱这件事至关重要。可赚钱不是我们的终极目标，至少不是唯一目标，它只是为了达成目的手段。在这个前提下，需要的资金，我们会去努力获取，也会努力让投资人的付出得到应有的回报。&lt;/p&gt;
+&lt;p&gt;让梦想归于本心，让金钱归于商业。梦要有，钱也要赚，平衡很重要。只是，偶尔需要问下自己，当天平开始倾斜的时候，你选择哪一边？&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://static.catxn.cn/images/xlbls-jjc.jpeg-m&quot; alt=&quot;希拉波利斯古城竞技场&quot;&gt;&lt;/p&gt;
+&lt;h1 id=&quot;返璞归真&quot;&gt;&lt;a href=&quot;#返璞归真&quot; class=&quot;headerlink&quot; title=&quot;返璞归真&quot;&gt;&lt;/a&gt;返璞归真&lt;/h1&gt;&lt;p&gt;其实我今天想说的是技术理想。&lt;/p&gt;
+&lt;p&gt;技术宅的理想是什么？码农的理想是什么？&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="宗布科技" scheme="http://www.catxn.net/categories/%E5%AE%97%E5%B8%83%E7%A7%91%E6%8A%80/"/>
+    
+    
+    <category term="原创" scheme="http://www.catxn.net/tags/%E5%8E%9F%E5%88%9B/"/>
+    
+    <category term="日记" scheme="http://www.catxn.net/tags/%E6%97%A5%E8%AE%B0/"/>
+    
+    <category term="创业" scheme="http://www.catxn.net/tags/%E5%88%9B%E4%B8%9A/"/>
+    
+    <category term="里程碑" scheme="http://www.catxn.net/tags/%E9%87%8C%E7%A8%8B%E7%A2%91/"/>
+    
+    <category term="宗布" scheme="http://www.catxn.net/tags/%E5%AE%97%E5%B8%83/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>你比想象中强大</title>
+    <link href="http://www.catxn.net/posts/2015/%E4%BD%A0%E6%AF%94%E6%83%B3%E8%B1%A1%E4%B8%AD%E5%BC%BA%E5%A4%A7/"/>
+    <id>http://www.catxn.net/posts/2015/%E4%BD%A0%E6%AF%94%E6%83%B3%E8%B1%A1%E4%B8%AD%E5%BC%BA%E5%A4%A7/</id>
+    <published>2015-05-20T02:00:00.000Z</published>
+    <updated>2023-01-05T06:41:15.211Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="写在宗布科技满月"><a href="#写在宗布科技满月" class="headerlink" title="写在宗布科技满月"></a>写在宗布科技满月</h1><p>昨天，“独角兽之光”开展了第一次沙龙活动，我们有幸成为这首场演出的主讲。</p><p>沙龙中我们给在座的小伙伴们分享了几个故事，那是宗布科技三人组从玩魔兽世界开始，到一起做事，得到的一些感悟。</p><p>故事分别是“爱拍迹”，“暗黑小助手”，和去年的“行者”。从三四年前的爱拍迹开始，每次做一个产品，我们都会发现一些自己欠缺的东西，于是在下一个产品中将其补足。比如在做爱拍迹时，UI是我们非常缺乏的角色，于是从暗黑小助手，我们邀请了一位资深的设计师，也因此暗黑小助手是我们玩票产品中最成功的一个。这位设计师至今仍在与我们一起工作。</p><p>数一数也做了这么多东西了，有成功有失败，从这个角度，我们也算“连续创业者”了吧？XD</p><span id="more"></span><p>补充设计师、核心成员角色分化各司其职、增强产品能力、学习融资、体验外包，若干年来我们一步步走来，最终将作产品最需要的东西提炼为两个字：“专注”。</p><p>的确，当你想做一个产品时，你会需要一个牛逼的研发团队，一个高逼格的设计师，一个超级会玩的产品经理，以及其他许多，这些都必不可少，然后最终，真正能使你将想法变成产品，最重要的仍旧是专注。</p><p>这也是为什么，我们最终决定全职创业。如果没有全副身心的投入，你是无法和一样牛逼，或者更牛逼的专职团队竞争的。</p><p>那么，每一个有心想创业的人，可能都会在心里嘀咕，“我准备好了吗”？</p><p>这也是曾经一个多年的好友，在最后关头止步不前的关键原因。</p><p>从个人情感上，我非常能够理解这位朋友的心情，毕竟，我和我这些朋友，大都已是家庭的顶梁柱，而创业这件事却充满了风险，随时可能面临闻所未闻的困难，而在最终看到曙光前的那片黑暗，的确漫长又难捱。因此我一直都对朋友们说，无论选择创业，还是为家庭的稳定和安详选择默默无闻，都不失为勇士。</p><p>所以我只是想对没有负担，只是缺乏勇气的想闯一闯的朋友说，你永远不会做好万全的准备。当你真有一天觉得准备好了的时候，其实那些事做不做也都无所谓了。</p><p>** 与其踌躇不前，不如放手一搏。**</p><p>以我们为例，辞职以来，我们经历了许多从前甚至连想想都觉得可怕的事情。</p><p>而今天，6月20日，离开宗布科技正式创立正好一个月，来看看我们做过了什么：</p><ul><li>公司成立，完成工商行政注册，税务登记；</li><li>成为“独角兽”孵化器001号团队，兼具孵化器技术支持团队职能；</li><li>从一开始只有三个初创成员，一个人当作两三个用，到现在接近十名员工；</li><li>长时间连续工作，我们的第一个产品，内测版即将上线；</li><li>很久没有亲自写代码，学习并掌握了新的框架和语言</li><li>和一个非常有趣的创业团队“啤酒共和”相识；</li><li>……</li></ul><p>以前在公司时，每天朝九晚五，仍然会觉得很疲劳，而现在每天工作超过十二小时，却仍觉得精力充沛。我觉得人的潜能其实是很大的，只不过大多数时候都在沉睡，一旦有了个愿意为之付出的目标，体内的小宇宙就会被不断地激发，释放源源不绝的力量。</p><p>并不是每个人都需要创业，但是如果你真的有一个梦想，那么就要努力去实现它。</p><p>当你走出第一步，你会发现，你远远比你以为的更强大。</p><p><img src="http://static.catxn.cn/images/i-can-do-it.jpg-o" alt="I can do it"></p><h1 id="写在后面"><a href="#写在后面" class="headerlink" title="写在后面"></a>写在后面</h1><p>你看，我们原本是三个写代码的宅男，现在，我们一个是资深技术专家，一个是产品兼销售，一个非常擅长团队建设。已经构成了一个相对完整的核心。然后我们有了一些新伙伴，做一些我们不懂却必须的事情。</p><p>想做，就做，不懂，就学，学不会，就找助力。</p><p>首先，需要做起来，想法如果它一直留在脑子里，它就真的永远只是一个想法。</p><p>所以，如果你很想走出来，但是又担心自己无法承受，那么，来一杯吧，<a href="http://beerepublic.me/">别怕</a>！</p><blockquote><p><strong>插播广告</strong><br>业务联系：<a href="mailto:&#x62;&#105;&#x7a;&#64;&#x7a;&#111;&#110;&#x67;&#98;&#117;&#x74;&#x65;&#99;&#104;&#x2e;&#x63;&#x6f;&#109;">&#x62;&#105;&#x7a;&#64;&#x7a;&#111;&#110;&#x67;&#98;&#117;&#x74;&#x65;&#99;&#104;&#x2e;&#x63;&#x6f;&#109;</a><br>求职联系：<a href="mailto:&#x6a;&#x6f;&#x62;&#64;&#122;&#x6f;&#110;&#x67;&#x62;&#x75;&#116;&#101;&#99;&#104;&#x2e;&#99;&#111;&#109;">&#x6a;&#x6f;&#x62;&#64;&#122;&#x6f;&#110;&#x67;&#x62;&#x75;&#116;&#101;&#99;&#104;&#x2e;&#99;&#111;&#109;</a></p></blockquote><p>（其实还有很多感悟，不过现在并没有很多时间写字，刚刚做完一个功能，正好又是个值得纪念的日子，就随手写些东西为记。）</p>]]></content>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;写在宗布科技满月&quot;&gt;&lt;a href=&quot;#写在宗布科技满月&quot; class=&quot;headerlink&quot; title=&quot;写在宗布科技满月&quot;&gt;&lt;/a&gt;写在宗布科技满月&lt;/h1&gt;&lt;p&gt;昨天，“独角兽之光”开展了第一次沙龙活动，我们有幸成为这首场演出的主讲。&lt;/p&gt;
+&lt;p&gt;沙龙中我们给在座的小伙伴们分享了几个故事，那是宗布科技三人组从玩魔兽世界开始，到一起做事，得到的一些感悟。&lt;/p&gt;
+&lt;p&gt;故事分别是“爱拍迹”，“暗黑小助手”，和去年的“行者”。从三四年前的爱拍迹开始，每次做一个产品，我们都会发现一些自己欠缺的东西，于是在下一个产品中将其补足。比如在做爱拍迹时，UI是我们非常缺乏的角色，于是从暗黑小助手，我们邀请了一位资深的设计师，也因此暗黑小助手是我们玩票产品中最成功的一个。这位设计师至今仍在与我们一起工作。&lt;/p&gt;
+&lt;p&gt;数一数也做了这么多东西了，有成功有失败，从这个角度，我们也算“连续创业者”了吧？XD&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="宗布科技" scheme="http://www.catxn.net/categories/%E5%AE%97%E5%B8%83%E7%A7%91%E6%8A%80/"/>
+    
+    
+    <category term="原创" scheme="http://www.catxn.net/tags/%E5%8E%9F%E5%88%9B/"/>
+    
+    <category term="日记" scheme="http://www.catxn.net/tags/%E6%97%A5%E8%AE%B0/"/>
+    
+    <category term="创业" scheme="http://www.catxn.net/tags/%E5%88%9B%E4%B8%9A/"/>
+    
+    <category term="里程碑" scheme="http://www.catxn.net/tags/%E9%87%8C%E7%A8%8B%E7%A2%91/"/>
+    
+    <category term="宗布" scheme="http://www.catxn.net/tags/%E5%AE%97%E5%B8%83/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>凤凰山茶馆纪事（一）</title>
+    <link href="http://www.catxn.net/posts/2015/zbu-log-teamhouse-1/"/>
+    <id>http://www.catxn.net/posts/2015/zbu-log-teamhouse-1/</id>
+    <published>2015-05-13T03:02:17.000Z</published>
+    <updated>2023-01-05T06:41:15.211Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>天下风云出我辈，一入江湖岁月催。皇图霸业谈笑间，不胜人生一场醉。提剑跨骑挥鬼雨，白骨如山鸟惊飞。尘事如潮人如水，只叹江湖几人回。——《笑傲江湖》</p></blockquote><p>(<em>唯美食与风景不可辜负</em>)<br><img src="http://static.catxn.cn/images/jn1535/tea-02.jpg-o" alt="唯美食与风景不可辜负"></p><h1 id="茶馆"><a href="#茶馆" class="headerlink" title="茶馆"></a>茶馆</h1><p>西子湖畔，万松岭下，有一个幽静的茶馆。</p><p>每天往来的，有金牌投资人，有互联网大佬，有资深金融投资专家，有创业者，有名校教授，有畅销书作者，当然还有更多在金融、互联网、投资、电商大潮中奋力拼搏的年轻人。</p><p>这里，是“江南1535”。</p><p>这个茶馆，运作着一些靠谱或不靠谱的互联网产品，力图解决生活中遇到的投资、生活服务、财产管理等等问题。每一个项目，在将来，都可能是又一个行业的标杆。当然，也有可能一一倒下。</p><p>不过，江湖不正是如此？如今的互联网正是一个江湖，各路高手纵横天下，大小门派腥风血雨，或为争夺武林霸主，或为占据一片方寸，看天边云卷云舒。</p><p>在这个茶馆运作的产品焦点是互联网金融和生活服务，它们包括配资么，大账户，聚募众筹，聚付宝等等。我们需要大量人才。你是大牛，我们欢迎，也许你就是我们未来的CTO；你是新人，没有关系，只要是可造之才，我们有在技术领域浸淫十数年的专家手把手教。只要你有一腔热忱和不怕跌倒的心。</p><p>如果这里就是你正在寻找的地方，请联系我，一起制造梦想：</p><blockquote><p>** 坐标：杭州。 **<br>简历投递：<br><a href="mailto:&#x6a;&#111;&#98;&#64;&#122;&#x62;&#117;&#x2e;&#105;&#x6d;">&#x6a;&#111;&#98;&#64;&#122;&#x62;&#117;&#x2e;&#105;&#x6d;</a><br><a href="mailto:&#106;&#x6f;&#98;&#x40;&#x7a;&#111;&#x6e;&#x67;&#x62;&#117;&#116;&#x65;&#x63;&#104;&#x2e;&#99;&#x6f;&#109;">&#106;&#x6f;&#98;&#x40;&#x7a;&#111;&#x6e;&#x67;&#x62;&#117;&#116;&#x65;&#x63;&#104;&#x2e;&#99;&#x6f;&#109;</a></p></blockquote><span id="more"></span><h1 id="公司及产品介绍"><a href="#公司及产品介绍" class="headerlink" title="公司及产品介绍"></a>公司及产品介绍</h1><p>茶馆团队之一，掌升财金融以及宗布科技联合招聘。</p><p>掌升财金融，融合了投资银行、私募基金、私人银行业务，实现一站式主动财富管理的创新型互联网金融公司。宗布科技，依托高新区重点扶持的独角兽孵化器，为孵化项目提供产品设计、视觉设计、技术开发、流程优化等等服务。我们的核心团队成员均是来自知名IT或金融企业的经验丰富金融、产品、技术专家。在我们这里，你可以接触到最新的互联网技术、产业发展方向，可以与来自各个角色的专家深入畅谈，可以选择你最喜欢的领域深入发展。</p><p>旗下主打产品“掌升财大账户”是一个互联网理财平台，致力于打造中国互联网金融市场正在意义上的“网络私人银行”。基于用户的个性化需求提供专属的理财服务。凭借丰富的行业资源及互联网优势，整合“基金、券商、信托、银行理财、P2P、各类公募私募产品”等上下游金融机构业务，实现一站式“安全、便捷、更高收益”的在线财富管理服务。</p><h1 id="人才需求"><a href="#人才需求" class="headerlink" title="人才需求"></a>人才需求</h1><p>我们需要各个岗位的人才。包括：iOS开发，Android开发，前端开发，交互设计师，产品经理，产品助理等等。</p><p>团队精神、学习能力是最基础的要求。下面列出一些大致的方向。当然，如果你自信足够牛，如果你可以展示你的实力，下面这些关键字完全可以无视。</p><ul><li>iOS 开发</li></ul><p>关键字：MacOS, iOS, Pods, ObjC<br>加分关键字：Swift，App Store 应用，GitHub</p><ul><li>Android 开发</li></ul><p>关键字：Java，Android Studio，Eclipse<br>加分关键字：应用市场已发布应用，GitHub</p><ul><li>前端开发</li></ul><p>关键字：HTML5, CSS3, JavaScript, AngularJS, Bootstrap<br>加分关键字：NodeJS, PHP, SASS, LESS, Gulp, PhotoShop, GitHub，作品</p><ul><li>Windows 开发</li></ul><p>关键字：C++, C#, .Net<br>加分关键字：WPF, WCF, MFC, VSTS, Git</p><ul><li>设计师</li></ul><p>关键字：艺术、设计、用户体验、情感、心理、互联网<br>加分关键字：作品</p><h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><p>我们提供足够有竞争力的待遇，我们当然可以直接支付足够丰厚的薪水，你也可以选择工资加期权。福利待遇，五险一金，工作利器什么的都是标配，而我们能够提供别处没有的风景。</p><p>我们是全新的公司，因此在各方面你都会有足够的选择权。甚至，规则也可以由你来制定。</p><p>约吗？</p><blockquote><p><a href="mailto:&#x6a;&#x6f;&#x62;&#x40;&#x7a;&#98;&#117;&#46;&#105;&#x6d;">&#x6a;&#x6f;&#x62;&#x40;&#x7a;&#98;&#117;&#46;&#105;&#x6d;</a><br><a href="mailto:&#106;&#x6f;&#98;&#x40;&#x7a;&#x6f;&#110;&#x67;&#x62;&#x75;&#116;&#x65;&#x63;&#x68;&#x2e;&#x63;&#111;&#x6d;">&#106;&#x6f;&#98;&#x40;&#x7a;&#x6f;&#110;&#x67;&#x62;&#x75;&#116;&#x65;&#x63;&#x68;&#x2e;&#x63;&#111;&#x6d;</a></p></blockquote>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;天下风云出我辈，一入江湖岁月催。皇图霸业谈笑间，不胜人生一场醉。提剑跨骑挥鬼雨，白骨如山鸟惊飞。尘事如潮人如水，只叹江湖几人回。——《笑傲江湖》&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;(&lt;em&gt;唯美食与风景不可辜负&lt;/em&gt;)&lt;br&gt;&lt;img src=&quot;http://static.catxn.cn/images/jn1535/tea-02.jpg-o&quot; alt=&quot;唯美食与风景不可辜负&quot;&gt;&lt;/p&gt;
+&lt;h1 id=&quot;茶馆&quot;&gt;&lt;a href=&quot;#茶馆&quot; class=&quot;headerlink&quot; title=&quot;茶馆&quot;&gt;&lt;/a&gt;茶馆&lt;/h1&gt;&lt;p&gt;西子湖畔，万松岭下，有一个幽静的茶馆。&lt;/p&gt;
+&lt;p&gt;每天往来的，有金牌投资人，有互联网大佬，有资深金融投资专家，有创业者，有名校教授，有畅销书作者，当然还有更多在金融、互联网、投资、电商大潮中奋力拼搏的年轻人。&lt;/p&gt;
+&lt;p&gt;这里，是“江南1535”。&lt;/p&gt;
+&lt;p&gt;这个茶馆，运作着一些靠谱或不靠谱的互联网产品，力图解决生活中遇到的投资、生活服务、财产管理等等问题。每一个项目，在将来，都可能是又一个行业的标杆。当然，也有可能一一倒下。&lt;/p&gt;
+&lt;p&gt;不过，江湖不正是如此？如今的互联网正是一个江湖，各路高手纵横天下，大小门派腥风血雨，或为争夺武林霸主，或为占据一片方寸，看天边云卷云舒。&lt;/p&gt;
+&lt;p&gt;在这个茶馆运作的产品焦点是互联网金融和生活服务，它们包括配资么，大账户，聚募众筹，聚付宝等等。我们需要大量人才。你是大牛，我们欢迎，也许你就是我们未来的CTO；你是新人，没有关系，只要是可造之才，我们有在技术领域浸淫十数年的专家手把手教。只要你有一腔热忱和不怕跌倒的心。&lt;/p&gt;
+&lt;p&gt;如果这里就是你正在寻找的地方，请联系我，一起制造梦想：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;** 坐标：杭州。 **&lt;br&gt;简历投递：&lt;br&gt;&lt;a href=&quot;mailto:&amp;#x6a;&amp;#111;&amp;#98;&amp;#64;&amp;#122;&amp;#x62;&amp;#117;&amp;#x2e;&amp;#105;&amp;#x6d;&quot;&gt;&amp;#x6a;&amp;#111;&amp;#98;&amp;#64;&amp;#122;&amp;#x62;&amp;#117;&amp;#x2e;&amp;#105;&amp;#x6d;&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;mailto:&amp;#106;&amp;#x6f;&amp;#98;&amp;#x40;&amp;#x7a;&amp;#111;&amp;#x6e;&amp;#x67;&amp;#x62;&amp;#117;&amp;#116;&amp;#x65;&amp;#x63;&amp;#104;&amp;#x2e;&amp;#99;&amp;#x6f;&amp;#109;&quot;&gt;&amp;#106;&amp;#x6f;&amp;#98;&amp;#x40;&amp;#x7a;&amp;#111;&amp;#x6e;&amp;#x67;&amp;#x62;&amp;#117;&amp;#116;&amp;#x65;&amp;#x63;&amp;#104;&amp;#x2e;&amp;#99;&amp;#x6f;&amp;#109;&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="夜猫茶舍" scheme="http://www.catxn.net/categories/%E5%A4%9C%E7%8C%AB%E8%8C%B6%E8%88%8D/"/>
+    
+    
+    <category term="原创" scheme="http://www.catxn.net/tags/%E5%8E%9F%E5%88%9B/"/>
+    
+    <category term="日记" scheme="http://www.catxn.net/tags/%E6%97%A5%E8%AE%B0/"/>
+    
+    <category term="创业" scheme="http://www.catxn.net/tags/%E5%88%9B%E4%B8%9A/"/>
+    
+    <category term="招聘" scheme="http://www.catxn.net/tags/%E6%8B%9B%E8%81%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>老夫聊发少年狂</title>
+    <link href="http://www.catxn.net/posts/2015/%E8%80%81%E5%A4%AB%E8%81%8A%E5%8F%91%E5%B0%91%E5%B9%B4%E7%8B%82/"/>
+    <id>http://www.catxn.net/posts/2015/%E8%80%81%E5%A4%AB%E8%81%8A%E5%8F%91%E5%B0%91%E5%B9%B4%E7%8B%82/</id>
+    <published>2015-05-06T02:30:00.000Z</published>
+    <updated>2023-01-05T06:41:15.211Z</updated>
+    
+    <content type="html"><![CDATA[<!-- （微信转发用）我知道，这一天你已经等了很久了，那么现在，我要正式宣布啦。要说的话都在帖子里，欢迎收看，欢迎转发，内容不多不耗流量：预计发布顺序：个人博客，简书，微信朋友圈实际发生时间：外包接单：2015年3月（掌生财）考虑创业：2015年4月（与枫惠接触后）发辞职意向邮件：2015年4月28日（Chris）正式宣布辞职：2015年5月6日（Amber部门会议，交接开始）--><blockquote><p>葡萄美酒夜光杯，欲饮琵琶马上催<br>醉卧沙场君莫笑，古来征战几人回</p></blockquote><h1 id="启航"><a href="#启航" class="headerlink" title="启航"></a>启航</h1><p>最近一个月，我所有的博客、简书的写作、公众号、参与的翻译项目等等都处于半停顿的状态，和朋友们也疏于联络。原因很简单，我几乎全部的业余时间，都用在了又一件傻逼的事情上：创业。</p><p>在与合作多年的上司友好的谈话之后，今天我正式提交了辞呈。接下来，将全力投入新产品的开发、新公司的注册以及新团队的组建。自己蛰伏很久的精力，正在以出乎我意料的速度苏醒。</p><p>若干年前脱下军装，与几个朋友一起南下，没有经验，没有人脉，砸光手里的积蓄，朋友们一一离去后，口袋里揣着点吃饭的零钱，徘徊于深圳的街道。那时身边只有女友相伴，不离不弃。</p><p>后来辗转到了杭州，从零开始，养家糊口，曾经以为人生也就这样了。却在不知不觉间慢慢地有了新的老的朋友，生活逐渐脱离窘迫。多年的学习和工作，积累下技术、管理、团队的经验，多多少少也有了些人脉。</p><p>审视内心，虽然棱角磨平了不少，幸而天生爱折腾的那个我还在。也许，是时候打点行装再次上路了。</p><p>于是，经过年少时锋芒毕露的不知天高地厚，经过多年为生计只知低头搬砖，经过几乎失去做梦能力的低谷……在一个适时出现的机会前，早生华发的我，将再度杨帆启航。</p><span id="more"></span><p>有些激流，可以想象，有的风浪，无法预料。但是，再不出海，就真的老了。世界那么大，咱再去转转吧。</p><p>感谢曾一起工作的伙伴，感谢我爱的和爱我的人，谢谢你们长长路上的陪伴。前方的路，我们还会一起走下去。</p><p>愿若干年后，我们终于可以吟出这样的词句：</p><blockquote><p>莫听穿林打叶声，何妨吟啸且徐行。<br>竹杖芒鞋轻胜马。谁怕！一蓑烟雨任平生。<br>料峭春风吹酒醒，微冷，山头斜照却相迎。<br>回首向来萧瑟处。归去，也无风雨也无晴。</p></blockquote><p>今日，立夏。生如夏花。</p><!-- 使生如夏花之绚烂，死如秋叶之静美 --><p><img src="http://static.catxn.cn/images/acg/onepiece_hat01.jpg-o"></p><h1 id="煽情结束，广告时间"><a href="#煽情结束，广告时间" class="headerlink" title="煽情结束，广告时间"></a>煽情结束，广告时间</h1><ul><li>初创公司，风口，众筹，金融，期权，这些吸引眼球的名词，有；</li><li>办公在山中茶馆，坐拥良辰美景，日日俊男美女相伴，都有；</li><li>背靠成熟创投平台，谈笑有鸿儒，往来无白丁，全都有。</li></ul><p>你来不来？</p><p>如果你最近想换工作，如果你不甘于就这样泯然众生，如果你愿意和我一起为沉寂了多年的梦想再一次打拼，无惧伤痕……请联系我。</p><blockquote><p>互联网金融众筹、投资项目，诚邀各路英才：优美的工作环境，紧张刺激同时轻松愉快，与自然风光陪伴的开放协作，充满可能的发展方向，闲时一壶清茶与小伙伴谈谈人生。这些，是否是你想要的？</p></blockquote><p>如果你认识我，可用任何你知道的方式跟我联系，或携手创业，或只是一起喝茶聊天；</p><p>如果你是新朋友，请直接发送简历到我的邮箱。茫茫人海，相识就是缘分：</p><blockquote><p><strong>坐标：杭州</strong><br><a href="mailto:&#106;&#x6f;&#x62;&#x40;&#122;&#98;&#x75;&#x2e;&#x69;&#x6d;">&#106;&#x6f;&#x62;&#x40;&#122;&#98;&#x75;&#x2e;&#x69;&#x6d;</a><br><a href="mailto:&#106;&#111;&#x62;&#x40;&#122;&#111;&#110;&#103;&#98;&#117;&#x74;&#x65;&#x63;&#104;&#46;&#99;&#111;&#x6d;">&#106;&#111;&#x62;&#x40;&#122;&#111;&#110;&#103;&#98;&#117;&#x74;&#x65;&#x63;&#104;&#46;&#99;&#111;&#x6d;</a></p></blockquote><p>来吧少年，同去。</p><h1 id="写给简书的朋友"><a href="#写给简书的朋友" class="headerlink" title="写给简书的朋友"></a>写给简书的朋友</h1><p>在简书零敲碎打堆了些贻笑大方的文字，却也得到几位朋友的抬爱。后面估计会忙一阵子，无法再像以前那样基本每周一篇。</p><p>不过，我一定会回来的。XD</p><!-- 掌生财公司介绍杭州掌生财信息科技有限公司创办于2014年。已经得到顶级投资机构的天使融资。公司核心团队来自it、游戏、电商、金融等行业，拥有丰富的传统金融行业和移动互联网产品研发、运营经验及各类金融资源。我们的产品致力于打造中国最专业的账户管理、投资理财、助理服务等目前中高财富人群急需的服务。不仅提供一般的记账等日常服务，更是结合国内外投资市场的特点，推出特色投资品供用户选择。私人助理服务更是打造一对一直接全方位、无死角服务，直击用户痛点，开辟一片蓝海市场。-->]]></content>
+    
+    
+    <summary type="html">&lt;!-- 
+（微信转发用）我知道，这一天你已经等了很久了，那么现在，我要正式宣布啦。要说的话都在帖子里，欢迎收看，欢迎转发，内容不多不耗流量：
+预计发布顺序：
+个人博客，简书，微信朋友圈
+
+实际发生时间：
+外包接单：2015年3月（掌生财）
+考虑创业：2015年4月（与枫惠接触后）
+发辞职意向邮件：2015年4月28日（Chris）
+正式宣布辞职：2015年5月6日（Amber部门会议，交接开始）
+--&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;葡萄美酒夜光杯，欲饮琵琶马上催&lt;br&gt;醉卧沙场君莫笑，古来征战几人回&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;启航&quot;&gt;&lt;a href=&quot;#启航&quot; class=&quot;headerlink&quot; title=&quot;启航&quot;&gt;&lt;/a&gt;启航&lt;/h1&gt;&lt;p&gt;最近一个月，我所有的博客、简书的写作、公众号、参与的翻译项目等等都处于半停顿的状态，和朋友们也疏于联络。原因很简单，我几乎全部的业余时间，都用在了又一件傻逼的事情上：创业。&lt;/p&gt;
+&lt;p&gt;在与合作多年的上司友好的谈话之后，今天我正式提交了辞呈。接下来，将全力投入新产品的开发、新公司的注册以及新团队的组建。自己蛰伏很久的精力，正在以出乎我意料的速度苏醒。&lt;/p&gt;
+&lt;p&gt;若干年前脱下军装，与几个朋友一起南下，没有经验，没有人脉，砸光手里的积蓄，朋友们一一离去后，口袋里揣着点吃饭的零钱，徘徊于深圳的街道。那时身边只有女友相伴，不离不弃。&lt;/p&gt;
+&lt;p&gt;后来辗转到了杭州，从零开始，养家糊口，曾经以为人生也就这样了。却在不知不觉间慢慢地有了新的老的朋友，生活逐渐脱离窘迫。多年的学习和工作，积累下技术、管理、团队的经验，多多少少也有了些人脉。&lt;/p&gt;
+&lt;p&gt;审视内心，虽然棱角磨平了不少，幸而天生爱折腾的那个我还在。也许，是时候打点行装再次上路了。&lt;/p&gt;
+&lt;p&gt;于是，经过年少时锋芒毕露的不知天高地厚，经过多年为生计只知低头搬砖，经过几乎失去做梦能力的低谷……在一个适时出现的机会前，早生华发的我，将再度杨帆启航。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="夜猫茶舍" scheme="http://www.catxn.net/categories/%E5%A4%9C%E7%8C%AB%E8%8C%B6%E8%88%8D/"/>
+    
+    
+    <category term="原创" scheme="http://www.catxn.net/tags/%E5%8E%9F%E5%88%9B/"/>
+    
+    <category term="日记" scheme="http://www.catxn.net/tags/%E6%97%A5%E8%AE%B0/"/>
+    
+    <category term="创业" scheme="http://www.catxn.net/tags/%E5%88%9B%E4%B8%9A/"/>
+    
+    <category term="里程碑" scheme="http://www.catxn.net/tags/%E9%87%8C%E7%A8%8B%E7%A2%91/"/>
+    
+    <category term="宗布" scheme="http://www.catxn.net/tags/%E5%AE%97%E5%B8%83/"/>
+    
+  </entry>
+  
+</feed>
