@@ -3,6 +3,8 @@ date: 2009-12-31 17:24:42
 tags: [流水账, 测试, 建站]
 id: 67
 categories: 建站心得
+hidden: true
+
 ---
 
 <div style="float: right; margin-left: 10px; margin-bottom: 10px;">[![](http://farm3.static.flickr.com/2759/4230877530_862b741d51_m.jpg)](http://www.flickr.com/photos/deltacatcn/4230877530/ "photo sharing")

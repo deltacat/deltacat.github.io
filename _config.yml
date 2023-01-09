@@ -67,7 +67,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: http://hexo.io/plugins/
 ## Themes: http://hexo.io/themes/
-theme: next
+theme: butterfly
 stylus:
   compress: true
 
@@ -79,6 +79,18 @@ baidusitemap:
 
 # plugins: 
 # - hexo-generator-feed
+
+# hexo-hide-posts plugin config
+# https://github.com/prinsss/hexo-hide-posts
+hide_posts:
+  enable: true
+  # Change the filter name to fit your need
+  filter: hidden
+  # Generators which you want to expose all posts (include hidden ones) to.
+  # Common generators: index, tag, category, archive, sitemap, feed, etc.
+  public_generators: []
+  # Add "noindex" meta tag to prevent hidden posts from being indexed by search engines
+  noindex: true
 
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html

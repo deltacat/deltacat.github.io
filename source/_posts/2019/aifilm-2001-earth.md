@@ -9,6 +9,7 @@ tags:
 - STEAM
 keywords: 猫老师少儿编程,少儿编程,编程,K12,STEAM,STEM
 date: 2019-2-11 9:00:00
+cover: http://static.catxn.cn/images/15498544203557.jpg-s
 
 ---
 
