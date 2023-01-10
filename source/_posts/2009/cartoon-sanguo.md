@@ -3,6 +3,7 @@ date: 2009-02-10 08:07:00
 tags: [动漫, 影视]
 id: 36
 categories: 影音动漫
+cover: http://static.catxn.cn/images/sanguo_02.jpg-s
 
 ---
 

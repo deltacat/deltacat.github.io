@@ -3,6 +3,7 @@ date: 2009-12-30 11:35:21
 tags: [建站, Flickr]
 id: 44
 categories: 建站心得
+hidden: true
 
 ---
 

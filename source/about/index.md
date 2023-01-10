@@ -7,7 +7,8 @@ comment: false
 
 * 猫老师少儿编程
 
-[猫老师少儿编程](http://mp.weixin.qq.com/mp/homepage?__biz=MzUxMjA1NTAzMA==&hid=2&sn=34af44667b808911db902daf44bab16f&scene=18#wechat_redirect) | [荔枝微课](https://m.lizhiweike.com/liveroom2/24178239)
+[猫老师少儿编程](http://mp.weixin.qq.com/mp/homepage?__biz=MzUxMjA1NTAzMA==&hid=2&sn=34af44667b808911db902daf44bab16f&scene=18#wechat_redirect) 
+<!-- | [荔枝微课](https://m.lizhiweike.com/liveroom2/24178239) -->
 
 * 灌水装文艺
 

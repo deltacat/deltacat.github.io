@@ -3,6 +3,7 @@ s: zbu-log-teamhouse-1
 date: 2015-05-13 11:02:17
 tags: [日记,原创,创业,招聘]
 categories: 夜猫茶舍
+cover: http://static.catxn.cn/images/jn1535/tea-02.jpg-s
 
 ---
 

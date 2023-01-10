@@ -3,6 +3,8 @@ date: 2015-01-05 23:10
 tags: [动漫,历史,影视]
 categories: 影音动漫
 s: qinmoon-yhsx
+cover: http://static.catxn.cn/images/acg/qinmoon-jrql.JPG-s
+
 ---
 
 《秦时明月之君临天下》开播。凑热闹写写秦始皇。

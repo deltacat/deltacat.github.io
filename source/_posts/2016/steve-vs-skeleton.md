@@ -7,6 +7,7 @@ tags:
 - 乐高
 - 我的世界
 date: 2016-08-18 21:00:00
+cover: http://static.catxn.cn/images/WechatIMG-cover.jpeg-s
 
 ---
 ![WechatIMG-cover](http://static.catxn.cn/images/WechatIMG-cover.jpeg-s)
