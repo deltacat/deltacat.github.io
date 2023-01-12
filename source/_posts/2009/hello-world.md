@@ -1,6 +1,7 @@
 title: "Hello world!"
 date: 2009-12-23 08:39:12
 tags: [流水账, wordpress]
+hidden: true
 
 ---
 
