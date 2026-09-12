@@ -74,8 +74,6 @@ stylus:
 # SEO
 sitemap:
   path: sitemap.xml
-baidusitemap:
-  path: baidusitemap.xml
 
 # plugins: 
 # - hexo-generator-feed
@@ -97,9 +95,5 @@ hide_posts:
 deploy:
   - type: git
     message: "hexo deploy to github"
-    repo: git@github.com:deltacat/deltacat.github.io.git
+    repo: https://github.com/deltacat/deltacat.github.io.git
     branch: gh-pages
-  - type: git
-    repo: git@e.coding.net:catxn/catxn.git
-    branch: master
-    message: "hexo deploy to coding"
