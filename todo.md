@@ -7,7 +7,7 @@
 
 - [x] 提交升级改动：`package.json`、`yarn.lock`、`.nvmrc`、`_config.yml`、`_config.butterfly.yml`、`AGENTS.md`、`README.md`、`todo.md`，并删除 `wordpress.2015-03-30.xml`（不含 `_drafts/` 个人草稿）
 - [ ] 部署前临时扩 GitHub PAT 的 Contents 写权限（https 推送凭据由 gh credential helper 注入）
-- [ ] `yarn deploy` 推送 gh-pages（首次新栈上线：站点外观将由 NexT → butterfly 5.7）
+- [ ] 发布模式已切换为 Cloudflare Pages（生产分支 main）：推送 `c777b67` 与后续提交即触发构建上线（站点外观将由 NexT → butterfly 5.7）
 - [ ] 部署后线上核对：首页 banner/副标题打字机、文章页目录与代码块、归档、404 页、评论已关闭、sitemap.xml
 - [ ] 部署后在用户的仓库管理项目日志中补记本次发布
 

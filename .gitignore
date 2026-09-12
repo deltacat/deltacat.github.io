@@ -8,3 +8,9 @@ db.json
 node_modules/
 public/
 themes/**/
+# Yarn Berry
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions

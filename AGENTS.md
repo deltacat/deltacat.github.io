@@ -2,7 +2,7 @@
 
 本仓库是用户个人博客「夜猫阿罗哈」的 Hexo 源码仓，线上地址 https://www.catxn.net（GitHub Pages：`main` 分支存源码，构建产物由 hexo deploy 推送至 `gh-pages` 分支发布）。
 
-技术栈：Hexo 8.1.2 + butterfly 主题 5.7.0（npm 包，非 themes/ 目录）+ Node 24（版本锁定见 `.nvmrc`）+ yarn。AI Agent 参与维护时遵循本文件。
+技术栈：Hexo 8.1.2 + butterfly 主题 5.7.0（npm 包，非 themes/ 目录）+ Node 24（版本锁定见 `.nvmrc`）+ Yarn 4（版本经 package.json 的 `packageManager` 字段钉定，由 corepack 接管，`.yarnrc.yml` 使用 node-modules 兼容模式）。AI Agent 参与维护时遵循本文件。
 
 ## 铁律（优先级最高，违反即停）
 
@@ -22,6 +22,7 @@
 - **评论系统当前关闭**（原 Valine 因 LeanCloud 停服失效，2026-09-12 移除）；恢复评论属新决策（备选 giscus/Waline/Twikoo），先问用户再做。
 - **新文章命名**：干净的英文 slug 或无标点中文标题，中文完整标题写进 front-matter（避免 URL 百分号编码）；`hexo new` 自动落当年年份目录，写系列文放主题目录前知悉第 2 条铁律。
 - **todo.md 是任务清单**：做完勾选 `[x]`，新待办按「需要做 / 建议做」分类写入。
+- **CHANGELOG.md 记录仓库自身变化**：依赖升级、配置变更、发布方式调整等随对应提交记录在案（Keep a Changelog 风格）。
 - **文档不含本地环境信息**（铁律 6 在文档维度的具体化）：任何提交进本仓的文档不得出现本地文件系统路径、本机工具链细节或私有仓库名称。
 
 ## 常用命令
