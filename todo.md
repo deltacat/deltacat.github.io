@@ -13,7 +13,7 @@
 
 ## 建议做（可选，按需领取）
 
-- [ ] 处理根级样例文 `source/_posts/hello-world.md`（Hexo init 遗留，正被当普通文章收录进 sitemap）：删除或加 `hidden: true` 留档
+- [x] 处理根级样例文 `hello-world.md`：已随目录统一归位至 `2015/`（URL 不变）；是否删除/隐藏仍可后续决定
 - [ ] 恢复评论系统（Valine 已随 LeanCloud 停服移除）：giscus（零后端，数据存 GitHub Discussions）/ Waline、Twikoo（需自建后端，可尝试导入旧 Valine 数据）
 - [ ] GitHub Actions 自动构建发布（push main 云端生成 gh-pages，本地免 Node 环境）
 - [ ] 新文章命名习惯：英文 slug 或无标点中文标题（`hexo new` 用干净名，中文标题写进 front-matter），避免 URL 百分号编码

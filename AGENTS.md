@@ -20,7 +20,7 @@
 - **`_config.butterfly.yml` 是最小覆盖文件**：只写与主题默认值不同的定制项；升级 butterfly 大版本时对照新版默认配置重新映射（2026-09-12 的 4.5.1→5.7.0 迁移映射：`highlight_*`→`code_blocks`、`fancybox`→`lightbox`、`sharejs`→`share.use`、副标题速度参数→`typed_option`、`mathjax/katex`→`math`）。
 - **隐藏文章**：front-matter 加 `hidden: true`（hexo-hide-posts），页面仍生成直链但不出现在首页/归档/sitemap。
 - **评论系统当前关闭**（原 Valine 因 LeanCloud 停服失效，2026-09-12 移除）；恢复评论属新决策（备选 giscus/Waline/Twikoo），先问用户再做。
-- **新文章命名**：干净的英文 slug 或无标点中文标题，中文完整标题写进 front-matter（避免 URL 百分号编码）；`hexo new` 自动落当年年份目录，写系列文放主题目录前知悉第 2 条铁律。
+- **新文章命名**：文件名即 URL，规范以现行格式为准——年份目录下的小写英文 kebab-case（如 `2026/gitea-security-incident-report.md`），中文完整标题只写进 front-matter `title:`，文件名不承担标题职责；`hexo new "kebab-slug"` 自动落当年年份目录，写系列文放主题目录前知悉第 2 条铁律。URL 机制实证（2026-09-12）：front-matter `slug` 字段在 Hexo 中**无效**（Jekyll/Hugo 概念，勿用）；需解耦文件名与 URL 时唯一手段是 `permalink:` 字段整条覆盖（须写完整路径，慎用）。
 - **todo.md 是任务清单**：做完勾选 `[x]`，新待办按「需要做 / 建议做」分类写入。
 - **CHANGELOG.md 记录仓库自身变化**：依赖升级、配置变更、发布方式调整等随对应提交记录在案（Keep a Changelog 风格）。
 - **文档不含本地环境信息**（铁律 6 在文档维度的具体化）：任何提交进本仓的文档不得出现本地文件系统路径、本机工具链细节或私有仓库名称。

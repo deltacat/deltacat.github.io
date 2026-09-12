@@ -2,6 +2,15 @@
 
 本文件记录博客仓库自身的变化。每次部署的详细记录见 Cloudflare Pages 控制台的部署历史。
 
+## [0.2.1] - 2026-09-12
+
+### Added
+- 新文章《Gitea 安全事件排查与处置报告》（`/posts/2026/gitea-security-incident-report/`）
+
+### Changed
+- 文章目录统一：`读史/`、`管理/` 主题目录 8 篇与根级 `hello-world.md` 归位年份目录，并按新命名规范（小写英文 kebab-case）重命名；旧目录前缀 URL 随之弃用（未配置重定向，用户决策）
+- `AGENTS.md`：固化「文件名即 URL」命名规范（kebab-case 为准）；补录 front-matter `slug` 字段无效的实证结论与 `permalink` 字段逃生舱说明；新增 CHANGELOG 维护准则
+
 ## [0.2.0] - 2026-09-12
 
 ### Added
