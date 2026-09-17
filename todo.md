@@ -19,3 +19,9 @@
 - [ ] 新文章命名习惯：英文 slug 或无标点中文标题（`hexo new` 用干净名，中文标题写进 front-matter），避免 URL 百分号编码
 - [ ] 视觉微调（如与旧站观感比对后在意）：关闭页脚主题版本号 `footer: {copyright: {version: false}}`；分享站点 twitter→x 为 5.x 默认
 - [ ] 个人草稿 `source/_drafts/gitea-security-incident-report-20260912.md` 完稿后自行提交（当前处于暂存状态，勿混入升级提交）
+
+## 想做（远期方向）
+
+> 来源：2026-09-17 博客工具生态调研。
+
+- [ ] 迁移至 Astro，并套用或制作一个新粗野主义主题（调研结论：Hexo/Astro 生态均无现成 neo-brutalist 主题，实际是自建或从 React 组件库移植；迁移要点——内容 front-matter 批量转换为小头，主题重建为大头，旧 URL 全量保持是硬性要求，可在迁移分支借 CF Pages preview 验收）
